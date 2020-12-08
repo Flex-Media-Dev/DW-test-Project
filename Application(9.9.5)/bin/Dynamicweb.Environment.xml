@@ -1,0 +1,1432 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Environment</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Context">
+            <summary>
+            Encapsulates all context specific information about an individual Request
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Context._defaultContextManager">
+            <summary>
+            The default context to use if provided and Current hasn't been set
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Context.ContextMapper">
+            <summary>
+            The context mapper
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Context.Current">
+            <summary>
+            Gets or sets the ContextManager handling the underlying Context
+            </summary>
+            <value>The current.</value>
+            <exception cref="T:System.ArgumentNullException">Context.Current cannot be set to null</exception>
+            <remarks>Object is ThreadStatic</remarks>
+        </member>
+        <member name="M:Dynamicweb.Context.SetDefaultContext(Dynamicweb.Environment.IContext)">
+            <summary>
+            Sets the default context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Dynamicweb.Environment.Cookie">
+            <summary>
+            Provides a type safe way to work and manipulate http cookies
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Environment.Cookie.path">
+            <summary>
+            Default virtual path for any Cookie
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.Cookie.#ctor(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes a new instance of the Cookie with the specified sub values collection, for internal use only
+            </summary>
+            <param name="values">To initialize the cookie with a collection of values</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.Cookie.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the Cookie class with the specified name and an empty value
+            </summary>
+            <param name="name">The name of the Cookie</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.Cookie.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the Cookie class with the specified name and value
+            </summary>
+            <param name="name">The name of the cookie</param>
+            <param name="value">The value of the cookie</param>
+        </member>
+        <member name="P:Dynamicweb.Environment.Cookie.Domain">
+            <summary>
+            Gets or sets the domain to associate the cookie with
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.Cookie.Expires">
+            <summary>
+            Gets or sets the expiration date and time for the cookie
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.Cookie.HasKeys">
+            <summary>
+            Gets a value indicating whether a cookie has subkeys
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.Cookie.HttpOnly">
+            <summary>
+            Gets or sets a value that specifies whether a cookie is accessible by client-side script
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.Cookie.Name">
+            <summary>
+            Gets or sets the name of a cookie
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.Cookie.Path">
+            <summary>
+            Gets or sets the virtual path to transmit with the cookie
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.Cookie.Secure">
+            <summary>
+            Gets or sets a value indicating whether to transmit the cookie using secure sockets layer (SSL), that is over HTTPS only
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.Cookie.Shareable">
+            <summary>
+            Determines whether the cookie is allowed to participate in output caching
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.Cookie.Value">
+            <summary>
+            Gets or sets an individual cookie value
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.Cookie.Values">
+            <summary>
+            Gets a collection of key/value pairs that are contained within a single cookie object
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.Cookie.Item(System.String)">
+            <summary>
+            Gets the value for the specified key
+            </summary>
+            <param name="key">The key for which to get it's value</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Environment.CookieManager">
+            <summary>
+            Provides methods to work with cookies
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Environment.CookieManager.CookieOptInLevelCookieName">
+            <summary>
+            Opt-in cookie name constant
+            </summary>      
+        </member>
+        <member name="F:Dynamicweb.Environment.CookieManager.DefaultCookieOptInLevel">
+            <summary>
+            Default cookie opt-in level
+            </summary>        
+        </member>
+        <member name="P:Dynamicweb.Environment.CookieManager.OptInCookieExpirationTimeSpan">
+            <summary>
+            Opt-in cookie expiration time. Expires after 1 year.
+            </summary>        
+        </member>
+        <member name="F:Dynamicweb.Environment.CookieManager._exclusiveCookieNameList">
+            <summary>
+            Exclusive cookie names list
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Environment.CookieManager._trackingCookieNameList">
+            <summary>
+            Tracking cookies list
+            </summary>        
+        </member>
+        <member name="F:Dynamicweb.Environment.CookieManager._categoryCookieNames">
+            <summary>
+            The category cookie names
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.InitializeCategoryCookies">
+            <summary>
+            Initializes the category cookies.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.GetCategories">
+            <summary>
+            Gets the categories.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.AddCategory(System.String)">
+            <summary>
+            Adds the category.
+            </summary>
+            <param name="category">The category.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.RemoveCategory(System.String)">
+            <summary>
+            Removes the category.
+            </summary>
+            <param name="category">The category.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.GetCategoryCookies(System.String)">
+            <summary>
+            Gets the category cookies.
+            </summary>
+            <param name="category">The category.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.SetCategoryCookies(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Sets the category cookies.
+            </summary>
+            <param name="category">The category.</param>
+            <param name="cookies">The cookies.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.ClearCache">
+            <summary>
+            Clears the cache.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.CookieManager.IsCookieManagementActive">
+            <summary>
+            Gets a value indicating whether cookie management is active.
+            </summary>
+            <value><c>true</c> if cookie management is active; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.CookieManager.CookieOptInLevelExists">
+            <summary>
+            Returns true if opt-in level cookie was already set, otherwise false.
+            </summary>
+            <value></value>
+            <returns>
+            <c>true</c> if opt-in level cookie is set; otherwise, <c>false</c>.
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.GetDynamicwebCookiesList">
+            <summary>
+            Represents dynamicweb default cookies list with exclusive cookies list
+            </summary>
+            <returns>Dynamicweb default cookies</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.GetCookieOptInLevel">
+            <summary>
+            Gets opt-in level cookie value. 
+            If opt-in level cookie doesn't exists returns Functional cookie opt-in level by default.
+            </summary>
+            <returns>Cookie opt-in level</returns>
+            <remarks>Functional cookie opt-in level is default</remarks>
+            <example>
+            <code description="GetCookieOptInLevel" source="..\Dynamicweb\09 - Core\Dynamicweb.Environment\Head\Dynamicweb.Environment.Examples\ContextManagerCookieSample.cs" lang="CS" region="GetCookieOptInLevel"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.GetCookieOptInCategories">
+            <summary>
+            Gets the cookie opt in categories.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.SetCookieOptInLevel(Dynamicweb.Environment.CookieOptInLevel)">
+            <summary>
+            Set opt-in level cookie
+            </summary>
+            <param name="optInLevel">Cookie opt-in level</param>
+            <returns>
+            <c>null</c> <c>Context.Current.Response</c> == <c>null</c>; otherwise, <c>CookieOptInLevel</c>.
+            </returns>
+            <remarks></remarks>
+            <example>
+            <code description="SetCookieOptInLevel" source="..\Dynamicweb\09 - Core\Dynamicweb.Environment\Head\Dynamicweb.Environment.Examples\ContextManagerCookieSample.cs" lang="CS" region="SetCookieOptInLevel"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.SetCookieOptIn(Dynamicweb.Environment.CookieOptInLevel,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Sets the cookie opt-in.
+            </summary>
+            <param name="optInLevel">The opt-in level.</param>
+            <param name="optInCategories">The opt-in categories.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.GetCookieType(Dynamicweb.Environment.Cookie)">
+            <summary>
+            Gets cookie type: Tracking or Functional
+            </summary>
+            <param name="cookie">Cookie to get it's type.</param>
+            <returns>Cookie type</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.CanCookieBeSet(Dynamicweb.Environment.Cookie)">
+            <summary>
+            Returns true if cookie can be set, otherwise false.
+            Cookie cannot be set if cookie opt-in level is None or cookie opt-in level is Functional and cookie type is not Functional.
+            </summary>
+            <param name="cookie">Cookie to check if it can be set.</param>
+            <returns>
+             <c>true</c> if cookie can be set, otherwise <c>false</c>.
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.GetCategoriesWithCookie(Dynamicweb.Environment.Cookie)">
+            <summary>
+            Gets the categories with the given cookie on the list.
+            </summary>
+            <param name="cookie">The cookie.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.SetCookie(System.String,System.String,System.DateTime)">
+            <summary>
+            Request a cookie to be set. If cookies are disabled or if the user has opted out of this particular type of cookie, the cookie will not be set.
+            </summary>
+            <param name="name">The name of the cookie to set.</param>
+            <param name="value">The value to set in the cookie.</param>
+            <param name="expirationDate">The expiration time for the cookie.</param>
+            <returns>If allowed return the <see cref="T:Dynamicweb.Environment.Cookie">cookie</see> that is being set; otherwise null.</returns>
+            <remarks></remarks>
+            <example>
+            <code description="SetCookie with expiration" source="..\Dynamicweb\09 - Core\Dynamicweb.Environment\Head\Dynamicweb.Environment.Examples\ContextManagerCookieSample.cs" lang="CS" region="SetCookieDateTime"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.SetCookie(Dynamicweb.Environment.Cookie)">
+            <summary>
+            Request a cookie to be set. If cookies are disabled or if the user has opted out of this particular type of cookie, the cookie will not be set.
+            Cookie type can be assigned from the Management Center.
+            </summary>
+            <param name="cookie">The cookie to set.</param>
+            <returns>If allowed return the <see cref="T:Dynamicweb.Environment.Cookie">cookie</see> that is being set; otherwise null.</returns>
+            <remarks></remarks>
+            <example>
+            <code description="SetCookie" source="..\Dynamicweb\09 - Core\Dynamicweb.Environment\Head\Dynamicweb.Environment.Examples\ContextManagerCookieSample.cs" lang="CS" region="SetCookie"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.GetCookie(System.String)">
+            <summary>
+            Gets the cookie with the given name.
+            </summary>
+            <param name="name">The name of the cookie to get.</param>
+            <returns>Returns the <see cref="T:Dynamicweb.Environment.Cookie">cookie</see> with the given name.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.UpdateCookie(System.String,System.String,System.DateTime)">
+            <summary>
+            Update cookie. If cookies are disabled or if the user has opted out of this particular type of cookie, the cookie will not be updated.
+            Cookie type can be assigned from the Management Center.
+            </summary>
+            <param name="name">The name of the cookie to set.</param>
+            <param name="value">The value to set in the cookie.</param>
+            <param name="expirationDate">The expiration time for the cookie.</param>
+            <returns>If allowed returns the updated <see cref="T:Dynamicweb.Environment.Cookie">cookie</see>; otherwise null.</returns>
+            <remarks></remarks>
+            <example>
+            <code description="UpdateCookie" source="..\Dynamicweb\09 - Core\Dynamicweb.Environment\Head\Dynamicweb.Environment.Examples\ContextManagerCookieSample.cs" lang="CS" region="UpdateCookieDateTime"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.UpdateCookie(Dynamicweb.Environment.Cookie)">
+            <summary>
+            Update cookie. If cookies are disabled or if the user has opted out of this particular type of cookie, the cookie will not be updated.
+            Cookie type can be assigned from the Management Center.
+            </summary>
+            <param name="cookie">The cookie to update.</param>
+            <returns>If allowed returns the updated <see cref="T:Dynamicweb.Environment.Cookie">cookie</see>; otherwise null.</returns>
+            <remarks></remarks>
+            <example>
+            <code description="UpdateCookie" source="..\Dynamicweb\09 - Core\Dynamicweb.Environment\Head\Dynamicweb.Environment.Examples\ContextManagerCookieSample.cs" lang="CS" region="UpdateCookie"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.UpdateTrackingCookiesList">
+            <summary>
+            Populate tracking cookies list from global settings
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.RemoveExistingCookies">
+            <summary>
+            Removes existing cookies from the browser
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.ExpireCookie(System.String)">
+            <summary>
+            Tries to expire the specified cookie.
+            </summary>
+            <param name="cookieName">Name of cookie</param>
+            <returns>wasExpired</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.AddCookieNamesToList(Dynamicweb.Environment.Cookie)">
+            <summary>
+            Adds all cookieName.Value pairs to the Exclusive cookies list if the cookie has values collection, 
+            otherwise adds only the name of the cookie
+            </summary>
+            <param name="cookie">Cookie to be added to Exclusive cookies list</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Environment.CookieManager.AddCookieNameToList(System.String)">
+            <summary>
+            Adds cookie name to Exclusive cookies list
+            </summary>
+            <param name="name"></param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Environment.CookieOptInLevel">
+            <summary>
+            Represents cookie opt-in levels
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Environment.CookieOptInLevel.None">
+            <summary>
+            Deny setting cookies
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Environment.CookieOptInLevel.Functional">
+            <summary>
+            Allow only functional cookies, used by default if no opt-in cookie was set.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Environment.CookieOptInLevel.All">
+            <summary>
+            Allow any cookie to be set.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Environment.CookieType">
+            <summary>
+            Represents cookie type
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Environment.CookieType.Functional">
+            <summary>
+            Functional cookie, used by default
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Environment.CookieType.Tracking">
+            <summary>
+            Tracking cookie
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Environment.ExecutingContext">
+            <summary>
+            Provides static members for Dynamicweb environment variables.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.ExecutingContext.IsFrontEnd">
+            <summary>
+            Gets a value indicating whether the current code is being executed in the frontend
+            </summary>
+            <returns>
+            <c>true</c> if in frontend; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.ExecutingContext.IsBackEnd">
+            <summary>
+            Gets a value indicating whether the current code is being executed in the administration (/Admin or /CustomModules - except /Admin/Public)
+            </summary>
+            <returns>
+            <c>true</c> if in backend; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.ExecutingContext.IsBackEndUrl(System.String)">
+            <summary>
+            Determines whether the specified URL is part of the Dynamicweb administration
+            </summary>
+            <param name="url">The URL.</param>
+            <returns><c>true</c> if the specified url is a backend url; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.ExecutingContext.IsBackEndUrl(System.Uri)">
+            <summary>
+            Determines whether the specified URL is part of the Dynamicweb administration
+            </summary>
+            <param name="url">The URL.</param>
+            <returns><c>true</c> if the specified url is a backend url; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.ExecutingContext.IsPrimaryMachine">
+            <summary>
+            Determines whether this instance is the primary machine in a clustering environment.
+            </summary>
+            <returns><c>true</c> if  this instance is the primary machine; otherwise, <c>false</c>.</returns>
+            <remarks>Returns true if the instance is not a member of a cluster</remarks>
+        </member>
+        <member name="P:Dynamicweb.Environment.ExecutingContext.IsPrimary">
+            <summary>
+            Determines whether this instance is the primary machine in a clustering environment.
+            </summary>
+            <returns><c>true</c> if  this instance is the primary machine; otherwise, <c>false</c>.</returns>
+            <remarks>Returns true if the instance is not a member of a cluster</remarks>
+        </member>
+        <member name="M:Dynamicweb.Environment.ExecutingContext.IsAdminPublicExcludedPath(System.String)">
+            <summary>
+            Determines whether the specified url is under /Admin/Public, but not considered part of the public pages.
+            </summary>
+            <param name="absolutePath">The URLs absolute path</param>
+            <returns><c>true</c> if the specified url is excluded from /Admin/Public; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.ExecutingContext.IsAdminLoggedIn">
+            <summary>
+            Gets a value indicating if the user is logged into the Dynamicweb administration
+            </summary>
+            <returns>Returns true logged in otherwise false</returns>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:Dynamicweb.Environment.ExecutingContext.GetCulture">
+            <summary>
+            Gets the culture of the current execution context.
+            </summary>
+            <returns>CultureInfo instance.</returns>
+            <remarks>
+            If called from a frontend pipeline, it returns the <c>CultureInfo</c> of the current thread which is set by the regional settings of the website instance that belongs to the pageview. If it is called before the website is detected, before PageView.Load(), the system culture is returned.
+            If called from a backend context, it returns a <c>CultureInfo</c> based on the current backend language if the user is logged in.
+            If called from another context, i.e. a http handler or a context where there is not pageview, no logged in user or no session, <c>InvariantCulture</c> is returned.
+            </remarks>
+        </member>
+        <member name="M:Dynamicweb.Environment.ExecutingContext.GetCulture(System.Boolean)">
+            <summary>
+            Gets the culture of the current execution context.
+            </summary>
+            <param name="frontEnd">if set to <c>true</c>, return the CultureInfo that is currently being used in the pageview. If this is set to true and a pageview instance is not present, <c>CurrentCulture</c> is returned.</param>
+            <returns>CultureInfo instance.</returns>
+            <remarks>If called from a frontend pipeline, it returns the <c>CultureInfo</c> of the current thread which is set by the regional settings of the website instance that belongs to the pageview. If it is called before the website is detected, before PageView.Load(), the system culture is returned.
+            If called from a backend context, it returns a <c>CultureInfo</c> based on the current backend language if the user is logged in.
+            If called from another context, i.e. a http handler or a context where there is not pageview, no logged in user or no session, <c>InvariantCulture</c> is returned.</remarks>
+        </member>
+        <member name="T:Dynamicweb.Environment.Helpers.LinkHelper">
+            <summary>
+            Class LinkHelper is a utility for parsing and manipulating links.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.Helpers.LinkHelper.AddToQueryString(System.String,System.String)">
+            <summary>
+            Adds a parameter to the passed query string and returns the combined result.
+            </summary>
+            <remarks>
+            http://cc.davelozinski.com/c-sharp/c-fastest-way-to-check-last-character-of-a-string
+            https://theburningmonk.com/2012/05/performance-test-string-contains-vs-string-indexof-vs-regex-ismatch/
+            </remarks>
+            <param name="queryString">The existing query string where the new part should be added. Ie. ?ID=12</param>
+            <param name="addThis">The parameter and vaulue to add to the querystring, i.e. Productid=123.</param>
+            <returns>The combined querystring i.e  ?ID=12&amp;Productid=123</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.Helpers.LinkHelper.AddToQueryString(System.String)">
+            <summary>
+            Adds a parameter to the query string in the current request context and returns the combined result.
+            </summary>
+            <param name="addThis">The parameter and vaulue to add to the querystring, i.e. Productid=123.</param>
+            <returns>The combined querystring i.e  ?ID=12&amp;Productid=123</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.Helpers.LinkHelper.ReplaceQueryString(System.String,System.String)">
+            <summary>
+            Replaces a value for a given key in the query string in the current request context.
+            </summary>
+            <param name="element">The element key to replace value on, i.e. productid.</param>
+            <param name="newValue">The new value for the querystring element key, i.e. 567.</param>
+            <returns>The new querystring with the value replaced i.e  ?ID=12&amp;Productid=567</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.Helpers.LinkHelper.ReplaceQueryString(System.String,System.String,System.String)">
+            <summary>
+            Replaces a value for a given key in the passed query string.
+            </summary>
+            <param name="queryString">The query string, i.e. ?id=123&amp;productid=234.</param>
+            <param name="element">The element key to replace value on, i.e. productid.</param>
+            <param name="newValue">The new value for the querystring element key, i.e. 567.</param>
+            <returns>The new querystring with the value replaced i.e  ?ID=12&amp;Productid=567</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.Helpers.LinkHelper.ReplaceQueryString(System.String,System.String,System.String,System.String)">
+            <summary>
+            Replaces a value for a given key in the passed query string.
+            </summary>
+            <param name="urlAbsolutePath">Absolute path from url.</param>
+            <param name="queryString">The query string, i.e. ?id=123&amp;productid=234.</param>
+            <param name="element">The element key to replace value on, i.e. productid.</param>
+            <param name="newValue">The new value for the querystring element key, i.e. 567.</param>
+            <returns>The new querystring with the value replaced i.e  ?ID=12&amp;Productid=567</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.Helpers.LinkHelper.StripQueryString(System.String)">
+            <summary>
+            Strips keys and their values from the query string in the current request context.
+            </summary>
+            <param name="itemsToRemove">The items to remove. i.e. ""productid,variantid"</param>
+            <returns>The new querystring with the keys and their values removed i.e ?ID=12</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.Helpers.LinkHelper.StripQueryString(System.String,System.String)">
+            <summary>
+            Strips keys and their values from the query string.
+            </summary>
+            <param name="queryString">The query string remove keys from, ie ?ID=123&amp;productid=234&amp;variantid=345.</param>
+            <param name="itemsToRemove">The items to remove. i.e. ""productid,variantid"</param>
+            <returns>The new querystring with the keys and their values removed i.e ?ID=12</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.Helpers.LinkHelper.StripQueryString(System.String,System.String,System.String)">
+            <summary>
+            Strips keys and their values from the query string.
+            </summary>
+            <param name="urlAbsolutePath">Absolute path from url.</param>
+            <param name="queryString">The query string remove keys from, ie ?ID=123&amp;productid=234&amp;variantid=345.</param>
+            <param name="itemsToRemove">The items to remove. i.e. ""productid,variantid"</param>
+            <returns>The new querystring with the keys and their values removed i.e ?ID=12</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.Helpers.LinkHelper.IsLinkInternal(System.String)">
+            <summary>
+            Checks if an URL is an internal page of the current website
+            </summary>
+            <param name="url">URL to be checked.</param>
+            <returns>Returns true if the URL is a page of the current website, i.e. Default.aspx?ID=123</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.Helpers.LinkHelper.GetInternalPageId(System.String)">
+            <summary>
+            Returns the internal ID of the page in the specified URL.
+            </summary>
+            <param name="url">The URL to parse, i.e. "Default.aspx?ID=123".</param>
+            <returns>System.Int32. The ID (123) from the querstring of the url "Default.aspx?ID=123"</returns>
+            <remarks>Returns 0 if an invalid url is passed, i.e. www.google.com</remarks>
+        </member>
+        <member name="M:Dynamicweb.Environment.Helpers.LinkHelper.GetInternalPageIdsFromText(System.String)">
+            <summary>
+            Gets a collection of internal page IDs from the text.
+            </summary>
+            <param name="text">The text with one or some internal links</param>
+            <returns>A collection of page IDs</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Environment.Helpers.LinkHelper.GetHttpDomain">
+            <summary>
+            Returns the protocol and host of the current pageview
+            </summary>
+            <returns>I.e. http://www.dynamicweb.com</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Environment.Helpers.LinkHelper.GetHttpDomain(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Returns the protocol and host of the current pageview
+            </summary>
+            <returns>I.e. http://www.dynamicweb.com</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Environment.Helpers.LinkHelper.GetUrlWithPort(System.String,System.Boolean)">
+            <summary>
+            Gets the current url with port number, if port number is different from the default port for the scheme.
+            </summary>
+            <param name="uri">uri used to do a url lookup</param>
+            <param name="disablePortNumber">defines of portnumber should be appended</param>
+            <returns>url with an optional portnumber</returns>
+        </member>
+        <member name="T:Dynamicweb.Environment.Helpers.NamespaceDoc">
+            <summary>
+            Contains helpers for the environment.
+            </summary>
+            <remarks>
+            Environment.Web contains default implementations for this namespace.
+            </remarks>
+        </member>
+        <member name="T:Dynamicweb.Environment.IContext">
+            <summary>
+            Defines a contract for the Dynamicweb.Context.Current instance. This interface is an abstraction of HttpContext.
+            Encapsulates all HTTP-specific information about an individual HTTP request.
+            </summary>
+            <remarks>
+            HttpContext is the default implementation used in Dynamicweb
+            </remarks>
+        </member>
+        <member name="P:Dynamicweb.Environment.IContext.ApplicationInstance">
+            <summary>
+            Gets the Application for the current request
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.IContext.Application">
+            <summary>
+            Gets the Http ApplicationState object for the current request
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.IContext.Items">
+            <summary>
+            Gets a key/value collection that can be used to organize and share data between an IHttpModule interface and an IHttpHandler interface during an HTTP request
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.IContext.Request">
+            <summary>
+            Gets the Request object in the current request
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.IContext.Response">
+            <summary>
+            Gets the Response object for the current request
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.IContext.Server">
+            <summary>
+            Gets the Server object providing methods used in processing Requests 
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.IContext.Session">
+            <summary>
+            Gets the Session object for the current request
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.IContext.Snapshot">
+            <summary>
+            Gets a snapshot of the current context
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.IContext.RewritePath(System.String,System.String,System.String)">
+            <summary>
+            Rewrites the URL using the given virtual path, path information, query string information, and a Boolean value that specifies whether the client file path is set to the rewrite path. 
+            </summary>
+            <param name="filePath">The virtual path to the resource that services the request.</param>
+            <param name="pathInfo">Additional path information to use for the URL redirect. For more information</param>
+            <param name="queryString">The request query string to use for the URL redirect.</param>
+        </member>
+        <member name="T:Dynamicweb.Environment.IApplicationInstance">
+            <summary>
+            Interface IApplicationInstance is an abstraction of a subset of HttpApplication.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.IApplicationInstance.CompleteRequest">
+            <summary>
+            Completes the request.
+            Causes a bypass of all events and filtering in the HTTP pipeline chain of execution and directly executes the EndRequest event.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.IApplicationInstance.IsValid">
+            <summary>
+            Returns true if the application context is valid.
+            </summary>
+            <returns><c>true</c> if this instance is valid; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:Dynamicweb.Environment.IApplication">
+            <summary>
+            Interface IApplication is an abstraction of HttpApplicationState.
+            Enables sharing of global information across multiple sessions and requests within the application.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.IApplication.Item(System.String)">
+            <summary>
+            Gets or sets the <see cref="T:System.Object"/> with the specified name.
+            </summary>
+            <param name="name">The name.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="P:Dynamicweb.Environment.IApplication.Item(System.Int32)">
+            <summary>
+            Gets the <see cref="T:System.Object"/> at the specified index.
+            </summary>
+            <param name="index">The index.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="P:Dynamicweb.Environment.IApplication.AllKeys">
+            <summary>
+            Gets the access keys for all objects in the collection
+            </summary>
+            <value>All keys.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IApplication.Count">
+            <summary>
+            Gets the count.
+            </summary>
+            <value>The count.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IApplication.Keys">
+            <summary>
+            Gets the keys.
+            </summary>
+            <value>The keys.</value>
+        </member>
+        <member name="M:Dynamicweb.Environment.IApplication.Add(System.String,System.Object)">
+            <summary>
+            Adds a new object to the collection
+            </summary>
+            <param name="name">The name.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.IApplication.Clear">
+            <summary>
+            Removes all objects from the collection
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.IApplication.Lock">
+            <summary>
+            Locks access to the collection in order to enable synchronized access
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.IApplication.IsValid">
+            <summary>
+            Returns a value indicating if the Underlying Context and Application is available and valid
+            </summary>
+            <returns>True if the underlying context and application is available and valid, otherwise false</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.IApplication.Remove(System.String)">
+            <summary>
+            Removes the named object from the collection
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.IApplication.Set(System.String,System.Object)">
+            <summary>
+            Updates the value of an object in the collection
+            </summary>
+            <param name="name">The name.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.IApplication.Unlock">
+            <summary>
+            Unlocks access to the collection.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Environment.IContextMapper">
+            <summary>
+            Maps from HttpContext to IContext
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.IContextMapper.GetContext">
+            <summary>
+            Gets the IContext.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Environment.IPostedFiles">
+            <summary>
+            Contains files posted to the server.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.IPostedFiles.Files">
+            <summary>
+            Files posted to the server.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Environment.IResponse">
+            <summary>
+            Interface IResponse is an abstraction of HttpResponse.
+            Encapsulates HTTP-response information.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.IResponse.ContentType">
+            <summary>
+            Gets or sets the type of the content.
+            </summary>
+            <value>The type of the content.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IResponse.Cookies">
+            <summary>
+            Gets the cookies.
+            </summary>
+            <value>The cookies.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IResponse.Expires">
+            <summary>
+            Gets or sets the expires.
+            </summary>
+            <value>The expires.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IResponse.IsClientConnected">
+            <summary>
+            Gets a value indicating whether this instance is client connected.
+            </summary>
+            <value><c>true</c> if this instance is client connected; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IResponse.OutputStream">
+            <summary>
+            Gets the output stream.
+            </summary>
+            <value>The output stream.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IResponse.Status">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>The status.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IResponse.StatusCode">
+            <summary>
+            Gets or sets the status code.
+            </summary>
+            <value>The status code.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IResponse.StatusDescription">
+            <summary>
+            Gets or sets the status description.
+            </summary>
+            <value>The status description.</value>
+        </member>
+        <member name="M:Dynamicweb.Environment.IResponse.AddHeader(System.String,System.String)">
+            <summary>
+            Adds the header.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.IResponse.BinaryWrite(System.Byte[])">
+            <summary>
+            Binaries the write.
+            </summary>
+            <param name="buffer">The buffer.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.IResponse.Clear">
+            <summary>
+            Clears this instance.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.IResponse.ClearHeaders">
+            <summary>
+            Clears the headers.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.IResponse.End">
+            <summary>
+            Ends this instance.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.IResponse.Flush">
+            <summary>
+            Flushes this instance.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.IResponse.IsValid">
+            <summary>
+            Returns true if the response is valid.
+            </summary>
+            <returns><c>true</c> if this instance is valid; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.IResponse.Redirect(System.String)">
+            <summary>
+            Redirects the specified URL.
+            </summary>
+            <param name="url">The URL.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.IResponse.Redirect(System.String,System.Boolean)">
+            <summary>
+            Redirects the specified URL.
+            </summary>
+            <param name="url">The URL.</param>
+            <param name="endResponse">if set to <c>true</c> [end response].</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.IResponse.SetCookie(Dynamicweb.Environment.Cookie)">
+            <summary>
+            Sets the cookie.
+            </summary>
+            <param name="cookie">The cookie.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.IResponse.Write(System.String)">
+            <summary>
+            Writes the specified string.
+            </summary>
+            <param name="value">The string.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.IResponse.Write(System.Object)">
+            <summary>
+            Writes the specified object.
+            </summary>
+            <param name="value">The object.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.IResponse.Write(System.Char)">
+            <summary>
+            Writes the specified character.
+            </summary>
+            <param name="value">The character.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.IResponse.Write(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Writes the specified buffer.
+            </summary>
+            <param name="buffer">The buffer.</param>
+            <param name="index">The index.</param>
+            <param name="count">The count.</param>
+        </member>
+        <member name="T:Dynamicweb.Environment.ICookieCollection">
+            <summary>
+            Interface ICookieCollection is an abstraction of HttpCookieCollection.
+            Provides a type-safe way to manipulate HTTP cookies.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.ICookieCollection.Item(System.String)">
+            <summary>
+            Gets the <see cref="T:Dynamicweb.Environment.Cookie"/> with the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>Cookie.</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.ICookieCollection.Add(Dynamicweb.Environment.Cookie)">
+            <summary>
+            Adds the specified cookie.
+            </summary>
+            <param name="cookie">The cookie.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.ICookieCollection.Remove(System.String)">
+            <summary>
+            Removes the specified name.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.ICookieCollection.Set(Dynamicweb.Environment.Cookie)">
+            <summary>
+            Sets the specified cookie.
+            </summary>
+            <param name="cookie">The cookie.</param>
+        </member>
+        <member name="T:Dynamicweb.Environment.IServer">
+            <summary>
+            Interface IServer is an abstraction of HttpServerUtility.
+            Provides helper methods for processing Web requests.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.IServer.MapPath(System.String)">
+            <summary>
+            Returns the physical file path that corresponds to the specified virtual path on the Web Server
+            </summary>
+            <param name="path">The virtual path to get the physical path for</param>
+            <returns>Physical file path</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.IServer.UrlEncode(System.String)">
+            <summary>
+            URL-encodes a string and returns the encoded string
+            </summary>
+            <param name="url">The text to url encode</param>
+            <returns>An url encoded string</returns>
+        </member>
+        <member name="T:Dynamicweb.Environment.ISession">
+            <summary>
+            Interface ISession is an abstraction of HttpSessionState.
+            Provides access to session-state values as well as session-level settings and lifetime management methods.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.ISession.Item(System.String)">
+            <summary>
+            Gets or sets the session value with the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="P:Dynamicweb.Environment.ISession.Keys">
+            <summary>
+            Gets the session keys.
+            </summary>
+            <value>A collection of keys.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.ISession.SessionID">
+            <summary>
+            Gets the session id.
+            </summary>
+            <value>The session id.</value>
+        </member>
+        <member name="M:Dynamicweb.Environment.ISession.GetSnapshot">
+            <summary>
+            Gets a <see cref="T:Dynamicweb.Environment.Snapshot"/> of the current session state.
+            </summary>
+            <returns>Snapshot.</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.ISession.Add(System.String,System.Object)">
+            <summary>
+            Adds a session value.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.ISession.Remove(System.String)">
+            <summary>
+            Removes the session value with the specified key.
+            </summary>
+            <param name="key">The key.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.ISession.RemoveAll">
+            <summary>
+            Removes all session values.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.ISession.Abandon">
+            <summary>
+            Abandons this session.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Environment.IRequest">
+            <summary>
+            Interface IRequest is an abstraction of HttpRequest.
+            Exposes HTTP values sent by a client during a Web request.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.Item(System.String)">
+            <summary>
+            Gets the <see cref="T:System.String"/> with the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.ContentEncoding">
+            <summary>
+            Gets or sets the content encoding.
+            </summary>
+            <value>The content encoding.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.Cookies">
+            <summary>
+            Gets the cookies.
+            </summary>
+            <value>The cookies.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.Form">
+            <summary>
+            Gets the form.
+            </summary>
+            <value>The form.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.Headers">
+            <summary>
+            Gets the headers.
+            </summary>
+            <value>The headers.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.HttpMethod">
+            <summary>
+            Gets the HTTP method.
+            </summary>
+            <value>The HTTP method.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.InputStream">
+            <summary>
+            Gets the input stream.
+            </summary>
+            <value>The input stream.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.QueryString">
+            <summary>
+            Gets the query string.
+            </summary>
+            <value>The query string.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.RawUrl">
+            <summary>
+            Gets the raw URL.
+            </summary>
+            <value>The raw URL.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.ServerVariables">
+            <summary>
+            Gets the server variables.
+            </summary>
+            <value>The server variables.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.Url">
+            <summary>
+            Gets the URL.
+            </summary>
+            <value>The URL.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.UserAgent">
+            <summary>
+            Gets the user agent.
+            </summary>
+            <value>The user agent.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.UserHostAddress">
+            <summary>
+            Gets the user host address.
+            </summary>
+            <value>The user host address.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.UrlReferrer">
+            <summary>
+            Gets the URL referrer.
+            </summary>
+            <value>The URL referrer.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.Path">
+            <summary>
+            Gets the path.
+            </summary>
+            <value>The path.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.UserLanguages">
+            <summary>
+            Gets the user languages.
+            </summary>
+            <value>The user languages.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.IsSecureConnection">
+            <summary>
+            Gets a value indicating whether this instance is secure connection.
+            </summary>
+            <value><c>true</c> if this instance is secure connection; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.Params">
+            <summary>
+            Gets the parameters.
+            </summary>
+            <value>The parameters.</value>
+        </member>
+        <member name="P:Dynamicweb.Environment.IRequest.RequestType">
+            <summary>
+            Gets the type of the request.
+            </summary>
+            <value>The type of the request.</value>
+        </member>
+        <member name="M:Dynamicweb.Environment.IRequest.IsValid">
+            <summary>
+            Returns true if the request is valid.
+            </summary>
+            <returns><c>true</c> if this instance is valid; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:Dynamicweb.Environment.NamespaceDoc">
+            <summary>
+            The <see cref="N:Dynamicweb.Environment"/> namespace contains contracts for an abstraction of HttpContext (and it's stack), aswell as Dynamicweb-specific lowlevel methods related to this context.
+            </summary>
+            <remarks>
+            Environment.Web contains default implementations for this namespace.
+            </remarks>
+        </member>
+        <member name="T:Dynamicweb.Environment.PostedFileBase">
+            <summary>
+            Provides access to individual files that have been uploaded by a client.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.PostedFileBase.Name">
+            <summary>
+            Gets the name from the input
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.PostedFileBase.FileName">
+            <summary>
+            Gets the fully qualified name of the file on the client.
+            </summary>        
+        </member>
+        <member name="P:Dynamicweb.Environment.PostedFileBase.ContentType">
+            <summary>
+            Gets the MIME content type of a file sent by a client.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.PostedFileBase.Length">
+            <summary>
+            Gets the size of an uploaded file, in bytes.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.PostedFileBase.OpenReadStream">
+            <summary>
+            Opens the request stream for reading the uploaded file.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Environment.PostedFileCollection">
+            <summary>
+            Base implementation for abstraction of filecollection for posted files, as used in Dynamicweb.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.PostedFileCollection.Collection">
+            <summary>
+            Backing data collection
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.PostedFileCollection.#ctor">
+            <summary>
+            Constructs a default collection using a list as backing data collection.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.PostedFileCollection.Item(System.String)">
+            <summary>
+            Gets the posted file object that has the specified name from the collection.
+            </summary>
+            <param name="name">The name of the object to return.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Dynamicweb.Environment.PostedFileCollection.AllKeys">
+            <summary>
+            Gets an array that contains the keys (names) of all posted file objects in the collection.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.PostedFileCollection.Count">
+            <summary>
+            Contains posted file objects.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Environment.PostedFileCollection.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the collection is read-only.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.PostedFileCollection.Add(Dynamicweb.Environment.PostedFileBase)">
+            <summary>
+            Adds an item to the collection
+            </summary>
+            <param name="item">The file to add to the collection</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.PostedFileCollection.Clear">
+            <summary>
+            Removes all items from the collection
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Environment.PostedFileCollection.Contains(Dynamicweb.Environment.PostedFileBase)">
+            <summary>
+             Determines whether the collection contains a specific value.
+            </summary>
+            <param name="item">The file to locate in the collection</param>
+            <returns>true if item is found in the collections; otherwise, false</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.PostedFileCollection.CopyTo(Dynamicweb.Environment.PostedFileBase[],System.Int32)">
+            <summary>
+            Copies the elements of the collection to an array, starting at a particular array index.
+            </summary>
+            <param name="array">The one-dimensional array that is the destination of the elements copied from the collections. The array must have zero-based indexing</param>
+            <param name="arrayIndex">The zero-based index in array at which copying begins</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.PostedFileCollection.Remove(Dynamicweb.Environment.PostedFileBase)">
+            <summary>
+             Removes the first occurrence of a specific object from the collection
+            </summary>
+            <param name="item">The file to remove from the collection</param>
+            <returns>true if item was successfully removed from the collection; otherwise, false</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.PostedFileCollection.GetFile(System.String)">
+            <summary>
+            Returns the posted file object that has the specified name from the collection.
+            </summary>
+            <param name="name">The name of the object to return.</param>
+            <returns>The posted file object that is specified by name.</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.PostedFileCollection.GetFiles(System.String)">
+            <summary>
+            When implemented in a derived class, returns all files that match the specified name.
+            </summary>
+            <param name="name">The name to match.</param>
+            <returns>The collection of files.</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.PostedFileCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection
+            </summary>
+            <returns>An enumerator that can be used to iterate through the collection</returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.PostedFileCollection.GetName(Dynamicweb.Environment.PostedFileBase)">
+            <summary>
+            Used to get the name of the file.
+            </summary>
+            <remarks>Can be overriden to change how files are matched to name in collection</remarks>
+            <param name="file">File to get name of</param>
+            <returns>Name of file</returns>
+        </member>
+        <member name="T:Dynamicweb.Environment.RequestExtensions">
+            <summary>
+            Extension for IRequest that enables the return of strongly typed objects from the requests querystring or form.
+            </summary>
+            <autogeneratedoc />
+        </member>
+        <member name="M:Dynamicweb.Environment.RequestExtensions.GetInt32(Dynamicweb.Environment.IRequest,System.String)">
+            <summary>
+            Gets the integer representation of the value for the given key.
+            The value is parsed using the relevant helper API, so default values for the type might be returned.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="key">The key.</param>
+            <returns>System.Int32.</returns>
+            <autogeneratedoc />
+        </member>
+        <member name="M:Dynamicweb.Environment.RequestExtensions.GetDouble(Dynamicweb.Environment.IRequest,System.String)">
+            <summary>
+            Gets the double representation of the value for the given key.
+            The value is parsed using the relevant helper API, so default values for the type might be returned.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="key">The key.</param>
+            <returns>System.Double.</returns>
+            <autogeneratedoc />
+        </member>
+        <member name="M:Dynamicweb.Environment.RequestExtensions.GetInt64(Dynamicweb.Environment.IRequest,System.String)">
+            <summary>
+            Gets the long representation of the value for the given key.
+            The value is parsed using the relevant helper API, so default values for the type might be returned.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="key">The key.</param>
+            <returns>System.Int64.</returns>
+            <autogeneratedoc />
+        </member>
+        <member name="M:Dynamicweb.Environment.RequestExtensions.GetString(Dynamicweb.Environment.IRequest,System.String)">
+            <summary>
+            Gets the string representation of the value for the given key.
+            The value is parsed using the relevant helper API, so default values for the type might be returned.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="key">The key.</param>
+            <returns>System.Int64.</returns>
+            <autogeneratedoc />
+        </member>
+        <member name="M:Dynamicweb.Environment.RequestExtensions.GetBoolean(Dynamicweb.Environment.IRequest,System.String)">
+            <summary>
+            Gets the boolean representation of the value for the given key.
+            The value is parsed using the relevant helper API, so default values for the type might be returned.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="key">The key.</param>
+            <returns>The value of a valid boolean object (<paramref name="key"/>). In all other cases <c>false</c>.</returns>
+            <autogeneratedoc />
+        </member>
+        <member name="M:Dynamicweb.Environment.RequestExtensions.GetDate(Dynamicweb.Environment.IRequest,System.String)">
+            <summary>
+            Gets the date representation of the value for the given key.
+            The value is parsed using the relevant helper API, so default values for the type might be returned.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="key">The key.</param>
+            <returns>DateTime.</returns>
+            <autogeneratedoc />
+        </member>
+        <member name="M:Dynamicweb.Environment.RequestExtensions.HasRequest(Dynamicweb.Environment.IRequest,System.String)">
+            <summary>
+            Determines whether the specified key exists in the request.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="key">The key.</param>
+            <returns><c>true</c> if the specified key has request; otherwise, <c>false</c>.</returns>
+            <autogeneratedoc />
+        </member>
+        <member name="M:Dynamicweb.Environment.RequestExtensions.RequestObject(Dynamicweb.Environment.IRequest,System.String,System.Type)">
+            <summary>
+            Gets the object from request and 
+            </summary>
+            <param name="request"></param>
+            <param name="key"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Environment.RequestExtensions.GetFiles(Dynamicweb.Environment.IRequest)">
+            <summary>
+            Tries to get posted files from the 
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Environment.Snapshot">
+            <summary>
+            Readonly Snapshot that stores key/value pairs. This class cannot be inherited.
+            </summary>
+            <seealso cref="T:System.Collections.Generic.Dictionary`2" />
+        </member>
+        <member name="M:Dynamicweb.Environment.Snapshot.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Environment.Snapshot"/> class.
+            </summary>
+            <param name="snapshotValues">The snapshot values.</param>
+        </member>
+        <member name="M:Dynamicweb.Environment.Snapshot.GetValue(System.String)">
+            <summary>
+            Gets the value.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="T:Dynamicweb.NamespaceDoc">
+            <summary>
+            The Dynamicweb namespace contains fundamental classes and basic infrastucture of Dynamicweb application. The sub namespaces to Dynamicweb is the main functionality of Dynamicweb. 
+            Dynamicweb.Content contains the API for managing content, items and the system it self. 
+            Dynamicweb.Frontend is the runtime executing the frontend of the website running Dynamicweb through the Dynamicweb.Frontend.PageView class.
+            </summary>
+        </member>
+    </members>
+</doc>

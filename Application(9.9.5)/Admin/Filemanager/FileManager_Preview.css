@@ -1,0 +1,45 @@
+﻿#wrapperImage, #wrapperFile {
+	    position:fixed; 
+	    left:0px;
+	    bottom:25px; 
+	    right:0px; 
+	    overflow:auto;
+    }
+    #wrapperFile {
+	    top:0px;
+    }
+    #wrapperImage {
+	    top:35px;
+    }
+    #imagearea {
+	    position:relative;
+	    vertical-align:middle;
+	    text-align:center;
+	    width:100%;
+	    height:100%;
+    }
+    #statusBar, #statusBarImage {
+	    position:fixed; 
+	    left:0px;
+	    bottom:0px; 
+	    right:0px; 
+	    height:23px;
+	    line-height:23px;
+	    border:solid 1px #ffffff;
+	    vertical-align:bottom;
+	    padding-left:5px;
+	    background-color:#F1EDED;
+    }
+    #statusBar, #statusBarImage img {
+	    vertical-align:middle;
+    }
+
+    #statusBar, #statusBarImage .statusBarItem {
+	    min-width:160px;
+	    display:block;
+	    float:left;
+    }
+    .imageFullSize {  
+        max-height:100%;
+        max-width:100%;
+    }

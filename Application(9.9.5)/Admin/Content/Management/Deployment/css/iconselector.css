@@ -1,0 +1,64 @@
+﻿.color-box {
+    width: 22px;
+    height: 22px;
+}
+
+#dlgIconSettings .filters {
+    background-color: #f5f5f5;
+    width: calc(100% + 16px);
+    padding: 5px 10px;
+    left: -16px;
+    top: -16px;
+    position: relative;
+    height: 34px;
+}
+
+#dlgIconSettings .filters .form-group {
+    width: auto;
+    float: left;
+    margin-right: 16px;
+}
+
+#dlgIconSettings .filters .control-label, #dlgIconSettings .filters .form-group-input {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#dlgIconSettings .icon-settings {
+    display: inline-block;
+}
+
+#dlgIconSettings .icon-settings .icon-block
+{
+    width: 200px;
+    float: left;
+    display: flex;
+    padding-top: 9px;
+    padding-left: 6px;
+    cursor:pointer;
+}
+
+#dlgIconSettings .icon-settings .icon-block:hover,
+#dlgIconSettings .icon-settings .icon-block.selected {
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,.2);
+    color: #000;
+    background-color: #0085ca;
+}
+
+#dlgIconSettings .icon-settings .icon-block .icon-block-label
+{
+    margin-top: 11px;
+}
+
+.size-3x
+{
+    width: 48px;
+    height: 48px;
+    font-size: 38px;
+}
+
+#IconSelector {
+    width: 28px;
+    height: inherit;
+    font-size: 28px;
+}

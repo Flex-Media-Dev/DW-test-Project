@@ -1,0 +1,40 @@
+﻿.widget.card .svg-funnel-js__labels {
+    margin-top: -12px;
+}
+
+.widget.card .svg-funnel-js__container {
+    margin-top: -24px;
+}
+
+.widget.card .svg-funnel-js__subLabels {
+    margin-top: 12px;
+    display: -webkit-box;
+}
+
+.chart .svg-funnel-js .svg-funnel-js__labels {
+    padding-bottom: 12px;
+}
+
+.chart .svg-funnel-js .svg-funnel-js__labels .svg-funnel-js__label .label__value {
+    font-size: inherit;
+    color: inherit;
+}
+
+.chart .svg-funnel-js .svg-funnel-js__labels .svg-funnel-js__label .label__title {
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+}
+
+.chart .svg-funnel-js .svg-funnel-js__subLabels .svg-funnel-js__subLabel {
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+    display: inline-flex;
+}
+
+.chart .svg-funnel-js .svg-funnel-js__subLabels .svg-funnel-js__subLabel .svg-funnel-js__subLabel--color {
+    width: 18px;
+    height: 18px;
+    border-radius: 0;
+}

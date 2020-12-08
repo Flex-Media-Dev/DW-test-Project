@@ -1,0 +1,167 @@
+﻿@using Dynamicweb.Core.UI
+@using Dynamicweb.Core.UI.Icons
+@using Dynamicweb.Management
+
+@model IArea
+@{
+    var bodyClassName = Model is INavigator ? string.Empty : "sw-toggled-off";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@Model.Title</title>
+
+    <!-- CSS -->
+    <link href="/Admin/Resources/css/fonts.min.css" rel="stylesheet">
+    <link href="/Admin/Resources/css/content.min.css" rel="stylesheet">
+</head>
+
+<body class="@bodyClassName">
+    @if (Model is INavigator)
+    {
+    <aside id="sidebar" class="area-@(Model.Color ?? "black")">
+        @if (Model.HasRootSelector() || Model.HasRootSelectorCombi())
+        {
+        <div class="sidebar-header-actions @(Model.HasActionsForRootItem() ? "" : "without-root-actions")">
+            @if (Model is IRootSelector)
+            {
+            <div id="rootSelector" class="selector" data-dataobject="@(((IRootSelector)Model).SelectedNodeId)" data-datasource="@NavigatorController.NavigateUrl(Model.Name)" data-itemchanged="loadTree" data-selectall="false"></div>
+            }
+            else if (Model.HasRootSelectorCombi())
+            {
+            <div id="rootSelector" class="selector" data-dataobject="" data-datasource="@NavigatorController.NavigateUrl(Model.Name)" data-itemchanged="loadTree" data-selectall="true" data-show-only-hasnodes="true"></div>
+            }
+            <div class="dropdown pull-left">
+                <button class="btn btn-link contextTrigger" data-toggle="dropdown" aria-expanded="false"><i class="@KnownIconInfo.ClassNameFor(KnownIcon.MoreVert, true)"></i></button>
+            </div>
+        </div>
+
+        <button type="button" class="sidebar-toggle-btn"><i class="@KnownIconInfo.ClassNameFor(KnownIcon.CaretLeft, true)"></i></button>
+
+        <div id="fixed-sidebar" class="with-header-actions">
+            <ul class="main-menu">
+                <li class="navigator-treeview tree">
+                </li>
+            </ul>
+        </div>
+        }
+        else
+        {
+        <div class="sidebar-header-actions">
+            <h2 class="sidebar-header-title">@Model.Title</h2>
+        </div>
+
+        <button type="button" class="sidebar-toggle-btn"><i class="@KnownIconInfo.ClassNameFor(KnownIcon.CaretLeft, true)"></i></button>
+
+        <div id="fixed-sidebar" class="with-header-actions">
+                <ul class="main-menu">
+                    <li class="navigator-treeview tree">
+                    </li>
+                </ul>
+        </div>
+        }
+    </aside>
+    }
+
+    <section class="b-container">
+        <div id="content-container">
+            <iframe name="mainframe" id="main-iframe"></iframe>
+        </div>
+    </section>
+
+    <div class="dark-overlay"></div>
+
+    @if (Model is INavigator)
+    {
+        <!-- Javascript Libraries -->
+        <script src="/Admin/Resources/js/jquery-2.1.1.min.js"></script>
+        <script src="/Admin/Resources/js/layout/bootstrap.min.js"></script>
+
+        <script src="/Admin/Resources/vendors/waves/waves.min.js"></script>
+        <script src="/Admin/Resources/vendors/maxlength/bootstrap-maxlength.min.js"></script>
+
+        <script src="/Admin/Resources/js/layout/dwglobal.js"></script>
+        <script src="/Admin/Resources/js/layout/Actions.js"></script>
+        <script src="/Admin/Resources/js/layout/content-functions.js"></script>
+        <script src="/Admin/Resources/js/layout/selector.js"></script>
+        <script src="/Admin/Resources/js/layout/contextmenu.js"></script>
+        <script src="/Admin/Resources/vendors/bootstrap-select/bootstrap-select.js"></script>
+        <script src="/Admin/Resources/js/layout/treeview.js"></script>
+        <script>
+            function loadTree(dataobject, fn) {
+                let sideBarHeaderEl = $(".sidebar-header-actions");
+                sideBarHeaderEl.attr("data-selected-item", dataobject);
+                var dataSource = '@NavigatorController.NavigateUrl(Model.Name)';
+                var tree = $('.navigator-treeview');
+                tree.data("childlist", dataobject).prop("id", dataobject);
+
+                if (tree.data("treeview")) {
+                    tree.treeView("reload", fn);
+                } else {
+                    tree.treeView({
+                        source: dataSource
+                    });
+                }
+
+                if ("@(Model.Name)" == "Content") {
+                    $('#dw-logo', window.parent.document).find('a').attr('href', "/Default.aspx?AreaID=" + dataobject.substring(4));
+                }
+                @if (Model.HasRootSelector())
+                {
+                    @:storeSelectedItem(dataobject);
+                }
+            }
+            @if (Model is IRootSelector)
+            {
+                <text> 
+            function storeSelectedItem(node) {
+                var rootSelectorEl = $("#rootSelector");
+                var prev = rootSelectorEl.attr("data-dataobject");
+                if (prev != node) {
+                    rootSelectorEl.attr("data-dataobject", node);
+                    $.post("@Model.Name-storeselectedroot", { node: node });
+                }
+            }
+                </text>
+            }
+        </script>
+
+        if (Model is IRootSelector || Model is IRootSelectorCombi)
+        {
+        <script>
+            function init() {
+                $(".sidebar-header-actions .contextTrigger").on("click", function (e) {
+                    $(this).contextmenu({
+                        source: "@NavigatorController.ActionsUrl(Model.Name, "{0}")".format($("#rootSelector").data("dataobject"))
+                    });
+                });
+                $("body").on('contextmenu', function (e) {
+                    if ($(e.target).hasClass("navigator-treeview")) {
+                        $(".sidebar-header-actions .contextTrigger").trigger("click");
+                        return false;
+                    }
+                });
+            }
+        </script>
+        }
+        else
+        {
+        <script>
+            function init() {
+                loadTree();
+            }
+        </script>
+        }
+        <script>
+            $(function () {
+                init();
+            });
+        </script>
+    }
+    <script>
+            document.getElementById("main-iframe").src = @Html.Raw(Json.Encode(Model.DefaultAction ?? Model.Name));
+    </script>
+</body>
+</html>

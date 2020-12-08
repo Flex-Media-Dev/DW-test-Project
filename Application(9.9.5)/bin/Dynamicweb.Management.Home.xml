@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Management.Home</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Management.Home.HomeController">
+            <summary>
+            HomeController
+            </summary>
+            <seealso cref="T:System.Web.Mvc.Controller" />
+        </member>
+        <member name="M:Dynamicweb.Management.Home.HomeController.Index">
+            <summary>
+            Indexes this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Management.Home.HomeController.Dashboard">
+            <summary>
+            Dashboards this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Management.Home.HomeController.GetVisitorsChart">
+            <summary>
+            Gets the visitors chart.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Management.Home.HomeController.GetLatestWeekVisitorsChartData(System.Int32@)">
+            <summary>
+            Gets the latest week visitors chart data.
+            </summary>
+            <param name="totalVisitors">The total visitors.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Management.Home.HomeController.GetOrdersChart">
+            <summary>
+            Gets the orders chart.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Management.Home.HomeController.GetLatestWeekOrdersChartData(System.Int32@)">
+            <summary>
+            Gets the latest week orders chart data.
+            </summary>
+            <param name="totalOrders">The total orders.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Management.Home.HomeManagementArea">
+            <summary>
+            HomeManagementArea
+            </summary>
+            <seealso cref="T:Dynamicweb.Management.IArea" />
+        </member>
+        <member name="P:Dynamicweb.Management.Home.HomeManagementArea.Configuration">
+            <summary>
+            Gets or sets the configuration.
+            </summary>
+            <value>
+            The configuration.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Home.HomeManagementArea.Color">
+            <summary>
+            Gets or sets the color.
+            </summary>
+            <value>
+            The color.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Home.HomeManagementArea.Image">
+            <summary>
+            Gets or sets the image.
+            </summary>
+            <value>
+            The image.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Home.HomeManagementArea.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Home.HomeManagementArea.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Home.HomeManagementArea.DefaultAction">
+            <summary>
+            Gets or sets the default action.
+            </summary>
+            <value>
+            The default action.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Home.HomeManagementArea.Actions">
+            <summary>
+            Gets or sets the collection of actions for backend left menu.
+            </summary>
+            <value>
+            The collection of actions.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Management.Home.HomeModel">
+            <summary>
+            HomeModel
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Management.Home.HomeModel.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Home.HomeModel.LatestVisitorsCount">
+            <summary>
+            Gets or sets the latest visitors count.
+            </summary>
+            <value>
+            The latest visitors count.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Home.HomeModel.LatestVisitorsChartData">
+            <summary>
+            Gets or sets the latest visitors chart data.
+            </summary>
+            <value>
+            The latest visitors chart data.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Home.HomeModel.LatestOrdersCount">
+            <summary>
+            Gets or sets the latest orders count.
+            </summary>
+            <value>
+            The latest orders count.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Home.HomeModel.LatestOrdersChartData">
+            <summary>
+            Gets or sets the latest orders chart data.
+            </summary>
+            <value>
+            The latest orders chart data.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Management.Home.HomeViews">
+            <summary>
+            HomeViews
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Management.Home.HomeViews.Index">
+            <summary>
+            Indexes this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Management.Home.HomeViews.Dashboard">
+            <summary>
+            Dashboards this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Management.Home.Widgets.HomeDataFeed">
+            <summary>
+            HomeDataFeed
+            </summary>
+            <seealso cref="T:Dynamicweb.Core.UI.INavigator" />
+        </member>
+        <member name="T:Dynamicweb.Management.Home.Widgets.HomeDataFeed.Feeds">
+            <summary>
+            Feeds
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Management.Home.Widgets.HomeDataFeed.SystemName">
+            <summary>
+            The system name
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Management.Home.Widgets.HomeDataFeed.GetNodes(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Gets the nodes.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="requestParameters">The request parameters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Management.Home.Widgets.HomeDataFeed.GetActions(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Gets the actions.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="requestParameters">The request parameters.</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+    </members>
+</doc>

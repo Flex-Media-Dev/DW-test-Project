@@ -1,0 +1,136 @@
+﻿html, body
+{
+    overflow: hidden;
+}
+
+form
+{
+    height: 100%;
+}
+
+#ecomTab
+{
+    table-layout: fixed;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+#cellTree
+{
+}
+
+#cellTreeCollapsed
+{
+    background-color: #dae8f7;
+    border-right: 1px solid #9faec2;
+}
+
+#cellContent
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+#cellContent div.Ribbon
+{
+    margin-left: 0px !important;
+}
+
+#slider
+{
+    width: 1px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#slider > div
+{
+    position: fixed;
+    width: 1px;
+    top: 0px;
+    bottom: 0px;
+    background-color: #9faec2;
+}
+
+#slider > div:hover
+{
+    background-color: #d0e1f4;
+    border-left: 1px solid #9faec2;
+    border-right: 1px solid #9faec2;
+    cursor: e-resize;
+    width: 3px;
+}
+
+/* "Tree" control: styles */
+
+div.cellTreeContainer
+{
+    position: relative;
+}
+
+div.nav div.title, div.nav div.subtitle
+{
+    padding-left: 0px !important;
+    width: 100% !important;
+    border-right: none !important;
+}
+
+div.nav div.title > span, div.nav div.subtitle > span
+{
+    padding-left: 3px;
+    padding-bottom: 4px;
+}
+
+div.nav
+{
+    width: auto !important;
+}
+
+div.tree
+{
+    padding-left: 0px !important;
+    border-right: none !important;
+    position: absolute !important;
+    width: 100% !important;
+    height: 500px;
+}
+
+/* "Accordion" control: styles */
+
+div.accordion
+{
+    width: 100% !important;
+}
+
+#accordionContainer
+{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    border-right: 1px solid #9faec2;
+    top: -200px;
+}
+
+.eComNodeHighlighted
+{
+    background-color: #afcef4 !important;
+}
+
+.dtree a.nodeSel {
+	background-color: White !important;
+	font-weight: bold !important;
+}
+
+.dtree .dis
+{
+    background-color: transparent;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.4;
+    opacity: 0.4;
+    color: Gray;
+}

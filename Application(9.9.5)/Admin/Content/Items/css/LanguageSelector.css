@@ -1,0 +1,110 @@
+﻿.language-selector.button:hover {
+  width: auto !important;
+}
+.language-selector.dropdown {
+  z-index: 10;
+  display: none;
+  position: absolute;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  left: auto;
+  margin: 0;
+  padding: 0;
+  min-width: 100px;
+  width: auto;
+  height: auto !important;
+  max-height: 230px !important;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 1px solid;
+  border-color: #9faec2;
+  border-top-width: 0px;
+  text-align: left;
+  border-radius: 2px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  -moz-transition: display ease-out 2s;
+  -o-transition: display ease-out 2s;
+  -webkit-transition: display ease-out 2s;
+  transition: display ease-out 2s;
+}
+.language-selector.dropdown.is-opened {
+  display: block;
+}
+.language-selector.dropdown .separator {
+  max-height: 1px;
+  width: 100%;
+  border-bottom: 1px solid #9ac6ff;
+}
+.language-selector.dropdown ul {
+  display: block;
+  position: relative;
+  margin: 1px;
+  padding: 0;
+  list-style: none;
+  border: none;
+  background: none;
+  height: auto !important;
+  max-height: 115px;
+  width: auto !important;
+  line-height: normal;
+}
+.language-selector.dropdown ul li {
+  display: block;
+  float: none;
+  margin: 1px 0;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: solid 1px transparent;
+  height: 22px;
+  line-height: 22px;
+}
+.language-selector.dropdown ul li:hover {
+  border: solid 1px #FFB700 !important;
+  background-color: #ffd800;
+  background-position: left top;
+  background-repeat: repeat-x;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.language-selector.dropdown ul li:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: -2px 0 0 4px;
+}
+	.language-selector.dropdown ul li.selected:before {
+		vertical-align: sub;
+		border: solid 1px #FFB700 !important;
+		background-color: #ffd800;
+	}
+.language-selector.dropdown ul li span {
+  margin: 0 5px 0 2px;
+  display: inline-block;
+}
+.language-selector.dropdown ul li img {
+  width: 16px;
+  height: 16px;
+  margin: 0 0 0 5px;
+  vertical-align: sub;
+}
+.language-selector.dropdown ul.created {
+  font-weight: bold;
+}
+
+.language-selector.dropdown ul.not-created {
+    border-top: 1px solid #bdcce0;
+}
+
+.language-selector.dropdown ul.not-created.empty {
+    border-top: none;
+}

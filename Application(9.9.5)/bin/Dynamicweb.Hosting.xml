@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Hosting</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Hosting.HostHeader">
+            <summary>
+            Represents a single host header entry.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Hosting.HostHeader.HostName">
+            <summary>
+            Gets the host-name associated with this entry.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Hosting.HostHeader.IPAddress">
+            <summary>
+            Gets the IP-address associated with this entry.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Hosting.HostHeader.Port">
+            <summary>
+            Gets the port associated with this entry.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostHeader.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="hostName">Host-name to be associated with the new entry.</param>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostHeader.#ctor(System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="hostName">Host-name to be associated with the new entry.</param>
+            <param name="port">Port number to be associated with the new entry.</param>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostHeader.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="hostName">Host-name to be associated with the new entry.</param>
+            <param name="port">Port number to be associated with the new entry.</param>
+            <param name="ipAddress">IP-address to be associated with the new entry.</param>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostHeader.ToString">
+            <summary>
+            Returns a string representation of the entry.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostHeader.GetHostHeaders">
+            <summary>
+            Gets all host headers configured for the current web-site.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostHeader.GetHostHeaders(System.String)">
+            <summary>
+            Gets all host headers configured for specified web-site.
+            </summary>
+            <param name="websiteID">The ID of the website.</param>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostHeader.Add(Dynamicweb.Hosting.HostHeader)">
+            <summary>
+            Adds new host header to the current web-site.
+            </summary>
+            <param name="hostHeader">Host header to add.</param>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostHeader.Add(System.String)">
+            <summary>
+            Adds new host header to the current web-site.
+            </summary>
+            <param name="hostName">The host-name of the new host header.</param>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostHeader.Add(Dynamicweb.Hosting.HostHeader,System.String)">
+            <summary>
+            Adds new host header to specified web-site.
+            </summary>
+            <param name="hostHeader">Host header to add.</param>
+            <param name="siteName">The web-site name.</param>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostHeader.Remove(System.String)">
+            <summary>
+            Removes specified host header from the current web-site.
+            </summary>
+            <param name="hostName">Host-name of the host header.</param>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostHeader.Remove(Dynamicweb.Hosting.HostHeader,System.String)">
+            <summary>
+            Removes specified host header from specified web-site.
+            </summary>
+            <param name="hostHeader">Host header to remove.</param>
+            <param name="siteName">The target web-site name.</param>
+        </member>
+        <member name="T:Dynamicweb.Hosting.HostHeaderCollection">
+            <summary>
+            Represents a collection of host header entries.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Hosting.HostingEnvironmentProviderBase.Version">
+            <summary>
+            Gets the version of the environment.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Hosting.HostingEnvironmentProviderBase.Name">
+            <summary>
+            Gets the name of the environment.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Hosting.HostingEnvironmentProviderBase.IsIntegrated">
+            <summary>
+            Gets a value indicating whether the current environment is integrated.
+            </summary>
+            <value>
+            <c>true</c> if application pool is running in integrated; otherwise, <c>false</c>.
+            </value>
+            <remarks>Always returns false on IIS 6</remarks>
+        </member>
+        <member name="P:Dynamicweb.Hosting.HostingEnvironmentProviderBase.SiteName">
+            <summary>
+            Gets the name of the site instance in the environment.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Hosting.HostingEnvironmentProviderBase.SiteID">
+            <summary>
+            Gets the id of the site.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Hosting.HostingEnvironmentProviderBase.AdminDirectory">
+            <summary>
+            Gets the admin directory.
+            </summary>
+            <value>The admin directory.</value>
+        </member>
+        <member name="P:Dynamicweb.Hosting.HostingEnvironmentProviderBase.AdminDirectoryRoot">
+            <summary>
+            Gets the admin root directory.
+            </summary>
+            <value>The admin root directory.</value>
+        </member>
+        <member name="P:Dynamicweb.Hosting.HostingEnvironmentProviderBase.HomeDirectory">
+            <summary>
+            Gets the home directory.
+            </summary>
+            <value>The home directory.</value>
+        </member>
+        <member name="P:Dynamicweb.Hosting.HostingEnvironmentProviderBase.MissingPageHandler">
+            <summary>
+            Handles missing pages
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostingEnvironmentProviderBase.UpdateStorageLocation(System.String,System.String)">
+            <summary>
+            Updates the storage location.
+            </summary>
+            <param name="original">The current location.</param>
+            <param name="target">The new location.</param>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostingEnvironmentProviderBase.SetHome(System.String)">
+            <summary>
+            Sets the home location
+            </summary>
+            <param name="path">New path for the home location</param>
+            <returns>True if operation succeeded</returns>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostingEnvironmentProviderBase.SetAdmin(System.String)">
+            <summary>
+            Sets the admin location
+            </summary>
+            <param name="path">New path for the admin location</param>
+            <returns>True if operation succeeded</returns>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostingEnvironmentProviderBase.SetFiles(System.String)">
+            <summary>
+            Sets the files location
+            </summary>
+            <param name="path">New path for the admin location</param>
+            <returns>True if operation succeeded</returns>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostingServerProviderBase.GetSiteID">
+            <summary>
+            Gets the ID of the site.
+            </summary>
+            <returns>siteID</returns>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostingServerProviderBase.GetHostHeaders">
+            <summary>
+            Gets all host headers configured for specified web-site.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostingServerProviderBase.GetHostHeaders(System.String)">
+            <summary>
+            Gets all host headers configured for specified web-site.
+            </summary>
+            <param name="websiteID">The ID of the website.</param>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostingServerProviderBase.AddHostHeader(Dynamicweb.Hosting.HostHeader)">
+            <summary>
+            Adds new host header to the current web-site.
+            </summary>
+            <param name="hostHeader">Host header to add.</param>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostingServerProviderBase.AddHostHeader(System.String)">
+            <summary>
+            Adds new host header to the current web-site.
+            </summary>
+            <param name="hostName">The host-name of the new host header.</param>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostingServerProviderBase.AddHostHeader(Dynamicweb.Hosting.HostHeader,System.String)">
+            <summary>
+            Adds new host header to specified web-site.
+            </summary>
+            <param name="hostHeader">Host header to add.</param>
+            <param name="site">The web-site.</param>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostingServerProviderBase.RemoveHostHeader(System.String)">
+            <summary>
+            Removes specified host header from the current web-site.
+            </summary>
+            <param name="hostName">Host-name of the host header.</param>
+        </member>
+        <member name="M:Dynamicweb.Hosting.HostingServerProviderBase.RemoveHostHeader(Dynamicweb.Hosting.HostHeader,System.String)">
+            <summary>
+            Removes specified host header from specified web-site.
+            </summary>
+            <param name="hostHeader">Host header to remove.</param>
+            <param name="site">The target web-site.</param>
+        </member>
+        <member name="T:Dynamicweb.Hosting.Iis">
+            <summary>
+            Methods for manipulating IIS metabase in Hostnordic hosting environment
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Hosting.Iis.Is64BitApplicationPool">
+            <summary>
+            Gets a value indicating whether the solutin is running on a 64 bit application pool.
+            </summary>
+            <value>
+            <c>true</c> if running on a 64 bit application pool; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Hosting.Iis.Version">
+            <summary>
+            Gets the IIS version.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Hosting.Iis.AppPoolName">
+            <summary>
+            Gets the app pool name.
+            </summary>
+            <value>The app pool name.</value>
+        </member>
+        <member name="P:Dynamicweb.Hosting.Iis.AppPoolIsIntegrated">
+            <summary>
+            Gets a value indicating whether the current application pool (IIS 7 or 8) is running in integrated pipeline.
+            </summary>
+            <value>
+            <c>true</c> if application pool is running in integrated; otherwise, <c>false</c>.
+            </value>
+            <remarks>Always returns false on IIS 6</remarks>
+        </member>
+        <member name="P:Dynamicweb.Hosting.Iis.SiteName">
+            <summary>
+            Gets the name of the IIS instance.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Dynamicweb.Hosting.Iis.SiteID">
+            <summary>
+            Gets the id of the IIS instance.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Dynamicweb.Hosting.Iis.HostHeaders">
+            <summary>
+            Gets the hostheaders.
+            </summary>
+            <value>The hostheaders.</value>
+        </member>
+        <member name="P:Dynamicweb.Hosting.Iis.AdminDirectory">
+            <summary>
+            Gets the admin directory.
+            </summary>
+            <value>The admin directory.</value>
+        </member>
+        <member name="P:Dynamicweb.Hosting.Iis.AdminDirectoryRoot">
+            <summary>
+            Gets the admin directory root.
+            </summary>
+            <value>The admin directory root.</value>
+        </member>
+        <member name="P:Dynamicweb.Hosting.Iis.HomeDirectory">
+            <summary>
+            Gets the home directory.
+            </summary>
+            <value>The home directory.</value>
+        </member>
+        <member name="P:Dynamicweb.Hosting.Iis.Handler404">
+            <summary>
+            Gets the handler404.
+            </summary>
+            <value>The handler404.</value>
+        </member>
+        <member name="M:Dynamicweb.Hosting.Iis.HaveMetaBaseWriteAccess">
+            <summary>
+            Used to check if the metabase can be edited.
+            </summary>
+            <returns>Returns true if the meta base can be written to with the current permissions (impersonated or not) </returns>
+        </member>
+        <member name="M:Dynamicweb.Hosting.Iis.IsHostedAtHostnordic">
+            <summary>
+            Used to check if this solution is hosted at Hostnordic A/S Denmark
+            </summary>
+            <returns>Returns true if on one of their DC's</returns>
+        </member>
+        <member name="M:Dynamicweb.Hosting.Iis.UpdateBin(System.String,System.String)">
+            <summary>
+            Updates the bin.
+            </summary>
+            <param name="binLocation">The bin location.</param>
+            <param name="updateToBinLocation">The update to bin location.</param>
+        </member>
+        <member name="M:Dynamicweb.Hosting.Iis.AddHomeVirtualDirectory(System.String)">
+            <summary>
+            Adds home virtual directory
+            </summary>
+            <param name="path">virtual directory physical path</param>
+            <returns>True if operation succeeded</returns>
+        </member>
+        <member name="M:Dynamicweb.Hosting.Iis.SetAdminDirectory(System.String)">
+            <summary>
+            Sets admin directory path
+            </summary>
+            <param name="path">Path of directory containing admin folder</param>
+            <returns>True if operation succeeded</returns>
+        </member>
+        <member name="M:Dynamicweb.Hosting.Iis.SetFilesDirectory(System.String)">
+            <summary>
+            Sets files directory path
+            </summary>
+            <param name="path">Path of directory containing files folder</param>
+            <returns>True if operation succeeded</returns>
+        </member>
+        <member name="T:Dynamicweb.Hosting.VersionRequirements">
+            <summary>
+            Represents version requirements
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Hosting.VersionRequirements.RequiredVersion">
+            <summary>
+            Checks if Version requirements exist. Also ensures requirements are loaded.
+            </summary>
+            <returns>True if required version exists</returns>
+        </member>
+        <member name="P:Dynamicweb.Hosting.VersionRequirements.RequiredUpdatesPackage">
+            <summary>
+            Checks if Updates requirements exist. Also ensures requirements are loaded.
+            </summary>
+            <returns>True if updates requirements exist</returns>
+        </member>
+        <member name="P:Dynamicweb.Hosting.VersionRequirements.RequiredEcomPackage">
+            <summary>
+            Checks if Ecom requirements exist. Also ensures requirements are loaded.
+            </summary>
+            <returns>True if ecom requirements exist</returns>
+        </member>
+    </members>
+</doc>

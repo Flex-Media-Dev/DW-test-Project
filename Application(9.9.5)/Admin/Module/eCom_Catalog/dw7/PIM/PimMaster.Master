@@ -1,0 +1,251 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="PimMaster.master.vb" Inherits="Dynamicweb.Admin.eComBackend.PimMaster" %>
+
+<%@ Import Namespace="Dynamicweb.SystemTools" %>
+<%@ Import Namespace="Dynamicweb.Core" %>
+<%@ Import Namespace="Dynamicweb.Core.UI.Icons" %>
+
+<%@ Register TagPrefix="dw" Namespace="Dynamicweb.Controls" Assembly="Dynamicweb.Controls" %>
+<%@ Register TagPrefix="dwc" Assembly="Dynamicweb.UI.Controls" Namespace="Dynamicweb.UI.Controls" %>
+<%@ Register TagPrefix="ecom" Namespace="Dynamicweb.Admin.eComBackend" Assembly="Dynamicweb.Admin" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title></title>
+    <dw:ControlResources ID="ctrlResources" IncludePrototype="true" IncludeRequireJS="True" IncludeClientSideSupport="true" IncludeUIStylesheet="true" IncludeUtilities="true" runat="server">
+        <Items>
+            <dw:GenericResource Url="/Admin/Resources/vendors/url-search-params/url-search-params.js" />
+            <dw:GenericResource Url="/Admin/Resources/js/layout/dwglobal.js" />
+            <dw:GenericResource Url="/Admin/Resources/js/layout/Actions.js" />
+            <dw:GenericResource Url="/Admin/Images/Ribbon/UI/Dialog/Dialog.js" />
+
+            <dw:GenericResource Url="/Admin/Module/eCom_Catalog/dw7/js/Main.js" />
+            <dw:GenericResource Url="/Admin/Module/eCom_Catalog/dw7/js/ProductImageBlocks.js" />
+            <dw:GenericResource Url="/Admin/Module/eCom_Catalog/dw7/css/ProductImageBlocks.css" />
+            <dw:GenericResource Url="/Admin/Module/eCom_Catalog/dw7/js/ProductListEditingExtended.js" />
+            <dw:GenericResource Url="/Admin/Module/eCom_Catalog/dw7/css/ProductListEditingExtended.css" />
+            <dw:GenericResource Url="/Admin/Module/eCom_Catalog/dw7/js/EditorWrapper.js" />
+            <dw:GenericResource Url="/Admin/Resources/js/layout/pickadaySetup.js" />
+            <dw:GenericResource Url="/Admin/Resources/js/layout/pickadayBundle.js" />
+        </Items>
+    </dw:ControlResources>
+    <asp:ContentPlaceHolder ID="HeadHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body class="area-red">
+    <div class="screen-container" style="height: 100%">
+        <div class="card" style="height: 100%">
+            <ecom:Form ID="Form1" runat="server">
+                <div class="pcm-content">
+                    <dw:Overlay ID="__ribbonOverlay" runat="server"></dw:Overlay>
+                    <script type="text/javascript">
+                        new overlay('__ribbonOverlay').show();
+                    </script>
+
+                    <dw:RibbonBar ID="PCMRibbon" runat="server">
+                        <dw:RibbonBarTab ID="TabProducts" Name="Products" runat="server">
+                            <dw:RibbonBarGroup Name="Tools" runat="server">
+                                <dw:RibbonBarButton ID="btnSaveProduct" Text="Save" Icon="Save" Size="Small" runat="server" OnClientClick="Dynamicweb.PIM.BulkEdit.get_current().save();" Disabled="True" />                                
+                                <dw:RibbonBarButton ID="SaveAndCloseButton" Text="Save and close" Icon="Save" Size="Small" runat="server" OnClientClick="Dynamicweb.PIM.BulkEdit.get_current().save(true);" visible="false"/>                                
+                                <dw:RibbonBarButton ID="CloseButton" Icon="Cancel" IconColor="Danger" Text="Cancel" Size="Small" runat="server" OnClientClick="Dynamicweb.PIM.BulkEdit.get_current().cancel()" visible="false" />
+                            </dw:RibbonBarGroup>
+
+                            <dw:RibbonBarGroup Name="Options" runat="server" ID="OptionsRibbonGroup">
+                                <dw:RibbonBarButton ID="btnAttachMultipleProducts" Text="Add to group" Icon="Folder" Size="Small" runat="server" ClientIDMode="Static" Disabled="true" />
+                                <dw:RibbonBarButton ID="btnPublishMultipleProducts" Text="Publish to channels" Icon="ShoppingCart" Size="Small" runat="server" ClientIDMode="Static" Disabled="true" />
+                                <dw:RibbonBarButton ID="ShowProductsFamilyToolButton" Text="Combine products as family" Size="Small" runat="server" Icon="Bank" IconColor="Modules" />
+                            </dw:RibbonBarGroup>
+
+                            <dw:RibbonBarGroup Name="View settings" runat="server" Columns="1" ID="ViewSettingsRibbonGroup">
+                                <dw:RibbonBarPanel runat="server">
+                                    <div class="tools-ribbongroup-item">
+                                        <i class="<%=KnownIconInfo.ClassNameFor(KnownIcon.Search) %>" title="<%=Translate.JsTranslate("Search")%>"></i>
+                                        <div class="form-group sorting-column">
+                                            <div class="input-group">
+                                                <div class="form-group-input">
+                                                    <input type="text" runat="server" id="TextSearch" name="TextSearch" class="std form-control sorting-searchfield" value="" placeholder="Search" ClientIDMode="Static" onchange="$('PageNumber').value = 1;" />
+                                                    <input type="hidden" runat="server" id="SearchApplied" name="SearchApplied" ClientIDMode="Static" />
+                                                </div>
+                                                <span class="input-group-addon" onclick="Dynamicweb.PIM.BulkEdit.get_current().submitFormWithCommand('TextSearch');">
+                                                    <i class="fa fa-search" title="Search"></i>
+                                                </span>
+                                                <span class="input-group-addon" onclick="Dynamicweb.PIM.BulkEdit.get_current().submitFormWithCommand('ClearTextSearch');">
+                                                    <i class="fa fa-remove color-danger" title="Reset search"></i>
+                                                </span>
+                                            </div>
+                                        </div>                                        
+                                        <dw:GroupDropDownList ID="SearchField" CssClass="std selectpicker" Style="width: 90px;" runat="server" ClientIDMode="Static" />
+                                    </div>
+                                    <div class="tools-ribbongroup-item">
+                                        <i class="<%=KnownIconInfo.ClassNameFor(KnownIcon.ImportExport) %>" title="<%=Translate.JsTranslate("Sorting")%>"></i>
+                                        <dw:GroupDropDownList ID="SortBy" CssClass="std selectpicker sorting-dropdown sorting-column" runat="server" ClientIDMode="Static" />
+                                        <dw:GroupDropDownList ID="SortOrder" CssClass="std selectpicker" Style="width: 90px;" runat="server" ClientIDMode="Static" />
+                                    </div>
+                                    <div class="tools-ribbongroup-item">
+                                        <i class="<%=KnownIconInfo.ClassNameFor(KnownIcon.Filter9Plus) %>" title="<%=Translate.JsTranslate("Paging")%>"></i>
+                                        <dw:GroupDropDownList ID="PageSize" CssClass="std selectpicker sorting-dropdown sorting-column" runat="server" ClientIDMode="Static">
+                                            <Items>
+                                                <asp:ListItem Text="25" Value="25" />
+                                                <asp:ListItem Text="50" Value="50" />
+                                                <asp:ListItem Text="75" Value="75" />
+                                                <asp:ListItem Text="100" Value="100" />
+                                                <asp:ListItem Text="200" Value="200" />
+                                                <asp:ListItem Text="500" Value="500" />
+                                                <asp:ListItem Text="1000" Value="1000" />
+                                            </Items>
+                                        </dw:GroupDropDownList>
+                                        <asp:HiddenField ID="PageSizeHidden" ClientIDMode="Static" runat="server" />
+                                        <asp:HiddenField ID="PageNumber" ClientIDMode="Static" runat="server" />
+                                    </div>
+                                </dw:RibbonBarPanel>
+                            </dw:RibbonBarGroup>
+
+                            <dw:RibbonBarGroup Name="View mode" runat="server"  ID="ViewModeRibbonGroup">
+                                <dw:RibbonBarButton runat="server" ID="ListView" Text="List" Icon="List" Size="Small" OnClientClick="Dynamicweb.PIM.BulkEdit.get_current().switchViewMode('ListView');" />
+                                <dw:RibbonBarButton runat="server" ID="ThumbnailsView" Text="Thumbnails" Icon="ThLarge" Size="Small" OnClientClick="Dynamicweb.PIM.BulkEdit.get_current().switchViewMode('Thumbnail');" />
+                                <dw:RibbonBarButton runat="server" ID="TableView" Text="Multi edit" Icon="Table" Size="Small" OnClientClick="Dynamicweb.PIM.BulkEdit.get_current().switchViewMode('TableView');" />
+                            </dw:RibbonBarGroup>
+                            <dw:RibbonBarGroup Name="Edit" runat="server">
+                                <dw:RibbonBarButton runat="server" ID="VisibleFields" Text="Visible fields" Size="Small" Icon="Web" OnClientClick="Dynamicweb.PIM.BulkEdit.get_current().openVisibleFields(event, 'FieldsDialog');" />
+                                <dw:RibbonBarButton runat="server" ID="BulkEdit" Text="Bulk edit" Size="Small" Icon="Copy" Disabled="true" />
+                                <dw:RibbonBarButton runat="server" ID="GridEdit" Text="Grid edit" Size="Small" Icon="GridOn" Disabled="true" />
+                                <dw:RibbonBarButton ID="ImportButton" Text="Import products" Icon="SignIn" Size="Small" runat="server" />                                
+                                <dw:RibbonBarButton ID="ExportToExcel" Text="Export to Excel" Icon="SignOut" Size="Small" runat="server" Disabled="true" />
+                            </dw:RibbonBarGroup>
+                            <dw:RibbonBarGroup Name="View mode" runat="server" ID="ViewModeGridRibbonGroup" Visible="false">
+                                <dw:RibbonBarButton runat="server" ID="GroupedViewMode" Visible="false" Text="Grouped view" Icon="Layers" Size="Small" OnClientClick="Dynamicweb.PIM.BulkEdit.get_current().switchGroupedView(true);" />
+                                <dw:RibbonBarButton runat="server" ID="SimpleViewMode" Visible="false" Text="Simple view" Icon="Layers" Size="Small" OnClientClick="Dynamicweb.PIM.BulkEdit.get_current().switchGroupedView(false);" />
+                            </dw:RibbonBarGroup>
+                            <dw:RibbonBarGroup Name="View language" runat="server" ID="LanguageRibbonGroup" Columns="5">
+                            </dw:RibbonBarGroup>
+                            <dw:RibbonBarGroup Name="Help" runat="server">
+                                <dw:RibbonBarButton runat="server" ID="Help" Text="Help" Size="Large" Icon="Help" OnClientClick="help();" />
+                            </dw:RibbonBarGroup>
+                        </dw:RibbonBarTab>
+                    </dw:RibbonBar>
+                    <div class="breadcrumb" runat="server" id="BreadcrumbContainer">
+                        <asp:Literal ID="Breadcrumb" runat="server" />
+                    </div>
+
+                    <dw:Infobar ID="indexNotBuildWarning" runat="server" Message="" Visible="false"></dw:Infobar>
+                    <div id="pim-hidden-fields" style="display:none;">
+                        <asp:HiddenField ID="ProductIds" runat="server" Value="" />
+                        <asp:HiddenField ID="KeepListSettings" ClientIDMode="Static" runat="server" Value="false" />
+
+                        <asp:HiddenField ID="deletedProductIds" runat="server" ClientIDMode="Static" />
+
+                        <asp:HiddenField ID="PageSize2" ClientIDMode="Static" runat="server" />
+                        <input type="hidden" id="GroupsToAdd" name="GroupsToAdd" />
+                        <input type="hidden" id="ProductsToAdd" name="ProductsToAdd" />
+                        
+                        <input type="hidden" id="viewLanguages" name="viewLanguages" value="<%=String.Join(",", Languages.Select(Function(l) l.LanguageId))%>" />
+                        <input type="hidden" id="viewFields" name="viewFields" />
+                        <input type="hidden" id="Cmd" name="Cmd" />
+
+                        <input type="hidden" id="ecomShopUpdated" name="ecomShopUpdated" value="false" />
+                        <input type="hidden" id="GroupsAdded" name="GroupsAdded" value="0" />
+                        
+                        <input type="hidden" id="PresetId" name="PresetId" value="" />
+                        <input type="hidden" id="CurrentPageProductIds" name="CurrentPageProductIds" value="<%=GetcurrentPageProductIdsString(ProductIdCollection) %>" />
+
+                        <input type="hidden" id="groupedViewMode" name="groupedViewMode" value="<%=GroupedViewMode.Active%>" />
+                    </div>
+                    <asp:ContentPlaceHolder ID="ContentHolder" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </ecom:Form>
+            <dw:Overlay ID="ProductsLayout" Message="Please wait" runat="server"></dw:Overlay>
+
+            <dw:Dialog ID="FieldsDialog" Title="Fields" ShowOkButton="true" ShowCancelButton="true" ShowClose="true" OkAction="Dynamicweb.PIM.BulkEdit.get_current().changeFields();" runat="server">
+                <dwc:GroupBox runat="server" DoTranslation="true" Title="Select Fields">
+                    <dwc:SelectPicker runat="server" ID="DisplayGroupsSelector" Label="Field display group" Visible="false"></dwc:SelectPicker>
+                    <dw:SelectionBox ID="ViewFieldList" runat="server" LeftHeader="Excluded fields" RightHeader="Included fields" ShowSortRight="true" ShowSearchBox="true" Height="300" Width="400"></dw:SelectionBox>
+                </dwc:GroupBox>
+            </dw:Dialog>
+            
+            <dw:ContextMenu ID="PresetsContext" runat="server" MaxHeight="650"></dw:ContextMenu>
+
+            <dw:Dialog runat="server" ID="AddGroupsDialog" Size="Medium" Title="Add group relation" HidePadding="True">
+                <iframe id="AddGroupsDialogFrame" frameborder="0"></iframe>
+            </dw:Dialog>
+
+            <dw:Dialog runat="server" ID="ImportFromExcelDialog" Size="Large" HidePadding="True" Title="Import from Excel" OkText="Import" ShowCancelButton="true" ShowOkButton="true"
+                OkAction="Dynamicweb.PIM.BulkEdit.prototype.importFromExcel();" CancelAction="dialog.hide('ImportFromExcelDialog');window.location=window.location;">
+                <iframe id="ImportFromExcelDialogFrame"></iframe>
+            </dw:Dialog>
+            <dw:Dialog runat="server" ID="ExportToExcelDialog" Size="Medium" HidePadding="True" Title="Export to Excel" OkText="Export" ShowCancelButton="true" ShowOkButton="true" CancelAction="Dynamicweb.PIM.BulkEdit.prototype.closeExportToExcelDialog();" OkAction="Dynamicweb.PIM.BulkEdit.prototype.ExportToExcel();">
+                <iframe id="ExportToExcelDialogFrame" name="ExportToExcelDialogFrame"></iframe>
+            </dw:Dialog>            
+        </div>
+    </div>
+
+    <asp:ContentPlaceHolder ID="FooterHolder" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+        <%=GetPermissionClientDefinition()%>
+        Dynamicweb.PIM.BulkEdit.get_current().terminology["DeleteSelectedProducts"] = "<%=Translate.Translate("Do you want to delete the selected products? This will delete all language versions!")%>";
+        Dynamicweb.PIM.BulkEdit.get_current().terminology["AddPimGroup"] = "<%=Translate.Translate("Add warehouse groups")%>";
+        Dynamicweb.PIM.BulkEdit.get_current().terminology["AddEcomGroup"] = "<%=Translate.Translate("Add distribution channel groups")%>";
+
+        var currentRelatedGroupsKind = 0;
+
+        if (window['btnAttachMultipleProducts']) {
+            btnAttachMultipleProducts.on("click", function () {
+                currentRelatedGroupsKind = 1;
+            });
+        }
+
+        <%If Dynamicweb.Context.Current.Request("GroupsAdded") = "1" Then%>
+        currentRelatedGroupsKind = 1;
+        <%End If%>
+
+        if (window['btnPublishMultipleProducts']) {
+            btnPublishMultipleProducts.on("click", function () {
+                currentRelatedGroupsKind = -1;
+            });
+        }
+
+        <%If Dynamicweb.Context.Current.Request("GroupsAdded") = "-1" Then%>
+        currentRelatedGroupsKind = -1
+        <%End If%>
+
+        var combineProducsDialogAction = <%=ProductEdit.GetCombineProductsAsFamilyActionWithPageRefresh(String.Empty, True).ToJson()%>;
+        function ShowCombineDialog() {
+            if (combineProducsDialogAction) {
+                var dialogAction = Dynamicweb.PIM.BulkEdit.get_current()._cloneAction(combineProducsDialogAction);
+                var productIds = Dynamicweb.PIM.BulkEdit.get_current().getSelectedProducts().join();
+                dialogAction.Url += "&ProductIds=" + productIds;
+                Action.Execute(dialogAction);
+            }
+        }
+
+        var dontApplyUncompletedProductToChannel = <%=Converter.ToBoolean(Dynamicweb.Configuration.SystemConfiguration.Instance.GetValue("/Globalsettings/Ecom/Product/DontApplyUncompletedProductToChannel")).ToString().ToLower()%>;
+        //upper case due callback from product selector
+        function AddGroupRows(id) {
+            var theForm = document.forms["Form1"];
+            dialog.hide("AddGroupsDialog");
+            dialog.set_contentUrl("AddGroupsDialog", "");
+
+            var products = Dynamicweb.PIM.BulkEdit.get_current().getSelectedProducts().join();
+            var groups = theForm.GroupsToAdd.value;
+            if (products && groups) {
+                $("GroupsAdded").value = currentRelatedGroupsKind;
+                theForm.ProductsToAdd.value = products;
+                if (Dynamicweb.PIM.BulkEdit.get_current().currentAttachGroupDialog = "ShopOnly") {
+                    theForm.ecomShopUpdated.value = true;
+                }
+                if (dontApplyUncompletedProductToChannel && currentRelatedGroupsKind == -1) {
+                    Dynamicweb.PIM.BulkEdit.get_current().ShowProductCompletenessByChannelDialog(products, groups);
+                } else {
+                    Dynamicweb.PIM.BulkEdit.get_current().submitFormWithCommand("AddGroups");
+                }
+            }
+        }
+    </script>
+
+    <% Dynamicweb.SystemTools.Translate.GetEditOnlineScript()%>
+</body>
+
+</html>

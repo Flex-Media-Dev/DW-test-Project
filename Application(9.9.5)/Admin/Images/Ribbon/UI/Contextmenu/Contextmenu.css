@@ -1,0 +1,134 @@
+.contextmenu
+{
+	display:none;
+	border-width:0px;
+	margin:0px;
+	padding:0px;
+	position: absolute;
+	top: 25px;
+	left: 250px;
+	float: left;
+	border: solid 1px #8492A6;
+	background-color:#FCFCFC;
+	background-image:none;
+	background-position:left top;
+	background-repeat:repeat-y;
+	-moz-border-radius: 3px;
+    border-radius: 3px;
+    z-index: 10000;
+}
+.contextmenu .container
+{
+	padding:1px;
+	display:block;
+}
+
+.contextmenu ul {
+    list-style: none;
+}
+
+.contextmenu li {
+    list-style: none;
+}
+
+.contextmenu .containerFixed
+{
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.contextmenu a.button-disabled,
+.contextmenu a.button-disabled:hover
+{
+	color: #c3c3c3;
+	background-color:#FCFCFC !important;
+	cursor: default !important;
+	background-image: none !important;
+	border: 1px solid transparent !important;
+}
+
+.contextmenu a.button-disabled:active
+{
+	outline: none;
+}
+
+.contextmenu a 
+{
+	height:20px;
+	line-height:20px;
+	display:block;
+	margin:0px;
+	border:solid 1px transparent;
+	vertical-align:middle;
+	width:auto;
+	min-width: 128px;
+	padding-right: 4px;
+	overflow:hidden;
+}
+.contextmenu a:hover
+{
+	background-color:#FFE7A2;
+	border:solid 1px #FFB700;
+	background-image:url(/Admin/Images/Ribbon/UI/Contextmenu/Bg.gif);
+	background-position:left top;
+	background-repeat:repeat-x;
+	-moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.contextmenu .divider
+{
+	padding: 0px;
+	height:1px;
+	line-height:1px;
+	background-color:#c3c3c3;
+}
+
+.contextmenu img.icon
+{
+	margin:0px;
+	margin-left:3px;
+	margin-right:6px;
+	width:16px;
+	height:16px;
+	border-width:0px;
+	vertical-align:middle;
+}
+.contextmenu img.checked
+{
+	margin:0px;
+	margin-left:2px;
+	margin-right:5px;
+	width:18px;
+	height:18px;
+	border-width:0px;
+	vertical-align:middle;
+}
+
+.contextmenu span.item
+{
+    display: block;
+    float: left;
+}
+
+.contextmenu img.arrow_icon
+{
+    margin-top: 2px;
+	width:16px;
+	height:16px;
+	border-width:0px;
+	vertical-align:middle;
+	float: right;
+}
+
+.submenu
+{
+    display: block;
+    padding: 1px;
+	position: absolute;
+	border: solid 1px #8492A6;
+	background:#FCFCFC url(/Admin/Images/Ribbon/UI/Tree/img/iconBg2.gif) left top repeat-y;
+	-moz-border-radius: 3px;
+    border-radius: 3px;
+    z-index: 10000;
+}

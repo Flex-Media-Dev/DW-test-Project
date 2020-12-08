@@ -1,0 +1,144 @@
+﻿div.popup-dialog
+{
+	display:none;
+	position:absolute;
+	top:50px;
+	margin: 0 auto;
+	background-color: transparent;
+}
+
+div.dialog-modal-overlay
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 899;
+	background-color: #333;
+	opacity: 0.4;
+	-moz-opacity: 0.4;
+	filter: alpha(opacity = 40);
+}
+
+div.popup-dialog table.popup-dialog-border
+{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+
+table.popup-dialog-border td.popup-dialog-tl
+{
+	background: url('/Admin/Images/Ribbon/UI/Dialog/Tabular/border-tl.png') left top no-repeat;
+	width: 8px;
+	height: 28px;
+}
+
+table.popup-dialog-border td.popup-dialog-title
+{
+	cursor: default;
+	background: url('/Admin/Images/Ribbon/UI/Dialog/Tabular/border-t.png') left top repeat-x;
+}
+
+table.popup-dialog-border td.popup-dialog-title h2
+{
+	float: left;
+	font-family: Arial, Microsoft JhengHei;
+	font-size: 11px;
+	margin: 0px;
+}
+
+table.popup-dialog-border td.popup-dialog-title a.popup-dialog-close
+{
+	display: block;
+	width: 17px;
+	height: 17px;
+	background: url('/Admin/Images/Ribbon/UI/Dialog/Tabular/close.png') top left no-repeat;
+	margin: 0px;
+	padding: 0px;
+	float: right;
+}
+
+table.popup-dialog-border td.popup-dialog-tr
+{
+	background: url('/Admin/Images/Ribbon/UI/Dialog/Tabular/border-tr.png') left top no-repeat;
+	width: 8px;
+	height: 28px;
+}
+
+table.popup-dialog-border td.popup-dialog-ml
+{
+	background: url('/Admin/Images/Ribbon/UI/Dialog/Tabular/border-ml.png') left top repeat-y;
+	width: 8px;
+}
+
+table.popup-dialog-border td.popup-dialog-mr
+{
+	background: url('/Admin/Images/Ribbon/UI/Dialog/Tabular/border-mr.png') left top repeat-y;
+	width: 8px;
+}
+
+table.popup-dialog-border td.popup-dialog-content
+{
+	background-color: #F0F0F0;
+	padding: 6px;
+}
+
+table.popup-dialog-border td.popup-dialog-content-nopadding
+{
+	padding: 0px !important;
+}
+
+table.popup-dialog-border td.popup-dialog-content div.popup-dialog-buttons
+{
+	float: right;
+    margin: 6px 15px;
+}
+
+
+table.popup-dialog-border td.popup-dialog-content div.popup-dialog-buttons div.popup-operation-indicator
+{
+    float: left;
+    margin-right: 5px;
+    
+    color: #838383;
+    cursor: default;
+}
+
+table.popup-dialog-border td.popup-dialog-content div.popup-dialog-buttons div.popup-operation-indicator img
+{
+    float: left;
+    width: 16px;
+    height: 16px;
+    border: none;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+
+table.popup-dialog-border td.popup-dialog-content div.popup-dialog-buttons div.popup-operation-indicator span
+{
+    float: left;
+    line-height: 16px;
+    margin-top: 2px;
+}
+
+table.popup-dialog-border td.popup-dialog-bl
+{
+	background: url('/Admin/Images/Ribbon/UI/Dialog/Tabular/border-bl.png') left top no-repeat;
+	width: 8px;
+	height: 8px;
+}
+
+table.popup-dialog-border td.popup-dialog-bm
+{
+	background: url('/Admin/Images/Ribbon/UI/Dialog/Tabular/border-b.png') left top repeat-x;
+	height: 8px;
+}
+
+table.popup-dialog-border td.popup-dialog-br
+{
+	background: url('/Admin/Images/Ribbon/UI/Dialog/Tabular/border-br.png') left top no-repeat;
+	width: 9px;
+	height: 8px;
+}

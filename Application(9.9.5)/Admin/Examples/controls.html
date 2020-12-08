@@ -1,0 +1,1026 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Material Admin - Controls</title>
+        
+        <!-- Vendor CSS -->
+        <link href="/Admin/Resources/vendors/animate-css/animate.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/Admin/Resources/fonts/font-awesome/css/font-awesome.min.css">
+        <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/bootstrap-table.min.css" rel="stylesheet">-->
+            
+        <!-- CSS -->  
+        <link href="/Admin/Resources/css/fonts.min.css" rel="stylesheet">            
+        <link href="/Admin/Resources/css/app.min.css" rel="stylesheet">
+
+        <!-- Following CSS codes are used only for demo -->
+        <style type="text/css">
+            .btn-demo > .btn {
+                margin: 0 5px 10px 0;
+            }
+        </style>
+    </head>
+    
+    <body class="sw-toggled-off area-blue">
+        <section id="content" class="dw8-container">
+
+            <!-- Filebrowser start -->
+            <div class="modal fade" id="filebrowser" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Filebrowser - * UNDER DEVELOPMENT *</h4>
+                        </div>
+
+                        <div role="tabpanel">
+                            <ul class="tab-nav" role="tablist" style="padding-left: 25px;" data-tab-color="green">
+                                <li class="active"><a href="#page" aria-controls="page" role="tab" data-toggle="tab">Page</a></li>
+                                <li><a href="#paragraph" aria-controls="paragraph" role="tab" data-toggle="tab">Paragraph</a></li>
+                                <li><a href="#file" aria-controls="file" role="tab" data-toggle="tab">File</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="page">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="treeview tree">
+                                            </div>
+                                        </div>
+                                        <!--
+                                    <div class="col-md-8">
+                                        <div class="">
+                                            <table id="table-modal"
+                                                   data-toggle="table"
+                                                   data-url="demodata/table-demo.json"
+                                                   data-classes="table table-hover table-condensed"
+                                                   data-striped="true"
+                                                   data-click-to-select="true"
+                                                   data-pagination="true"
+                                                   data-search="true"
+                                                   data-show-refresh="true"
+                                                   data-show-toggle="true"
+                                                   data-show-columns="true">
+                                                <thead>
+                                                    <tr>
+                                                        <th data-field="state" data-checkbox="true"></th>
+                                                        <th data-field="name" data-sortable="true">Name</th>
+                                                        <th data-field="username" data-sortable="true">Username</th>
+                                                        <th data-field="email" data-sortable="true">Email</th>
+                                                        <th data-field="action" data-width="30" data-formatter="actionFormatter" data-events="actionEvents"></th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    -->
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Upload file</button>
+                                    <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Filebrowser end -->
+
+            <div class="container">
+                <div class="block-header">
+                    <h2><div id="breadcrumb">Controls</div></h2>
+                    <ul class="actions">
+                        <li>
+                            <a class="icon-pop" href="#">
+                                <i class="md md-help"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Controls examples<small>Live design guide</small></h2>
+                    </div>
+
+                    <div role="tabpanel">
+                        <ul class="tab-nav" role="tablist" style="padding-left: 25px;" data-tab-color="green">
+                            <li class="active"><a href="#input" aria-controls="input" role="tab" data-toggle="tab">Input</a></li>
+                            <li><a href="#layout" aria-controls="layout" role="tab" data-toggle="tab">Layout</a></li>
+                            <li><a href="#display" aria-controls="display" role="tab" data-toggle="tab">Display</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="card-body card-padding">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="input">
+
+                                        <!-- To implement the examples use the code between the Start and end End comments -->
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Basic textboxes</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <!-- Textbox with label and placeholder - Start -->
+                                                <div class="form-group">
+                                                    <label class="control-label">With label and placeholder</label>
+                                                    <div class="form-group-input">
+                                                        <input type="text" class="form-control fg-input" placeholder="Write here">
+                                                    </div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Textbox with maxlength on characers - Start -->
+                                                <div class="form-group">
+                                                    <label class="control-label">With maxlength</label>
+                                                    <div class="form-group-input">
+                                                        <input type="text" class="form-control fg-input" placeholder="Write here" maxlength="30">
+                                                    </div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Textbox with custom icon - Start -->
+                                                <div class="form-group">
+                                                    <label class="control-label">With icon</label>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="md md-stars"></i></span>
+                                                        <div class="form-group-input">
+                                                            <input type="text" class="form-control fg-input" placeholder="Write here">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Textbox with password - Start -->
+                                                <div class="form-group">
+                                                    <label class="control-label">Password</label>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="md md-lock"></i></span>
+                                                        <div class="form-group-input">
+                                                            <input type="password" class="form-control fg-input" placeholder="Write here">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Textbox containing an error - Start -->
+                                                <div class="form-group has-error">
+                                                    <!-- "has-error" should be added after the "form-group" class, if the field has an error -->
+                                                    <label class="control-label">With errors</label>
+                                                    <div class="form-group-input">
+                                                        <input type="text" class="form-control fg-input" placeholder="Write here">
+                                                    </div>
+                                                    <small class="help-block">This field has an error!</small> <!-- The error helper string should be added like this -->
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Textarea</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <!-- Textarea with label and placeholder - Start -->
+                                                <div class="form-group">
+                                                    <label class="control-label">Textarea with label and placeholder</label>
+                                                    <div class="form-group-input">
+                                                        <textarea class="form-control auto-size" placeholder="Type text here..."></textarea>
+                                                    </div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Textarea with maxlength on characers - Start -->
+                                                <div class="form-group">
+                                                    <label class="control-label">Textarea with maxlength</label>
+                                                    <div class="form-group-input">
+                                                        <textarea class="form-control auto-size" placeholder="Type text here..." maxlength="250"></textarea>
+                                                    </div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Textarea with icon - Start -->
+                                                <div class="form-group">
+                                                    <label class="control-label">Textarea with icon</label>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="md md-stars"></i></span>
+                                                        <div class="form-group-input">
+                                                            <textarea class="form-control auto-size" placeholder="Type text here..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Textarea containing an error - Start -->
+                                                <div class="form-group has-error">
+                                                    <!-- "has-error" should be added after the "form-group" class, if the field has an error -->
+                                                    <label class="control-label">With errors</label>
+                                                    <div class="form-group-input">
+                                                        <textarea class="form-control auto-size" placeholder="Type text here..."></textarea>
+                                                    </div>
+                                                    <small class="help-block">This field has an error!</small> <!-- The error helper string should be added like this -->
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Numeric steppers</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <!-- Numeric stepper integer, predefined value - Start -->
+                                                <div class="form-group">
+                                                    <label class="control-label">Number - Integer</label>
+                                                    <div class="form-group-input">
+                                                        <input type="number" class="form-control fg-input" value="10">
+                                                    </div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Numeric stepper decimal - Start -->
+                                                <div class="form-group">
+                                                    <label class="control-label">Number - Decimal</label>
+                                                    <div class="form-group-input">
+                                                        <input type="number" step="0.1" class="form-control fg-input" value="5.5">
+                                                    </div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Numeric stepper with currency - Start -->
+                                                <div class="form-group">
+                                                    <label class="control-label">Number - Currency/Price</label>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-eur"></i></span>
+                                                        <div class="form-group-input">
+                                                            <input type="number" class="form-control fg-input" value="7">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Numeric stepper with icon - Start -->
+                                                <div class="form-group input-group">
+                                                    <label class="control-label">Number with icon</label>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="md md-stars"></i></span>
+                                                        <div class="form-group-input">
+                                                            <input type="number" class="form-control fg-input" value="7">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Numeric stepper with increment size (5) - Start -->
+                                                <div class="form-group">
+                                                    <label class="control-label">Number with icon</label>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="md md-stars"></i></span>
+                                                        <div class="form-group-input">
+                                                            <input type="number" step="5" class="form-control fg-input" value="7">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Number containing an error - Start -->
+                                                <div class="form-group has-error">
+                                                    <!-- "has-error" should be added after the "form-group" class, if the field has an error -->
+                                                    <label class="control-label">Number containing an error</label>
+                                                    <div class="form-group-input">
+                                                        <input type="number" class="form-control fg-input" value="7">
+                                                    </div>
+                                                    <small class="help-block">This field has an error!</small> <!-- The error helper string should be added like this -->
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Slider</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <!-- Slider basic, with one value - Start -->
+                                                <div class="form-group fg-slider" data-start="5" data-min="0" data-max="100">
+                                                    <label class="control-label">Number - Slider (Limits max+min), one value</label>
+                                                    <div class="input-slider-values m-b-15"></div>
+                                                    <strong class="pull-left text-muted slider-min-text"></strong>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Slider basic, with two values - Start -->
+                                                <div class="form-group fg-slider" data-start="5" data-end="60" data-min="0" data-max="100">
+                                                    <label class="control-label">Number - Slider (Limits max+min), two values</label>
+                                                    <div class="input-slider-values m-b-15"></div>
+                                                    <strong class="pull-left text-muted slider-min-text"></strong>
+                                                    <strong class="pull-right text-muted slider-max-text"></strong>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Slider basic, with step size - Start -->
+                                                <div class="form-group fg-slider" data-start="5" data-end="60" data-min="0" data-max="100" data-step="5">
+                                                    <label class="control-label">Number - Slider (Limits max+min), step size</label>
+                                                    <div class="input-slider-values m-b-15"></div>
+                                                    <strong class="pull-left text-muted slider-min-text"></strong>
+                                                    <strong class="pull-right text-muted slider-max-text"></strong>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Checkbox</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <p class="m-b-15 c-gray f-500">Checkbox - Basic</p>
+                                                <!-- Checkbox - Start -->
+                                                <div class="form-group">
+                                                    <input type="checkbox" class="checkbox" id="check1" value="">
+                                                    <label for="check1">Enable this</label>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p class="m-b-15 c-gray f-500">Checkbox containing an error</p>
+                                                <!-- Checkbox with errors - Start -->
+                                                <div class="form-group has-error">
+                                                    <!-- "has-error" should be added after the "form-group" class -->
+                                                        <input type="checkbox" class="checkbox" id="check2" value="">
+                                                        <label for="check2">
+                                                            Enable this
+                                                        </label>
+                                                        <small class="help-block">This field has an error!</small> <!-- The error helper string should be added like this -->
+                                                    </div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Toggle switch</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <p class="m-b-15 c-gray f-500">Toggle switch</p>
+                                                <!-- Start -->
+                                                <div class="form-group">
+                                                    <div class="toggle-switch">
+                                                        <label for="ts1" class="ts-label">Press this</label>
+                                                        <input id="ts1" type="checkbox" hidden="hidden">
+                                                        <label for="ts1" class="ts-helper"></label>
+                                                    </div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Radio button groups</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <!-- Radio buttons basic - Start -->
+                                                <div class="form-group">
+                                                    <label class="control-label">Radio button list</label>
+
+                                                    <div class="radio m-b-15">
+                                                        <label>
+                                                            <input type="radio" name="sample" value="">
+                                                            <i class="input-helper"></i>
+                                                            Option one
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="radio m-b-15">
+                                                        <label>
+                                                            <input type="radio" name="sample" value="">
+                                                            <i class="input-helper"></i>
+                                                            Option two
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="radio m-b-15">
+                                                        <label>
+                                                            <input type="radio" name="sample" value="">
+                                                            <i class="input-helper"></i>
+                                                            Option three
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- NOT FULLY IMPLEMENTED  -->
+                                                <!-- Radio buttons with images - Start -->
+                                                <div class="form-group">
+                                                    <label class="control-label">Radio button list</label>
+
+                                                    <div class="radio m-b-15">
+                                                        <label>
+                                                            <input type="radio" name="sample" value="">
+                                                            <i class="input-helper"></i>
+                                                            Option one
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="radio m-b-15">
+                                                        <label>
+                                                            <input type="radio" name="sample" value="">
+                                                            <i class="input-helper"></i>
+                                                            Option two
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="radio m-b-15">
+                                                        <label>
+                                                            <input type="radio" name="sample" value="">
+                                                            <i class="input-helper"></i>
+                                                            Option three
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Radio buttons containing errors - Start -->
+                                                <div class="form-group has-error">
+                                                    <label class="control-label">Radio button list</label>
+
+                                                    <div class="radio m-b-15">
+                                                        <label>
+                                                            <input type="radio" name="sample" value="">
+                                                            <i class="input-helper"></i>
+                                                            Option one
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="radio m-b-15">
+                                                        <label>
+                                                            <input type="radio" name="sample" value="">
+                                                            <i class="input-helper"></i>
+                                                            Option two
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="radio m-b-15">
+                                                        <label>
+                                                            <input type="radio" name="sample" value="">
+                                                            <i class="input-helper"></i>
+                                                            Option three
+                                                        </label>
+                                                    </div>
+
+                                                    <small class="help-block">This field has an error!</small> <!-- The error helper string should be added like this -->
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">WYSIWYG Editor</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <!-- WYSIWYG - Start -->
+                                                <label class="control-label">Write your text in the editor</label>
+                                                <div class="html-editor" placeholder="Write here..."></div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <!-- WYSIWYG containing errors - Start -->
+                                                <label class="control-label">Write your text in the editor</label>
+                                                <div class="html-editor" placeholder="Write here..."></div>
+                                                <div class="has-error">
+                                                    <small class="help-block">This field has an error!</small> <!-- The error helper string should be added like this -->
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Selectors</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <!-- Start -->
+                                                <div class="form-group">
+                                                    <label class="control-label">Select with json source</label>
+                                                    <div class="selector" data-datasource="/Admin/api/navigators/Content/"></div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Start -->
+                                                <div class="form-group">
+                                                    <label class="control-label">Select with json, multiple simple</label>
+                                                    <div class="selector" data-datasource="/Admin/api/navigators/Content/" data-type="multi"></div>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <!-- Start -->
+                                                <div class="form-group">
+                                                    <label class="control-label">Select hardcoded data</label>
+                                                    <select class="selectpicker" title="Nothing selected">
+                                                        <option>Master.cshtml</option>
+                                                        <option>FullWidth.cshtml</option>
+                                                        <option>Paragraph.cshtml</option>
+                                                        <option>Carousel.cshtml</option>
+                                                        <option>Banner.cshtml</option>
+                                                    </select>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Pickers</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <!-- Start -->
+                                                <div class="form-group input-group picker" data-title="Select item" data-root="test" data-type="treeview">
+                                                    <label class="control-label">Link field with selector</label>
+                                                    <div class="form-group-input">
+                                                        <input type="text" class="form-control" placeholder="Item name">
+                                                    </div>
+                                                    <span class="input-group-addon last"><a class="btn btn-primary">Choose Item</a></span>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Start -->
+                                                <div class="form-group input-group picker" data-title="Select image" data-root="test" data-type="tiles">
+                                                    <label class="control-label">Folder field with selector</label>
+                                                    <div class="form-group-input">
+                                                        <input type="text" class="form-control" placeholder="Image name">
+                                                    </div>
+                                                    <span class="input-group-addon last"><a class="btn btn-primary">Choose Image</a></span>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <!-- Start -->
+                                                <div class="form-group input-group picker" data-title="Select file" data-root="test" data-type="combi">
+                                                    <label class="control-label">User/Group field with selector</label>
+                                                    <div class="form-group-input">
+                                                        <input type="text" class="form-control" placeholder="Filename">
+                                                    </div>
+                                                    <span class="input-group-addon last"><a class="btn btn-primary">Choose File</a></span>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Image selector</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div role="tabpanel" class="tab-pane" id="layout">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Toolsmenu</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <!-- Start -->
+                                                <ul class="actions">
+                                                    <li>
+                                                        <a class="icon-pop" href="usermarketing.html" target="_self"><i class="fa fa-bar-chart" style="font-size: 16px !important;"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="icon-pop" href="#"><i class="fa fa-clipboard" style="font-size: 16px !important;"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="icon-pop" href="#"><i class="md md-email"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="icon-pop" href="#"><i class="md md-people"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="icon-pop" href="#"><i class="fa fa-money" style="font-size: 16px !important;"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="icon-pop" href="http://manual.dynamicweb-cms.com/Dynamicweb-On-line-Manual.aspx" target="_blank"><i class="md md-help"></i></a>
+                                                    </li>
+                                                    <li class="icon-pop settings-trigger" data-trigger="#settings">
+                                                        <a class="tm-settings" href=""><i class="md md-more-vert"></i></a>
+                                                    </li>
+                                                </ul>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Floating action bar</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <!-- WARNING: The "position: relative !important" style is only for preview - Remove this when it is in use on a page -->
+                                                <!-- Start -->
+                                                <div class="floating-actionbar" style="position: relative !important">
+                                                    <button class="btn btn-success waves-effect">Save</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-grey waves-effect">Save and close</button>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Sidepanel</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <!-- The sidepanel. This is only the trigger. The sidepanel is located at the bottom -->
+                                                <button class="btn btn-primary waves-effect settings-trigger" data-trigger="#settings">Open</button>
+                                                <br>
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Tabs</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <!-- Start of the tabpanel -->
+                                                <div role="tabpanel">
+                                                    <ul class="tab-nav" role="tablist" style="padding-left: 25px;" data-tab-color="green">
+                                                        <li class="active"><a href="#tab1" aria-controls="userinfo" role="tab" data-toggle="tab">Tab 1</a></li>
+                                                        <li><a href="#tab2" aria-controls="profile" role="tab" data-toggle="tab">Tab 2</a></li>
+                                                        <li><a href="#tab3" aria-controls="addresses" role="tab" data-toggle="tab">Tab 3</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!-- End of the tabpanel -->
+                                                <!-- Start of the tabs -->
+                                                <div class="tab-content">
+                                                    <div role="tabpanel" class="tab-pane active" id="tab1">
+                                                        <p>This is tab one</p>
+                                                    </div>
+                                                    <div role="tabpanel" class="tab-pane" id="tab2">
+                                                        <p>This is tab two</p>
+                                                    </div>
+                                                    <div role="tabpanel" class="tab-pane" id="tab3">
+                                                        <p>This is tab three</p>
+                                                    </div>
+                                                </div>
+                                                <!-- End of the tabs -->
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Context menu</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <!-- Start -->
+                                                <div class="dropdown">
+                                                    <a href="#" class="dropdown-toggle btn btn-link" data-toggle="dropdown">Click here</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Item one</a></li>
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Item two</a></li>
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Item three</a></li>
+                                                        <li class="divider"></li>
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Item four</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Button</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="btn-demo">
+                                                    <!-- Start -->
+                                                    <button class="btn btn-default">Default</button>
+                                                    <!-- End -->
+                                                    <!-- Other examples -->
+                                                    <button class="btn btn-primary">Primary</button>
+                                                    <button class="btn btn-info">Info</button>
+                                                    <button class="btn btn-success">Success</button>
+                                                    <button class="btn btn-warning">Warning</button>
+                                                    <button class="btn btn-danger">Danger</button>
+                                                    <button class="btn btn-link">Link</button>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div role="tabpanel" class="tab-pane" id="display">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Dialog</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <!-- Modal trigger start -->
+                                                <a data-toggle="modal" href="#modal" class="btn btn-sm btn-default">Open modal</a>
+                                                <!-- Modal trigger end -->
+                                                <!-- Modal start -->
+                                                <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
+                                                    <div class="modal-dialog modal-lg">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title">Modal title</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus. Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur nunc.</p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-success">Save changes</button>
+                                                                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Modal end -->
+                                                <br>
+                                                <br>
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Listview - Basic userlist example</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <i>Not fully implemented yet</i>
+                                                <br>
+                                                <!-- Start -->
+                                                
+                                                <div class="table-fullwidth">
+                                                    <table id="table"
+                                                           data-toggle="table"
+                                                           data-url="demodata/table-demo.json"
+                                                           data-classes="table table-hover table-condensed"
+                                                           data-striped="true"
+                                                           data-pagination="true"
+                                                           data-search="true"
+                                                           data-show-refresh="true"
+                                                           data-show-toggle="true"
+                                                           data-show-columns="true">
+                                                        <thead>
+                                                            <tr>
+                                                                <th data-field="state" data-checkbox="true"></th>
+                                                                <th data-field="name" data-sortable="true">Name</th>
+                                                                <th data-field="username" data-sortable="true">Username</th>
+                                                                <th data-field="email" data-sortable="true">Email</th>
+                                                                <th data-field="action" data-width="30" data-formatter="actionFormatter" data-events="actionEvents"></th>
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Listview - Advanced, orderlist example</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <i>Not fully implemented yet</i>
+                                                <br>
+                                                <!-- Start -->
+                                                <!--
+                                            <div class="table-fullwidth">
+                                                <table id="table-orders"
+                                                       data-toggle="table"
+                                                       data-url="demodata/table-demo-orders.json"
+                                                       data-classes="table table-hover table-condensed"
+                                                       data-striped="true"
+                                                       data-pagination="true"
+                                                       data-search="true"
+                                                       data-show-refresh="true"
+                                                       data-show-toggle="true"
+                                                       data-show-columns="true">
+                                                    <thead>
+                                                        <tr>
+                                                            <th data-field="state" data-checkbox="true"></th>
+                                                            <th data-field="id" data-sortable="true">Order Id</th>
+                                                            <th data-field="created" data-sortable="true">Created</th>
+                                                            <th data-field="order-state" data-sortable="true">Order state</th>
+                                                            <th data-field="company" data-sortable="true">Company</th>
+                                                            <th data-field="customer-name" data-sortable="true">Customer name</th>
+                                                            <th data-field="price" data-sortable="true">Price</th>
+                                                            <th data-field="payment-method" data-sortable="true">Payment method</th>
+                                                            <th data-field="capture-state" data-sortable="true">Capture state</th>
+                                                            <th data-field="action" data-width="30" data-formatter="orderActionFormatter" data-events="actionEvents"></th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
+                                            -->
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="m-b-25 m-t-25 c-black f-500">Charts</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <i>Not implemented yet</i>
+                                                <!-- Start -->
+                                                <!-- End -->
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Javascript Libraries -->
+        <script src="/Admin/Resources/js/jquery-2.1.1.min.js"></script>
+        <script src="/Admin/Resources/js/layout/bootstrap.min.js"></script>
+        
+        <script src="/Admin/Resources/vendors/moment/moment.min.js"></script>
+        <script src="/Admin/Resources/vendors/auto-size/jquery.autosize.min.js"></script>
+        <script src="/Admin/Resources/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+        <script src="/Admin/Resources/vendors/chosen/chosen.jquery.min.js"></script>
+        <script src="/Admin/Resources/vendors/input-mask/input-mask.min.js"></script>
+        <script src="/Admin/Resources/vendors/maxlength/bootstrap-maxlength.min.js"></script>
+        <script src="/Admin/Resources/vendors/waves/waves.min.js"></script>
+
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/bootstrap-table-all.min.js"></script>-->
+       
+        <script src="/Admin/Resources/js/layout/input-functions.js"></script>
+        <script src="/Admin/Resources/js/layout/screen-functions.js"></script>
+        <script src="/Admin/Resources/js/layout/selector.js"></script>
+        <script src="/Admin/Resources/js/layout/picker.js"></script>
+        <script src="/Admin/Resources/js/layout/treeview.js"></script>
+        <script src="/Admin/Resources/js/layout/tilesview.js"></script>
+
+        <script>
+            /*
+            $.post('/Admin/Northwind-Navigator', 'Northwind-Navigator/', function (data) {
+                $('.treeview').treeView(data, 'Northwind-Navigator/');
+            }, 'json');
+            */
+        </script>
+
+        <!-- Initalizing the list views -->
+        <script>
+            function actionFormatter(value, row, index) {
+                return [
+                    '<div class="dropdown">',
+                        '<a class="dropdown-toggle btn btn-link" title="More" data-toggle="dropdown">',
+                            '<i class="fa fa-ellipsis-h"></i>',
+                        '</a>',
+                        '<ul class="dropdown-menu pull-right">',
+                            '<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-edit"></i> Edit</a></li>',
+                            '<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-copy"></i> Create copy</a></li>',
+                            '<li class="divider"></li>',
+                            '<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-times-circle"></i> Deactivate</a></li>',
+                            '<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-remove"></i> Delete</a></li>',
+                            '<li class="divider"></li>',
+                            '<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-plus-square"></i> Add groups</a></li>',
+                            '<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-user-times"></i> Remove item from group</a></li>',
+                            '<li class="divider"></li>',
+                            '<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-user-plus"></i> New user</a></li>',
+                        '</ul>',
+                    '</div>'
+                ].join('');
+            }
+
+            function orderActionFormatter(value, row, index) {
+                return [
+                    '<div class="dropdown">',
+                        '<a class="dropdown-toggle btn btn-link" title="More" data-toggle="dropdown">',
+                            '<i class="fa fa-ellipsis-h"></i>',
+                        '</a>',
+                        '<ul class="dropdown-menu pull-right">',
+                            '<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-square"></i> Show order</a></li>',
+                            '<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-remove"></i> Delete</a></li>',
+                            '<li class="divider"></li>',
+                            '<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-check-square"></i> Set order state</a></li>',
+                            '<li class="divider"></li>',
+                            '<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-print"></i> Print order</a></li>',
+                            '<li class="divider"></li>',
+                            '<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-briefcase"></i> Capture orders</a></li>',
+                        '</ul>',
+                    '</div>'
+                ].join('');
+            }
+
+            window.actionEvents = {
+                'click .more': function (e, value, row, index) {
+                    alert('This should open the context menu for: ' + JSON.stringify(row));
+                }
+            };
+        </script>
+
+        <script>
+            $(function () {
+                $('#table').on('all.bs.table', function (e, name, args) {
+                })
+
+                .on('click-row.bs.table', function (e, row, $element) {
+                    window.location.href = row.url;
+                });
+            });
+        </script>
+    </body>
+</html>

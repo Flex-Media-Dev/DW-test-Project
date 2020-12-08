@@ -1,0 +1,1581 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Deployment</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Deployment.Comparison">
+            <summary>
+            Represents a comparison of two data items.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Comparison.#ctor(System.String,Dynamicweb.Deployment.DataItemInfo,Dynamicweb.Deployment.DataItemInfo,Dynamicweb.Deployment.ComparisonStatus)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.Comparison"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="left">The left data item.</param>
+            <param name="right">The right data item.</param>
+            <param name="status">The comparison status.</param>
+        </member>
+        <member name="P:Dynamicweb.Deployment.Comparison.Id">
+            <summary>
+            Gets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.Comparison.Left">
+            <summary>
+            Gets the left.
+            </summary>
+            <value>
+            The left.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.Comparison.Right">
+            <summary>
+            Gets the right.
+            </summary>
+            <value>
+            The right.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.Comparison.Status">
+            <summary>
+            Gets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Comparison.Compare(System.Collections.Generic.IDictionary{System.String,Dynamicweb.Deployment.DataItemInfo},System.Collections.Generic.IDictionary{System.String,Dynamicweb.Deployment.DataItemInfo})">
+            <summary>
+            Compares two collections of data items with matching identifiers.
+            </summary>
+            <param name="left">The left data items.</param>
+            <param name="right">The right data items.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Deployment.ComparisonStatus">
+            <summary>
+            Represents a the result of comparing data items.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Deployment.ComparisonStatus.LeftOnly">
+            <summary>
+            The data item only exists on the left side (source).
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Deployment.ComparisonStatus.RightOnly">
+            <summary>
+            The data item only exists on the right side (destination).
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Deployment.ComparisonStatus.Identical">
+            <summary>
+            The data items are identical.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Deployment.ComparisonStatus.Different">
+            <summary>
+            The data items are different.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Deployment.DataItemBase">
+            <summary>
+            Represents data about an entity
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemBase.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.DataItemBase"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItemBase.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItemBase.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItemBase.ParentId">
+            <summary>
+            Gets or sets the parent identifier.
+            </summary>
+            <value>
+            The parent identifier.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Deployment.DataItemIdentifier">
+            <summary>
+            Represents a data item identifier
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItemIdentifier.DataGroupId">
+            <summary>
+            Gets or sets the data group identifier.
+            </summary>
+            <value>
+            The data group identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItemIdentifier.DataItemTypeId">
+            <summary>
+            Gets or sets the data item type identifier.
+            </summary>
+            <value>
+            The data item type identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItemIdentifier.DataItemId">
+            <summary>
+            Gets or sets the data item identifier.
+            </summary>
+            <value>
+            The data item identifier.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemIdentifier.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.DataItemIdentifier"/> class.
+            </summary>
+            <param name="dataGroupId">The data group identifier.</param>
+            <param name="dataItemTypeId">The data item type identifier.</param>
+            <param name="dataItemId">The data item identifier.</param>
+        </member>
+        <member name="T:Dynamicweb.Deployment.DataItemInfo">
+            <summary>
+            Represents data about an entity
+            </summary>
+            <seealso cref="T:Dynamicweb.Deployment.DataItemBase" />
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemInfo.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.DataItemInfo"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItemInfo.Checksum">
+            <summary>
+            Gets or sets the checksum.
+            </summary>
+            <value>
+            The checksum.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Deployment.DataItemSelection">
+            <summary>
+            Represents a selection of data items.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemSelection.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Dynamicweb.Deployment.DataItemSelection"/> class from being created.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemSelection.#ctor(Dynamicweb.Deployment.DataItemType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.DataItemSelection"/> class.
+            </summary>
+            <param name="dataItemType">Type of the data items.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemSelection.#ctor(Dynamicweb.Deployment.DataItemType,System.Collections.Generic.ICollection{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.DataItemSelection"/> class.
+            </summary>
+            <param name="dataItemType">Type of the data items.</param>
+            <param name="dataItemIds">The data item ids.</param>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItemSelection.DataItemIds">
+            <summary>
+            Gets or sets the data item ids.
+            </summary>
+            <value>
+            The data item ids.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItemSelection.DataItemType">
+            <summary>
+            Gets or sets the type of the data items.
+            </summary>
+            <value>
+            The type of the data items.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Deployment.DataItemType">
+            <summary>
+            Represents a definition of a specific type of data item.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItemType.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItemType.DataGroupId">
+            <summary>
+            Gets or sets the data group identifier.
+            </summary>
+            <value>
+            The data group identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItemType.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItemType.ProviderTypeName">
+            <summary>
+            Gets or sets the name of the provider type.
+            </summary>
+            <value>
+            The name of the provider type.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItemType.ProviderParameters">
+            <summary>
+            Gets or sets the provider parameters.
+            </summary>
+            <value>
+            The provider parameters.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItemType.ViewMode">
+            <summary>
+            Gets or sets the view mode.
+            </summary>
+            <value>
+            The view mode.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemType.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Dynamicweb.Deployment.DataItemType"/> class from being created.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemType.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.DataItemType"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="T:Dynamicweb.Deployment.DeploymentInfo">
+            <summary>
+            Represents information about a deployment
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentInfo.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.DeploymentInfo"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="logFolder">The log folder.</param>
+            <param name="logName">Name of the log.</param>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DeploymentInfo.Id">
+            <summary>
+            Gets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DeploymentInfo.LogFolder">
+            <summary>
+            Gets the log folder.
+            </summary>
+            <value>
+            The log folder.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DeploymentInfo.LogName">
+            <summary>
+            Gets the name of the log.
+            </summary>
+            <value>
+            The name of the log.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Deployment.DeploymentSet">
+            <summary>
+            Represents a collection of data that should be deployed.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DeploymentSet.DataGroups">
+            <summary>
+            Gets or sets the data groups.
+            </summary>
+            <value>
+            The data groups.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DeploymentSet.DataItemIdentifiers">
+            <summary>
+            Gets or sets the data item identifiers.
+            </summary>
+            <value>
+            The data item identifiers.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentSet.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.DeploymentSet"/> class.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Deployment.DataItem">
+            <summary>
+            Represents data about an entity.
+            </summary>
+            <seealso cref="T:Dynamicweb.Deployment.DataItemBase" />
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItem.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.DataItem"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItem.Properties">
+            <summary>
+            Gets or sets the properties.
+            </summary>
+            <value>
+            The properties.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Deployment.DataItemReader">
+            <summary>
+            Represents a data item reader
+            </summary>
+            <example>
+            <code title="Implementing a data item reader" description="Implementing a data item reader" source="..\Dynamicweb\07 - Application Services\Dynamicweb.Deployment\Head\Dynamicweb.Deployment.Examples\CustomDataItemReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemReader.ReadItems">
+            <summary>
+            Reads all the data items.
+            </summary>
+            <returns>A sequence of data items</returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemReader.ReadItems(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Reads the data items with the specified ids.
+            </summary>
+            <param name="ids">The ids.</param>
+            <returns>A sequence of data items</returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemReader.ReadItemInfos">
+            <summary>
+            Reads the data item infos.
+            </summary>
+            <returns>A sequence of data item infos</returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemReader.ReadItemInfos(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Reads the data item infos with the specified ids.
+            </summary>
+            <param name="ids">The ids.</param>
+            <returns>A sequence of data item infos</returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemReader.ConvertToDataItemInfo(Dynamicweb.Deployment.DataItem)">
+            <summary>
+            Converts a data item to a light weight representation that can be used for comparison.
+            </summary>
+            <param name="item">The data item.</param>
+            <returns>An instance of data item info</returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemReader.CalculateChecksum(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Calculates the checksum.
+            </summary>
+            <param name="properties">The data item properties that should be included in the calculation of checksum value.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Deployment.DataItemWriter">
+            <summary>
+            Represents a data item writer.
+            </summary>
+            <example>
+            <code title="Implementing a data item writer" description="Implementing a data item writer" source="..\Dynamicweb\07 - Application Services\Dynamicweb.Deployment\Head\Dynamicweb.Deployment.Examples\CustomDataItemWriter.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemWriter.WriteItems(System.Collections.Generic.IEnumerable{Dynamicweb.Deployment.DataItem})">
+            <summary>
+            Writes the data items.
+            </summary>
+            <param name="dataItems">The data items.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemWriter.WriteItemsSecondPass(System.Collections.Generic.IEnumerable{Dynamicweb.Deployment.DataItem})">
+            <summary>
+            Writes the data items a second time. This is used for post processing data.
+            </summary>
+            <param name="dataItems">The items.</param>
+        </member>
+        <member name="T:Dynamicweb.Deployment.DataGroup">
+            <summary>
+            Represents a group of data
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataGroup.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataGroup.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataGroup.ParentId">
+            <summary>
+            Gets or sets the parent identifier.
+            </summary>
+            <value>
+            The parent identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataGroup.DataItemTypes">
+            <summary>
+            Gets or sets the data item types.
+            </summary>
+            <value>
+            The data item types.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataGroup.Icon">
+            <summary>
+            Gets or sets the icon.
+            </summary>
+            <value>
+            The icon.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataGroup.IconColor">
+            <summary>
+            Gets or sets the icon color.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataGroup.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Dynamicweb.Deployment.DataGroup"/> class from being created.
+            Also used by the serializer.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataGroup.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.DataGroup"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataGroup.GetDataItemType(System.String)">
+            <summary>
+            Gets the data item type.
+            </summary>
+            <param name="dataItemTypeId">The data item type identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Deployment.DataGroupRepository">
+            <summary>
+            Represents a repository of data groups
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataGroupRepository.Save(Dynamicweb.Deployment.DataGroup)">
+            <summary>
+            Saves the specified data group.
+            </summary>
+            <param name="group">The data group.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataGroupRepository.GetById(System.String)">
+            <summary>
+            Gets a data group by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataGroupRepository.GetAll">
+            <summary>
+            Gets all data groups.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataGroupRepository.Delete(System.String)">
+            <summary>
+            Deletes data group by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="T:Dynamicweb.Deployment.DataItemProvider">
+            <summary>
+            Represents a provider of data items. This is the base class that all data item providers must inherit from.
+            </summary>
+            <seealso cref="T:Dynamicweb.Extensibility.AddIns.ConfigurableAddIn" />
+            <example>
+            <code title="Implementing a data item provider" description="Implementing a data item provider" source="..\Dynamicweb\07 - Application Services\Dynamicweb.Deployment\Head\Dynamicweb.Deployment.Examples\CustomDataItemProvider.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DataItemProvider.DataItemType">
+            <summary>
+            Gets the type of the data item.
+            </summary>
+            <value>
+            The type of the data item.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemProvider.CreateInstance(Dynamicweb.Deployment.DataItemType)">
+            <summary>
+            Creates an instance of a data item provider for a specific data item type.
+            </summary>
+            <param name="itemType">The data item type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemProvider.LoadParametersFromDictionary(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Loads the parameters from dictionary.
+            </summary>
+            <param name="parameters">The parameters.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemProvider.GetParametersToDictionary">
+            <summary>
+            Gets the parameters as a dictionary.
+            </summary>
+            <returns>A dictionary of parameter keys and values</returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemProvider.GetDataProviderTypes">
+            <summary>
+            Gets the data provider types.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemProvider.CreateReader">
+            <summary>
+            Creates the data item reader.
+            </summary>
+            <returns>An instance of <see cref="T:Dynamicweb.Deployment.DataItemReader"/>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DataItemProvider.CreateWriter">
+            <summary>
+            Creates the data item writer.
+            </summary>
+            <returns>An instance of <see cref="T:Dynamicweb.Deployment.DataItemWriter"/>.</returns>
+        </member>
+        <member name="T:Dynamicweb.Deployment.DeploymentStatus">
+            <summary>
+            Represents the status of a deployment
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DeploymentStatus.Succeeded">
+            <summary>
+            Gets or sets a value indicating whether the deployment has succeeded.
+            </summary>
+            <value>
+              <c>true</c> if succeeded; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DeploymentStatus.State">
+            <summary>
+            Gets or sets the state of the deployment task.
+            </summary>
+            <value>
+            The state of the deployment task.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DeploymentStatus.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Deployment.Destination">
+            <summary>
+            Represents a deployment destination
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Deployment.Destination.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.Destination.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.Destination.Url">
+            <summary>
+            Gets or sets the URL.
+            </summary>
+            <value>
+            The URL.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.Destination.Username">
+            <summary>
+            Gets or sets the username.
+            </summary>
+            <value>
+            The username.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.Destination.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>
+            The password.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Deployment.ExportInfo">
+            <summary>
+            Represents information about an export
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Deployment.ExportInfo.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.ExportInfo"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="logFolder">The log folder.</param>
+            <param name="logName">Name of the log.</param>
+        </member>
+        <member name="P:Dynamicweb.Deployment.ExportInfo.Id">
+            <summary>
+            Gets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.ExportInfo.LogFolder">
+            <summary>
+            Gets the log folder.
+            </summary>
+            <value>
+            The log folder.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.ExportInfo.LogName">
+            <summary>
+            Gets the name of the log.
+            </summary>
+            <value>
+            The name of the log.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Deployment.NamespaceDoc">
+            <summary>
+            The Dynamicweb.Deployment namespace contains ...
+            <remarks>For further details, see .</remarks>
+            </summary>
+            <example>
+            <code title="Using the configuration manager" source="..\Dynamicweb\09 - Core\Dynamicweb.Configuration\Head\Dynamicweb.Configuration.Examples\ConfigurationSample.cs" lang="CS"></code>
+            </example>
+            <example>
+            <code title="How to implement a custom configuration provider" source="..\Dynamicweb\09 - Core\Dynamicweb.Configuration\Head\Dynamicweb.Configuration.Examples\CustomConfigurationProviderSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="T:Dynamicweb.Deployment.Notifications.NamespaceDoc">
+            <summary>
+            The Dynamicweb.Deployment.Xml namespace contains classes that ...
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Deployment.Notifications.DeploymentNotification">
+            <summary>
+            Provides information about deployment notifications.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Deployment.Notifications.DeploymentNotification.AfterDeployment">
+            <summary>
+            After deployment notification.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Deployment.Notifications.DeploymentNotification.BeforeDeployment">
+            <summary>
+            Before deployment notification.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Deployment.Notifications.DeploymentNotification.AfterDeploymentArgs">
+            <summary>
+            Provides information about a deployment after it is executed.
+            </summary>
+            <seealso cref="T:Dynamicweb.Deployment.Notifications.DeploymentNotification.DeploymentArgs" />
+        </member>
+        <member name="T:Dynamicweb.Deployment.Notifications.DeploymentNotification.BeforeDeploymentArgs">
+            <summary>
+            Provides information about a deployment before it is executed.
+            </summary>
+            <seealso cref="T:Dynamicweb.Deployment.Notifications.DeploymentNotification.DeploymentArgs" />
+        </member>
+        <member name="T:Dynamicweb.Deployment.Notifications.DeploymentNotification.DeploymentArgs">
+            <summary>
+            Provides information about a deployment.
+            </summary>
+            <seealso cref="T:Dynamicweb.Extensibility.Notifications.NotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Deployment.Notifications.DeploymentNotification.DeploymentArgs.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.Notifications.DeploymentNotification.DeploymentArgs.Package">
+            <summary>
+            Gets or sets the package.
+            </summary>
+            <value>
+            The package.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Deployment.Package">
+            <summary>
+            Reprensents a deployment package (zip file).
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Deployment.Package.PackageFilePath">
+            <summary>
+            Gets the package file path.
+            </summary>
+            <value>The package file path.</value>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Package.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.Package"/> class.
+            </summary>
+            <param name="filePath">The file path.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Package.ReadPackageInfo">
+            <summary>
+            Reads the package information.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Package.ReadDataGroup(System.String)">
+            <summary>
+            Reads the data group.
+            </summary>
+            <param name="dataGroupId">The data group identifier.</param>
+            <returns>DataGroup.</returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Package.ReadDataGroups">
+            <summary>
+            Reads the data groups.
+            </summary>
+            <returns>IEnumerable&lt;DataGroup&gt;.</returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Package.ReadDataItems(System.String,System.String)">
+            <summary>
+            Reads the data items.
+            </summary>
+            <param name="dataGroupId">The data group identifier.</param>
+            <param name="dataItemTypeId">The data item type identifier.</param>
+            <returns>IEnumerable&lt;DataItem&gt;.</returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Package.ReadDataItems(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Reads the data items.
+            </summary>
+            <param name="dataGroupId">The data group identifier.</param>
+            <param name="dataItemTypeId">The data item type identifier.</param>
+            <param name="itemIds">The item ids.</param>
+            <returns>IEnumerable&lt;DataItem&gt;.</returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Package.WritePackageInfo(Dynamicweb.Deployment.PackageInfo)">
+            <summary>
+            Writes the package information.
+            </summary>
+            <param name="packageInfo">The package information.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Package.WriteDataGroup(Dynamicweb.Deployment.DataGroup)">
+            <summary>
+            Writes the data group.
+            </summary>
+            <param name="dataGroup">The data group.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Package.WriteDataItems(System.String,System.String,System.Collections.Generic.IEnumerable{Dynamicweb.Deployment.DataItem})">
+            <summary>
+            Writes the data items.
+            </summary>
+            <param name="dataGroupId">The data group identifier.</param>
+            <param name="dataItemTypeId">The data item type identifier.</param>
+            <param name="dataItems">The data items.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Package.WritePackageEntries(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Writes the package entries.
+            </summary>
+            <param name="folder">The folder.</param>
+            <param name="entries">The entries.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Package.WritePackageEntries(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.IO.Compression.ZipArchive)">
+            <summary>
+            Writes the package entries.
+            </summary>
+            <param name="folder">The folder.</param>
+            <param name="entries">The entries.</param>
+            <param name="zip">The zip.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Package.WritePackageEntry(System.String,System.String,System.String)">
+            <summary>
+            Writes the package entry.
+            </summary>
+            <param name="folder">The folder.</param>
+            <param name="name">The name.</param>
+            <param name="contents">The contents.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Package.WritePackageEntry(System.String,System.String,System.String,System.IO.Compression.ZipArchive)">
+            <summary>
+            Writes the package entry.
+            </summary>
+            <param name="folder">The folder.</param>
+            <param name="name">The name.</param>
+            <param name="contents">The contents.</param>
+            <param name="zip">The zip.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Package.ReadPackageEntries(System.String)">
+            <summary>
+            Reads the package entries.
+            </summary>
+            <param name="folder">The folder.</param>
+            <returns>IDictionary&lt;System.String, System.String&gt;.</returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Package.ReadPackageEntries(System.String,System.String[])">
+            <summary>
+            Reads the package entries.
+            </summary>
+            <param name="folder">The folder.</param>
+            <param name="names">The names.</param>
+            <returns>IDictionary&lt;System.String, System.String&gt;.</returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.Package.IsEntryInFolder(System.IO.Compression.ZipArchiveEntry,System.String)">
+            <summary>
+            Determines whether the specified entry is in the specified folder.
+            </summary>
+            <param name="entry">The entry.</param>
+            <param name="folder">The folder.</param>
+            <returns>
+              <c>true</c> if the specified entry is in the folder; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Dynamicweb.Deployment.PackageInfo">
+            <summary>
+            Represents meta data about a package
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Deployment.PackageInfo.CreatedDate">
+            <summary>
+            Gets the created date.
+            </summary>
+            <value>
+            The created date.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.PackageInfo.SourceName">
+            <summary>
+            Gets the name of the source.
+            </summary>
+            <value>
+            The name of the source.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.PackageInfo.SourceUrl">
+            <summary>
+            Gets the source URL.
+            </summary>
+            <value>
+            The source URL.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Deployment.ViewMode">
+            <summary>
+            Represents the view mode used for presenting data items
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Deployment.XmlDataGroupSerializer">
+            <summary>
+            Xml serializer of for data groups
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Deployment.XmlDataGroupSerializer.DeserializeGroup(System.String)">
+            <summary>
+            Deserializes the group.
+            </summary>
+            <param name="xml">The XML.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.XmlDataGroupSerializer.SerializeDataGroup(Dynamicweb.Deployment.DataGroup)">
+            <summary>
+            Serializes the data group.
+            </summary>
+            <param name="group">The group.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.XmlDataGroupSerializer.DeserializeDataGroup(System.Xml.Linq.XElement)">
+            <summary>
+            Deserializes the data group.
+            </summary>
+            <param name="element">The element.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.XmlDataGroupSerializer.DeserializeDataItemType(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            Deserializes the data item type.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="dataGroupId">The data group identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.XmlDataGroupSerializer.SerializeDataGroupToXElement(Dynamicweb.Deployment.DataGroup)">
+            <summary>
+            Serializes the data group to an <see cref="T:System.Xml.Linq.XElement"/>.
+            </summary>
+            <param name="group">The group.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.XmlDataGroupSerializer.SerializeDataItemTypeToXElement(Dynamicweb.Deployment.DataItemType)">
+            <summary>
+            Serializes the data item type to an <see cref="T:System.Xml.Linq.XElement"/>.
+            </summary>
+            <param name="itemType">The data item type.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Deployment.DeploymentProvider">
+            <summary>
+            Represents a provider which takes part in the the  deployment process as either source or destination.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DeploymentProvider.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.DeploymentProvider.Url">
+            <summary>
+            Gets the URL.
+            </summary>
+            <value>
+            The URL.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.VerifyConnection">
+            <summary>
+            Verifies the connection.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.VerifyCompatibility(Dynamicweb.Deployment.DeploymentProvider,System.Collections.Generic.ICollection{System.String}@)">
+            <summary>
+            Verifies compatibility.
+            </summary>
+            <param name="destination">The destination.</param>
+            <param name="infoDifferences">The information differences.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.GetSystemInformation">
+            <summary>
+            Gets the system information.
+            </summary>
+            <returns>A dictionary of system information</returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.GetDataGroup(System.String)">
+            <summary>
+            Gets the data group.
+            </summary>
+            <param name="dataGroupId">The data group identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.GetDataGroups">
+            <summary>
+            Gets the data groups.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.GetDataItem(Dynamicweb.Deployment.DataItemType,System.String)">
+            <summary>
+            Gets the data item.
+            </summary>
+            <param name="dataItemType">Type of the data item.</param>
+            <param name="dataItemId">The data item identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.GetDataItems(Dynamicweb.Deployment.DataItemType)">
+            <summary>
+            Gets the data items.
+            </summary>
+            <param name="dataItemType">Type of the data item.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.GetDataItems(Dynamicweb.Deployment.DataItemSelection)">
+            <summary>
+            Gets the data items.
+            </summary>
+            <param name="selection">The selection.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.GetDataItemInfo(Dynamicweb.Deployment.DataItemType,System.String)">
+            <summary>
+            Gets the data item information.
+            </summary>
+            <param name="dataItemType">Type of the data item.</param>
+            <param name="dataItemId">The data item identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.GetDataItemInfos(Dynamicweb.Deployment.DataItemType)">
+            <summary>
+            Gets the data item infos.
+            </summary>
+            <param name="dataItemType">Type of the data item.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.GetDataItemInfos(Dynamicweb.Deployment.DataItemSelection)">
+            <summary>
+            Gets the data item infos.
+            </summary>
+            <param name="selection">The selection.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.CompareDataItems(Dynamicweb.Deployment.DeploymentProvider,Dynamicweb.Deployment.DataItemSelection)">
+            <summary>
+            Compares the data items.
+            </summary>
+            <param name="destination">The destination.</param>
+            <param name="selection">The selection.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.GetDeploymentStatus(System.String)">
+            <summary>
+            Gets the deployment status.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.ExportDataItemsToPackage(System.String,System.Collections.Generic.ICollection{Dynamicweb.Deployment.DataItemIdentifier})">
+            <summary>
+            Deploys the data items to.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="dataItemIdentifiers">The data item identifiers.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.DeployDataItemsTo(System.String,Dynamicweb.Deployment.DeploymentProvider,System.Collections.Generic.ICollection{Dynamicweb.Deployment.DataItemIdentifier})">
+            <summary>
+            Deploys the data items to.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="destination">The destination.</param>
+            <param name="dataItemIdentifiers">The data item identifiers.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.DeployDataItemsFrom(System.String,Dynamicweb.Deployment.Package)">
+            <summary>
+            Deploys the data items from.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="package">The package.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.ExportPackage(System.String,Dynamicweb.Deployment.DeploymentSet,Dynamicweb.Diagnostics.Tracking.Tracker)">
+            <summary>
+            Exports the package.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="deploymentSet">The deployment set.</param>
+            <param name="tracker">The tracker.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.DeploymentProvider.ImportPackage(System.String,Dynamicweb.Deployment.Package,Dynamicweb.Diagnostics.Tracking.Tracker)">
+            <summary>
+            Imports the package.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="package">The package.</param>
+            <param name="tracker">The tracker.</param>
+        </member>
+        <member name="T:Dynamicweb.Deployment.XmlDataGroupRepository">
+            <summary>
+            Represents an xml repository of data groups.
+            </summary>
+            <seealso cref="T:Dynamicweb.Deployment.DataGroupRepository" />
+        </member>
+        <member name="P:Dynamicweb.Deployment.XmlDataGroupRepository.RepositoryPath">
+            <summary>
+            Gets or sets the repository path.
+            </summary>
+            <value>
+            The repository path.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.XmlDataGroupRepository.DefaultRelativeRepositoryPath">
+            <summary>
+            Gets the default relative repository path.
+            </summary>
+            <value>
+            The default relative repository path.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Deployment.XmlDataGroupRepository.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.XmlDataGroupRepository"/> class.
+            </summary>
+            <param name="absoluteRepositoryPath">The absolute repository path.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.XmlDataGroupRepository.Save(Dynamicweb.Deployment.DataGroup)">
+            <summary>
+            Saves the specified data group.
+            </summary>
+            <param name="group">The data group.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.XmlDataGroupRepository.GetById(System.String)">
+            <summary>
+            Gets a data group by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.XmlDataGroupRepository.GetAll">
+            <summary>
+            Gets all data groups.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.XmlDataGroupRepository.Delete(System.String)">
+            <summary>
+            Deletes data group and its descendants by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.XmlDataGroupRepository.FindChildren(System.String)">
+            <summary>
+            Returns a collection of identifiers of a data group descendants with a parent data group id.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Deployment.LocalDeploymentProvider">
+            <summary>
+            Represents a deployment provider for the local installation.
+            </summary>
+            <seealso cref="T:Dynamicweb.Deployment.DeploymentProvider" />
+        </member>
+        <member name="P:Dynamicweb.Deployment.LocalDeploymentProvider.DataGroupRepository">
+            <summary>
+            Gets or sets the data group repository.
+            </summary>
+            <value>
+            The data group repository.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.LocalDeploymentProvider.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.LocalDeploymentProvider.Url">
+            <summary>
+            Gets the URL.
+            </summary>
+            <value>
+            The URL.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.LocalDeploymentProvider.ExportFolder">
+            <summary>
+            Gets or set the folder to export packages.
+            </summary>
+            <value>
+            The folder name.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.#ctor(System.Uri)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.LocalDeploymentProvider"/> class.
+            </summary>
+            <param name="url">The URL.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.#ctor(System.String,System.Uri)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.LocalDeploymentProvider"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="url">The URL.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.GetDataGroup(System.String)">
+            <summary>
+            Gets the data group.
+            </summary>
+            <param name="dataGroupId">The data group identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.GetDataGroups">
+            <summary>
+            Gets the data groups.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.GetDataItems(Dynamicweb.Deployment.DataItemSelection)">
+            <summary>
+            Gets the data items.
+            </summary>
+            <param name="selection">The selection.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.GetDataItemInfos(Dynamicweb.Deployment.DataItemSelection)">
+            <summary>
+            Gets the data item infos.
+            </summary>
+            <param name="selection">The selection.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.ImportPackage(System.String,Dynamicweb.Deployment.Package,Dynamicweb.Diagnostics.Tracking.Tracker)">
+            <summary>
+            Imports the package.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="package">The package.</param>
+            <param name="tracker">The tracker.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.ImportDataGroups(Dynamicweb.Deployment.Package,Dynamicweb.Diagnostics.Tracking.Tracker,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{Dynamicweb.Deployment.DataGroup}})">
+            <summary>
+            Imports data from a package by recursively reading and writing data for each data group.
+            This process will use <see cref="M:Dynamicweb.Deployment.DataItemWriter.WriteItems(System.Collections.Generic.IEnumerable{Dynamicweb.Deployment.DataItem})"/> to write the data. 
+            </summary>
+            <param name="package">Package where data should be imported from</param>
+            <param name="dataGroupsByParentId">Data groups grouped by parent id</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.ImportDataGroups(Dynamicweb.Deployment.Package,Dynamicweb.Diagnostics.Tracking.Tracker,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{Dynamicweb.Deployment.DataGroup}},System.String)">
+            <summary>
+            Imports data from a package by recursively reading and writing data for each data group.
+            This process will use <see cref="M:Dynamicweb.Deployment.DataItemWriter.WriteItems(System.Collections.Generic.IEnumerable{Dynamicweb.Deployment.DataItem})"/> to write the data. 
+            </summary>
+            <param name="package">Package where data should be imported from</param>
+            <param name="dataGroupsByParentId">Data groups grouped by parent id</param>
+            <param name="parentId">Id of the parent data group</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.ImportDataGroupsSecondPass(Dynamicweb.Deployment.Package,Dynamicweb.Diagnostics.Tracking.Tracker,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{Dynamicweb.Deployment.DataGroup}})">
+            <summary>
+            Imports data from a package by recursively reading and writing data for each data group.
+            This process will use <see cref="M:Dynamicweb.Deployment.DataItemWriter.WriteItemsSecondPass(System.Collections.Generic.IEnumerable{Dynamicweb.Deployment.DataItem})"/> to write the data. 
+            </summary>
+            <param name="package">Package where data should be imported from</param>
+            <param name="dataGroupsByParentId">Data groups grouped by parent id</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.ImportDataGroupsSecondPass(Dynamicweb.Deployment.Package,Dynamicweb.Diagnostics.Tracking.Tracker,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{Dynamicweb.Deployment.DataGroup}},System.String)">
+            <summary>
+            Imports data from a package by recursively reading and writing data for each data group.
+            This process will use <see cref="M:Dynamicweb.Deployment.DataItemWriter.WriteItemsSecondPass(System.Collections.Generic.IEnumerable{Dynamicweb.Deployment.DataItem})"/> to write the data. 
+            </summary>
+            <param name="package">Package where data should be imported from</param>
+            <param name="dataGroupsByParentId">Data groups grouped by parent id</param>
+            <param name="parentId">Id of the parent data group</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.ExportPackage(System.String,Dynamicweb.Deployment.DeploymentSet,Dynamicweb.Diagnostics.Tracking.Tracker)">
+            <summary>
+            Exports the package.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="deploymentSet">The deployment set.</param>
+            <param name="tracker">The tracker.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.ExportDataGroups(Dynamicweb.Deployment.Package,Dynamicweb.Diagnostics.Tracking.Tracker,System.Collections.Generic.ICollection{Dynamicweb.Deployment.DataGroup},System.Collections.Generic.ICollection{Dynamicweb.Deployment.DataItemIdentifier})">
+            <summary>
+            Exports data to a package by recursively reading and writing data for each data group.
+            </summary>
+            <param name="package">Package where data should be exported to</param>
+            <param name="dataGroups">Data groups to export</param>
+            <param name="dataItemIdentifiers">Identification of the data items which should be exported</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.ExportDataGroups(Dynamicweb.Deployment.Package,Dynamicweb.Diagnostics.Tracking.Tracker,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{Dynamicweb.Deployment.DataGroup}},System.String,System.Collections.Generic.ICollection{Dynamicweb.Deployment.DataItemIdentifier})">
+            <summary>
+            Exports data to a package by recursively extracting data for each data group.
+            </summary>
+            <param name="package">Package where data should be exported to.</param>
+            <param name="dataGroupsByParentId">Data groups grouped by parent id</param>
+            <param name="parentId">Id of the parent data group</param>
+            <param name="dataItemIdentifiers">Identification of the data items which should be exported</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.GroupDataGroupsByParentId(System.Collections.Generic.ICollection{Dynamicweb.Deployment.DataGroup})">
+            <summary>
+            Groups a collection of data groups by parent id.
+            </summary>
+            <param name="dataGroups">A collection of data groups</param>
+            <returns>A dictionary with data group parent id as the key and a collection of child data groups as the value.</returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.GetDataItemTypeCount(System.Collections.Generic.ICollection{Dynamicweb.Deployment.DataGroup})">
+            <summary>
+            Counts the number of data item types associated with a collection of data groups
+            </summary>
+            <param name="dataGroups">A collection of data groups</param>
+            <returns>The total number of data item types associated with the data groups</returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.LocalDeploymentProvider.GetName">
+            <summary>
+            Gets the name of the local installation.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Deployment.RemoteDeploymentProvider">
+            <summary>
+            Represents a remote deployment provider
+            </summary>
+            <seealso cref="T:Dynamicweb.Deployment.DeploymentProvider" />
+        </member>
+        <member name="P:Dynamicweb.Deployment.RemoteDeploymentProvider.Username">
+            <summary>
+            Gets or sets the username.
+            </summary>
+            <value>
+            The username.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.RemoteDeploymentProvider.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>
+            The password.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.RemoteDeploymentProvider.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Deployment.RemoteDeploymentProvider.Url">
+            <summary>
+            Gets the URL.
+            </summary>
+            <value>
+            The URL.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Deployment.RemoteDeploymentProvider.#ctor(Dynamicweb.Deployment.Destination)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.RemoteDeploymentProvider"/> class.
+            </summary>
+            <param name="destination">The destination.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.RemoteDeploymentProvider.#ctor(System.String,System.Uri,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Deployment.RemoteDeploymentProvider"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="url">The URL.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.RemoteDeploymentProvider.ConfigureClient(System.Net.Http.HttpClient)">
+            <summary>
+            Configures the client.
+            </summary>
+            <param name="client">The client.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.RemoteDeploymentProvider.ConfigureBaseAddress(System.Net.Http.HttpClient,System.Uri)">
+            <summary>
+            Configures the base address.
+            </summary>
+            <param name="client">The client.</param>
+            <param name="url">The URL.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.RemoteDeploymentProvider.ConfigureAuthentication(System.Net.Http.HttpClient,System.String,System.String)">
+            <summary>
+            Configures the authentication.
+            </summary>
+            <param name="client">The client.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.RemoteDeploymentProvider.VerifyConnection">
+            <summary>
+            Verifies the connection.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.RemoteDeploymentProvider.GetDataGroups">
+            <summary>
+            Gets the data groups.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.RemoteDeploymentProvider.GetDataItems(Dynamicweb.Deployment.DataItemSelection)">
+            <summary>
+            Gets the data items.
+            </summary>
+            <param name="selection">The selection.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.RemoteDeploymentProvider.GetDataItemInfos(Dynamicweb.Deployment.DataItemSelection)">
+            <summary>
+            Gets the data item infos.
+            </summary>
+            <param name="selection">The selection.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.RemoteDeploymentProvider.ImportPackage(System.String,Dynamicweb.Deployment.Package,Dynamicweb.Diagnostics.Tracking.Tracker)">
+            <summary>
+            Imports the package.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="package">The package.</param>
+            <param name="tracker">The tracker.</param>
+        </member>
+        <member name="M:Dynamicweb.Deployment.RemoteDeploymentProvider.ExportPackage(System.String,Dynamicweb.Deployment.DeploymentSet,Dynamicweb.Diagnostics.Tracking.Tracker)">
+            <summary>
+            Exports the package.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="deploymentSet">The deployment set.</param>
+            <param name="tracker">The tracker.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.RemoteDeploymentProvider.GetDeploymentStatus(System.String)">
+            <summary>
+            Gets the deployment status.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.RemoteDeploymentProvider.GetDataGroup(System.String)">
+            <summary>
+            Gets the data group.
+            </summary>
+            <param name="dataGroupId">The data group identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.RemoteDeploymentProvider.GetMessageHandler">
+            <summary>
+            Gets the HttpMessageHandler.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.RemoteDeploymentProvider.GetRequest``1(System.String)">
+            <summary>
+            Gets the request.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="requestUri">The request URI.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Deployment.RemoteDeploymentProvider.PostRequest``2(System.String,``0)">
+            <summary>
+            Posts the request.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="requestUri">The request URI.</param>
+            <param name="content">The content.</param>
+            <returns></returns>
+        </member>
+        <member name="T:DestinationRepository">
+            <summary>
+            Represents a repository of destinations
+            </summary>
+        </member>
+        <member name="P:DestinationRepository.RepositoryPath">
+            <summary>
+            Gets the repository directory path.
+            </summary>
+            <value>
+            The repository directory path.
+            </value>
+        </member>
+        <member name="P:DestinationRepository.DefaultRelativeRepositoryPath">
+            <summary>
+            Gets the default relative repository path.
+            </summary>
+            <value>
+            The default relative repository path.
+            </value>
+        </member>
+        <member name="M:DestinationRepository.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DestinationRepository"/> class.
+            </summary>
+            <param name="absoluteRepositoryPath">The absolute repository path.</param>
+        </member>
+        <member name="M:DestinationRepository.Delete(System.String)">
+            <summary>
+            Deletes the specified destination identifier.
+            </summary>
+            <param name="destinationId">The destination identifier.</param>
+        </member>
+        <member name="M:DestinationRepository.Save(Dynamicweb.Deployment.Destination)">
+            <summary>
+            Saves the specified destination.
+            </summary>
+            <param name="destination">The destination.</param>
+        </member>
+        <member name="M:DestinationRepository.GetAll">
+            <summary>
+            Gets all destinations.
+            </summary>
+            <returns>A sequence of destinations</returns>
+        </member>
+        <member name="M:DestinationRepository.GetById(System.String)">
+            <summary>
+            Gets the by identifier.
+            </summary>
+            <param name="destinationId">The destination identifier.</param>
+            <returns>A destination, if found; otherwise, null</returns>
+        </member>
+        <member name="M:DestinationRepository.Encrypt(System.String)">
+            <summary>
+            Encrypts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DestinationRepository.Decrypt(System.String)">
+            <summary>
+            Decrypts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DestinationRepository.GenerateIdFromName(System.String)">
+            <summary>
+            Generates the name of the identifier from.
+            </summary>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,328 @@
+﻿@using Dynamicweb.Core.UI.Icons
+@using Dynamicweb.SystemTools;
+@using Dynamicweb.Core
+@using Dynamicweb.Configuration
+@using Dynamicweb.Management
+@using System.Linq
+@model Dynamicweb.Management.ManagerModel
+
+@{
+    Layout = null;
+    var activeArea = Dynamicweb.Services.Areas.GetAreas().FirstOrDefault(a => a.Active);
+    var areaid = activeArea == null ? 0 : activeArea.ID;
+}
+
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<link id="favicon" rel="shortcut icon" type="image/​png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAjCAYAAAD8BaggAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xNkRpr/UAAAO6SURBVFhHxdhriExxGMfxmbWGJULJLUT7ArnzglzCC7mtvVhLvFgvlEvKpZYky2gnSiG5FK2sW5JsoZS0imQn8oLESrnk0koukcsuw/e35zkZ48zOMGbnqY/Z5pz///nNf845cw5fqlVYND0bhzDH/rYtGSoFQCXeYj6y9F5GiwAb8Q2vMQJ+25SZIsBaCxRBDQKwrS1cNPbjAL7jBxowF5lZJRoPwUtodRRIr5fQFrZXmiq6AX+3wTw8hBvG9QbDYHv/59LERqf1UJTjNr4iNozovaVIz9fGxN0QRB28Ang5iLQF0oq4B22yziPLFwr3xAbkwmZMsQqKpg/EXRokuzpSHQhe7kKIK/iOQ2j1b6E06Bd/YHONP2/O7H6EOkujRiQMVlA0I+irqN3P+G+I4Bl6w5okUxYArdEfJdiOYzjsq7i+dlzp8jKC1dL0E+IFe9R7zYGlBPrAOIX5Ya9FsGaJygkTwAycxmu4k0V70q78wmRCTaHxTijcE9TjMaqnlZSMI0w1+8aOPwIdV9bUq36tygCcwWd4BYl2EVpFHfC6APZAH3RHNis5mG3vETtPPbrCmnuVk3g2XiB6cHNeoh9sEqcI04T318HrQ+m9DbZ7nAqFZ+ItdCa4Eq3QO2gVbJKocs6k8/AaJxo7Fa1shMZIdtMr/+iAPYGtKMdhaLWaC6Wlz3Vmi6lQOAf3bD8vmvcNTmEztuA4dMw1TZDtzGTlpB2JB4gXSg072IjfKxRuD53iXuNcmlffRKP5ghWwSbwqFJ5rO3pNdtT2+rOcFbpj+ybjI5Ygy2aIU84l4CZiJ9AnKuTg1a1qV/RFL3SAxumM3WX7NqcB1zDROiZRofB6xH5t9yeULtMvvm7sH+AVnuEWKrk+5XcvqxrOfl4fRrQiumwsQCck+QPsHEsDoRVxJquojeSUX1xN4zC8rtC6cjcQ6s7khYuCgWDNSsZVQgftbizGILSDVtKaJVNOIA1yj4cIgWpmFRfoycIrjEuhIoRqxI284vxRbTdd0qVA1zsnxF8FiS5ncBn0tdX5K64PoNmWqObNcYPVY5LNmGI5gTpD9zO6d9YN/TZrmCwFO2kz/t9iYllljRJRkOfYC++LaKrFxDIB8QLo2ewRdmA8cpC+J1lNjM54itgwuv1Yg47QV+vub6PTUNZATx57EB3mPfLRFKRFSw0xGgrhBrqKzPzPh5pa831QGD2NVNnmzBQBRHeIehJRoFO2KXNFCB0vY6FTW/fVCX6tW6As1BicQ0d7O4Xy+X4CWmQNSw1g+usAAAAASUVORK5CYII=">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex,noarchive,nofollow" />
+	<title>@{
+		if (string.IsNullOrEmpty(SystemConfiguration.Instance.GetValue("/Globalsettings/Settings/CommonInformation/SolutionTitle")))
+		{
+			<text>Dynamicweb Admin</text>
+	}
+	else
+	{
+			<text>@SystemConfiguration.Instance.GetValue("/Globalsettings/Settings/CommonInformation/SolutionTitle")</text>
+	}
+        <text> (@Dynamicweb.Content.Management.Installation.DynamicwebAssemblyVersionInformation())</text>
+}</title>
+	
+	<!-- CSS -->
+	<style type="text/css">
+		/*To avoid flicker in the left menu*/
+		#static-sidebar .static-menu > li > a {
+			padding: 9px 0 0 0;
+			display: block;
+			color: #4c4c4c;
+			font-weight: 500;
+			position: relative;
+		}
+
+		#searchInputIcon {
+			margin-top: 13px;
+			cursor: pointer;
+		}
+
+		#searchForm{
+			display:block;
+			height:40px;
+		}
+		
+		#searchInput {
+			line-height: 40px;
+			height: 100%;
+			
+		}
+
+			#searchInput::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+				color: rgba(255, 255, 255, 0.4);
+			}
+
+			#searchInput:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+				color: rgba(255, 255, 255, 0.4);
+				opacity: 1;
+			}
+
+			#searchInput::-moz-placeholder { /* Mozilla Firefox 19+ */
+				color: rgba(255, 255, 255, 0.4);
+				opacity: 1;
+			}
+
+			#searchInput:-ms-input-placeholder { /* Internet Explorer 10-11 */
+				color: rgba(255, 255, 255, 0.4);
+			}
+
+			#searchInput::-ms-input-placeholder { /* Microsoft Edge */
+				color: rgba(255, 255, 255, 0.4);
+			}
+		#header {
+			background: #314755; /* fallback for old browsers */
+			background: -webkit-linear-gradient(342deg, #314755, #0085ca); /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(342deg, #314755, #0085ca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		}
+	</style>
+	<script>
+        window.name = "";
+		function search() {
+			var searchString = document.getElementById("searchInput").value
+			Action.Execute({ "Url": "/Admin/Content/Page/Page_Search.aspx?PageSearchIn_Page=page&PageSearchID=" + searchString, "TargetArea": "Content", "Ancestors": null, "Id": null, "Name": "OpenScreen", "Title": "Search", "Icon": "fa fa-user color-users", "IconColor": "" });
+			document.getElementById("searchInput").value = '';
+			//document.getElementById('searchForm').action = "/Admin/Content/Page/Page_Search.aspx";
+			//document.getElementById('searchForm').submit();
+		}
+	</script>
+	<link href="/Admin/Resources/css/fonts.min.css" rel="stylesheet">
+	<link href="/Admin/Resources/css/main.min.css" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <ul class="header-inner">
+            <li class="pull-left" style="background-color: #414141;width:70px;height:40px;padding:5px 20px;z-index:100">
+                <a href="/Default.aspx?AreaID=@areaid" target="_blank"><img src="/Admin/Resources/img/DWLogoStar.svg" width="30" height="30" title="Dynamicweb @VersionNumber()" /></a>
+            </li>
+            <li class="logo pull-left" id="dw-logo" style="background-color:rgba(65, 65, 65, 0.2);width: 350px;text-align:center;line-height:30px;">
+                <div style="background-color:rgba(65, 65, 65, 0.2);width:350px;height:40px;padding:0 10px;color:rgba(255, 255, 255, 0.6);" class="hidden-xs">
+                    <form id="searchForm" onsubmit="search(); return false;">
+                        <input type="text" id="searchInput" name="PageSearchID" placeholder="@Translate.Translate("Search content for text or page id")" style="background-color:transparent;height:100%;width:calc(100% - 20px);border:none;" />
+                        <i class="@KnownIconInfo.ClassNameFor(KnownIcon.Search, true) pull-right" id="searchInputIcon" onclick="search();"></i>
+                    </form>
+                </div>
+                <div class="hidden-xs hidden">
+                    <a href="/Default.aspx?AreaID=@areaid" target="_blank">Dynamicweb @VersionNumber()</a>
+                </div>
+            </li>
+
+            <li class="logo pull-left hidden" id="header-burger">
+                <div>
+                    <a href="#"><i class="@KnownIconInfo.ClassNameFor(KnownIcon.Bars, true) profile-icon"></i></a>
+                </div>
+            </li>
+
+            <li class="hidden-xs pull-right">
+                <ul class="top-menu">
+
+                    <li class="dropdown top-user">
+                        <a data-toggle="dropdown" href="">
+
+                            <div class="pull-left m-r-10">
+                                @if (Dynamicweb.Security.UserManagement.User.GetCurrentBackendUser().Image != "")
+                                {
+                                    <img src="@Dynamicweb.Security.UserManagement.User.GetCurrentBackendUser().Image" alt="Profile image" width="32" height="32" class="" />
+                                }
+                                else
+                                {
+                                    <i class="@KnownIconInfo.ClassNameFor(KnownIcon.Person, true) profile-icon"></i>
+                                }
+                            </div>
+
+                            <div class="pull-right">
+                                <div>@Dynamicweb.Security.UserManagement.User.GetCurrentBackendUser().Name</div>
+                                @{ string UserType = "";
+                                    if (Dynamicweb.Security.UserManagement.User.GetCurrentBackendUser().IsAngel) { UserType = "Angel"; };
+                                    if (!Dynamicweb.Security.UserManagement.User.GetCurrentBackendUser().IsAngel)
+                                    { UserType = Dynamicweb.Security.UserManagement.User.GetCurrentBackendUser().Type.ToString(); };
+                                }
+                                <small>@UserType</small>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu dm-icon pull-right" id="profile-menu">
+                            @foreach (var action in Model.Actions)
+                            {
+                                if (Translate.Translate(action.Title).Equals(Translate.Translate("Translations")) && !Dynamicweb.Security.UserManagement.User.GetCurrentBackendUser().IsAngel)
+                                {
+                                    continue;
+                                }
+
+                                if (action.Name.Equals("separator", StringComparison.InvariantCultureIgnoreCase))
+                                {
+                                    <li class="divider"></li>
+                                }
+                                else
+                                {
+                                    <li>
+                                        <a href="#" onclick="Action.Execute(@Converter.SerializeCompact(action))" xclass="frame-link-trigger"><i class="@KnownIconInfo.ClassNameFor(action.Icon, true)"></i>@action.Title</a>
+                                    </li>
+                                }
+                            }
+                            @*
+                                <li>
+                                    <a href="#" class="columns-switch-trigger" data-layout="material"><i class="@KnownIconInfo.ClassNameFor(KnownIcon.ToggleOn, true)"></i> Two columns</a>
+                                </li>*@
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+
+        </ul>
+    </header>
+
+    <section id="main">
+        <aside id="static-sidebar">
+            <ul class="static-menu" id="static-menu">
+                @foreach (var area in Model.Areas)
+                {
+                    if ((area.Name != null && area.Name != "Settings" && area.Name != "Demo" && area.Name != "PIM" && area.Name != "Users") ||
+                        (area.Name == "Demo" && Dynamicweb.Security.UserManagement.User.GetCurrentBackendUser().IsAngel) ||
+                        (area.Name == "PIM" && Dynamicweb.Security.Authorization.HasAccess("eCom_PCM")) ||
+                        (area.Name == "Users" && (Dynamicweb.Security.Authorization.HasAccess("UserManagementBackend") ||
+                        Dynamicweb.Security.UserManagement.User.GetCurrentBackendUser().AdministratorInGroups.Count > 0)))
+                    {
+
+                        var iconClass = "md md-" + area.Image;
+                        if (area.Image.Contains("fa "))
+                        {
+                            iconClass = area.Image;
+                        }
+                        <li class="dropdown">
+                            <a href="#/@area.Name" class="btn btn-clean sidebar-btn area-@(area.Color) waves-effect waves-button" data-target="@area.Name"
+                               data-actions="@(area is IAreaContextMenu ? Converter.SerializeCompact(((IAreaContextMenu)area).Actions) : "")"><i class="@iconClass"></i><div class="static-menu-title">@area.Title</div></a>
+                        </li>
+                    }
+                }
+            </ul>
+            <div class="menu-footer">
+                <ul class="static-menu" id="settings-menu">
+                    @foreach (var area in Model.Areas)
+                    {
+                        if (area.Name != null && area.Name == "Settings")
+                        {
+                            <li class="dropdown" id="settings-li">
+                                <a href="#/@area.Name" class="btn btn-clean sidebar-btn area-@area.Color" data-target="@area.Name"
+                                   data-actions="@(area is IAreaContextMenu ? Converter.SerializeCompact(((IAreaContextMenu)area).Actions) : "")"><i class="@KnownIconInfo.ClassNameFor(KnownIcon.Cog, true)"></i><div class="static-menu-title">@area.Title</div></a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </aside>
+
+        <section class="a-container">
+            <div id="a-content-container">
+                @foreach (var area in Model.Areas)
+                {
+                    <iframe name="@area.Name" id="@(area.Name)-iframe" data-targetpage="/Admin/@(area.Name)-iframe" class="iframe-closed"></iframe>
+                }
+            </div>
+        </section>
+    </section>
+
+    @if (Dynamicweb.Security.UserManagement.User.GetCurrentBackendUser().IsAngel)
+    {
+        <footer style="position:absolute;right:20px;bottom:2px;padding:0 5px;display:inline;z-index:10001;background-color:rgb(186, 186, 186);font-size:small;text-wrap:none;">
+            @{var act = new Dynamicweb.Management.Actions.OpenScreenAction("/Admin/Content/Management/Pages/SystemSolutionDetails_cpl.aspx"); }
+            <a href="#" onclick="Action.Execute(@Converter.SerializeCompact(act))" style="color:rgba(255,255,255, 0.8);">@VersionNumber(), build date: @BuildDate()</a>
+        </footer>
+    }
+
+    <!-- For the global accesible uploader -->
+    <form action="/Admin/Filemanager/Upload/Store.aspx" id="systemMultiUploaderHidden" enctype="multipart/form-data" method="post" target="uploadframe" style="visibility:hidden">
+        <input type="hidden" name="TargetLocation" id="systemMultiUploaderHiddenTargetLocation" value="/Files/Billeder/" />
+        <input name="file" type="file" multiple id="systemMultiUploaderHiddenFileinput" />
+    </form>
+
+    <div id="uploadExistingFiles" style="display: none">@Translate.Translate("These files aready exists. Do you want to overwrite?")</div>
+    <div id="uploadConfirm" style="display: none">@Translate.Translate("Confirm overwrite")</div>
+    <div id="uploadProgression" style="display: none">@Translate.Translate("Uploading")</div>
+    <div id="uploadProgressionDone" style="display: none">@Translate.Translate("Done uploading")</div>
+    <div id="uploadError" style="display: none">@Translate.Translate("An error occurred during file upload!")</div>
+
+    <iframe name="uploadframe" style="visibility:hidden"></iframe>
+
+    <div id="downloadProgression" style="display: none">@Translate.Translate("Downloading")</div>
+    <div id="downloadProgressionDone" style="display: none">@Translate.Translate("Done downloading")</div>
+
+    <!-- Select the areas -->
+    <script type="text/javascript">
+		areas = [@Html.Raw(String.Join(", ", Model.Areas.Select(x => "'" + x.Name + "'")))];
+    </script>
+
+    <!-- Javascript Libraries -->
+    <script src="/Admin/Resources/js/jquery-2.1.1.min.js"></script>
+    <script src="/Admin/Resources/js/layout/bootstrap.min.js"></script>
+
+    <script src="/Admin/Resources/vendors/waves/waves.min.js"></script>
+
+    <script src="/Admin/Resources/js/layout/main-functions.js"></script>
+    <script src="/Admin/Resources/js/layout/upload.js"></script>
+    <script src="/Admin/Resources/js/layout/actions.js"></script>
+    <script src="/Admin/Resources/js/layout/notiFire.js"></script>
+    <script src="/Admin/Resources/js/layout/contextmenu.js"></script>
+
+    <iframe name="loginframe" style="display:none;" src="~/Admin/KeepAlive.aspx"></iframe>
+</body>
+</html>
+
+@functions{
+	public string BuildDate()
+	{
+		return string.Format("{0:ddd, dd MMM yyyy HH':'mm}", RetrieveLinkerTimestamp(Server.MapPath("/bin/dynamicweb.admin.dll")));
+	}
+
+	public string VersionNumber()
+	{
+		string version = string.Empty;
+		try
+		{
+			version = Dynamicweb.Content.Management.Installation.DynamicwebAssemblyVersionInformation();
+		}
+		catch
+		{
+			version = "NA";
+		}
+		return version;
+	}
+
+	public DateTime RetrieveLinkerTimestamp(string filePath)
+	{
+		const int PeHeaderOffset = 60;
+		const int LinkerTimestampOffset = 8;
+
+		byte[] b = new byte[2048];
+		Stream s = null;
+		try
+		{
+			s = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+			s.Read(b, 0, 2048);
+		}
+		finally
+		{
+			if ((s != null))
+				s.Close();
+		}
+
+		int i = BitConverter.ToInt32(b, PeHeaderOffset);
+
+		int SecondsSince1970 = BitConverter.ToInt32(b, i + LinkerTimestampOffset);
+		DateTime dt = new DateTime(1970, 1, 1, 0, 0, 0);
+		dt = dt.AddSeconds(SecondsSince1970);
+		dt = dt.AddHours(TimeZone.CurrentTimeZone.GetUtcOffset(dt).Hours);
+		return dt;
+	}
+}

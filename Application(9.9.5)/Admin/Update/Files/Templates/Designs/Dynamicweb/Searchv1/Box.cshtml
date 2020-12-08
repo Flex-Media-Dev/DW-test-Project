@@ -1,0 +1,7 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+<form action="@GetValue("Global:Pageview.Url.Raw")" method="get" name="SearchForm1" role="form">
+    <input type="hidden" name="ID" value="@GetValue("DwPageID")">
+    <input class="form-control" type="text" name="q" value="@GetValue("DwSearchPhrase")" placeholder="Search for" /><br />
+    <input class="btn btn-default" type="submit" value="Search" />
+</form>

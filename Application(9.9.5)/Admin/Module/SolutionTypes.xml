@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<cms>
+	<types>
+		<type id="cms">
+			<Name>Dynamicweb</Name>
+			<AvailableModules>
+				BasicForum,
+				RemoteHttp,
+				DM_Publishing,
+				EmailMarketing,
+				SearchExtended,
+				UserManagementFrontend,
+				Personalize,
+				Filepublish,
+				Form,
+				DM_Form,
+				Gallery,
+				DW_Integration_ImportExport,
+				DW_Integration_ImportExportExtended,
+				ImportExport_DW8,
+				DBIntegration,
+				ItemCreator,
+				ItemPublisher,
+				Area,
+				LanguageManagement,
+				Leads,
+				LoadBalancing,
+				NavIntegration,
+				ecom_NAVIntegration,
+				NewsV2,
+				OMC,
+				Seo,
+				Searchv1,
+				CartV2,
+				SitemapV2,
+				UnlimitedPages,
+				Update,
+				UserManagementBackend,
+				UserManagementBackendExtended,
+				VersionControl,
+				Workflow,
+				Maps,
+				50Pages,
+				SocialMediaPublishing,
+				Profiling,
+				BasicForms,
+				QueryPublisher
+			</AvailableModules>
+		</type>
+		<type id="ecom">
+			<Name>eCommerce</Name>
+			<AvailableModules>
+        eCom_Assortments, eCom_CustomerCenter, eCom_DataIntegrationERPBatch, eCom_economic, eCom_ImportExport, eCom_International, eCom_Center, eCom_PartsLists, eCom_PartsListsExtended, eCom_Payment, eCom_PowerPack, eCom_Pricing, eCom_PricingExtended, eCom_Catalog, eCom_Search, eCom_SearchExtended, eCom_Units, eCom_Related, eCom_SalesDiscount, eCom_SalesDiscountExtended, eCom_Cart, eCom_CartV2, eCom_Statistics, eCom_Variants, eCom_VariantsExtended, eCom_NAVIntegration, eCom_NAVIntegration_ChangePassword, eCom_AXIntegration, eCom_DataIntegrationERPLiveIntegration, eCom_MultiShopAdvanced,eCom_ContextOrderRenderer,eCom_IntegrationCustomerCenter,eCom_BackCatalog,eCom_ShowList, eCom_ContextVoucherRenderer, eCom_Vouchers, eCom_Quotes, eCom_DiscountMatrix, LoyaltyPoints, Recommendation, eCom_RecurringOrders, GiftCards, eCom_ContextProductRenderer, eCom_PCM, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </AvailableModules>
+		</type>
+	</types>
+	<solutions>
+		<solution id="cmsTrial" Type="cms" IsTrial="True">
+			<Name>Trial</Name>
+			<image>/Admin/Images/Icons/Module_trial_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_trial_small.png</largeImage>
+			<standardModules>
+				Area, Audit, Calendar, RemoteHttp, ContextSubscription, SearchFriendlyUrls, DM_Publishing, DM_Publishing_Extended, RegisterModule, Factbox, Faq, Filearchive, FilearchiveExtended, Filepublish, Gallery, ControlLoader, ImportExport_DW8, ItemPublisher, LanguagePack, LinkSearch, MediaDB, NewsV2, TaskManager, Password, PDA, Poll, eCards, Publish, Rotation, RSSFeed, SitemapV2, Statisticsv2, StatisticsExtended, Tagwall, UserManagementBackend, UserManagementBackendExtended, VersionControl, Workflow, Accessibility, Frontpage, UrlPath, Template, TemplateColumn
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+
+		<solution id="cmsPortal" Type="cms" >
+			<Name>Portal</Name>
+			<image>/Admin/Images/Icons/Module_Corporate_small.gif</image>
+			<largeImage>/Admin/Images/Icons/Module_Corporate.gif</largeImage>
+			<standardModules>
+				Area, Accessibility, Audit, SearchFriendlyUrls, UrlPath, eCards, Factbox, Filearchive, FilearchiveExtended, Frontpage, Metadata, TemplateColumn, OMC, Password, PDA, Personalize, Publish, ContentLinks, Rotation, RSSFeed, Statisticsv2, StatisticsExtended, Tagwall, Template, Update, UserManagementBackend, UserManagementBackendExtended
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmsBusiness" Type="cms">
+			<Name>Business</Name>
+			<image>/Admin/Images/Icons/Module_Business_small.gif</image>
+			<largeImage>/Admin/Images/Icons/Module_Business.gif</largeImage>
+			<standardModules>
+				Area, Accessibility, SearchFriendlyUrls, UrlPath, eCards, Factbox, Filearchive, FilearchiveExtended, Frontpage, Metadata, TemplateColumn, Password, Publish, ContentLinks, Rotation, RSSFeed, Statisticsv2, Tagwall, Template, Update
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmsLight" Type="cms" MaxPages="45">
+			<Name>Light</Name>
+			<image>/Admin/Images/Icons/Module_Light_small.gif</image>
+			<largeImage>/Admin/Images/Icons/Module_Light.gif</largeImage>
+			<standardModules>
+				Area, Accessibility, SearchFriendlyUrls, UrlPath, eCards, Factbox, Filearchive, FilearchiveExtended, Frontpage, Metadata, TemplateColumn, Password, Publish, ContentLinks, Rotation, RSSFeed, Statisticsv2, Tagwall, Template
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmsLightExpress" Type="cms" MaxPages="50" MaxItems="500">
+			<Name>Express</Name>
+			<image>/Admin/Images/Icons/Module_Express_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_Express.png</largeImage>
+			<standardModules>
+				Area, Update, eCards, Tagwall, TemplateColumn, Statisticsv2, RSSFeed, SearchFriendlyUrls, UrlPath, Template, Filearchive, Html, Frontpage, Password, Publish, Rotation, Factbox
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmsLightFree" Type="cms" MaxPages="20" MaxItems="500">
+			<Name>Free</Name>
+			<image>/Admin/Images/Icons/Module_Free_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_Free.png</largeImage>
+			<standardModules>
+				Area, Update, eCards, Tagwall, TemplateColumn, Statisticsv2, RSSFeed, SearchFriendlyUrls, UrlPath, Template, Filearchive, Html, Frontpage, Password, Publish, Rotation, Factbox
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmsLightFree2" Type="cms" MaxPages="25" MaxItems="500">
+			<Name>Free NP</Name>
+			<image>/Admin/Images/Icons/Module_Free_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_Free.png</largeImage>
+			<standardModules>
+				Area, Update, eCards, Tagwall, TemplateColumn, Statisticsv2, RSSFeed, SearchFriendlyUrls, UrlPath, Template, Filearchive, Html, Frontpage, Password, Publish, Rotation, Factbox
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmsLightExpress2013" Type="cms" MaxPages="50" MaxItems="500">
+			<Name>Express 2013</Name>
+			<image>/Admin/Images/Icons/Module_Express2013_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_Express2013.png</largeImage>
+			<standardModules>
+				Area, Calendar, DM_Publishing, DM_Publishing_Extended, Filearchive, Filepublish, MediaDB, Faq, Gallery, ImportExport_DW8, ItemPublisher, Poll, SitemapV2, UserManagementBackend, UserManagementBackendExtended
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmsLightFree2013" Type="cms" MaxPages="20" MaxItems="500">
+			<Name>Free 2013</Name>
+			<image>/Admin/Images/Icons/Module_Free2013_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_Free2013.png</largeImage>
+			<standardModules>
+				Area, Calendar, DM_Publishing, DM_Publishing_Extended, Filearchive, Filepublish, MediaDB, Faq, Gallery, ImportExport_DW8, ItemPublisher, Poll, SitemapV2,  UserManagementBackend, UserManagementBackendExtended
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmdProfessional" Type="cms" MaxPages="1000">
+			<Name>Professional</Name>
+			<image>/Admin/Images/Icons/Module_Professional_Small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_Professional.png</largeImage>
+			<standardModules>
+				Area, Audit, Calendar, RemoteHttp, ContextSubscription, SearchFriendlyUrls, DM_Publishing, DM_Publishing_Extended, RegisterModule, Factbox, Faq, Filearchive, FilearchiveExtended, Filepublish, Gallery, ControlLoader, ImportExport_DW8, ItemPublisher, LanguagePack, LinkSearch, MediaDB, NewsV2, TaskManager, Password, PDA, Poll, eCards, Publish, Rotation, RSSFeed, SitemapV2, Statisticsv2, StatisticsExtended, Tagwall, UserManagementBackend, UserManagementBackendExtended, VersionControl, Workflow, Accessibility, Frontpage, UrlPath, Template, TemplateColumn
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmdEnterprise" Type="cms">
+			<Name>Enterprise</Name>
+			<image>/Admin/Images/Icons/Module_Enterprise_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_Enterprise.png</largeImage>
+			<standardModules>
+				Area, Audit, Calendar, RemoteHttp, ContextSubscription, SearchFriendlyUrls, DM_Publishing, DM_Publishing_Extended, RegisterModule, Factbox, Faq, Filearchive, FilearchiveExtended, Filepublish, Gallery, ControlLoader, ImportExport_DW8, ItemPublisher, LanguagePack, LinkSearch, MediaDB, NewsV2, TaskManager, Password, PDA, Poll, eCards, Publish, Rotation, RSSFeed, SitemapV2, Statisticsv2, StatisticsExtended, Tagwall, UserManagementBackend, UserManagementBackendExtended, VersionControl, Workflow, Accessibility, DatabaseReplacer, Frontpage, LanguageManagement, Personalize, Seo, SeoExpress, Stylesheet, Survey, Template, TemplateColumn, BasicForms
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="ecomExtended" Type="ecom">
+			<Name>Extended</Name>
+			<image>/Admin/Images/Icons/Module_eCom_Extended_small.gif</image>
+			<largeImage>/Admin/Images/Icons/Module_eCom_Extended.gif</largeImage>
+			<standardModules>
+        eCom_Assortments, eCom_Pricing, eCom_Catalog, eCom_Search, eCom_Units, eCom_Related, eCom_Statistics, eCom_Variants, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="ecomStandard" Type="ecom">
+			<Name>Standard</Name>
+			<image>/Admin/Images/Icons/Module_eCom_Standard_small.gif</image>
+			<largeImage>/Admin/Images/Icons/Module_eCom_Standard.gif</largeImage>
+			<standardModules>
+        eCom_Pricing, eCom_Catalog, eCom_Search, eCom_Units, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="ecomLight" Type="ecom">
+			<Name>Light</Name>
+			<image>/Admin/Images/Icons/Module_eCom_Light_small.gif</image>
+			<largeImage>/Admin/Images/Icons/Module_eCom_Light.gif</largeImage>
+			<standardModules>
+        eCom_Pricing, eCom_Catalog, eCom_Search, eCom_Units, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="eComBasic" Type="ecom">
+			<Name>Basic</Name>
+			<image>/Admin/Images/Icons/Module_eCom_Basic_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_eCom_Basic.png</largeImage>
+			<standardModules>
+        eCom_Assortments, eCom_Payment, eCom_PowerPack, eCom_Pricing, eCom_PricingExtended, eCom_Catalog, eCom_Search, eCom_Units, eCom_Related, eCom_SalesDiscount, eCom_SalesDiscountExtended, eCom_CartV2, eCom_Statistics, eCom_Variants, eCom_VariantsExtended, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="eComProfessional" Type="ecom">
+			<Name>Professional</Name>
+			<image>/Admin/Images/Icons/Module_eCom_Professional_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_eCom_Professional.png</largeImage>
+			<standardModules>
+        eCom_Assortments, eCom_CustomerCenter, eCom_PartsLists, eCom_PartsListsExtended, eCom_Payment, eCom_PowerPack, eCom_Pricing, eCom_PricingExtended, eCom_Catalog, eCom_Search, eCom_SearchExtended, eCom_Units, eCom_Related, eCom_SalesDiscount, eCom_SalesDiscountExtended, eCom_CartV2, eCom_Statistics, eCom_Variants, eCom_VariantsExtended, eCom_ContextVoucherRenderer, eCom_ShowList, eCom_Vouchers, LoyaltyPoints, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="eComEnterprise" Type="ecom">
+			<Name>Enterprise</Name>
+			<image>/Admin/Images/Icons/Module_eCom_Enterprise_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_eCom_Enterprise.png</largeImage>
+			<standardModules>
+        eCom_Assortments, eCom_CustomerCenter, eCom_International, eCom_Center, eCom_PartsLists, eCom_PartsListsExtended, eCom_Payment, eCom_PowerPack, eCom_Pricing, eCom_PricingExtended, eCom_Catalog, eCom_Search, eCom_SearchExtended, eCom_Units, eCom_Related, eCom_SalesDiscount, eCom_SalesDiscountExtended, eCom_CartV2, eCom_Statistics, eCom_Variants, eCom_VariantsExtended, eCom_ShowList, eCom_Vouchers, LoyaltyPoints, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmsFree2014" Type="cms" MaxPages="25" MaxWebsites="1" MaxSubscribers="250">
+			<Name>Free 2014</Name>
+			<image>/Admin/Images/Icons/Module_Free_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_Free.png</largeImage>
+			<standardModules>
+				Area, DM_Publishing, DM_Publishing_Extended, Faq, BasicForum, MediaDB, Survey, Calendar, DBIntegration, NewsV2, eCards, TemplateColumn, RSSFeed, Template, Update, UserManagementBackend, UserManagementBackendExtended, RemoteHttp, ImportExport_DW8, EmailMarketing, Gallery, ItemPublisher, LanguageManagement, Maps, Searchv1, SeoExpress, SitemapV2, VersionControl, Workflow, ItemCreator, DW_Integration_ImportExport, Filearchive, Filepublish, Poll
+			</standardModules>
+			<addOnModules>FormExtended, DM_Form, DM_Form_Extended, UserManagementFrontend, Leads, Ipaper, IpaperExtended, LinkSearch, NewsLetterV3, QueryPublisher, BasicForms</addOnModules>
+		</solution>
+		<solution id="cmsExpress2014" Type="cms" MaxPages="100" MaxWebsites="1" MaxSubscribers="250">
+			<Name>Express 2014</Name>
+			<image>/Admin/Images/Icons/Module_Express_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_Express.png</largeImage>
+			<standardModules>
+				Area, DM_Publishing, DM_Publishing_Extended, Faq, BasicForum, MediaDB, Survey, Calendar,DBIntegration, NewsV2, eCards, TemplateColumn, RSSFeed, Template, Update, UserManagementBackend, UserManagementBackendExtended, RemoteHttp, ImportExport_DW8, EmailMarketing, Gallery, ItemPublisher, LanguageManagement, Maps, Searchv1, SeoExpress, SitemapV2, VersionControl, Workflow, ItemCreator, DW_Integration_ImportExport, Filearchive, Filepublish, Poll
+			</standardModules>
+			<addOnModules>Form, FormExtended, DM_Form, DM_Form_Extended, UserManagementFrontend, Leads, Ipaper, IpaperExtended, LinkSearch, NewsLetterV3, QueryPublisher, BasicForms</addOnModules>
+		</solution>
+		<solution id="cmsStandard2014" Type="cms" MaxPages="1000" MaxWebsites="1" MaxSubscribers="250">
+			<Name>Standard 2014</Name>
+			<image>/Admin/Images/Icons/Module_eCom_Standard_small.gif</image>
+			<largeImage>/Admin/Images/Icons/Module_eCom_Standard.gif</largeImage>
+			<standardModules>
+				Area, DM_Publishing, DM_Publishing_Extended, Faq, BasicForum, MediaDB, Survey, Calendar,DBIntegration, NewsV2, eCards, TemplateColumn, RSSFeed, Template, Update, UserManagementBackend, UserManagementBackendExtended, RemoteHttp, ImportExport_DW8, EmailMarketing, Gallery, ItemPublisher, LanguageManagement, Maps, Searchv1, SeoExpress, SitemapV2, VersionControl, Workflow, ItemCreator, DW_Integration_ImportExport, Filearchive, Filepublish, Poll
+			</standardModules>
+			<addOnModules>Form, FormExtended, DM_Form, DM_Form_Extended, UserManagementFrontend, Leads, Ipaper, IpaperExtended, LinkSearch, NewsLetterV3, QueryPublisher, BasicForms</addOnModules>
+		</solution>
+		
+		<solution id="cmsProfessional2014" Type="cms" MaxWebsites="10" MaxSubscribers="500">
+			<Name>Professional 2014</Name>
+			<image>/Admin/Images/Icons/Module_Professional_Small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_Professional.png</largeImage>
+			<standardModules>
+				DM_Publishing, DM_Publishing_Extended, Faq, BasicForum, MediaDB, Survey, Calendar, DbPub, Form, FormExtended, DM_Form, DM_Form_Extended, DBIntegration, NewsV2, eCards, TemplateColumn, OMC, RSSFeed, Template, Update, UserManagementBackend, UserManagementBackendExtended, RemoteHttp, ImportExport_DW8, EmailMarketing, UserManagementFrontend, Gallery, ItemPublisher, LanguageManagement, Leads, LinkSearch, Maps, Poll, Searchv1, Seo, SeoExpress, SitemapV2, SocialMediaPublishing, VersionControl, Area, Workflow, ItemCreator, DW_Integration_ImportExport, Filearchive, Filepublish, BasicForms, Sms
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmsPremium2014" Type="cms" MaxWebsites="25" MaxSubscribers="500">
+			<Name>Premium 2014</Name>
+			<image>/Admin/Images/Icons/Module_Business_Small.gif</image>
+			<largeImage>/Admin/Images/Icons/Module_Business.gif</largeImage>
+			<standardModules>
+				DM_Publishing, DM_Publishing_Extended, Faq, BasicForum, MediaDB, Survey, Calendar, DbPub, Form, FormExtended, DM_Form, DM_Form_Extended, DBIntegration, NewsV2, eCards, TemplateColumn, OMC, RSSFeed, Template, Update, UserManagementBackend, UserManagementBackendExtended, RemoteHttp, ImportExport_DW8, EmailMarketing, UserManagementFrontend, Gallery, ItemPublisher, LanguageManagement, Leads, LinkSearch, Maps, Poll, Searchv1, Seo, SeoExpress, SitemapV2, SocialMediaPublishing, VersionControl, Area, Workflow, ItemCreator, DW_Integration_ImportExport, Filearchive, Filepublish, BasicForms, Sms
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmsCorporate2014" Type="cms" MaxWebsites="50" MaxSubscribers="500">
+			<Name>Corporate 2014</Name>
+			<image>/Admin/Images/Icons/Module_Corporate_small.gif</image>
+			<largeImage>/Admin/Images/Icons/Module_Corporate.gif</largeImage>
+			<standardModules>
+				DM_Publishing, DM_Publishing_Extended, Faq, BasicForum, MediaDB, Survey, Calendar, DbPub, Form, FormExtended, DM_Form, DM_Form_Extended, DBIntegration, NewsV2, eCards, TemplateColumn, OMC, RSSFeed, Template, Update, UserManagementBackend, UserManagementBackendExtended, RemoteHttp, ImportExport_DW8, EmailMarketing, UserManagementFrontend, Gallery, ItemPublisher, LanguageManagement, Leads, LinkSearch, Maps, Poll, Searchv1, Seo, SeoExpress, SitemapV2, SocialMediaPublishing, VersionControl, Area, Workflow, ItemCreator, DW_Integration_ImportExport, Filearchive, Filepublish, BasicForms, Sms
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmsEnterprise2014" Type="cms" MaxSubscribers="500">
+			<Name>Enterprise 2014</Name>
+			<image>/Admin/Images/Icons/Module_Enterprise_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_Enterprise.png</largeImage>
+			<standardModules>
+				DM_Publishing, DM_Publishing_Extended, Faq, BasicForum, MediaDB, Survey, Calendar, DbPub, Form, FormExtended, DM_Form, DM_Form_Extended, DBIntegration, NewsV2, eCards, TemplateColumn, OMC, RSSFeed, Template, Update, UserManagementBackend, UserManagementBackendExtended, RemoteHttp, ImportExport_DW8, EmailMarketing, UserManagementFrontend, Gallery, ItemPublisher, LanguageManagement, Leads, LinkSearch, Maps, Poll, Searchv1, Seo, SeoExpress, SitemapV2, SocialMediaPublishing, VersionControl, Area, Workflow, ItemCreator, DW_Integration_ImportExport, Filearchive, Profiling, Filepublish, BasicForms, Sms
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+
+		<solution id="cmsMarketing2017" Type="cms" MaxWebsites="5" MaxSubscribers="500">
+			<Name>Marketing 2017</Name>
+			<image>/Admin/Images/Icons/Module_Professional_Small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_Professional.png</largeImage>
+			<standardModules>
+				DM_Publishing, DM_Publishing_Extended, BasicForum, Calendar, DM_Form, DBIntegration, NewsV2, OMC, Update, UserManagementBackend, UserManagementBackendExtended, RemoteHttp, ImportExport_DW8, EmailMarketing, UserManagementFrontend, Gallery, ItemPublisher, LanguageManagement, Leads, LinkSearch, Maps, Poll, Searchv1, SitemapV2, SocialMediaPublishing, VersionControl, Area, Workflow, ItemCreator, DW_Integration_ImportExport, Filearchive, Filepublish, BasicForms, Sms
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmsProfessional2017" Type="cms" MaxWebsites="5" MaxSubscribers="500">
+			<Name>Professional 2017</Name>
+			<image>/Admin/Images/Icons/Module_Professional_Small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_Professional.png</largeImage>
+			<standardModules>
+				DM_Publishing, DM_Publishing_Extended, BasicForum, Calendar, DM_Form, DBIntegration, NewsV2, OMC, Update, UserManagementBackend, UserManagementBackendExtended, RemoteHttp, ImportExport_DW8, EmailMarketing, UserManagementFrontend, Gallery, ItemPublisher, LanguageManagement, Leads, LinkSearch, Maps, Poll, Searchv1, SitemapV2, SocialMediaPublishing, VersionControl, Area, Workflow, ItemCreator, DW_Integration_ImportExport, Filearchive, Filepublish, BasicForms, Sms
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmsBusiness2017" Type="cms" MaxWebsites="10" MaxSubscribers="500">
+			<Name>Business 2017</Name>
+			<image>/Admin/Images/Icons/Module_Corporate_small.gif</image>
+			<largeImage>/Admin/Images/Icons/Module_Corporate.gif</largeImage>
+			<standardModules>
+				DM_Publishing, DM_Publishing_Extended, BasicForum, Calendar, DM_Form, DBIntegration, NewsV2, OMC, Update, UserManagementBackend, UserManagementBackendExtended, RemoteHttp, ImportExport_DW8, EmailMarketing, UserManagementFrontend, Gallery, ItemPublisher, LanguageManagement, Leads, LinkSearch, Maps, Poll, Searchv1, SitemapV2, SocialMediaPublishing, VersionControl, Area, Workflow, ItemCreator, DW_Integration_ImportExport, Filearchive, Filepublish, BasicForms, Sms
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmsPremium2017" Type="cms" MaxWebsites="25" MaxSubscribers="500">
+			<Name>Premium 2017</Name>
+			<image>/Admin/Images/Icons/Module_Business_Small.gif</image>
+			<largeImage>/Admin/Images/Icons/Module_Business.gif</largeImage>
+			<standardModules>
+				DM_Publishing, DM_Publishing_Extended, BasicForum, Calendar, DM_Form, DBIntegration, NewsV2, OMC, Update, UserManagementBackend, UserManagementBackendExtended, RemoteHttp, ImportExport_DW8, EmailMarketing, UserManagementFrontend, Gallery, ItemPublisher, LanguageManagement, Leads, LinkSearch, Maps, Poll, Searchv1, SitemapV2, SocialMediaPublishing, VersionControl, Area, Workflow, ItemCreator, DW_Integration_ImportExport, Filearchive, Filepublish, BasicForms, Sms
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="cmsEnterprise2017" Type="cms" MaxSubscribers="500">
+			<Name>Enterprise 2017</Name>
+			<image>/Admin/Images/Icons/Module_Enterprise_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_Enterprise.png</largeImage>
+			<standardModules>
+				DM_Publishing, DM_Publishing_Extended, BasicForum, Calendar, DM_Form, DBIntegration, NewsV2, OMC, Update, UserManagementBackend, UserManagementBackendExtended, RemoteHttp, ImportExport_DW8, EmailMarketing, UserManagementFrontend, Gallery, ItemPublisher, LanguageManagement, Leads, LinkSearch, Maps, Poll, Searchv1, SitemapV2, SocialMediaPublishing, VersionControl, Area, Workflow, ItemCreator, DW_Integration_ImportExport, Filearchive, Filepublish, BasicForms, Sms
+			</standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+
+		<solution id="ecomProfessional2014" Type="ecom" MaxShops="1" MaxProducts="1000" MaxSubscribers="500">
+			<Name>Professional 2014</Name>
+			<image>/Admin/Images/Icons/Module_eCom_Professional_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_eCom_Professional.png</largeImage>
+			<standardModules>
+        eCom_Assortments, eCom_Pricing, eCom_Catalog, eCom_Search, eCom_Units, eCom_Related, eCom_Statistics, eCom_Variants, eCom_MultiShopAdvanced, eCom_PartsLists, eCom_PartsListsExtended, eCom_Payment, eCom_PowerPack, eCom_PricingExtended, eCom_SearchExtended, eCom_SalesDiscount, eCom_SalesDiscountExtended, eCom_CartV2, eCom_VariantsExtended, eCom_CustomerCenter,eCom_ContextOrderRenderer, eCom_ContextVoucherRenderer, eCom_BackCatalog, eCom_ShowList, eCom_International, eCom_Vouchers,eCom_Quotes, LoyaltyPoints, eCom_DiscountMatrix, GiftCards, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="ecomProfessional2017" Type="ecom" MaxShops="1" MaxProducts="2000" MaxSubscribers="500">
+			<Name>Professional 2017</Name>
+			<image>/Admin/Images/Icons/Module_eCom_Professional_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_eCom_Professional.png</largeImage>
+			<standardModules>
+        eCom_Assortments, eCom_Pricing, eCom_Catalog, eCom_Search, eCom_Units, eCom_Related, eCom_Statistics, eCom_Variants, eCom_MultiShopAdvanced, eCom_PartsLists, eCom_PartsListsExtended, eCom_Payment, eCom_PowerPack, eCom_PricingExtended, eCom_SearchExtended, eCom_SalesDiscount, eCom_SalesDiscountExtended, eCom_CartV2, eCom_VariantsExtended, eCom_CustomerCenter,eCom_ContextOrderRenderer, eCom_ContextVoucherRenderer, eCom_BackCatalog, eCom_ShowList, eCom_International, eCom_Vouchers,eCom_Quotes, LoyaltyPoints, eCom_DiscountMatrix, GiftCards, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="ecomBusiness2017" Type="ecom" MaxShops="1" MaxProducts="10000" MaxSubscribers="500">
+			<Name>Business 2017</Name>
+			<image>/Admin/Images/Icons/Module_eCom_Professional_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_eCom_Professional.png</largeImage>
+			<standardModules>
+        eCom_Assortments, eCom_Pricing, eCom_Catalog, eCom_Search, eCom_Units, eCom_Related, eCom_Statistics, eCom_Variants, eCom_MultiShopAdvanced, eCom_PartsLists, eCom_PartsListsExtended, eCom_Payment, eCom_PowerPack, eCom_PricingExtended, eCom_SearchExtended, eCom_SalesDiscount, eCom_SalesDiscountExtended, eCom_CartV2, eCom_VariantsExtended, eCom_CustomerCenter,eCom_ContextOrderRenderer, eCom_ContextVoucherRenderer, eCom_BackCatalog, eCom_ShowList, eCom_International, eCom_Vouchers,eCom_Quotes, LoyaltyPoints, eCom_DiscountMatrix, GiftCards, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="ecomPremium2014" Type="ecom" MaxShops="1" MaxProducts="25000" MaxSubscribers="500">
+			<Name>Premium 2014</Name>
+			<image>/Admin/Images/Icons/Module_Business_Small.gif</image>
+			<largeImage>/Admin/Images/Icons/Module_Business.gif</largeImage>
+			<standardModules>
+        eCom_Assortments, eCom_Pricing, eCom_Catalog, eCom_Search, eCom_Units, eCom_Related, eCom_Statistics, eCom_Variants, eCom_MultiShopAdvanced, eCom_PartsLists, eCom_PartsListsExtended, eCom_Payment, eCom_PowerPack, eCom_PricingExtended, eCom_SearchExtended, eCom_SalesDiscount, eCom_SalesDiscountExtended, eCom_CartV2, eCom_VariantsExtended, eCom_CustomerCenter,eCom_ContextOrderRenderer, eCom_ContextVoucherRenderer, eCom_BackCatalog, eCom_ShowList, eCom_International, eCom_Vouchers,eCom_Quotes, LoyaltyPoints, eCom_DiscountMatrix, GiftCards, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="ecomPremium2017" Type="ecom" MaxShops="1" MaxProducts="50000" MaxSubscribers="500">
+			<Name>Premium 2017</Name>
+			<image>/Admin/Images/Icons/Module_Business_Small.gif</image>
+			<largeImage>/Admin/Images/Icons/Module_Business.gif</largeImage>
+			<standardModules>
+        eCom_Assortments, eCom_Pricing, eCom_Catalog, eCom_Search, eCom_Units, eCom_Related, eCom_Statistics, eCom_Variants, eCom_MultiShopAdvanced, eCom_PartsLists, eCom_PartsListsExtended, eCom_Payment, eCom_PowerPack, eCom_PricingExtended, eCom_SearchExtended, eCom_SalesDiscount, eCom_SalesDiscountExtended, eCom_CartV2, eCom_VariantsExtended, eCom_CustomerCenter,eCom_ContextOrderRenderer, eCom_ContextVoucherRenderer, eCom_BackCatalog, eCom_ShowList, eCom_International, eCom_Vouchers,eCom_Quotes, LoyaltyPoints, eCom_DiscountMatrix, GiftCards, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="ecomCorporate2014" Type="ecom" MaxShops="1" MaxProducts="100000" MaxSubscribers="500">
+			<Name>Corporate 2014</Name>
+			<image>/Admin/Images/Icons/Module_Corporate_small.gif</image>
+			<largeImage>/Admin/Images/Icons/Module_Corporate.gif</largeImage>
+			<standardModules>
+        eCom_Assortments, eCom_Pricing, eCom_Catalog, eCom_Search, eCom_Units, eCom_Related, eCom_Statistics, eCom_Variants, eCom_MultiShopAdvanced, eCom_PartsLists, eCom_PartsListsExtended, eCom_Payment, eCom_PowerPack, eCom_PricingExtended, eCom_SearchExtended, eCom_SalesDiscount, eCom_SalesDiscountExtended, eCom_CartV2, eCom_VariantsExtended, eCom_CustomerCenter,eCom_ContextOrderRenderer, eCom_ContextVoucherRenderer, eCom_BackCatalog, eCom_ShowList, eCom_International, eCom_Vouchers,eCom_Quotes, LoyaltyPoints, eCom_DiscountMatrix, GiftCards, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="ecomEnterprise2014" Type="ecom" MaxSubscribers="500">
+			<Name>Enterprise 2014</Name>
+			<image>/Admin/Images/Icons/Module_eCom_Enterprise_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_eCom_Enterprise.png</largeImage>
+			<standardModules>
+        eCom_Assortments, eCom_Pricing, eCom_Catalog, eCom_Search, eCom_Units, eCom_Related, eCom_Statistics, eCom_Variants, eCom_MultiShopAdvanced, eCom_PartsLists, eCom_PartsListsExtended, eCom_Payment, eCom_PowerPack, eCom_PricingExtended, eCom_SearchExtended, eCom_SalesDiscount, eCom_SalesDiscountExtended, eCom_CartV2, eCom_VariantsExtended, eCom_CustomerCenter,eCom_ContextOrderRenderer,eCom_BackCatalog, eCom_ContextVoucherRenderer, eCom_ShowList, eCom_International, eCom_Vouchers,eCom_Quotes, LoyaltyPoints, eCom_DiscountMatrix, GiftCards, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="ecomEnterprise2017" Type="ecom" MaxSubscribers="500">
+			<Name>Enterprise 2017</Name>
+			<image>/Admin/Images/Icons/Module_eCom_Enterprise_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_eCom_Enterprise.png</largeImage>
+			<standardModules>
+        eCom_Assortments, eCom_Pricing, eCom_Catalog, eCom_Search, eCom_Units, eCom_Related, eCom_Statistics, eCom_Variants, eCom_MultiShopAdvanced, eCom_PartsLists, eCom_PartsListsExtended, eCom_Payment, eCom_PowerPack, eCom_PricingExtended, eCom_SearchExtended, eCom_SalesDiscount, eCom_SalesDiscountExtended, eCom_CartV2, eCom_VariantsExtended, eCom_CustomerCenter,eCom_ContextOrderRenderer,eCom_BackCatalog, eCom_ContextVoucherRenderer, eCom_ShowList, eCom_International, eCom_Vouchers,eCom_Quotes, LoyaltyPoints, eCom_DiscountMatrix, GiftCards, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="ecomBasic250" Type="ecom" MaxShops="1" MaxProducts="250">
+			<Name>Basic 250</Name>
+			<image>/Admin/Images/Icons/Module_eCom_Basic_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_eCom_Basic.png</largeImage>
+			<standardModules>
+        eCom_Pricing, eCom_Catalog, eCom_Search, eCom_Units, eCom_Related, eCom_Statistics, eCom_Variants, eCom_PartsLists, eCom_PartsListsExtended, eCom_Payment, eCom_PowerPack, eCom_PricingExtended, eCom_SearchExtended, eCom_SalesDiscount, eCom_SalesDiscountExtended, eCom_CartV2, eCom_VariantsExtended, eCom_CustomerCenter, eCom_ContextVoucherRenderer, eCom_ShowList, eCom_Vouchers, eCom_DiscountMatrix, GiftCards, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="ecomBasic500" Type="ecom" MaxShops="1" MaxProducts="500">
+			<Name>Basic 500</Name>
+			<image>/Admin/Images/Icons/Module_eCom_Basic_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_eCom_Basic.png</largeImage>
+			<standardModules>
+        eCom_Pricing, eCom_Catalog, eCom_Search, eCom_Units, eCom_Related, eCom_Statistics, eCom_Variants, eCom_PartsLists, eCom_PartsListsExtended, eCom_Payment, eCom_PowerPack, eCom_PricingExtended, eCom_SearchExtended, eCom_SalesDiscount, eCom_SalesDiscountExtended, eCom_CartV2, eCom_VariantsExtended, eCom_CustomerCenter, eCom_ContextVoucherRenderer, eCom_ShowList, eCom_Vouchers, eCom_DiscountMatrix, GiftCards, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+		<solution id="ecomBasic1000" Type="ecom" MaxShops="1" MaxProducts="1000">
+			<Name>Basic 1000</Name>
+			<image>/Admin/Images/Icons/Module_eCom_Basic_small.png</image>
+			<largeImage>/Admin/Images/Icons/Module_eCom_Basic.png</largeImage>
+			<standardModules>
+        eCom_Pricing, eCom_Catalog, eCom_Search, eCom_Units, eCom_Related, eCom_Statistics, eCom_Variants, eCom_PartsLists, eCom_PartsListsExtended, eCom_Payment, eCom_PowerPack, eCom_PricingExtended, eCom_SearchExtended, eCom_SalesDiscount, eCom_SalesDiscountExtended, eCom_CartV2, eCom_VariantsExtended, eCom_CustomerCenter, eCom_ContextVoucherRenderer, eCom_ShowList, eCom_Vouchers, eCom_DiscountMatrix, GiftCards, eCom_ProductCatalog, eComCustomerExperienceCenter
+      </standardModules>
+			<addOnModules>all</addOnModules>
+		</solution>
+	</solutions>
+</cms>

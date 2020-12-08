@@ -1,0 +1,2437 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Data.ColumnInfo">
+            <summary>
+            This is a lightweight version of the ADO.NET DataRow, with only the minimal needed information required to do alter table.
+            <remarks>Datarows are used in the schematable of a datatable, to define the columns of the datatable</remarks>
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Data.ColumnInfo.ColumnName">
+            <summary>
+            Gets or sets the name of the column.
+            </summary>
+            <value>
+            The name of the column.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Data.ColumnInfo.DataType">
+            <summary>
+            Gets or sets the type of the data.
+            </summary>
+            <value>
+            The type of the data.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Data.ColumnInfo.AllowDBNull">
+            <summary>
+            Gets or sets a value indicating whether [allow database null].
+            </summary>
+            <value>
+              <c>true</c> if [allow database null]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Data.ColumnInfo.ColumnSize">
+            <summary>
+            Gets or sets the size of the column.
+            </summary>
+            <value>
+            The size of the column.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Data.ColumnInfo.NumericPrecision">
+            <summary>
+            Gets or sets the numeric precision.
+            </summary>
+            <value>
+            The numeric precision.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Data.ColumnInfo.NumericScale">
+            <summary>
+            Gets or sets the numeric scale.
+            </summary>
+            <value>
+            The numeric scale.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Data.ColumnInfo.#ctor(System.String,System.String,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Data.ColumnInfo"/> class, with all possible information needed for a column update independant of datatype.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="columnType">Type of the column.</param>
+            <param name="allowNull">if set to <c>true</c> [allow null].</param>
+            <param name="size">The size.</param>
+            <param name="precision">The precision.</param>
+            <param name="scale">The scale.</param>
+        </member>
+        <member name="M:Dynamicweb.Data.ColumnInfo.GetAddColumnCommand">
+            <summary>
+            Gets the command for adding a column.
+            </summary>
+            <returns>command</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.ColumnInfo.GetDataTypeParameters">
+            <summary>
+            Finds out if the datatype needs zero, one or two parameters for an ADD/ALTER COLUMN command, then returns an adequite string of this parameter.
+            </summary>
+            <remarks>See http://www.w3schools.com/sql/sql_datatypes.asp </remarks>
+            <returns>parameter</returns>
+        </member>
+        <member name="T:Dynamicweb.Data.CommandBuilder">
+            <summary>
+            The class represents a CommandBuilder to ease creation of parameterized SQL-queries.
+            </summary>
+            <example>
+            <code title="Create a Connection" description="Create a Connection" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\CommandBuilderSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Data.CommandBuilder"/> class.
+            </summary>
+            <example>
+            <code title="Create a Connection" description="Create a Connection" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\CommandBuilderSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.Create(System.String,System.Object[])">
+            <summary>
+            Creates a new instance of the <see cref="T:Dynamicweb.Data.CommandBuilder" /> class with the specified expression.
+            </summary>
+            <param name="expression">The expression.</param>
+            <param name="values">The values.</param>
+            <returns><see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the specified expression.</returns>
+            <example>
+            <code title="Create a Connection" description="Create a Connection" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\CommandBuilderSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="P:Dynamicweb.Data.CommandBuilder.Expression">
+            <summary>
+            Gets the expression.
+            </summary>
+            <value>
+            The expression.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Data.CommandBuilder.ParameterInfos">
+            <summary>
+            Gets the parameter informations.
+            </summary>
+            <value>
+            The parameter informations.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Data.CommandBuilder.ParameterInfoIndexes">
+            <summary>
+            Gets the indexes of parameter information in ParameterInfos list by parameter key.
+            </summary>
+            <value>
+            The the indexes of parameter information.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Data.CommandBuilder.ExpressionBuilder">
+            <summary>
+            Gets or sets the expression builder.
+            </summary>
+            <value>
+            The expression builder.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Data.CommandBuilder.PlaceholderRegEx">
+            <summary>
+            Gets the placeholder regular expression.
+            </summary>
+            <value>
+            The placeholder regular expression.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.Add(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Adds the specified command builder to the instance.
+            </summary>
+            <param name="commandBuilder">The command builder.</param>
+            <example>
+            <code title="Create a Connection" description="Create a Connection" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\CommandBuilderSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.Add(System.String,System.Object[])">
+            <summary>
+            Adds the specified SQL expression with the specified values to the instance.
+            </summary>
+            <param name="sqlExpression">The expression.</param>
+            <param name="values">The values.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">parameters</exception>
+            <example>
+            <code title="Create a Connection" description="Create a Connection" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\CommandBuilderSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.PrepareExpression(System.String,System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            Prepares the expression.
+            </summary>
+            <param name="sqlExpression">The expression.</param>
+            <param name="values">The values.</param>
+            <returns>A <see cref="T:System.String" /> containing the prepared expression.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.DeriveParameterInfos(System.Text.RegularExpressions.Match,System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            Derives the parameter information.
+            </summary>
+            <param name="m">results from a regular expression match.</param>
+            <param name="values">The values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.DeriveParameterInfos(System.Object,System.Data.DbType)">
+            <summary>
+            Derives the parameter infos.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="dbType">The database data type.</param>
+            <returns>A <see cref="T:System.String" /> containing the placeholder for expression.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.DeriveParameterInfo(System.Object,System.Data.DbType,System.Boolean)">
+            <summary>
+            Derives the parameter information.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="dbType">The database data type.</param>
+            <param name="isArrayItem">if set to <c>true</c> the value is an array item.</param>
+            <returns>A <see cref="T:System.String" /> containing the placeholder for expression.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.DeriveParameterInfo(System.Object,System.Data.DbType)">
+            <summary>
+            Derives the parameter information.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="dbType">The database data type.</param>
+            <returns>A <see cref="T:System.String" /> containing the placeholder for expression.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.DeriveParameterInfo(Dynamicweb.Data.CommandBuilder.ParameterInfo)">
+            <summary>
+            Derives the parameter information.
+            </summary>
+            <param name="parameterInfo">The parameter information.</param>
+            <returns>A <see cref="T:System.String" /> containing the placeholder for expression.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.CreateParameterInfo(System.Object,System.Data.DbType,System.Boolean)">
+            <summary>
+            Creates the parameter information.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="dbType">The database data type.</param>
+            <param name="isArrayItem">if set to <c>true</c> the value is an array item.</param>
+            <returns>An <see cref="T:Dynamicweb.Data.CommandBuilder.ParameterInfo" /> instance.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.AddParameterInfo(Dynamicweb.Data.CommandBuilder.ParameterInfo)">
+            <summary>
+            Adds the parameter information to the CommandBuilder and return its index.
+            </summary>
+            <param name="parameterInfo">The parameter information.</param>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.CreateCommand">
+            <summary>
+            Creates a prepared command with command text and parameters.
+            </summary>
+            <returns>Returns an <see cref="T:System.Data.IDbCommand" /> instance.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.CreateCommand(System.Data.IDbConnection)">
+            <summary>
+            Creates a prepared command with command text and parameters using the specified connection.
+            </summary>
+            <param name="connection">The connection.</param>
+            <returns>Returns an <see cref="T:System.Data.IDbCommand" /> instance.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.CreateCommand(System.Data.IDbConnection,System.Data.IDbTransaction)">
+            <summary>
+            Creates a prepared command with command text and parameters using the specified connection and transaction.
+            </summary>
+            <param name="connection">The connection.</param>
+            <param name="transaction">The transaction.</param>
+            <returns>
+            An <see cref="T:System.Data.IDbCommand" /> instance.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">connection</exception>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.GetParameterFormat">
+            <summary>
+            Gets the parameter format.
+            </summary>
+            <returns>A <see cref="T:System.String" /> containing the parameter format compatible with the type of <see cref="T:System.Data.IDbCommand" />.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.GetParameterLimit">
+            <summary>
+            Gets the parameter limit.
+            </summary>
+            <returns>The limit of parameters allow for the type of <see cref="T:System.Data.IDbCommand" />.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.CompileCommand(System.Data.IDbCommand)">
+            <summary>
+            Compiles the command.
+            </summary>
+            <param name="command">The command.</param>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.ToSqlExpression(System.Object,System.Data.DbType)">
+            <summary>
+            Converts the specified value to a SQL expression using the specified <see cref="T:System.Data.DbType" />.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="dbType">The database data type.</param>
+            <returns>A <see cref="T:System.String" /> containing the SQL expression fragment that represents the specified value.</returns>
+            <exception cref="T:System.InvalidOperationException">
+            Binary data can only be sent to database using an IDataParameter or IDataAdapter.
+            or
+            The value cannot be converted to the specified DbType.
+            </exception>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.ToQueryText(System.Data.IDbCommand)">
+            <summary>
+            Converts the IDbCommand provider specific query text.
+            </summary>
+            <param name="command">The command.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.ToQueryText(System.Data.SqlClient.SqlCommand)">
+            <summary>
+            Converts the SqlCommand to query text.
+            </summary>
+            <param name="command">The command.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.ToQueryText(System.Data.IDataParameter,System.Int32)">
+            <summary>
+            Converts the IDataParameter to query text.
+            </summary>
+            <param name="dataParameter">The data parameter.</param>
+            <param name="parameterIndex">Index of the parameter.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.ToQueryText(System.Data.SqlClient.SqlParameter)">
+            <summary>
+            Converts the SqlParameter to query text.
+            </summary>
+            <param name="parameter">The parameter.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.ToQueryText(System.Data.SqlClient.SqlParameter,System.Int32)">
+            <summary>
+            Converts the SqlParameter to query text.
+            </summary>
+            <param name="parameter">The parameter.</param>
+            <param name="parameterIndex">Index of the parameter.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.GetQueryParameterName(System.Text.StringBuilder,System.Data.SqlClient.SqlParameter)">
+            <summary>
+            Adds the parameter name to output.
+            </summary>
+            <param name="output">The output.</param>
+            <param name="parameter">The parameter.</param>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.GetQueryParameterValue(System.Text.StringBuilder,System.Data.SqlClient.SqlParameter)">
+            <summary>
+            Adds the parameter value to output.
+            </summary>
+            <param name="output">The output.</param>
+            <param name="parameter">The parameter.</param>
+        </member>
+        <member name="T:Dynamicweb.Data.CommandBuilder.ParameterInfo">
+            <summary>
+            Represents the parameter information used to create <see cref="T:System.Data.IDbCommand" /> instances.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.ParameterInfo.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Data.CommandBuilder.ParameterInfo"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.ParameterInfo.Create(System.Object,System.Data.DbType,System.Boolean)">
+            <summary>
+            A <see cref="T:Dynamicweb.Data.CommandBuilder.ParameterInfo" /> from the specified informations.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="dbType">The database data type.</param>
+            <param name="isArrayItem">if set to <c>true</c> the value is an array item.</param>
+            <returns>A <see cref="T:Dynamicweb.Data.CommandBuilder.ParameterInfo" /> that represents the specified informations.</returns>
+        </member>
+        <member name="T:Dynamicweb.Data.CommandBuilder.DbTypeMapper">
+            <summary>
+            Represents a <see cref="T:Dynamicweb.Data.CommandBuilder.DbTypeMapper" /> used to translate <see cref="T:System.Type" /> to <see cref="T:System.Data.DbType" />.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.DbTypeMapper.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Dynamicweb.Data.CommandBuilder.DbTypeMapper"/> class from being created.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.DbTypeMapper.HasDbType(System.Type)">
+            <summary>
+            Determines whether the specified type is mapped to a database data type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>If the type is mapped <c>true</c>;otherwise <c>false</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.CommandBuilder.DbTypeMapper.GetDbType(System.Type)">
+            <summary>
+            Gets the database data type mapped to the specified type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The mapped the database data type;otherwise <see cref="F:System.Data.DbType.Object" />.</returns>
+        </member>
+        <member name="T:Dynamicweb.Data.Database">
+            <summary>This class contains functions to handle database connection and interaction.
+             <para>
+               <list type="table">
+                 <listheader>
+                   <term>Database</term>
+                   <description>Function to call</description>
+                 </listheader>
+                 <item>
+                   <term>Create a database connection</term>
+                   <description><see cref="M:Dynamicweb.Data.Database.CreateConnection"></see></description>
+                 </item>
+                 <item>
+                   <term>Create a DataReader</term>
+                   <description><see cref="M:Dynamicweb.Data.Database.CreateDataReader(Dynamicweb.Data.CommandBuilder)"></see></description>
+                 </item>
+                 <item>
+                   <term>Create a DataTable</term>
+                   <description><see cref="M:Dynamicweb.Data.Database.CreateDataTable(System.String)"></see></description>
+                 </item>
+                 <item>
+                   <term>Create a DataSet</term>
+                   <description><see cref="M:Dynamicweb.Data.Database.CreateDataSet(System.String)"></see></description>
+                 </item>
+                 <item>
+                   <term>Execute a non-query</term>
+                   <description><see cref="M:Dynamicweb.Data.Database.ExecuteNonQuery(System.String)"></see></description>
+                 </item>
+                 <item>
+                   <term>Create a CommandBuilder</term>
+                   <description><see cref="M:Dynamicweb.Data.Database.CreateCommandBuilder(System.Data.IDbDataAdapter@)"></see></description>
+                 </item>
+                 <item>
+                   <term>Create a DataAdapter</term>
+                   <description><see cref="M:Dynamicweb.Data.Database.CreateAdapter"></see></description>
+                 </item>
+               </list>
+             </para>
+            </summary>
+            <remarks>
+            </remarks>
+            <example>
+            <code title="Create a Connection" description="Create a Connection" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateConnection.cs" lang="CS"></code>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="P:Dynamicweb.Data.Database.LocalAddress">
+            <summary>
+            Gets or sets the local alternative ip address.
+            </summary>
+            <value>
+            The local addr.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.Reset">
+            <summary>
+            Resets this database.
+            <remarks>Is called during begin_request in GlobalAsaxHandler</remarks>
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.EnsureDatabaseConnectionProviderTypesInCache">
+            <summary>
+            Checks the database connection provider types in cache.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.GetCustomDatabaseConnectionProvider">
+            <summary>
+            Gets the custom database connection provider.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.GetDatabaseConnectionProvider">
+            <summary>
+            Gets the database connection provider.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Dynamicweb.Data.Database.IsAccess">
+            <summary>Returns true if the solution is running on Access database. Return false if running on SQL-Server.</summary>
+            <returns><c>true</c> or <c>false</c></returns>
+            <remarks>Based on the database type set up for the particular solution in /Files/GlobalSettings.aspx in /Globalsettings/System/Database/Type node. Node must have a value of "ms_access" for this method to return true.</remarks>
+            <example>
+            <code title="Connect to database and get data" description="Full database example" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateConnection.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="P:Dynamicweb.Data.Database.ConnectionString">
+            <summary>
+            Gets the connection string.
+            ONLY MSSQL!
+            </summary>
+            <value>
+            The connection string.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateConnection">
+            <summary>
+            Creates and opens a database connection to the default database
+            </summary>
+            <returns>A Database Connection (a IDbConnection object). The connection is connected to /Database/Dynamic.mdb if the solution runs on MS Access or to the SQL Server database specified in database setup (/Files/GlobalSettings.aspx) if the solution runs on MS SQL-Server.</returns>
+            <remarks>The returned IDbConnection instance is either a <see cref="T:System.Data.SqlClient.SqlConnection"></see> or a <see cref="T:System.Data.OleDb.OleDbConnection"></see> depending on the database type.</remarks>
+            <example>
+            <code title="Connect to database and get data" description="Full database example" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateConnection.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateAdapter">
+            <summary>Creates a DataAdapter based on the database type of the solution.</summary>
+            <returns>A <see cref="T:System.Data.SqlClient.SqlDataAdapter"></see> or <see cref="T:System.Data.OleDb.OleDbDataAdapter"></see> depending on the database type.</returns>
+            <remarks>The type of the DataAdapter is based on the database type set up for the current solution.</remarks>
+            <example>
+            <code title="Connect to database and get data" description="Full database example" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateConnection.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateAdapter(System.Data.IDbCommand)">
+            <summary>Creates a DataAdapter based on the database type of the command.</summary>
+            <param name="command">The <see cref="T:System.Data.IDbCommand" /> to create the <see cref="T:System.Data.IDbDataAdapter" /> from.</param>
+            <returns>A <see cref="T:System.Data.SqlClient.SqlDataAdapter"></see></returns>
+            <remarks>The type of the DataAdapter is based on the <see cref="T:System.Data.IDbCommand" /> type.</remarks>
+            <example>
+            <code title="Connect to database and get data" description="Full database example" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateConnection.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateAdapter(Dynamicweb.Data.CommandBuilder)">
+            <summary>Creates a DataAdapter based on the database type of the command.</summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> to create the <see cref="T:System.Data.IDbDataAdapter" /> from.</param>
+            <returns>A <see cref="T:System.Data.SqlClient.SqlDataAdapter"></see></returns>
+            <example>
+            <code title="Connect to database and get data" description="Full database example" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateConnection.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreatePreparedAdapter(System.String,System.Data.IDbConnection)">
+            <summary>
+            Creates a <see cref="T:System.Data.IDbDataAdapter" /> that is prepared based on the sql parameter.
+            The <see cref="T:System.Data.IDbDataAdapter" /> supports SELECT, INSERT, UPDATE and DELETE.
+            </summary>
+            <param name="selectSql">The select SQL.</param>
+            <param name="connection">The <see cref="T:System.Data.IDbConnection" /> to the relevant database.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreatePreparedAdapter(System.String,System.Data.IDbConnection,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Data.IDbDataAdapter" /> that is prepared based on the sql parameter.
+            The <see cref="T:System.Data.IDbDataAdapter" /> supports SELECT, INSERT, UPDATE and DELETE.
+            </summary>
+            <param name="selectSql">The select SQL.</param>
+            <param name="connection">The <see cref="T:System.Data.IDbConnection" /> to the relevant database.</param>
+            <param name="tryFillIdentity">Boolean value indicating whether the Identity column should be filled automatically or not. Default is <c>false</c>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreatePreparedAdapter(System.String,System.Data.IDbConnection,System.Data.IDbTransaction)">
+            <summary>
+            Creates a <see cref="T:System.Data.IDbDataAdapter" /> that is prepared based on the sql parameter.
+            The <see cref="T:System.Data.IDbDataAdapter" /> supports SELECT, INSERT, UPDATE and DELETE.
+            </summary>
+            <param name="selectSql">The select SQL.</param>
+            <param name="connection">The <see cref="T:System.Data.IDbConnection" /> to the relevant database.</param>
+            <param name="transaction">The <see cref="T:System.Data.IDbTransaction" /> to use when executing queries</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreatePreparedAdapter(System.String,System.Data.IDbConnection,System.Data.IDbTransaction,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Data.IDbDataAdapter" /> that is prepared based on the sql parameter.
+            The <see cref="T:System.Data.IDbDataAdapter" /> supports SELECT, INSERT, UPDATE and DELETE.
+            </summary>
+            <param name="selectSql">The select SQL.</param>
+            <param name="connection">The <see cref="T:System.Data.IDbConnection" /> to the relevant database.</param>
+            <param name="transaction">The <see cref="T:System.Data.IDbTransaction" /> to use when executing queries</param>
+            <param name="tryFillIdentity">Boolean value indicating whether the Identity column should be filled automatically or not. Default is <c>false</c>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreatePreparedAdapter(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection)">
+            <summary>
+            Creates a <see cref="T:System.Data.IDbDataAdapter" /> that is prepared based on the <paramref name="commandBuilder"><see cref="T:Dynamicweb.Data.CommandBuilder" /> parameter</paramref>.
+            The <see cref="T:System.Data.IDbDataAdapter" /> supports SELECT, INSERT, UPDATE and DELETE.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the SELECT-query.</param>
+            <param name="connection">The <see cref="T:System.Data.IDbConnection" /> to the relevant database.</param>
+            <returns>A prepared <see cref="T:System.Data.IDataAdapter" /> with Select-, Insert-, Update- and Delete commands.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreatePreparedAdapter(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Data.IDbDataAdapter" /> that is prepared based on the <paramref name="commandBuilder"><see cref="T:Dynamicweb.Data.CommandBuilder" /> parameter</paramref>.
+            The <see cref="T:System.Data.IDbDataAdapter" /> supports SELECT, INSERT, UPDATE and DELETE.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the SELECT-query.</param>
+            <param name="connection">The <see cref="T:System.Data.IDbConnection" /> to the relevant database.</param>
+            <param name="tryFillIdentity">Boolean value indicating whether the Identity column should be filled automatically or not. Default is <c>false</c>.</param>
+            <returns>A prepared <see cref="T:System.Data.IDataAdapter" /> with Select-, Insert-, Update- and Delete commands.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreatePreparedAdapter(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Data.IDbTransaction)">
+            <summary>
+            Creates a <see cref="T:System.Data.IDbDataAdapter" /> that is prepared based on the <paramref name="commandBuilder"><see cref="T:Dynamicweb.Data.CommandBuilder" /> parameter</paramref>.
+            The <see cref="T:System.Data.IDbDataAdapter" /> supports SELECT, INSERT, UPDATE and DELETE.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the SELECT-query.</param>
+            <param name="connection">The <see cref="T:System.Data.IDbConnection" /> to the relevant database.</param>
+            <param name="transaction">The <see cref="T:System.Data.IDbTransaction" /> to use when executing queries</param>
+            <returns>A prepared <see cref="T:System.Data.IDataAdapter" /> with Select-, Insert-, Update- and Delete commands.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreatePreparedAdapter(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Data.IDbTransaction,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Data.IDbDataAdapter" /> that is prepared based on the <paramref name="commandBuilder"><see cref="T:Dynamicweb.Data.CommandBuilder" /> parameter</paramref>.
+            The <see cref="T:System.Data.IDbDataAdapter" /> supports SELECT, INSERT, UPDATE and DELETE.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the SELECT-query.</param>
+            <param name="connection">The <see cref="T:System.Data.IDbConnection" /> to the relevant database.</param>
+            <param name="transaction">The <see cref="T:System.Data.IDbTransaction" /> to use when executing queries</param>
+            <param name="tryFillIdentity">Boolean value indicating whether the Identity column should be filled automatically or not. Default is <c>false</c>.</param>
+            <returns>A prepared <see cref="T:System.Data.IDataAdapter" /> with Select-, Insert-, Update- and Delete commands.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreatePreparedAdapter(System.Data.Common.DbCommandBuilder@,System.Data.IDbCommand,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Data.IDbDataAdapter" /> that is prepared based on the <paramref name="command"><see cref="T:System.Data.IDbCommand" /> parameter</paramref>.
+            The <see cref="T:System.Data.IDbDataAdapter" /> supports SELECT, INSERT, UPDATE and DELETE.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the SELECT-query.</param>
+            <param name="command">The <see cref="T:System.Data.IDbCommand" /> containing the SELECT-query.</param>
+            <param name="tryFillIdentity">Boolean value indicating whether the Identity column should be filled automatically or not. Default is <c>false</c>.</param>
+            <returns>A prepared <see cref="T:System.Data.IDataAdapter" /> with Select-, Insert-, Update- and Delete commands.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataSet(System.String)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed SQL statement from the specfied database.
+            </summary>
+            <param name="sql">The SQL specifiyng the data to return in dataset</param>
+            <returns>A disconnected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>Since this is a disconnected dataset, no updates are possible. If you want to obtain an updatable dataset use the <see cref="T:Dynamicweb.Data.DataManager"></see>.</remarks>
+            <example>
+            <code title="Create a dataset" description="Create a dataset" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataset.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataSet(System.String,System.Collections.Generic.Dictionary{System.String,System.Tuple{System.Object,System.Data.DbType}})">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed SQL statement from the specfied database.
+            </summary>
+            <param name="sql">The SQL specifiyng the data to return in dataset</param>
+            <param name="sqlParams">Command parameters dictionary with key as a param name and value of tuple(param value, param db type)</param>''
+            <returns>A disconnected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>Since this is a disconnected dataset, no updates are possible. If you want to obtain an updatable dataset use the <see cref="T:Dynamicweb.Data.DataManager"></see>.</remarks>
+            <example>
+            <code title="Create a dataset" description="Create a dataset" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataset.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataSet(System.String,System.Data.IDbConnection,System.Data.IDbTransaction)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed SQL statement from the specfied database.
+            </summary>
+            <param name="sql">The SQL specifiyng the data to return in dataset</param>
+            <param name="connection">Existing database connection.</param>
+            <param name="transaction">The transaction.</param>
+            <returns>A disconnected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>Since this is a disconnected dataset, no updates are possible. If you want to obtain an updatable dataset use the <see cref="T:Dynamicweb.Data.DataManager"></see>.</remarks>
+            <example>
+            <code title="Create a dataset" description="Create a dataset" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataset.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataSet(System.String,System.Data.IDbConnection,System.Data.IDbTransaction,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Tuple{System.Object,System.Data.DbType}})">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed SQL statement from the specfied database.
+            </summary>
+            <param name="sql">The SQL specifiyng the data to return in <see cref="T:System.Data.DataSet"></see></param>
+            <param name="connection">Existing database connection. The connection will remain open upon the completion. If connection is <code>null</code> a new connection is created and disposed</param>
+            <param name="transaction">The transaction.</param>
+            <param name="withSchema">Set to true if the returned dataset should contain schema information on table names, column names and types etc.</param>
+            <param name="sqlParams">Command parameters dictionary with key as a param name and value of tuple(param value, param db type)</param>''
+            <returns>A disconnected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>Since this is a disconnected <see cref="T:System.Data.DataSet"></see>, no updates are possible. If you want to obtain an updatable <see cref="T:System.Data.DataSet"></see> use the <see cref="T:Dynamicweb.Data.DataManager"></see>.
+            Adds a <see cref="T:System.Data.DataTable"></see> named "Table" to the specified <see cref="T:System.Data.DataSet"></see> and configures the schema to match that in the data source.</remarks>
+            <example>
+            <code title="Create a dataset" description="Create a dataset" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataset.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataSet(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed SQL statement from the specfied database.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> specifying the query to execute and data to return in the <see cref="T:System.Data.DataSet" />.</param>
+            <returns>A disconnected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>Since this is a disconnected <see cref="T:System.Data.DataSet"></see>, no updates are possible. If you want to obtain an updatable <see cref="T:System.Data.DataSet"></see> use the <see cref="T:Dynamicweb.Data.DataManager"></see>.
+            Adds a <see cref="T:System.Data.DataTable"></see> named "Table" to the specified <see cref="T:System.Data.DataSet"></see> and configures the schema to match that in the data source.</remarks>
+            <example>
+            <code title="Create a dataset" description="Create a dataset" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataset.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataSet(Dynamicweb.Data.CommandBuilder,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed SQL statement from the specfied database.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> specifying the query to execute and data to return in the <see cref="T:System.Data.DataSet" />.</param>
+            <param name="withSchema">Set to true if the returned dataset should contain schema information on table names, column names and types etc.</param>
+            <returns>A disconnected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>Since this is a disconnected <see cref="T:System.Data.DataSet"></see>, no updates are possible. If you want to obtain an updatable <see cref="T:System.Data.DataSet"></see> use the <see cref="T:Dynamicweb.Data.DataManager"></see>.
+            Adds a <see cref="T:System.Data.DataTable"></see> named "Table" to the specified <see cref="T:System.Data.DataSet"></see> and configures the schema to match that in the data source.</remarks>
+            <example>
+            <code title="Create a dataset" description="Create a dataset" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataset.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataSet(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed SQL statement from the specfied database.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> specifying the query to execute and data to return in the <see cref="T:System.Data.DataSet" />.</param>
+            <param name="connection">Existing database connection. The connection will remain open upon the completion.</param>
+            <returns>A disconnected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>Since this is a disconnected <see cref="T:System.Data.DataSet"></see>, no updates are possible. If you want to obtain an updatable <see cref="T:System.Data.DataSet"></see> use the <see cref="T:Dynamicweb.Data.DataManager"></see>.
+            Adds a <see cref="T:System.Data.DataTable"></see> named "Table" to the specified <see cref="T:System.Data.DataSet"></see> and configures the schema to match that in the data source.</remarks>
+            <example>
+            <code title="Create a dataset" description="Create a dataset" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataset.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataSet(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed SQL statement from the specfied database.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> specifying the query to execute and data to return in the <see cref="T:System.Data.DataSet" />.</param>
+            <param name="connection">Existing database connection. The connection will remain open upon the completion.</param>
+            <param name="withSchema">Set to true if the returned dataset should contain schema information on table names, column names and types etc.</param>
+            <returns>A disconnected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>Since this is a disconnected <see cref="T:System.Data.DataSet"></see>, no updates are possible. If you want to obtain an updatable <see cref="T:System.Data.DataSet"></see> use the <see cref="T:Dynamicweb.Data.DataManager"></see>.
+            Adds a <see cref="T:System.Data.DataTable"></see> named "Table" to the specified <see cref="T:System.Data.DataSet"></see> and configures the schema to match that in the data source.</remarks>
+            <example>
+            <code title="Create a dataset" description="Create a dataset" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataset.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataSet(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Data.IDbTransaction)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed SQL statement from the specfied database.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> specifying the query to execute and data to return in the <see cref="T:System.Data.DataSet" />.</param>
+            <param name="connection">Existing database connection. The connection will remain open upon the completion.</param>
+            <param name="transaction">The transaction.</param>
+            <returns>A disconnected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>Since this is a disconnected <see cref="T:System.Data.DataSet"></see>, no updates are possible. If you want to obtain an updatable <see cref="T:System.Data.DataSet"></see> use the <see cref="T:Dynamicweb.Data.DataManager"></see>.
+            Adds a <see cref="T:System.Data.DataTable"></see> named "Table" to the specified <see cref="T:System.Data.DataSet"></see> and configures the schema to match that in the data source.</remarks>
+            <example>
+            <code title="Create a dataset" description="Create a dataset" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataset.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataSet(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Data.IDbTransaction,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed SQL statement from the specfied database.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> specifying the query to execute and data to return in the <see cref="T:System.Data.DataSet" />.</param>
+            <param name="connection">Existing database connection. The connection will remain open upon the completion.</param>
+            <param name="transaction">The transaction.</param>
+            <param name="withSchema">Set to true if the returned dataset should contain schema information on table names, column names and types etc.</param>
+            <returns>A disconnected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>Since this is a disconnected <see cref="T:System.Data.DataSet"></see>, no updates are possible. If you want to obtain an updatable <see cref="T:System.Data.DataSet"></see> use the <see cref="T:Dynamicweb.Data.DataManager"></see>.
+            Adds a <see cref="T:System.Data.DataTable"></see> named "Table" to the specified <see cref="T:System.Data.DataSet"></see> and configures the schema to match that in the data source.</remarks>
+            <example>
+            <code title="Create a dataset" description="Create a dataset" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataset.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataSet(System.Data.IDbDataAdapter,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data filled by the specified <see cref="T:System.Data.IDbDataAdapter" />.
+            </summary>
+            <param name="dataAdapter">The <see cref="T:System.Data.IDbDataAdapter" /> to use when filling the <see cref="T:System.Data.DataSet" />.</param>
+            <param name="withSchema">Set to true if the returned dataset should contain schema information on table names, column names and types etc.</param>
+            <returns>A disconnected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>Since this is a disconnected <see cref="T:System.Data.DataSet"></see>, no updates are possible. If you want to obtain an updatable <see cref="T:System.Data.DataSet"></see> use the <see cref="T:Dynamicweb.Data.DataManager"></see>.
+            Adds a <see cref="T:System.Data.DataTable"></see> named "Table" to the specified <see cref="T:System.Data.DataSet"></see> and configures the schema to match that in the data source.</remarks>
+            <example>
+            <code title="Create a dataset" description="Create a dataset" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataset.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataTable(System.String)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataTable"></see> with data returned by the passed SQL statement.
+            </summary>
+            <param name="sql">The SQL specifiyng the data to return in <see cref="T:System.Data.DataTable"></see></param>
+            <returns>A disconnected <see cref="T:System.Data.DataTable"></see> instance with data.</returns>
+            <remarks>
+            Connects to the default database. Dynamic.mdb in /Database if the solution is running MS Access, or the SQL-Server database if the solution is running MS SQL-Server.
+            Since this is a disconnected <see cref="T:System.Data.DataTable"></see>, no updates are possible.
+            </remarks>
+            <example>
+            <code title="Create a DataTable" description="Create a DataTable" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataTable.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataTable(System.String,System.Data.IDbConnection)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataTable"></see> with data returned by the passed SQL statement from the specfied database.
+            </summary>
+            <param name="sql">The SQL specifiyng the data to return in <see cref="T:System.Data.DataTable"></see></param>
+            <param name="connection">Existing database connection.</param>
+            <returns>A disconnected <see cref="T:System.Data.DataTable"></see> instance with data.</returns>
+            <remarks>Since this is a disconnected <see cref="T:System.Data.DataTable"></see>, no updates are possible.</remarks>
+            <example>
+            <code title="Create a DataTable" description="Create a DataTable" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataTable.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataTable(System.String,System.Data.IDbConnection,System.Data.IDbTransaction)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataTable"></see> with data returned by the passed SQL statement from the specfied database.
+            </summary>
+            <param name="sql">The SQL specifiyng the data to return in <see cref="T:System.Data.DataTable"></see></param>
+            <param name="connection">Existing database connection.</param>
+            <param name="transaction">Existing transaction on the given connection.</param>
+            <returns>A disconnected <see cref="T:System.Data.DataTable"></see> instance with data.</returns>
+            <remarks>Since this is a disconnected <see cref="T:System.Data.DataTable"></see>, no updates are possible.</remarks>
+            <example>
+            <code title="Create a DataTable" description="Create a DataTable" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataTable.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataReader(System.String)">
+            <summary>Creates a DataReader by sending the sql to the Connection and build an IDataReader.</summary>
+            <param name="sql">The SQL specifiyng the data to return in the DataReader</param>
+            <returns>Datareader instance - OleDBReader for Access solutions and SqlDbReader for SQl-Server based solutions.</returns>
+            <remarks>The underlying connection will close itself after the reader is closed and disposed.</remarks>
+            <example>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataReader(System.String,System.Collections.Generic.Dictionary{System.String,System.Tuple{System.Object,System.Data.DbType}})">
+            <summary>Creates a DataReader by sending the sql to the Connection and build an IDataReader.</summary>
+            <param name="sql">The SQL specifiyng the data to return in the DataReader</param>
+            <param name="sqlParams">Command parameters dictionary with key as a param name and value of tuple(param value, param db type)</param>
+            <returns>Datareader instance - OleDBReader for Access solutions and SqlDbReader for SQl-Server based solutions.</returns>
+            <remarks>The underlying connection will close itself after the reader is closed and disposed.</remarks>
+            <example>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataReader(System.String,System.Data.IDbConnection)">
+            <summary>Creates a DataReader by sending the sql to the Connection and build an IDataReader.</summary>
+            <param name="sql">The SQL specifiyng the data to return in the DataReader</param>
+            <param name="connection">Existing database connection.</param>
+            <returns>Datareader instance - OleDBReader for Access solutions and SqlDbReader for SQl-Server based solutions.</returns>
+            <remarks>The underlying connection will close itself after the reader is closed and disposed.</remarks>
+            <example>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataReader(System.String,System.Data.IDbConnection,System.Data.IDbTransaction)">
+            <summary>Creates a DataReader by sending the sql to the Connection and build an IDataReader.</summary>
+            <param name="sql">The SQL specifiyng the data to return in the DataReader</param>
+            <param name="connection">Existing database connection.</param>
+            <param name="transaction">Existing transaction on the given connection.</param>
+            <returns>Datareader instance - OleDBReader for Access solutions and SqlDbReader for SQl-Server based solutions.</returns>
+            <remarks>The underlying connection will close itself after the reader is closed and disposed.</remarks>
+            <example>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataReader(System.String,System.Int32)">
+            <summary>Creates a DataReader by sending the sql to the Connection and build an IDataReader.</summary>
+            <param name="sql">The SQL specifiyng the data to return in the DataReader</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds. 0 indicates infinite.</param>
+            <returns>Datareader instance - OleDBReader for Access solutions and SqlDbReader for SQl-Server based solutions.</returns>
+            <remarks>The underlying connection will close itself after the reader is closed and disposed.</remarks>
+            <example>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataReader(System.String,System.Data.IDbConnection,System.Int32)">
+            <summary>Creates a DataReader by sending the sql to the Connection and build an IDataReader.</summary>
+            <param name="sql">The SQL specifiyng the data to return in the DataReader</param>
+            <param name="connection">Existing database connection.</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds. 0 Indicates infinite.</param>
+            <returns>Datareader instance - OleDBReader for Access solutions and SqlDbReader for SQl-Server based solutions.</returns>
+            <remarks>The underlying connection will close itself after the reader is closed and disposed.</remarks>
+            <example>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataReader(System.String,System.Data.IDbConnection,System.Data.IDbTransaction,System.Int32,System.Collections.Generic.Dictionary{System.String,System.Tuple{System.Object,System.Data.DbType}})">
+            <summary>Creates a DataReader by sending the sql to the Connection and build an IDataReader.</summary>
+            <param name="sql">The SQL specifiyng the data to return in the DataReader</param>
+            <param name="connection">Existing database connection. The connection will remain open upon the completion.</param>
+            <param name="transaction">The transaction.</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds. 0 indicates infinite.</param>
+            <param name="sqlParams">Command parameters dictionary with key as a param name and value of tuple(param value, param db type)</param>''
+            <returns>Datareader instance - OleDBReader for Access solutions and SqlDbReader for SQl-Server based solutions.</returns>
+            <remarks>The underlying connection will close itself after the reader is closed and disposed.</remarks>
+            <example>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataReader(System.String,System.Data.IDbConnection,System.Data.IDbTransaction,System.Data.CommandBehavior,System.Int32,System.Collections.Generic.Dictionary{System.String,System.Tuple{System.Object,System.Data.DbType}})">
+            <summary>Creates a DataReader by sending the sql to the Connection and build an IDataReader.</summary>
+            <param name="sql">The SQL specifiyng the data to return in the DataReader</param>
+            <param name="connection">Existing database connection. The connection will remain open upon the completion.</param>
+            <param name="transaction">The transaction.</param>
+            <param name="behavior">The CommandBehavior to be used when executing the IDbCommand.</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds. 0 indicates infinite.</param>
+            <param name="sqlParams">Command parameters dictionary with key as a param name and value of tuple(param value, param db type)</param>''
+            <returns>Datareader instance - OleDBReader for Access solutions and SqlDbReader for SQl-Server based solutions.</returns>
+            <remarks>The underlying connection will close itself after the reader is closed and disposed.</remarks>
+            <example>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataReader(Dynamicweb.Data.CommandBuilder)">
+            <summary>Creates a DataReader by creating a IDbCommand with the CommandBuilder and sending it to the Connection and build an IDataReader.</summary>
+            <param name="commandBuilder">The CommandBuilder specifying the data to return in the DataReader</param>
+            <returns>Datareader instance - OleDBReader for Access solutions and SqlDbReader for SQl-Server based solutions.</returns>
+            <remarks>The underlying connection will close itself after the reader is closed and disposed.</remarks>
+            <example>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataReader(Dynamicweb.Data.CommandBuilder,System.Int32)">
+            <summary>Creates a DataReader by creating a IDbCommand with the CommandBuilder and sending it to the Connection and build an IDataReader.</summary>
+            <param name="commandBuilder">The CommandBuilder specifying the data to return in the DataReader</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds.</param>
+            <returns>Datareader instance - OleDBReader for Access solutions and SqlDbReader for SQl-Server based solutions.</returns>
+            <remarks>The underlying connection will close itself after the reader is closed and disposed.</remarks>
+            <example>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataReader(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection)">
+            <summary>Creates a DataReader by creating a IDbCommand with the CommandBuilder and sending it to the Connection and build an IDataReader.</summary>
+            <param name="commandBuilder">The CommandBuilder specifying the data to return in the DataReader</param>
+            <param name="connection">Existing database connection. The connection will remain open upon the completion.</param>
+            <returns>Datareader instance - OleDBReader for Access solutions and SqlDbReader for SQl-Server based solutions.</returns>
+            <remarks>The underlying connection will close itself after the reader is closed and disposed.</remarks>
+            <example>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataReader(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Int32)">
+            <summary>Creates a DataReader by creating a IDbCommand with the CommandBuilder and sending it to the Connection and build an IDataReader.</summary>
+            <param name="commandBuilder">The CommandBuilder specifying the data to return in the DataReader</param>
+            <param name="connection">Existing database connection. The connection will remain open upon the completion.</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds.</param>
+            <returns>Datareader instance - OleDBReader for Access solutions and SqlDbReader for SQl-Server based solutions.</returns>
+            <remarks>The underlying connection will close itself after the reader is closed and disposed.</remarks>
+            <example>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataReader(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Data.IDbTransaction)">
+            <summary>Creates a DataReader by creating a IDbCommand with the CommandBuilder and sending it to the Connection and build an IDataReader.</summary>
+            <param name="commandBuilder">The CommandBuilder specifying the data to return in the DataReader</param>
+            <param name="connection">Existing database connection. The connection will remain open upon the completion.</param>
+            <param name="transaction">The transaction.</param>
+            <returns>Datareader instance - OleDBReader for Access solutions and SqlDbReader for SQl-Server based solutions.</returns>
+            <remarks>The underlying connection will close itself after the reader is closed and disposed.</remarks>
+            <example>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataReader(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Data.IDbTransaction,System.Int32)">
+            <summary>Creates a DataReader by creating a IDbCommand with the CommandBuilder and sending it to the Connection and build an IDataReader.</summary>
+            <param name="commandBuilder">The CommandBuilder specifying the data to return in the DataReader</param>
+            <param name="connection">Existing database connection. The connection will remain open upon the completion.</param>
+            <param name="transaction">The transaction.</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds.</param>
+            <returns>Datareader instance - OleDBReader for Access solutions and SqlDbReader for SQl-Server based solutions.</returns>
+            <remarks>The underlying connection will close itself after the reader is closed and disposed.</remarks>
+            <example>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataReader(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Data.IDbTransaction,System.Data.CommandBehavior,System.Int32)">
+            <summary>Creates a DataReader by creating a IDbCommand with the CommandBuilder and sending it to the Connection and build an IDataReader.</summary>
+            <param name="commandBuilder">The CommandBuilder specifying the data to return in the DataReader</param>
+            <param name="connection">Existing database connection. The connection will remain open upon the completion.</param>
+            <param name="transaction">The transaction.</param>
+            <param name="behavior">The CommandBehavior to be used when executing the IDbCommand.</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds.</param>
+            <returns>Datareader instance - OleDBReader for Access solutions and SqlDbReader for SQl-Server based solutions.</returns>
+            <remarks>The underlying connection will close itself after the reader is closed and disposed.</remarks>
+            <example>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateDataReader(System.Data.IDbCommand,System.Data.CommandBehavior)">
+            <summary>Creates a DataReader by sending an IDbCommand to the Connection and build an IDataReader.</summary>
+            <param name="command">The Command specifying the data to return in the DataReader</param>
+            <param name="behavior">The CommandBehavior to be used when executing the IDbCommand.</param>
+            <returns>Datareader instance - OleDBReader for Access solutions and SqlDbReader for SQl-Server based solutions.</returns>
+            <remarks>The underlying connection will close itself after the reader is closed and disposed.</remarks>
+            <example>
+            <code title="Create a DataReader" description="Create a DataReader" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateDataReader.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteScalar(System.String)">
+            <summary>
+            Executes the query, and returns the first column of the first row in the resultset returned by the query. Extra columns or rows are ignored.
+            </summary>
+            <param name="sql">The SQL to execute against the database</param>
+            <returns>The first column of the first row in the resultset.</returns>
+            <remarks>
+            Connects to the default database. Dynamic.mdb in /Database if the solution is running MS Access, or the SQL-Server database if the solution is running MS SQL-Server.
+            </remarks>
+            <example>
+            <code title="Using ExecuteScalar" description="Using ExecuteScalar" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteScalar(System.String,System.Data.IDbConnection)">
+            <summary>
+            Executes the query, and returns the first column of the first row in the resultset returned by the query. Extra columns or rows are ignored.
+            </summary>
+            <param name="sql">The SQL to execute against the database</param>
+            <param name="connection">Existing database connection.</param>
+            <returns>The first column of the first row in the resultset.</returns>
+            <example>
+            <code title="Using ExecuteScalar" description="Using ExecuteScalar" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteScalar(System.String,System.Data.IDbConnection,System.Data.IDbTransaction)">
+            <summary>
+            Executes the query, and returns the first column of the first row in the resultset returned by the query. Extra columns or rows are ignored.
+            </summary>
+            <param name="sql">The SQL to execute against the database</param>
+            <param name="connection">Existing database connection.</param>
+            <param name="transaction">The transaction.</param>
+            <returns>The first column of the first row in the resultset.</returns>
+            <example>
+            <code title="Using ExecuteScalar" description="Using ExecuteScalar" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteScalar(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Executes the query, and returns the first column of the first row in the resultset returned by the query. Extra columns or rows are ignored.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the query to execute.</param>
+            <returns>The first column of the first row in the resultset.</returns>
+            <example>
+            <code title="Using ExecuteScalar" description="Using ExecuteScalar" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteScalar(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Data.IDbTransaction)">
+            <summary>
+            Executes the query, and returns the first column of the first row in the resultset returned by the query. Extra columns or rows are ignored.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the query to execute.</param>
+            <param name="connection">Existing database connection. The connection will remain open upon the completion.</param>
+            <param name="transaction">The transaction associated with specified <paramref name="connection">connection</paramref>.</param>
+            <returns>The first column of the first row in the resultset.</returns>
+            <example>
+            <code title="Using ExecuteScalar" description="Using ExecuteScalar" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteScalar(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection)">
+            <summary>
+            Executes the query, and returns the first column of the first row in the resultset returned by the query. Extra columns or rows are ignored.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the query to execute.</param>
+            <param name="connection">Existing database connection. The connection will remain open upon the completion.</param>
+            <returns>The first column of the first row in the resultset.</returns>
+            <example>
+            <code title="Using ExecuteScalar" description="Using ExecuteScalar" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteScalar(System.Data.IDbCommand)">
+            <summary>
+            Executes the query, and returns the first column of the first row in the resultset returned by the query. Extra columns or rows are ignored.
+            </summary>
+            <param name="command">The <see cref="T:System.Data.IDbCommand" /> containing the query to execute.</param>
+            <returns>The first column of the first row in the resultset.</returns>
+            <example>
+            <code title="Using ExecuteScalar" description="Using ExecuteScalar" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Tuple{System.Object,System.Data.DbType}})">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="sql">The SQL to execute against the database</param>
+            <param name="sqlParams">Command parameters dictionary with key as a param name and value of tuple(param value, param db type)</param>
+            <returns>The number of rows affected.</returns>
+            <example>
+            <code title="Using ExecuteNonQuery" description="Using ExecuteNonQuery" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(System.String)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="sql">The SQL to execute against the database</param>
+            <returns>The number of rows affected.</returns>
+            <example>
+            <code title="Using ExecuteNonQuery" description="Using ExecuteNonQuery" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(System.String,System.Data.IDbConnection,System.Data.IDbTransaction)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="sql">The SQL to execute against the database</param>
+            <param name="connection">Existing database connection.</param>
+            <param name="transaction">The transaction.</param>
+            <returns>The number of rows affected.</returns>
+            <example>
+            <code title="Using ExecuteNonQuery" description="Using ExecuteNonQuery" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(System.String,System.Data.IDbConnection,System.Data.IDbTransaction,System.Int32)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="sql">The SQL to execute against the database</param>
+            <param name="connection">Existing database connection.</param>
+            <param name="transaction">The transaction.</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds.</param>
+            <returns>The number of rows affected.</returns>
+            <example>
+            <code title="Using ExecuteNonQuery" description="Using ExecuteNonQuery" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(System.String,System.Data.IDbConnection)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="sql">The SQL to execute against the database</param>
+            <param name="connection">Existing database connection.</param>
+            <returns>The number of rows affected.</returns>
+            <example>
+            <code title="Using ExecuteNonQuery" description="Using ExecuteNonQuery" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(System.String,System.Int32)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="sql">The SQL to execute against the database</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds.</param>
+            <returns>The number of rows affected.</returns>
+            <example>
+            <code title="Using ExecuteNonQuery" description="Using ExecuteNonQuery" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(System.String,System.Int32,System.Data.IDbConnection)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="sql">The SQL to execute against the database</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds.</param>
+            <param name="connection">Existing database connection.</param>
+            <returns>The number of rows affected.</returns>
+            <example>
+            <code title="Using ExecuteNonQuery" description="Using ExecuteNonQuery" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(System.String,System.Boolean)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="sql">The SQL to execute against the database</param>
+            <param name="transaction">if set to <c>true</c> [transaction].</param>
+            <returns>The number of rows affected.</returns>
+            <example>
+            <code title="Using ExecuteNonQuery" description="Using ExecuteNonQuery" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(System.String,System.Boolean,System.Data.IDbConnection)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="sql">The SQL to execute against the database</param>
+            <param name="transaction">if set to <c>true</c> [transaction].</param>
+            <param name="connection">Existing database connection.</param>
+            <returns>The number of rows affected.</returns>
+            <example>
+            <code title="Using ExecuteNonQuery" description="Using ExecuteNonQuery" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(System.String,System.Int32,System.Boolean)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="sql">The SQL to execute against the database</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds.</param>
+            <param name="useTransaction">If set to <c>true</c> the query is executed in a transaction.</param>
+            <returns>The number of rows affected.</returns>
+            <example>
+            <code title="Using ExecuteNonQuery" description="Using ExecuteNonQuery" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(System.String,System.Int32,System.Boolean,System.Data.IDbConnection)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="sql">The SQL to execute against the database</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds.</param>
+            <param name="useTransaction">If set to <c>true</c> the query is executed in a transaction.</param>
+            <param name="connection">Existing database connection.</param>
+            <returns>The number of rows affected.</returns>
+            <example>
+            <code title="Using ExecuteNonQuery" description="Using ExecuteNonQuery" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseExecute.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(System.String,System.Int32,System.Boolean,System.Data.IDbConnection,System.Data.IDbTransaction,System.Collections.Generic.Dictionary{System.String,System.Tuple{System.Object,System.Data.DbType}})">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="sql">The SQL to execute against the database</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds.</param>
+            <param name="useTransaction">If set to <c>true</c> the query is executed in a transaction.</param>
+            <param name="connection">Existing database connection to be reused. The connection will not be closed upon completion.</param>
+            <param name="transaction">if set to <c>true</c> [transaction].</param>
+            <param name="sqlParams">Command parameters dictionary with key as a param name and value of tuple(param value, param db type)</param>
+            <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(System.String,System.Data.IDbConnection,System.Data.IDbTransaction,System.Boolean,System.Int32,System.Collections.Generic.Dictionary{System.String,System.Tuple{System.Object,System.Data.DbType}})">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="sql">The SQL to execute against the database</param>
+            <param name="connection">Existing database connection to be reused. The connection will not be closed upon completion.</param>
+            <param name="transaction">The transaction associated with the specified <paramref name="connection">connection</paramref>.</param>
+            <param name="useTransaction">If set to <c>true</c> the query is executed in a transaction.</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds.</param>
+            <param name="sqlParams">Command parameters dictionary with key as a param name and value of tuple(param value, param db type)</param>
+            <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the query to execute.</param>
+            <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(Dynamicweb.Data.CommandBuilder,System.Int32)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the query to execute.</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds.</param>
+            <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(Dynamicweb.Data.CommandBuilder,System.Boolean)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the query to execute.</param>
+            <param name="useTransaction">If set to <c>true</c> the query is executed in a transaction.</param>
+            <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(Dynamicweb.Data.CommandBuilder,System.Boolean,System.Int32)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the query to execute.</param>
+            <param name="useTransaction">If set to <c>true</c> the query is executed in a transaction.</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds.</param>
+            <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the query to execute.</param>
+            <param name="connection">Existing database connection to be reused. The connection will not be closed upon completion.</param>
+            <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Int32)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the query to execute.</param>
+            <param name="connection">Existing database connection to be reused. The connection will not be closed upon completion.</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds.</param>
+            <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Boolean)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the query to execute.</param>
+            <param name="connection">Existing database connection to be reused. The connection will not be closed upon completion.</param>
+            <param name="useTransaction">If set to <c>true</c> the query is executed in a transaction.</param>
+            <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Boolean,System.Int32)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the query to execute.</param>
+            <param name="connection">Existing database connection to be reused. The connection will not be closed upon completion.</param>
+            <param name="useTransaction">If set to <c>true</c> the query is executed in a transaction.</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds.</param>
+            <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Data.IDbTransaction)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the query to execute.</param>
+            <param name="connection">Existing database connection to be reused. The connection will not be closed upon completion.</param>
+            <param name="transaction">The transaction associated with the specified <paramref name="connection">connection</paramref>.</param>
+            <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Data.IDbTransaction,System.Int32)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the query to execute.</param>
+            <param name="connection">Existing database connection to be reused. The connection will not be closed upon completion.</param>
+            <param name="transaction">The transaction associated with the specified <paramref name="connection">connection</paramref>.</param>
+            <param name="commandTimeout">The wait time before terminating the attempt to execute a command and generating an error. The default is 30 seconds.</param>
+            <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ExecuteNonQuery(System.Data.IDbCommand)">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework data provider, and returns the number of rows affected.
+            </summary>
+            <param name="command">The <see cref="T:System.Data.IDbCommand" /> containing the query to execute.</param>
+            <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CreateCommandBuilder(System.Data.IDbDataAdapter@)">
+            <summary>Creates a CommandBuilder based for the specified DataAdapters.</summary>
+            <param name="adapter">An existing DataAdapter.</param>
+            <returns>A SqlCommandBuilder.</returns>
+            <remarks>A CommandBuilder automatically generates Insert, Update and Delete commands based on a DataAdapters Select command</remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.GetAddedIdentityKey(System.Data.IDbConnection@)">
+            <summary>The function returns the identity of the last added row to the database</summary>
+            <param name="connection">The connection used for the update</param>
+            <returns>The identity of the last added row</returns>
+            <remarks>Returns an integer - this method will only work on tables with a primary key of type identity (SQL-Server), or Auto (MS-Access)</remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.GetAddedIdentityKey(System.Data.IDbConnection@,System.Data.IDbTransaction)">
+            <summary>The function returns the identity of the last added row to the database</summary>
+            <param name="connection">The connection used for the update</param>
+            <param name="transaction">The transaction used for the update</param>
+            <returns>The identity of the last added row</returns>
+            <remarks>Returns an integer - this method will only work on tables with a primary key of type identity (SQL-Server), or Auto (MS-Access)</remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.GetAddedIdentityKey(System.Data.DataRow@,System.Data.IDbConnection@,System.Int32)">
+            <summary>The function returns the identity of the last added row to the database</summary>
+            <param name="row">The datarow to update.</param>
+            <param name="connection">The connection used to update the datarow.</param>
+            <param name="index">Index of the column with the primary ID.</param>
+            <returns>The ID of the updated database row is returned as an integer.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.UpdateDateTimeValue(System.Object@,System.DateTime)">
+            <summary>
+            Updates the DateTime value if the difference between dates is more than or equal 2 milliseconds.
+            </summary>
+            <param name="dataRowField">Source value to update</param>
+            <param name="updateValue">Update value</param>
+            <returns><c>true</c> if update was made, otherwsie <c>false</c></returns>
+            <remarks>The .NET has a DateTime resolution to 100th of a nanosecond while SQL Server datatime only has one to 100th of a millisecond.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.SqlDate(System.DateTime)">
+            -----------------------------------------------------------------------------
+            <summary>
+            Returns a date in the appropriate database format.
+            </summary>
+            <param name="dateTime">Date as DateTime</param>
+            <returns>Returns a string representation of the sqldate.</returns>
+            <remarks>
+            The string format is based on the database type set up for the particular solution.
+            </remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.SqlDate(System.DateTime,System.Boolean)">
+            -----------------------------------------------------------------------------
+            <summary>
+            Returns a date in the appropriate database format.
+            </summary>
+            <param name="dateTime">Date as DateTime</param>
+            <param name="skipTime">Indicates whether to skip the time part of the date</param>
+            <returns>Returns a string representation of the sql date.</returns>
+            <remarks>
+            The string format is based on the database type set up for the particular solution.
+            </remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.SqlDate(System.String)">
+            <summary>
+            Returns a date in the appropriate database format.
+            </summary>
+            <param name="dateTime">The date time as a string.</param>
+            <returns>Returns a string representation of the sql date.</returns>
+            <remarks>
+            The string format is based on the database type set up for the particular solution.
+            </remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.SqlBool(System.Int32)">
+            <summary>Returns a Boolean in the appropriate database format.</summary>
+            <param name="value">Integer representing a Boolean. 1 = True, 0 = False.</param>
+            <returns>True or False as strings for Access solutions, or 0 or 1 for SQL solutions</returns>
+            <remarks>The returned value is based on the database type set up for the particular solution.
+            Used only for building sql strings, not for DataRows.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.SqlBool(System.Boolean)">
+            <summary>Returns a Boolean in the appropriate database format.</summary>
+            <param name="value"><c>true</c> or <c>false</c>.</param>
+            <returns>True or False as strings for Access solutions, or 0 or 1 for SQL solutions</returns>
+            <remarks>The returned value is based on the database type set up for the particular solution.
+            Used only for building sql strings, not for DataRows.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.SqlString(System.String)">
+            <summary>
+            Returns a string quoted with '' for Access and N'' (Unicode) for SQL-Server.
+            </summary>
+            <param name="value">The string to quote</param>
+            <returns></returns>
+            <remarks>
+            The string format is based on the database type set up for the particular solution.
+            </remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.SqlWeekday(System.String)">
+            <summary>Returns a string in the appropriate database format.</summary>
+            <param name="dateTime"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.SqlDatePart(System.String)">
+            <summary>Returns a DatePart abbreviation for the appropriate database.</summary>
+            <param name="part"></param>
+            <returns>Returns a string with the DatePart abbreviation, e.g. "yy" or "yyyy" etc.</returns>
+            <remarks>The abbreviation is based on the database type set up for the particular solution.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.SqlEscapeInjection(System.String)">
+            <summary>Strips a string of all SQL-commands used to create SQL-injection.</summary>
+            <param name="text">The text being checked</param>
+            <remarks>This function must be used before user input is inserted into SQL-strings.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.SqlEscapeInjection(System.String,System.Boolean)">
+            <summary>Strips a string of all SQL-commands used to create SQL-injection.</summary>
+            <param name="text">The text being checked</param>
+            <param name="escapeApostrophes">Value indicating whether to escape single apostrophes by replacing them with double apostrohpes.</param>
+            <remarks>This function must be used before user input is inserted into SQL-strings.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.SortListByDataSet(System.Data.DataSet@,System.String,System.String,System.String,System.Int32)">
+            <summary>Sorts the first table in the specified dataset.</summary>
+            <param name="dataSet">The dataset to be sorted</param>
+            <param name="dataSetPrimaryId">Name of the column with the primary id in the dataset.</param>
+            <param name="dataSetSort">Name of the column, the dataset should be sorted by.</param>
+            <param name="direction">The direction the selected row should be moved ("up" or "down").</param>
+            <param name="inputPrimaryId">The primary ID of the datarow that needs to be moved up or down.</param>
+            <remarks>The table is sorted according to the specified column.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.ColumnExists(System.Data.IDataReader,System.String)">
+            <summary>
+            Checks if a columns the exists in a given datareader.
+            </summary>
+            <param name="reader">The datareader.</param>
+            <param name="columnName">Name of the column.</param>
+            <returns><c>true</c> if the column exists; otherwise <c>false</c></returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.GetParam(System.String,System.Data.DbType,System.Int32,System.String,System.Object)">
+            <summary>Gets current parameter from database.</summary>
+            <param name="paramName"></param>
+            <param name="paramType"></param>
+            <param name="paramSize"></param>
+            <param name="paramSourceColumn"></param>
+            <param name="paramValue"></param>
+            <returns>Current parameter as IDbDataParameter object.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.GetParam(System.String,System.Data.DbType,System.Int32,System.String)">
+            <summary>Gets current parameter from database.</summary>
+            <param name="paramName"></param>
+            <param name="paramType"></param>
+            <param name="paramSize"></param>
+            <param name="paramSourceColumn"></param>
+            <returns>Current parameter as IDbDataParameter object.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CopyRow(System.String,System.Collections.Generic.Dictionary{System.String,System.Tuple{System.Object,System.Data.DbType}},System.Collections.Generic.IDictionary{System.String,System.Object})">
+             <summary>Copies a row and replaces some values in the new row</summary>
+             <param name="selectSql">The SQL command text to select the row to copy</param>
+             <param name="sqlParams">Command parameters dictionary with key as a param name and value of tuple(param value, param db type)</param>
+             <param name="newValues">A dictionary of (column name, new value). These values will be set on the new row</param>
+             <remarks>If more rows match the SQL, only the first will be copied</remarks>
+             <example>
+             <code title="Copy row example" lang="VB">
+             Dim newOrderValues As New Dictionary(Of String, Object)()
+             newOrderValues.Add("OrderID", oldID)
+             newOrderValues.Add("OrderCart", False)
+            
+             sqlParams = New Dictionary(Of String, Tuple(Of Object, DbType))
+             sqlParams.Add("@OrderID", New Tuple(Of Object, DbType)(newID, DbType.String))
+             Database.CopyRow(String.Format("SELECT * FROM EcomOrders WHERE OrderID = @OrderID", newID), sqlParams, newOrderValues)</code>
+             </example>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.CopyRow(System.Data.IDbCommand,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>Copies a row and replaces some values in the new row</summary>
+            <param name="command">The <see cref="T:System.Data.IDbCommand" /> to select the row to copy</param>
+            <param name="newValues">A dictionary of (column name, new value). These values will be set on the new row</param>
+            <remarks>If more rows match the query, only the first will be copied. See <see cref="M:Dynamicweb.Data.Database.CopyRow(System.String,System.Collections.Generic.Dictionary{System.String,System.Tuple{System.Object,System.Data.DbType}},System.Collections.Generic.IDictionary{System.String,System.Object})"/> for example </remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.EscapeForLikeStatement(System.String,System.Boolean)">
+            <summary>
+            Wrapes wildcard characters in to [] symbols.
+            </summary>
+            <param name="value">Input string.</param>
+            <param name="escapeApostrophes">shows whether or not to escape apostrophes</param>
+            <returns>String with wraped symbols.</returns>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.InsertRows(System.Data.DataTable)">
+            <summary>
+            Bulk inserts the given data into the database.
+            </summary>
+            <param name="data">Data table specifying the data to insert.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="data">data</paramref> is null.</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="data">data</paramref> has a TableName property which is either null or empty string or <paramref name="data">data</paramref> contains no columns.</exception>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.InsertUsingSqlBulkCopy(System.Data.DataTable)">
+            <summary>
+            Bulk inserts the given data using SqlBulkCopy.
+            </summary>
+            <param name="data">Data to insert.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.TableExists(System.String)">
+            <summary>
+            Helper method to determine whether a table with the given name exists in the given database.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.GetStackTrace(System.Boolean)">
+            <summary>Gets the stack elements and its values.</summary>
+            <param name="htmlBreaks">Wether to use html break tag.</param>
+            <returns>String representation of the stack.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Data.Database.ServerSideErrorCodes">
+            <summary>
+            SQL server error codes.
+            Login failed, database is not exists, software/hardware limitations, software update in progress, etc...
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.AddStringParam(System.Data.IDbCommand,System.String,System.String)">
+            <summary>Adds string parameter to SQL statement.</summary>
+            <param name="cmd">The IDbCommand to add the parameter to</param>
+            <param name="name">The name of the System.Data.IDataParameter.</param>
+            <param name="value">The value of the parameter.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.AddInt32Param(System.Data.IDbCommand,System.String,System.Int32)">
+            <summary>Adds Int32 parameter to SQL statement.</summary>
+            <param name="cmd">The IDbCommand to add the parameter to</param>
+            <param name="name">The name of the System.Data.IDataParameter.</param>
+            <param name="value">The value of the parameter.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.AddInt16Param(System.Data.IDbCommand,System.String,System.Int16)">
+            <summary>Adds Int16 parameter to SQL statement.</summary>
+            <param name="cmd">The IDbCommand to add the parameter to</param>
+            <param name="name">The name of the System.Data.IDataParameter.</param>
+            <param name="value">The value of the parameter.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.AddBooleanParam(System.Data.IDbCommand,System.String,System.Boolean)">
+            <summary>Adds boolean parameter to SQL statement.</summary>
+            <param name="cmd">The IDbCommand to add the parameter to</param>
+            <param name="name">The name of the System.Data.IDataParameter.</param>
+            <param name="value">The value of the parameter.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.AddDateTimeParam(System.Data.IDbCommand,System.String,System.DateTime)">
+            <summary>Adds DateTime parameter to SQL statement.</summary>
+            <param name="cmd">The IDbCommand to add the parameter to</param>
+            <param name="name">The name of the System.Data.IDataParameter.</param>
+            <param name="value">The value of the parameter.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.AddDoubleParam(System.Data.IDbCommand,System.String,System.Double)">
+            <summary>Adds double parameter to SQL statement.</summary>
+            <param name="cmd">The IDbCommand to add the parameter to</param>
+            <param name="name">The name of the System.Data.IDataParameter.</param>
+            <param name="value">The value of the parameter.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.AddCmdParam(System.Data.IDbCommand,System.String,System.Data.DbType,System.Object)">
+            <summary>
+            Adds current type parameter to SQL statement.
+            </summary>
+            <param name="cmd">The IDbCommand to add the parameter to</param>
+            <param name="name">The name of the System.Data.IDataParameter.</param>
+            <param name="type">The System.Data.DbType of the parameter.</param>
+            <param name="value">The value of the parameter.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.Database.AddCmdParams(System.Data.IDbCommand,System.Collections.Generic.Dictionary{System.String,System.Tuple{System.Object,System.Data.DbType}})">
+            <summary>
+            Adds current type parameter to SQL statement.
+            </summary>
+            <param name="cmd">The IDbCommand to add the parameter to</param>
+            <param name="params">Command parameters dictionary with key as a param name and value of tuple(param value, param db type)</param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Data.DatabaseConnectionProvider">
+            <summary>
+            Represents the database connection provider for replace the logic of creating database connections and data adapters to the Dynamicweb database.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Data.DatabaseConnectionProvider.CreateConnection">
+            <summary>Creates and opens a database connection to the specified database.</summary>
+            <returns>A Database Connection (a IDbConnection object). The connection is connected to the SQL Server database specified in database setup (/Files/GlobalSettings.aspx).</returns>
+            <remarks>The returned IDbConnection instance has to be a <see cref="T:System.Data.SqlClient.SqlConnection"></see>.</remarks>
+            <example>
+            <code title="Connect to database and get data" description="Full database example" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateConnection.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DatabaseConnectionProvider.CreateAdapter">
+            <summary>Creates a DataAdapter based on the database type of the solution.</summary>
+            <returns>A <see cref="T:System.Data.SqlClient.SqlDataAdapter"></see> </returns>
+            <example>
+            <code title="Connect to database and get data" description="Full database example" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateConnection.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="T:Dynamicweb.Data.DatabaseSchema">
+            <summary>
+            Provides methods for reading database layouts from connections. Can provide information on tables and their columns.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Data.DatabaseSchema.GetTables">
+            <summary>
+            Gets the tables in the database on the passed connection.
+            </summary>
+            <returns>A DataTable with the schema table of the connection. Contains table names.</returns>
+            <remarks>Closes and disposes the connection.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.DatabaseSchema.GetTables(System.Data.IDbConnection)">
+            <summary>
+            Gets the tables in the database on the passed connection.
+            </summary>
+            <param name="connection">A database connection of <see cref="T:System.Data.SqlClient.SqlConnection"></see>. Can be obtained using <see cref="M:Dynamicweb.Data.Database.CreateConnection"></see>.</param>
+            <returns>A DataTable with the schema table of the connection. Contains table names.</returns>
+            <remarks>Closes and disposes the connection.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.DatabaseSchema.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Data.DatabaseSchema" /> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Data.DatabaseSchema.GetTables(System.Data.SqlClient.SqlConnection)">
+            <summary>
+            Gets the tables in the database on the passed connection.
+            </summary>
+            <param name="connection">A database connection.</param>
+            <returns>A DataTable with the schema table of the connection. Contains table names.</returns>
+            <remarks>Closes and disposes the connection.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.DatabaseSchema.AddColumns(System.String,System.Collections.Generic.IEnumerable{Dynamicweb.Data.ColumnInfo})">
+            <summary>
+            Adds new columns to the specified table.
+            </summary>
+            <remarks>Does not merge/alter existing tables</remarks>
+            <param name="tableName">Name of the table.</param>
+            <param name="columns">The columns.</param>
+        </member>
+        <member name="M:Dynamicweb.Data.DatabaseSchema.GetTableColumns(System.Data.IDbConnection,System.String)">
+            <summary>
+            Gets the table columns.
+            </summary>
+            <param name="connection">A database connection.</param>
+            <param name="tableName">Name of the table to get columns from.</param>
+            <returns>A DataTable with the schema table of the tableName. Column names and DbTypes.</returns>
+            <remarks>Closes and disposes the connection.</remarks>
+        </member>
+        <member name="T:Dynamicweb.Data.DataManager">
+            <summary>Provides methods to update data on tables in Dynamicweb databases</summary>
+            <remarks></remarks>
+            <example>
+            <code description="Updating data in the database" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DataManagerSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Data.DataManager" /> class.
+            </summary>
+            <example>
+            <code description="Updating data in the database" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DataManagerSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Data.DataManager" /> class, which uses a transaction. When using DataManager with transactions, you should use Using, to be sure that the transaction is completed correctly
+            </summary>
+            <param name="useTransaction"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.IsDisposed">
+            <summary>If the object is disposed this function throws an exception, otherwise the
+            function returns false.</summary>
+            <returns>Returns false if the object has not been disposed.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.GetAddedIdentityKey">
+            <summary>The function returns the identity of the last added row to the database</summary>
+            <returns>The identity of the last added row</returns>
+            <remarks>Returns an integer - this method will only work on tables with a primary key of type identity (SQL-Server), or Auto (MS-Access)</remarks>
+            <example>
+            <code description="Updating data in the database" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DataManagerSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.CreateDataSet(System.String)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed SQL statement. Can only be called once per instance.
+            Use multiple objects when your logic requires working with multiple connected
+            datasets. Although the Finalize methods calls Dispose, thereby enabling the GC
+            to clean up unmanaged code, call Dispose on your DataManager object as soon as your are done.
+            </summary>
+            <param name="sql">The SQL specifying the data to return in dataset</param>
+            <returns>A connected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>
+            Connects to the default database. Dynamic.mdb in /Database if the solution is running MS Access, or the SQL-Server database if the solution is running MS SQL-Server.
+            </remarks>
+            <example>
+            <code description="Updating data in the database" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DataManagerSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.CreateDataSet(System.String,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed SQL statement from the specified database. Can only be called once per instance.
+            Use multiple objects when your logic requires working with multiple connected
+            datasets. Although the Finalize methods calls Dispose, thereby enabling the GC
+            to clean up unmanaged code, call Dispose on your DataManager object as soon as your are done.
+            </summary>
+            <param name="sql">The SQL specifying the data to return in <see cref="T:System.Data.DataSet"></see></param>
+            <param name="withSchema">Set to true if the returned dataset should contain schema information on table names, column names and types etc.</param>
+            <returns>A connected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <example>
+            <code description="Updating data in the database" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DataManagerSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.CreateDataSet(System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Tuple{System.Object,System.Data.DbType}})">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed SQL statement from the specified database. Can only be called once per instance.
+            Use multiple objects when your logic requires working with multiple connected
+            datasets. Although the Finalize methods calls Dispose, thereby enabling the GC
+            to clean up unmanaged code, call Dispose on your DataManager object as soon as your are done.
+            </summary>
+            <param name="sql">The SQL specifying the data to return in <see cref="T:System.Data.DataSet"></see></param>
+            <param name="withSchema">Set to true if the returned dataset should contain schema information on table names, column names and types etc.</param>
+            <param name="sqlParams">Command parameters dictionary with key as a param name and value of tuple(param value, param db type)</param>
+            <returns>A connected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <example>
+            <code description="Updating data in the database" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DataManagerSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.CreateDataSet(System.String,System.Data.IDbConnection,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Tuple{System.Object,System.Data.DbType}})">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed SQL statement from the specified database. Can only be called once per instance.
+            Use multiple objects when your logic requires working with multiple connected
+            datasets. Although the Finalize methods calls Dispose, thereby enabling the GC
+            to clean up unmanaged code, call Dispose on your DataManager object as soon as your are done.
+            </summary>
+            <param name="sql">The SQL specifying the data to return in <see cref="T:System.Data.DataSet"></see></param>
+            <param name="connection">The <see cref="T:System.Data.IDbConnection" /> to use.</param>
+            <param name="withSchema">Set to true if the returned dataset should contain schema information on table names, column names and types etc.</param>
+            <param name="sqlParams">Command parameters dictionary with key as a param name and value of tuple(param value, param db type)</param>
+            <returns>A connected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <example>
+            <code description="Updating data in the database" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DataManagerSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.CreateDataSet(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed <see cref="T:Dynamicweb.Data.CommandBuilder" />. Can only be called once per instance.
+            Use multiple objects when your logic requires working with multiple connected
+            datasets. Although the Finalize methods calls Dispose, thereby enabling the GC
+            to clean up unmanaged code, call Dispose on your DataManager object as soon as your are done.
+            </summary>
+            <param name="builder">The <see cref="F:Dynamicweb.Data.DataManager.commandBuilder" /> specifying the data to return in dataset</param>
+            <returns>A connected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>
+            Connects to the default database. Dynamic.mdb in /Database if the solution is running MS Access, or the SQL-Server database if the solution is running MS SQL-Server.
+            </remarks>
+            <example>
+            <code description="Updating data in the database" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DataManagerSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.CreateDataSet(Dynamicweb.Data.CommandBuilder,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed <see cref="T:Dynamicweb.Data.CommandBuilder" />. Can only be called once per instance.
+            Use multiple objects when your logic requires working with multiple connected
+            datasets. Although the Finalize methods calls Dispose, thereby enabling the GC
+            to clean up unmanaged code, call Dispose on your DataManager object as soon as your are done.
+            </summary>
+            <param name="builder">The <see cref="F:Dynamicweb.Data.DataManager.commandBuilder" /> specifying the data to return in dataset</param>
+            <param name="withSchema">Set to true if the returned dataset should contain schema information on table names, column names and types etc.</param>
+            <returns>A connected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>
+            Connects to the default database. Dynamic.mdb in /Database if the solution is running MS Access, or the SQL-Server database if the solution is running MS SQL-Server.
+            </remarks>
+            <example>
+            <code description="Updating data in the database" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DataManagerSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.CreateDataSet(Dynamicweb.Data.CommandBuilder,System.String)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed <see cref="T:Dynamicweb.Data.CommandBuilder" />. Can only be called once per instance.
+            Use multiple objects when your logic requires working with multiple connected
+            datasets. Although the Finalize methods calls Dispose, thereby enabling the GC
+            to clean up unmanaged code, call Dispose on your DataManager object as soon as your are done.
+            </summary>
+            <param name="builder">The <see cref="F:Dynamicweb.Data.DataManager.commandBuilder" /> specifying the data to return in dataset</param>
+            <param name="database">Name of the MS Access database to get the data from (I.e. "Access.mdb" in /Database directory). Ignored if solution is running MS SQL-Server</param>
+            <returns>A connected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>
+            Connects to the default database. Dynamic.mdb in /Database if the solution is running MS Access, or the SQL-Server database if the solution is running MS SQL-Server.
+            </remarks>
+            <example>
+            <code description="Updating data in the database" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DataManagerSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.CreateDataSet(Dynamicweb.Data.CommandBuilder,System.String,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed <see cref="T:Dynamicweb.Data.CommandBuilder" />. Can only be called once per instance.
+            Use multiple objects when your logic requires working with multiple connected
+            datasets. Although the Finalize methods calls Dispose, thereby enabling the GC
+            to clean up unmanaged code, call Dispose on your DataManager object as soon as your are done.
+            </summary>
+            <param name="builder">The <see cref="F:Dynamicweb.Data.DataManager.commandBuilder" /> specifying the data to return in dataset</param>
+            <param name="database">Name of the MS Access database to get the data from (I.e. "Access.mdb" in /Database directory). Ignored if solution is running MS SQL-Server</param>
+            <param name="withSchema">Set to true if the returned dataset should contain schema information on table names, column names and types etc.</param>
+            <returns>A connected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>
+            Connects to the default database. Dynamic.mdb in /Database if the solution is running MS Access, or the SQL-Server database if the solution is running MS SQL-Server.
+            </remarks>
+            <example>
+            <code description="Updating data in the database" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DataManagerSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.CreateDataSet(Dynamicweb.Data.CommandBuilder,System.Data.IDbConnection,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed <see cref="T:Dynamicweb.Data.CommandBuilder" />. Can only be called once per instance.
+            Use multiple objects when your logic requires working with multiple connected
+            datasets. Although the Finalize methods calls Dispose, thereby enabling the GC
+            to clean up unmanaged code, call Dispose on your DataManager object as soon as your are done.
+            </summary>
+            <param name="builder">The <see cref="F:Dynamicweb.Data.DataManager.commandBuilder" /> specifying the data to return in dataset</param>
+            <param name="connection">The <see cref="T:System.Data.IDbConnection" /> to use.</param>
+            <param name="withSchema">Set to true if the returned dataset should contain schema information on table names, column names and types etc.</param>
+            <returns>A connected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>
+            Connects to the default database. Dynamic.mdb in /Database if the solution is running MS Access, or the SQL-Server database if the solution is running MS SQL-Server.
+            </remarks>
+            <example>
+            <code description="Updating data in the database" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DataManagerSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.CreateDataSet(System.Data.IDbCommand,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Data.DataSet"></see> with data returned by the passed <see cref="T:System.Data.IDbCommand" />.
+            Use multiple objects when your logic requires working with multiple connected
+            datasets. Although the Finalize methods calls Dispose, thereby enabling the GC
+            to clean up unmanaged code, call Dispose on your DataManager object as soon as your are done.
+            </summary>
+            <param name="selectCommand">The <see cref="F:Dynamicweb.Data.DataManager.commandBuilder" /> specifying the data to return in dataset</param>
+            <param name="withSchema">Set to true if the returned dataset should contain schema information on table names, column names and types etc.</param>
+            <returns>A connected <see cref="T:System.Data.DataSet"></see> instance with data.</returns>
+            <remarks>
+            Connects to the default database. Dynamic.mdb in /Database if the solution is running MS Access, or the SQL-Server database if the solution is running MS SQL-Server.
+            </remarks>
+            <example>
+            <code description="Updating data in the database" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DataManagerSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.Update(System.Data.DataSet)">
+            <summary>
+            Updates the dataset.
+            </summary>
+            <param name="dataSet">The dataset with changes to update.</param>
+            <example>
+            <code description="Updating data in the database" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DataManagerSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.Update(System.Data.DataSet,System.Boolean)">
+            <summary>
+            Updates the data set.
+            </summary>
+            <param name="dataSet">The dataset with changes to update.</param>
+            <param name="acceptChangesDuringFill">Indicating whether AcceptChanges is called on a DataRow after it is added to the DataTable during any of the Fill operations.</param>
+            <example>
+            <code description="Updating data in the database" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DataManagerSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.Finalize">
+            <summary>
+            Allows an <see cref="T:System.Object" /> to attempt to free resources and perform other cleanup operations before the <see cref="T:System.Object" /> is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Data.DataManager.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+            <param name="disposeManagedObjects"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="T:Dynamicweb.Data.ExcelHelper">
+            <summary>
+            CLass used to present information about the internal structure and values of the objects to be written.
+            <remarks>Similar to DwTemplateTags</remarks>
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Data.ExcelHelper.WriteHelp``1(``0,System.IO.FileInfo,OfficeOpenXml.ExcelWorksheet)">
+            <summary>
+            Writes the properties and collections of the specified object into the writer.
+            </summary>
+            <typeparam name="T">Type of the object to export that is used when generics is used instead of Dictionaries of string, object</typeparam>
+            <param name="objectToExport">Object containing properties and collections that needs debug information</param>
+            <param name="master">Master containing the excel-template used to generate the worksheet</param>
+            <param name="worksheet">Worksheet to fill with information</param>
+        </member>
+        <member name="T:Dynamicweb.Data.ExcelLoopDirection">
+            <summary>
+            Specifies if a loop is horizontal or vertical in direction
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Data.ExcelLoopParameters">
+            <summary>
+            Complex object representing the information passed to a loop-command in the master excel worksheet.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Data.ExcelWriter">
+            <summary>
+            Excel exporter that handles merging object values into placeholders in worksheet
+            </summary>   
+            <remarks>
+            https://github.com/JanKallman/EPPlus/issues/335 -> conditional formatting needs custom handling, because EPPlus does not handle them correctly
+            </remarks>
+        </member>
+        <member name="P:Dynamicweb.Data.ExcelWriter.AutoFitMinWidth">
+            <summary>
+            Makes it possible to control the minimum width of the columns in the worksheet
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Data.ExcelWriter.AutoFitMaxWidth">
+            <summary>
+            Makes it possible to control the maximum width of the columns in the worksheet
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Data.ExcelWriter.Debug">
+            <summary>
+            Make it possible to pass debug configuration to change what is written.
+            </summary>
+            <remarks>
+            Currently supports comma-seperated instructions
+            Help
+            UseLoops
+            Replace
+            DeleteCommands
+            FixWidth        
+            </remarks>
+            <example>
+            "UseLoops,Replace,DeleteCommands,FixWidth"
+            </example>
+        </member>
+        <member name="P:Dynamicweb.Data.ExcelWriter.BindingFlags">
+            <summary>
+            Make it possible to change the way properties are fetched from the object.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Data.ExcelWriter.TypesToHideFromHelp">
+            <summary>
+            Configuration of types that should not be printed in the help-excel file, for brevity
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Data.ExcelWriter.FileName">
+            <summary>
+            Filename where placeholders are replaced if possible.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Data.ExcelWriter.Write``1(``0,System.String,System.String)">
+            <summary>
+            Merges an objects values into a worksheet
+            </summary>
+            <typeparam name="T">Type of object to merge</typeparam>
+            <param name="objectToExport">Object containing values to merge</param>
+            <param name="pathToMaster">Excel with worksheet containing placeholders and commands</param>
+            <param name="pathToNewFile">Output excel file location</param>
+        </member>
+        <member name="M:Dynamicweb.Data.ExcelWriter.Write``1(``0,System.String)">
+            <summary>
+            Merges an objects values into a worksheet
+            </summary>
+            <typeparam name="T">Type of object to merge</typeparam>
+            <param name="objectToExport">Object containing values to merge</param>
+            <param name="pathToMaster">Excel with worksheet containing placeholders and commands</param>
+            <returns>Bytestream of excel</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.ExcelWriter.Write``1(``0,System.IO.FileInfo,System.IO.FileInfo)">
+            <summary>
+            Merges an objects values into a worksheet
+            </summary>
+            <typeparam name="T">Type of object to merge</typeparam>
+            <param name="objectToExport">Object containing values to merge</param>
+            <param name="master">Excel with worksheet containing placeholders and commands</param>
+            <param name="newFile">Output excel file location</param>
+        </member>
+        <member name="M:Dynamicweb.Data.ExcelWriter.FindLoops(OfficeOpenXml.ExcelRange)">
+            <summary>
+            Finds all loop-commands in the cell-range
+            </summary>
+            <param name="cells">Cellrange to look for loops</param>
+            <returns>Loops in range</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.ExcelWriter.CopyPlaceholdersForLoops(System.Object,System.Collections.Generic.Dictionary{System.Int32,System.Collections.Generic.List{Dynamicweb.Data.ExcelLoopParameters}},OfficeOpenXml.ExcelWorksheet)">
+            <summary>
+            Copies the placesholders for each loopitem in the loops
+            </summary>
+            <remarks>Pass 1</remarks>
+            <param name="objectToExport">Object containing export-data</param>
+            <param name="loopsFound">Loops in worksheet</param>
+            <param name="worksheet">Worksheet to write</param>
+        </member>
+        <member name="M:Dynamicweb.Data.ExcelWriter.ReplaceInsideLoops(System.Object,System.Collections.Generic.Dictionary{System.Int32,System.Collections.Generic.List{Dynamicweb.Data.ExcelLoopParameters}},OfficeOpenXml.ExcelWorksheet)">
+            <summary>
+            Replaces all placeholder values in loops
+            </summary>
+            <remarks>Pass 2</remarks>
+            <param name="objectToExport">Object containing export-data</param>
+            <param name="loopsFound">Loops in worksheet</param>
+            <param name="workSheet">Worksheet to write</param>
+        </member>
+        <member name="M:Dynamicweb.Data.ExcelWriter.DeleteLoopCommandLines(OfficeOpenXml.ExcelWorksheet,System.Collections.Generic.Dictionary{System.Int32,System.Collections.Generic.List{Dynamicweb.Data.ExcelLoopParameters}})">
+            <summary>
+            Deletes the loop-commands in the worksheet
+            </summary>
+            <param name="worksheet">Worksheet to cleanup commands in</param>
+            <param name="loopsFound">Loops found in worksheet</param>
+        </member>
+        <member name="M:Dynamicweb.Data.ExcelWriter.AutoFitColumns(OfficeOpenXml.ExcelWorksheet)">
+            <summary>
+            Adjusts all columns in the worksheet to fix the Max and Min width specified.
+            </summary>
+            <param name="worksheet">Worksheet that needs adjusted columns</param>
+        </member>
+        <member name="M:Dynamicweb.Data.GeneralLogRepository.AppendCondition(Dynamicweb.Data.CommandBuilder,System.String,System.String,System.Boolean@,System.String)">
+            <summary>
+            Appends the condition IF the value is not nothing.
+            </summary>
+            <param name="commandBuilder"></param>
+            <param name="condition"></param>
+            <param name="value"></param>
+            <param name="conditionAlreadyAdded"></param>
+            <param name="joiningCommand"></param>
+        </member>
+        <member name="M:Dynamicweb.Data.GeneralLogRepository.AppendCondition(Dynamicweb.Data.CommandBuilder,System.String,System.DateTime,System.Boolean@,System.String)">
+            <summary>
+            Appends the condition IF the value is not nothing.
+            </summary>
+            <param name="commandBuilder"></param>
+            <param name="condition"></param>
+            <param name="value"></param>
+            <param name="conditionAlreadyAdded"></param>
+            <param name="joiningCommand"></param>
+        </member>
+        <member name="T:Dynamicweb.Data.IDatabaseConnectionProvider">
+            <summary>
+            Represents the database connection interface for the provider for replace the logic of creating database connections and data adapters to the Dynamicweb database.
+            </summary>
+            <remarks>
+            You should not implement this interface directly. Inherit the <see cref="T:Dynamicweb.Data.DatabaseConnectionProvider"/> instead.
+            </remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.IDatabaseConnectionProvider.CreateConnection">
+            <summary>Creates and opens a database connection to the specified database.</summary>
+            <returns>A Database Connection (a IDbConnection object). The connection is connected to the SQL Server database specified in database setup (/Files/GlobalSettings.aspx).</returns>
+            <remarks>The returned IDbConnection instance has to be a <see cref="T:System.Data.SqlClient.SqlConnection"></see>.</remarks>
+            <example>
+            <code title="Connect to database and get data" description="Full database example" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateConnection.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.IDatabaseConnectionProvider.CreateAdapter">
+            <summary>Creates a DataAdapter based on the database type of the solution.</summary>
+            <returns>A <see cref="T:System.Data.SqlClient.SqlDataAdapter"></see> </returns>
+            <example>
+            <code title="Connect to database and get data" description="Full database example" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Data\Head\Dynamicweb.Data.Examples\DatabaseCreateConnection.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="T:Dynamicweb.Data.DbObject">
+            <summary>
+            Class contains function for data base objects handling.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Data.DbObject._id">
+            <summary>
+            The ID (primary key) of the instance of the DBobject
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Data.DbObject._tableName">
+            <summary>
+            Name of table in the database where data for this record are kept.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Data.DbObject._keyField">
+            <summary>
+            Name of the primary key field of the table
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Data.DbObject.Connection">
+            <summary>
+            Connection to the database that can be overriden if operation on a series of objects needs to be done in the context of a transaction
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Data.DbObject.Transaction">
+            <summary>
+            Transaction if operation on a series of objects needs to be done in the context of a transaction
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Data.DbObject.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Data.DbObject" /> class.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <param name="keyField">The key field.</param>
+        </member>
+        <member name="P:Dynamicweb.Data.DbObject.ID">
+            <summary>
+            Store and retrieves the current object ID - usually the primary key of the table storing the data.
+            </summary>
+            <value>Object ID.</value>
+            <returns>The current object ID.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Data.DbObject.IsNew">
+            <summary>
+            Indicates whether the current object is new.
+            </summary>
+            <value>Boolean statement.</value>
+            <returns><c>True</c> or <c>False</c>.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.DbObject.Delete">
+            <summary>
+            Deletes the current instance of this object based on its ID.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.DbObject.Delete(System.Int32)">
+            <summary>
+            Deletes the object with specified ID.
+            </summary>
+            <param name="id">Specified ID.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.DbObject.Fill(System.Data.IDataReader)">
+            <summary>
+            Override the fill method to map all the properties values to their respective field on the provided data reader. Used when an instance of the object type is loaded from the database.
+            </summary>
+            <param name="reader">The datareader instance with the data.</param>
+        </member>
+        <member name="M:Dynamicweb.Data.DbObject.FillRow(System.Data.DataRow)">
+            <summary>
+            Override the FillRow method to map all the properties values to their respective field on the datarow. Used when the object is being saved.
+            </summary>
+            <param name="row">The datarow to fill with data.</param>
+        </member>
+        <member name="M:Dynamicweb.Data.DbObject.Load(System.Int32)">
+            <summary>
+            Loads data from the current ID row.
+            </summary>
+            <param name="id">ID of the current row.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.DbObject.Save">
+            <summary>
+            Saves current data to the data base.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Data.DbObject.ExecuteDbObject``1(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Executes the query and returns DbObject from the the first row in the result set returned by the query.
+            All other rows are ignored.
+            </summary>
+            <typeparam name="T"><see cref="T:Dynamicweb.Data.DbObject" /> derived type containing a parameterless constructor.</typeparam>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" />.</param>
+            <returns>If query returns a result an instance of a <see cref="T:Dynamicweb.Data.DbObject" /> derived type; otherwise null (Nothing in Visual Basic).</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.DbObject.ExecuteList``1(System.String)">
+            <summary>
+            Executes the query and returns list of DBObject objects in the result set returned by the query.
+            </summary>
+            <typeparam name="T"><see cref="T:Dynamicweb.Data.DbObject" /> derived type containing a parameterless constructor.</typeparam>
+            <param name="sql">The query.</param>
+            <returns>If query returns a result a <see cref="T:System.Collections.Generic.List`1" /> containing instances of the <see cref="T:Dynamicweb.Data.DbObject" /> derived type; otherwise an empty <see cref="T:System.Collections.Generic.List`1" />.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.DbObject.ExecuteList``1(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Executes the query and returns list of DBObject objects in the result set returned by the query.
+            </summary>
+            <typeparam name="T"><see cref="T:Dynamicweb.Data.DbObject" /> derived type containing a parameterless constructor.</typeparam>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the query.</param>
+            <returns>If query returns a result a <see cref="T:System.Collections.Generic.List`1" /> containing instances of the <see cref="T:Dynamicweb.Data.DbObject" /> derived type; otherwise an empty <see cref="T:System.Collections.Generic.List`1" />.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.DbObject.ExecuteList``2(System.String)">
+            <summary>
+            Executes the query and returns a collection of DBObject objects in the result set returned by the query.
+            </summary>
+            <typeparam name="T"><see cref="T:Dynamicweb.Data.DbObject" /> derived type containing a parameterless constructor.</typeparam>
+            <typeparam name="TCollection"><see cref="T:System.Collections.Generic.List`1" /> derived type containing a parameterless constructor.</typeparam>
+            <param name="sql">The query.</param>
+            <returns>If query returns a result a <see cref="T:System.Collections.Generic.List`1" /> containing instances of the <see cref="T:Dynamicweb.Data.DbObject" /> derived type; otherwise an empty <see cref="T:System.Collections.Generic.List`1" />.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.DbObject.ExecuteList``2(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Executes the query and returns a collection of DBObject objects in the result set returned by the query.
+            </summary>
+            <typeparam name="T"><see cref="T:Dynamicweb.Data.DbObject" /> derived type containing a parameterless constructor.</typeparam>
+            <typeparam name="TCollection"><see cref="T:System.Collections.Generic.List`1" /> derived type containing a parameterless constructor.</typeparam>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" /> containing the query.</param>
+            <returns>If query returns a result a <see cref="T:System.Collections.Generic.List`1" /> containing instances of the <see cref="T:Dynamicweb.Data.DbObject" /> derived type; otherwise an empty <see cref="T:System.Collections.Generic.List`1" />.</returns>
+        </member>
+        <member name="T:Dynamicweb.Data.Helpers">
+            <summary>
+            Utility for finding a SQL collation from a CultureInfo object.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Data.Helpers.GetSQLCollationName(System.Globalization.CultureInfo@)">
+            <summary>
+            Gets the name of the SQL collation for a given CultureInfo.
+            </summary>
+            <param name="culture">The culture.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.Helpers.GetNameOfSqlCollation(System.Globalization.CultureInfo)">
+            <summary>
+            Gets the name of the SQL collation for a given CultureInfo.
+            </summary>
+            <param name="culture">The culture.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:Dynamicweb.Data.NamespaceDoc">
+            <summary>
+            The Dynamicweb.Data namespace contains types for accessing and managing data in the database. Use this namespace to query data directly on the database where the objects in Dynamicweb are not sufficient.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Data.DatabaseReplacer">
+            <summary>
+                This class contains functions to replace specified values in specified fields in a Database.
+            </summary>
+            <remarks>
+                <para>
+                <list type="table">
+                <listheader>
+                <term>Database</term>
+                <description>Function to call</description>
+                </listheader>
+                <item><term>Do the replace</term>
+                <description>RunReplace</description></item>
+                </list>
+                </para>
+            </remarks>
+            <example>
+            <code>
+            '' Do a replace of the value "MyString" with "MyNewString" on field "PageMenuText" in table "Page"
+            '' in the SQL-Database specified in control panel.
+            Dim objDatabaseReplacer As New DatabaseReplacer
+            objDatabaseReplacer.Table = "Page"
+            objDatabaseReplacer.Field = "PageMenuText"
+            objDatabaseReplacer.ReplaceString = "MyString"
+            objDatabaseReplacer.ReplaceWith = "MyNewString"
+            objDatabaseReplacer.PrimaryKeyField = "PageID"
+            ''Optional
+            objDatabaseReplacer.PrimaryKeyValue = "1"
+            Dim NumberOfRecordsAffected As Integer = objDatabaseReplacer.RunReplace()
+            </code>
+            </example>
+        </member>
+        <member name="P:Dynamicweb.Data.DatabaseReplacer.Table">
+             <summary>
+             Sets or gets the name of table in the specified database to do the replace on.
+             </summary>
+             <returns>The name of the table.</returns>
+             <remarks>
+            
+             </remarks>
+             <example>
+             <code>
+             '' Do a replace of the value "MyString" with "MyNewString" on field "PageMenuText" in table "Page"
+             '' in the SQL-Database specified in control panel.
+             Dim objDatabaseReplacer As New DatabaseReplacer
+             objDatabaseReplacer.Table = "Page"
+             objDatabaseReplacer.Field = "PageMenuText"
+             objDatabaseReplacer.PrimaryKeyField = "PageID"
+             objDatabaseReplacer.ReplaceString = "MyString"
+             objDatabaseReplacer.ReplaceWith = "MyNewString"
+             Dim NumberOfRecordsAffected As Integer = objDatabaseReplacer.RunReplace()
+             </code>
+             </example>
+        </member>
+        <member name="P:Dynamicweb.Data.DatabaseReplacer.PrimaryKeyField">
+            <summary>
+            Sets or gets the name of the field in the specified table to do the replace on
+            </summary>
+            <returns>The name of the field.</returns>
+            <remarks>
+            .
+            </remarks>
+            <example>
+            <code>
+            '' Do a replace of the value "MyString" with "MyNewString" on field "PageMenuText" in table "Page"
+            '' in the SQL-Database specified in control panel.
+            Dim objDatabaseReplacer As New DatabaseReplacer
+            objDatabaseReplacer.Table = "Page"
+            objDatabaseReplacer.Field = "PageMenuText"
+            objDatabaseReplacer.PrimaryKeyField = "PageID"
+            objDatabaseReplacer.ReplaceString = "MyString"
+            objDatabaseReplacer.ReplaceWith = "MyNewString"
+            Dim NumberOfRecordsAffected As Integer = objDatabaseReplacer.RunReplace()
+            </code>
+            </example>
+        </member>
+        <member name="P:Dynamicweb.Data.DatabaseReplacer.PrimaryKeyValue">
+            -----------------------------------------------------------------------------
+            <summary>
+            Sets or gets the value of the primarykey in the specified table to do the replace on
+            </summary>
+            <returns>The primarykey of the column.</returns>
+            <remarks>
+            If PrimaryKeyValue is specified the replace will only be run on the record matching this value.
+            Otherwise all records in the specified field in the table containing the ReplaceString will be replaced
+            </remarks>
+            <example>
+            <code>
+            '' Do a replace of the value "MyString" with "MyNewString" on field "PageMenuText" in table "Page"
+            '' in the SQL-Database specified in control panel where PageID  = 1.
+            Dim objDatabaseReplacer As New DatabaseReplacer
+            objDatabaseReplacer.Table = "Page"
+            objDatabaseReplacer.Field = "PageMenuText"
+            objDatabaseReplacer.PrimaryKeyField = "PageID"
+            objDatabaseReplacer.PrimaryKeyValue = "1"
+            objDatabaseReplacer.ReplaceString = "MyString"
+            objDatabaseReplacer.ReplaceWith = "MyNewString"
+            Dim NumberOfRecordsAffected As Integer = objDatabaseReplacer.RunReplace()
+            </code>
+            </example>
+        </member>
+        <member name="P:Dynamicweb.Data.DatabaseReplacer.Field">
+            <summary>
+            Sets or gets the name of the primary key field in the specified table to do the replace on
+            </summary>
+            <returns>The name of the primary key field.</returns>
+            <remarks>
+            .
+            </remarks>
+            <example>
+            <code>
+            '' Do a replace of the value "MyString" with "MyNewString" on field "PageMenuText" in table "Page"
+            '' in the SQL-Database specified in control panel.
+            Dim objDatabaseReplacer As New DatabaseReplacer
+            objDatabaseReplacer.Table = "Page"
+            objDatabaseReplacer.Field = "PageMenuText"
+            objDatabaseReplacer.PrimaryKeyField = "PageID"
+            objDatabaseReplacer.ReplaceString = "MyString"
+            objDatabaseReplacer.ReplaceWith = "MyNewString"
+            Dim NumberOfRecordsAffected As Integer = objDatabaseReplacer.RunReplace()
+            </code>
+            </example>
+        </member>
+        <member name="P:Dynamicweb.Data.DatabaseReplacer.ReplaceString">
+            <summary>
+            Sets or gets the string to replace.
+            </summary>
+            <returns>The string to replace.</returns>
+            <remarks>
+            Cannot be an empty string.
+            </remarks>
+            <example>
+            <code>
+            '' Do a replace of the value "MyString" with "MyNewString" on field "PageMenuText" in table "Page"
+            '' in the SQL-Database specified in control panel.
+            Dim objDatabaseReplacer As New DatabaseReplacer
+            objDatabaseReplacer.Table = "Page"
+            objDatabaseReplacer.Field = "PageMenuText"
+            objDatabaseReplacer.PrimaryKeyField = "PageID"
+            objDatabaseReplacer.ReplaceString = "MyString"
+            objDatabaseReplacer.ReplaceWith = "MyNewString"
+            Dim NumberOfRecordsAffected As Integer = objDatabaseReplacer.RunReplace()
+            </code>
+            </example>
+        </member>
+        <member name="P:Dynamicweb.Data.DatabaseReplacer.ReplaceWith">
+            <summary>
+            Sets or gets the string to replace with.
+            </summary>
+            <returns>The string to replace with.</returns>
+            <remarks>
+            </remarks>
+            <example>
+            <code>
+            '' Do a replace of the value "MyString" with "MyNewString" on field "PageMenuText" in table "Page"
+            '' in the SQL-Database specified in control panel.
+            Dim objDatabaseReplacer As New DatabaseReplacer
+            objDatabaseReplacer.Table = "Page"
+            objDatabaseReplacer.Field = "PageMenuText"
+            objDatabaseReplacer.PrimaryKeyField = "PageID"
+            objDatabaseReplacer.ReplaceString = "MyString"
+            objDatabaseReplacer.ReplaceWith = "MyNewString"
+            Dim NumberOfRecordsAffected As Integer = objDatabaseReplacer.RunReplace()
+            </code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DatabaseReplacer.RunReplace">
+            <summary>
+            Executes the replace on the database.
+            </summary>
+            <returns>Message with result of the replace with the number of records affected by replace.</returns>
+            <remarks>
+            Database, Table, Field and ReplaceString properties must be specified.
+            </remarks>
+            <example>
+            <code>
+            '' Do a replace of the value "MyString" with "MyNewString" on field "PageMenuText" in table "Page"
+            '' in the SQL-Database specified in control panel.
+            Dim objDatabaseReplacer As New DatabaseReplacer
+            objDatabaseReplacer.Table = "Page"
+            objDatabaseReplacer.Field = "PageMenuText"
+            objDatabaseReplacer.PrimaryKeyField = "PageID"
+            objDatabaseReplacer.ReplaceString = "MyString"
+            objDatabaseReplacer.ReplaceWith = "MyNewString"
+            Dim NumberOfRecordsAffected As Integer = objDatabaseReplacer.RunReplace()
+            </code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Data.DatabaseReplacer.GetDataSet">
+            <summary>
+            Gets a dataset of fields and their values for displaying what will be replaced.
+            </summary>
+            <remarks>DataSet is disposed</remarks>
+            <returns>DataSet.</returns>
+        </member>
+        <member name="M:Dynamicweb.Data.DatabaseReplacer.ReplaceInDatabase(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Executes the replace on the database.
+            </summary>
+            <param name="database">Name of database.</param>
+            <param name="table">Name of table.</param>
+            <param name="field">Name of field.</param>
+            <param name="primaryKeyField">Name of primary key field.</param>
+            <param name="originalValue">String to replace.</param>
+            <param name="replaceValue">String to replace with.</param>
+            <returns>Message with result of the replace with the number of records affected by replace.</returns>
+            <remarks>
+            database, table, strField and strReplaceString must be specified.
+            </remarks>
+            <example>
+            <code>
+            '' Do a replace of the value "MyString" with "MyNewString" on field "PageMenuText" in table "Page"
+            '' in the SQL-Database specified in control panel.
+            Dim objDatabaseReplacer As New DatabaseReplacer
+            Dim NumberOfRecordsAffected As Integer = objDatabaseReplacer.RunReplace("Dynamic.mdb", "Page", "PageMenuText", "PageID", "MyString", "MyNewString")
+            </code>
+            </example>
+        </member>
+    </members>
+</doc>

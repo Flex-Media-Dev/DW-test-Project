@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow">
+            <summary>
+            QuickPay Payment Window Checkout Handler
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.Merchant">
+            <summary>
+            Gets or sets QuickPay Payment Window Merchant ID
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.Agreement">
+            <summary>
+            Gets or sets QuickPay Payment Window User Agreement id
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.ApiKey">
+            <summary>
+            Gets or sets QuickPay Payment Window Api Key
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.PrivateKey">
+            <summary>
+            Gets or sets QuickPay Payment Window Private key
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.PaymentMethods">
+            <summary>
+            Gets or sets payment methods allowed to be used in Quick Pay service
+            </summary> 
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.PostModeSelection">
+            <summary>
+            Gets or sets post mode indicates how user will be redirected to Quick Pay service
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.PostTemplate">
+            <summary>
+            Gets or sets path to template that renders before user will be redirected to Quick Pay service
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.CancelTemplate">
+            <summary>
+            Gets or sets path to template that renders when user canceled payment on Quick Pay service
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.ErrorTemplate">
+            <summary>
+            Gets or sets path to template that renders when error happened during Quick Pay service work
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.Branding">
+            <summary>
+            Gets or sets QuickPay Payment Window Branding ID
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.GoogleAnalyticsTracking">
+            <summary>
+            Gets or sets Google analitics tracking ID
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.GoogleAnalyticsClient">
+            <summary>
+            Gets or sets Google analitics client ID
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.AutoCapture">
+            <summary>
+            Gets or sets value indicates if CheckoutHandler supports autocapture
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.AutoFee">
+            <summary>
+            Gets or sets value indicates if CheckoutHandler supports autofee
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.StartCheckout(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Post values based on order to QuickPay
+            </summary>
+            <param name="order">The order to checkout</param>
+            <remarks>
+            	These are the fields that QuickPay should get
+            	merchant_id 	                /[^d]$/  	            This is your Merchant Account id.
+            	agreement_id 	                /[^d]$/  	            This is the User Agreement id. The checksum must be signed with the API-key belonging to this Agreement.
+            	order_id 	                    /^[a-zA-Z0-9]{4,20}$/ 	This is the order is generated in your system.
+            	language                        /^[a-z]{2}$/            Set the language of the user interface.
+            	amount 	                        /^[0-9]{1,10}$/ 	    The amount defined in the request in its smallest unit. In example, 1 EUR is written 100.
+            	currency 	                    /^[A-Z]{3}$/ 	        The payment currency as the 3-letter ISO 4217 alphabetical code.
+            	continueurl                     /^https?://!            The customer will be redirected to this URL upon a succesful payment.
+            	cancelurl                       /^https?://!            The customer will be redirected to this URL if the custo,er cancels the payment.
+            	callbackurl                     /^https?://!            QuickPay will make a call back to this URL with the result of the payment. Overwrites the default callback url.
+            	autocapture                     /^[0-1]{1}$/            If set to 1, the payment will be captured automatically.
+            	autofee                         /^[0-1]{1}$/            If set to 1 the fee charged by the acquirer will be culculated and added to the transaction amount.
+            	subscription                    /^[0-1]{1}$/            Create a subscription instead of a standart payment.
+            	description                     /^[\w\s\-\.]{1-20}%/    A value by the merchant's own choise. Used for indentifying a subscription payment. It is required if "subscribe" is set.
+            	payment_methods                 /^[a-zA-Z,\-]$/         Lock to some payment method(s). Multiple cart types allowed by comma separation.
+            	branding_id                     /[^d]$/                 Use this brandidng. Overwrites the default branding.
+            	google_analytics_tracking_id    /[^d]$/                 Your Google Analytics tracking ID.
+            	google_analytics_client_id      /[^d]$/                 Your Google Analytics client ID.
+            	checksum 	                    /^[a-z0-9]{32}$/ 	    The calculated checksum of your data./ 	
+            </remarks>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.Redirect(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Handles redirect from QuickPay with state
+            </summary>
+            <param name="order">Order for processing</param>
+            <returns>String representation of template output</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.Capture(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Send capture request to transaction service
+            </summary>
+            <param name="order">Order to be captured</param>
+            <returns><see cref="T:Dynamicweb.Ecommerce.Orders.OrderCaptureInfo">Order Cupture Info object</see> represents capture information about order</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.Capture(Dynamicweb.Ecommerce.Orders.Order,System.Int64,System.Boolean)">
+            <summary>
+            Send capture request to transaction service
+            </summary>
+            <param name="order">Order to be captured</param>
+            <param name="amount">Amount to be transferred. The amount must be given in smallest possible unit, e.g. cents 100 = USD 1.</param>
+            <param name="final">Shows that this step is final</param>
+            <returns><see cref="T:Dynamicweb.Ecommerce.Orders.OrderCaptureInfo">Order Cupture Info object</see> represents capture information about order</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.CaptureSupported(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Shows if capture supported
+            </summary>
+            <param name="order">This order object</param>
+            <returns>'true' if order transaction card type is defined</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.SplitCaptureSupported(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Shows if partial capture of the order supported
+            </summary>
+            <param name="order">Instance of order</param>
+            <returns>True, if partial capture of the order is supported</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.DeleteSavedCard(System.Int32)">
+            <summary>
+            Deletes saved card
+            </summary>
+            <param name="savedCardID">Identifier of saved card to be deleted</param>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.UseSavedCard(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Directs checkout handler to use saved card
+            </summary>
+            <param name="order">Order that should be processed using saved card information</param>
+            <returns>Empty string, if operation succeeded, otherwise string template with exception mesage</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.SavedCardSupported(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Shows if order supports saving card
+            </summary>
+            <param name="order">Instance of order</param>
+            <returns>True, if saving card is supported</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.Recurring(Dynamicweb.Ecommerce.Orders.Order,Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Creates new payment for recurring order
+            </summary>
+            <param name="order">recurring order to be used for payment</param>
+            <param name="initialOrder">Base order, used for creating current recurring order</param>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.RecurringSupported(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Shows if order supports recurring payments
+            </summary>
+            <param name="order">Instance of order</param>
+            <returns>True, if recurring payments are supported</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.QuickPayPaymentWindow.QuickPayPaymentWindow.CheckData(Dynamicweb.Ecommerce.Orders.Order,System.String,System.Int64,System.Boolean)">
+            <remarks>
+             These are the fields that QuickPay should send
+                  headers
+             QuickPay-Checksum-SHA256             Checksum of the entire raw callback request body - using HMAC with SHA256 as the cryptographic hash function. The checksum is signed using the Account's private key. We strongly recommend that you validate the checksum to ensure that the request is authentic.
+             QuickPay-Resource-Type               The type of resource that was created, changed or deleted
+             QuickPay-Account-ID                  The account id of the resource owner - useful if receiving callbacks for several systems on the same url
+             QuickPay-API-Version                 API version of the callback-generating request
+                  body
+             id                                   id
+             order_id                             The order id that is proceeding
+             accepted                             If transaction accepted
+             test_mode                            If is in test mode
+             branding_id                          The branding id
+             variables                            Variables?
+             acquirer                             The accuirer system
+             operations                           An array of objects with operations
+                  id                              Operation id
+                  type                            Operation type
+                  amount                          The amont
+                  pending                         If is in pending status
+                  qp_status_code                  Quick pay status code
+                  qp_status_msg                   Quick pay status message
+                  aq_status_code                  Accuirer status code
+                  aq_status_msg                   Accuirer status message
+                  data                            Data object
+                  created_at                      Created date
+             metadata                             An object with metadata
+                  type                            Card or phone
+                  brand                           Brand of operation
+                  last4                           Last 4 digits
+                  exp_month                       Expiration month
+                  exp_year                        Expiration year
+                  country                         Country
+                  is_3d_secure                    If is 3d secure
+                  customer_ip                     Customer ip
+                  customer_country                Customer county
+             created_at                           Transaction creation time
+             balance                              Captured balance
+             currency                             Currency code
+            </remarks>
+        </member>
+    </members>
+</doc>

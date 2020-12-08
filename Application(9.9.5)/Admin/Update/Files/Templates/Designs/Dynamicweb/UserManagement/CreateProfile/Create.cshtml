@@ -1,0 +1,109 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+<h2>Create new user</h2>
+
+@{
+    var errors = GetLoop("FormValidationErrors");
+    if (errors.Count > 0)
+    {
+        <div class="alert alert-danger validation-errors">
+            <p><strong>@Translate("Error_saving_profile", "Error saving profile")</strong></p>
+            <ul>
+                @foreach (var error in errors)
+                {
+                    <li>@error.GetValue("UserManagement:User.FormValidationError.FieldNiceName"): @error.GetValue("UserManagement:User.FormValidationError.Message")</li>
+                }
+            </ul>
+        </div>
+    }
+}
+
+@GetValue("UserManagement:User.FormStart")
+<div class="form-horizontal" role="form">
+    <div class="form-group">
+        <label for='@GetValue("UserManagement:User.Name.InputName")' class="col-sm-2 control-label">@Translate("Name", "Name")</label>
+        <div class="col-sm-10">
+            <input name="@GetValue("UserManagement:User.Name.InputName")" type="text" id="@GetValue("UserManagement:User.Name.InputName")" value="@GetValue("UserManagement:User.Name")" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for='@GetValue("UserManagement:User.UserName.InputName")' class="col-sm-2 control-label">@Translate("Username", "Username")</label>
+        <div class="col-sm-10">
+            <input name="@GetValue("UserManagement:User.UserName.InputName")" type="text" id="@GetValue("UserManagement:User.UserName.InputName")" value="@GetValue("UserManagement:User.UserName")" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for='@GetValue("UserManagement:User.Email.InputName")' class="col-sm-2 control-label">@Translate("Email", "Email")</label>
+        <div class="col-sm-10">
+            <input name="@GetValue("UserManagement:User.Email.InputName")" type="email" id="@GetValue("UserManagement:User.Email.InputName")" value="@GetValue("UserManagement:User.Email")" class="form-control" />
+        </div>
+    </div>
+
+    
+
+    <div class="form-group">
+        <label for='@GetValue("UserManagement:User.NewPassword.InputName")' class="col-sm-2 control-label">@Translate("password", "Password")</label>
+        <div class="col-sm-10">
+            <input name="@GetValue("UserManagement:User.NewPassword.InputName")" type="password" id="@GetValue("UserManagement:User.NewPassword.InputName")" value="@GetValue("UserManagement:User.NewPassword")" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for='@GetValue("UserManagement:User.NewPasswordConfirm.InputName")' class="col-sm-2 control-label">@Translate("Confirm_password", "Confirm password")</label>
+        <div class="col-sm-10">
+            <input name="@GetValue("UserManagement:User.NewPasswordConfirm.InputName")" type="password" id="@GetValue("UserManagement:User.NewPasswordConfirm.InputName")" value="@GetValue("UserManagement:User.NewPasswordConfirm")" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for='@GetValue("UserManagement:User.Phone.InputName")' class="col-sm-2 control-label">@Translate("Phone", "Phone")</label>
+        <div class="col-sm-10">
+            <input name="@GetValue("UserManagement:User.Phone.InputName")" type="tel" id="@GetValue("UserManagement:User.Phone.InputName")" value="@GetValue("UserManagement:User.Phone")" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">@Translate("Profilepicture", "Profile picture")</label>
+        <div class="col-sm-10">
+            @if (string.IsNullOrWhiteSpace(GetString("UserManagement:User.Image.Clean")))
+            {
+                <input name="@GetValue("UserManagement:User.Image.UploaderName")" type="file" id="@GetValue("UserManagement:User.Image.UploaderName")" class="btn btn-default" />
+            }
+            else
+            {
+                <img style="margin-bottom:2px" src="@GetString("UserManagement:User.Image.Clean")" class="thumbnail" />
+                <button type="button" class="btn btn-default" onclick="@GetString("UserManagement:User.Image.DeleteLink")">@Translate("Remove_profile_picture", "Remove profile picture")</button>
+            }
+        </div>
+    </div>
+
+    @{
+        var groups = GetLoop("SelectableGroups");
+        if (groups.Count > 0)
+        {
+            <div class="form-group">
+                <label class="col-sm-2 control-label">@Translate("Groups", "Groups")</label>
+                <div class="col-sm-10">
+                    @foreach (var group in groups)
+                    {
+                        <div class="checkbox">
+                            <label>
+                                @group.GetValue("UserManagement:User.SelectableGroup.Input")
+                                @group.GetValue("UserManagement:User.SelectableGroup.Name")
+                            </label>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    }
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">@Translate("createnewuser", "Create new user")</button>
+            @GetValue("UserManagement:User.FormEnd")
+        </div>
+    </div>
+</div>

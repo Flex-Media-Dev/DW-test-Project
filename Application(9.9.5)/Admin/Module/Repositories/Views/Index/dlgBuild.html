@@ -1,0 +1,173 @@
+﻿<div class="popup-dialog" id="dlgBuild" style="width: 450px;" onmousedown="dialog.floatTop('dlgBuild');">
+    <table class="popup-dialog-border" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td class="popup-dialog-tl"></td>
+            <td id="H_dlgBuild" class="popup-dialog-title">
+                <h2><span id="T_dlgBuild">Build</span></h2>
+                <a class="popup-dialog-close" href="javascript:void(0);" onclick="dialog.hide('dlgBuild');"></a>
+            </td>
+            <td class="popup-dialog-tr"></td>
+        </tr>
+        <tr>
+            <td class="popup-dialog-ml"></td>
+            <td class="popup-dialog-content">
+
+                <!-- CONTENT START -->
+
+                <fieldset style='margin:5px;'>
+                    <legend class='gbTitle'>Setting&nbsp;</legend>
+                    <table border="0">
+                        <tr>
+                            <td style="width: 170px">
+                                <label>
+                                    Name
+                                </label>
+                            </td>
+                            <td>
+                                <input name="dlgBuildName" ng-model="draftBuild.Name" type="text" id="dlgBuildName" class="std name" style="width: 200px" onkeyup="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    Builder
+                                </label>
+                            </td>
+                            <td>
+                                <select name="buildType" ng-model="draftBuild.Type"  ng-options="buildType.FullName as buildType.Name for buildType in buildTypes"></select><br>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                
+                <fieldset style="" margin:5px;" ng-if="draftBuild.Type == 'Dynamicweb.Indexing.SqlIndexBuilder, Dynamicweb.Indexing'">
+                    <legend class='gbTitle'>Connection Settings&nbsp;</legend>
+                    <table border="0">
+                        <tr>
+                            <td style="width: 170px">
+                                <label>
+                                    Log Folder
+                                </label>
+                            </td>
+                            <td>
+                                <input name="dlgBuildName" ng-model="draftBuild.Settings.LogFolder" type="text" class="std name" style="width: 200px" onkeyup="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 170px">
+                                <label>
+                                    Folder
+                                </label>
+                            </td>
+                            <td>
+                                <input ng-model="draftBuild.Settings.Connection" type="text" class="std name" style="width: 200px" />
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset style="" margin:5px;" ng-if="draftBuild.Type == 'Dynamicweb.Indexing.SqlIndexBuilder, Dynamicweb.Indexing'">
+                    <legend class='gbTitle'>Query&nbsp;</legend>
+                    <table border="0">
+                        <tr>
+                            <td>
+                                <textarea name="dlgBuildName" ng-model="draftBuild.Settings.Query" type="text" class="std name" style="width: 200px" onkeyup="" ></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset style="" margin:5px;" ng-if="draftBuild.Type == 'Dynamicweb.Indexing.SqlIndexBuilder, Dynamicweb.Indexing'">
+                    <legend class='gbTitle'>Query to get count&nbsp;</legend>
+                    <table border="0">
+                        <tr>
+                            <td>
+                                <textarea name="dlgBuildName" ng-model="draftBuild.Settings.CountQuery" type="text" class="std name" style="width: 200px" onkeyup=""></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset style="" margin:5px;" ng-if="draftBuild.Type == 'Dynamicweb.Indexing.Builder.Webcrawler, Dynamicweb.Indexing'">
+                    <legend class='gbTitle'>Webcrawler&nbsp;</legend>
+                    <table border="0">
+                        <tr>
+                            <td style="width: 170px">
+                                <label>
+                                    Folder
+                                </label>
+                            </td>
+                            <td>
+                                <input name="dlgBuildName" ng-model="draftInstance.Settings.Folder" type="text" id="dlgBuildName" class="std name" style="width: 200px" onkeyup="" />
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset style="" margin:5px;" ng-if="draftInstance.Type == 'Dynamicweb.Indexing.Solr.SolrIndexProvider, Dynamicweb.Indexing.Solr'">
+                    <legend class='gbTitle'>Solr&nbsp;</legend>
+                    <table border="0">
+                        <tr>
+                            <td style="width: 170px">
+                                <label>
+                                    Url
+                                </label>
+                            </td>
+                            <td>
+                                <input name="dlgBuildName" ng-model="draftInstance.Settings.Url" type="text" id="dlgBuildName" class="std name" style="width: 200px" onkeyup="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 170px">
+                                <label>
+                                    Username
+                                </label>
+                            </td>
+                            <td>
+                                <input name="dlgBuildName" ng-model="draftInstance.Settings.Username" type="text" id="dlgBuildName" class="std name" style="width: 200px" onkeyup="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 170px">
+                                <label>
+                                    Password
+                                </label>
+                            </td>
+                            <td>
+                                <input name="dlgBuildName" ng-model="draftInstance.Settings.Password" type="text" id="dlgBuildName" class="std name" style="width: 200px" onkeyup="" />
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset style='margin:5px;'>
+                    <legend class='gbTitle'>Setting&nbsp;</legend>
+                    Model:{{draftBuild | json}}
+                </fieldset>
+
+                <!-- CONTENT END -->
+                <!-- BUTTOMS START -->
+
+                <div class="separator-10">&nbsp;</div>
+                <div class="popup-dialog-buttons">
+                    <div class="popup-operation-indicator" style="display: none">
+                        <img border="0" alt="" title="" />
+                        <span></span>
+                    </div>
+                    <button type="button" class="dialog-button-ok" ng-click="saveBuildDialog();">OK</button>
+                    <button type="button" class="dialog-button-cancel" onclick="dialog.hide('dlgBuild');return false;">Annuller</button>
+                </div>
+
+                <!-- BUTTOMS END -->
+
+            </td>
+            <td class="popup-dialog-mr"></td>
+        </tr>
+        <tr>
+            <td class="popup-dialog-bl"></td>
+            <td class="popup-dialog-bm"></td>
+            <td class="popup-dialog-br"></td>
+        </tr>
+    </table>
+</div>

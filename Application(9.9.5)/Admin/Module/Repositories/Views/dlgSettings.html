@@ -1,0 +1,58 @@
+﻿<div class="popup-dialog" id="dlgSettingss" style="width: 450px;" onmousedown="dialog.floatTop('dlgSettings');">
+    <table class="popup-dialog-border" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td class="popup-dialog-tl"></td>
+            <td id="H_dlgSettings" class="popup-dialog-title">
+                <h2><span id="T_dlgSettings">Setting</span></h2>
+                <a class="popup-dialog-close" href="javascript:void(0);" onclick="dialog.hide('dlgSettings');"></a>
+            </td>
+            <td class="popup-dialog-tr"></td>
+        </tr>
+        <tr>
+            <td class="popup-dialog-ml"></td>
+            <td class="popup-dialog-content">
+
+                <fieldset style='margin:5px;'>
+                    <legend class='gbTitle'>Setting&nbsp;</legend>
+                    <table border="0">
+                        <tr>
+                            <td style="width: 170px">
+                                <label>
+                                    Name
+                                </label>
+                            </td>
+                            <td>
+                                <input name="dlgSettingsName" type="text" id="dlgSettingsName" class="std name" style="width: 200px" onkeyup="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    Value
+                                </label>
+                            </td>
+                            <td>
+                                <input name="dlgSettingsValue" type="text" id="dlgSettingsValue" class="std system-name" style="width: 200px" onblur="" />
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <div class="separator-10">&nbsp;</div>
+                <div class="popup-dialog-buttons">
+                    <div class="popup-operation-indicator" style="display: none">
+                        <img border="0" alt="" title="" />
+                        <span></span>
+                    </div>
+                    <button type="button" class="dialog-button-ok" ng-click="savedlgSettings();">OK</button>
+                    <button type="button" class="dialog-button-cancel" onclick="dialog.hide('dlgSettings');return false;">Annuller</button>
+                </div>
+            </td>
+            <td class="popup-dialog-mr"></td>
+        </tr>
+        <tr>
+            <td class="popup-dialog-bl"></td>
+            <td class="popup-dialog-bm"></td>
+            <td class="popup-dialog-br"></td>
+        </tr>
+    </table>
+</div>

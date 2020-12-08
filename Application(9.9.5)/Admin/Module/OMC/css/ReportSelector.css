@@ -1,0 +1,39 @@
+﻿.report-selector
+{
+    position: relative;
+}
+
+.report-selector .nav,
+.report-selector .nav .tree,
+.report-selector .nav .subtitle
+{
+    width: 99%;
+}
+
+.report-selector .nav .tree
+{
+    position: absolute !important;
+    border-right: none !important;
+}
+
+.report-selector .nav .subtitle
+{
+    top: 0px !important;
+}
+
+.report-selector .nav .tree input[type="checkbox"]
+{
+    margin: 0px;
+    padding: 0px;
+    margin-right: 2px;
+    
+    width: 14px;
+    height: 14px;
+}
+
+.report-selector .nav .tree input[type="checkbox"],
+.report-selector .nav .tree input[type="checkbox"]:focus,
+.report-selector .nav .tree input[type="checkbox"]:active
+{
+    outline: none;
+}

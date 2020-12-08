@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Ecommerce.CheckoutHandlers.KlarnaCheckout_v3</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Ecommerce.CheckoutHandlers.KlarnaCheckout_v3.KlarnaCheckout">
+            <summary>
+            Klarna Checkout Handler
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.KlarnaCheckout_v3.KlarnaCheckout.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.KlarnaCheckout_v3.KlarnaCheckout.StartCheckout(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Starts order checkout procedure
+            </summary>
+            <param name="order">Order to be checked out</param>
+            <returns>String representation of template output</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.KlarnaCheckout_v3.KlarnaCheckout.Redirect(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Redirects user to payment step or canceled order step
+            </summary>
+            <param name="order">Order for processing</param>
+            <returns>String representation of template output</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.KlarnaCheckout_v3.KlarnaCheckout.CaptureSupported(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Shows if capture supported
+            </summary>
+            <param name="order">This order object</param>
+            <returns>'true' if order transaction card type is defined</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.KlarnaCheckout_v3.KlarnaCheckout.SplitCaptureSupported(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Shows if partial capture of the order supported
+            </summary>
+            <param name="order">Instance of order</param>
+            <returns>True, if partial capture of the order is supported</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.KlarnaCheckout_v3.KlarnaCheckout.Capture(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Send capture request to transaction service
+            </summary>
+            <param name="order">Order to be captured</param>
+            <returns>Response from transaction service</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.KlarnaCheckout_v3.KlarnaCheckout.Capture(Dynamicweb.Ecommerce.Orders.Order,System.Int64,System.Boolean)">
+            <summary>
+            Send capture request to transaction service
+            </summary>
+            <param name="order">Order to be captured</param>
+            <param name="amount">Amount to be captured</param>
+            <param name="final">Value indicating whether further capturing is prohibited.</param>
+            <returns>Response from transaction service</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.KlarnaCheckout_v3.KlarnaCheckout.CancelOrder(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Cancels order reservation
+            </summary>
+            <param name="order">Order that needs to be canceled</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.KlarnaCheckout_v3.KlarnaCheckout.AmountRefund(Dynamicweb.Ecommerce.Orders.Order,Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Refunds order
+            </summary>
+            <param name="order">Modified order</param>
+            <param name="originalOrder">Original order</param>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.KlarnaCheckout_v3.KlarnaCheckout.PartialReturn(Dynamicweb.Ecommerce.Orders.Order,Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Performs partial return of order
+            </summary>
+            <param name="order">Modified order</param>
+            <param name="originalOrder">Original order</param>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.KlarnaCheckout_v3.KlarnaCheckout.FullReturn(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Performs full return of order
+            </summary>
+            <param name="order">Order that needs to be return</param>
+        </member>
+        <member name="T:Dynamicweb.Ecommerce.CheckoutHandlers.KlarnaCheckout_v3.KlarnaCheckout.CartItem">
+            <summary>
+            Represents helper class for getting cart items information
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.KlarnaCheckout_v3.KlarnaCheckout.CartItem.GetCartItems(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Gets cart items based on order data
+            </summary>
+            <param name="order">Order instance</param>
+            <returns>Set of CartItems</returns>
+        </member>
+    </members>
+</doc>

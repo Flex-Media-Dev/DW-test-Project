@@ -1,0 +1,170 @@
+﻿.dw-chart-error, .dw-chart-empty
+{
+    display: block;
+    text-align: center;
+    margin: 0px auto;
+    padding-top: 20px;
+    
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+}
+
+.dw-chart-empty
+{
+    background-image: url('/Admin/Images/Ribbon/UI/Charts/chart_empty.png');
+    color: #9b9b9b;
+}
+
+.dw-chart-error
+{
+    background-image: url('/Admin/Images/Ribbon/UI/Charts/chart_error.png');
+    color: #de7373;
+}
+
+.dw-chart table.google-visualization-table-table
+{
+    margin-top: 10px;
+    width: 100%;
+    
+    color: #333333;
+    font-family: arial, verdana, Microsoft JhengHei;
+    font-size: 11px;
+    font-weight: normal;
+    
+    border: 1px solid #bdcce0;
+    border-bottom: none;
+}
+
+.dw-chart table.google-visualization-table-table tr,
+.dw-chart table.google-visualization-table-table tr td
+{
+    border: none;
+    text-align: left;
+    padding-left: 3px;
+}
+
+.dw-chart table.google-visualization-table-table tr.google-visualization-table-tr-head,
+.dw-chart table.google-visualization-table-table tr.google-visualization-table-tr-head td.google-visualization-table-th
+{
+    padding: 0px;
+    margin: 0px;
+    background-image: url('/Admin/Images/Ribbon/UI/List/Pipe.gif');
+    height: 20px;
+    font-weight: normal;
+    padding-left: 3px;
+}
+
+.dw-chart table.google-visualization-table-table tr.google-visualization-table-tr-head td.google-visualization-table-th
+{
+    border-bottom: 1px solid #bdcce0;
+}
+
+.dw-chart table.google-visualization-table-table tr.google-visualization-table-tr-even td,
+.dw-chart table.google-visualization-table-table tr.google-visualization-table-tr-odd td
+{
+    background-color: #ffffff;
+    border-bottom: 1px solid #bdcce0;
+}
+
+.dw-chart table.google-visualization-table-table tr.google-visualization-table-tr-sel,
+.dw-chart table.google-visualization-table-table tr.google-visualization-table-tr-sel td
+{
+    background-color: #fff8dc;
+    border-bottom: 1px solid #bdcce0;
+}
+
+.dw-chart table.google-visualization-table-table tbody
+{
+    cursor: pointer;
+}
+
+.dw-chart table.google-visualization-table-table tr.google-visualization-table-tr-over,
+.dw-chart table.google-visualization-table-table tr.google-visualization-table-tr-over td
+{
+    background-color: #ebf7fd;
+    border-bottom: 1px solid #bdcce0;
+}
+
+.dw-chart .google-visualization-table-div-page
+{
+    height: 21px;
+    text-align: right;
+    line-height: 20px;
+    padding-right: 0px;
+    padding-left: 2px;
+    margin-right: -4px;
+}
+
+.dw-chart .google-visualization-table-div-page .goog-custom-button-collapse-right,
+.dw-chart .google-visualization-table-div-page .goog-custom-button-collapse-left
+{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.dw-chart .google-visualization-table-div-page .goog-custom-button-collapse-right
+{
+    background: url('/Admin/Images/Ribbon/UI/List/navigate_left.png') top left no-repeat !important;
+}
+
+.dw-chart .google-visualization-table-div-page > div.a-b-c:first-child
+{
+    background: url('/Admin/Images/Ribbon/UI/List/navigate_left.png') top left no-repeat !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-color: #ffffff !important;
+    cursor: pointer !important;
+    border: 1px solid #ffffff !important;
+}
+
+.dw-chart .google-visualization-table-div-page > div.a-b-c:first-child:hover
+{
+    background-color: #eff4f8 !important;
+    border: 1px solid #8193a6 !important;
+}
+
+.dw-chart .google-visualization-table-div-page > div.a-b-c:first-child div
+{
+    display: none !important;
+}
+
+.dw-chart .google-visualization-table-div-page .goog-custom-button-collapse-left
+{
+    background: url('/Admin/Images/Ribbon/UI/List/navigate_right.png') top left no-repeat !important;
+}
+
+.dw-chart .google-visualization-table-div-page > div.a-b-c
+{
+    background: url('/Admin/Images/Ribbon/UI/List/navigate_right.png') top left no-repeat !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-color: #ffffff !important;
+    cursor: pointer !important;
+    border: 1px solid #ffffff !important;
+}
+
+.dw-chart .google-visualization-table-div-page > div.a-b-c:hover
+{
+    background-color: #eff4f8 !important;
+    border: 1px solid #8193a6 !important;
+}
+
+.dw-chart .google-visualization-table-div-page > div.a-b-c div
+{
+    display: none !important;
+}
+
+.dw-chart .google-visualization-table-div-page .goog-custom-button-collapse-right div,
+.dw-chart .google-visualization-table-div-page .goog-custom-button-collapse-left div
+{
+    display: none;
+}
+
+.dw-chart .google-visualization-table-div-page .goog-custom-button-disabled
+{
+    opacity: 40;
+    -moz-opacity: 40;
+    filter: alpha(opacity = 40);
+    cursor: default;
+}

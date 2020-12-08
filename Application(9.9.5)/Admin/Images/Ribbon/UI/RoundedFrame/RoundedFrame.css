@@ -1,0 +1,226 @@
+﻿table.dw-rc
+{
+    table-layout: fixed;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: #ffffff;
+}
+
+table.dw-rc tr
+{
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    border: none;
+}
+
+table.dw-rc td.dw-rc-t, td.dw-rc-b
+{
+    height: 12px;
+}
+
+table.dw-rc td.dw-rc-l, td.dw-rc-r
+{
+    width: 12px;
+}
+
+table.dw-rc td.dw-rc-t
+{
+    background: url('images/blue/t.png') 0 0 repeat-x;
+}
+
+table.dw-rc-grey td.dw-rc-t
+{
+    background: url('images/t.png') 0 0 repeat-x !important;
+}
+
+table.dw-rc td.dw-rc-b
+{
+    background: url('images/blue/b.png') 0 100% repeat-x;
+}
+
+table.dw-rc tr.dw-rc-footer-collapsed td.dw-rc-b
+{
+    background: url('images/blue/b-collapsed.png') 0 100% repeat-x !important;
+}
+
+table.dw-rc-grey td.dw-rc-b
+{
+    background: url('images/b.png') 0 100% repeat-x !important;
+}
+
+table.dw-rc-grey tr.dw-rc-footer-collapsed td.dw-rc-b
+{
+    background: url('images/b-collapsed.png') 0 100% repeat-x !important;
+}
+
+table.dw-rc td.dw-rc-l
+{
+    background: url('images/blue/l.png') 0 0 repeat-y;
+}
+
+table.dw-rc-grey td.dw-rc-l
+{
+    background: url('images/l.png') 0 0 repeat-y !important;
+}
+
+table.dw-rc td.dw-rc-r
+{
+    background: url('images/blue/r.png') 100% 0 repeat-y;
+}
+
+table.dw-rc-grey td.dw-rc-r
+{
+    background: url('images/r.png') 100% 0 repeat-y !important;
+}
+
+td.dw-rc-bl, td.dw-rc-br, td.dw-rc-tl, td.dw-rc-tr,
+td.dw-rc-tlt, td.dw-rc-trt
+{
+    width: 12px;
+    height: 12px;
+}
+
+table.dw-rc-collapsed tr.dw-rc-footer td
+{
+    height: 6px !important;
+    line-height: 0px !important;
+}
+
+table.dw-rc-collapsed tr.dw-rc-content
+{
+    display: none;
+}
+
+table.dw-rc td.dw-rc-bl
+{
+    background: url('images/blue/bl.png') 0 100% no-repeat;
+}
+
+table.dw-rc tr.dw-rc-footer-collapsed td.dw-rc-bl
+{
+    background: url('images/blue/bl-collapsed.png') 0 100% no-repeat !important;
+}
+
+table.dw-rc-grey td.dw-rc-bl
+{
+    background: url('images/bl.png') 0 100% no-repeat !important;
+}
+
+table.dw-rc-grey tr.dw-rc-footer-collapsed td.dw-rc-bl
+{
+    background: url('images/bl-collapsed.png') 0 100% no-repeat !important;
+}
+
+table.dw-rc td.dw-rc-br
+{
+    background: url('images/blue/br.png') 100% 100% no-repeat;
+}
+
+table.dw-rc tr.dw-rc-footer-collapsed td.dw-rc-br
+{
+    background: url('images/blue/br-collapsed.png') 100% 100% no-repeat !important;
+}
+
+table.dw-rc-grey td.dw-rc-br
+{
+    background: url('images/br.png') 100% 100% no-repeat !important;
+}
+
+table.dw-rc-grey tr.dw-rc-footer-collapsed td.dw-rc-br
+{
+    background: url('images/br-collapsed.png') 100% 100% no-repeat !important;
+}
+
+table.dw-rc td.dw-rc-tl
+{
+    background: url('images/blue/tl.png') 0 0 no-repeat;
+}
+
+table.dw-rc-grey td.dw-rc-tl
+{
+    background: url('images/tl.png') 0 0 no-repeat;
+}
+
+table.dw-rc td.dw-rc-tr
+{
+    background: url('images/blue/tr.png') 100% 0 no-repeat;
+}
+
+table.dw-rc-grey td.dw-rc-tr
+{
+     background: url('images/tr.png') 100% 0 no-repeat !important;
+}
+
+table.dw-rc td.dw-rc-c
+{
+    background-color: #ffffff;
+}
+
+table.dw-rc td.dw-rc-tt
+{
+    background: url('images/blue/tt.png') 0 0 repeat-x;
+    height: 36px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #15428b;
+    cursor: default;
+}
+
+table.dw-rc td.dw-rc-tt span
+{
+    float: left;
+}
+
+table.dw-rc-grey td.dw-rc-tt
+{
+    background: url('images/tt.png') 0 0 repeat-x !important;
+    color: #3f3f3f !important;
+}
+
+table.dw-rc-collapsable td.dw-rc-tt
+{
+    cursor: pointer !important;
+}
+
+table.dw-rc-collapsed td.dw-rc-tt
+{
+    color: #96989a !important;
+    height: 34px !important;
+}
+
+table.dw-rc-collapsed td.dw-rc-tt span
+{
+    margin-bottom: -2px;
+}
+
+table.dw-rc td.dw-rc-tlt, table.dw-rc td.dw-rc-trt
+{
+    height: 36px;
+}
+
+table.dw-rc-collapsed td.dw-rc-tlt, table.dw-rc td.dw-rc-trt
+{
+    height: 34px !important;
+}
+
+table.dw-rc td.dw-rc-tlt
+{
+    background: url('images/blue/tlt.png') 0 0 no-repeat;
+}
+
+table.dw-rc td.dw-rc-trt
+{
+    background: url('images/blue/trt.png') 100% 0 no-repeat;
+}
+
+table.dw-rc-grey td.dw-rc-tlt
+{
+    background: url('images/tlt.png') 0 0 no-repeat !important;
+}
+
+table.dw-rc-grey td.dw-rc-trt
+{
+    background: url('images/trt.png') 100% 0 no-repeat !important;
+}

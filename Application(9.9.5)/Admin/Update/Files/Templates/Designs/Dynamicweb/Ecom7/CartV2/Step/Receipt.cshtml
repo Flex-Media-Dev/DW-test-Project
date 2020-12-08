@@ -1,0 +1,242 @@
+﻿@using Dynamicweb.Core;
+@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+
+<div id="receipt">
+    <h2>Receipt</h2>
+    <div class="row">
+    <div class="form-horizontal readonly col-sm-6">
+
+        <h3>Billing address</h3>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Username", "Username")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.Customer.Name")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Email", "E-mail")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.Customer.Email")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Phone", "Phone")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.Customer.Phone")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Address", "Address")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.Customer.Address")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Address2", "Address Line 2")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.Customer.Address2")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Zipcode", "Zipcode")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.Customer.Zip")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("City", "City")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.Customer.City")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Country", "Country")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.Customer.Country")</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-horizontal readonly col-sm-6">
+
+        <h3>Delivery address</h3>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Name", "Name")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.Delivery.Name")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Email", "E-mail")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.Delivery.Email")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Phone", "Phone")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.Delivery.Phone")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Address", "Address")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.Delivery.Address")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Address2", "Address Line 2")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.Delivery.Address2")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Zipcode", "Zipcode")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.Delivery.Zip")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("City", "City")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.Delivery.City")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Country", "Country")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.Delivery.Country")</span>
+            </div>
+        </div>
+
+    </div>
+
+        </div>
+
+    <div class="form-horizontal readonly">
+
+        <h3>Orderinformations</h3>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Ordernumber", "Ordernumber")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.ID")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Orderdate", "Orderdate")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetDate("Ecom:Order.Completed").ToString(Dynamicweb.Core.Helpers.DateHelper.DateFormatStringShort)</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Client_IP", "Client IP")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.IP")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">@Translate("Payment_method", "Payment method")</label>
+            <div class="col-sm-10">
+                <span class="form-control">@GetValue("Ecom:Order.PaymentMethod")</span>
+            </div>
+        </div>
+
+        @if (Converter.ToBoolean(GetValue("Ecom:Order.TransactionNumber")))
+        {<text>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">@Translate("Transaction_number", "Transaction number")</label>
+                <div class="col-sm-10">
+                    <span class="form-control">@GetValue("Ecom:Order.TransactionNumber")</span>
+                </div>
+            </div>
+        </text>}
+
+    </div>
+
+
+                <h3>Orderspecification</h3>
+                <table class="table">
+                    <tr class="basketheader">
+                        <td>Product name</td>
+                        <td>Amount</td>
+                        <td>Weight</td>
+                        <td>Volume</td>
+                        <td align="right">Price</td>
+                    </tr>
+                    @foreach (LoopItem i in GetLoop("OrderLines"))
+                    {
+                        <tr class="orderline@i.GetValue(" ecom:order:orderline.type") orderline">
+                            <td nowrap>
+                                <a href="@i.GetValue("Ecom:Order:OrderLine.ProductLink")">
+                                    @i.GetValue("Ecom:Order:OrderLine.ProductName.Short")
+                                    @if (Converter.ToBoolean(i.GetValue("Ecom:Order:OrderLine.ProductVariantText")))
+                                    {<text>
+                                        (@i.GetValue("Ecom:Order:OrderLine.ProductVariantText"))
+                                    </text>}
+                                </a>
+                            </td>
+                            <td>@i.GetValue("Ecom:Order:OrderLine.Quantity")</td>
+                            <td>@i.GetValue("Ecom:Order:OrderLine.Weight")</td>
+                            <td>@i.GetValue("Ecom:Order:OrderLine.Volume")</td>
+                            <td align="right" nowrap>@i.GetValue("Ecom:Order:OrderLine.TotalPrice")</td>
+                        </tr>
+                        foreach (LoopItem i2 in GetLoop("BOMItems"))
+                        {
+                            <tr class="orderline">
+                                <td nowrap>@i2.GetValue("Ecom:Order:OrderLine.ProductName.Short")</td>
+                                <td nowrap>@i2.GetValue("Ecom:Order:OrderLine.Quantity")</td>
+                                <td>@i2.GetValue("Ecom:Order:OrderLine.Weight")</td>
+                                <td>@i2.GetValue("Ecom:Order:OrderLine.Volume")</td>
+                                <td nowrap>@i2.GetValue("Ecom:Order:OrderLine.TotalPrice")</td>
+                            </tr>
+                        }
+                    }
+                    <tr class="total">
+                        <td>Total</td>
+                        <td>@GetValue("Ecom:Order.OrderLines.TotalProductQuantity")</td>
+                        <td>@GetValue("Ecom:Order.Weight")</td>
+                        <td>@GetValue("Ecom:Order.Volume")</td>
+                        <td align="right" title="Ecom:Order.PriceWithoutFees.PriceFormatted">@GetValue("Ecom:Order.PriceWithoutFees.PriceFormatted")</td>
+                    </tr>
+                    <tr class="total">
+                        <td colspan="4">Paymentfee</td>
+                        <td align="right" title="Ecom:Order.PaymentFee.PriceFormatted">@GetValue("Ecom:Order.PaymentFee.PriceFormatted")</td>
+                    </tr>
+                    <tr class="total">
+                        <td colspan="4">Deliveryfee</td>
+                        <td align="right" title="Ecom:Order.ShippingFee.PriceFormatted">@GetValue("Ecom:Order.ShippingFee.PriceFormatted")</td>
+                    </tr>
+                    <tr class="total">
+                        <td colspan="4">VAT</td>
+                        <td align="right" title="Ecom:Order.Price.VATFormatted">@GetValue("Ecom:Order.Price.VATFormatted")</td>
+                    </tr>
+                    <tr class="total">
+                        <td colspan="4">Total with VAT</td>
+                        <td align="right" title="Ecom:Order.Price.PriceWithVATFormatted">@GetValue("Ecom:Order.Price.PriceWithVATFormatted")</td>
+                    </tr>
+                </table>
+
+    <a href="javascript:window.print();">Print this page</a>
+</div>

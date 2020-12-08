@@ -1,0 +1,90 @@
+@using Dynamicweb.Rendering
+@using Dynamicweb.Ecommerce.CustomerExperienceCenter
+@inherits ViewModelTemplate<OrderViewModel>
+
+<style>
+.orders {
+  width: 100%;
+  border-collapse: collapse; 
+}
+
+.orders td, .orders th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.orders tr:nth-child(even){background-color: #f2f2f2;}
+
+.orders tr:hover {background-color: #ddd;}
+
+.orders th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	color: white;
+	background-color: #428bca; 
+	font-weight: bold;  
+}
+
+.button-back {
+    border: 0;
+    padding: 6px 32px;
+    float: right;
+    color: white;
+    background-color: #428bca;
+}
+</style>
+
+<div class="order-details">
+<h1>Order details</h1>
+<div>Id: @Model.Id</div>
+<div>Weight: @Model.Weight</div>
+<div>Volume: @Model.Volume</div>
+<div>TotalDiscount: @Model.TotalDiscount.Price</div>
+<div>TotalProductDiscount: @Model.TotalProductDiscount.Price</div>
+<div>TotalOrderDiscount: @Model.TotalOrderDiscount.Price</div>
+<div>Price: @Model.Price.Price</div>			
+<div>PriceBeforeFees: @Model.PriceBeforeFees.Price</div>
+<div>ShippingFee: @Model.ShippingFee.Price</div>			
+<div>PaymentFee: @Model.PaymentFee.Price</div>	
+<div>TotalPrice: @Model.TotalPrice</div>
+
+<div>
+	<h2>Order lines</h2>
+	<table class="orders order-lines">	
+		<tr>
+			<th>Id</th>
+			<th>Product Id</th>
+			<th>Variant Id</th>		
+			<th>Weight</th>
+			<th>Volume</th>	
+			<th>Quantity</th>
+			<th>Unit price</th>
+			<th>Total price</th>
+			<th>Total discount</th>
+		</tr>
+	@foreach (var line in @Model.OrderLines)
+	{
+		<tr>
+			<td>@line.Id</td>
+			<td>@line.ProductId</td>
+			<td>@line.ProductVariantId</td>
+			<td>@line.Weight</td>
+			<td>@line.Volume</td>	
+			<td>@line.Quantity</td>	
+			<td>@line.UnitPrice.Price</td>	
+			<td>@line.Price.Price</td>			
+			<td>@line.TotalDiscount.Price</td>
+		</tr>
+	}
+	</table>
+</div>
+<div class="order-fields">
+	<h2>Order fields</h2>
+	@foreach (var field in @Model.OrderFields.Values)
+	{
+		<div>@field.Name - @field.Value</div>	
+	}
+</div>
+<button class="button-back" onclick="location.href='/Default.aspx?ID=@Pageview.Page.ID'">Back</button>
+</div>

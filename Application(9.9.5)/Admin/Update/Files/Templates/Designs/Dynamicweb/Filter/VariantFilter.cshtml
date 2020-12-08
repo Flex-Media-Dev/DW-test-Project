@@ -1,0 +1,25 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+<fieldset class='filter filter-@GetValue("Filters:Current.TagName")'>
+    <legend>
+        @GetValue("Filters:Current.Name")
+    </legend>
+
+    @{
+        var options = GetLoop("VariantOptions");
+        if (options.Count > 0)
+        {
+            foreach (var option in options)
+            {
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name='@GetValue("Filters:Current.TagName")' value='@option.GetValue("Ecom:VariantOption.Id")' checked='@(!string.IsNullOrEmpty(option.GetString("Ecom:VariantOption.CheckedState")))' />
+                            @option.GetValue("Ecom:VariantOption.Name")
+                        </label>
+                    </div>
+                </div>
+            }
+        }
+    }
+</fieldset>

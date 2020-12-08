@@ -1,0 +1,45 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="ContentOnly.Master.vb" Inherits="Dynamicweb.Admin.eComBackend.ContentOnlyMaster" %>
+
+<%@ Import Namespace="Dynamicweb.Core.UI.Icons" %>
+<%@ Register TagPrefix="dw" Namespace="Dynamicweb.Controls" Assembly="Dynamicweb.Controls" %>
+<%@ Register TagPrefix="ecom" Namespace="Dynamicweb.Admin.eComBackend" Assembly="Dynamicweb.Admin" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title></title>
+
+    <dw:ControlResources ID="ctrlResources" IncludePrototype="true" IncludeRequireJS="True" IncludeClientSideSupport="true" IncludeUIStylesheet="true" runat="server">
+        <Items>
+            <dw:GenericResource Url="/Admin/Content/JsLib/dw/Utilities.js" />
+            <dw:GenericResource Url="/Admin/Resources/js/layout/dwglobal.js" />
+            <dw:GenericResource Url="/Admin/Resources/js/layout/Actions.js" />
+        </Items>
+    </dw:ControlResources>
+
+    <asp:ContentPlaceHolder ID="HeadHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body class="area-pink">
+    <ecom:Form ID="Form1" runat="server">
+        <table id="ecomTab" width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr valign="top">                
+                <td>
+                    <div class="screen-container">
+                        <div class="card">
+                            <div id="slave-content">
+                                <asp:ContentPlaceHolder ID="ContentHolder" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                            <iframe name="ecommainframe" id="ecom-main-iframe" class="hidden"></iframe>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </ecom:Form>
+</body>
+
+</html>

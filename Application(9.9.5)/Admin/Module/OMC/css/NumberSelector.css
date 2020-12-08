@@ -1,0 +1,82 @@
+﻿div.number-selector-field
+{
+    display: table;
+    position: relative;
+    border-collapse: separate;
+    border-spacing: 0;
+    padding: 0px;
+    margin: 0px;
+    height: 18px;
+    max-height: 18px;
+    width: 220px !important;
+}
+
+div.number-selector-field * {
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+}
+
+div.number-selector-field,
+div.number-selector-arrows,
+div.number-selector-field div.number-selector-clear,
+div.number-selector-field div.number-selector-arrows a
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+div.number-selector-field div.number-selector-arrows
+{
+    position: relative;
+    display: table-cell;
+    margin:0;
+    padding: 0;
+    font-size: 0;
+    white-space: nowrap;
+    width: 1%;
+    vertical-align: middle;
+    height: 16px;
+    border: 1px solid #abadb3 !important;
+    top: 0px;
+    right: 0px;
+}
+
+div.number-selector-field div.number-selector-arrows a
+{
+    display: block;
+    width: 13px;
+    height: 7px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url('/Admin/Module/OMC/img/number-selector-arrows.png');
+    border: none !important;
+}
+
+div.number-selector-field div.number-selector-arrows a,
+div.number-selector-field div.number-selector-arrows a:hover,
+div.number-selector-field div.number-selector-arrows a:active,
+div.number-selector-field div.number-selector-arrows a:visited
+{
+    text-decoration: none;
+}
+
+div.number-selector-field div.number-selector-arrows a:focus
+{
+    outline: none;
+}
+
+div.number-selector-field div.number-selector-arrows a:hover
+{
+    background-color: #e8f4ff;
+}
+
+div.number-selector-field div.number-selector-arrows a.number-selector-arrow-up
+{
+    background-position: 3px 1px;
+}
+
+div.number-selector-field div.number-selector-arrows a.number-selector-arrow-down
+{
+    background-position: 3px -8px;
+}

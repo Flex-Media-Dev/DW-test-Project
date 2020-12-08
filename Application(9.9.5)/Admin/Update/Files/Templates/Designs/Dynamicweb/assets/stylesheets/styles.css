@@ -1,0 +1,21 @@
+﻿footer {
+    margin-top: 2em;
+}
+
+    footer > .row > div {
+        text-align: center;
+    }
+
+
+        footer > .row > div:last-child {
+            text-align: right;
+        }
+
+        footer > .row > div:first-child {
+            text-align: left;
+        }
+
+.readonly .form-control {
+	border-color: transparent;
+	box-shadow: none;
+}

@@ -1,0 +1,11 @@
+﻿/* File Created: januar 2, 2012 */
+.header {
+    padding: 10px;
+}
+
+.mainArea {
+    position: fixed;
+    top: 50px;
+    border-top: 1px solid #bdbdbd;
+    width: 100%;
+}

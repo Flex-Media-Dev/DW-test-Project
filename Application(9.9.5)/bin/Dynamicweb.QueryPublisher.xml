@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.QueryPublisher</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.QueryPublisher.Frontend">
+            <summary>
+            Represents a frontend of the QueryPublisher module.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.QueryPublisher.Frontend.GetContent">
+            <summary>
+            Gets the content of QueryPublisher module.
+            </summary>
+            <returns>String representation of context</returns>
+        </member>
+        <member name="M:Dynamicweb.QueryPublisher.Frontend.HandleFacetGroupResult(Dynamicweb.Indexing.Querying.IQuery,Dynamicweb.Indexing.Querying.Faceting.IFacetGroup,Dynamicweb.Indexing.Querying.Faceting.FacetGroupResult,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Reads the values from the querystring and set if a specific facet option is selected or not
+            </summary>
+            <param name="query"></param>
+            <param name="facetGroup"></param>
+            <param name="facetGroupResult"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.QueryPublisher.Frontend.Contains(System.Array,System.Object)">
+            <summary>
+            Determines whether [contains] [the specified inputArray].
+            </summary>
+            <param name="input">The inputArray.</param>
+            <param name="item">The obj.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.QueryPublisher.Notifications.Querying">
+            <summary>
+            Class Querying. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.QueryPublisher.Notifications.Querying.BeforeQuery">
+            <summary>
+            The before query
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.QueryPublisher.Notifications.Querying.BeforeQueryArgs">
+            <summary>
+            Class BeforeQueryArgs.
+            </summary>
+            <seealso cref="T:Dynamicweb.Extensibility.Notifications.NotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.QueryPublisher.Notifications.Querying.BeforeQueryArgs.Query">
+            <summary>
+            Gets or sets the query.
+            </summary>
+            <value>The query.</value>
+        </member>
+        <member name="P:Dynamicweb.QueryPublisher.Notifications.Querying.BeforeQueryArgs.Settings">
+            <summary>
+            Gets or sets the settings.
+            </summary>
+            <value>The settings.</value>
+        </member>
+        <member name="F:Dynamicweb.QueryPublisher.Notifications.Querying.AfterQuery">
+            <summary>
+            The after query
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.QueryPublisher.Notifications.Querying.AfterQueryArgs">
+            <summary>
+            Class AfterQueryArgs.
+            </summary>
+            <seealso cref="T:Dynamicweb.Extensibility.Notifications.NotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.QueryPublisher.Notifications.Querying.AfterQueryArgs.Query">
+            <summary>
+            Gets or sets the query.
+            </summary>
+            <value>The query.</value>
+        </member>
+        <member name="P:Dynamicweb.QueryPublisher.Notifications.Querying.AfterQueryArgs.Settings">
+            <summary>
+            Gets or sets the settings.
+            </summary>
+            <value>The settings.</value>
+        </member>
+        <member name="P:Dynamicweb.QueryPublisher.Notifications.Querying.AfterQueryArgs.Result">
+            <summary>
+            Gets or sets the result.
+            </summary>
+            <value>The result.</value>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,98 @@
+﻿.nobr
+{
+	white-space:nowrap;
+}
+
+/* Collase functional */
+a.item-edit-field-group-button-collapse
+{
+	display: inline-block;
+	background-image: url(/Admin/Images/Ribbon/expand.png);
+	background-repeat: no-repeat;
+	background-position: center;
+    border: 1px solid transparent;
+	margin-left: 6px;
+	margin-bottom: -2px;
+	width: 24px;
+	height: 10px;
+}
+
+a.item-edit-field-group-button-collapse:hover
+{
+    border: 1px solid #D5DFE5;
+}
+
+a.item-edit-field-group-button-collapse.collapsed
+{
+	background-image: url(/Admin/Images/Ribbon/collapse.png);
+}
+
+table.item-edit-field-group-content.collapsed
+{
+	display: none;
+}
+
+/* item types */
+div.item-types
+{
+	zoom: 1;
+	width: 500px;
+	height: 45px;
+	overflow: hidden;
+}
+
+div.item-types:after
+{
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+div.item-types div.item-types-image,
+div.item-types div.item-types-description
+{
+	float: left;
+}
+
+div.item-types-image img
+{
+	width: 32px;
+    height: 32px;
+	margin: 3px;
+	border: none;
+}
+
+div.item-types-description 
+{
+    width: 250px;
+}
+
+div.item-types-description small 
+{
+    display: block; / for IE /
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}
+
+#AlternativePictureBox {
+    cursor: pointer;
+}
+
+#ParagraphHeader {
+    width: 100%;
+}
+#MasterParagraphTemplateContainer {
+    position: absolute;
+    margin-top: 3px;
+}
+
+#MasterParagraphTemplateContainer i {
+    font-size: 16px;
+    width: auto;
+    height: auto;
+}

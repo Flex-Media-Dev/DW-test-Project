@@ -1,0 +1,321 @@
+﻿.editing-area {
+    width: 100%;
+    overflow: auto;
+    height: calc(100% - 172px);
+    display: inline-block;
+    position: absolute;
+}
+
+    .editing-area div.CodeMirror-wrapping {
+        position: fixed !important;
+        left: 0px;
+        right: 0px;
+        top: 115px;
+        bottom: 25px;
+    }
+
+.panel-template-tags {
+    position: fixed;
+    top: 115px;
+    bottom: 25px;
+    width: 250px;
+    right: 0px;
+    overflow: hidden;
+    border-left: 1px solid #bdbdbd;
+}
+
+.row-status {
+    position: fixed;
+    bottom: 0px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    vertical-align: middle;
+    left: 0px;
+    right: 0px;
+    border: none;
+    border-top: 1px solid #bdbdbd;
+    background-color: #eeeeee;
+}
+
+    .row-status img {
+        vertical-align: middle;
+    }
+
+div.tags-tree {
+    position: fixed;
+    top: 354px;
+    width: 250px;
+    bottom: 25px;
+}
+
+div.search-panel {
+    width: 380px;
+    padding: 5px;
+}
+
+div.search-panel-fade-out {
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    filter: alpha(opacity = 50);
+}
+
+div.search-panel input.search-box {
+    margin: 0px;
+    padding: 0px;
+    width: 184px;
+    vertical-align: top;
+    border: 1px solid #bdbdbd;
+    height: 18px;
+    line-height: 18px;
+    color: #000;
+    background-color: #ffffff;
+}
+
+div.search-panel td.field-title {
+    width: 85px;
+}
+
+div.search-panel span.search-button button {
+    margin-left: 1px;
+    margin-top: -1px;
+    width: 75px;
+    height: 22px;
+    font-family: Arial, verdana, Microsoft JhengHei;
+    font-size: 11px;
+}
+
+div.search-panel div.search-replace-link {
+    cursor: pointer;
+    color: #0085CA;
+    margin-top: 3px;
+}
+
+.slider {
+    border-top: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
+    height: 7px;
+    cursor: n-resize;
+    background-image: url('images/slider.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #eeeeee;
+}
+
+.noAccessContainer {
+    width: 500px;
+    margin: 0px auto;
+    margin-top: 250px;
+    border: 1px solid #bdbdbd;
+}
+
+    .noAccessContainer .noAccessHeading {
+        padding: 5px;
+        font-weight: bold;
+        background-color: #F44336;
+        color: #fff;
+    }
+
+    .noAccessContainer .noAccessText {
+        padding: 5px;
+        padding-top: 15px;
+        text-align: center;
+        padding-bottom: 15px;
+        background-color: #FFFFFF;
+    }
+
+/* Dialog */
+
+.dTitle {
+    height: 23px;
+    vertical-align: middle;
+    background: url('images/pipe.gif') top left repeat-x;
+    border-bottom: 1px solid #bdbdbd;
+    padding: 2px;
+    padding-bottom: 0px;
+}
+
+    .dTitle strong {
+        color: #0085CA;
+        font-size: 14px;
+        font-weight: bolder;
+        font-family: Arial, Microsoft JhengHei;
+    }
+
+.dSubTitle {
+    background-color: #e0e0e0;
+    height: 19px;
+    padding-left: 2px;
+    padding-top: 1px;
+    border-top: solid 1px #FFFFFF;
+    border-left: solid 1px #FFFFFF;
+    border-bottom: solid 1px #bdbdbd;
+    font-family: Arial, Microsoft JhengHei;
+    font-weight: bold;
+    color: #0085CA;
+}
+
+.dContent {
+    background-color: #e0e0e0;
+    border: 1px solid #bdbdbd;
+}
+
+.dContentInner {
+    background-color: #ffffff;
+}
+
+.Dialog {
+    border: 1px solid #bdbdbd;
+    margin: 3px;
+    background-color: #ffffff;
+}
+
+.DialogTitle {
+    height: 25px;
+    color: #0085CA;
+    font-size: 14px;
+    padding-left: 3px;
+    line-height: 24px;
+    font-weight: bolder;
+    font-family: Arial, Microsoft JhengHei;
+    background: url('images/pipe.gif') top left repeat-x;
+    border-bottom: solid 1px #bdbdbd;
+}
+
+/* Tag tooltip */
+
+.tooltip {
+    background-color: #fff5cb;
+    border: 1px solid #bdbdbd;
+    padding: 2px;
+    width: 160px;
+}
+
+/* Toolbar  */
+
+.toolBarRow {
+    display: inline-table;
+    width: 100%;
+    font-weight: normal;
+}
+
+.toolBarSeparator {
+    margin: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    height: 15px;
+    width: 1px;
+    background-color: #9E9E9E;
+    border-right: solid 1px #ffffff;
+}
+
+.toolBarRow ul {
+    display: inline-table;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    height: 26px;
+}
+
+    .toolBarRow ul li {
+        margin: 0px;
+        padding: 0px;
+        padding-right: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
+        list-style: none;
+        float: left;
+        display: block;
+        height: 26px;
+        line-height: 26px;
+    }
+
+        .toolBarRow ul li a {
+            margin-top: 1px;
+            padding-left: 4px;
+            padding-right: 4px;
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            color: #000000;
+            cursor: default;
+            height: 20px;
+            line-height: 20px;
+            border: solid 1px transparent;
+        }
+
+        .toolBarRow ul li img {
+            vertical-align: middle;
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+
+        .toolBarRow ul li a:hover {
+            border: 1px solid #ffbd69;
+            background-color: #ffe7a1;
+        }
+
+.toolBarButtonActive {
+    border: 1px solid #ffbd69 !important;
+    background-color: #fff0be;
+}
+
+div.progress-overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #FFFFFF;
+    opacity: 0.4;
+    -moz-opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+
+    div.progress-overlay div.progress-overlay-indicator {
+        text-align: center;
+        margin: 0px auto;
+        margin-top: 120px;
+        border: 1px solid #bdbdbd;
+        width: 150px;
+        height: 50px;
+    }
+
+        div.progress-overlay div.progress-overlay-indicator img {
+            padding-top: 10px;
+        }
+
+img.refresh-icon {
+    cursor: pointer;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}
+
+div.balloon {
+    z-index: 5;
+    cursor: default;
+    width: 246px;
+    height: 94px;
+    position: fixed;
+    bottom: 13px;
+    right: 0px;
+    background: url('images/balloon-bg.png') top left no-repeat;
+}
+
+    div.balloon div.balloon-content {
+        width: 230px;
+        min-width: 230px;
+        max-width: 230px;
+        overflow: hidden;
+        height: 55px;
+        min-height: 55px;
+        max-height: 55px;
+        padding: 5px;
+        padding-top: 10px;
+    }
+
+    div.balloon div.balloon-title {
+        color: #0085CA;
+        font-size: 110%;
+    }

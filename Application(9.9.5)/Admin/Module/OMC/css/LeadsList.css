@@ -1,0 +1,43 @@
+﻿.listRow i.actions-button{
+    padding: 3px;
+    margin: 0 2px;
+    vertical-align: inherit;
+}
+
+.listRow ul.actions {
+    padding-left: 0;
+    margin: 0;
+}
+
+.listRow ul.actions.hidden-actions li:not(:first-child) {
+    display:none;
+}
+
+.listRow ul.actions li {
+    display: inline-block;
+    cursor:pointer;
+}
+
+.listRow.dis ul.actions li:not(:first-child) {
+    cursor:default;
+    pointer-events:none;
+}
+
+.listRow ul.actions li i {
+    padding: 3px;
+    margin: 0 2px;
+    vertical-align: inherit;
+}
+
+.listRow div.btn.lead-state-label {
+    vertical-align: baseline;
+}
+
+.list .container .table>tbody tr:not(.listRow):not(:last-child) {
+    display:none;
+}
+
+.contextmenu.checkbox-hidden .item img.icon,
+.contextmenu.checkbox-hidden .item label {
+    display:none;
+}

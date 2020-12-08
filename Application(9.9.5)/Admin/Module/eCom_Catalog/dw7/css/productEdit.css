@@ -1,0 +1,202 @@
+﻿BODY.margin
+{
+    margin: 0px;
+}
+INPUT
+{
+    font-size: 11px;
+    font-family: verdana,arial;
+}
+TEXTAREA
+{
+    font-size: 11px;
+    font-family: verdana,arial;
+}
+#Main_DW_Content
+{
+    overflow-y: hidden !important;
+}
+#MainTable > tbody > tr
+{
+    background: #bdbdbd url(/Admin/images/Ribbon/UI/Tab/tab_bg.jpg) repeat-x scroll left bottom;
+}
+
+.tabTable100
+{
+    border: 0px !important;
+}
+
+#variantCombinationsTable td
+{
+    padding: 2px;
+}
+
+tr.separator, tr.separator * tr.separator, tr.separator > td tr.separator, tr.separator > td, tr.separator > td *
+{
+    height: 1px;
+    min-height: 1px;
+    max-height: 1px;
+    overflow: hidden;
+    background-color: #9E9E9E;
+    padding: 0px !important;
+}
+
+.pe-hidden
+{
+    display: none;
+}
+
+table span.RelatedGroup 
+{
+    width: 16px;
+    height: 16px;
+    display: inline-block; 
+    padding: 2px;
+    background: url(/Admin/images/Minus.gif) no-repeat center;
+}
+        
+table span.RelatedGroupPrimary
+{
+    background-image: url(/Admin/images/Check.gif) !important;
+}
+
+table.ProductRelatedData tr 
+{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+table.ProductRelatedData td.filter{
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+table.ProductRelatedData td.filter::before {
+    content: "\f0b0";
+}
+
+td.LabelTop 
+{
+    vertical-align: top;
+    padding-top: 6px;
+    width: 170px;
+    border-color: #e0e0e0;
+}
+
+.hide-error
+{
+    visibility:hidden;
+}
+
+.hide {
+    display: none !important;
+}
+
+#PriceMatrix, #VATGroupsList {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.col.col-1,.col.col-2 {
+    width:340px;
+}
+
+.restore-inherited-val {
+    border:none;
+}
+.cat-field-row.field-disabled .restore-inherited-val {
+    display:none;
+}
+
+.editor.type-2 .restore-inherited-val { /*textarea*/
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.editor.type-3 .restore-inherited-val { /*checkbox*/
+    vertical-align: text-bottom;
+}
+
+.editor.type-4 .restore-inherited-val, /*date*/
+.editor.type-5 .restore-inherited-val, /*datetime*/
+.editor.type-8 .restore-inherited-val, /*link*/
+.editor.type-9 .restore-inherited-val, /*fm*/
+.editor .custom-type-provider .restore-inherited-val, /**/
+.editor.type-15 .restore-inherited-val { /*list*/
+    vertical-align: top;
+    margin-top: 9px;
+    margin-left: 5px;
+}
+
+.editor.type-14 .restore-inherited-val { /*rte*/
+    vertical-align: middle;
+}
+
+.editor.type-4 .input-group,
+.editor.type-5 .input-group,
+.editor.type-8 .input-group,
+.editor.type-9 .box-control,
+.editor.type-15 .radio-list {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.cat-field-row.inherited-val > .editor.type-1 .NewUIinput,
+.cat-field-row.inherited-val > .editor.type-10 .NewUIinput,
+.cat-field-row.inherited-val > .editor.type-11 .NewUIinput,
+.cat-field-row.inherited-val > .editor.type-12 .NewUIinput,
+.cat-field-row.inherited-val > .editor.type-13 .NewUIinput,
+.cat-field-row.inherited-val > .editor.type-2 textarea,
+.cat-field-row.inherited-val > .editor.type-4 select,
+.cat-field-row.inherited-val > .editor.type-5 select,
+.cat-field-row.inherited-val > .editor.type-6 input,
+.cat-field-row.inherited-val > .editor.type-7 input,
+.cat-field-row.inherited-val > .editor.type-8 input,
+.cat-field-row.inherited-val > .editor.type-9 select,
+.cat-field-row.inherited-val > .editor.type-14 > .cke,
+.cat-field-row.inherited-val > .editor.type-3 input[type=checkbox],
+.cat-field-row.inherited-val > .editor.type-15.pt-RadioButtonList label,
+.cat-field-row.inherited-val > .editor.type-15.pt-RadioButtonList input[type=radio],
+.cat-field-row.inherited-val > .editor.type-15.pt-CheckBoxList label,
+.cat-field-row.inherited-val > .editor.type-15.pt-CheckBoxList input[type=checkbox],
+.cat-field-row.inherited-val > .editor.type-15.pt-DropDownList select,
+.cat-field-row.inherited-val > .editor.type-15.pt-MultiSelectList select {
+    color:#bdbdbd !important;
+}
+
+.cat-field-row.inherited-val .editor > .input-group-addon:hover {
+    background-color: inherit;
+}
+.cat-field-row > .editor.type-1 .NewUIinput,
+.cat-field-row > .editor.type-10 .NewUIinput,
+.cat-field-row > .editor.type-11 .NewUIinput,
+.cat-field-row > .editor.type-12 .NewUIinput,
+.cat-field-row > .editor.type-13 .NewUIinput,
+.cat-field-row > .editor.type-2 textarea,
+.cat-field-row > .editor.type-4 .date-picker,
+.cat-field-row > .editor.type-5 .date-picker,
+.cat-field-row > .editor.type-6 input,
+.cat-field-row > .editor.type-7 input,
+.cat-field-row > .editor.type-8 .input-group,
+.cat-field-row > .editor.type-9 select,
+.cat-field-row > .editor.type-15.pt-DropDownList select,
+.cat-field-row > .editor.type-15.pt-MultiSelectList select {
+    float: left;
+}
+
+/* Fix to not hide dropdowns*/
+#B_editable-list-dialog-variantCombinations {
+    overflow-x: inherit !important;
+    overflow-y: inherit !important;
+}
+
+#ProductItemBlock i {
+    /*padding: 8px;*/
+}
+
+#DW_Ecom_tableTab .input-group-addon[disabled] {
+    pointer-events: auto;
+}
+
+    #DW_Ecom_tableTab .input-group-addon[disabled][onclick] {
+        pointer-events: none;
+    }

@@ -1,0 +1,475 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Management.Settings</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Management.Settings.Dialogs.Models.DeleteItemTypeDialogModel">
+            <summary>
+            DeleteItemTypeDialogModel
+            </summary>
+            <seealso cref="T:Dynamicweb.Management.Settings.Dialogs.Models.SettingsDialogModel" />
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.Dialogs.Models.DeleteItemTypeDialogModel.ItemTypeNodeIds">
+            <summary>
+            Gets or sets the item type node ids.
+            </summary>
+            <value>
+            The item type node ids.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.Dialogs.Models.DeleteItemTypeDialogModel.Errors">
+            <summary>
+            Gets or sets the errors.
+            </summary>
+            <value>
+            The errors.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Management.Settings.Dialogs.Models.SettingsDialogModel">
+            <summary>
+            SettingsDialogModel
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.Dialogs.Models.SettingsDialogModel.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.Dialogs.Models.SettingsDialogModel.Selected">
+            <summary>
+            Gets or sets the selected.
+            </summary>
+            <value>
+            The selected.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Management.Settings.Dialogs.SettingsDialogController">
+            <summary>
+            SettingsDialogController
+            </summary>
+            <seealso cref="T:System.Web.Mvc.Controller" />
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.Dialogs.SettingsDialogController.CreateRepository">
+            <summary>
+            Creates the repository.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.Dialogs.SettingsDialogController.CreateRepository(Dynamicweb.Management.Settings.Dialogs.Models.SettingsDialogModel)">
+            <summary>
+            Creates the repository.
+            </summary>
+            <param name="model">The model.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.Dialogs.SettingsDialogController.DeleteItemType(System.String)">
+            <summary>
+            Deletes the type of the item.
+            </summary>
+            <param name="nodeIds">The node ids.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.Dialogs.SettingsDialogController.DeleteItemType(Dynamicweb.Management.Settings.Dialogs.Models.DeleteItemTypeDialogModel)">
+            <summary>
+            Deletes the type of the item.
+            </summary>
+            <param name="model">The model.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Management.Settings.Dialogs.SettingsDialogViews">
+            <summary>
+            SettingsDialogViews
+            </summary>
+            <seealso cref="T:Dynamicweb.AspNet.Views.ElementViews" />
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.Dialogs.SettingsDialogViews.CreateRepository">
+            <summary>
+            Creates the repository.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.Dialogs.SettingsDialogViews.DeleteItemType">
+            <summary>
+            Deletes the type of the item.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Management.Settings.TreeManagementArea">
+            <summary>
+            TreeManagementArea
+            </summary>
+            <seealso cref="T:Dynamicweb.Management.IArea" />
+            <seealso cref="T:Dynamicweb.Core.UI.INavigator" />
+        </member>
+        <member name="F:Dynamicweb.Management.Settings.TreeManagementArea.SystemName">
+            <summary>
+            The system name
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeManagementArea.Configuration">
+            <summary>
+            Gets or sets the configuration.
+            </summary>
+            <value>
+            The configuration.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeManagementArea.Color">
+            <summary>
+            Gets or sets the color.
+            </summary>
+            <value>
+            The color.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeManagementArea.Image">
+            <summary>
+            Gets or sets the image.
+            </summary>
+            <value>
+            The image.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeManagementArea.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeManagementArea.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeManagementArea.DefaultAction">
+            <summary>
+            Gets or sets the default action.
+            </summary>
+            <value>
+            The default action.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeManagementArea.GetNodes(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Gets the nodes.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="requestParameters">The request parameters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeManagementArea.GetActions(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Gets the actions.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="requestParameters">The request parameters.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeManagementArea.Actions">
+            <summary>
+            Gets or sets the collection of actions for backend left menu.
+            </summary>
+            <value>
+            The collection of actions.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeNodeInfo.ChildrenExists">
+            <summary>
+            true - exist, false - don't, null - calculated
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Management.Settings.TreeAccessRuleType">
+            <summary>
+            Represents a Management Tree access rule type.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Management.Settings.TreeAccessRuleType.Allow">
+            <summary>
+            Allow access.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Management.Settings.TreeAccessRuleType.Deny">
+            <summary>
+            Deny access.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Management.Settings.TreeAccessRuleEntry">
+            <summary>
+            Represents a Management Tree access rule entry.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeAccessRuleEntry.RuleID">
+            <summary>
+            Gets or sets the ID of the containing access rule.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeAccessRuleEntry.Rule">
+            <summary>
+            Gets an instance of <see cref="T:Dynamicweb.Management.Settings.TreeAccessRule">TreeAccessRule</see> object which corresponds to the containing access rule.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeAccessRuleEntry.Type">
+            <summary>
+            Gets or sets the type of this entry.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeAccessRuleEntry.FieldName">
+            <summary>
+            Gets or sets the name of the field that this entry applies to.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeAccessRuleEntry.FieldValue">
+            <summary>
+            Gets or sets the value of the field that this entry applies to.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRuleEntry.#ctor">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRuleEntry.Fill(System.Data.IDataReader)">
+            <summary>
+            Fills object properties with the data provided by specified <see cref="T:System.Data.IDataReader">IDataReader</see> object.
+            </summary>
+            <param name="reader">data source.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRuleEntry.FillRow(System.Data.DataRow)">
+            <summary>
+            Fills data row with the object data.
+            </summary>
+            <param name="row">Data destination.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRuleEntry.GetTreeAccessRuleEntryByID(System.Int32)">
+            <summary>
+            Gets the tree access rule entry by its ID.
+            </summary>
+            <param name="id">An ID of the entry.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRuleEntry.GetTreeAccessRuleEntriesByRuleID(System.Int32)">
+            <summary>
+            Gets the tree access rule entries by their rule ID.
+            </summary>
+            <param name="ruleID">An ID of the rule.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRuleEntry.GetTreeAccessRuleEntry(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Gets the tree access rule entry by custom SQL.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" />.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRuleEntry.GetTreeAccessRuleEntries(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Gets the tree access rule entries by custom SQL.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" />.</param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Management.Settings.TreeAccessRule">
+            <summary>
+            Represents a Management Tree access rule.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeAccessRule.Path">
+            <summary>
+            Gets or sets the tree path which this rule is applied to.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeAccessRule.Type">
+            <summary>
+            Gets or sets the access type for this rule.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeAccessRule.Entries">
+            <summary>
+            Gets all access entries defined on this rule.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeAccessRule.EntriesToAdd">
+            <summary>
+            Gets all entries to be added when the rule it being saved.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeAccessRule.EntriesToRemove">
+            <summary>
+            Gets the IDs of all entries to be removed when the rule is being saved.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Management.Settings.TreeAccessRule.MergeEntries">
+            <summary>
+            Gets or sets value indicating whether to merge access entries (from Database + added manually - removed).
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.#ctor">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.AddEntries(Dynamicweb.Management.Settings.TreeAccessRuleEntry[])">
+            <summary>
+            Adds specified entries to this rule.
+            </summary>
+            <param name="entries">Entry to be added.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.AddEntry(Dynamicweb.Management.Settings.TreeAccessRuleEntry)">
+            <summary>
+            Adds specified entry to this rule.
+            </summary>
+            <param name="entry">Entry to be added.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.RemoveEntry(Dynamicweb.Management.Settings.TreeAccessRuleEntry)">
+            <summary>
+            Removes specified entry from this rule.
+            </summary>
+            <param name="entry">Entry to be removed.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.RemoveEntry(System.Int32)">
+            <summary>
+            Removes specified entry from this rule.
+            </summary>
+            <param name="entryID">An ID of the entry to be removed.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.Save">
+            <summary>
+            Saves current rule.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.Delete(System.Int32)">
+            <summary>
+            Deletes rule specified by ID.
+            </summary>
+            <param name="id">An ID of the rule to be deleted.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.Fill(System.Data.IDataReader)">
+            <summary>
+            Fills object properties with the data provided by specified <see cref="T:System.Data.IDataReader">IDataReader</see> object.
+            </summary>
+            <param name="reader">data source.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.FillRow(System.Data.DataRow)">
+            <summary>
+            Fills data row with the object data.
+            </summary>
+            <param name="row">Data destination.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.IntegerToString(System.Int32)">
+            <summary>
+            Converts integert value to string.
+            </summary>
+            <param name="intValue">Value to convert.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.EntryFound(Dynamicweb.Management.Settings.TreeAccessRuleEntry)">
+            <summary>
+            Infrastructure - comparison.
+            </summary>
+            <param name="entry">Entry to compare.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.GetTreeAccessRules">
+            <summary>
+            Gets all tree access rules.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.GetTreeAccessRulesByPath(System.String)">
+            <summary>
+            Gets tree access rules by tree path.
+            </summary>
+            <param name="path">Tree path.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.GetTreeAccessRuleByID(System.Int32)">
+            <summary>
+            Gets tree access rule by ID.
+            </summary>
+            <param name="id">An ID of the rule.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.GetTreeAccessRules(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Gets tree access rules by custom SQL.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" />.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.GetTreeAccessRule(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Gets tree access rule by custom SQL.
+            </summary>
+            <param name="commandBuilder">The <see cref="T:Dynamicweb.Data.CommandBuilder" />.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.GetSystemRules(System.String)">
+            <summary>
+            Gets all system tree access rules.
+            </summary>
+            <param name="path">Tree path to filter rules by.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.CreateRule(System.String,Dynamicweb.Management.Settings.TreeAccessRuleType,Dynamicweb.Management.Settings.TreeAccessRuleEntry[])">
+            <summary>
+            Creates new tree access rule.
+            </summary>
+            <param name="path">Tree path.</param>
+            <param name="type">Access type.</param>
+            <param name="entries">Entries to be added to this rule.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.CreateUserTypeEntries(Dynamicweb.Security.UserManagement.UserType[])">
+            <summary>
+            Creates tree access rule entries of type "User" (without specifying FieldValue).
+            </summary>
+            <param name="types">User types to be used to create entries.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Settings.TreeAccessRule.CreateGlobalSettingsEntries(System.String,System.String)">
+            <summary>
+            Creates tree access rule entries of type "GlobalSettings".
+            </summary>
+            <param name="path">Path to the Glogal Settings node.</param>
+            <param name="expectedValue">Expected value of the node.</param>
+            <remarks></remarks>
+        </member>
+    </members>
+</doc>

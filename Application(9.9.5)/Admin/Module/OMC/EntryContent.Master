@@ -1,0 +1,43 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="EntryContent.master.vb" Inherits="Dynamicweb.Admin.OMC.EntryContent" %>
+
+<%@ Register TagPrefix="dw" Namespace="Dynamicweb.Controls" Assembly="Dynamicweb.Controls" %>
+<%@ Import Namespace="Dynamicweb.SystemTools" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+
+    <title></title>
+
+    <dw:ControlResources ID="ctrlResources" runat="server">
+        <Items>
+            <dw:GenericResource Url="/Admin/Resources/css/dw8omcstylefix.min.css" />
+        </Items>
+    </dw:ControlResources>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+    <style type="text/css">
+        #PreviewTabDiv table.tabTable, #PreviewTabDiv fieldset {
+            display: block;
+            width: 470px;
+        }
+
+        #SchedulingDiv fieldset {
+            display: block;
+            width: 360px;
+        }
+    </style>
+
+
+
+</head>
+<body class="screen-container">
+    <div class="card">
+        <form id="MainForm" runat="server">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </form>
+    </div>
+    <%Translate.GetEditOnlineScript()%>
+</body>
+</html>

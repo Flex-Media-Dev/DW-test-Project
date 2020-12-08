@@ -1,0 +1,247 @@
+﻿@height: 18px;
+@border-color: #abadb3;
+@disabled-color: #c3c3c3;
+@item-border-color: #FFB700;
+
+.ajax-rich-control {
+    .combobox {
+        * {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        display: table;
+        position: relative;
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+
+        .disabled {
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        &.opened {
+            > input.combobox-text {
+                border-radius: 2px 0 0 0 !important;
+            }
+        }
+
+        > input.combobox-text {
+            display: table-cell;
+            position: relative;
+            float: left;
+            width: 100%;
+            margin: 0px;
+            padding: 0 0 0 5px !important;
+            min-height: @height !important;
+            line-height: @height;
+            padding-left: 1px;
+            padding-right: 1px;
+            border: 1px solid #abadb3 !important;
+            border-width: 1px 0 1px 1px !important;
+            border-radius: 2px 0 0 2px !important;
+
+            &.disabled {
+                color: #c3c3c3 !important;
+            }
+        }
+
+        > ul.combobox-list {
+            position: absolute;
+            list-style: none;
+            display: none;
+            top: 100%;
+            height: auto;
+            max-height: 115px;
+            width: 100%;
+            padding: 2px 2px;
+            margin: 0;
+            z-index: 10000;
+            background-color: #fff;
+            border: 1px solid @border-color;
+            border-radius: 0 0 3px 3px;
+            border-top: none;
+            box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px 0px;
+            overflow: auto;
+
+            &.opened {
+                display: block;
+            }
+
+            li {
+                height: 22px;
+                line-height: 20px;
+                text-align: left;
+                border: 1px solid transparent;
+                border-radius: 2px;
+                cursor: pointer;
+
+                &.in-focus {
+                    background-color: #0085CA;
+                    color: #fff;
+                }
+
+                > span {
+                    position: relative;
+                    top: 1px;
+                    display: inline-block;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1;
+                    margin: 0 4px;
+                    float: left;
+
+                    &:before {
+                        content: "";
+                    }
+                }
+
+                > a {
+                    display: inline-block;
+                    height: 100%;
+                    clear: both;
+                    font-weight: 400;
+                    line-height: 1.42857143;
+                    color: #333;
+                    white-space: nowrap;
+                    text-decoration: none;
+                    background: none !important;
+                    padding-bottom: 3px;
+                    padding-left: 2px;
+                    padding-top: 3px;
+                    text-align: left;
+                }
+
+                &.add-new {
+                    a {
+                        font-style: italic !important;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        > div.buttons {
+            cursor: pointer;
+            position: relative;
+            font-size: 0;
+            white-space: nowrap;
+            width: 1%;
+            vertical-align: middle;
+            display: table-cell;
+            border: 1px solid @border-color !important;
+            border-radius: 0 2px 2px 0 !important;
+
+            > a {
+                display: block;
+                height: 100%;
+                width: 14px;
+                border: 1px solid transparent;
+                margin-left: auto;
+                margin-right: auto;
+
+                > span {
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    margin-top: 2px;
+                    margin-left: 2px;
+                    vertical-align: middle;
+                    border-top: 4px solid;
+                    border-right: 4px solid transparent;
+                    border-left: 4px solid transparent;
+                }
+            }
+        }
+
+        .combobox-editor {
+            margin-bottom: 10px;
+            border-spacing: 4px;
+
+            label {
+                cursor: default;
+            }
+
+            tr {
+                margin: 5px 5px;
+                vertical-align: middle;
+            }
+
+            input, button, select, textarea {
+                font-family: inherit;
+                font-size: inherit;
+                line-height: inherit;
+                padding-left: 5px !important;
+                background-color: #fff;
+                border: 1px solid @border-color;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;
+                -moz-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            }
+
+            input, select, textarea {
+                padding: 0 0 0 5px !important;
+            }
+
+            button, select {
+                text-transform: none;
+            }
+
+            select {
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                appearance: none;
+            }
+
+            .editor-field-name {
+                min-width: 22px;
+                margin-right: 5px;
+            }
+
+            .editor-field-value {
+                input, select {
+                    width: 100%;
+                    min-width: 150px;
+                    height: @height;
+
+                    &:disabled {
+                        color: @disabled-color;
+                        border-color: @disabled-color;
+                    }
+                }
+            }
+        }
+
+        .sidebox {
+            .boxbody {
+                .dialog-button-ok,
+                .dialog-button-cancel {
+                    height: 23px;
+                    background-color: #F0F0F0;
+                    border: 1px solid @border-color;
+                    -webkit-border-radius: 2px;
+                    -moz-border-radius: 2px;
+                    border-radius: 2px;
+                    -moz-transition: background-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                    -o-transition: background-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                    -webkit-transition: background-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                    transition: background-color ease-in-out .15s,box-shadow ease-in-out .15s;
+
+                    &:hover {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+﻿.chooserMain  {
+    background-color: #ffffff;
+}
+
+.chooserRow {
+}
+
+.chooserItemSelected 
+{
+    width:47px; 
+	height:45px;
+	padding:4px; 
+	text-align:center;
+	cursor: pointer;
+
+    border: 1px solid #fdc25c;
+}
+
+.chooserItemNormal 
+{
+    width:47px; 
+	height:45px;
+	padding:4px; 
+	text-align:center; 
+	cursor: pointer;
+
+    border: 1px solid #ffffff;
+}
+
+.chooserItemOver 
+{
+    width:47px; 
+	height:45px;
+	padding:4px; 
+	text-align:center; 
+	cursor: pointer;
+	
+    border: 1px dashed #fdc25c;
+}
+
+.chooserItem  
+{
+    
+    margin: 2px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}

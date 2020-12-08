@@ -1,0 +1,23 @@
+﻿#CaptureDialog fieldset {
+    padding: 4px 8.25px;
+}
+
+#Capture_Loading {
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+}
+
+#tblCaptureHistory {
+    white-space: pre;
+    table-layout: fixed;
+}
+
+#tblCaptureHistory tr td{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#tblCaptureHistory tr td:first-child{
+    width: 120px;
+}

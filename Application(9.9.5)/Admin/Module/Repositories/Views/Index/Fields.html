@@ -1,0 +1,42 @@
+﻿<!-- FIELDS -->
+<fieldset style="width:80%;margin:10px;" id="items">
+    <legend class='gbTitle'>Fields&nbsp; <a href="#" ng-click="expandFields = !expandFields">Expand</a></legend>
+
+    <div style="border: 1px solid rgba(188, 203, 223, 1)">
+
+        <ul>
+            <li class="header">
+                <span class="pipe"></span><span class="C0">#</span>
+                <span class="pipe"></span><span class="C1">Name</span>
+                <span class="pipe"></span><span class="C2">Value</span>
+                <span class="pipe"></span><span class="C3">Summery</span>
+                <span class="pipe"></span><span class="C4">Summery</span>
+            </li>
+        </ul>
+
+
+        <ul id="items" style="position: relative; min-height: 5px;" ng-if="expandFields">
+            <li class="item-field" style="position: relative;" ng-repeat="field in schema.Fields">
+                <span class="C0"><a href="javascript:void(0);"><img alt="" src="/Admin/Images/Ribbon/Icons/Small/document.png"></a></span>
+                <span class="C1"><input type="text" ng-model="field.Name" style="border:0;font-size:9pt" /></span>
+                <span class="C2"><input type="text" ng-model="field.Type" style="border:0;font-size:9pt" /></span>
+                <span class="C1"><a href="javascript:void()" ng-click="schema.Fields.pop(field)"><img src="/Admin/Images/Icons/Delete_vsmall.gif"></a></span>
+            </li>
+        </ul>
+
+        <ul id="items" style="position: relative; min-height: 5px;" ng-if="!expandFields">
+            <li class="item-field" style="position: relative;" ng-repeat="field in schema.FieldsFromIndexDefinition">
+                <span class="C0"><a href="javascript:void(0);"><img alt="" src="/Admin/Images/Ribbon/Icons/Small/document.png"></a></span>
+                <span class="C1"><input type="text" ng-model="field.Name" style="border:0;font-size:9pt" /></span>
+                <span class="C2"><input type="text" ng-model="field.Type" style="border:0;font-size:9pt" /></span>
+                <span class="C3"><input type="text" ng-model="field.Type" style="border:0;font-size:9pt" /></span>
+                <span class="C4" style="float:right"><a href="javascript:void()" ng-click="schema.Fields.pop(field)"><img src="/Admin/Images/Icons/Delete_vsmall.gif"></a></span>
+            </li>
+            <li class="xitem-field" style="border: none;">
+                <span class="C1"><a href="javascript:void(0);">Click to add</a></span>
+            </li>
+        </ul>
+
+    </div>
+
+</fieldset>

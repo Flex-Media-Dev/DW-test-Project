@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		html, body {
+			font-family: Verdana, Helvetica, Arial, sans-serif;
+			margin: 0px;
+		}
+
+		td, th {
+			text-align: center;
+			border: 1px solid #d3d3d3;
+		}
+
+		table {
+			border-collapse: collapse;
+			background-color: #eeeeee;
+		}
+
+		.imgBox {
+			position: relative;
+			cursor: crosshair;
+		}
+
+		.focal {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			color: yellow;
+			font-size: 30px;
+			line-height: 1em;
+			font-weight: 100;
+			margin-left: -13px;
+			margin-top: -18px;
+			z-index: 100;
+		}
+
+
+	</style>
+	<script>
+		function focalSetposition(imgId) {
+			var mouseIsDown = false;
+			var imageElement = document.getElementById('imgbox' + imgId);
+
+			imageElement.addEventListener("mousemove", function (e) {
+				event.preventDefault;
+				var rect = e.target.getBoundingClientRect();
+				var x = Math.floor(e.clientX - rect.left); //x position within the element.
+				var y = Math.floor(e.clientY - rect.top);  //y position within the element.
+				document.getElementById("position" + imgId).innerHTML = 'x,y ' + x + ' , ' + y + '<br>' + rect.width + ' x ' + rect.height;
+
+			});
+
+			imageElement.addEventListener("mouseup", function (e) {
+				mouseIsDown = false;
+				setFocalClick(e);
+			});
+
+			function setFocalClick(e) {
+				if (!e.srcElement.getAttribute('src')) {
+					return;
+				}
+				var rect = e.target.getBoundingClientRect();
+				var x = Math.floor(e.clientX - rect.left); //x position within the element.
+				var y = Math.floor(e.clientY - rect.top);  //y position within the element.
+
+				focalSetFocalpoint(e.srcElement, x, y, rect.width, rect.height, imgId);
+			}
+
+			imageElement.addEventListener('mousedown', () => mouseIsDown = true);
+		}
+
+		function focalSetDefaultFocal(x, y, imgId) {
+			var img = document.getElementById("imgbox" + imgId);
+			focalSetFocalpoint(img, x, y, img.offsetWidth, img.offsetHeight, imgId);
+		}
+
+		function focalSetFocalpoint(imgObject, x, y, width, height, imgId) {
+			if (!imgObject.getAttribute('src')) {
+				return;
+			}
+			
+			document.getElementById("focal" + imgId).style.left = x + 'px';
+			document.getElementById("focal" + imgId).style.top = y + 'px';
+
+			var focalX = 0, focalY = 0;
+			var percentFromLeft = Math.round((x / width) * 100);
+			if (percentFromLeft < 50) {
+				focalX = (100 - (percentFromLeft * 2)) * -1;
+			}
+			if (percentFromLeft > 50) {
+				focalX = (percentFromLeft * 2) - 100;
+			}
+
+			var percentFromTop = Math.round((y / height) * 100);
+			if (percentFromTop < 50) {
+				focalY = (100 - (percentFromTop * 2));
+			}
+			if (percentFromTop > 50) {
+				focalY = ((percentFromTop * 2) - 100) * -1;
+			}
+
+			document.getElementById("focalPoint" + imgId).innerHTML = 'Pos: ' + x + ' (' + percentFromLeft + '%), ' + y + ' (' + percentFromTop + '%)';
+			document.getElementById("focalPoint" + imgId).innerHTML += '<br>Focal: ' + focalX + ' , ' + focalY;
+
+			setGetImage(focalX, focalY, imgId);
+		}
+
+		function setGetImage(focalX, focalY, imgId) {
+			var imagePath = document.getElementById("imgbox" + imgId).getAttribute('src');
+			var wides = document.getElementById("wides" + imgId);
+			wides.innerHTML = '';
+			wides.innerHTML += '<img src="/Admin/Public/GetImage.ashx?Image=' + imagePath + '&Format=jpg&crop=7&donotcache=true&Width=250&height=30&x=' + focalX + '&y=' + focalY + '" /><br>';
+			wides.innerHTML += '<img src="/Admin/Public/GetImage.ashx?Image=' + imagePath + '&Format=jpg&crop=7&donotcache=true&Width=250&height=60&x=' + focalX + '&y=' + focalY + '" /><br>';
+			wides.innerHTML += '<img src="/Admin/Public/GetImage.ashx?Image=' + imagePath + '&Format=jpg&crop=7&donotcache=true&Width=250&height=120&x=' + focalX + '&y=' + focalY + '" /><br>';
+			wides.innerHTML += '<img src="/Admin/Public/GetImage.ashx?Image=' + imagePath + '&Format=jpg&crop=7&donotcache=true&Width=250&height=200&x=' + focalX + '&y=' + focalY + '" /><br>';
+			//Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=100&height=300&crop=0&donotcache=true&x=-34
+
+			var narrows = document.getElementById("narrows" + imgId);
+			narrows.innerHTML = '';
+			narrows.innerHTML += '<img src="/Admin/Public/GetImage.ashx?Image=' + imagePath + '&quality=99&Format=jpg&crop=7&donotcache=true&Width=30&height=296&x=' + focalX + '&y=' + focalY + '" />&nbsp;&nbsp;&nbsp;';
+			narrows.innerHTML += '<img src="/Admin/Public/GetImage.ashx?Image=' + imagePath + '&quality=99&Format=jpg&crop=7&donotcache=true&Width=60&height=296&x=' + focalX + '&y=' + focalY + '" />&nbsp;&nbsp;&nbsp;';
+			narrows.innerHTML += '<img src="/Admin/Public/GetImage.ashx?Image=' + imagePath + '&quality=99&Format=jpg&crop=7&donotcache=true&Width=120&height=296&x=' + focalX + '&y=' + focalY + '" />&nbsp;&nbsp;&nbsp;';
+			narrows.innerHTML += '<img src="/Admin/Public/GetImage.ashx?Image=' + imagePath + '&quality=99&Format=jpg&crop=7&donotcache=true&Width=240&height=296&x=' + focalX + '&y=' + focalY + '" />&nbsp;&nbsp;&nbsp;';
+			narrows.innerHTML += '<img src="/Admin/Public/GetImage.ashx?Image=' + imagePath + '&quality=99&Format=jpg&crop=7&donotcache=true&Width=360&height=296&x=' + focalX + '&y=' + focalY + '" />&nbsp;&nbsp;&nbsp;';
+		}
+	</script>
+</head>
+<body onload="focalSetposition('1'); focalSetposition('2'); focalSetDefaultFocal(80, 267, '1'); focalSetDefaultFocal(130, 67, '2');">
+	<h1>GetImage test sheet for focal points...</h1>
+
+	<h1>Crop=7 (centerorfocal) with focal points</h1>
+	<table border="0" cellpadding="10">
+		<tr>
+			<th>Original</th>
+			<th>Width=250</th>
+			<th>Height=296</th>
+		</tr>
+		<tr>
+			<td colspan="10" align="center">Crop=7 (centerorfocal) with focal points</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="imgBox" id="imgboxContainer1"><img src="/Admin/Examples/images/292697_3537.jpg" style="width:250px;" id="imgbox1" /><div class="focal" id="focal1">+</div></div>
+				<div id="position1">x,y</div>
+				<div id="focalPoint1">0,0</div>
+			</td>
+			<td id="wides1"></td>
+			<td id="narrows1"></td>
+		</tr>
+		<tr>
+			<td>
+				<div class="imgBox" id="imgboxContainer2"><img src="/Admin/Examples/images/861226-nice-wallpaper.jpg" style="width:250px;" id="imgbox2" /><div class="focal" id="focal2">+</div></div>
+				<div id="position2">x,y</div>
+				<div id="focalPoint2">0,0</div>
+			</td>
+			<td id="wides2"></td>
+			<td id="narrows2"></td>
+		</tr>
+	</table>
+
+</body>
+</html>

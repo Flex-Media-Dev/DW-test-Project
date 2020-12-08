@@ -1,0 +1,169 @@
+﻿body
+{
+	background-color:#ffffff;
+}
+img
+{
+	border:0px;
+}
+input
+{
+	
+}
+
+input[type="checkbox"]
+{
+	margin:0px;
+	padding:0px;
+	line-height:13px;
+	height:13px;
+	margin-top:3px;
+}
+
+#_contentWrapper{
+	position:fixed;
+	top:66px;
+	left:0px;
+	bottom:53px;
+	right:1px;
+	overflow:auto;
+	border-top:1px solid #BDCCE0;
+}
+
+span.ShowFalse, li.ShowFalse
+{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; 
+	filter:alpha(opacity=40);
+	-moz-opacity: 0.4;
+	opacity: 0.4;
+}
+
+#myribbon
+{
+	min-width:838px;
+}
+
+.list ul
+{
+	min-width:640px;
+}
+
+.list #items li
+{
+	height:auto;
+	min-height:23px;
+	background-color:#FFFFFF;
+	cursor:default;
+	border-bottom:1px solid #BDCCE0;
+}
+
+.list span 
+{
+	height:auto;
+	line-height:normal;
+		
+}
+
+.list li.header
+{
+	border-top:0px solid #BDCCE0;
+	min-width:640px;
+}
+
+#BottomInformationBg
+{
+	height:53px;
+	width:100%;
+	min-width:818px;
+	background-image:url('/Admin/Images/BottomInformationBg.png');
+	background-repeat:repeat-x;
+	position:fixed;
+	bottom:0px;
+}
+
+#BottomInformationBg img
+{
+	margin:10px;
+}
+
+#BottomInformationBg .label
+{
+	color: #5A6779;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+.Infobar
+{
+	position:relative;
+	margin:3px;
+}
+
+.WorkflowState
+{
+	float:left;
+	margin-right:2px;
+}
+
+#Area_1
+{
+	background-color:#006E12;
+}
+
+.C0
+{
+	vertical-align:middle;
+	padding:0px;
+	margin:0px;
+	width:24px;
+	line-height:16px;
+	height:16px;
+}
+
+.C1
+{
+	vertical-align:middle;
+	padding:0px;
+	width:32px;
+	text-align:center;
+}
+
+.C1 img
+{
+	vertical-align:middle;
+}
+	
+.C2
+{
+	white-space:nowrap;
+	overflow:hidden;
+	width:225px;
+}
+
+.C3
+{
+	width:45px;
+	text-align:center;
+}
+.C3 img
+{
+	margin-top:3px;
+}	
+.C4
+{
+	width:150px;
+	overflow:hidden;
+	white-space:nowrap;
+}
+	
+.C5
+{
+	white-space:nowrap;
+	overflow:hidden;
+	width:110px;
+}
+	
+.C6
+{
+	width:0px;
+}

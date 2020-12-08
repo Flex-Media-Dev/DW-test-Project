@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Ecommerce.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Ecommerce.WebAPI.Controllers.PaymentController">
+            <summary>
+            The class <c>PaymentController</c> represents controller of payment operations such as caprute/return/cancel etc.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.WebAPI.Controllers.PaymentController.VerifyConnection">
+            <summary>
+            Verifies the connection.
+            </summary>
+            <returns>Returns <c>true</c> if connected successfully.</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.WebAPI.Controllers.PaymentController.Capture(System.String)">
+            <summary>
+            Captures the order with specified Id.
+            </summary>
+            <param name="orderid">The order Id.</param>
+            <returns>Returns <seealso cref="T:Dynamicweb.Ecommerce.Orders.Gateways.PaymentOperationResultModel"/> with operation info serialized to JSON.</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.WebAPI.Controllers.PaymentController.Capture(System.String,System.Double)">
+            <summary>
+            Captures the order with specified Id and amount.
+            </summary>
+            <param name="orderid">The order Id.</param>
+            <param name="amount">The amount to capture.</param>
+            <returns>Returns <seealso cref="T:Dynamicweb.Ecommerce.Orders.Gateways.PaymentOperationResultModel"/> with operation info serialized to JSON.</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.WebAPI.Controllers.PaymentController.Return(System.String)">
+            <summary>
+            Proceeds a return operation for order with specified Id.
+            </summary>
+            <param name="orderid">The order Id.</param>
+            <returns>Returns <seealso cref="T:Dynamicweb.Ecommerce.Orders.Gateways.PaymentOperationResultModel"/> with operation info serialized to JSON.</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.WebAPI.Controllers.PaymentController.Return(System.String,System.Double)">
+            <summary>
+            Proceeds a return operation for order with specified Id.
+            </summary>
+            <param name="orderid">The order Id.</param>
+            <param name="amount">The amount to return.</param>
+            <returns>Returns <seealso cref="T:Dynamicweb.Ecommerce.Orders.Gateways.PaymentOperationResultModel"/> with operation info serialized to JSON.</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.WebAPI.Controllers.PaymentController.Cancel(System.String)">
+            <summary>
+            Proceeds a cancel operation for order with specified Id.
+            </summary>
+            <param name="orderid">The order Id.</param>
+            <returns>Returns <seealso cref="T:Dynamicweb.Ecommerce.Orders.Gateways.PaymentOperationResultModel"/> with operation info serialized to JSON.</returns>
+        </member>
+        <member name="T:Dynamicweb.Ecommerce.WebAPI.CustomStringResultExtension">
+            <summary>
+            All credit goes to https://stackoverflow.com/questions/40833162/web-api-recommended-way-to-return-json-string#answer-40836422
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Ecommerce.WebAPI.JsonStringResultExtension">
+            <summary>
+            All credit goes to https://stackoverflow.com/questions/40833162/web-api-recommended-way-to-return-json-string#answer-40836422
+            </summary>
+        </member>
+    </members>
+</doc>

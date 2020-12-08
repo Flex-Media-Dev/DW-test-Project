@@ -1,0 +1,45 @@
+﻿.formFieldsTable {
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    width: 100%;
+    border: 1px solid #bfdbff;
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+}
+
+    .formFieldsTable .header {
+        background: url('/Admin/images/Ribbon/tabarea_bg.jpg' ) top left repeat-x;
+        background-color: transparent;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        filter: alpha(opacity=40);
+        opacity: 0.4;
+        height: 15px;
+    }
+
+        .formFieldsTable .header TH {
+            font-family: arial, verdana, Microsoft JhengHei;
+            font-size: 11px;
+            font-weight: normal;
+            text-align: center;
+        }
+
+    .formFieldsTable .footer {
+        cursor: pointer;
+        height: 21px;
+    }
+
+    .formFieldsTable TD {
+        border-right: #bfdbff 1px solid;
+        border-top: #bfdbff 1px solid;
+        vertical-align: middle;
+        border-left: #bfdbff 1px solid;
+        border-bottom: #bfdbff 1px solid;
+    }
+
+    /* Draggable row */
+    .formFieldsTable .draggableRow td {
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+    }

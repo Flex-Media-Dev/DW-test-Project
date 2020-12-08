@@ -1,0 +1,93 @@
+﻿<!-- INSERT Page, Imports AND Register HERE -->
+
+<!-- The doctype must allways be like this -->
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- INSERT THE ScriptLib HERE, AS SHOWN BELOW -->
+        <dwc:ScriptLib runat="server" ID="ScriptLib1" ></dw:ScriptLib>
+
+        <!-- No page specific css stylesheets alowed! -->
+
+        <!-- INSERT PAGE SPECIFIC JS, NEEDED IN THE TOP, HERE -->
+    </head>
+
+    <!-- THE PAGE MUST ALLWAYS BE BUILT WITH THIS STRUCTURE, NO EXEPTIONS -->
+    <!-- The body may have an Onload attribute, but may NEVER have anything else than that and the class="area-blue" -->
+    <body class="area-blue">
+        <div class="dw8-container">
+            <dwc:BlockHeader runat="server">
+                <!-- ALL PAGES HAS A BREADCRUMB, IF NONE ARE AVAILABLE IN THE SYSTEM, HARDCODE IT IN ENGLISH -->
+                <div id="breadcrumb" runat="server"></div>
+
+                <ul class="actions">
+                    <!-- IF THE HELP BUTTON IS AVAILABLE - DELETE THE HELP BUTTON FROM THE RIBBONBAR AND LET THIS TAKE OVER -->
+                    <!-- Sadly, help may not have been implentend the same way in all the templates - Make it work with the available implementation -->
+                    <li>
+                        <a class="icon-pop" href="javascript:help();"><i class="md md-help"></i></a>
+                    </li>
+                </ul>
+            </dwc:BlockHeader>
+
+            <!-- ALL CONTENT MUST BE CONTAINED INSIDE THE CARD, NO EXEPTIONS --> 
+            <dwc:Card runat="server">
+                <dwc:CardHeader runat="server" Title="Card title"></dwc:CardHeader>
+
+                <dwc:CardBody runat="server">
+                    <!-- INSERT THE CONTENT HERE OR IN THE GROUPBOXES -->
+
+                    <dwc:GroupBox runat="server">
+
+                    </dwc:GroupBox>
+
+                    <dwc:GroupBox runat="server">
+
+                    </dwc:GroupBox>
+
+                    <dwc:GroupBox runat="server">
+
+                    </dwc:GroupBox>
+                </dwc:CardBody>
+
+                <dwc:CardFooter runat="server">
+
+                </dwc:CardFooter>
+            </dwc:Card>
+
+            <!-- INSERT ALL STATIC INFORMATIONS INSIDE THE BLOCK-INFO COLUMNS. CONVERT TABLES TO GRID. IF NO INFORMATION IS AVAILABLE THE BLOCK-INFO MUST NOT BE IMPLEMENTED -->
+            <!-- Tables must be re-implemented as div's, like shown below -->
+            <div class="block-info">
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                </div>
+            </div>
+
+            <!-- INSERT THE FLOATING ACTIONBAR HERE, IF ANY ACTIONS ARE AVAILABLE (Save, SaveAndClose and/or Cancel) - Ribbonbar buttons must be converted to ToolbarButtons -->
+            <dwc:ActionBar runat="server">
+                <dw:ToolbarButton runat="server" Text="Gem" KeyboardShortcut="ctrl+s" Size="Small" Image="NoImage" OnClientClick="cmdSave();" ID="Save" ShowWait="true" WaitTimeout="500">
+                </dw:ToolbarButton>
+                <dw:ToolbarButton runat="server" Text="Gem og luk" Size="Small" Image="NoImage" ID="cmdSaveAndClose" ShowWait="true" WaitTimeout="500">
+                </dw:ToolbarButton>
+                <dw:ToolbarButton runat="server" Text="Annuller" Size="Small" Image="NoImage" ID="cmdCancel" ShowWait="true" WaitTimeout="500">
+                </dw:ToolbarButton>
+            </dwc:ActionBar>
+
+            <!-- INSERT CONTEXTMENUS HERE -->
+
+            <!-- INSERT DIALOGS, POP-UPS AND MODALS HERE -->
+
+            <!-- INSERT SCRIPTS, ONLY USED ON THIS PAGE, HERE -->
+
+        </div>
+    </body>
+</html>

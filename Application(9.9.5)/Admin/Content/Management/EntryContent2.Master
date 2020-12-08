@@ -1,0 +1,79 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="EntryContent2.Master.vb" Inherits="Dynamicweb.Admin.EntryContent2" %>
+
+<%@ Register Assembly="Dynamicweb.Controls" Namespace="Dynamicweb.Controls" TagPrefix="dw" %>
+<%@ Import Namespace="Dynamicweb" %>
+<%@ Import Namespace="Dynamicweb.SystemTools" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <dw:ControlResources ID="ctrlResources" IncludePrototype="true" IncludeUIStylesheet="true" runat="server" />
+
+    <asp:Literal ID="litImagesFolderName" runat="server" />
+    <script type="text/javascript" src="/Admin/Content/Management/EntryContent.js"></script>
+
+    <asp:Literal ID="litScript" runat="server" />
+    <style type="text/css">
+        #PageContent {
+            max-height: calc(100vh - 101px);
+            overflow: auto;
+        }
+        h2.subtitle{
+            padding-left:16px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body class="screen-container">
+    <div class="card">
+        <form method="post" action="/Admin/Module/ControlPanel_Save.aspx?<%=CustomQueryString %>" name="frmGlobalSettings" id="MainForm">
+            <input id="hiddenSource" type="hidden" name="_source" value="ManagementCenter" />
+            <input id="hiddenCheckboxNames" type="hidden" name="CheckboxNames" />
+
+            <div class="card-header">
+                <h2 class="subtitle">
+                    <dw:TranslateLabel ID="lbSubTitle" Text="" runat="server" />
+                </h2>
+            </div>
+
+            <div id="divToolbar" style="height: auto; min-width: 600px;">
+                <dw:Toolbar ID="Buttons" runat="server" ShowEnd="false">
+                    <dw:ToolbarButton ID="cmdSave" runat="server" Divide="None" Icon="Save" Text="Save" OnClientClick="SettingsPage.getInstance().save();" ShowWait="True">
+                    </dw:ToolbarButton>
+                    <dw:ToolbarButton ID="cmdSaveAndClose" runat="server" Divide="None" Icon="Save" Text="Save and close" OnClientClick="SettingsPage.getInstance().saveAndClose();" ShowWait="True">
+                    </dw:ToolbarButton>
+                    <dw:ToolbarButton ID="cmdCancel" runat="server" Divide="None" Icon="TimesCircle" IconColor="Default" Text="Cancel" OnClientClick="SettingsPage.getInstance().cancel()" ShowWait="True">
+                    </dw:ToolbarButton>
+                    <dw:ToolbarButton ID="cmdHelp" runat="server" Divide="None" Icon="Help" Text="Help" OnClientClick="SettingsPage.getInstance().help();">
+                    </dw:ToolbarButton>
+                </dw:Toolbar>
+            </div>
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <asp:Panel ID="pNoAccess" runat="server">
+                <table border="0" cellpadding="6" cellspacing="6">
+                    <tr>
+                        <td>
+                            <dw:TranslateLabel ID="lbNoAccess" Text="Du har ikke de nødvendige rettigheder til denne funktion." runat="server" />
+                            <script type="text/javascript">
+                                Toolbar.setButtonIsDisabled('cmdSave', true);
+                            </script>
+                        </td>
+                    </tr>
+                </table>
+            </asp:Panel>
+        </form>
+    </div>
+</body>
+
+<script type="text/javascript">
+    SettingsPage.getInstance().initialize();
+</script>
+</html>

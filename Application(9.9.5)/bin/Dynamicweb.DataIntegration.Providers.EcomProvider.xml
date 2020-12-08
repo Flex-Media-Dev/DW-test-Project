@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.DataIntegration.Providers.EcomProvider</name>
+    </assembly>
+    <members>
+        <member name="M:Dynamicweb.DataIntegration.Providers.EcomProvider.EcomDestinationWriter.AddMappingsToJobThatNeedsToBeThereForMoveToMainTables">
+            <remarks>
+             Source columns are irrelevant, but must be set, so they are set to a random column
+            </remarks>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.EcomProvider.EcomDestinationWriter.GetExistingProductDataRow(System.String)">
+            <summary>
+            Search for existing product by ProductID, if not found then searches by ProductNumber, and then by ProductName
+            </summary>
+            <param name="searchString"></param>
+            <returns>Returns existing DataRow with product information if found, otherwise null</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.EcomProvider.EcomProvider.GetSchema(System.Boolean)">
+            <summary>
+            Gets source or destination schema for Ecom Provider
+            </summary>
+            <param name="getForDestination">true to get Destination schema, false to get Source schema</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.EcomProvider.EcomSourceReader.GetNext">
+            <summary>
+            base implementation, 
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

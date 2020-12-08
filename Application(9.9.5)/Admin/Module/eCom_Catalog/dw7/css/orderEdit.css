@@ -1,0 +1,133 @@
+﻿#orderFieldsContainer img.H
+{
+    position: inherit !important;
+}
+
+.order-details
+{
+    width: 100%;
+}
+
+.order-details > thead > tr > td
+{
+    font-weight: bold;
+}
+
+.order-details-left
+{
+    width: 350px;
+    vertical-align: top;
+}
+
+.order-details-right
+{
+    width: 400px;
+    vertical-align: top;
+}
+
+.order-title
+{
+    width: 140px;
+}
+
+.cell-right
+{
+    text-align: right;
+}
+
+.cell-center
+{
+    text-align: center;
+}
+
+.order-area-header
+{
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+
+
+/* New design for order*/
+
+/* This will not add, just for demonstration */
+/** {padding:0; margin:0}
+body {position:relative; color: #333333; font-family: arial,verdana,Microsoft JhengHei; font-size: 14px;}
+fieldset {border: 1px solid #D5DFE5; border-radius: 3px;}
+.gbTitle {color: #003366; font-size: 11px; font-weight: bold; vertical-align: middle;}
+
+.tabDiv {background-color:#FFFFFF; }*/
+
+.editOrderInfoTextField {
+    width: 90px;
+}
+.editInput {
+    width: 187px;
+}
+
+/*.order_items_head {background: url("/Admin/Images/Ribbon/UI/List/Pipe.gif") repeat-x; border-bottom: 1px solid #BDCCE0; overflow:hidden;}*/
+
+.halfWidth { width: 91px;}
+
+/* Order detail in backend */
+.order_l {float:left; clear:both; width:150px;}
+.order_r {float:left; width:190px;}
+.order_rWidth {float:left; padding:1px 0; width:580px;}
+.order_items_head div {border-left: 1px solid #BDCCE0; padding:2px; float:left;}
+.order_item_body div, .order_item_foot div{float:left; padding:5px 2px 5px 10px;}
+.order_item_body, .order_item_foot {overflow:hidden;}
+.order_item_body:hover {background: #EBF7FD;}
+.order_item1 {width:115px; clear:both;}
+.order_item2 {width:332px;}
+.order_item3 {width:70px;}
+.order_item4, .order_item5 {width:90px; text-align:right;}
+.order_grey {color:#aaa;}
+#OrderEditTab2 {background:#fff;}
+
+.order_bill {width:40%; float:left; min-height: 100px;}
+.order_bill2 {width:40%; float:left; min-height: 100px;}
+.bill_wr {overflow:hidden; zoom:1; }
+.tabarea 
+{
+    min-width:1100px;
+}
+
+.disableText {
+    color: #9E9E9E;
+}
+
+.total-exluding-tax-row td,
+.total-exluding-vat-and-tax-row td,
+.total-exluding-vat-row td,
+.payment-total-row td,
+.shipping-total-row td,
+.subtotal-subheader-row td {
+   border-bottom: 0px solid #333 !important; 
+   line-height: 22px;
+}
+
+.total-exluding-tax-row td,
+.total-exluding-vat-and-tax-row td,
+.total-exluding-vat-row td {
+    color: #9E9E9E;
+}
+
+.subtotal-subheader-row td {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+.payment-total-row td,
+.shipping-total-row td {
+    background-color: #f5f5f5;
+}
+
+.total-subheader-row td {
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.total-subheader-row .disableText {
+    font-size: 12px;
+}

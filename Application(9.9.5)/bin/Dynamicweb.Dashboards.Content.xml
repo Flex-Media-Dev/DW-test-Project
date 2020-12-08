@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Dashboards.Content</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Dashboards.Content.Widgets.LatestParagraphsWidget">
+            <summary>
+            LatestParagraphsWidget
+            </summary>
+            <seealso cref="T:Dynamicweb.Dashboards.Widgets.ListWidget" />
+        </member>
+        <member name="M:Dynamicweb.Dashboards.Content.Widgets.LatestParagraphsWidget.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Dashboards.Content.Widgets.LatestParagraphsWidget"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Dashboards.Content.Widgets.LatestParagraphsWidget.GetItems(Dynamicweb.Dashboards.IDashboard,System.String)">
+            <summary>
+            Gets the items.
+            </summary>
+            <param name="dashboard">The dashboard.</param>
+            <param name="path">The path.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Dashboards.Content.Widgets.PagesTotalWidget">
+            <summary>
+            PagesTotalWidget
+            </summary>
+            <seealso cref="T:Dynamicweb.Dashboards.Widgets.CountWidget" />
+        </member>
+        <member name="M:Dynamicweb.Dashboards.Content.Widgets.PagesTotalWidget.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Dashboards.Content.Widgets.PagesTotalWidget"/> class.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Dashboards.Content.Widgets.PagesTotalWidget.AreaId">
+            <summary>
+            Gets or sets chart IntervalType
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Dashboards.Content.Widgets.PagesTotalWidget.GetOptions(System.String)">
+            <summary>
+            Return dropdown options
+            </summary>
+            <param name="dropdownName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Dashboards.Content.Widgets.PagesTotalWidget.GetCounterValue(Dynamicweb.Dashboards.IDashboard,System.String,System.String@)">
+            <summary>
+            Gets the counter number.
+            </summary>
+            <param name="dashboard">The dashboard.</param>
+            <param name="path">The path.</param>
+            <param name="formattedValue">The formatted counter number</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

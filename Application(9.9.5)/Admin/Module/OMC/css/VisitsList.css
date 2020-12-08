@@ -1,0 +1,31 @@
+﻿.omc-visits-list .list-container
+{
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 1px solid #9faec2;
+    
+    cursor: default;
+}
+
+.omc-visits-list .location-pending
+{
+    color: #9d9d9d;
+}
+
+.omc-visits-list span.omc-visits-list-lastpageviews-container span.omc-visits-list-lastpageviews-value,
+.omc-visits-list span.omc-visits-list-lastpageviews-container span.omc-visits-list-lastpageviews-haskeywords
+{
+    float: left;
+}
+
+.omc-visits-list span.omc-visits-list-lastpageviews-container span.omc-visits-list-lastpageviews-haskeywords
+{
+    width: 16px;
+    height: 16px;
+    
+    margin-left: 2px;
+    
+    cursor: help;
+    
+    background: url('/Admin/Images/Ribbon/Icons/Small/find.png') top left no-repeat;
+}

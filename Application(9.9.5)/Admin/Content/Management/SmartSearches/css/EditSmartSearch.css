@@ -1,0 +1,36 @@
+﻿div.content-main fieldset
+{
+    width: 893px;
+}
+
+.EditableGridHeader 
+{
+	background: url('/Admin/Images/Ribbon/UI/List/Pipe.gif' ) top left repeat-x;
+	float: left;
+	width:100%;
+	cursor:default;
+	border-top:1px solid #6593CF;
+	border-bottom:1px solid #6593CF;
+	margin:5px 0px 5px 0px;
+	height:11px;
+	width:1px;
+	padding: 0px;
+	background-color: #9AC6FF;
+	font-weight: normal;
+}
+
+.OrderByDirectionDropDown
+{
+	margin-left: 3px;
+}
+
+div.cacheSettings 
+{
+    display: table-cell;
+    width: 170px;
+}
+
+fieldset.cacheSettings 
+{
+    margin: 5px;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Ecommerce.SalesDiscounts.ShippingDiscount</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Ecommerce.SalesDiscounts.ShippingDiscount.ShippingDiscount">
+            <summary>
+            Represents shipping method discount
+            The shipping method discount lets you apply a discount to orders where the customer has chosen a certain shipping method
+            E.g. the customer has chosen one of your preferred shipping partners and gets a 2 percent discount
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.SalesDiscounts.ShippingDiscount.ShippingDiscount.ProcessOrder(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Processes order by adding discount line to order lines
+            </summary>
+            <param name="order">Order instance</param>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.SalesDiscounts.ShippingDiscount.ShippingDiscount.GetOptions(System.String)">
+            <summary>
+            Retrieves options as order fields or shipping method
+            </summary>
+            <param name="optionName">ShippingMethod or OrderField</param>
+            <returns>HashTable with SystemName and Name of order field or ID and Name of shipping method</returns>
+        </member>
+    </members>
+</doc>

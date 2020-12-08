@@ -1,0 +1,14 @@
+﻿/* File Created: januar 2, 2012 */
+.FileManagerSelect {
+    width: 220px;
+}
+
+input[type=checkbox] {
+    float: left;
+    vertical-align: middle;
+}
+
+label {
+    display: block;
+    vertical-align: middle;
+}

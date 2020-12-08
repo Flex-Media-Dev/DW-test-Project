@@ -1,0 +1,40 @@
+﻿.leads-content-container table.dw-rc
+{
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.leads-content-container .leads-content-cell-first
+{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    margin-left: 10px;
+}
+
+.leads-content-container table.leads-content-container tr td.leads-content-cell
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*.popup-progress
+{
+	padding-top: 120px !important;
+	height: 210px !important;
+}*/
+
+table.popup-dialog-border td.popup-dialog-content div.popup-dialog-buttons div.popup-operation-indicator
+{
+    margin-top: 4px;
+}
+
+table.popup-dialog-border td.popup-dialog-content div.popup-dialog-buttons button.dialog-button-ok
+{
+    margin-right: 0px;
+}
+
+table.popup-dialog-border td.popup-dialog-content div.popup-dialog-buttons button.dialog-button-cancel
+{
+    margin-left: 0px;
+}

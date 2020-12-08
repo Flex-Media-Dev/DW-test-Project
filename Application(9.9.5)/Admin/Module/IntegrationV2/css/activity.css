@@ -1,0 +1,29 @@
+﻿.mappings .form-group {
+    margin-bottom: 0;
+}
+
+.mappings .form-group .form-group-input {
+    width: 100%;
+}
+
+.mappings th {
+    text-transform: uppercase;
+    text-align: left;
+    height: 30px;
+}
+
+.mappings td:first-child {
+    width: 300px;
+}
+
+.cmd-pane.fixed-pane {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: white;
+}
+
+.content-area {
+    padding-bottom: 43px;
+}

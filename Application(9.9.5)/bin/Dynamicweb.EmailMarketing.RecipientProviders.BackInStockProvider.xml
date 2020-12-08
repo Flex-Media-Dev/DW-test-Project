@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.EmailMarketing.RecipientProviders.BackInStockProvider</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.EmailMarketing.RecipientProviders.BackInStockProvider.BackInStockRecipientProvider">
+            <summary>
+            Back in stock recipient provider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.RecipientProviders.BackInStockProvider.BackInStockRecipientProvider.Website">
+            <summary>
+            Website address
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.RecipientProviders.BackInStockProvider.BackInStockRecipientProvider.DisregardEmailAllowed">
+            <summary>
+            Gets or sets 'require customer accepted sales terms' value
+            </summary>
+            <returns>Boolean value</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.BackInStockProvider.BackInStockRecipientProvider.GetRecipients">
+            <summary>
+            Gets the recipients.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.BackInStockProvider.BackInStockRecipientProvider.GetRecipientContentContext(Dynamicweb.Mailing.Recipient)">
+            <summary>
+            Gets the recipient content context. This method is used when rendering recipient specific content.
+            </summary>
+            <param name="recipient">The recipient.</param>
+            <returns>The <see cref="T:Dynamicweb.Frontend.PageViewContext" /> to render the associated page with.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.BackInStockProvider.BackInStockRecipientProvider.UnsubscribeRecipient(Dynamicweb.Mailing.Recipient)">
+            <summary>
+            Unsubscribes the recipient.
+            </summary>
+            <param name="recipient">The recipient.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.BackInStockProvider.BackInStockRecipientProvider.GetOptions(System.String)">
+            <summary>
+            Implements <see cref="M:Dynamicweb.Extensibility.Editors.IDropDownOptions.GetOptions">IDropDownOptions.GetOptions</see> method,
+            and used for DropDownLists control
+            </summary>
+            <param name="Name">Specified current control name</param>
+            <returns>Hashtable with specified control options</returns>
+        </member>
+    </members>
+</doc>

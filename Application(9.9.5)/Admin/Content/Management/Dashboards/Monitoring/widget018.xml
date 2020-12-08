@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Parameters addin="Dynamicweb.Dashboards.Monitoring.Widgets.EventCountWidget">
+	<Parameter addin="Dynamicweb.Dashboards.Monitoring.Widgets.EventCountWidget" name="WidgetTitleEditor" value="Unhandled exceptions last 24h" />
+	<Parameter addin="Dynamicweb.Dashboards.Monitoring.Widgets.EventCountWidget" name="Threshold1Enable" value="True" />
+	<Parameter addin="Dynamicweb.Dashboards.Monitoring.Widgets.EventCountWidget" name="Threshold1Color" value="#DEE359" />
+	<Parameter addin="Dynamicweb.Dashboards.Monitoring.Widgets.EventCountWidget" name="Threshold1Condition" value="&gt;" />
+	<Parameter addin="Dynamicweb.Dashboards.Monitoring.Widgets.EventCountWidget" name="Threshold1Value" value="5" />
+	<Parameter addin="Dynamicweb.Dashboards.Monitoring.Widgets.EventCountWidget" name="Threshold2Enable" value="True" />
+	<Parameter addin="Dynamicweb.Dashboards.Monitoring.Widgets.EventCountWidget" name="Threshold2Color" value="#AA1111" />
+	<Parameter addin="Dynamicweb.Dashboards.Monitoring.Widgets.EventCountWidget" name="Threshold2Condition" value="&gt;" />
+	<Parameter addin="Dynamicweb.Dashboards.Monitoring.Widgets.EventCountWidget" name="Threshold2Value" value="10" />
+	<Parameter addin="Dynamicweb.Dashboards.Monitoring.Widgets.EventCountWidget" name="EventLevelParameterEditor" value="Error" />
+	<Parameter addin="Dynamicweb.Dashboards.Monitoring.Widgets.EventCountWidget" name="CategoryParameterEditor" value="Health|Unhandled" />
+	<Parameter addin="Dynamicweb.Dashboards.Monitoring.Widgets.EventCountWidget" name="TimePeriodParameterEditor" value="LastDay" />
+	<Parameter addin="Dynamicweb.Dashboards.Monitoring.Widgets.EventCountWidget" name="ColorParameterEditor" value="#0085CA" />
+</Parameters>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<updates>
+  <!--This is a bogus version file to make sure 19.* version management does not crash and does not show version 8 applications.-->
+  <current version="473" releasedate="06-10-2011" internalversion="9.3.0.0" />
+</updates>

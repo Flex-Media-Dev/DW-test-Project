@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<LogEventNotification xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SystemName>Health monitoring</SystemName>
+  <Name>Health monitoring</Name>
+  <Description />
+  <SendInterval>10</SendInterval>
+  <NotifiedEmails />
+  <NotificationLevels>Error</NotificationLevels>
+  <NotificationDestination>MonitoringService</NotificationDestination>
+  <NotificationServiceUri>http://healthmonitoringservice.dynamicweb-cms.com</NotificationServiceUri>
+</LogEventNotification>

@@ -1,0 +1,24 @@
+﻿.color-selector input
+{
+    float: left;
+    width: 100px;
+}
+
+.color-selector .color-selector-view
+{
+    float: left;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #c3c3c3;
+    margin-left: 3px;
+    cursor: default;
+}
+
+.color-selector .color-selector-clear
+{
+    clear: both;
+    visibility: hidden;
+    height: 1px;
+    display: block;
+    content: ".";
+}

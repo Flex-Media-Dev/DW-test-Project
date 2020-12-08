@@ -1,0 +1,81 @@
+﻿.dw-products-groups-main-div {
+
+}
+
+.dw-products-groups-main-div .dw-products-groups-selector {
+    min-height: 150px;
+    height: 150px;
+    width: 350px;
+    display: inline-block;
+    border: 1px #bdbdbd solid;
+    overflow-y: auto;
+}
+
+.dw-products-groups-main-div .dw-products-groups-selector .dw-list-line {
+    cursor: pointer;
+    list-style: none;
+    margin: 0;
+    font-size: 14px;
+    padding: 5px 6px;
+    border: 0;
+    position: relative;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.dw-products-groups-main-div .dw-products-groups-selector .dw-list-line:hover {
+    background: #eeeeee;
+}
+
+.dw-products-groups-main-div .dw-products-groups-selector .dw-list-line.selected-line {
+    background-color: #0085CA;
+    color: #ffffff;
+}
+
+.dw-products-groups-main-div .dw-products-groups-selector .dw-list-line.selected-line i {
+    color: #ffffff;
+}
+
+.dw-products-groups-main-div .dw-products-groups-selector .dw-list-line i {
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    text-align: center;
+    margin-right: 5px;
+    padding-top: 2px;
+    line-height: 16px;
+    font-size: 18px;
+}
+
+.dw-products-groups-main-div .dw-buttons-wrap {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.dw-products-groups-main-div .dw-buttons-wrap i {
+    width: 31px;
+    height: 31px;
+    display: block;
+    text-align: center;
+    background: #ffffff;
+    padding-top: 8px;
+    transition: all,100ms,ease;
+    border: 1px #bdbdbd solid;
+    border-left: 0;
+    border-bottom: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.dw-products-groups-main-div .dw-buttons-wrap i:last-child,
+.dw-products-groups-main-div .dw-buttons-wrap i.last {
+    border-bottom: 1px #bdbdbd solid;
+}
+
+.dw-products-groups-main-div .dw-buttons-wrap i:hover {
+    background: #f5f5f5;
+}
+
+.control-label.container_some_main_div{
+    margin-top: 10px;
+}

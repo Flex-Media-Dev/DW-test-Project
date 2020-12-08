@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.WeightedSearch</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.WeightedSearch.Frontend">
+            <summary>
+            Represents an entry point of the module frontend.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.WeightedSearch.Frontend.#ctor">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.WeightedSearch.Frontend.GetContent">
+            <summary>
+            Retrieves module content.
+            </summary>
+            <returns>Module content.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.WeightedSearch.IndexingService">
+            <summary>
+            Represents indexing service for
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.WeightedSearch.ResultItem">
+            <summary>
+            Represents result item with a set of properties
+            </summary>
+            <remarks>
+            0- Url: The url to the result, eg., link to product. This is arrSearchResult(0, x).
+            1- Title: The title of the search result, eg., the product name. This is arrSearchResult(1, x).
+            2- EditDate: The DateTime of the search result, eg., last time the product was edited. This is arrSearchResult(2, x).
+            3- Weight: The weight of the search result. This is arrSearchResult(3, x).
+            4- Summary: The short summary text describing the search result. This is arrSearchResult(4, x).
+            5- Description: The longer search result description. This is arrSearchResult(5, x).
+            </remarks>
+        </member>
+        <member name="P:Dynamicweb.WeightedSearch.ResultItem.Url">
+            <summary>
+            The url to the result, eg., link to product.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.WeightedSearch.ResultItem.Title">
+            <summary>
+            The title of the search result, eg., the product name.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.WeightedSearch.ResultItem.EditDate">
+            <summary>
+            The DateTime of the search result, eg., last time the product was edited.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.WeightedSearch.ResultItem.Weight">
+            <summary>
+            The weight of the search result.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.WeightedSearch.ResultItem.Summary">
+            <summary>
+            The short summary text describing the search result.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.WeightedSearch.ResultItem.Description">
+            <summary>
+            The longer search result description.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.WeightedSearch.ResultItem.CompareTo(Dynamicweb.WeightedSearch.ResultItem)">
+            <summary>
+            Compares current ResultItem weight with another one ResultItem weight value
+            </summary>
+            <param name="other">The instanse of result item for compare with</param>
+            <returns>
+            A signed number indicating the relative values of this instance and value.Return
+            Value Description Less than zero This instance is less than value. Zero This
+            instance is equal to value. Greater than zero This instance is greater than value.
+            </returns>
+        </member>
+        <member name="T:Dynamicweb.WeightedSearch.ResultItemCollection">
+            <summary>
+            Collection of result items
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.WeightedSearch.ResultItemCollection.CleanResult(System.Int32)">
+            <summary>
+            Cleans result
+            </summary>
+            <param name="CleanMethod">
+            CleanMethod = 1 --> Remove entry if count = 0 and count of first entry > 0
+            CleanMethod = 3 --> Remove entry if count = 0
+            </param>
+        </member>
+        <member name="M:Dynamicweb.WeightedSearch.ResultItemCollection.SortArray(System.String[0:,0:],System.Int32,System.Boolean)">
+            <summary>
+            Sorts array
+            </summary>
+            <param name="arrayToSort"></param>
+            <param name="sortBy"></param>
+            <param name="compareText"></param>
+        </member>
+        <member name="T:Dynamicweb.WeightedSearch.ResultItemTemplateExtender">
+            <summary>
+            Extends TemplateExtender class with ResultItem properties
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.WeightedSearch.WindowsSearch">
+            <summary>
+            Provides methods for using windows search
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.WeightedSearch.WindowsSearch.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Func{System.String,System.String},System.Func{System.String,System.String,System.Int32})">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.WeightedSearch.WindowsSearch.IsIndexedFolder(System.String)">
+            <summary>
+            Checks if folder is indexed
+            </summary>
+            <param name="folder">Folder path to be chaecked</param>
+            <returns>True if folder is indexed</returns>
+        </member>
+        <member name="P:Dynamicweb.WeightedSearch.WindowsSearch.IsSupported">
+            <summary>
+            Shows if current server OS is higher then Windows 8 version
+            </summary>
+            <returns>True if it is supported</returns>
+        </member>
+        <member name="M:Dynamicweb.WeightedSearch.WindowsSearch.IsServiceStarted">
+            <summary>
+            Checks if service is started
+            </summary>
+            <returns>Result of check</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,38 @@
+﻿<!--@DM.Pub.CssFile-->
+
+<table class="<!--@DM.Pub.CssClass-->">
+
+<!--@LoopStart(DM.Pub.Columns)-->
+    <!--@HeaderStart-->
+    <tr>
+    <!--@HeaderEnd-->
+        
+    <th>
+    <!--@Col.Caption-->
+    <!--@If Defined(Col.SortUrl)-->
+        <a href="<!--@Col.SortUrl-->"> > < </a>
+    <!--@EndIf(Col.SortUrl)-->    
+    </th>
+    
+    <!--@FooterStart-->
+    </tr>
+    <!--@FooterEnd-->
+<!--@LoopEnd(DM.Pub.Columns)-->
+
+<!--@LoopStart(DM.Pub.Rows)-->
+<tr>
+    <!--@LoopStart(DM.Pub.Rows.Cell)-->
+        <td>
+            <!--@If Defined(Cell.DetailUrl)-->
+            <a href="<!--@Cell.DetailUrl-->"><!--@Cell.Value--></a>
+            <!--@EndIf(Cell.DetailUrl)-->          
+            
+            <!--@If Not Defined(Cell.DetailUrl)-->
+            <!--@Cell.Value-->
+            <!--@EndIf(Cell.DetailUrl)-->          
+        </td>
+    <!--@LoopEnd(DM.Pub.Rows.Cell)-->
+</tr>
+<!--@LoopEnd(DM.Pub.Rows)-->
+
+</table>

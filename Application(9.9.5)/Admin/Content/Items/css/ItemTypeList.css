@@ -1,0 +1,47 @@
+﻿.list-empty-container
+{
+    margin: 5px;
+}
+
+.delete-container p
+{
+    font-weight: bold;
+    margin: 15px;
+}
+
+.delete-container ul,
+.delete-container ul li
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.delete-container ul
+{
+    margin-left: 30px;
+}
+
+.delete-container ul li
+{
+    height: 24px;
+    line-height: 24px;
+}
+
+.delete-container ul li input,
+.delete-container ul li label
+{
+    float: left;
+    margin-left: 22px;
+}
+
+.delete-container ul li input
+{
+    width: 16px;
+    height: 16px;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    margin-right: -20px;
+    margin-top: 3px;
+}

@@ -1,0 +1,42 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+<div class="paragraph generic-row">
+    @{
+        var items = GetLoop("Item.Items");
+    }
+    @if (items.Count > 0)
+    {
+        if (items.Count > 4)
+        {
+            items = items.GetRange(0, 4);
+        }
+        var numberOfColumns = 12 / items.Count;
+        <div class="row">
+            @foreach (var item in items)
+            {
+                <div class="col-md-@numberOfColumns">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title">@item.GetValue("Item.Items.Name")</div>
+                        </div>
+                        <div class="panel-body">@item.GetValue("Item.Items.Content")</div>
+                        @if (!string.IsNullOrWhiteSpace(item.GetString("Item.Items.ReadMoreURL")))
+                        {
+                            <div class="panel-footer">
+                                <a href='@item.GetString("Item.Items.ReadMoreURL")'>
+                                    @if (string.IsNullOrWhiteSpace(item.GetString("Item.Items.ReadMoreText"))) {
+                                        @: @Translate("Read_more", "Read more")
+                                    }
+                                    else
+                                    {
+                                        @: @item.GetString("Item.Items.ReadMoreText")
+                                    }
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

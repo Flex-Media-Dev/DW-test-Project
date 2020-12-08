@@ -1,0 +1,12 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+@Translate("Your_search_for", "Your search for") <strong>'@GetValue("DwSearchPhrase")'</strong> @Translate("gave", "gave") @GetValue("DwSearchResults") @Translate("results", "result(s). Now showing page") @GetValue("DwSearchResultPage") @Translate("of", "of") @GetValue("DwSearchResultPages").
+	<ul class="list-group">
+
+	@GetValue("DwSearchResultList")
+
+
+        </ul>
+
+
+<div align=right>@GetValue("DwSearchResultBack")&nbsp;&nbsp;@GetValue("DwSearchResultPageList")&nbsp;&nbsp;@GetValue("  ")</div>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Ecommerce.SalesDiscounts.OrderFieldDiscount</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Ecommerce.SalesDiscounts.OrderFieldDiscount.OrderFieldDiscount">
+            <summary>
+            Represents discount for order field
+            The order field discount lets you apply a discount to orders with certain information in an order field.
+            E.g. a customer has entered a voucher code in a field and gets a 25 percent discount on the entire order.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.SalesDiscounts.OrderFieldDiscount.OrderFieldDiscount.ProcessOrder(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Processes order by adding discount line to order lines
+            </summary>
+            <param name="order">Order instance</param>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.SalesDiscounts.OrderFieldDiscount.OrderFieldDiscount.GetOptions(System.String)">
+            <summary>
+            Retrieves SystemName and Name data of order fields
+            </summary>
+            <param name="optionName">OrderField</param>
+            <returns>HashTable with SystemName and Name of order field</returns>
+        </member>
+    </members>
+</doc>

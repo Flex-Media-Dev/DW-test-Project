@@ -1,0 +1,235 @@
+﻿table.fact-selector
+{
+    table-layout: fixed;
+    border: none;
+    background-color: transparent;
+}
+
+table.fact-selector div.fact-selector-tree
+{
+    overflow: hidden;
+    border: 1px solid #9faec2;
+    border-right: none;
+    background-color: #ffffff;
+}
+
+table.fact-selector div.fact-selector-tree div.fact-providers
+{
+    line-height: 20px;
+    border-bottom: 1px solid #9faec2;
+    background-color: #ECF4FC;
+}
+
+table.fact-selector div.fact-selector-tree div.fact-providers div.provider-left
+{
+    float: left;
+    color: #15428B;
+    font-weight: bold;
+}
+
+table.fact-selector div.fact-selector-tree div.fact-providers div.provider-right
+{
+    float: right;
+}
+
+.provider-clear
+{
+    clear: both;
+    height: 0px;
+    content: ".";
+    visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+table.fact-selector div.fact-selector-tree div.fact-providers select
+{
+    height: 20px;
+}
+
+table.fact-selector div.fact-selector-tree div.fact-container
+{
+    overflow: auto;
+}
+
+table.fact-selector div.fact-selector-tree div.fact-container ul.fact-category,
+table.fact-selector div.fact-selector-tree div.fact-container ul.facts
+{
+    list-style-type: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    cursor: default;
+}
+
+table.fact-selector div.fact-selector-tree div.fact-container ul.fact-category
+{
+    padding-bottom: 4px;
+}
+
+table.fact-selector div.fact-selector-tree div.fact-selector-empty
+{
+    text-align: center;
+    font-style: italic;
+}
+
+table.fact-selector div.fact-selector-tree div.fact-selector-loading
+{
+    margin: 0px auto;
+    text-align: center;
+}
+
+table.fact-selector div.fact-selector-tree div.fact-selector-loading img
+{
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0px auto;
+}
+
+table.fact-selector div.fact-selector-tree div.fact-container ul li
+{
+    height: 18px;
+    line-height: 18px;
+    padding-left: 20px;
+    border: 1px solid #ffffff;
+}
+ 
+table.fact-selector div.fact-selector-tree div.fact-container li.fact-category-name
+{
+    margin-left: 5px;
+    background-image: url('/Admin/Images/Ribbon/Icons/Small/folder.png');
+    background-repeat: no-repeat;
+    background-position: 0px 1px;
+}
+
+.fact
+{
+    margin-left: 25px;
+    background-image: url('/Admin/Images/Ribbon/Icons/Small/module.png');
+    background-repeat: no-repeat;
+    background-position: 0px 1px;
+}
+
+.fact-computed
+{
+    margin-left: 25px;
+    background-image: url('/Admin/Images/Ribbon/Icons/Small/components.png') !important;
+    background-repeat: no-repeat;
+    background-position: 0px 1px;
+}
+
+.fact-unextractable
+{
+    margin-left: 25px;
+    background-image: url('/Admin/Images/Ribbon/Icons/Small/component_yellow.png') !important;
+    background-repeat: no-repeat;
+    background-position: 0px 1px;
+}
+
+.fact:hover
+{
+    border: 1px solid #b3caea !important;
+    background-color: #eff5ff;
+}
+
+table.fact-selector td.fact-dropbox-list
+{
+    border-left: 1px solid #9faec2;
+}
+
+table.fact-selector td.fact-dropbox-list div.fact-dropbox
+{
+    overflow: hidden;
+    padding-bottom: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    cursor: default;
+}
+
+table.fact-selector td.fact-dropbox-list div.fact-dropbox-drop div.fact-dropbox-content
+{
+    background-color: #f8fbff !important;
+}
+
+table.fact-selector td.fact-dropbox-list div.fact-dropbox-drop div.fact-dropbox-title
+{
+    background-color: #f1f8ff !important;
+    color: #5d88cf !important;
+}
+
+table.fact-selector td.fact-dropbox-list div.fact-dropbox-last
+{
+    padding-bottom: 0px !important;
+}
+
+table.fact-selector td.fact-dropbox-list div.fact-dropbox div.fact-dropbox-content
+{
+    border: 1px solid #c3c3c3;
+    overflow: auto;
+    background-color: #ffffff;
+}
+
+table.fact-selector td.fact-dropbox-list div.fact-dropbox div.fact-dropbox-title
+{
+    color: #15428B;
+    font-weight: bold;
+    background-color: #ECF4FC;
+    height: 20px;
+    line-height: 20px;
+    padding: 4px;
+    border: 1px solid #9faec2;
+    border-bottom: none;
+}
+
+.fact-draggable-container
+{
+    height: 18px;
+    line-height: 18px;
+    position: absolute;
+    padding: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-position: 1px 2px !important;
+}
+
+.fact-draggable-container div.fact-draggable-content
+{
+    line-height: 20px;
+    margin-left: 16px !important;
+}
+
+.fact-draggable-container, 
+.fact-draggable-container:hover
+{
+    border: 1px solid #d1e1f1 !important;
+    background-color: #f4f9ff !important;
+}
+
+div.fact-area-row,
+div.fact-area-row:hover
+{
+    float: left;
+    margin-left: 0px !important;
+    padding-left: 20px !important;
+    border: none !important;
+    background-color: transparent !important;
+    
+    height: 18px;
+    line-height: 18px;
+}
+
+div.fact-area-row div.fact-area-row-title
+{
+    float: left;
+}
+
+div.fact-area-row div.fact-area-row-delete
+{
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url('/Admin/Images/Ribbon/Icons/Small/Delete.png') top left no-repeat;
+    cursor: pointer;
+}

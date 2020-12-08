@@ -1,0 +1,155 @@
+﻿        #PreviewTabDiv table.tabTable, #PreviewTabDiv fieldset
+        {
+            display: block;
+            width: 470px;
+        }
+
+        a.edit-link {
+	        color: rgb(65, 121, 161); text-decoration: none;
+        }
+        a.edit-link:active {
+	        color: rgb(65, 121, 161); text-decoration: none;
+        }
+        a.edit-link:visited {
+	        color: rgb(65, 121, 161); text-decoration: none;
+        }
+        a.edit-link:hover {
+	        color: rgb(65, 121, 161); text-decoration: none;
+        }
+
+        a.refresh-link {
+	        color: rgb(112, 170, 87); text-decoration: none;
+        }
+        a.refresh-link:active {
+	        color: rgb(112, 170, 87); text-decoration: none;
+        }
+        a.refresh-link:visited {
+	        color: rgb(112, 170, 87); text-decoration: none;
+        }
+        a.refresh-link:hover {
+	        color: rgb(112, 170, 87); text-decoration: none;
+        }
+
+        a.preview-link {
+	        color: rgb(0, 81, 255); 
+        }
+        a.preview-link:active {
+	        color: rgb(0, 81, 255);
+        }
+        a.preview-link:visited {
+	        color: rgb(0, 81, 255);
+        }
+        a.preview-link:hover {
+	        color: rgb(0, 81, 255); text-decoration: underline;
+        }
+
+        tr.odd {
+            background-color:#fff;
+        }
+        tr.odd:hover {
+            background-color:#eeeeee;
+        }
+
+        .channelTable {
+            border-collapse: collapse;
+        }
+
+        table.channelTable {
+            width: 100% !important;
+        }
+        
+        .channelTable td {
+            padding: 5px;
+        }
+
+        .channelRow td {
+            padding-top: 10px;
+        }
+
+        .channelEndRow {
+            padding-bottom: 15px;
+        }
+
+        .defaultsFirstColumn {
+            width: 32px;
+        }
+
+        .thinTable td {
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+           
+        tr.channelCustomMessageRow {
+        }
+
+        .channelCustomMessage {
+            height: 120px;
+            width: 317px;
+        }
+
+        .messagePreview {
+            border: 1px solid #ABADB3;
+            height: 122px;
+            width: 362px;
+            background-color: #F3F3F3;
+            overflow: auto;
+        }
+
+        .channelCustomMessagePreview {
+            border: 1px solid #ABADB3;
+            height: 122px;
+            width: 322px;
+            background-color: #F3F3F3;
+            overflow: auto;
+        }
+
+
+        .channelInfo {
+        }
+            
+        .channelInfo b {
+            line-height: 1.5em; 
+        }
+
+        .channelImage {
+            width: 32px;
+        }
+
+        .channelCheckbox {
+            width: 12px;
+        }
+
+        button.small-btn{
+           font-size:10px;
+        }
+
+        .message-chars-number{
+	        font-family: arial, verdana, Microsoft JhengHei;
+	        font-size: 9px;
+        }
+
+        .FileManagerSelect
+        {
+            width: 365px !important;
+        }
+
+        #Link_DefaultLink
+        {
+            width: 360px !important;
+        }
+
+        #SchedulingDiv fieldset
+        {
+            display: block;
+            width: 360px  !important;
+        }
+
+        table.tabTableWide, fieldset {
+            display: block;
+        }
+
+        table.tabTableWide .control-label{
+            margin-right: 0px !important;
+        }
+

@@ -1,0 +1,59 @@
+﻿.p-row, .p-row tbody, .p-row tr 
+{ 
+    width: 290px; 
+}
+
+.p-row 
+{ 
+    padding-top: 2px; 
+    padding-bottom: 2px; 
+    table-layout: fixed; 
+}
+
+.p-name 
+{ 
+    font-weight: bold; 
+    padding-bottom: 2px; 
+}
+
+.p-icon 
+{ 
+    width: 24px; 
+    height: 24px; 
+    padding-right: 5px; 
+    padding-left: 2px; 
+    vertical-align: top; 
+    border: none; 
+}
+
+.p-selected
+{
+    margin-left: 2px;
+    white-space: nowrap;
+    font-size: 11px;
+}
+
+.p-row td.p-icon-cell 
+{ 
+    width: 37px; 
+}
+
+.p-row td.p-description-cell, .p-row td.p-description-cell div 
+{ 
+    width: 245px; 
+    white-space: normal; 
+}
+
+.color-row
+{
+    display: block;
+    width: 16px;
+    height: 12px;
+    border: 1px solid #c3c3c3;
+    margin-right: 8px;
+}
+
+input.field-name
+{
+    width: 248px !important;
+}

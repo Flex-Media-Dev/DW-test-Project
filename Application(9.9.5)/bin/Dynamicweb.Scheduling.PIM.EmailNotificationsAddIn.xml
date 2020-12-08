@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotificationAddIn">
+            <summary>
+            PIM email notifications AddIn
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotificationAddIn.Run">
+            <summary>
+            Runs the task
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotificationAddIn.IsInstalled">
+            <summary>
+            Determines whether this provider is installed.
+            </summary>
+            <returns><c>true</c> if this instance is installed; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotificationAddIn.Install">
+            <summary>
+            Installs this provider into the scheduled tasks pool.
+            </summary>
+            <returns><c>true</c> if scheduled task was installed correctly, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="T:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotification">
+            <summary>
+            Represents information about a PIM notification.
+            </summary>    
+        </member>
+        <member name="P:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotification.RecipientUsers">
+            <summary>
+            The notification recipients.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotification.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotification" /> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotification.Fill(System.Data.IDataReader)">
+            <summary>
+            Fills the translation with data from given reader.
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotification.GetUsersFromString(System.String)">
+            <summary>
+            Retrieves a collection of groups from specified IDs list ('@'-format).
+            </summary>
+            <param name="ids">Groups IDs ('@'-format).</param>
+            <returns>Retrieved groups.</returns>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotification.GetUsersDBString(Dynamicweb.Security.UserManagement.UserCollection)">
+            <summary>
+            Gets group db string
+            </summary>
+            <param name="users">Collection of users</param>
+            <returns>String value</returns>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotification.Save">
+            <summary>
+            Saves the translation.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotification.Delete(System.Int32)">
+            <summary>
+            Deletes the notification by given id.
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotification.GetNotifications">
+            <summary>
+            Retrieves a collection of notifications.
+            </summary>        
+            <returns><see cref="T:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotificationCollection"/></returns>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotification.GetNotifications(System.String)">
+            <summary>
+            Retrieves a collection of notifications by ids.
+            </summary>        
+            <returns><see cref="T:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotificationCollection"/></returns>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotification.GetNotificationById(System.String)">
+            <summary>
+            Retrieves a notification by id.
+            </summary>        
+            <returns><see cref="T:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotification"/></returns>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotification.GetPagedNotifications(System.String,Dynamicweb.Modules.Common.SortDirection,System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets the paged notifications list.
+            </summary>
+            <param name="sortField">The sorting type.</param>
+            <param name="direction">The direction of sorting.</param>
+            <param name="search">The searching filter.</param>
+            <param name="startItem">The start item.</param>
+            <param name="endItem">The end item.</param>        
+            <returns>The collection of notifications</returns>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotification.GetFilter(System.String)">
+            <summary>
+            Gets the searching filter.
+            </summary>
+            <param name="search">The searching filter.</param>        
+            <returns>The searching filter</returns>
+        </member>
+        <member name="T:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotificationRuleType">
+            <summary>
+            Represents information about a PIM notification rule type.
+            </summary> 
+        </member>
+        <member name="T:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.PIMNotificationCollection">
+            <summary>
+            Represents a collection of the notifications.
+            </summary>    
+        </member>
+        <member name="T:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.QueryHelper">
+            <summary>
+            Query helper
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.QueryHelper.GetQueriesFromSmartSearches">
+            <summary>
+            Gets queries from Shared and Personal folder and subfolders
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.PIM.EmailNotificationsAddIn.QueryHelper.GetQueryResult(System.String,System.Int32)">
+            <summary>
+            Get a result of the specified query
+            </summary>
+            <param name="fileName">The full file name of a query.</param>        
+            <param name="take">The number of results to take.</param>
+            <returns>The result of the query</returns>
+        </member>
+    </members>
+</doc>

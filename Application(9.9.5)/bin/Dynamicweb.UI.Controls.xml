@@ -1,0 +1,168 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Dynamicweb.UI.Controls
+</name>
+</assembly>
+<members>
+<member name="T:Dynamicweb.UI.Controls.ActionBar">
+ <summary>
+ Default scripts and stylesheets
+ </summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.ActionBar.Buttons">
+ <summary>
+ Gets a collection of toolbar buttons.
+ </summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.ActionBar.ShowAsRibbon">
+ <summary>
+ Gets or sets a value indicating whether the toolbar should be rendered as a ribbon.
+ </summary>
+</member>
+<member name="T:Dynamicweb.UI.Controls.BlockHeader">
+ <summary>
+ Default scripts and stylesheets
+ </summary>
+</member>
+<member name="T:Dynamicweb.UI.Controls.Card">
+ <summary>
+ Default scripts and stylesheets
+ </summary>
+</member>
+<member name="T:Dynamicweb.UI.Controls.CardBody">
+ <summary>
+ Default scripts and stylesheets
+ </summary>
+</member>
+<member name="T:Dynamicweb.UI.Controls.CardFooter">
+ <summary>
+ Default scripts and stylesheets
+ </summary>
+</member>
+<member name="T:Dynamicweb.UI.Controls.CardHeader">
+ <summary>
+ Default scripts and stylesheets
+ </summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.CheckBox.Checked">
+ <summary>
+ Gets or sets value indicating whether check box is checked.
+ </summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.CheckBox.Header">
+ <summary>
+ Gets or sets the text of the left side of the control.
+ </summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.CheckBox.Indent">
+ <summary>
+ Determines whether the left indent renders.
+ </summary>
+ <remarks>
+ This property ignored when the <see cref="P:Dynamicweb.UI.Controls.CheckBox.Header"/> is set.
+ </remarks>
+</member>
+<member name="P:Dynamicweb.UI.Controls.FieldAddOn.Id">
+ <summary>
+ Get Or Sets the Id property. 
+ </summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.FieldAddOn.Text">
+ <summary>
+ Get Or Sets the Text property. 
+ </summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.FieldAddOn.Icon">
+ <summary>
+ Get Or Sets the Icon property. 
+ </summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.FieldAddOn.IconColor">
+ <summary>
+ Get Or Sets the IconColor property. 
+ </summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.FieldAddOn.Title">
+ <summary>
+ Get Or Sets the Title property. 
+ </summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.FieldAddOn.OnClick">
+ <summary>
+ Get Or Sets the javascript onclick. 
+ </summary>
+</member>
+<member name="T:Dynamicweb.UI.Controls.GroupBox">
+ <summary>
+ Draws a DW group box panel
+ </summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.GroupBox.Expandable">
+ <summary>
+ Determines whether a Groupbox can expanding and collapsing.
+ </summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.GroupBox.Title">
+ <summary>
+	Panel title
+ </summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.GroupBox.Personalize">
+ <summary>
+ Gets or sets value indicating whether to enable personal settings.
+ </summary>
+</member>
+<member name="T:Dynamicweb.UI.Controls.IResourceLoader">
+ <summary>
+ Defines the method control must implement in order to embed an additional resource into the page.
+ </summary>
+</member>
+<member name="M:Dynamicweb.UI.Controls.IResourceLoader.LoadResources">
+ <summary>
+ Loads all control resources for current page.
+ </summary>
+</member>
+<member name="T:Dynamicweb.UI.Controls.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.RadioButton.Checked">
+ <summary>
+ Gets value indicating whether radio button is checked.
+ </summary>
+</member>
+<member name="P:Dynamicweb.UI.Controls.RadioGroup.Indent">
+ <summary>
+ Determines whether the left indent renders.
+ </summary>
+ <remarks>
+ This property ignored when the <see cref="P:Dynamicweb.UI.Controls.RadioGroup.Label"/> is set.
+ </remarks>
+</member>
+<member name="T:Dynamicweb.UI.Controls.ScriptLib">
+ <summary>
+ Default scripts and stylesheets
+ </summary>
+</member>
+<member name="M:Dynamicweb.UI.Controls.ScriptLib.Render(System.Web.UI.HtmlTextWriter)">
+ <summary>
+ Loads a bundle of core scripts + css used on every page
+ </summary>
+ <param name="writer"></param>
+</member>
+</members>
+</doc>

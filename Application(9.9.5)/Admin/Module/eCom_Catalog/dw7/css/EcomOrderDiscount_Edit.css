@@ -1,0 +1,23 @@
+﻿fieldset.product-catalog {
+    margin: 5px 5px 0px 5px;
+    padding-bottom: 0px;
+}
+
+.action-pane {
+    margin-top: 10px;
+    margin-right: 6px;
+}
+
+.epgs-cnt {
+    margin-top: 2px;
+    vertical-align: top;
+}
+
+.epgs-cnt .dw-products-groups-selector {
+    background-color: #fff;
+    width: 100% !important;
+}
+
+#ExcludedProductsAndGroupsSelector_some_main_div, #IncludedProductsAndGroupsSelector_some_main_div {
+    margin-left: 0px !important;
+}

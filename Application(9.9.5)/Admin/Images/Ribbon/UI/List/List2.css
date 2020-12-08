@@ -1,0 +1,371 @@
+﻿.list table
+{
+    width: 100%;
+}
+.list table.main
+{
+    width: 100%;
+    border-spacing: 0px;
+    /*border-right: solid 1px #9FAEC2;*/
+}
+
+.list table.main_stretcher
+{
+	margin-top: -22px;
+}
+
+.list table.main_stretcher tr.header,
+.list table.main_stretcher tr.header > td
+{
+	visibility: hidden;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+.list td
+{
+    padding: 0px;
+}
+
+.list .checkBoxCell{
+	width:16px;
+}
+
+.list .title
+{
+    min-height: 25px;
+    color: #15428b;
+    font-size: 14px;
+    padding-left: 5px;
+    line-height: 24px;
+    font-weight: bolder;
+    font-family: Arial, Microsoft JhengHei;
+    background: url('/Admin/Images/Ribbon/UI/List/PipeL.gif' ) top left repeat-x;
+    border-bottom: solid 1px #9E9E9E;
+    display:block;
+}
+
+.list .filters
+{
+	padding: 3px 0px 3px 3px;
+    background-color: #e0e0e0;
+}
+
+.list .filters div.filter
+{
+    float: left;
+    padding-right: 10px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.list .filters div.filter .checkbox{
+	float: left;
+}
+
+.list .filters br
+{
+    clear: both;
+}
+
+.list .filters .submitImage{
+	display:inline-block;
+	margin-left:3px;
+	cursor:pointer;
+}
+
+.list .filters .filter .filterLabel
+{
+    display:block;
+    padding-right:10px;
+    float: left;
+    width: 140px;
+    vertical-align:top;
+    font-size:13px;
+}
+
+.list .filters .filter .filterLabelRight
+{
+    display:block;
+    padding-right:10px;
+    float: right;
+    vertical-align:top;
+    font-size:12px;
+}
+
+div.ListDateFilterSelectorDiv img.ClearDateImage 
+{
+	position: absolute;
+	right: 2px;
+	top: 1px;
+	}
+
+tr.InternalHeaderRow
+{
+}
+
+
+div.ListDateTimeFilterSelectorDiv img.ClearDateImage 
+{
+	position: absolute;
+	right: 2px;
+	top: 1px;
+	}
+	
+.list .filters div.filter input.textInput
+{
+    height: 18px;
+    line-height: 18px;
+    width: 150px;
+    border: 1px solid #e0e0e0;
+}
+
+.list .filters div.filter input.submitImage
+{
+    margin-top: 0px;
+    height: 20px;
+    vertical-align: top;
+    border: 1px solid #9E9E9E;
+    border-left: 0px solid black;
+    background: url('/Admin/Images/Ribbon/UI/List/PipeL.gif' ) top left repeat-x;
+}
+
+.list .filters div.filter input.submitImage:hover
+{
+    background-color: #e0e0e0;
+}
+
+.list .filters div.filter input.submitImage:active
+{
+    background: url('/Admin/Images/Ribbon/UI/Accordion/bgActive.gif') top left repeat-x !important;
+}
+
+.list .filters div.filter input.submitImage:focus
+{
+    outline: none;
+}
+
+.list .filters div.filter a.optionLink
+{
+    text-decoration: underline;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.list .filters div.filter a.optionLink:focus
+{
+    outline: none;
+}
+
+.list .filters div.filter a.optionLinkSelected
+{
+    font-weight: bold;
+}
+
+.list .container
+{
+    background-color: #ffffff;
+}
+
+.list .container .header td.columnCell
+{
+    padding: 1px;
+    padding-left: 3px;
+    border-bottom: solid 1px #9E9E9E;
+    background-color: #e0e0e0;
+}
+
+.list .container .header td.columnCell .columnTable{
+	width: 100%; 
+	height: 18px;
+}
+
+.list .container .header td input[type=checkbox]
+{
+    padding: 0px;
+    height: 13px;
+    width: 13px;
+    margin-left: 4px;
+}
+
+.list .container .header td span.pipe img
+{
+    margin: 2px 0px 0px 0px;
+    height: 11px;
+    width: 1px;
+    padding: 0px;
+    background-color: #9E9E9E;
+}
+
+.list .container tbody[id] > tr.listRow > td,
+.list table.main_stretcher tr.listRow > td
+{
+    height: 21px;
+	line-height	: 21px;
+    border-bottom: 1px solid #bdbdbd;
+    vertical-align: middle;
+    padding-left: 3px;
+}
+
+.list .container tbody[id] > tr.listRow > td > img,
+.list table.main_stretcher tr.listRow > td > img
+{
+	vertical-align: middle;
+}
+
+.list .container tbody[id] tr.listRow.withHover:hover
+{
+    background-color: #EBF7FD;
+}
+
+.list .container tbody[id] tr.listRowDisabled > td
+{
+    opacity: 0.4;
+    -moz-opacity: 0.4;
+    filter: alpha(opacity = 40);
+}
+
+.list .container tbody[id] tr.selected td
+{
+    background-color: #FFF8DC;
+}
+
+.list a.columnMenu img
+{
+    border: solid 1px transparent;
+}
+
+.list a:focus.columnMenu
+{
+    outline: none;
+}
+
+.list a:hover.columnMenu img
+{
+    border: solid 1px #FFBD69;
+    background-color: #FFE7A2;
+}
+
+.list a:active.columnMenu img
+{
+    border: solid 1px #FFBD69;
+    background-color: #FFBD69;
+}
+
+.list .subheader, .list .footer
+{
+    background-color: #e0e0e0;
+    height: 21px;
+    padding-left: 2px;
+    padding-right: 2px;
+    line-height: 20px;
+    border-top: solid 1px #9E9E9E;
+    text-align: right;
+}
+
+
+.list #ListTableContainer
+{
+    /*overflow:auto;*/
+}
+
+.list .dis td
+{
+    background-color: transparent;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.4;
+    opacity: 0.4;
+    color: #9E9E9E;
+	border-bottom-color:#9E9E9E!important;
+}
+.list .InternalHeaderRow
+{
+    font-weight: bold;
+    background-color: #e0e0e0;    
+}
+.list .grey
+{
+    color: #9E9E9E;
+}
+
+.list .child
+{
+    padding-left: 5px;
+    background-color: #e0e0e0;
+    padding-top: 2px;
+    padding-bottom: 4px;
+}
+
+.list-dialog-top
+{
+    padding-bottom: 15px;
+}
+
+.list-dialog-title
+{
+}
+
+.list-dialog-columns
+{
+    border: thin solid;
+    overflow-y: scroll;
+    height: 200px;
+    width: 210px;
+    background-color: White;
+}
+
+.list-dialog-columns-item-selected
+{
+    background-color: #0085CA;
+    color: white;
+}
+
+.list-dialog-columns span
+{
+    cursor: pointer;
+}
+
+.list-dialog-buttons
+{
+    position: absolute;
+    left: 250px;
+    top: 80px;
+    width: 50px;
+    text-align: left;
+}
+
+.list-dialog-buttons button
+{
+    width: 75px;
+    margin-bottom: 2px;
+}
+
+.ListDateFilterSelectorDiv 
+{
+	position: relative;
+	display: block;
+	float: left;
+	padding: 2px;
+	border: 1px solid #9E9E9E;
+	background-color: #fff;
+	line-height: 15px;
+	width: 146px;
+}
+
+.ListDateTimeFilterSelectorDiv 
+{
+	position: relative;
+	display: block;
+	float: left;
+	padding: 2px;
+	border: 1px solid #9E9E9E;
+	background-color: #fff;
+	line-height: 15px;
+	width: 196px;
+}
+
+

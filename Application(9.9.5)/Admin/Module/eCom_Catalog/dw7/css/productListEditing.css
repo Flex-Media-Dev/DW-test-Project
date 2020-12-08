@@ -1,0 +1,93 @@
+﻿#gridcontainer img
+{
+    display: inline;
+}
+
+.calendar
+{
+    width: 226px !important;
+}
+
+.invalidcell
+{
+    border: 1px dashed #FF0000;
+    background-color: #FFFF99;
+}
+
+.hiddencell
+{
+    width: 1px;
+}
+
+.boxcell
+{
+    width: 150px;
+}
+
+.boxcell input
+{
+    width: 140px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.checkboxcell
+{
+    width: 80px;
+    text-align: center;
+}
+
+.dropdowncell select
+{
+    width: 140px;
+}
+
+.filemanagercell
+{
+    width: 400px;
+    white-space: nowrap;
+}
+
+.linkmanagercell
+{
+    min-width: 345px;
+}
+
+.datecell
+{
+    min-width: 315px;
+}
+
+.datetimecell
+{
+    min-width: 345px;
+}
+
+#breadcrumb
+{
+    border-bottom: #9faec2 1px solid;
+    line-height: 18px;
+    background-color: #ffffff;
+    padding-left: 10px;
+    display: inherit;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.actioncell
+{
+    width: 16px;    
+}
+
+.variantcell i
+{
+    pointer-events: none;
+    width: 16px;    
+}
+
+.dwGrid tr.row td { 
+    border-bottom: 0px solid #E3EFFF;
+    height: 18px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}

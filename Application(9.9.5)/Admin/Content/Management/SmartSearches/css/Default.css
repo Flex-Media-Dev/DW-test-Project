@@ -1,0 +1,288 @@
+﻿html, body
+{
+    overflow: hidden;
+}
+
+form
+{
+    height: 100%;
+}
+
+input, textarea
+{
+    resize: none;
+}
+
+#mainTab
+{
+    table-layout: fixed;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+.omc-clear
+{
+    clear: both;
+    visibility: hidden;
+    height: 1px;
+    font-size: 1px;
+}
+
+#cellTree
+{
+    
+}
+
+#cellTreeCollapsed
+{
+    background-color: #dae8f7;
+    border-right: 1px solid #9faec2;
+    width: 24px;
+}
+
+#cellContent
+{
+    padding: 0px;
+    margin: 0px;
+    background-color: #f4f8fc;
+}
+
+#cellContent div.Ribbon
+{
+    margin-left: 0px !important;
+}
+
+#cellContent div.Ribbon .SCL .week-overview
+{
+    margin-top: 1px !important;
+}
+
+.contextmenu img.checked
+{
+    float: left !important;
+    margin-left: 1px !important;
+    margin-top: 1px !important;
+}
+
+#cellContentLoading
+{
+    position: absolute;
+    padding-top: 15%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #d2e1ef;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+#cellContentLoading .omc-loading-container
+{
+    display: block;
+    margin: 0px auto;
+    
+    width: 200px;
+    height: 86px;
+ 
+    background: url('/Admin/Module/OMC/img/progress_bg.png') top left no-repeat;
+}
+
+#cellContentLoading .omc-loading-container .omc-loading-container-inner
+{
+    padding: 10px;
+}
+
+#cellContentLoading .omc-loading-container .omc-loading-container-inner img
+{
+    display: block;
+    
+    border: none;
+    padding: 0px;
+    
+    margin: 0px auto;
+    margin-bottom: 10px;
+}
+
+#cellContentLoading .omc-loading-container .omc-loading-container-inner .omc-loading-container-text
+{
+    cursor: default;
+    
+    text-align: center;
+    
+    color: #6a6a6a;
+    
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#entryToolbarLoading .omc-toolbar-loading,
+#entryToolbarLoading .omc-toolbar-loading .omc-toolbar-loading-inner,
+#entryToolbarLoading .omc-toolbar-loading .omc-toolbar-loading-inner .omc-toolbar-loading-contents
+{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+#entryToolbarLoading .omc-toolbar-loading
+{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: default;
+}
+
+#entryToolbarLoading .omc-toolbar-loading .omc-toolbar-loading-inner
+{
+    float: left;
+    position: relative;
+    left: 50%;
+}
+
+#entryToolbarLoading .omc-toolbar-loading .omc-toolbar-loading-inner .omc-toolbar-loading-contents
+{
+    float: left;
+    position: relative;
+    right: 50%;
+}
+
+#entryToolbarLoading .omc-toolbar-loading .omc-toolbar-loading-inner .omc-toolbar-loading-contents img,
+#entryToolbarLoading .omc-toolbar-loading .omc-toolbar-loading-inner .omc-toolbar-loading-contents span
+{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+#entryToolbarLoading .omc-toolbar-loading .omc-toolbar-loading-inner .omc-toolbar-loading-contents img
+{
+    width: 20px;
+    height: 20px;
+}
+
+#entryToolbarLoading .omc-toolbar-loading .omc-toolbar-loading-inner .omc-toolbar-loading-contents span
+{
+    color: #4e76b8;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+#slider
+{
+    width: 1px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#slider > div
+{
+    position: fixed;
+    width: 1px;
+    top: 0px;
+    bottom: 0px;
+    background-color: #9faec2;
+}
+
+/* "Tree" control: styles */
+
+div.cellTreeContainer
+{
+    position: relative;
+}
+
+div.nav div.title, div.nav div.subtitle
+{
+    padding-left: 0px !important;
+    width: 100% !important;
+    border-right: none !important;
+}
+
+div.nav div.title > span, div.nav div.subtitle > span
+{
+    padding-left: 3px;
+    padding-bottom: 4px;
+}
+
+div.nav
+{
+    width: auto !important;
+}
+
+div.tree
+{
+    padding-left: 0px !important;
+    border-right: none !important;
+    position: absolute !important;
+    width: 100% !important;
+    height: 500px;
+}
+
+/* "Accordion" control: styles */
+
+div.accordion
+{
+    width: 100% !important;
+}
+
+#accordionContainer
+{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    border-right: 1px solid #9faec2;
+    top: -200px;
+}
+
+#entryToolbar
+{
+    min-width: 1000px;
+    overflow: hidden;
+}
+
+#entryTitle
+{
+    padding-left: 4px;
+    font-weight: bolder;
+    color: #15428b;
+    font-size: 14px;
+    height: 25px;
+    line-height: 24px;
+    border-bottom: 1px solid #9faec2;
+    background: url('/Admin/Images/Ribbon/UI/List/PipeL.gif') top left repeat-x;
+}
+
+.content-progress
+{
+    background-color: #ECF4FC;
+}
+
+.omc-dropdown-short
+{
+    width: 148px !important;
+    margin-left: 1px;
+}
+
+.omc-textbox-short
+{
+    width: 175px !important;
+}
+
+.leads-filter-excludeisps
+{
+    margin-left: 1px;
+    padding-left: 0px;
+}
+
+.leads-filter-excludeisps,
+.leads-filter-excludeisps:focus
+{
+    outline: none;
+}

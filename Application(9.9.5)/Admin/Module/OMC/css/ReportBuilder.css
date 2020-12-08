@@ -1,0 +1,77 @@
+﻿body
+{
+    /*background-color: #ffffff !important;*/
+}
+
+table.tabTable, fieldset
+{
+    /*width: 620px !important;*/
+}
+
+.p-row, .p-row tbody, .p-row tr 
+{ 
+    width: 290px; 
+}
+
+.p-row 
+{ 
+    padding-top: 2px; 
+    padding-bottom: 2px; 
+    table-layout: fixed; 
+}
+
+.p-name 
+{ 
+    font-weight: bold; 
+    padding-bottom: 2px; 
+}
+
+.p-icon 
+{ 
+    width: 24px; 
+    height: 24px; 
+    padding-right: 5px; 
+    padding-left: 2px; 
+    vertical-align: top; 
+    border: none; 
+}
+
+.p-selected
+{
+    margin-left: 2px;
+}
+
+.p-row td.p-icon-cell 
+{ 
+    width: 37px; 
+}
+
+.p-row td.p-description-cell, .p-row td.p-description-cell div 
+{ 
+    width: 245px; 
+    white-space: normal; 
+}
+
+.path-separator
+{
+    color: #c3c3c3;
+}
+
+.field-show-chart-data input,
+.field-show-chart-data label
+{
+    float: left;
+    height: 18px;
+    line-height: 18px;
+}
+
+.field-show-chart-data input
+{
+    width: 12px;
+    height: 12px;
+    margin: 0px;
+    padding: 0px;
+    outline: none !important;
+    margin-right: 5px;
+    margin-top: 2px;
+}

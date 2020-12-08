@@ -1,0 +1,14 @@
+﻿<div class="Container">
+    <a>
+        <img alt="" src="/Admin/Images/Ribbon/Icons/Small/form.png">&nbsp;
+        <span class="group-name">Field Types</span>
+    </a>
+</div>
+
+<ul id="fields_General" style="position: relative; min-height: 5px;">
+    <li class="item-field" style="position: relative;" ng-repeat="fieldType in schema.FieldTypes">
+        <span class="C0"><a href="javascript:void(0);"><img alt="" src="/Admin/Images/Ribbon/Icons/Small/document.png"></a></span>
+        <span class="C1"><a href="javascript:void(0);"><span class="inner field-name">{{fieldType.Name}}</span></a></span>
+        <span class="C2"><a href="javascript:void(0);"><span class="inner field-name">{{fieldType.Type}}</span></a></span>
+    </li>
+</ul>

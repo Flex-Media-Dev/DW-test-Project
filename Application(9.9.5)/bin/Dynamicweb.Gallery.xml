@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Gallery</name>
+    </assembly>
+    <members>
+        <member name="M:Dynamicweb.Modules.Gallery.Frontend.Cleanup">
+            <summary>
+                Performs cleanup procedure.
+            </summary>
+            <remarks></remarks>
+        </member>
+    </members>
+</doc>

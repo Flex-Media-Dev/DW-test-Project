@@ -1,0 +1,1 @@
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ShowUpdateLog.aspx.vb" Inherits="Dynamicweb.Admin.ShowUpdateLog2" %>

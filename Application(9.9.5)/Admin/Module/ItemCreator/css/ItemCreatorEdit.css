@@ -1,0 +1,34 @@
+﻿* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+img {
+    border: none;
+    margin-bottom: 2px;
+}
+
+input[type="text"] {
+    padding-left: 4px;
+}
+
+.link-manager img {
+    vertical-align: middle;
+}
+
+.space-bottom {
+    margin-bottom: 10px;
+}
+
+.space-top {
+    margin-top: 10px;
+}
+
+.leftColHigh {
+    vertical-align: middle;
+}
+
+.left-column-fix {
+    padding-bottom: 12px;
+}

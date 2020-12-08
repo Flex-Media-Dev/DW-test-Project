@@ -1,0 +1,74 @@
+﻿<fieldset style="width:80%;margin:10px;">
+    <legend class='gbTitle'>Instances&nbsp;</legend>
+
+
+    <table cellpadding="0" cellspacing="0" style="position: relative; min-height: 5px;background-color:white;" width="100%">
+        <tr ng-repeat="(name, value) in instances">
+            <td width="5" rowspan="30" ng-if="$first" align="right"></td>
+
+            <td width="40" rowspan="30" valign="middle" align="center" ng-if="$first">
+                <span style="font-size: 12pt; font-weight: bold; cursor: hand; background-color: green; color: white; border: none; border-radius: 10px; margin-right: 5px; margin-left: 20px; padding: 5px;padding-left:10px; padding-right: 10px; ">A</span>
+            </td>
+
+            <td width="20" rowspan="30" valign="bottom" align="right" ng-if="$first" align="left">
+                <div style="height:50%;border-top:2px solid green"></div>
+            </td>
+
+            <td width="5" align="center" valign="middle" rowspan="30" ng-if="$first" align="right" style="padding:10px">
+                <div class="balancer"><b>Active<br />Passive</b></div>
+            </td>
+
+            <td width="20" rowspan="30" valign="bottom" align="right" ng-if="$first">
+                <div style="height:50%;border-top:2px solid green"></div>
+            </td>
+
+
+
+            <td width="20" valign="bottom" align="left" ng-if="$first && !$last">
+                <div style="height:50%;border-left:2px solid green;border-top:2px solid green"></div>
+            </td>
+
+            <td width="20" valign="bottom" align="left" ng-if="!$first && !$last">
+                <div style="height:100%;border-left:2px solid silver;"></div>
+            </td>
+
+            <td width="20" valign="bottom" align="left" ng-if="$first && $last">
+                <div style="height:50%;border-top:2px solid green;"></div>
+            </td>
+
+            <td width="20" valign="top" align="left" ng-if="$last && !$first">
+                <div style="height:50%;border-left:2px solid silver;border-bottom:2px solid silver"></div>
+            </td>
+
+
+            <td width="15" valign="middle">
+                <input type="radio" />
+            </td>
+
+            <td width="30" valign="middle">
+                <b>{{name}}</b>
+            </td>
+
+            <td width="140" ng-repeat="info in [status[name]]" ng-click="openInstanceDialog(name);" ng-include="'/Admin/Module/Repositories/Views/Status.html'"></td>
+
+            <td width="50">
+                <button ng-if="!status[name].IsActive" style="margin:5px;border:1px solid gray;border-radius:4px;padding:2px" ng-repeat="build in index.Builds" ng-click="buildIndex(name, build.Name)">&nbsp;{{build.Name}}&nbsp;</button>
+                <button ng-if="!status[name].IsActive && status[name].Status && status[name].Status.State == 1 && status[name].Status.Meta['CanResume'] == 'True'" style="margin:5px;border:1px solid gray;border-radius:4px;padding:2px" ng-click="resumeIndex(name, status[name].Status.Meta)">&nbsp;Resume&nbsp;</button>
+            </td>
+
+            <td align="left" ng-if="status[name].Status && status[name].Status.State == 2">
+                {{status[name].Status.Meta.message}}
+            </td>
+
+            <td align="left" ng-if="status[name].Status && status[name].Status.State == 1">
+                <span style="cursor: pointer;color:red" title="{{status[name].Status.FailExceptionStackTrace}}">{{status[name].Status.FailExceptionMessage}}</span>
+            </td>
+
+            <td align="left" ng-if="status[name].Status && status[name].Status.State == 0 || !status[name].Status"></td>
+
+            <td valign="bottom" align="right" style="padding-top:10px;padding-right:5px;float:right"><a href="javascript:void()" ng-click="schema.Fields.pop(field)"><img src="/Admin/Images/Icons/Delete_vsmall.gif"></a></td>
+
+        </tr>
+
+    </table>
+</fieldset>

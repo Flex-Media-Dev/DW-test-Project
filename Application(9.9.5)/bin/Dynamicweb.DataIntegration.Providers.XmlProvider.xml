@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.DataIntegration.Providers.XmlProvider</name>
+    </assembly>
+    <members>
+        <member name="M:Dynamicweb.DataIntegration.Providers.XmlProvider.XmlDestinationWriter.StringIsFreeOfTroublesomeCharacters(System.String)">
+            <summary>
+            Removes control characters and other non-UTF-8 characters
+            </summary>
+            <param name="inString">The string to process</param>
+            <returns>A string with no control characters or entities above 0x00FD</returns>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Providers.XmlProvider.XmlProvider.ExportIsDone">
+            <summary>
+            Flag for finishing the import in ImportDataAddIn. When True update index can be started.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Providers.XmlProvider.XmlProvider.TableOptions">
+            <summary>
+            Source xml table name options collection
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.XmlProvider.XmlProvider.GetDestinationFile">
+            <summary>
+            Returns the Destination File with timestamp if "IncludeTimestampInFileName" is enabled
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,132 @@
+﻿<div class="popup-dialog" id="dlgInstance" style="width: 450px;" onmousedown="dialog.floatTop('dlgInstance');">
+    <table class="popup-dialog-border" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td class="popup-dialog-tl"></td>
+            <td id="H_dlgInstance" class="popup-dialog-title">
+                <h2><span id="T_dlgInstance">Instance</span></h2>
+                <a class="popup-dialog-close" href="javascript:void(0);" onclick="dialog.hide('dlgInstance');"></a>
+            </td>
+            <td class="popup-dialog-tr"></td>
+        </tr>
+        <tr>
+            <td class="popup-dialog-ml"></td>
+            <td class="popup-dialog-content">
+
+                <!-- CONTENT START -->
+
+                <fieldset style='margin:5px;'>
+                    <legend class='gbTitle'>Setting&nbsp;</legend>
+                    <table border="0">
+                        <tr>
+                            <td style="width: 170px">
+                                <label>
+                                    Name
+                                </label>
+                            </td>
+                            <td>
+                                <input name="dlgInstanceName" ng-model="draftInstance.Name" type="text" id="dlgInstanceName" class="std name" style="width: 200px" onkeyup="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    Value
+                                </label>
+                            </td>
+                            <td>
+                                <label ng-model="draftInstance.Type" ng-repeat="instanceType in instanceTypes" for="{{instanceType.Name}}">
+                                    {{instanceType.Name}}
+                                    <input type="radio"
+                                           ng-model="draftInstance.Type"
+                                           ng-value="instanceType.FullName"
+                                           id="{{instanceType.Name}}"
+                                           name="{{instanceType.Name}}" ng-change="draftInstance.Settings ={}">
+                                </label>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                
+                <fieldset style="" margin:5px;" ng-if="draftInstance.Type == 'Dynamicweb.Indexing.Lucene.LuceneIndexProvider, Dynamicweb.Indexing.Lucene'">
+                    <legend class='gbTitle'>Lucene&nbsp;</legend>
+                    <table border="0">
+                        <tr>
+                            <td style="width: 170px">
+                                <label>
+                                    Folder
+                                </label>
+                            </td>
+                            <td>
+                                <input name="dlgInstanceName" ng-model="draftInstance.Settings.Folder" type="text" id="dlgInstanceName" class="std name" style="width: 200px" onkeyup="" />
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset style="" margin:5px;" ng-if="draftInstance.Type == 'Dynamicweb.Indexing.Solr.SolrIndexProvider, Dynamicweb.Indexing.Solr'">
+                    <legend class='gbTitle'>Solr&nbsp;</legend>
+                    <table border="0">
+                        <tr>
+                            <td style="width: 170px">
+                                <label>
+                                    Url
+                                </label>
+                            </td>
+                            <td>
+                                <input name="dlgInstanceName" ng-model="draftInstance.Settings.Url" type="text" id="dlgInstanceName" class="std name" style="width: 200px" onkeyup="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 170px">
+                                <label>
+                                    Username
+                                </label>
+                            </td>
+                            <td>
+                                <input name="dlgInstanceName" ng-model="draftInstance.Settings.Username" type="text" id="dlgInstanceName" class="std name" style="width: 200px" onkeyup="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 170px">
+                                <label>
+                                    Password
+                                </label>
+                            </td>
+                            <td>
+                                <input name="dlgInstanceName" ng-model="draftInstance.Settings.Password" type="text" id="dlgInstanceName" class="std name" style="width: 200px" onkeyup="" />
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset style='margin:5px;'>
+                    <legend class='gbTitle'>Setting&nbsp;</legend>
+                    Model:{{draftInstance | json}}
+                </fieldset>
+
+                <!-- CONTENT END -->
+                <!-- BUTTOMS START -->
+
+                <div class="separator-10">&nbsp;</div>
+                <div class="popup-dialog-buttons">
+                    <div class="popup-operation-indicator" style="display: none">
+                        <img border="0" alt="" title="" />
+                        <span></span>
+                    </div>
+                    <button type="button" class="dialog-button-ok" ng-click="saveInstanceDialog();">OK</button>
+                    <button type="button" class="dialog-button-cancel" onclick="dialog.hide('dlgInstance');return false;">Annuller</button>
+                </div>
+
+                <!-- BUTTOMS END -->
+
+            </td>
+            <td class="popup-dialog-mr"></td>
+        </tr>
+        <tr>
+            <td class="popup-dialog-bl"></td>
+            <td class="popup-dialog-bm"></td>
+            <td class="popup-dialog-br"></td>
+        </tr>
+    </table>
+</div>

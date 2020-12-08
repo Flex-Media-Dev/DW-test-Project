@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<versions>
+  <version name="Light" systemName="Light" maxNumberOfPages="45">
+	<standardModules>eCards, Factbox, Tagwall</standardModules>
+	<unavailableModules>UsersExtended, VersionControl, Workflow, Personalize, PDA, Accessibility, ExtranetExtended</unavailableModules>
+  </version>
+  <version name="Micro 15" systemName="Light" maxNumberOfPages="15">
+	<standardModules>eCards, Factbox, Tagwall, Forms</standardModules>
+	<unavailableModules>ALL</unavailableModules>
+  </version>
+  <version name="Business" systemName="Business" maxNumberOfPages="0">
+	<standardModules>eCards, Factbox, Tagwall</standardModules>
+	<unavailableModules>VersionControl, Workflow, Personalize, PDA, Accessibility</unavailableModules>
+  </version>
+  <version name="Portal" systemName="Corporate" maxNumberOfPages="0">
+	<standardModules>eCards, Factbox, Tagwall, Audit, Users, UsersExtended, StatisticsExtended, Personalize, PDA, Accessibility</standardModules>
+	<unavailableModules></unavailableModules>
+  </version>
+  <eCommerce>
+	<version name="eCom Light" systemName="eCom_Light">
+	  <standardModules>eCom_Catalog</standardModules>
+	  <unavailableModules>ALL</unavailableModules>
+	</version>
+	<version name="eCom Standard" systemName="eCom_Standard">
+	  <standardModules>eCom_Catalog, eCom_Pricing, eCom_Search, eCom_Search, eCom_Units, eCom_Variants</standardModules>
+	  <unavailableModules></unavailableModules>
+	</version>
+  </eCommerce>
+</versions>

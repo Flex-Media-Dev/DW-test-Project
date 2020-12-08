@@ -1,0 +1,23 @@
+﻿<!--@DM.Pub.CssFile-->
+
+<table class="<!--@DM.Pub.CssClass-->">
+
+<!--@If Defined(DM.Pub.ShowHeadings)-->
+<!--@LoopStart(DM.Pub.Columns)-->
+<tr>
+	<td><b><!--@Col.Caption--></b></td>
+	<td><!--@Col.Cell.Value--></td>
+</tr>
+<!--@LoopEnd(DM.Pub.Columns)-->
+<!--@EndIf(DM.Pub.ShowHeadings)-->          
+
+<!--@If Not Defined(DM.Pub.ShowHeadings)-->
+<!--@LoopStart(DM.Pub.Columns)-->
+<tr>
+	<td><!--@Col.Cell.Value--></td>
+</tr>
+<!--@LoopEnd(DM.Pub.Columns)-->
+<!--@EndIf(DM.Pub.ShowHeadings)-->          
+
+<!--@DM.Pub.EditRow-->
+</table>

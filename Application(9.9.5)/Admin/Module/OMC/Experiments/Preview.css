@@ -1,0 +1,230 @@
+﻿.preview {
+    position: relative;
+    overflow: hidden;
+}
+
+.preview__frame {
+    opacity: 0;
+    visibility: hidden;
+    box-sizing: content-box;
+    border: 2px solid #414141;
+}
+
+.preview--loaded .preview__frame {
+    opacity: 1;
+    visibility: visible;
+}
+
+.preview--mobile .preview__frame {
+    padding: 50px;
+    border: 2px solid #c9c6c6;
+    background-color: #e2e2e2;
+    border-radius: 20px;
+    transform: rotate3d(1, 1, 1, 0deg) scale(0.5);
+    transition: transform 0.5s ease-in;
+}
+
+.preview--mobile.preview--rotate .preview__frame {
+    transform: rotate3d(1, 1, 1, 360deg) scale(0.5);
+}
+
+.preview--mobile.preview--rotate .preview__rotate {
+    color: #f41109;
+}
+
+.preview__header {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    height: 32px;
+    padding: 0 15px;
+    background-color: #414141;
+}
+
+.preview__header-logo {
+    flex: 2;
+}
+
+.preview__header-actions {
+    flex: 10;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.preview__tool {
+    position: relative;
+    z-index: 10;
+    margin-right: 20px;
+    flex: 1;
+}
+
+.preview__tool--rotate {
+    position: relative;
+    z-index: 10;
+    min-width: 50px;
+    flex: 50px 0;
+}
+
+.preview__tool--wide {
+    flex: auto;
+}
+
+.preview__content {
+    flex: 10;
+    align-items: center;
+    color: white;
+    display: flex;
+}
+
+.preview__variation {
+    margin: 10px;
+}
+
+.preview__header a {
+    margin-left: 25px;
+    text-decoration: underline;
+    color: white;
+}
+
+    .preview__header a.active {
+        font-weight: bold;
+    }
+
+.preview .preview__rotate {
+    position: relative;
+    top: 2px;
+    font-size: 28px;
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: rotateZ(-45deg);
+    transition: visibility, opacity 0.5s ease-in;
+}
+
+.preview__rotate:hover {
+    color: #cccccc;
+}
+
+.preview--mobile .preview__rotate {
+    opacity: 1;
+    visibility: visible;
+}
+
+.preview__loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    height: 50px;
+    width: 50px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.75) rgba(0, 0, 0, 0.75) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25);
+    border-radius: 100%;
+    animation: clockwise .5s linear infinite;
+}
+
+@keyframes clockwise {
+    to {
+        transform: rotate(360deg) translateZ(0);
+    }
+}
+
+
+/*select*/
+.preview__tool select.selectpicker {
+    background: #414141;
+    display: none;
+}
+
+.preview__tool .select-picker-ctrl {
+    margin-bottom: 0;
+}
+
+.preview__tool .select-picker-ctrl {
+    margin-bottom: 0;
+}
+
+.preview__tool .bootstrap-select {
+    color: red;
+}
+
+.preview__tool .selectpicker,
+.preview__tool .boxed-fields .selectpicker {
+    border: none !important;
+}
+
+.preview__tool .bootstrap-select > .selectpicker:before {
+    display: none;
+}
+
+.preview__tool .bootstrap-select.btn-group .dropdown-menu li a span.check-mark::before {
+    display: none;
+}
+
+.preview__tool .dropdown-menu a {
+    display: flex;
+    align-items: center;
+}
+
+.preview__tool .dropdown-menu a .text {
+    margin-left: 5px;
+}
+
+.preview__tool .dropdown-menu a .fa {
+    display: none;
+}
+
+.preview__tool .dropdown-menu a::before {
+    content: attr(data-dataobject);
+}
+
+.preview__tool .filter-option .fa-mobile {
+    font-size: 21px;
+}
+
+.preview__tool .filter-option .fa-tablet {
+    font-size: 18px;
+}
+
+.preview__tool .filter-option .fa-user {
+    font-size: 18px;
+}
+
+.preview__tool .bootstrap-select > .selectpicker:not(.readonly):after {
+    display: none;
+}
+
+body:not(.label-top) .preview__tool .form-group {
+    display: flex;
+    align-items: center;
+}
+
+body:not(.label-top) .preview__tool .form-group .form-group-input {
+    width: 100%;
+    float: none;
+}
+
+body:not(.label-top) .preview__tool .form-group .control-label + .form-group-input {
+    width: 150px;
+}
+
+body:not(.label-top) .preview__tool .form-group .control-label {
+    color: #ffffff;
+    width: auto;
+}
+
+.preview__tool .selectpicker,
+.open > .dropdown-toggle.btn-default:focus,
+.selectpicker:not(:disabled):not(.disabled):active,
+.preview__tool .open > .dropdown-toggle.btn-default {
+    color: #ffffff;
+}
+
+.selectpicker:not(:disabled):not(.disabled):hover {
+    color: rgba(255, 255, 255, 0.7);
+}

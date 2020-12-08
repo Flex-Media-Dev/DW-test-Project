@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.DataIntegration.ScheduledTaskAddIns.ImportDataCustomRequestAddIn</name>
+    </assembly>
+    <members>
+        <member name="M:Dynamicweb.DataIntegration.ScheduledTaskAddIns.ImportDataCustomRequestAddIn.ImportDataWithCustomRequestAddIn.Run">
+            <summary>
+            Main method in ScheduledTask Addin - is run when scheduled Task is run
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.ScheduledTaskAddIns.ImportDataCustomRequestAddIn.ImportDataWithCustomRequestAddIn.GetOptions(System.String)">
+            <summary>
+            gets options for Import Activity Dropdown
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

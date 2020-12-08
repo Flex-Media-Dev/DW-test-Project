@@ -1,0 +1,30 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="EntryContent.Master.vb" Inherits="Dynamicweb.Admin.OMC.Leads.Details.EntryContent" %>
+<%@ Register TagPrefix="dw" Namespace="Dynamicweb.Controls" Assembly="Dynamicweb.Controls" %>
+<%@ Import Namespace="Dynamicweb.SystemTools" %>
+
+<!DOCTYPE html>
+
+<html>
+    <head runat="server">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+
+        <title></title>
+
+        <dw:ControlResources ID="ctrlResources" runat="server">
+            <Items>
+                <dw:GenericResource Url="/Admin/Module/OMC/css/VisitorDetailsEntry.css" />
+            </Items>
+        </dw:ControlResources>
+
+        <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+    </head>
+    <body>
+        <form id="MainForm" runat="server">
+            <div class="visitor-details-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+        </form>
+
+        <%Translate.GetEditOnlineScript()%>
+    </body>
+</html>

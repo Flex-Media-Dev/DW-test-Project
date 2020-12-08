@@ -1,0 +1,37 @@
+﻿        html, body
+        {
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+        
+        .list-container 
+        {
+        	height: 380px;
+        	overflow: auto;
+        }
+
+        .Toolbar > ul
+        {            
+            right: 0px;
+        }
+
+        #ListTable {
+            user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+        }
+
+        #ListTable tbody tr td:not(:first-child):not(:last-child)
+        {
+            cursor: pointer;
+            width: 40px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #ListTable tbody tr:not(.show) td.cell-segment
+        {
+            opacity: 0.4;
+        }

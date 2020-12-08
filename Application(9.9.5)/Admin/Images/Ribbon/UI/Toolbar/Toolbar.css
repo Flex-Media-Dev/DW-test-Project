@@ -1,0 +1,128 @@
+﻿.Toolbar {
+    z-index: 1000;
+}
+
+.Toolbar ul
+{
+	margin: 0px;
+	padding: 0px;
+	padding-right:2px;
+	padding-left:2px;
+	list-style: none;
+	height: 25px;
+	background: url('/Admin/Images/Ribbon/UI/List/PipeL.gif' ) top left repeat-x;
+	border-bottom: solid 1px #9FAEC2;
+	z-index:100;
+}
+
+.Toolbar ul li
+{
+	margin: 0px;
+	padding: 0px;
+	padding-right:2px;
+	list-style: none;
+	float: left;
+	display: inline;
+	height: 24px;
+	line-height: 24px;
+	
+}
+.Toolbar ul li span.toolbar-button-container
+{
+	margin-right: 5px;
+}
+.Toolbar ul li button.toolbar-button
+{
+	margin-top: 2px;
+	display: block;
+	text-decoration: none;
+	color: #000000;
+	cursor: default;
+	height: 22px;
+	line-height: 20px;
+	border: solid 1px transparent;
+	float: left;
+	background-color:transparent;
+}
+.Toolbar ul li button.toolbar-button:hover,
+.toolbar-button-active
+{
+	background-color:#FFE7A2;
+	border:solid 1px #FFB700 !important;
+	background-image:url(/Admin/Images/Ribbon/UI/Contextmenu/Bg.gif);
+	background-position:left top;
+	background-repeat:repeat-x;
+	-moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.Toolbar ul li span.toolbar-button-container img,
+.Toolbar ul li span.toolbar-button-arrow img
+{
+	vertical-align:middle;
+	border: 0px;
+}
+.Toolbar ul li span.toolbar-button-container img.icon
+{
+	vertical-align:middle;
+	margin-right:3px;
+	border: 0px;
+	padding-left: 1px;
+	float: left;
+}
+
+.Toolbar ul li .toolbar-button i
+{
+	font-size: 16px;
+	margin-right: 8px;
+}
+
+.Toolbar ul li span.toolbar-button-container img.icon
+{
+	vertical-align:middle;
+	margin:2px;
+	border: 0px;
+}
+
+.Toolbar ul li span.toolbar-button-arrow
+{
+	border: 0px;
+	margin:0px;
+	padding: 0px;
+	width:15px;
+}
+.Toolbar ul li span.toolbar-button-arrow img
+{
+	border: 0px;
+	margin:0px;
+	padding: 0px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+}
+Toolbar ul li button.toolbar-button:hover span.toolbar-button-arrow img
+{
+	border-left:solid 1px #FFBD69;
+}
+
+.Toolbar ul li span.toolbar-button-sep,
+.Toolbar ul li div.toolbar-button-sep
+{
+	margin: 2px;
+	margin-top: 4px;
+	margin-bottom:4px;
+	height: 15px;
+	width: 1px;
+	background-color: #9AC6FF;
+	border-right: solid 1px #ffffff;
+}
+
+.Toolbar ul li.toolbar-button-disabled,
+.Toolbar ul li.toolbarButtonDisabled
+{
+	background-color:transparent;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; 
+	filter:alpha(opacity=40);
+	-moz-opacity: 0.4;
+	opacity: 0.4;
+	color: #c3c3c3;
+}

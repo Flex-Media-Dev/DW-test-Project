@@ -1,0 +1,35 @@
+﻿<!-- NEVER BUILDED -->
+<div ng-if="!info.Status">
+    <progress class="state-never progress" ng-value="0" max="100"></progress>
+    <span class="state-text-never progress-text">Never Build</span>
+</div>
+
+<!-- BUILD COMPLETED -->
+<div ng-if="info.Status && info.Status.State == 0">
+    <progress class="state-completed progress" ng-value="info.Status.CurrentCount+1" max="{{info.Status.TotalCount}}"></progress>
+    <span class="state-text-completed progress-text">Completed</span>
+</div>
+
+<!-- BUILD FAILED -->
+<div ng-if="info.Status && info.Status.State == 1">
+    <progress class="state-failed progress" ng-value="info.Status.CurrentCount+1" max="{{info.Status.TotalCount}}"></progress>
+    <span class="state-text-failed progress-text">Failed</span>
+</div>
+
+<!-- BUILD FIRST -->
+<div ng-if="info.Status && info.Status.State == 2 && (!info.LastStatus)">
+    <progress class="state-running-first progress" ng-value="info.Status.CurrentCount+1" max="{{info.Status.TotalCount}}"></progress>
+    <span class="state-text-running-first progress-text">{{100* info.Status.CurrentCount / info.Status.TotalCount | number:2}}%</span>
+</div>
+
+<!-- BUILD FORM COMPLETED -->
+<div ng-if="info.Status && info.Status.State == 2 && info.LastStatus && info.LastStatus.State == 0">
+    <progress class="state-running-from-completed progress" ng-value="info.Status.CurrentCount+1" max="{{info.Status.TotalCount}}"></progress>
+    <span class="state-text-running-from-completed progress-text">{{100* info.Status.CurrentCount / info.Status.TotalCount | number:2}}%</span>
+</div>
+
+<!-- BUILD FORM FAILED -->
+<div ng-if="info.Status && info.Status.State == 2 && info.LastStatus.State && info.LastStatus.State == 1">
+    <progress class="state-running-from-failed progress" ng-value="info.Status.CurrentCount+1" max="{{info.Status.TotalCount}}"></progress>
+    <span class="state-text-running-from-failed progress-text">{{100* info.Status.CurrentCount / info.Status.TotalCount | number:2}}%</span>
+</div>

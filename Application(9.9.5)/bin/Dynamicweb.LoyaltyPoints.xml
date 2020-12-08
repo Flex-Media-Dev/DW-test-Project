@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.LoyaltyPoints</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.LoyaltyPoints.Frontend">
+            <summary>
+            Represents a frontend of the LoyaltyPoints module.
+            </summary>
+            <remarks>
+            Loops:
+                     Ecom:LoyaltyPoints.TransactionList
+            Control:
+                     Ecom:LoyaltyPoints.TransactionList.CurrentPage
+                     Ecom:LoyaltyPoints.TransactionList.PageCount
+                     Ecom:LoyaltyPoints.TransactionList.PageSize
+                     Ecom:LoyaltyPoints.TransactionList.TransactionCount
+            Values
+                     Ecom:LoyaltyPoints.Transaction.ID
+                     Ecom:LoyaltyPoints.Transaction.Points
+                     Ecom:LoyaltyPoints.Transaction.Date
+                     Ecom:LoyaltyPoints.Transaction.ExpirationDate
+                     Ecom:LoyaltyPoints.Transaction.Comment
+                     Ecom:LoyaltyPoints.Transaction.Link
+                     Ecom:LoyaltyPoints.Transaction.BackLink
+            </remarks>
+        </member>
+        <member name="M:Dynamicweb.LoyaltyPoints.Frontend.GetContent">
+            <summary>
+            Retrieves module content.
+            </summary>
+            <returns>Module content.</returns>
+            <remarks></remarks>
+        </member>
+    </members>
+</doc>

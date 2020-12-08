@@ -1,0 +1,11 @@
+﻿.flexbox {
+    display: flex;
+}
+
+.flexbox__column {
+    flex: 1;
+}
+
+.flexbox__column--bordered {
+    border-right: 1px #e0e0e0 solid;
+}

@@ -1,0 +1,278 @@
+﻿
+.date-selector * {
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+}
+
+.date-selector .date-selector-clear
+{
+    visibility: hidden;
+    height: 1px;
+    clear: both;
+}
+
+.date-selector-disabled .date-selector-field 
+{
+    cursor: default !important;
+}
+
+.date-selector-disabled .date-selector-field .date-selector-label
+{
+    color: #c3c3c3 !important;
+    border-color: #c3c3c3 !important;
+}
+
+.date-selector .date-selector-field .date-selector-button
+{
+    display: table-cell;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    height: 18px;
+    line-height: 16px;
+    margin-left: 0px;
+    background-color: #ffffff;
+    padding: 0 7px;
+    margin: 0;
+}
+
+.date-selector .date-selector-field .date-selector-button.mod 
+{
+    float: left;
+    padding-right: 8px;    
+}
+
+.date-selector-disabled .date-selector-field .date-selector-button {
+    -moz-opacity: 0.3 !important;
+    -webkit-opacity: 0.3 !important;
+    opacity: 0.3 !important;
+    filter: alpha(opacity = 30) !important;
+    border-color: #c3c3c3 !important;
+}
+
+.date-selector .date-selector-time input
+{
+    width: 25px;
+    margin: 0px;
+}
+
+.date-selector .date-selector-time input,
+.date-selector .date-selector-time div.date-selector-time-separator
+{
+    float: left;
+    margin-left: 3px;
+    text-align: center;
+}
+
+.date-selector .date-selector-time input.date-selector-time-hour
+{
+    margin-left: 10px;
+}
+
+.date-selector .date-selector-time div.date-selector-time-separator
+{
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    cursor: default;
+}
+
+div.date-selector-calendar-outer
+{
+    padding: 5px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #c3c3c3;
+}
+
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li
+{
+    float: left;
+    list-style-type: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    color: #000000;
+}
+
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list
+{
+    margin-bottom: 5px;
+}
+
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li
+{
+    height: 16px;
+}
+
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft2x,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright2x
+{
+    width: 16px;
+}
+
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft a,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright a,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft2x a,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright2x a
+{
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 0px;
+    padding: 0px;
+}
+
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft a:active,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright a:active,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft a:focus,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright a:focus,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft a:hover,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright a:hover,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft2x a:active,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright2x a:active,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft2x a:focus,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright2x a:focus,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft2x a:hover,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright2x a:hover
+{
+    outline: none;
+}
+
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft a
+{
+    background: url('/Admin/Module/OMC/img/navigate_left_small_s.png') top left no-repeat; 
+}
+
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft2x a
+{
+    background: url('/Admin/Module/OMC/img/navigate2x_left_small_s.png') top left no-repeat; 
+}
+
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft a:hover,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright a:hover,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft2x a:hover,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright2x a:hover
+{
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    -webkit-opacity: 0.5;
+    filter: alpha(opacity = 50);
+}
+
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft a.date-selector-calendar-nav-notallowed,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright a.date-selector-calendar-nav-notallowed,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft a.date-selector-calendar-nav-notallowed:hover,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright a.date-selector-calendar-nav-notallowed:hover,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft2x a.date-selector-calendar-nav-notallowed,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright2x a.date-selector-calendar-nav-notallowed,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navleft2x a.date-selector-calendar-nav-notallowed:hover,
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright2x a.date-selector-calendar-nav-notallowed:hover
+{
+    opacity: 0.3 !important;
+    -moz-opacity: 0.3 !important;
+    -webkit-opacity: 0.3 !important;
+    filter: alpha(opacity = 30) !important;
+    
+    cursor: default !important;
+}
+
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright a
+{
+    background: url('/Admin/Module/OMC/img/navigate_right_small_s.png') top left no-repeat;
+}
+
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-navright2x a
+{
+    background: url('/Admin/Module/OMC/img/navigate2x_right_small_s.png') top left no-repeat;
+}
+
+div.date-selector-calendar-outer ul.date-selector-calendar-month-list li.date-selector-calendar-month
+{
+    cursor: default;
+    text-align: center;
+    width: 122px;
+    white-space: nowrap;
+}
+
+div.date-selector-calendar-outer table.date-selector-calendar
+{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+div.date-selector-calendar-outer table.date-selector-calendar tr.date-selector-calendar-weekdays th,
+div.date-selector-calendar-outer table.date-selector-calendar tr.date-selector-calendar-day td
+{
+    width: 25px;
+    text-align: right;
+    padding: 1px;
+}
+
+div.date-selector-calendar-outer table.date-selector-calendar tr.date-selector-calendar-weekdays th
+{
+    text-align: center;
+    font-weight: normal;
+    border-bottom: 1px solid #dddddd;
+}
+
+div.date-selector-calendar-outer table.date-selector-calendar tr.date-selector-calendar-day.never td
+{
+    text-align: center;
+    font-weight: normal;
+    border-top: 1px solid #dddddd;
+}
+
+div.date-selector-calendar-outer table.date-selector-calendar tr.date-selector-calendar-day td a
+{
+    display: block;
+    border: 1px solid #ffffff;
+}
+
+div.date-selector-calendar-outer table.date-selector-calendar tr.date-selector-calendar-day td a:hover
+{
+    background-color: #ffebc4 !important;
+    border: 1px solid #b09460 !important;
+}
+
+div.date-selector-calendar-outer table.date-selector-calendar tr.date-selector-calendar-day td a span
+{
+    display: block;
+    margin-right: 6px;
+}
+
+div.date-selector-calendar-outer table.date-selector-calendar tr.date-selector-calendar-day td.date-selector-calendar-current a
+{
+    background-color: #fff5e2;
+    border: 1px solid #d2c5ac !important;
+}
+
+div.date-selector-calendar-outer table.date-selector-calendar tr.date-selector-calendar-day td.date-selector-calendar-hidden a
+{
+    cursor: default;
+}
+
+div.date-selector-calendar-outer table.date-selector-calendar tr.date-selector-calendar-day td.date-selector-calendar-hidden a:focus,
+div.date-selector-calendar-outer table.date-selector-calendar tr.date-selector-calendar-day td.date-selector-calendar-hidden a:active,
+div.date-selector-calendar-outer table.date-selector-calendar tr.date-selector-calendar-day td.date-selector-calendar-hidden a:hover
+{
+    outline: none;
+    background-color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+}
+
+div.date-selector-calendar-outer table.date-selector-calendar tr.date-selector-calendar-day td.date-selector-calendar-hidden a span
+{
+    color: #c3c3c3;
+}
+
+div.date-selector-calendar-outer table.date-selector-calendar tr.date-selector-calendar-day td.date-selector-calendar-today a
+{
+    border: 1px solid #e5d5b7;
+}

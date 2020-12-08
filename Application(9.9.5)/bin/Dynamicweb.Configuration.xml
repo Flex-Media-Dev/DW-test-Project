@@ -1,0 +1,392 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Configuration</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Configuration.ConfigurationException">
+            <summary>
+            The ConfigurationException will be thrown if the Dynamicweb.Configuration package encounters any invalid state or configuration errors
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Dynamicweb.Configuration.ConfigurationException class with a message indicating the reason for the exception
+            </summary>
+            <param name="message">A message indicating the reason for the exception</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the Dynamicweb.Configuration.ConfigurationException class with a message indicating the reason for the exception 
+            and a reference to the innerException being the cause of this exception.
+            </summary>
+            <param name="message">A message indicating the reason for the exception</param>
+            <param name="innerException">An inner exception being the cause of this exception</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the System.Exception class with serialized data.
+            </summary>
+            <param name="serializationInfo">The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about the exception being thrown</param>
+            <param name="streamingContext">The System.Runtime.Serialization.StreamingContext that contains contextual information about the source or destination</param>
+        </member>
+        <member name="T:Dynamicweb.Configuration.ConfigurationManager">
+            <summary>
+            Class for managing configuration values. Uses a provider that defines where configuration values are stored. 
+            The default configuration manager is accessed through <see cref="T:Dynamicweb.Configuration.SystemConfiguration"/> which uses the <see cref="T:Dynamicweb.Configuration.Xml.XmlConfigurationProvider"/> to return values from settings stored in /Files/*.config files.
+            </summary>
+            <remarks>Implement <see cref="T:Dynamicweb.Configuration.IConfigurationProvider"/> to add configuration providers that can store and retrieve settings from other sources.</remarks>
+            <example>
+            <code title="Using the configuration manager" source="..\Dynamicweb\09 - Core\Dynamicweb.Configuration\Head\Dynamicweb.Configuration.Examples\ConfigurationSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationManager.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:Dynamicweb.Configuration.ConfigurationManager"/>.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationManager.AddProvider(Dynamicweb.Configuration.IConfigurationProvider)">
+            <summary>
+            Adds an instance of <see cref="T:Dynamicweb.Configuration.IConfigurationProvider"/>. This enables multiple providers to contribute the the same <see cref="T:Dynamicweb.Configuration.ConfigurationManager"/>.
+            </summary>
+            <param name="provider">The provider to add.</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationManager.AddProviderPriority(Dynamicweb.Configuration.IConfigurationProvider)">
+            <summary>
+            Adds an instance of <see cref="T:Dynamicweb.Configuration.IConfigurationProvider"/> as the first provider in the provider list giving it priority over the system configuration provider. 
+            This enables multiple providers to contribute the the same <see cref="T:Dynamicweb.Configuration.ConfigurationManager"/>.
+            </summary>
+            <param name="provider">The provider to add.</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationManager.Get(System.String)">
+            <summary>
+            Gets the <see cref="T:System.String"/> value for the specified key.
+            </summary>
+            <param name="key">The key that represents the value to get, e.g. "/Globalsettings/System/Database/Trusted"</param>
+            <returns>The <see cref="T:System.String"/> value if it exists, otherwise <see cref="F:System.String.Empty"/>.</returns>        
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationManager.GetValue(System.String)">
+            <summary>
+            Gets the <see cref="T:System.String"/> value for the specified key.
+            </summary>
+            <param name="key">The key that represents the value to get, e.g. "/Globalsettings/System/Database/Trusted"</param>
+            <returns>The <see cref="T:System.String"/> value if it exists, otherwise <see cref="F:System.String.Empty"/>.</returns>                
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationManager.GetBoolean(System.String)">
+            <summary>
+            Gets the <see cref="T:System.Boolean"/> value for the specified key.
+            </summary>
+            <param name="key">The key that represents the value to get, e.g. "/Globalsettings/System/Database/Trusted"</param>
+            <returns>The value converted to <see cref="T:System.Boolean"/> if the key exists and is a valid boolean string in configuration file (True, 1, On), otherwise <code>false</code>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationManager.GetInt32(System.String)">
+            <summary>
+            Gets the <see cref="T:System.Int32"/> value for the specified key.
+            </summary>
+            <param name="key">The key that represents the value, e.g. "/Globalsettings/System/Database/Trusted"</param>
+            <returns>The value converted to <see cref="T:System.Int32"/> if the key exists, otherwise <code>0</code>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationManager.TryGet``1(System.String,``0@)">
+            <summary>
+            Attempts to get the value associated with the specified key.
+            </summary>
+            <typeparam name="T">The type of the value.</typeparam>
+            <param name="key">The key that represents the value, e.g. "/Globalsettings/System/Database/Trusted"</param>
+            <param name="value">When this method returns, contains the value associated with the specified key, or the default value of the type if the key was not found.</param>
+            <returns><c>true</c> if the specified key was found; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationManager.Set``1(System.String,``0)">
+            <summary>
+            Sets value of the entry with the specified key.
+            </summary>
+            <typeparam name="T">The type of the value.</typeparam>
+            <param name="key">The key that represents the value, e.g. "/Globalsettings/System/Database/Trusted"</param>
+            <param name="value">The value of the element to add to the configuration file. Should be simple value types like <see cref="T:System.String"/>, <see cref="T:System.Boolean"/>, <see cref="T:System.Int32"/> or <see cref="T:System.Double"/>.</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationManager.Set``1(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Sets a collection configuration entries.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="keyValues">The key/value pairs to set.</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationManager.SetValue``1(System.String,``0)">
+            <summary>
+            Sets value of the entry with the specified key.
+            </summary>
+            <typeparam name="T">The type of the value.</typeparam>
+            <param name="key">The key that represents the value, e.g. "/Globalsettings/System/Database/Trusted"</param>
+            <param name="value">The value of the element to add to the configuration file. Should be simple value types like <see cref="T:System.String"/>, <see cref="T:System.Boolean"/>, <see cref="T:System.Int32"/> or <see cref="T:System.Double"/>.</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationManager.SetValue``1(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Sets the value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="keyValues">The key values.</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationManager.SetValue(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Sets a collection configuration entries.
+            </summary>
+            <param name="keyValues">The key/value pairs to set.</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationManager.Contains(System.String)">
+            <summary>
+            Determines whether the configuration contains the specified key.
+            </summary>
+            <param name="key">The key that represents the value, e.g. "/Globalsettings/System/Database/Trusted"</param>
+            <returns><c>true</c> if the configuration contains an entry with the specified key; otherwise, <code>false</code>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationManager.GetKeys">
+            <summary>
+            Gets all keys that can be used to get or set data.
+            </summary>
+            <returns>keys</returns>
+        </member>
+        <member name="F:Dynamicweb.Configuration.ConfigurationNotification.ConfigurationKeySet">
+            <summary>
+            Notification after key has been set with a value, that is saved in Configuration.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Configuration.ConfigurationNotification.ConfigurationNotificationArgs">
+            <summary>Provides information about Configuration operations.</summary>
+        </member>
+        <member name="P:Dynamicweb.Configuration.ConfigurationNotification.ConfigurationNotificationArgs.Key">
+            <summary>
+            Gets the key belonging to the configuration operation.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Configuration.ConfigurationNotification.ConfigurationNotificationArgs.NewValue">
+            <summary>
+            Gets the value belonging to the configuration operation.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Configuration.ConfigurationNotification.ConfigurationNotificationArgs.OldValue">
+            <summary>
+            Gets the value from the configuration before operation
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationNotification.ConfigurationNotificationArgs.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="key">key of Configuration.</param>
+            <param name="newValue">Value from Configuration after operation.</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.ConfigurationNotification.ConfigurationNotificationArgs.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="key">key of Configuration.</param>
+            <param name="newValue">Value from Configuration after operation.</param>
+            <param name="oldValue">Value from Configuration before operation.</param>
+        </member>
+        <member name="T:Dynamicweb.Configuration.IConfigurationProvider">
+            <summary>
+            Represents a configuration provider.
+            </summary>
+            <example>
+            <code title="How to implement a custom configuration provider" source="..\Dynamicweb\09 - Core\Dynamicweb.Configuration\Head\Dynamicweb.Configuration.Examples\CustomConfigurationProviderSample.cs" lang="CS"></code>
+            </example> 
+        </member>
+        <member name="M:Dynamicweb.Configuration.IConfigurationProvider.Contains(System.String)">
+            <summary>
+            Determines whether the configuration contains an entry with the specified key.
+            </summary>
+            <param name="key">The key to locate in the configuration.</param>
+            <returns><c>true</c> if the configuration contains the specified configuration key; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Configuration.IConfigurationProvider.Persist">
+            <summary>
+            Persists the configuration data.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Configuration.IConfigurationProvider.Reload">
+            <summary>
+            Reloads the configuration data.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Configuration.IConfigurationProvider.SetValue(System.String,System.String)">
+            <summary>
+            Sets the value of an entry with the specified key.
+            </summary>
+            <param name="key">The key of the entry to set a value for.</param>
+            <param name="value">A string that represents the value of an entry.</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.IConfigurationProvider.TryGet(System.String,System.String@)">
+            <summary>
+            Attempts to get the value associated with the specified key.
+            </summary>
+            <param name="key">Key of the value to get.</param>
+            <param name="value">When this method returns, contains the value associated with the specified key, or null if the operation failed.</param>
+            <returns><c>true</c> if the specified key was found; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Configuration.IConfigurationProvider.GetKeys">
+            <summary>
+            Gets keys for all existing settings.
+            </summary>
+            <returns>keys</returns>
+        </member>
+        <member name="T:Dynamicweb.Configuration.NamespaceDoc">
+            <summary>
+            The Dynamicweb.Configuration namespace contains the implementation of the Dynamicweb configuration system based on config files placed in /Files/*.config.
+            <remarks>For further details, see <see cref="T:Dynamicweb.Configuration.SystemConfiguration"/>.</remarks>
+            </summary>
+            <example>
+            <code title="Using the configuration manager" source="..\Dynamicweb\09 - Core\Dynamicweb.Configuration\Head\Dynamicweb.Configuration.Examples\ConfigurationSample.cs" lang="CS"></code>
+            </example>
+            <example>
+            <code title="How to implement a custom configuration provider" source="..\Dynamicweb\09 - Core\Dynamicweb.Configuration\Head\Dynamicweb.Configuration.Examples\CustomConfigurationProviderSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="T:Dynamicweb.Configuration.Xml.NamespaceDoc">
+            <summary>
+            The Dynamicweb.Configuration.Xml namespace contains classes that handles reading and writing of xml configuration files.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Configuration.Xml.ConfigurationManagerXmlExtensions">
+            <summary>
+            Xml specific extension methods for <see cref="T:Dynamicweb.Configuration.ConfigurationManager"/>.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Configuration.Xml.ConfigurationManagerXmlExtensions.AddXmlFile(Dynamicweb.Configuration.ConfigurationManager,System.String)">
+            <summary>
+            Adds an xml configuration file to the configuration manager.
+            </summary>
+            <param name="manager">An instance of <see cref="T:Dynamicweb.Configuration.ConfigurationManager"/> to which the configuration file should be added.</param>
+            <param name="fullPath">Absolute path to a configuration file.</param>
+        </member>
+        <member name="T:Dynamicweb.Configuration.Xml.XmlConfigurationProvider">
+            <summary>
+            Reads and writes xml configuration files.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Configuration.Xml.XmlConfigurationProvider.Path">
+            <summary>
+            Gets the path to the configuration file.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Configuration.Xml.XmlConfigurationProvider.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the xml configuration provider.
+            </summary>
+            <param name="fullPath">Absolute path to an xml configuration file.</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.Xml.XmlConfigurationProvider.TryGet(System.String,System.String@)">
+            <summary>
+            Attempts to get the value associated with the specified key.
+            </summary>
+            <param name="key">Key of the value to get.</param>
+            <param name="value">When this method returns, contains the value associated with the specified key, or null if the operation failed.</param>
+            <returns><c>true</c> if the specified key was found; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Configuration.Xml.XmlConfigurationProvider.Set(System.String,System.String)">
+            <summary>
+            Sets the value of an entry with the specified key.
+            </summary>
+            <param name="key">The key of the entry to set a value for.</param>
+            <param name="value">A string that represents the value of an entry.</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.Xml.XmlConfigurationProvider.SetValue(System.String,System.String)">
+            <summary>
+            Sets the value of an entry with the specified key.
+            </summary>
+            <param name="key">The key of the entry to set a value for.</param>
+            <param name="value">A string that represents the value of an entry.</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.Xml.XmlConfigurationProvider.Contains(System.String)">
+            <summary>
+            Determines whether the configuration contains an entry with the specified key.
+            </summary>
+            <param name="key">The key to locate in the configuration.</param>
+            <returns><c>true</c> if the configuration contains the specified configuration key; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Configuration.Xml.XmlConfigurationProvider.Reload">
+            <summary>
+            Reloads the configuration data from file.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Configuration.Xml.XmlConfigurationProvider.Persist">
+            <summary>
+            Saves the configuration data to an xml file.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Configuration.Xml.XmlConfigurationProvider.AddNewNode(System.Xml.XmlDocument,System.String,System.String)">
+            <summary>
+            Adds a value to a specified node path in a given xml document.
+            </summary>
+            <param name="xml">The xml document to add the configuration value to.</param>
+            <param name="path">The path to the setting in the document.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.Xml.XmlConfigurationProvider.Load(System.Boolean)">
+            <summary>
+            Load global settings.
+            </summary>
+            <param name="force">if set to <c>true</c> [force].</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dynamicweb.Configuration.Xml.XmlConfigurationProvider.LoadXml(System.Xml.XmlDocument)">
+            <summary>
+            Reads configuration settings from the specified xml document and adds them to the internal collection.
+            </summary>
+            <param name="xml">An xml document with configuration values to add.</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.Xml.XmlConfigurationProvider.NodeRunDown(System.Xml.XmlNode,System.String)">
+            <summary>
+            Reads/parses the node tree of the specified node/document
+            recursively and inserts or replaces  key(=node)/value(=node contents)
+            in node tree.
+            </summary>
+            <param name="node">The current node.</param>
+            <param name="parent">The parent path of the current node.</param>
+        </member>
+        <member name="M:Dynamicweb.Configuration.Xml.XmlConfigurationProvider.IsValidPath(System.String)">
+            <summary>
+            Check whether the given path is a valid absolute file path.
+            </summary>
+            <param name="path">The path to check.</param>
+            <returns><c>true</c> if the file path is valid; otherwise <c>false</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Configuration.Xml.XmlConfigurationProvider.GetKeys">
+            <summary>
+            Gets all keys that can be used to get or set data.
+            </summary>
+            <returns>keys</returns>
+        </member>
+        <member name="M:Dynamicweb.Configuration.Xml.XmlConfigurationProvider.EscapeKey(System.String)">
+            <summary>
+            Escapes the key to the valid xml key
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Configuration.SystemConfiguration">
+            <summary>
+            Provides access to all settings in GlobalSettings.aspx and .config files located in the /Files folder.
+            Uses the <see cref="T:Dynamicweb.Configuration.Xml.XmlConfigurationProvider"/> to return values from settings stored in xml files.
+            </summary>
+            <example>
+            <code title="Using the configuration manager" source="..\Dynamicweb\09 - Core\Dynamicweb.Configuration\Head\Dynamicweb.Configuration.Examples\ConfigurationSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="P:Dynamicweb.Configuration.SystemConfiguration.FilesDirectory">
+            <summary>
+            Gets or sets the full path for the folder containing the configuration files.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Configuration.SystemConfiguration.Instance">
+            <summary>
+            Gets the current instance of the system configuration manager with data loaded from configuration files.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Configuration.SystemConfiguration.Reset">
+            <summary>
+            Resets the system configuration instance and reloads settings from configuration files.
+            </summary>
+        </member>
+    </members>
+</doc>

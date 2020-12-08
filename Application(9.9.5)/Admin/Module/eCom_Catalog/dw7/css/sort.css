@@ -1,0 +1,41 @@
+﻿.list-group li.list-group-item {
+    float: left;
+    width: 100%;
+    cursor: default;
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 35px;
+    box-sizing: border-box
+}
+
+.list li.list-group-item span {
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 0;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.list .list-group-item {
+    padding-left: 15px;
+}
+
+#items li {
+    cursor: move;  
+}
+
+.list-group-item.up .sort-col.active .sort-selector.up,
+.list-group-item.down .sort-col.active .sort-selector.down {
+    display: initial;
+}
+
+#items li:hover {
+    background-color: #C8EBFB;
+}

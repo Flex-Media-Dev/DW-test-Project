@@ -1,0 +1,777 @@
+﻿table.recognition-editor
+{
+    table-layout: fixed;
+    border: none;
+    background-color: transparent;
+}
+
+table.recognition-editor .recognition-editor-left
+{
+    float: left;
+}
+
+table.recognition-editor .recognition-editor-right
+{
+    float: right;
+}
+
+table.recognition-editor .recognition-editor-clear
+{
+    clear: both;
+    height: 0px;
+    content: ".";
+    visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+table.recognition-editor div.recognition-editor-rules,
+table.recognition-editor div.recognition-editor-expression
+{
+    overflow: hidden;
+    border: 1px solid #9E9E9E;
+    background-color: #ffffff;
+}
+
+table.recognition-editor div.recognition-editor-section-heading
+{
+    height: 26px;
+    line-height: 26px;
+    border-bottom: 1px solid #9E9E9E;
+    border-left: 1px solid #9E9E9E;
+    border-right: 1px solid #9E9E9E;
+    background-color: #f5f5f5;
+
+    color: #353535;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+table.recognition-editor div.recognition-editor-rules ul,
+table.recognition-editor div.recognition-editor-rules ul li
+{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+table.recognition-editor div.recognition-editor-rules ul
+{
+    padding-bottom: 1px;
+}
+
+table.recognition-editor div.recognition-editor-rules ul li
+{
+    margin: 2px;
+    margin-bottom: 8px;
+
+    background: #ffffff;
+    border: 1px solid #ffffff;
+
+    cursor: default;
+}
+
+table.recognition-editor div.recognition-editor-rules ul li strong
+{
+    display: block;
+
+    margin: 0px;
+    padding: 2px;
+
+    overflow: hidden;
+
+    width: 1000px;
+    white-space: nowrap;
+}
+
+table.recognition-editor div.recognition-editor-rules ul li span
+{
+    margin: 0px;
+    padding: 2px;
+
+    display: block;
+    color: #757575;
+}
+
+table.recognition-editor div.recognition-editor-rules ul li:hover
+{
+    border: 1px solid #bdbdbd;
+    background-color: #eeeeee;
+}
+
+table.recognition-editor div.recognition-editor-rules div.recognition-editor-rules-list,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container
+{
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+table.recognition-editor div.recognition-editor-rules div.recognition-editor-rules-list
+{
+    overflow-x: hidden;
+}
+
+table.recognition-editor .recognition-editor-expression-hover
+{
+    background-color: #fafafa !important;
+}
+
+table.recognition-editor div.recognition-editor-empty
+{
+    text-align: center;
+    font-style: italic;
+}
+
+table.recognition-editor div.recognition-editor-loading
+{
+    margin: 0px auto;
+    text-align: center;
+}
+
+table.recognition-editor div.recognition-editor-loading img
+{
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0px auto;
+}
+
+table.recognition-editor div.recognition-editor-expression ul.recognition-editor-expression-table-header,
+table.recognition-editor div.recognition-editor-expression ul.recognition-editor-expression-table-header li,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li
+{
+    float: left;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+table.recognition-editor div.recognition-editor-expression ul.recognition-editor-expression-table-header li,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li
+{
+    height: 20px;
+    padding-left: 3px;
+    margin: 4px 0;
+}
+
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li
+{
+    line-height: 20px;
+    overflow: hidden;
+    margin: 4px 0;
+}
+
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul.recognition-editor-row-selected,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul.recognition-editor-row-combination-highlight
+{
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-select input
+{
+    display: block;
+    margin-top: 3px !important;
+}
+
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li span.recognition-editor-cell-content-overflow
+{
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 1000px;
+}
+
+table.recognition-editor div.recognition-editor-expression ul.recognition-editor-expression-table-header
+{
+    border-bottom: 1px solid #bdbdbd;
+    background-color: #f5f5f5;
+    cursor: default;
+}
+
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul
+{
+    background-color: #FFFFFF;
+    background-image: none;
+    border-bottom: 1px solid #bdbdbd;
+    cursor: default;
+}
+
+table.recognition-editor div.recognition-editor-expression ul.recognition-editor-expression-table-header li {
+    border-right: 1px solid #9e9e9e;
+    vertical-align: middle;
+}
+
+table.recognition-editor div.recognition-editor-expression ul.recognition-editor-expression-table-header li span.recognition-editor-cell-value
+{
+    display: block;
+    margin-top: 3px;
+    margin-right: 1px;
+}
+
+table.recognition-editor div.recognition-editor-expression ul.recognition-editor-expression-table-header li.recognition-editor-combination-offset,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-combination-offset
+{
+    width: 20px;
+}
+
+table.recognition-editor div.recognition-editor-expression ul.recognition-editor-expression-table-header li.recognition-editor-cell-select,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-select
+{
+    width: 25px;
+}
+
+table.recognition-editor div.recognition-editor-expression ul.recognition-editor-expression-table-header li.recognition-editor-cell-select input,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-select input
+{
+    display: block;
+
+    width: 14px;
+    height: 14px;
+    margin: 0px;
+    padding: 0px;
+
+    margin-left: 4px;
+}
+
+table.recognition-editor div.recognition-editor-expression ul.recognition-editor-expression-table-header li.recognition-editor-cell-select input:focus,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-select input:focus,
+table.recognition-editor div.recognition-editor-expression ul.recognition-editor-expression-table-header li.recognition-editor-cell-select input:active,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-select input:active
+{
+    outline: none;
+}
+
+.recognition-editor-expression-container .recognition-editor-cell-rule, .recognition-editor-expression-container .recognition-editor-cell-constraint-operator, .recognition-editor-expression-container .recognition-editor-cell-constraint-value {
+    display: inline-table;
+}
+
+table.recognition-editor div.recognition-editor-expression ul.recognition-editor-expression-table-header li.recognition-editor-cell-rule,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-rule
+{
+    width: 150px;
+}
+
+table.recognition-editor div.recognition-editor-expression ul.recognition-editor-expression-table-header li.recognition-editor-cell-constraint-operator,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-constraint-operator
+{
+    width: 125px;
+}
+
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-constraint-operator select
+{
+    display: block;
+    margin-top: 1px;
+    width: 115px !important;
+}
+
+table.recognition-editor div.recognition-editor-expression ul.recognition-editor-expression-table-header li.recognition-editor-cell-constraint-value,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-constraint-value
+{
+    width: 250px;
+}
+
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-constraint-value select,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-constraint-value input,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-constraint-value a
+{
+    display: inline-block;
+    margin-top: 1px;
+}
+
+
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-constraint-value select
+{
+    width: 250px !important;
+}
+
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-constraint-value input
+{
+    width: 240px;
+    height: 21px;
+}
+
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container button.smartsearch-expression {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-constraint-value select.allow-expression,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-constraint-value input.allow-expression {
+    width: 210px !important;
+}
+
+table.recognition-editor div.recognition-editor-expression ul.recognition-editor-expression-table-header li.recognition-editor-cell-actions,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-actions
+{
+    width: 100px;
+    text-align: center;
+}
+
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-actions
+{
+    text-align: center;
+}
+
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-actions a
+{
+    color: #353535 !important;
+}
+
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-actions a,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-actions a:focus,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-actions a:active,
+table.recognition-editor div.recognition-editor-expression div.recognition-editor-expression-container ul li.recognition-editor-cell-actions a:hover
+{
+    outline: none;
+}
+
+.recognition-editor-rule-draggable
+{
+    width: 150px;
+
+    position: absolute;
+    padding: 2px;
+}
+
+.recognition-editor-rule-draggable div.recognition-editor-rule-draggable-content strong
+{
+    display: block;
+
+    height: 16px;
+    max-height: 16px;
+
+    margin: 0px;
+    padding: 2px;
+
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.recognition-editor-rule-draggable div.recognition-editor-rule-draggable-content span
+{
+    display: block;
+    color: #7b7b7b;
+}
+
+.recognition-editor-rule-draggable,
+.recognition-editor-rule-draggable:hover
+{
+    border: 1px solid #bdbdbd !important;
+    background-color: #fafafa !important;
+}
+
+div.recognition-editor-balloon
+{
+    margin: 0px;
+    padding: 0px;
+
+    position: absolute;
+    z-index: 9;
+
+    cursor: default;
+}
+
+div.recognition-editor-balloon div.recognition-editor-balloon-clear
+{
+    height: 0px;
+    width: 0px;
+    display: block;
+    visibility: hidden;
+    clear: both;
+    content: ".";
+}
+
+div.recognition-editor-balloon table.recognition-editor-balloon-grid
+{
+    table-layout: fixed;
+}
+
+div.recognition-editor-balloon table.recognition-editor-balloon-grid,
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td
+{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-tl,
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-tr,
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-bl,
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-br
+{
+    width: 19px;
+    background-repeat: no-repeat;
+    background-image: url('/Admin/Module/OMC/img/balloon-corners.png');
+}
+
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-tl,
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-tr
+{
+    height: 19px;
+}
+
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-bl,
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-br
+{
+    height: 15px;
+}
+
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-tl
+{
+    background-position: 0px 0px;
+}
+
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-tr
+{
+    background-position: 0px -1000px;
+}
+
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-bl
+{
+    background-position: 0px -66px;
+}
+
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-br
+{
+    background-position: 0px -81px;
+}
+
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-tm,
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-bm
+{
+    background-repeat: repeat-x;
+}
+
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-ml,
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-mr
+{
+    background-repeat: repeat-y;
+}
+
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-tm
+{
+    height: 19px;
+    background-image: url('/Admin/Module/OMC/img/balloon-border-t.png');
+    background-position: 0px -10px;
+}
+
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-bm
+{
+    height: 15px;
+    background-image: url('/Admin/Module/OMC/img/balloon-border-b.png');
+}
+
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-ml
+{
+    width: 19px;
+    background-image: url('/Admin/Module/OMC/img/balloon-border-l.png');
+}
+
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-mr
+{
+    width: 19px;
+    background-image: url('/Admin/Module/OMC/img/balloon-border-r.png');
+}
+
+div.recognition-editor-balloon table.recognition-editor-balloon-grid tr td.recognition-editor-balloon-grid-mm
+{
+    background-color: #ffffff;
+}
+
+div.recognition-editor-balloon div.recognition-editor-balloon-title-container
+{
+    left: 0px;
+    right: -1px;
+    top: -15px;
+
+    position: absolute;
+    background-color: transparent;
+}
+
+div.recognition-editor-balloon div.recognition-editor-balloon-title-container table.recognition-editor-balloon-title
+{
+    table-layout: fixed;
+    float: right;
+}
+
+div.recognition-editor-balloon div.recognition-editor-balloon-title-container table.recognition-editor-balloon-title,
+div.recognition-editor-balloon div.recognition-editor-balloon-title-container table.recognition-editor-balloon-title tr td
+{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+div.recognition-editor-balloon div.recognition-editor-balloon-title-container table.recognition-editor-balloon-title tr td.recognition-editor-balloon-title-tl,
+div.recognition-editor-balloon div.recognition-editor-balloon-title-container table.recognition-editor-balloon-title tr td.recognition-editor-balloon-title-tr
+{
+    width: 19px;
+    height: 34px;
+
+    background-repeat: no-repeat;
+    background-image: url('/Admin/Module/OMC/img/balloon-title.png');
+}
+
+div.recognition-editor-balloon div.recognition-editor-balloon-title-container table.recognition-editor-balloon-title tr td.recognition-editor-balloon-title-tl
+{
+    background-position: 0px 0px;
+}
+
+div.recognition-editor-balloon div.recognition-editor-balloon-title-container table.recognition-editor-balloon-title tr td.recognition-editor-balloon-title-tr
+{
+    background-position: -20px 0px;
+}
+
+div.recognition-editor-balloon div.recognition-editor-balloon-title-container table.recognition-editor-balloon-title tr td.recognition-editor-balloon-title-tm
+{
+    height: 34px;
+    background-repeat: repeat-x;
+    background-image: url('/Admin/Module/OMC/img/balloon-border-t.png');
+    background-position: 0px -10px;
+
+    padding-top: 10px;
+}
+
+div.recognition-editor-balloon div.recognition-editor-balloon-title-container table.recognition-editor-balloon-title tr td.recognition-editor-balloon-title-tm span
+{
+    background-color: #ffffff;
+    display: block;
+
+    color: #0e639f;
+
+    margin: 0px;
+    padding: 0px;
+    padding-top: 2px;
+
+    height: 18px;
+}
+
+div.recognition-editor-actions-list
+{
+    margin: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+div.recognition-editor-actions-list div.recognition-editor-points-description,
+div.recognition-editor-actions-list div.recognition-editor-points-parent-description,
+div.recognition-editor-actions-list div.recognition-editor-points-value
+{
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+div.recognition-editor-actions-list div.recognition-editor-points-parent-description
+{
+    color: #9a9a9a;
+    font-size: 9px;
+    margin-bottom: 10px;
+}
+
+div.recognition-editor-actions-list div.recognition-editor-points-value
+{
+    margin-bottom: 10px;
+}
+
+div.recognition-editor-actions-list ul,
+div.recognition-editor-actions-list ul li
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+div.recognition-editor-actions-list ul li
+{
+    height: 16px;
+    line-height: 16px;
+}
+
+div.recognition-editor-actions-list ul li a
+{
+    display: block;
+    float: left;
+
+    padding-left: 18px;
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+
+div.recognition-editor-actions-list ul li a,
+div.recognition-editor-actions-list ul li a:hover,
+div.recognition-editor-actions-list ul li a:active,
+div.recognition-editor-actions-list ul li a:focus
+{
+    outline: none;
+}
+
+div.recognition-editor-actions-list ul li a.recognition-editor-action-orderup
+{
+    background-image: url('/Admin/Module/OMC/img/arrow_up_small.png');
+}
+
+div.recognition-editor-actions-list ul li a.recognition-editor-action-orderdown
+{
+    background-image: url('/Admin/Module/OMC/img/arrow_down_small.png');
+}
+
+div.recognition-editor-actions-list ul li a.recognition-editor-action-remove
+{
+    background-image: url('/Admin/Module/OMC/img/delete_small.png');
+}
+
+div.recognition-editor-actions-list ul li a.recognition-editor-action-ungroup
+{
+    background-image: url('/Admin/Module/OMC/img/unlink_small.png');
+}
+
+div.recognition-editor-actions-list ul li a.recognition-editor-action-disabled
+{
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    -webkit-opacity: 0.5;
+    filter: alpha(opacity = 50);
+}
+
+div.recognition-editor-actions-list ul li a.recognition-editor-action-disabled,
+div.recognition-editor-actions-list ul li a.recognition-editor-action-disabled:hover,
+div.recognition-editor-actions-list ul li a.recognition-editor-action-disabled:active,
+div.recognition-editor-actions-list ul li a.recognition-editor-action-disabled:focus
+{
+    color: #727272 !important;
+    cursor: default !important;
+}
+
+.recognition-editor-combination
+{
+    position: absolute;
+    z-index: 9;
+
+    background-color: transparent;
+    background-image: none;
+
+    cursor: default;
+}
+
+.recognition-editor-combination,
+.recognition-editor-combination .recognition-editor-combination-top,
+.recognition-editor-combination .recognition-editor-combination-bottom,
+.recognition-editor-combination .recognition-editor-combination-operator
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+.recognition-editor-combination .recognition-editor-combination-top,
+.recognition-editor-combination .recognition-editor-combination-bottom
+{
+    background-image: url('/Admin/Module/OMC/img/selection.png');
+    background-repeat: no-repeat;
+}
+
+.recognition-editor-combination .recognition-editor-combination-top
+{
+    background-position: left top;
+}
+
+.recognition-editor-combination .recognition-editor-combination-bottom
+{
+    background-position: left bottom;
+}
+
+.recognition-editor-combination .recognition-editor-combination-operator
+{
+    width: 20px;
+    height: 8px;
+    line-height: 8px;
+
+    text-align: center;
+
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: -8px;
+
+    cursor: pointer;
+}
+
+.recognition-editor-combination .recognition-editor-combination-operator .recognition-editor-combination-operator-text,
+.recognition-editor-combination .recognition-editor-combination-operator .recognition-editor-combination-operator-and,
+.recognition-editor-combination .recognition-editor-combination-operator .recognition-editor-combination-operator-or
+{
+    margin: 0px auto;
+    padding: 0px;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+
+    background-color: #ffffff;
+    font-size: 8px !important;
+    text-transform: uppercase;
+    color: #353535;
+}
+
+.recognition-editor-combination .recognition-editor-combination-operator .recognition-editor-combination-operator-and
+{
+    width: 20px;
+}
+
+.recognition-editor-combination .recognition-editor-combination-operator .recognition-editor-combination-operator-or
+{
+    width: 16px;
+}
+
+.date-selector-label
+{
+    width:70px !important;
+    text-align: left;
+}
+
+.date-selector-button
+{
+    margin-top: 1px;
+}
+
+.date-selector-time-hour
+{
+    width:20px !important
+}
+
+.date-selector-time-minute
+{
+    width:20px !important
+}
+
+.date-selector-dynamic-values
+{    
+    display: table-cell;
+    float: left;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    height: 18px;
+    margin-left: 0px;
+    background-color: #ffffff;
+    padding: 0 7px;
+    margin-left:-1px;
+    border: 1px solid #e0e0e0 !important;
+    border-width: 1px 1px 1px 0px !important;
+    border-radius: 0 2px 2px 0 !important;
+    background: url('/Admin/Module/eCom_Catalog/dw7/images/datepicker/arrow_down.gif') center center no-repeat;    
+}
+
+.date-selector-dynamic-values:hover 
+{    
+    background-color: #ffffff;
+}
+
+
+.recognition-editor-expression .std {
+    border: 1px solid #bdbdbd !important;
+}

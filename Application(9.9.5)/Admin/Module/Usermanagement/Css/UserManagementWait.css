@@ -1,0 +1,51 @@
+#cellContentLoading
+{
+    position: absolute;
+    padding-top: 15%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #d2e1ef;
+    background-image: url('/Admin/Module/Usermanagement/Images/content_bg.jpg');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+#cellContentLoading .umgm-loading-container
+{
+    display: block;
+    margin: 0px auto;
+    
+    width: 200px;
+    height: 86px;
+ 
+    background: url('/Admin/Module/Usermanagement/Images/progress_bg.png') top left no-repeat;
+}
+
+#cellContentLoading .umgm-loading-container .umgm-loading-container-inner
+{
+    padding: 10px;
+}
+
+#cellContentLoading .umgm-loading-container .umgm-loading-container-inner img
+{
+    display: block;
+    
+    border: none;
+    padding: 0px;
+    
+    margin: 0px auto;
+    margin-bottom: 10px;
+}
+
+#cellContentLoading .umgm-loading-container .umgm-loading-container-inner .umgm-loading-container-text
+{
+    cursor: default;
+    
+    text-align: center;
+    
+    color: #6a6a6a;
+    
+    font-size: 14px;
+    font-weight: bold;
+}

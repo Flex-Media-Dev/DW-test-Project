@@ -1,0 +1,76 @@
+﻿@using Dynamicweb.SystemTools
+@using Dynamicweb.Management
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@Translate.Translate("APPS")</title>
+
+    <!-- CSS -->
+    <link href="/Admin/Resources/css/fonts.min.css" rel="stylesheet">
+    <link href="/Admin/Resources/css/app.min.css" rel="stylesheet">
+</head>
+<body class="area-blue">
+    <div class="screen-container">
+        <div class="card">
+            <div class="card-header">
+                <h2>@Translate.Translate("APPS")</h2>
+            </div>
+            <div class="groupbox">
+                <fieldset>
+                    <legend class="gbTitle">@Translate.Translate("Configurable APPS")</legend>
+                    <div class="groupbox-content">
+                        <div id="configurable-tilesview"></div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="groupbox">
+                <fieldset>
+                    <legend class="gbTitle">@Translate.Translate("Paragraph APPS")</legend>
+                    <div class="groupbox-content">
+                        <div id="paragraph-tilesview"></div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript Libraries -->
+    <script src="/Admin/Resources/js/jquery-2.1.1.min.js"></script>
+    <script src="/Admin/Resources/js/layout/bootstrap.min.js"></script>
+
+    <script src="/Admin/Resources/vendors/waves/waves.js"></script>
+    <script src="/Admin/Resources/js/layout/dwglobal.js"></script>
+    <script src="/Admin/Resources/js/layout/Actions.js"></script>
+    <script src="/Admin/Resources/js/layout/contextmenu.js"></script>
+    <script src="/Admin/Resources/js/layout/tilesview.js"></script>
+    <script src="/Admin/Resources/js/layout/content-functions.js"></script>
+    <script>        
+        (function ($) {
+            const sourceUrl = "@NavigatorController.NavigateUrl("Modules")";
+            $.get(sourceUrl, function (data) {
+                var configurableModules = [];
+                var paragraphModules = [];
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].DefaultAction) {
+                        configurableModules.push(data[i]);
+                    } else {
+                        paragraphModules.push(data[i]);
+                    }
+                }
+                $("#configurable-tilesview").tilesView({
+                    data: configurableModules,
+                    source: sourceUrl
+                });
+                $("#paragraph-tilesview").tilesView({
+                    data: paragraphModules,
+                    source: sourceUrl
+                });
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>
