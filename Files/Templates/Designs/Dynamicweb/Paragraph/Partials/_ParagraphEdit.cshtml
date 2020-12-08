@@ -1,0 +1,12 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+@if (Pageview.Device == Dynamicweb.Frontend.PageView.DeviceType.Desktop)
+{
+    var backendUser = Dynamicweb.Modules.UserManagement.User.get_Current(Dynamicweb.Modules.UserManagement.PagePermissionLevels.Backend);
+    <div class="paragraph-edit">
+        <a target="backend" href='/Admin/Content/ParagraphEdit.aspx?ID=@GetValue("ParagraphID")&amp;PageID=@Pageview.Page.ID'>Edit paragraph</a>
+        @if (!string.IsNullOrWhiteSpace(GetString("ParagraphModule"))) {
+        <a target="backend" href='/Admin/Content/ParagraphEditModule.aspx?ID=@GetValue("ParagraphID")&amp;PageID=@Pageview.Page.ID'>Edit module</a>
+        }
+    </div>
+}

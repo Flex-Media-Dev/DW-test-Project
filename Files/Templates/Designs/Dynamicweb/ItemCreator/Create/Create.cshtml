@@ -1,0 +1,77 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+@GetValue("ItemCreator:Edit.Form.Begin")
+@if (GetString("ItemCreator:Edit.Status") == "ITEM_CREATED")
+{
+    <div class="alert alert-success">
+        @Translate("Item_created", "Item created")
+    </div>
+
+    <div class="form-horizontal readonly">
+        @foreach (var group in GetLoop("ItemCreator:Item.Groups"))
+        {
+            <fieldset>
+                <legend>@group.GetValue("ItemCreator:Item.Group.Name")</legend>
+
+                @foreach (var field in group.GetLoop("ItemCreator:Item.Group.Fields"))
+                {
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">@field.GetValue("ItemCreator:Item.Field.Name")</label>
+                        <div class="col-sm-10">
+                            <span class="form-control">@field.GetValue("ItemCreator:Item.Field.Value")</span>
+                        </div>
+                    </div>
+                }
+            </fieldset>
+        }
+    </div>
+
+    <div>
+        <a class="btn btn-link" href="Default.aspx?Id=@Pageview.Page.ID">@Translate("Create_another_item", "Create another item")</a>
+    </div>
+}
+else if (GetString("ItemCreator:Edit.Status") != "NEW_SESSION")
+{
+    var errors = GetLoop("ValidationErrors");
+    if (errors.Count > 0)
+    {
+        <div class="alert alert-danger validation-errors">
+            <p><strong>@Translate("Error_creating_item", "Error creating item")</strong></p>
+            <ul>
+                @foreach (var error in errors)
+                {
+                    <li>@error.GetValue("ItemCreator:Edit.Validation.FieldName"): @error.GetValue("ItemCreator:Edit.Validation.Error")</li>
+                }
+            </ul>
+        </div>
+    }
+}
+
+@if (GetString("ItemCreator:Edit.Status") != "ITEM_CREATED")
+{
+    <div class="form-horizontal" role="form">
+        @foreach (var group in GetLoop("ItemCreator:Edit.Item.Groups"))
+        {
+            <fieldset>
+                <legend>@group.GetValue("ItemCreator:Edit.Item.Group.Name")</legend>
+
+                @foreach (var field in group.GetLoop("ItemCreator:Edit.Item.Group.Fields"))
+                {
+                    <div class="form-group">
+                        <label for='@field.GetValue("ItemCreator:Edit.Item.Field.SystemName")' class="col-sm-2 control-label">@field.GetValue("ItemCreator:Edit.Item.Field.Name")</label>
+                        <div class="col-sm-10">
+                            <input id='@field.GetValue("ItemCreator:Edit.Item.Field.SystemName")' name='@field.GetValue("ItemCreator:Edit.Item.Field.SystemName")' type="text" value='@field.GetValue("ItemCreator:Edit.Item.Field.Value")' class="form-control" />
+                        </div>
+                    </div>
+                }
+            </fieldset>
+        }
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">@Translate("Create", "Create")</button>
+            </div>
+        </div>
+    </div>
+}
+@GetValue("ItemCreator:Edit.Form.End")

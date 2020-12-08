@@ -1,0 +1,14 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+ 
+
+<div class="list-group">
+  <a href="@GetValue("DwSearchResultHref")" class="list-group-item">
+    <h4 class="list-group-item-heading">
+  
+@GetValue("DwSearchResultTitle")
+<span  class="badge pull-right">(@GetValue("DwSearchResultWeight"))</span></h4>
+    <p class="list-group-item-text">@GetValue("DwSearchResultSummary")</p>
+  </a>
+</div>
+

@@ -1,0 +1,90 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+@helper DisplayProducts()
+{
+    var products = GetLoop("Products");
+    if (products.Count == 0)
+    {
+        <div class="alert alert-info">@Translate("No_products_found", "No products found")</div>
+    }
+    else
+    {
+
+        <div class="row">
+            @foreach (var product in products)
+            {
+          		
+          		
+                <div class="col-md-4">
+                    <a href='@product.GetValue("Ecom:Product.Link.Clean")'>
+                        <h3>@product.GetValue("Ecom:Product.Name")</h3>
+                        @if (!string.IsNullOrWhiteSpace(product.GetString("Ecom:Product.ImageSmall.Default.Clean")))
+                        {
+                            <div class="image">
+                                <a href="@product.GetValue("Ecom:Product.Link.Clean")">
+                                    <img src="@product.GetValue("Ecom:Product.ImageSmall.Default.Clean")" class="img-responsive img-thumbnail" />
+                                </a>
+                            </div>
+                        }
+
+                        <div class="price">
+                            @product.GetValue("Ecom:Product.Price")
+                        </div>
+
+                        @if (!string.IsNullOrWhiteSpace(product.GetString("Ecom:Product.ShortDescription")))
+                        {
+                            <div class="shortdescription">@product.GetValue("Ecom:Product.ShortDescription")</div>
+                        }
+                    </a>
+
+                    <form method="post">
+                        <input type="hidden" name="ProductId" value='@product.GetValue("Ecom:Product.ID")' />
+                        @if (!string.IsNullOrEmpty(product.GetString("Ecom:Product.VariantID")))
+                        {
+                            <input type="hidden" name="VariantId" value='@product.GetValue("Ecom:Product.VariantID")' />
+                        }
+                        <button class="btn btn-primary" type="submit" name="CartCmd" value="add">@Translate("Add_to_cart", "Add to cart")</button>
+                    </form>
+                </div>
+				if(product.GetInteger("Ecom:Product.LoopCounter") % 3 == 0){
+          			   var newRow = "</div><div class=\"row\">";
+       					 @newRow
+          		}
+
+            }
+        </div>
+
+        <div id="productlistnavigation">
+            <span id="productcount">
+                @GetValue("Ecom:ProductList.PageProdCnt") products found
+            </span>
+            <span id="pagecount">
+                Page @GetValue("Ecom:ProductList.CurrentPage") of @GetValue("Ecom:ProductList.TotalPages")
+            </span>
+            <span id="pagenavigation">
+                <a id="prevpage" href="@GetValue("Ecom:ProductList.PrevPage.Clean")" @GetValue("Ecom:ProductList.PrevPage")>Previous</a> <a id="nextpage" href="@GetValue("Ecom:ProductList.NextPage.Clean")" @GetValue("Ecom:ProductList.NextPage")>Next</a><br />
+            </span>
+        </div>
+    }
+}
+
+
+<h2>@GetValue("Ecom:Group.Name")</h2>
+
+<div class="row">
+    @if (string.IsNullOrWhiteSpace(GetString("Ecom:Search.SearchBox")))
+    {
+        <div class="col-md-12">
+            @DisplayProducts()
+        </div>
+    }
+    else
+    {
+        <div class="col-md-3">
+            @GetValue("Ecom:Search.SearchBox")
+        </div>
+        <div class="col-md-9">
+            @DisplayProducts()
+        </div>
+    }
+</div>
