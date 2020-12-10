@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Management.Ecommerce</name>
+    </assembly>
+    <members>
+        <member name="M:Dynamicweb.Management.Ecommerce.Dialogs.ProductInformationController.SelectNode(System.String,System.Nullable{Dynamicweb.Management.Ecommerce.Nodes.ProductInformationNodeType},System.String,System.String)">
+            <summary>
+            The action to show PIM tree node select dialog.
+            </summary>
+            <param name="treeRootNode">The root of node for selector</param>
+            <param name="nodesToSelect">Type of the nodes which might be selected</param>
+            <param name="title">The dialog title</param>
+            <param name="selectedFieldTitle">The label of the field of the selected node</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Management.Ecommerce.Dialogs.ProductInformationController.EditFeedFolder(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            The action to show PIM tree node select dialog.
+            </summary>
+            <param name="treeRootNode">The root of node for selector</param>
+            <param name="nodesToSelect">Type of the nodes which might be selected</param>
+            <param name="title">The dialog title</param>
+            <param name="selectedFieldTitle">The label of the field of the selected node</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Management.Ecommerce.Nodes.Permissions.PermissionControlledQuery">
+            <summary>
+            A permission controlled query can be used with the permission framework to get the <see cref="T:Dynamicweb.Security.Permissions.PermissionLevel">PermissionLevel</see> for a given user.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Management.Ecommerce.Nodes.Permissions.PermissionControlledQuery.RelativePath">
+            <summary>
+            The relative path to file.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Management.Ecommerce.Nodes.Permissions.PermissionControlledQuery.#ctor">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Management.Ecommerce.Nodes.Permissions.PermissionControlledQuery.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+            <param name="relativePath">The relative path to file.</param>
+        </member>
+        <member name="M:Dynamicweb.Management.Ecommerce.Nodes.Permissions.PermissionControlledQuery.GetPermissionIdentifier">
+            <summary>
+            Gets permission identifier for current query.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Management.Ecommerce.Nodes.Permissions.PermissionControlledQuery.GetParent">
+            <summary>
+            Gets the parent folder of this file, for the purposes of inherited permissions.
+            </summary>
+            <remarks>Return null, if no parent permissions exist</remarks>
+        </member>
+        <member name="M:Dynamicweb.Management.Ecommerce.Nodes.Permissions.PermissionControlledQuery.GetByKey(System.String)">
+            <summary>
+            Gets instance by key
+            </summary>
+            <param name="key">The key</param>
+        </member>
+        <member name="P:Dynamicweb.Management.Ecommerce.EcommerceArea.Actions">
+            <summary>
+            Gets or sets the collection of actions for backend left menu.
+            </summary>
+            <value>
+            The collection of actions.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Management.Ecommerce.ProductInformationArea.Actions">
+            <summary>
+            Gets or sets the collection of actions for backend left menu.
+            </summary>
+            <value>
+            The collection of actions.
+            </value>
+        </member>
+    </members>
+</doc>

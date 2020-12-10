@@ -1,0 +1,2715 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Tracking</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Tracking.Bots.BotType">
+            <summary>
+            Type of bot/spider/crawler.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Bots.BotType.None">
+            <summary>
+            Not a bot.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Bots.BotType.Unknown">
+            <summary>
+            Unkown bot.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Bots.BotType.Search">
+            <summary>
+            Search engine bot.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Bots.BotType.SocialMedia">
+            <summary>
+            Social media bot.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Bots.BotType.Monitoring">
+            <summary>
+            Monitoring bot.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Bots.BotType.Seo">
+            <summary>
+            Seo bot.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Devices.DeviceType">
+            <summary>
+            Type of device (desktop, tablet, mobile, etc.)
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Devices.DeviceType.Unknown">
+            <summary>
+            Unknown device.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Devices.DeviceType.Desktop">
+            <summary>
+            Desktop device.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Devices.DeviceType.Mobile">
+            <summary>
+            Mobile device.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Devices.DeviceType.Tablet">
+            <summary>
+            Tablet device.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Devices.PlatformType">
+            <summary>
+            Type of platform (iOS, Android, Windows, etc.)
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Devices.PlatformType.Unknown">
+            <summary>
+            Unknown platform.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Devices.PlatformType.Ios">
+            <summary>
+            iOS platform.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Devices.PlatformType.Android">
+            <summary>
+            Android platform.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Devices.PlatformType.Windows">
+            <summary>
+            Windows platform.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Devices.PlatformType.MacOS">
+            <summary>
+            macOS platform (previously Mac OS X).
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Devices.PlatformType.Unix">
+            <summary>
+            Unix-like platforms (Linux, BSD, ChromeOS, etc.).
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.EventData">
+            <summary>
+            Class for collecting event information
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.EventData.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.EventData"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.EventData.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.EventData"/> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.EventData.#ctor(System.String,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.EventData"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="P:Dynamicweb.Tracking.EventData.Id">
+            <summary>
+            Gets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.EventData.IsNew">
+            <summary>
+            Gets a value indicating whether this instance is new.
+            </summary>
+            <value>
+              <c>true</c> if this instance is new; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.EventData.Timestamp">
+            <summary>
+            Gets the timestamp.
+            </summary>
+            <value>
+            The timestamp.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.EventData.SessionId">
+            <summary>
+            Gets the session identifier.
+            </summary>
+            <value>
+            The session identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.EventData.ViewId">
+            <summary>
+            Gets the view identifier.
+            </summary>
+            <value>
+            The view identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.EventData.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.EventData.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.EventData.EntityType">
+            <summary>
+            Gets or sets the type of the entity.
+            </summary>
+            <value>
+            The type of the entity.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.EventData.EntityKey">
+            <summary>
+            Gets or sets the entity key.
+            </summary>
+            <value>
+            The entity key.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.EventData.EntitySubKey">
+            <summary>
+            Gets or sets the entity sub key.
+            </summary>
+            <value>
+            The entity sub key.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.EventData.IsConversion">
+            <summary>
+            Gets or sets a value indicating whether this instance is a conversion.
+            </summary>
+            <value>
+              <c>true</c> if this instance is a conversion; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Referrers.ReferrerType">
+            <summary>
+            Type of referrer (traffic source).
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Referrers.ReferrerType.None">
+            <summary>
+            No referrer.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Referrers.ReferrerType.Unknown">
+            <summary>
+            Unknown referrer.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Referrers.ReferrerType.Search">
+            <summary>
+            Search engine referrer.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Referrers.ReferrerType.SocialMedia">
+            <summary>
+            Social media referrer.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Referrers.ReferrerType.Email">
+            <summary>
+            Email referrer.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Referrers.ReferrerType.BadFormatted">
+            <summary>
+            Bad formated (not a URI) http referer string
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.AggregateType">
+            <summary>
+            Type of aggregated value.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.AggregateType.SUM">
+            <summary>
+            Sum of values.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.AggregateType.MIN">
+            <summary>
+            Minimum of values.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.AggregateType.MAX">
+            <summary>
+            Maximum of values.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.AggregateType.AVG">
+            <summary>
+            Average of values.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.AggregateType.COUNT">
+            <summary>
+            Count of entries.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.DataCollection">
+            <summary>
+            Represents a collection of data.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataCollection.Start">
+            <summary>
+            Gets or sets the start time of the time range.
+            </summary>
+            <value>
+            The start time of the time range.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataCollection.End">
+            <summary>
+            Gets or sets the end time of the time range.
+            </summary>
+            <value>
+            The end time of the time range.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataCollection.Container">
+            <summary>
+            Gets or sets the container.
+            </summary>
+            <value>
+            The container.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataCollection.Columns">
+            <summary>
+            Gets or sets the columns.
+            </summary>
+            <value>
+            The columns.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataCollection.MaxLabels">
+            <summary>
+            Gets or sets the maximum number of labels.
+            </summary>
+            <value>
+            The maximum maximum number of labels.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataCollection.Properties">
+            <summary>
+            Gets or sets the properties.
+            </summary>
+            <value>
+            The properties.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataCollection.Count">
+            <summary>
+            Gets the count.
+            </summary>
+            <value>
+            The count.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataCollection.Groups">
+            <summary>
+            Gets or sets the groups.
+            </summary>
+            <value>
+            The groups.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.DataCollection.GetCell(System.Int32,System.Int32)">
+            <summary>
+            Gets the cell.
+            </summary>
+            <param name="row">The row.</param>
+            <param name="column">The column.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.DataCollection.GetRow(System.Int32)">
+            <summary>
+            Gets a row by index.
+            </summary>
+            <param name="row">The row index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.DataCollection.AddCell(System.Int32,System.Object)">
+            <summary>
+            Adds a cell.
+            </summary>
+            <param name="row">The row index.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.DataCollection.PrependRow(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Prepends a row.
+            </summary>
+            <param name="row">The row values.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.DataCollection.AddRow(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            Adds a row.
+            </summary>
+            <param name="values">The row values.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.DataCollection.RemoveRow(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Removes the row.
+            </summary>
+            <param name="values">The row to remove.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.DataCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>
+            An enumerator that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.DataCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.DataSeries">
+            <summary>
+            Represents series of data.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataSeries.Data">
+            <summary>
+            Gets the data.
+            </summary>
+            <value>
+            The data.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataSeries.Legends">
+            <summary>
+            Gets the legends.
+            </summary>
+            <value>
+            The legends.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataSeries.Labels">
+            <summary>
+            Gets the labels.
+            </summary>
+            <value>
+            The labels.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataSeries.Series">
+            <summary>
+            Gets the series.
+            </summary>
+            <value>
+            The series.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataSeries.Metadata">
+            <summary>
+            Gets the metadata information
+            </summary>
+            <value>
+            The metadata information
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataSeries.MetadataColumnName">
+            <summary>
+            Name of column which is used for metadata information
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.DataSeries.#ctor(Dynamicweb.Tracking.Reporting.DataCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Reporting.DataSeries"/> class.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.DataSeries.ProcessData">
+            <summary>
+            Processes the data.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.DataSeries.PadLabels(System.Int32,Dynamicweb.Tracking.Reporting.Grouping,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.Int32})">
+            <summary>
+            Pads the labels.
+            </summary>
+            <param name="groupSize">Size of the group.</param>
+            <param name="labelGroup">The label group.</param>
+            <param name="labels">The labels.</param>
+            <param name="labelPositions">The label positions.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.DataSeries.FillFromData(Dynamicweb.Tracking.Reporting.Grouping,Dynamicweb.Tracking.Reporting.Grouping,System.Collections.Generic.Dictionary{System.String,System.Int32},System.Collections.Generic.Dictionary{System.String,System.Int32},System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Fills from data.
+            </summary>
+            <param name="legendGroup">The legend group.</param>
+            <param name="labelGroup">The label group.</param>
+            <param name="legendPositions">The legend positions.</param>
+            <param name="labelPositions">The label positions.</param>
+            <param name="labels">The labels.</param>
+            <param name="legends">The legends.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.DataSeries.InitializeEmptyMultiArray``1(System.Int32,System.Int32)">
+            <summary>
+            Initializes an empty multi array.
+            </summary>
+            <param name="xAxis">The x axis.</param>
+            <param name="yAxis">The y axis.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.DataSeries.AddIfNew``2(System.Collections.Generic.Dictionary{``0,``1},``0,``1)">
+            <summary>
+            Adds if new.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="V"></typeparam>
+            <param name="container">The container.</param>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.DataSeries.AddIfNew(System.Collections.Generic.Dictionary{System.String,System.Int32},System.String)">
+            <summary>
+            Adds if new.
+            </summary>
+            <param name="container">The container.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.DataSource">
+            <summary>
+            Represents a data source.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataSource.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataSource.Alias">
+            <summary>
+            Gets or sets the alias.
+            </summary>
+            <value>
+            The alias.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataSource.Rank">
+            <summary>
+            Gets or sets the rank. Rank defines the order in wich data sources are joined.
+            </summary>
+            <value>
+            The rank.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataSource.References">
+            <summary>
+            Gets or sets references. 
+            </summary>
+            <value>
+            The data soure referenes.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataSource.AllowUnsafeTableName">
+            <summary>
+            Gets or sets a value indicating whether the table name specified should be treated as safe.
+            I.E., wrapped in square brackets "[ ]". Default is <c>false</c> meaning treat as unsafe.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.DataSource.AllowUnsafeColumnNames">
+            <summary>
+            Gets or sets a value indicating whether the column names specified should be treated as safe.
+            I.E., wrapped in square brackets "[ ]". Default is <c>false</c> meaning treat as unsafe.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.DataSource.ToString">
+            <summary>
+             Returns a string representation of that object.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.DateGrouping">
+            <summary>
+            Date grouping type.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.DateGrouping.Date">
+            <summary>
+            Group by day.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.DateGrouping.Week">
+            <summary>
+            Group by week.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.DateGrouping.Month">
+            <summary>
+            Group by month.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.DateGrouping.Year">
+            <summary>
+            Group by year.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.DateGrouping.Time">
+            <summary>
+            Group by time of day.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.DateGrouping.Day">
+            <summary>
+            Group by day.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.OperatorType">
+            <summary>
+            Type of expression operator.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.OperatorType.Equal">
+            <summary>
+            Equals operator (=)
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.OperatorType.NotEqual">
+            <summary>
+            Not equals operator (&lt;&gt;).
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.OperatorType.In">
+            <summary>
+            In operator (IN).
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.OperatorType.NotIn">
+            <summary>
+            Not in operator (NOT IN).
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.OperatorType.GreaterThan">
+            <summary>
+            Greater than operator (&gt;).
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.OperatorType.GreaterThanOrEqual">
+            <summary>
+            Greater than or equal operator (&gt;=).
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.OperatorType.LessThan">
+            <summary>
+            Less than operator (&lt;).
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.OperatorType.LessThanOrEqual">
+            <summary>
+            Less than or equal operator (&lt;=).
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.OperatorType.IsNull">
+            <summary>
+            Is null operator (IS NULL).
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.OperatorType.IsNotNull">
+            <summary>
+            Is not null operator (IS NOT NULL).
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.OperatorTypeExtension">
+            <summary>
+            Extension methods for working with <see cref="T:Dynamicweb.Tracking.Reporting.OperatorType"/>.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.OperatorTypeExtension.ToDefaultValue(Dynamicweb.Tracking.Reporting.OperatorType)">
+            <summary>
+            To the default value.
+            </summary>
+            <param name="operatorType">Type of the operator.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.QueryAggregate">
+            <summary>
+            Represents a query aggregate.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.QueryAggregate.Alias">
+            <summary>
+            Gets or sets the alias of the aggregate. The alias can be used when building queries.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.QueryAggregate.Label">
+            <summary>
+            Gets or sets the label.
+            </summary>
+            <value>
+            The label.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.QueryAggregate.AllowUnsafeColumnNames">
+            <summary>
+            Gets or sets a value indicating whether unsafe column names are allowed.
+            </summary>
+            <value>
+              <c>true</c> if unsafe column names are allowed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.QueryAggregate.ColumnName">
+            <summary>
+            Gets or sets the name of the column.
+            </summary>
+            <value>
+            The name of the column.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.QueryAggregate.Aggregate">
+            <summary>
+            Gets or sets the aggregate.
+            </summary>
+            <value>
+            The aggregate.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.QueryAggregate.ValueType">
+            <summary>
+            Gets or sets the type of the value.
+            </summary>
+            <value>
+            The type of the value.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.QueryAggregate.#ctor(Dynamicweb.Tracking.Reporting.AggregateType,System.String,System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Reporting.QueryAggregate"/> class.
+            </summary>
+            <param name="aggregateType">Type of the aggregate.</param>
+            <param name="columnName">Name of the column.</param>
+            <param name="type">The type.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.QueryAggregate.#ctor(Dynamicweb.Tracking.Reporting.AggregateType,System.String,System.Type,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Reporting.QueryAggregate"/> class.
+            </summary>
+            <param name="aggregateType">Type of the aggregate.</param>
+            <param name="columnName">Name of the column.</param>
+            <param name="type">The type.</param>
+            <param name="alias">The alias for the aggregate allowing for this aggregate to be referenced by the query.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.QueryAggregate.GetParameter">
+            <summary>
+            Gets the parameter.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.Grouping">
+            <summary>
+            Represents a grouping of data.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.Grouping.UseAlternateDatePattern">
+            <summary>
+            Gets or sets a value indicating whether to use alternate date pattern.
+            </summary>
+            <value>
+              <c>true</c> if alternate date pattern should be used; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.Grouping.IsDateGrouping">
+            <summary>
+            Gets or sets a value indicating whether this instance is a date grouping.
+            </summary>
+            <value>
+              <c>true</c> if this instance is a date grouping; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.Grouping.DateGrouping">
+            <summary>
+            Gets or sets a date grouping.
+            </summary>
+            <value>
+            The date grouping.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.Grouping.GroupingConcatenation">
+            <summary>
+            Gets or sets the grouping concatenation.
+            </summary>
+            <value>
+            The grouping concatenation.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.Grouping.GroupingNameMapping">
+            <summary>
+            Gets or sets the grouping name mapping.
+            </summary>
+            <value>
+            The grouping name mapping.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.Grouping.Names">
+            <summary>
+            Gets the names.
+            </summary>
+            <value>
+            The names.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.Grouping.AllowUnsafeColumnNames">
+            <summary>
+            Gets or sets a value indicating whether the column names specified should be treated as safe.
+            I.E., wrapped in square brackets "[ ]". Default is <c>false</c> meaning treat as unsafe.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.Grouping.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Reporting.Grouping"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.Grouping.AddGrouping(System.String,System.Func{System.String,System.String})">
+            <summary>
+            Adds a grouping.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="nameMapping">The name mapping.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.Grouping.GetSize">
+            <summary>
+            Gets the size.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.Grouping.MapValue(System.String,System.String)">
+            <summary>
+            Maps the value.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.Grouping.GetLabels(System.String[])">
+            <summary>
+            Gets the labels.
+            </summary>
+            <param name="values">The values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.Grouping.GetLabelKey(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            Gets the label key.
+            </summary>
+            <param name="values">The values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.Grouping.GetLabel(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            Gets the label.
+            </summary>
+            <param name="values">The values.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.QueryAggregateReport">
+            <summary>
+            Represents a subquery with aggregate function.
+            </summary>
+            <remarks>
+            The <see cref="T:Dynamicweb.Tracking.Reporting.QueryAggregateReport"/> allows to write subqueries to summarize data into aggregate calculations
+            </remarks>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.QueryAggregateReport.Label">
+            <summary>
+            Gets or sets the label.
+            </summary>
+            <value>
+            The label.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.QueryAggregateReport.AllowUnsafeColumnNames">
+            <summary>
+            Gets or sets a value indicating whether unsafe column names are allowed.
+            </summary>
+            <value>
+              <c>true</c> if unsafe column names are allowed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.QueryAggregateReport.ColumnName">
+            <summary>
+            Gets or sets the name of the column.
+            </summary>
+            <value>
+            The name of the column.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.QueryAggregateReport.Query">
+            <summary>
+            Gets or sets the aggregate.
+            </summary>
+            <value>
+            The aggregate.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.QueryAggregateReport.#ctor(Dynamicweb.Tracking.Reporting.ReportQuery,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Reporting.QueryAggregate"/> class.
+            </summary>
+            <param name="query">Sub query aggregate.</param>
+            <param name="columnName">Name of the column.</param>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.Report">
+            <summary>
+            Represents a report.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.Report.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.Report.Icon">
+            <summary>
+            Gets or sets the icon.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.Report.ShowType">
+            <summary>
+            Gets or sets report presentation type
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.Report.ProviderTypeName">
+            <summary>
+            Gets or sets the provider type name.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.Report.ProviderParameters">
+            <summary>
+            Gets or sets the provider parameters.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.Report.Properties">
+            <summary>
+            Various additional properties
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.ReportConfigurationRepository">
+            <summary>
+            Repository of report configurations.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.ReportConfigurationRepository.Folder">
+            <summary>
+            Gets or sets the folder.
+            </summary>
+            <value>
+            The folder.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportConfigurationRepository.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Reporting.ReportConfigurationRepository"/> class.
+            </summary>
+            <param name="folder">The folder.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportConfigurationRepository.Save(Dynamicweb.Tracking.Reporting.Report)">
+            <summary>
+            Saves the specified report
+            </summary>
+            <param name="report">The analytic report</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportConfigurationRepository.GetByName(System.String)">
+            <summary>
+            Gets by name
+            </summary>
+            <param name="name"></param>
+            <returns>The analytic report</returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportConfigurationRepository.GetByFullName(System.String)">
+            <summary>
+            Gets report by full name
+            </summary>
+            <param name="fullName">The absolute path</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportConfigurationRepository.GetAll">
+            <summary>
+            Gets all reports
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportConfigurationRepository.GetSubFolders">
+            <summary>
+            Gets sub folders
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportConfigurationRepository.Delete(System.String)">
+            <summary>
+            Delete report
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportConfigurationRepository.IsExist(System.String)">
+            <summary>
+            Is report with such name exist
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportConfigurationRepository.IsValidName(System.String)">
+            <summary>
+            Is report name valid
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportConfigurationRepository.GetReportData(Dynamicweb.Tracking.Reporting.Report)">
+            <summary>
+            Get report data
+            </summary>
+            <param name="report"></param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportConfigurationRepository.GetRelativePath(System.String)">
+            <summary>
+            Gets the relative path.
+            </summary>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.QueryCondition">
+            <summary>
+            Represents a query condition.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.QueryCondition.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.QueryCondition.Operator">
+            <summary>
+            Gets the operator.
+            </summary>
+            <value>
+            The operator.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.QueryCondition.Value">
+            <summary>
+            Gets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.QueryCondition.ForeignName">
+            <summary>
+            Gets the foreign name.
+            </summary>
+            <value>
+            The foreign name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.QueryCondition.AllowUnsafeColumnNames">
+            <summary>
+            Gets or sets a value indicating whether unsafe column names are allowed.
+            </summary>
+            <value>
+              <c>true</c> if unsafe column names are allowed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.QueryCondition.#ctor(System.String,Dynamicweb.Tracking.Reporting.OperatorType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Reporting.QueryCondition"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="operatorType">Type of the operator.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.QueryCondition.#ctor(System.String,System.String,Dynamicweb.Tracking.Reporting.OperatorType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Reporting.QueryCondition"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="foreignName">The foreign name.</param>
+            <param name="operatorType">Type of the operator.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.QueryCondition.#ctor(System.String,Dynamicweb.Tracking.Reporting.OperatorType,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Reporting.QueryCondition"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="operatorType">Type of the operator.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.QueryCondition.GetExpressionPlaceholder(System.Int32)">
+            <summary>
+            Gets the expression placeholder.
+            </summary>
+            <param name="valuePlaceholder">The value placeholder.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.ReportQuery">
+            <summary>
+            Represents a report query.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.ReportQuery.DateFrom">
+            <summary>
+            Gets or sets the date from.
+            </summary>
+            <value>
+            The date from.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.ReportQuery.DateTo">
+            <summary>
+            Gets or sets the date to.
+            </summary>
+            <value>
+            The date to.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Reporting.ReportQuery"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.#ctor(System.DateTime,System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Reporting.ReportQuery"/> class.
+            </summary>
+            <param name="dateFrom">The date from.</param>
+            <param name="dateTo">The date to.</param>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.ReportQuery.Sources">
+            <summary>
+            Gets or sets the sources.
+            </summary>
+            <value>
+            The sources.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.ReportQuery.Groups">
+            <summary>
+            Gets or sets the groups.
+            </summary>
+            <value>
+            The groups.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.ReportQuery.Aggregates">
+            <summary>
+            Gets or sets the aggregates.
+            </summary>
+            <value>
+            The aggregates.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.ReportQuery.QueryAggregates">
+            <summary>
+            Gets or sets the aggregates.
+            </summary>
+            <value>
+            The aggregates.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.ReportQuery.Filters">
+            <summary>
+            Gets or sets the filters.
+            </summary>
+            <value>
+            The filters.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.ReportQuery.Sorting">
+            <summary>
+            Gets or sets the sorting.
+            </summary>
+            <value>
+            The sorting.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.ReportQuery.GroupingNameMapping">
+            <summary>
+            Gets or sets the grouping name mapping.
+            </summary>
+            <value>
+            The grouping name mapping.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddSessionSource">
+            <summary>
+            Adds the session source.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddSessionSource(System.String)">
+            <summary>
+            Adds the session source.
+            </summary>
+            <param name="alias">The source alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddViewSource(System.Boolean,System.String)">
+            <summary>
+            Adds the view source.
+            </summary>
+            <param name="addReferencesToTrackingSession">Add references to traking session table.</param>
+            <param name="alias">The source alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddEventSource(System.String)">
+            <summary>
+            Adds the event source.
+            </summary>
+            <param name="alias">The source alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddSource(System.String)">
+            <summary>
+            Adds the source.
+            </summary>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddSource(System.String,System.String)">
+            <summary>
+            Adds the source.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="alias">The source alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.GetGroupingNameMapping(System.Int32)">
+            <summary>
+            Gets the grouping name mapping.
+            </summary>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddGrouping(System.String,System.Func{System.String,System.String},System.Func{System.String[],System.String})">
+            <summary>
+            Adds the grouping.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="nameMapping">The name mapping.</param>
+            <param name="concatenation">The concatenation.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddGroupingWithoutDelimitedIdentifier(System.String,System.Func{System.String,System.String},System.Func{System.String[],System.String})">
+            <summary>
+            Adds a <see cref="T:Dynamicweb.Tracking.Reporting.Grouping"/> for the given named column.
+            </summary>
+            <param name="name">The name of the columns to group by.</param>
+            <param name="nameMapping">The mapping function to retrieve labels for the given columns.</param>
+            <param name="concatenation">The concatenation function.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddGroupings(System.String[],System.Func{System.String,System.String},System.Func{System.String[],System.String},System.Nullable{System.Boolean},System.Boolean)">
+            <summary>
+            Adds the groupings.
+            </summary>
+            <param name="names">The names.</param>
+            <param name="nameMapping">The name mapping.</param>
+            <param name="concatenation">The concatenation.</param>
+            <param name="useWeekPattern">The use week pattern.</param>
+            <param name="isDatePattern">if set to <c>true</c> [is date pattern].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddGroupings(System.String[],System.Func{System.String,System.String},System.Nullable{Dynamicweb.Tracking.Reporting.DateGrouping},System.Func{System.String[],System.String})">
+            <summary>
+            Adds the groupings.
+            </summary>
+            <param name="names">The names.</param>
+            <param name="nameMapping">The name mapping.</param>
+            <param name="dateGrouping">The date grouping.</param>
+            <param name="concatenation">The concatenation.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddGroupings(System.String[],System.Func{System.String,System.String},System.Nullable{Dynamicweb.Tracking.Reporting.DateGrouping},System.Func{System.String[],System.String},System.Boolean)">
+            <summary>
+            Adds <see cref="T:Dynamicweb.Tracking.Reporting.Grouping"/>s for the given named columns.
+            </summary>
+            <param name="names">The names of the columns to group by.</param>
+            <param name="nameMapping">The mapping function to retrieve labels for the given columns.</param>
+            <param name="dateGrouping">The <see cref="T:Dynamicweb.Tracking.Reporting.DateGrouping"/></param>
+            <param name="concatenation">The concatenation function.</param>
+            <param name="allowUnsafeColumnNames"><c>false</c> if the given column names should be treated as delimited identifiers; otherwise <c>true</c>. Default is <c>false</c>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddAggregate``1(Dynamicweb.Tracking.Reporting.AggregateType,System.String,System.Boolean)">
+            <summary>
+            Adds the aggregate.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="aggregate">The aggregate.</param>
+            <param name="name">The name.</param>
+            <param name="allowUnsafe">if set to <c>true</c> [allow unsafe].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddAggregateWithAlias``1(Dynamicweb.Tracking.Reporting.AggregateType,System.String,System.String,System.Boolean)">
+            <summary>
+            Adds the aggregate.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="aggregate">The aggregate.</param>
+            <param name="name">The name.</param>
+            <param name="alias">The alias of the aggregate allowing it to be referenced in the query.</param>
+            <param name="allowUnsafe">if set to <c>true</c> [allow unsafe].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddQueryAggregate(Dynamicweb.Tracking.Reporting.ReportQuery,System.String)">
+            <summary>
+            Adds the query aggregate.
+            </summary>
+            <param name="query">The report query.</param>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddFilter(System.String,Dynamicweb.Tracking.Reporting.OperatorType,System.Boolean)">
+            <summary>
+            Adds the filter.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="operatorType">Type of the operator.</param>
+            <param name="allowUnsafe">if set to <c>true</c> [allow unsafe].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddFilter(System.String,Dynamicweb.Tracking.Reporting.OperatorType,System.Object,System.Boolean)">
+            <summary>
+            Adds the filter.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="operatorType">Type of the operator.</param>
+            <param name="value">The value.</param>
+            <param name="allowUnsafe">if set to <c>true</c> [allow unsafe].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportQuery.AddFilter(System.String,System.String,Dynamicweb.Tracking.Reporting.OperatorType)">
+            <summary>
+            Adds the filter.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="foreignName">The foreign name.</param>
+            <param name="operatorType">Type of the operator.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.ReportDataRepository">
+            <summary>
+            Repository of report data.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportDataRepository.Read(Dynamicweb.Tracking.Reporting.ReportQuery)">
+            <summary>
+            Reads the specified query.
+            </summary>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportDataRepository.ToType(System.Type,System.Object)">
+            <summary>
+            To the type.
+            </summary>
+            <param name="valueType">Type of the value.</param>
+            <param name="rawvalue">The rawvalue.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportDataRepository.CreateSorting(Dynamicweb.Tracking.Reporting.ReportQuery)">
+            <summary>
+            Creates the sorting.
+            </summary>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportDataRepository.CreateWhere(Dynamicweb.Tracking.Reporting.ReportQuery)">
+            <summary>
+            Creates the where.
+            </summary>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportDataRepository.CreateGrouping(Dynamicweb.Tracking.Reporting.ReportQuery)">
+            <summary>
+            Creates the grouping.
+            </summary>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportDataRepository.CreateSelect(Dynamicweb.Tracking.Reporting.ReportQuery)">
+            <summary>
+            Creates the select.
+            </summary>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportDataRepository.GetDistinctSourceNames">
+            <summary>
+            Gets the distinct source names.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportDataRepository.GetDistinctSourceTerms">
+            <summary>
+            Gets the distinct source terms.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportDataRepository.GetDistinctCampaigns">
+            <summary>
+            Gets the distinct campaigns.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportDataRepository.GetDistinctSourceMediums">
+            <summary>
+            Gets the distinct source mediums.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportDataRepository.DistinctValues(System.String)">
+            <summary>
+            Distincts the values.
+            </summary>
+            <param name="columnName">Name of the column.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.ReportProvider">
+            <summary>
+            Class used as base class inherited by other classes for analytic reports handling.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Reporting.ReportProvider.IsWidget">
+            <summary>
+            Gets Or sets the is widget view
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportProvider.GetData">
+            <summary>
+            Gets the data table.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportProvider.GetDataSeries">
+            <summary>
+            Gets the data in a format that is ready for consumption by chart tools which require: Legends, Labels and Series (double[][])
+            </summary>
+            <returns>dataSeries</returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.ReportService">
+            <summary>
+            The ReportService class providing methods for querying and saving The Report Aggregate to and from persistence.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Reporting.ReportService"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportService.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Reporting.ReportService"/> class.
+            </summary>
+            <param name="folder">The folder.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportService.GetData(Dynamicweb.Tracking.Reporting.ReportQuery)">
+            <summary>
+            Gets the data.
+            </summary>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportService.Save(Dynamicweb.Tracking.Reporting.Report)">
+            <summary>
+            Saves the specified report
+            </summary>
+            <param name="report">The analytic report</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportService.GetByName(System.String)">
+            <summary>
+            Gets by name
+            </summary>
+            <param name="name"></param>
+            <returns>The analytic report</returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportService.GetAll">
+            <summary>
+            Gets all reports
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportService.GetSubFolders">
+            <summary>
+            Gets sub folders
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportService.Delete(System.String)">
+            <summary>
+            Delete report
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportService.IsExist(System.String)">
+            <summary>
+            Is report with such name exist
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportService.IsValidName(System.String)">
+            <summary>
+            Is report name valid
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportService.GetReportData(Dynamicweb.Tracking.Reporting.Report)">
+            <summary>
+            Get report data
+            </summary>
+            <param name="report"></param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportService.GetSourceNames">
+            <summary>
+            Gets the source names.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportService.GetSourceTerm">
+            <summary>
+            Gets the source terms.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportService.GetCampaigns">
+            <summary>
+            Gets the campaigns.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Reporting.ReportService.GetSourceMediums">
+            <summary>
+            Gets the source mediums.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Reporting.ReportShowType">
+            <summary>
+            Type of report visualization.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.ReportShowType.Number">
+            <summary>
+            Numeric visualization.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.ReportShowType.List">
+            <summary>
+            List visualization. 
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.ReportShowType.ChartLine">
+            <summary>
+            Line chart visualization.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.ReportShowType.ChartBar">
+            <summary>
+            Bar chart visualization.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Reporting.ReportShowType.ChartPie">
+            <summary>
+            Pie chart visualization.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Repositories.EventRepository">
+            <summary>
+            Represents a repository for persisting tracking data related to events.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.EventRepository.GetById(System.Int32)">
+            <summary>
+            Gets an event by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>An instance of <see cref="T:Dynamicweb.Tracking.EventData"/> matching the provided identifier, otherwise null.</returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.EventRepository.GetAll">
+            <summary>
+            Gets all events.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.EventRepository.GetByQuery(System.String,System.Object[])">
+            <summary>
+            Gets events by query expression and values.
+            </summary>
+            <param name="expression"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.EventRepository.GetEventTypes">
+            <summary>
+            Gets event types.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.EventRepository.GetEventNames">
+            <summary>
+            Gets event names.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.EventRepository.Save(Dynamicweb.Tracking.EventData)">
+            <summary>
+            Saves the specified event data.
+            </summary>
+            <param name="eventData">The event data.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.SessionRepositoryTableManager.ExecuteUpdateTable(System.String)">
+            <summary>
+            Executes the update table script.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.SystemRepositoryConfiguration.GetSettingName(System.String)">
+            <summary>
+            Gets the name of the setting.
+            </summary>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Repositories.SessionRepository">
+            <summary>
+            Represents a repository for persisting tracking data related to sessions.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.SessionRepository.GetById(System.Int32)">
+            <summary>
+            Gets a session by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>An instance of <see cref="T:Dynamicweb.Tracking.SessionData"/> matching the provided identifier, otherwise null.</returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.SessionRepository.Save(Dynamicweb.Tracking.SessionData)">
+            <summary>
+            Saves the specified session.
+            </summary>
+            <param name="sessionData">The session.</param>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Repositories.NameValueCollectionSerializer">
+            <summary>
+            Helper class for serializing and deserializing instances of <see cref="T:System.Collections.Specialized.NameValueCollection"/>.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.NameValueCollectionSerializer.ToNameValueCollection(System.Collections.Generic.IDictionary{System.String,System.String[]})">
+            <summary>
+            Converts a dictionary to a NameValueCollection.
+            </summary>
+            <param name="dictionary">The dictionary.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.NameValueCollectionSerializer.ToDictionary(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Converts a NameValueCollection to a dictionary.
+            </summary>
+            <param name="collection">The collection.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Repositories.RepositoryTableManager">
+            <summary>
+            The <see cref="T:Dynamicweb.Tracking.Repositories.RepositoryTableManager"/> is responsible for creating new tables when the Time To Live for an active table is exceeded.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.RepositoryTableManager.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Repositories.RepositoryTableManager"/> class.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Repositories.RepositoryTableManager.TableTimeInterval">
+            <summary>
+            Defines how long a table should be active before a new table needs to be created.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Repositories.RepositoryTableManager.CurrentTable">
+            <summary>
+            Gets or sets the current table.
+            </summary>
+            <value>
+            The current table.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Repositories.RepositoryTableManager.ManagedTableName">
+            <summary>
+            Gets or sets the name of the managed table.
+            </summary>
+            <value>
+            The name of the managed table.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.RepositoryTableManager.EnsureTableExists">
+            <summary>
+            Ensures that the database is set up correctly with a valid table
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.RepositoryTableManager.CreateTable(System.DateTime)">
+            <summary>
+            Creates the table.
+            </summary>
+            <param name="tableDate">The table date.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.RepositoryTableManager.GetLatestTable">
+            <summary>
+            Gets the latest table.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.RepositoryTableManager.GetTableName(System.DateTime)">
+            <summary>
+            Gets a table name based on a date.
+            </summary>
+            <param name="date"></param>
+            <returns>tableName</returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.RepositoryTableManager.IsValidTable(Dynamicweb.Tracking.Repositories.RepositoryTableInfo,System.DateTime)">
+            <summary>
+            Checks to see if the current table has expired.
+            </summary>
+            <param name="table"></param>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.RepositoryTableManager.ExecuteCreateTable(System.String)">
+            <summary>
+            Executes the create table script.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.RepositoryTableManager.ExecuteUpdateTable(System.String)">
+            <summary>
+            Executes the update table script.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Repositories.ViewRepository">
+            <summary>
+            Represents a repository for persisting tracking data related to views.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.ViewRepository.GetById(System.Int32)">
+            <summary>
+            Gets a view by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>An instance of <see cref="T:Dynamicweb.Tracking.ViewData"/> matching the provided identifier, otherwise null.</returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.ViewRepository.GetAll">
+            <summary>
+            Gets all views.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.ViewRepository.GetByQuery(System.String,System.Object[])">
+            <summary>
+            Gets views by query expression and values.
+            </summary>
+            <param name="expression"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Repositories.ViewRepository.Save(Dynamicweb.Tracking.ViewData)">
+            <summary>
+            Saves the specified view.
+            </summary>
+            <param name="viewData">The view.</param>
+        </member>
+        <member name="T:Dynamicweb.Tracking.SessionCookie">
+            <summary>
+            Represents a cookie for storing session information
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.SessionCookie.GetCookie">
+            <summary>
+            Gets the cookie.
+            </summary>
+            <returns>A cookie loaded with existing values, if the cookie exists, otherwise it is loaded with default values.</returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.SessionCookie.SetCookie(Dynamicweb.Tracking.SessionCookie)">
+            <summary>
+            Sets the cookie.
+            </summary>
+            <param name="sessionCookie">The session cookie.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.SessionCookie.SetCookie(Dynamicweb.Tracking.SessionCookie,System.TimeSpan)">
+            <summary>
+            Sets the cookie.
+            </summary>
+            <param name="sessionCookie">The session cookie.</param>
+            <param name="sessionCookieExpiration">The session cookie expiration time.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.SessionCookie.CanCookieBeSet">
+            <summary>
+            Gets a value indicating if the cookie can be set.
+            </summary>
+            <returns><c>true</c> if cookie can be set, otherwise <c>false</c>.</returns>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionCookie.SessionId">
+            <summary>
+            Gets or sets the session identifier.
+            </summary>
+            <value>
+            The session identifier.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Tracking.StringExtensions">
+            <summary>
+            Extension methods used in tracking
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.StringExtensions.Limit(System.String,System.Int32)">
+            <summary>
+            Limits a string to the specified length.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Notifications.TrackingNotifications">
+            <summary>
+            Represents a set of notifications available for tracking.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Notifications.TrackingNotifications.BeforeEventTracking">
+            <summary>Occurs before an event is tracked. The passed NotificationArgs is an instance of <see cref="T:Dynamicweb.Tracking.Notifications.BeforeEventTrackingNotificationArgs" /></summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Notifications.TrackingNotifications.AfterEventTracking">
+            <summary>Occurs after an event is tracked. The passed NotificationArgs is an instance of <see cref="T:Dynamicweb.Tracking.Notifications.AfterEventTrackingNotificationArgs" /></summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Notifications.TrackingNotifications.BeforeViewTracking">
+            <summary>Occurs before a view is tracked. The passed NotificationArgs is an instance of <see cref="T:Dynamicweb.Tracking.Notifications.BeforeViewTrackingNotificationArgs" /></summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Notifications.TrackingNotifications.AfterViewTracking">
+            <summary>Occurs after a view is tracked. The passed NotificationArgs is an instance of <see cref="T:Dynamicweb.Tracking.Notifications.AfterViewTrackingNotificationArgs" /></summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Notifications.TrackingNotifications.BeforeSessionTracking">
+            <summary>Occurs before a session is tracked. The passed NotificationArgs is an instance of <see cref="T:Dynamicweb.Tracking.Notifications.BeforeSessionTrackingNotificationArgs" /></summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Notifications.TrackingNotifications.AfterSessionTracking">
+            <summary>Occurs after a session is tracked. The passed NotificationArgs is an instance of <see cref="T:Dynamicweb.Tracking.Notifications.AfterSessionTrackingNotificationArgs" /></summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Notifications.TrackingNotifications.NotifyBeforeViewTracking(Dynamicweb.Tracking.TrackingContext,Dynamicweb.Tracking.ViewData)">
+            <summary>
+            Notifies subscribers before a view is tracked.
+            </summary>
+            <param name="context">The tracking context.</param>
+            <param name="viewData">The view.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Notifications.TrackingNotifications.NotifyAfterViewTracking(Dynamicweb.Tracking.TrackingContext,Dynamicweb.Tracking.ViewData)">
+            <summary>
+            Notifies subscribers after a view has been tracked.
+            </summary>
+            <param name="context">The tracking context.</param>
+            <param name="viewData">The view.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Notifications.TrackingNotifications.NotifyBeforeSessionTracking(Dynamicweb.Tracking.TrackingContext,Dynamicweb.Tracking.SessionData)">
+            <summary>
+            Notifies subscribers before a session is tracked.
+            </summary>
+            <param name="context">The tracking context.</param>
+            <param name="sessionData">The session.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Notifications.TrackingNotifications.NotifyAfterSessionTracking(Dynamicweb.Tracking.TrackingContext,Dynamicweb.Tracking.SessionData)">
+            <summary>
+            Notifies subscribers after a session has been tracked.
+            </summary>
+            <param name="context">The tracking context.</param>
+            <param name="sessionData">The session.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Notifications.TrackingNotifications.NotifyBeforeEventTracking(Dynamicweb.Tracking.TrackingContext,Dynamicweb.Tracking.EventData)">
+            <summary>
+            Notifies subscribers before an event is tracked.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="eventData">The event data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Notifications.TrackingNotifications.NotifyAfterEventTracking(Dynamicweb.Tracking.TrackingContext,Dynamicweb.Tracking.EventData)">
+            <summary>
+            Notifies subscribers after an event has been tracked.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="eventData">The event data.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Notifications.TrackingNotificationArgs">
+            <summary>
+            Base class for notifications related to tracking
+            </summary>
+            <seealso cref="T:Dynamicweb.Extensibility.Notifications.NotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Tracking.Notifications.TrackingNotificationArgs.TrackingContext">
+            <summary>
+            Gets the tracking context.
+            </summary>
+            <value>
+            The tracking context.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Notifications.CancelableTrackingNotificationArgs">
+            <summary>
+            Base class for cancelable notifications related to tracking.
+            </summary>
+            <seealso cref="T:Dynamicweb.Tracking.Notifications.TrackingNotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Tracking.Notifications.CancelableTrackingNotificationArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether tracking should be canceled.
+            </summary>
+            <value>
+              <c>true</c> if cancel; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Notifications.BeforeTrackingNotificationArgs">
+            <summary>
+            Provides information about the context before something is tracked.
+            </summary>
+            <seealso cref="T:Dynamicweb.Tracking.Notifications.CancelableTrackingNotificationArgs" />
+        </member>
+        <member name="T:Dynamicweb.Tracking.Notifications.AfterTrackingNotificationArgs">
+            <summary>
+            Provides information about the context after something has been tracked.
+            </summary>
+            <seealso cref="T:Dynamicweb.Tracking.Notifications.TrackingNotificationArgs" />
+        </member>
+        <member name="T:Dynamicweb.Tracking.Notifications.BeforeViewTrackingNotificationArgs">
+            <summary>
+            Provides information about the view before it is tracked.
+            </summary>
+            <seealso cref="T:Dynamicweb.Tracking.Notifications.BeforeTrackingNotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Tracking.Notifications.BeforeViewTrackingNotificationArgs.View">
+            <summary>
+            Gets the view.
+            </summary>
+            <value>
+            The view.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Notifications.AfterViewTrackingNotificationArgs">
+            <summary>
+            Provides information about the view after it has been tracked.
+            </summary>
+            <seealso cref="T:Dynamicweb.Tracking.Notifications.AfterTrackingNotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Tracking.Notifications.AfterViewTrackingNotificationArgs.View">
+            <summary>
+            Gets the view.
+            </summary>
+            <value>
+            The view.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Notifications.BeforeSessionTrackingNotificationArgs">
+            <summary>
+            Provides information about the session before it is tracked.
+            </summary>
+            <seealso cref="T:Dynamicweb.Tracking.Notifications.BeforeTrackingNotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Tracking.Notifications.BeforeSessionTrackingNotificationArgs.Session">
+            <summary>
+            Gets the session.
+            </summary>
+            <value>
+            The session.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Notifications.AfterSessionTrackingNotificationArgs">
+            <summary>
+            Provides information about the session after it has been tracked.
+            </summary>
+            <seealso cref="T:Dynamicweb.Tracking.Notifications.AfterTrackingNotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Tracking.Notifications.AfterSessionTrackingNotificationArgs.Session">
+            <summary>
+            Gets the session.
+            </summary>
+            <value>
+            The session.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Notifications.BeforeEventTrackingNotificationArgs">
+            <summary>
+            Provides information about the event before it is tracked.
+            </summary>
+            <seealso cref="T:Dynamicweb.Tracking.Notifications.BeforeTrackingNotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Tracking.Notifications.BeforeEventTrackingNotificationArgs.Event">
+            <summary>
+            Gets the event.
+            </summary>
+            <value>
+            The event.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Notifications.AfterEventTrackingNotificationArgs">
+            <summary>
+            Provides information about the event after it has been tracked.
+            </summary>
+            <seealso cref="T:Dynamicweb.Tracking.Notifications.AfterTrackingNotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Tracking.Notifications.AfterEventTrackingNotificationArgs.Event">
+            <summary>
+            Gets the event.
+            </summary>
+            <value>
+            The session.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Tracking.SystemTrackingConfiguration">
+            <summary>
+            Configuration settings related to tracking. The settings are stored in the global system configuration.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.SystemTrackingConfiguration.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Dynamicweb.Tracking.SystemTrackingConfiguration"/> class from being created.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SystemTrackingConfiguration.Instance">
+            <summary>
+            Gets the instance of tracking configuration for the system.
+            </summary>
+            <value>
+            The tracking configuration instance.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SystemTrackingConfiguration.TrackingEnabled">
+            <summary>
+            Gets or sets a value indicating whether tracking is enabled.
+            </summary>
+            <value>
+              <c>true</c> if tracking is enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SystemTrackingConfiguration.LoggingEnabled">
+            <summary>
+            Gets or sets a value indicating whether logging is enabled.
+            </summary>
+            <value>
+              <c>true</c> if logging is enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SystemTrackingConfiguration.SessionCookieExpirationMinutes">
+            <summary>
+            Gets or sets the session cookie expiration in minutes.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SystemTrackingConfiguration.VisitorCookieExpirationMinutes">
+            <summary>
+            Gets or sets the visitor cookie expiration in minutes.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.SystemTrackingConfiguration.GetSettingName(System.String)">
+            <summary>
+            Gets the name of the setting.
+            </summary>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Tracker">
+            <summary>
+            Used for tracking user behavior on sites
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Tracker.#ctor(Dynamicweb.Tracking.TrackingConfiguration,Dynamicweb.Tracking.TrackingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Tracker"/> class.
+            </summary>
+            <param name="config">The configuration.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Tracker.Current">
+            <summary>
+            Gets the current tracker.
+            </summary>
+            <value>
+            The current tracker.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Tracker.Service">
+            <summary>
+            Gets or sets the tracking service.
+            </summary>
+            <value>
+            The tracking service.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Tracker.Logger">
+            <summary>
+            Gets or sets the logger.
+            </summary>
+            <value>
+            The logger.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Tracker.Configuration">
+            <summary>
+            Gets the tracking configuration.
+            </summary>
+            <value>
+            The tracking configuration.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Tracker.Context">
+            <summary>
+            Gets the tracking context.
+            </summary>
+            <value>
+            The tracking context.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Tracker.IsTrackingEnabled">
+            <summary>
+            Gets a value indicating whether tracking is enabled for the current context.
+            </summary>
+            <value>
+              <c>true</c> if tracking is enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Tracker.TrackSession">
+            <summary>
+            Tracks the session.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Tracker.ProcessPingBack">
+            <summary>
+            Process PingBack receive.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Tracker.TrackPingBack">
+            <summary>
+            Tracks the Ping-back received from the TrackingScript in the PageView.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Tracker.TrackSessionInternal(Dynamicweb.Tracking.SessionData)">
+            <summary>
+            Tracks the session.
+            </summary>
+            <param name="sessionData">The session data.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Tracker.TrackView(Dynamicweb.Tracking.ViewData)">
+            <summary>
+            Tracks the view.
+            </summary>
+            <param name="viewData">The view data.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Tracker.TrackViewInternal(Dynamicweb.Tracking.ViewData)">
+            <summary>
+            Tracks the view.
+            </summary>
+            <param name="viewData">The view data.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Tracker.TrackEvent(Dynamicweb.Tracking.EventData)">
+            <summary>
+            Tracks the event.
+            </summary>
+            <param name="eventData">The event data.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Tracker.TrackEventInternal(Dynamicweb.Tracking.EventData)">
+            <summary>
+            Tracks the event.
+            </summary>
+            <param name="eventData">The event data.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Tracker.Execute">
+            <summary>
+            Executes tracking for the current request.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Tracker.ExecuteInternal">
+            <summary>
+            Executes tracking for the current request.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Tracker.SetContextCookies(Dynamicweb.Tracking.TrackingContext)">
+            <summary>
+            Sets the context cookies.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Tracker.GetOrCreateSession">
+            <summary>
+            Gets or creates a session.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Tracker.LogError(System.String,System.Exception)">
+            <summary>
+            Logs the error.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="T:Dynamicweb.Tracking.TrackingConfiguration">
+            <summary>
+            Configuration settings related to tracking
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.TrackingConfiguration.Current">
+            <summary>
+            Gets the current tracking configuration for the system.
+            </summary>
+            <value>
+            The tracking configuration instance.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Tracking.TrackingConfiguration.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.TrackingConfiguration"/> class.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.TrackingConfiguration.TrackingEnabled">
+            <summary>
+            Gets or sets a value indicating whether tracking is enabled.
+            </summary>
+            <value>
+              <c>true</c> if tracking is enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.TrackingConfiguration.LoggingEnabled">
+            <summary>
+            Gets or sets a value indicating whether logging is enabled.
+            </summary>
+            <value>
+              <c>true</c> if logging is enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.TrackingConfiguration.SessionCookieExpirationMinutes">
+            <summary>
+            Gets or sets the session cookie expiration in minutes.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.TrackingConfiguration.VisitorCookieExpirationMinutes">
+            <summary>
+            Gets or sets the visitor cookie expiration in minutes.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.TrackingContext">
+            <summary>
+            Context information related to tracking
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.TrackingContext.Session">
+            <summary>
+            Gets the session.
+            </summary>
+            <value>
+            The session.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.TrackingContext.View">
+            <summary>
+            Gets the view.
+            </summary>
+            <value>
+            The view.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.TrackingContext.Events">
+            <summary>
+            Gets the events.
+            </summary>
+            <value>
+            The events.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.TrackingContext.IsTrackingEnabled">
+            <summary>
+            Gets a value indicating if tracking is enabled.
+            </summary>
+            <value>
+              <c>true</c> if tracking is enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Tracking.TrackingService">
+            <summary>
+            Provides operations for tracking user behavior during visits
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.TrackingService.SaveSession(Dynamicweb.Tracking.SessionData)">
+            <summary>
+            Saves the session.
+            </summary>
+            <param name="sessionData">The session.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.TrackingService.GetSession(System.Int32)">
+            <summary>
+            Gets the session.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>A session matching the provided identifier, otherwise null.</returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.TrackingService.GetSessions">
+            <summary>
+            Gets all sessions.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.TrackingService.SaveView(Dynamicweb.Tracking.ViewData)">
+            <summary>
+            Saves the view.
+            </summary>
+            <param name="viewData">The view.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.TrackingService.GetView(System.Int32)">
+            <summary>
+            Gets the view.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>A view matching the provided identifier, otherwise null.</returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.TrackingService.GetViews">
+            <summary>
+            Gets all views.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.TrackingService.SaveEvent(Dynamicweb.Tracking.EventData)">
+            <summary>
+            Saves the event.
+            </summary>
+            <param name="eventData">The event data.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.TrackingService.GetEvent(System.Int32)">
+            <summary>
+            Gets the event.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.TrackingService.GetEvents">
+            <summary>
+            Gets all events.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.TrackingService.GetEventTypes">
+            <summary>
+            Gets event types.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.TrackingService.GetEventNames">
+            <summary>
+            Gets event names.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.ViewData">
+            <summary>
+            Class for collecting view information.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.ViewData.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.ViewData"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.ViewData.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.ViewData"/> class.
+            </summary>
+            <param name="areaId">The area identifier.</param>
+            <param name="pageId">The page identifier.</param>
+        </member>
+        <member name="P:Dynamicweb.Tracking.ViewData.Id">
+            <summary>
+            Gets the view identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.ViewData.IsNew">
+            <summary>
+            Gets a value indicating whether this instance is new.
+            </summary>
+            <value>
+              <c>true</c> if this instance is new; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.ViewData.Timestamp">
+            <summary>
+            Gets or sets the view timestamp.
+            </summary>
+            <value>
+            The timestamp.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.ViewData.SessionId">
+            <summary>
+            Gets or sets the session identifier.
+            </summary>
+            <value>
+            The session identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.ViewData.AreaId">
+            <summary>
+            Gets or sets the area identifier.
+            </summary>
+            <value>
+            The area identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.ViewData.PageId">
+            <summary>
+            Gets or sets the page identifier.
+            </summary>
+            <value>
+            The page identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.ViewData.EntityType">
+            <summary>
+            Gets or sets the type of the entity.
+            </summary>
+            <value>
+            The type of the entity.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.ViewData.EntityKey">
+            <summary>
+            Gets or sets the entity key.
+            </summary>
+            <value>
+            The entity key.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.ViewData.EntitySubKey">
+            <summary>
+            Gets or sets the entity sub key.
+            </summary>
+            <value>
+            The entity sub key.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.ViewData.UserId">
+            <summary>
+            Gets or sets the user identifier.
+            </summary>
+            <value>
+            The user identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.ViewData.AdminUserId">
+            <summary>
+            Gets or sets the admin user identifier.
+            </summary>
+            <value>
+            The admin user identifier.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Tracking.SessionData">
+            <summary>
+            Class for collecting session information.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.SessionData.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.SessionData"/> class.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.Id">
+            <summary>
+            Gets the session identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.IsNew">
+            <summary>
+            Gets a value indicating whether this instance is new.
+            </summary>
+            <value>
+              <c>true</c> if this instance is new; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.Timestamp">
+            <summary>
+            Gets or sets the session timestamp.
+            </summary>
+            <value>
+            The timestamp.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.Url">
+            <summary>
+            Gets or sets the URL.
+            </summary>
+            <value>
+            The URL.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.ReferrerUrl">
+            <summary>
+            Gets or sets the referrer URL.
+            </summary>
+            <value>
+            The referrer URL.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.ReferrerDomain">
+            <summary>
+            Gets or sets the referrer domain.
+            </summary>
+            <value>
+            The referrer domain.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.ReferrerName">
+            <summary>
+            Gets or sets the referrer name.
+            </summary>
+            <value>
+            The referrer name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.ReferrerType">
+            <summary>
+            Gets or sets the type of the referrer.
+            </summary>
+            <value>
+            The type of the referrer.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.Headers">
+            <summary>
+            Gets or sets the headers.
+            </summary>
+            <value>
+            The headers.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.AreaId">
+            <summary>
+            Gets or sets the area identifier.
+            </summary>
+            <value>
+            The area identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.PageId">
+            <summary>
+            Gets or sets the page identifier.
+            </summary>
+            <value>
+            The page identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.VisitorId">
+            <summary>
+            Gets or sets the visitor identifier.
+            </summary>
+            <value>
+            The visitor identifier.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.VisitorIsReturning">
+            <summary>
+            Gets or sets a value indicating whether visitor is returning.
+            </summary>
+            <value>
+              <c>true</c> if visitor is returning; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.LocationCountryCode">
+            <summary>
+            Gets or sets the location country code (ISO 3166-1 Alpha-2 code).
+            </summary>
+            <value>
+            The location country code.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.SourceName">
+            <summary>
+            Gets or sets the name of the source.
+            </summary>
+            <value>
+            The name of the source.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.SourceMedium">
+            <summary>
+            Gets or sets the source medium.
+            </summary>
+            <value>
+            The source medium.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.SourceCampaign">
+            <summary>
+            Gets or sets the source campaign.
+            </summary>
+            <value>
+            The source campaign.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.SourceTerm">
+            <summary>
+            Gets or sets the source term.
+            </summary>
+            <value>
+            The source term.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.SourceContent">
+            <summary>
+            Gets or sets the content of the source.
+            </summary>
+            <value>
+            The content of the source.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.DeviceIpAddress">
+            <summary>
+            Gets or sets the visitor ip address.
+            </summary>
+            <value>
+            The visitor ip address.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.DeviceUserAgent">
+            <summary>
+            Gets or sets the device user agent.
+            </summary>
+            <value>
+            The device user agent.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.DeviceType">
+            <summary>
+            Gets or sets the device type.
+            </summary>
+            <value>
+            The device type.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.DevicePlatformType">
+            <summary>
+            Gets or sets the device platform type.
+            </summary>
+            <value>
+            The device platform type.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.BotName">
+            <summary>
+            Gets or sets the name of the bot.
+            </summary>
+            <value>
+            The name of the bot.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.BotType">
+            <summary>
+            Gets or sets the type of the bot.
+            </summary>
+            <value>
+            The type of the bot.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.Excluded">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Dynamicweb.Tracking.SessionData"/> is excluded from reports.
+            </summary>
+            <value>
+              <c>true</c> if excluded; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.ExcludedReason">
+            <summary>
+            Gets or sets the reason why this <see cref="T:Dynamicweb.Tracking.SessionData"/> is excluded.
+            </summary>
+            <value>
+            The reason.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.SessionData.PingBackReceived">
+            <summary>
+            Gets or sets a value indicating whether bot detection ping-back is received.
+            </summary>
+            <value>
+              <c>true</c> if ping-back is received; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Tracking.VisitorCookie">
+            <summary>
+            Represents a cookie for storing visitor information
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.VisitorCookie.GetCookie">
+            <summary>
+            Gets the cookie.
+            </summary>
+            <returns>A cookie loaded with existing values, if the cookie exists, otherwise it is loaded with default values.</returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.VisitorCookie.SetCookie(Dynamicweb.Tracking.VisitorCookie)">
+            <summary>
+            Sets the cookie.
+            </summary>
+            <param name="visitorCookie">The visitor cookie.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.VisitorCookie.SetCookie(Dynamicweb.Tracking.VisitorCookie,System.TimeSpan)">
+            <summary>
+            Sets the cookie.
+            </summary>
+            <param name="visitorCookie">The visitor cookie.</param>
+            <param name="visitorCookieExpiration">The visitor cookie expiration time.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.VisitorCookie.CanCookieBeSet">
+            <summary>
+            Gets a value indicating if the cookie can be set.
+            </summary>
+            <returns><c>true</c> if cookie can be set, otherwise <c>false</c>.</returns>
+        </member>
+        <member name="P:Dynamicweb.Tracking.VisitorCookie.VisitorId">
+            <summary>
+            Gets or sets the visitor identifier.
+            </summary>
+            <value>
+            The visitor identifier.
+            </value>
+        </member>
+    </members>
+</doc>

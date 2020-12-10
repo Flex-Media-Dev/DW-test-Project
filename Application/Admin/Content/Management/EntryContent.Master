@@ -1,0 +1,80 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="EntryContent.Master.vb" Inherits="Dynamicweb.Admin.EntryContent" EnableViewState="false" %>
+
+<%@ Register Assembly="Dynamicweb.Controls" Namespace="Dynamicweb.Controls" TagPrefix="dw" %>
+<%@ Register Assembly="Dynamicweb.UI.Controls" Namespace="Dynamicweb.UI.Controls" TagPrefix="dwc" %>
+<%@ Register Assembly="Dynamicweb.Admin" Namespace="Dynamicweb.Admin" TagPrefix="e" %>
+
+<%@ Import Namespace="Dynamicweb" %>
+<%@ Import Namespace="Dynamicweb.SystemTools" %>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+    <dwc:ScriptLib runat="server" ID="ScriptLib">
+    </dwc:ScriptLib>
+
+    <script type="text/javascript" src="/Admin/Images/Ribbon/UI/Toolbar/Toolbar.js"></script>
+    <script type="text/javascript" src="/Admin/Images/Ribbon/UI/Overlay/Overlay.js"></script>
+
+    <style type="text/css">
+        #PageContent {
+            overflow: auto;
+        }
+    </style>
+
+    <asp:Literal ID="litImagesFolderName" runat="server" />
+    <script type="text/javascript" src="/Admin/Content/Management/EntryContent.js"></script>
+
+    <asp:Literal ID="litScript" runat="server" />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body class="area-blue">
+    <div class="dw8-container">
+        <asp:ContentPlaceHolder ID="HeaderContext" runat="server" Visible="false">
+            <dwc:BlockHeader runat="server" id="Blockheader">
+            </dwc:BlockHeader>
+        </asp:ContentPlaceHolder>
+
+        <e:ContentForm method="post" id="MainForm" name="frmGlobalSettings" runat="server" autocomplete="off">
+            <input id="hiddenSource" type="hidden" name="_source" value="ManagementCenter" />
+            <input id="hiddenCheckboxNames" type="hidden" name="CheckboxNames" />
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <asp:Panel ID="pNoAccess" runat="server">
+                <table border="0" cellpadding="6" cellspacing="6">
+                    <tr>
+                        <td>
+                            <dw:TranslateLabel ID="lbNoAccess" Text="Du har ikke de nødvendige rettigheder til denne funktion." runat="server" />
+                            <script type="text/javascript">
+                                Toolbar.setButtonIsDisabled('cmdSave', true);
+                            </script>
+                        </td>
+                    </tr>
+                </table>
+            </asp:Panel>
+        </e:ContentForm>
+
+        <dwc:ActionBar runat="server">
+                <dw:ToolbarButton ID="cmdSave" runat="server" Divide="None" Image="NoImage" Text="Save" OnClientClick="SettingsPage.getInstance().save();" ShowWait="True">
+                </dw:ToolbarButton>
+                <dw:ToolbarButton ID="cmdSaveAndClose" runat="server" Image="NoImage" Divide="None" Text="Save and close" OnClientClick="SettingsPage.getInstance().saveAndClose();" ShowWait="True">
+                </dw:ToolbarButton>
+                <dw:ToolbarButton ID="cmdCancel" runat="server" Image="NoImage" Divide="None" Text="Cancel" OnClientClick="SettingsPage.getInstance().cancel()" ShowWait="True">
+                </dw:ToolbarButton>
+        </dwc:ActionBar>
+    </div>
+    <asp:ContentPlaceHolder ID="FooterContext" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        SettingsPage.getInstance().initialize();
+    </script>
+</body>
+</html>

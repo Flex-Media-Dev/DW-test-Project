@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.TextEditorAddIns.CKEditor</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.TextEditorAddIns.CKEditor.CKEditor">
+            <summary>
+            WYSIWYG text editor component
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.TextEditorAddIns.CKEditor.CKEditor.Render(System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Renders CKEditor control
+            </summary>
+            <param name="name">Defines name of control</param>
+            <param name="width">Width</param>
+            <param name="height">Height</param>
+            <param name="value">Value</param>
+            <param name="css">css style</param>
+            <param name="skinPath">path to skin folder</param>
+            <param name="encodeOutput">Defines if it needs to encode output</param>
+            <returns>Rendered control as string</returns>
+        </member>
+        <member name="M:Dynamicweb.TextEditorAddIns.CKEditor.CKEditor.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.TextEditorAddIns.CKEditor.CKEditor.GetResourceUrl(System.String,System.Boolean)">
+            <remarks>
+            Get a resource from layout context (if loaded) or from Templates/Designs or from System folder
+            </remarks>        
+        </member>
+    </members>
+</doc>

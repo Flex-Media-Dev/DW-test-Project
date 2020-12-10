@@ -1,0 +1,44 @@
+﻿body {
+}
+a.tooltip {
+    outline:none;
+    position: relative;
+}
+a.tooltip strong {line-height:25px;}
+a.tooltip:hover {text-decoration:none;} 
+a.tooltip span {
+    z-index:10;display:none; padding:14px 20px;
+    margin-top:20px;
+    left: 20px;
+    width:540px; line-height:16px;
+}
+    a.tooltip:hover span {
+        display: block;
+        position: absolute;
+        color: #111;       
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+    
+/*CSS3 extras*/
+a.tooltip span
+{
+    border-radius:4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+        
+    -moz-box-shadow: 5px 5px 8px #CCC;
+    -webkit-box-shadow: 5px 5px 8px #CCC;
+    box-shadow: 5px 5px 8px #CCC;
+}
+
+a.tooltip span.rightColumn
+{
+    right:0px;
+    width:300px;
+}
+
+a.tooltip img {
+    vertical-align: middle;
+}

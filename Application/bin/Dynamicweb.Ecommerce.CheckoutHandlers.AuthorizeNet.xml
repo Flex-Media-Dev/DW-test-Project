@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Ecommerce.CheckoutHandlers.AuthorizeNet</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Ecommerce.CheckoutHandlers.AuthorizeNet.AuthorizeNet">
+            <summary>
+            AuthorizeNet Checkout Handler
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.AuthorizeNet.AuthorizeNet.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Ecommerce.CheckoutHandlers.AuthorizeNet.AuthorizeNet" /> class
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.AuthorizeNet.AuthorizeNet.StartCheckout(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Starts order checkout procedure
+            </summary>
+            <param name="order">Order to be checked out</param>
+            <returns>String representation of template output</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.AuthorizeNet.AuthorizeNet.Redirect(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Redirects user to payment step or to canceled order step
+            </summary>
+            <param name="order">Order for processing</param>
+            <returns>String representation of template output</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.AuthorizeNet.AuthorizeNet.GetOptions(System.String)">
+            <summary>
+            Gets options according to behavior mode
+            </summary>
+            <param name="name"></param>
+            <returns>Key-value pairs of settings</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.AuthorizeNet.AuthorizeNet.Capture(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Send capture request to transaction service
+            </summary>
+            <param name="order">Order to be captured</param>
+            <returns>Response from transaction service</returns>
+        </member>
+        <member name="T:Dynamicweb.Ecommerce.CheckoutHandlers.AuthorizeNet.AuthorizeNetResponseFields">
+            <summary>
+            Enumeration for response fields
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,27 @@
+﻿div.ajax-rich-control
+{
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    border: none;
+}
+
+div.ajax-rich-control label
+{
+    cursor: pointer;
+}
+
+div.ajax-rich-control a,
+div.ajax-rich-control a:hover,
+div.ajax-rich-control a:active,
+div.ajax-rich-control a:visited
+{
+    text-decoration :None;
+	color :#333333;
+}
+
+div.ajax-rich-control a:hover
+{
+    color :#003366;
+	cursor: pointer;
+}

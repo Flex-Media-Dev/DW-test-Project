@@ -1,0 +1,1 @@
+<%@ Page Language="vb" AutoEventWireup="false" Codebehind="Stat2.aspx.vb" Inherits="Dynamicweb.Admin.Stat2" Async="false"  %>

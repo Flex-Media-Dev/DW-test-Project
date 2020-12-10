@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Scheduling.Providers.RecurringOrdersScheduledTaskAddIn</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Scheduling.Providers.RecurringOrdersScheduledTaskAddIn.RecurringOrdersScheduledTaskAddIn">
+            <summary>A Recurring Orders scheduled task data provider.
+            Inherit from ConfigurableAddIn class</summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.Providers.RecurringOrdersScheduledTaskAddIn.RecurringOrdersScheduledTaskAddIn.IsInstalled">
+            <summary>
+            Determines whether this provider is installed.
+            </summary>
+            <returns>
+              <c>true</c> if this instance is installed; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="P:Dynamicweb.Scheduling.Providers.RecurringOrdersScheduledTaskAddIn.RecurringOrdersScheduledTaskAddIn.Credentials">
+            <summary>
+            Gets the credentials.
+            </summary>
+            <value>
+            The credentials.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.Providers.RecurringOrdersScheduledTaskAddIn.RecurringOrdersScheduledTaskAddIn.StartWindowsScheduler">
+            <summary>
+            Starts the windows scheduler.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.Providers.RecurringOrdersScheduledTaskAddIn.RecurringOrdersScheduledTaskAddIn.Install">
+            <summary>
+            Installs this provider.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Scheduling.Providers.RecurringOrdersScheduledTaskAddIn.RecurringOrdersScheduledTaskAddIn.Run">
+            <summary>
+            Runs this provider.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

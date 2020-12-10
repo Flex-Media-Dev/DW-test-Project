@@ -1,0 +1,183 @@
+﻿.omc-content-block
+{
+    margin: 5px;
+}
+
+span.omc-notifications-edit-list-item
+{
+    margin-left: 2px;
+    white-space: nowrap;
+    font-size: 11px;
+}
+
+div.omc-notifications-edit table.omc-notifications-edit-table,
+div.omc-notifications-edit table.omc-notifications-edit-table tr td.omc-notifications-edit-table-cell
+{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+div.omc-notifications-edit table.omc-notifications-edit-table tr td.omc-notifications-edit-field-label
+{
+    width: 170px;
+}
+
+div.omc-notifications-edit table.omc-notifications-edit-table tr td.omc-notifications-edit-field-value div.dwe div.dwe-values-list
+{
+    height: 100px;
+}
+
+div.omc-notifications-attach
+{
+    margin: 5px;
+    padding: 0px;
+}
+
+div.omc-notifications-attach p
+{
+    padding-left: 5px;
+}
+
+.omc-notifications-empty
+{
+    text-align: center;
+    padding-top: 140px;
+}
+
+.omc-notifications-attach-disabled,
+.omc-notifications-attach-disabled label
+{
+    color: #9a9a9a !important;
+}
+
+div.omc-notifications-attach fieldset.omc-notifications-attach-choice-section
+{
+    margin: 0px;
+    padding: 0px;
+    margin-right: 10px;
+}
+
+div.omc-notifications-attach-choice-content
+{
+    margin: 0px;
+    padding: 5px;
+}
+
+div.omc-notifications-attach fieldset.omc-notifications-attach-choice-section legend span
+{
+    display: block;
+}
+
+div.omc-notifications-attach fieldset.omc-notifications-attach-choice-section legend span input,
+div.omc-notifications-attach fieldset.omc-notifications-attach-choice-section legend span label
+{
+    float: left;
+}
+
+div.omc-notifications-attach fieldset.omc-notifications-attach-choice-section legend span label
+{
+    margin-top: 3px;
+    margin-right: 5px;
+}
+
+div.omc-notifications-attach fieldset.omc-notifications-attach-choice-section legend span span
+{
+    display: block;
+    visibility: hidden;
+    height: 0px;
+    clear: both;
+}
+
+div.omc-notifications-attach fieldset.omc-notifications-attach-choice-section legend input,
+div.omc-notifications-attach fieldset.omc-notifications-attach-choice-section legend input:active,
+div.omc-notifications-attach fieldset.omc-notifications-attach-choice-section legend input:hover,
+div.omc-notifications-attach fieldset.omc-notifications-attach-choice-section legend input:focus
+{
+    outline: none;
+    width: 14px;
+    height: 14px;     
+}
+
+div.omc-list-container
+{
+    margin: 4px;
+}
+
+div.omc-list-container > div
+{
+    border: 1px solid #9faec2;
+    cursor: default;
+}
+
+.omc-notifications-edit-visitors
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+.omc-notifications-edit-visitors .NewUiTab
+{
+    width: 100% !important;
+    margin: 0px !important;
+    border: none !important;
+}
+
+.omc-notifications-edit-visitors .NewUiTab div.tabitemscontainer ul.tabitems a,
+.omc-notifications-edit-visitors .NewUiTab div.tabitemscontainer ul.tabitems a:active,
+.omc-notifications-edit-visitors .NewUiTab div.tabitemscontainer ul.tabitems a:focus
+{
+    outline: none !important;
+    cursor: pointer !important;
+}
+
+.omc-notifications-edit-visitors .NewUiTab div.title,
+.omc-notifications-edit-visitors .NewUiTab div.tabspacer
+{
+    display: none;
+}
+
+.omc-notifications-edit-visitors .tabTable
+{
+    background-color: #efefef !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    border: none !important;
+    outline: none !important;
+    width: 100% !important;
+}
+
+.omc-notifications-edit-visitors .tabTable div#Tab1,
+.omc-notifications-edit-visitors .tabTable div#Tab2
+{
+    font-size: 11px !important;
+    font-family: arial, verdana, Microsoft JhengHei !important;
+}
+
+.omc-notifications-attach-profiles-constraint
+{
+    margin: 0px;
+    padding: 0px;
+    padding-top: 4px;
+    padding-left: 7px;
+    padding-bottom: 8px;
+}
+
+.omc-notifications-attach-profiles-constraint p
+{
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.omc-notifications-attach-profiles-constraint a,
+.omc-notifications-attach-profiles-constraint a:hover
+{
+    color: #0c4f88 !important;    
+    text-decoration: none !important;
+}
+
+.omc-notifications-attach-profiles-constraint a:active,
+.omc-notifications-attach-profiles-constraint a:focus
+{
+    outline: none !important;
+}

@@ -1,0 +1,82 @@
+@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+@if (Pageview.Device == Dynamicweb.Frontend.PageView.DeviceType.Desktop)
+{
+    var backendUser = Dynamicweb.Modules.UserManagement.User.get_Current(Dynamicweb.Modules.UserManagement.PagePermissionLevels.Backend);
+
+    if (backendUser != null)
+    {
+	<div class="btn-group dropup" style="position: fixed; bottom: 10px; right: 10px">
+		<button type="button" class="btn btn-default">@Translate("Page_actions", "Page actions")</button>
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			<span class="caret"></span>
+			<span class="sr-only">Toggle Dropdown</span>
+		</button>
+		<ul class="dropdown-menu pull-right">
+			@if (Pageview.Page.Item == null) {
+		<li><a target="backend" href="/Admin/Content/PageEdit.aspx?ID=@Pageview.Page.ID">Edit page properties</a></li>
+			<li><a target="backend" href="/Admin/Content/ParagraphList.aspx?PageID=@Pageview.Page.ID">Edit paragraphs</a></li>
+	} else {
+				<li><a target="backend" href="/Admin/Content/Items/Editing/ItemEdit.aspx?PageID=@Pageview.Page.ID">Edit page</a></li>
+			<li><a target="backend" href="/Admin/Content/ParagraphList.aspx?PageID=@Pageview.Page.ID&amp;mode=viewParagraphs">Edit paragraphs</a></li>
+		<li><a target="backend" href="/Admin/Content/PageEdit.aspx?ID=@Pageview.Page.ID">Edit page properties</a></li>
+			}
+		</ul>
+	</div>
+
+@*
+	<div id="editpage">
+		<a href="@System.Web.HttpContext.Current.Request.Url.PathAndQuery">@System.Web.HttpContext.Current.Request.Url.PathAndQuery</a>
+	<a target="backend" href="/Admin/Content/PageEdit.aspx?ID=@Pageview.Page.ID">Edit page properties</a>
+	@if (Pageview.Page.Item == null) {
+		<a target="backend" href="/Admin/Content/ParagraphList.aspx?PageID=@Pageview.Page.ID">Edit paragraphs</a>
+	} else {
+		<a target="backend" href="/Admin/Content/ParagraphList.aspx?PageID=@Pageview.Page.ID&amp;mode=viewParagraphs">Edit paragraphs</a>
+			<a target="backend" href="/Admin/Content/Items/Editing/ItemEdit.aspx?PageID=@Pageview.Page.ID">Edit page</a>
+		}
+	</div>
+*@
+}
+
+@SnippetStart("StyleSheet")
+<style>
+#editpage {
+	 background-color: #aaa;
+	 color: #fff;
+	 position: fixed;
+	 bottom: 0;
+	 left: 0;
+	 right: 0;
+	 padding: 5px;
+
+//	 width: 20px;
+//	 height: 20px;
+	 font-size: 16px;
+}
+
+#editpage:hover {
+	 width: 100%;
+}
+
+#editpage a {
+	 color: inherit;
+	 margin: 0 .5em;
+}
+
+    .paragraph {
+        position: relative;
+    }
+
+        .paragraph .paragraph-edit {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .paragraph:hover .paragraph-edit {
+        display: block;
+    }
+</style>
+@SnippetEnd("StyleSheet")
+}

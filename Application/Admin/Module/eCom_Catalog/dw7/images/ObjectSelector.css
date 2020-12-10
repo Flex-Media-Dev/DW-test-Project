@@ -1,0 +1,33 @@
+.ObjectSelector_div 
+{
+	BORDER-RIGHT: #777 1px solid; 
+	BORDER-TOP: #777 1px solid; 
+	OVERFLOW: scroll; 
+	BORDER-LEFT: #777 1px solid; 
+	/*WIDTH: 136px; */
+	CURSOR: hand; 
+	BORDER-BOTTOM: #777 1px solid; 
+	HEIGHT: 200px;
+}
+.ositem 
+{
+	MARGIN-TOP: 2px; 
+	COLOR: windowtext; 
+	BACKGROUND-COLOR: window;
+}
+
+.ositemimg 
+{
+	MARGIN: 2px 3px -2px 
+}
+.ObjectSelectorSingle_div 
+{
+	BORDER-RIGHT: #777 1px solid; 
+	BORDER-TOP: #777 1px solid; 
+	OVERFLOW: scroll; 
+	BORDER-LEFT: #777 1px solid; 
+	WIDTH: 250px; 
+	CURSOR: hand; 
+	BORDER-BOTTOM: #777 1px solid; 
+	HEIGHT: 28px 
+}

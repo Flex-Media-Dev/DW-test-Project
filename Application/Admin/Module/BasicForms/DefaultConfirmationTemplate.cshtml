@@ -1,0 +1,77 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+<style type="text/css">
+	.formtable td {
+		padding: 3px;
+	}
+
+	.formtable .columnCell {
+		vertical-align: top;
+	}
+
+	.formtable .labelCell {
+		vertical-align: top;
+		padding-right: 10px;
+		width:33%;
+		text-align:right;
+		opacity:0.6;
+	}
+
+
+</style>
+@{
+	string submitId = GetString("Submit.ID");
+	<div id="@submitId"></div>
+	if (GetString("Submit.ReceiptTemplateText") != "")
+	{
+		@GetString("Submit.ReceiptTemplateText")
+	}
+	else
+	{
+		<table class="formtable">
+			@foreach (LoopItem field in GetLoop("FieldValues"))
+			{
+				int fieldId = field.GetInteger("Field.ID");
+				string fieldHtmlId = field.GetString("Field.HtmlId");
+				string fieldName = field.GetString("Field.Name");
+				string fieldControl = field.GetString("Field.Control");
+				string fieldDescription = field.GetString("Field.Description");
+				bool fieldIsButton = field.GetBoolean("Field.IsButton");
+				bool fieldIsOther = field.GetBoolean("Field.IsOther");
+				string submitValue = field.GetString("SubmitData.Value");
+				string submitOptionText = field.GetString("SubmitData.Value.OptionText");
+				string ReciptTempalteTextPreview = field.GetString("Field.ReceiptTemplateTextPreview");
+				if (!fieldIsButton && !fieldIsOther)
+				{
+					<tr class="fieldRow">
+						<td class="labelCell">@fieldName</td>
+						<td class="columnCell">
+							@if (!string.IsNullOrEmpty(submitOptionText))
+							{
+								@System.Web.HttpContext.Current.Server.HtmlEncode(submitOptionText)
+							}
+							else
+							{
+								@System.Web.HttpContext.Current.Server.HtmlEncode(submitValue).Replace(Environment.NewLine, "<br>")
+							}
+						</td>
+					</tr>
+
+				}
+			}
+		</table>
+	}
+}
+<script type="text/javascript">
+	window.scroll(0, findElementPosition(document.getElementById(@submitId)));
+
+	function findElementPosition(obj) {
+		var curtop = 0;
+		if (obj.offsetParent) {
+			do {
+				curtop += obj.offsetTop;
+			} while (obj = obj.offsetParent);
+			return [curtop];
+		}
+	}
+</script>

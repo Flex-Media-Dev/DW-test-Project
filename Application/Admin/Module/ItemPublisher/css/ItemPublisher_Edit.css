@@ -1,0 +1,145 @@
+﻿input[data-type="number"] {
+    width: 50px;
+}
+
+ul.radio-field-list {
+    padding-left: 0;
+    margin: 5px 0;
+}
+
+ul.radio-field-list li {
+    display : inline-block;
+    width: 100px;
+}
+
+ul.radio-field-list-horizontal{
+    padding-left: 0;
+    margin: 0;
+}
+
+ul.radio-field-list-horizontal li{
+    display: inline-block;
+    padding-left: 8px;
+    padding-top: 4px;
+    float: left;
+}
+
+/* visibility toggling*/
+
+.list-view-selected-normal .list-view-normal {
+    display: inherit;
+}
+
+.list-view-selected-normal .list-view-partial {
+    display: none;
+}
+
+.list-view-selected-partial .list-view-normal {
+    display: none;
+}
+
+.list-view-selected-partial .list-view-partial {
+	display: inherit;
+}
+
+/* visibility toggling*/
+
+.list-source-type-page table,
+.list-source-type-itementries table {
+    width: 220px;
+    margin-left: 1px;
+    margin-bottom: 10px;
+}
+
+.list-source-type-page table ul,
+.list-source-type-itementries table ul {
+    margin: 0;
+    padding: 0;
+    clear: both;
+    height: 100%;
+}
+
+.list-source-type-page-content,
+.list-source-type-itementries-content  {
+    width: 200px;
+    height: 100px;
+    /*border: 1px solid gray;*/
+    padding: 0;
+}
+
+.list-source-type-page-toolbar,
+.list-source-type-itementries-toolbar {
+    height: 100px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.list-source-type-page-content ul,
+.list-source-type-itementries-content ul  {
+    color: #9E9E9E;
+    overflow-y: scroll;
+    top: -1px;
+    position: relative;
+}
+
+.list-source-type-page-content ul.enabled,
+.list-source-type-itementries-content ul.enabled  {
+    color: black;
+}
+
+.list-source-type-page-content ul.enabled li:hover,
+.list-source-type-itementries-content ul.enabled li:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.list-source-type-page-content ul.enabled li.selected,
+.list-source-type-itementries-content ul.enabled li.selected {
+    background-color: #03A9F4;
+    color: HighlightText;
+}
+
+.list-source-type li a {
+    width: 31px;
+    height: 31px;
+    display: block;
+    text-align: center;
+    background: #ffffff;
+    padding-top: 5px;
+    transition: all,100ms,ease;
+    border: 1px #bdbdbd solid;
+    border-left: 0;
+    border-bottom: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.list-source-type li a.last {
+    border-bottom: 1px #bdbdbd solid;
+}
+
+.list-source-type li.error {
+    color: red;
+}
+
+.link-manager {
+    margin-bottom: 10px;
+}
+
+.link-manager img {
+    vertical-align: middle;
+}
+
+#NamedListPageID_Control a {
+    width: 31px;
+    height: 31px;
+    display: inline-block;
+    text-align: center;
+    background: #fff;
+    padding-top: 5px;
+    transition: all,100ms,ease;
+    border: 1px #9E9E9E solid;
+    border-left: 0;
+    box-sizing: border-box;
+    vertical-align: top;
+}

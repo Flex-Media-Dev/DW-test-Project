@@ -1,0 +1,184 @@
+﻿.funnel .funnel-clear:after 
+{
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.funnel .funnel-clear 
+{
+	display: inline-block;
+}
+ 
+html[xmlns] .funnel .funnel-clear 
+{
+	display: block;
+}
+ 
+* html .funnel .funnel-clear 
+{
+	height: 1%;
+}
+
+.funnel ul.funnel-portions,
+.funnel ul.funnel-portions li.funnel-portion
+{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+.funnel ul.funnel-portions li.funnel-portion,
+.funnel ul.funnel-portions li.funnel-portion-separator
+{
+    float: left;
+    width: 100px;
+}
+
+.funnel ul.funnel-portions li.funnel-portion-separator
+{
+    width: 50px !important;
+}
+
+.funnel ul.funnel-portions li.funnel-portion-separator div.funnel-portion-separator-next
+{
+    width: 64px;
+    height: 64px;
+    margin-left: -4px;
+    
+    margin-top: 160px;
+    
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 15px;
+    color: #ffffff;
+    padding-top: 24px;
+    text-shadow: 0px 1px 1px #a2a2a2;
+    
+    background: url('/Admin/Module/OMC/img/funnel-next.png') top left no-repeat;
+}
+
+.funnel ul.funnel-portions li.funnel-portion div.funnel-portion-bar-container h4.funnel-portion-annotation,
+.funnel ul.funnel-portions li.funnel-portion p.funnel-portion-name
+{
+    text-align: center;
+}
+
+.funnel ul.funnel-portions li.funnel-portion div.funnel-portion-bar-container h4.funnel-portion-annotation
+{
+    white-space: nowrap;
+    height: 24px;
+    line-height: 24px;
+    
+    font-size: 14px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #808080;
+    margin: 0px;
+    
+    position: absolute;
+    
+    width: 60px;
+    margin: 0px auto;
+}
+
+.funnel ul.funnel-portions li.funnel-portion div.funnel-portion-bar-container
+{
+    width: 60px;
+    margin: 0px auto;
+    position: relative;
+}
+
+.funnel ul.funnel-portions li.funnel-portion div.funnel-portion-bar
+{
+    position: absolute;
+    bottom: 0px;
+    
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    
+    width: 60px;
+    margin: 0px auto;
+    
+    /*background-color: #ffad7a;
+    border: 1px solid #fb8435;
+    
+    background-image: linear-gradient(bottom, rgb(251,132,53) 14%, rgb(250,154,95) 57%);
+    background-image: -o-linear-gradient(bottom, rgb(251,132,53) 14%, rgb(250,154,95) 57%);
+    background-image: -moz-linear-gradient(bottom, rgb(251,132,53) 14%, rgb(250,154,95) 57%);
+    background-image: -webkit-linear-gradient(bottom, rgb(251,132,53) 14%, rgb(250,154,95) 57%);
+    background-image: -ms-linear-gradient(bottom, rgb(251,132,53) 14%, rgb(250,154,95) 57%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.14, rgb(251,132,53)), color-stop(0.57, rgb(250,154,95)));*/
+  
+    background-color: #93d4d9;
+    border: 1px solid #81c0c5;
+    
+    background-image: linear-gradient(bottom, rgb(129,192,197) 24%, rgb(147,212,217) 62%);
+    background-image: -o-linear-gradient(bottom, rgb(129,192,197) 24%, rgb(147,212,217) 62%);
+    background-image: -moz-linear-gradient(bottom, rgb(129,192,197) 24%, rgb(147,212,217) 62%);
+    background-image: -webkit-linear-gradient(bottom, rgb(129,192,197) 24%, rgb(147,212,217) 62%);
+    background-image: -ms-linear-gradient(bottom, rgb(129,192,197) 24%, rgb(147,212,217) 62%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.24, rgb(129,192,197)), color-stop(0.62, rgb(147,212,217)));
+}
+
+.funnel ul.funnel-portions li.funnel-portion p.funnel-portion-name
+{
+    font-weight: bold;
+    color: #777777;
+}
+
+.funnel .funnel-result
+{
+    margin-top: 25px;
+    background-color: #f6f6f6;
+    border: 1px solid #eaeaea;
+    padding: 5px;
+    
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    text-shadow: 0px 1px 1px #ffffff;
+    
+    float: left;
+}
+
+.funnel .funnel-result .funnel-result-box .funnel-result-field
+{
+    float: left;
+    margin-right: 50px;
+}
+
+.funnel .funnel-result .funnel-result-box .funnel-result-field-last
+{
+    margin-right: 5px !important;
+}
+
+.funnel .funnel-result .funnel-result-box .funnel-result-field span.funnel-result-field-label,
+.funnel .funnel-result .funnel-result-box .funnel-result-field span.funnel-result-field-value
+{
+    display: block;
+    text-align: center;
+}
+
+.funnel .funnel-result .funnel-result-box .funnel-result-field span.funnel-result-field-label
+{
+    color: #777777;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.funnel .funnel-result .funnel-result-box .funnel-result-field span.funnel-result-field-value
+{
+    font-size: 15px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #ec701e;
+}
+
+

@@ -1,0 +1,112 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+<h2>
+    @if (!string.IsNullOrWhiteSpace(GetString("UserManagement:User.ManageAddresses.AddAddress")))
+    {
+        <text>@Translate("Add_address", "Add address")</text>
+    }
+    else if (!string.IsNullOrWhiteSpace(GetString("UserManagement:User.ManageAddresses.UpdateAddress")))
+    {
+        <text>@Translate("Update_address", "Update address")</text>
+    }
+</h2>
+
+
+@GetValue("UserManagement:User.ManageAddresses.FormStart")
+<div class="form-horizontal" role="form">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">@Translate("Description", "Description")</label>
+        <div class="col-sm-10">
+            <input type="text" name="Description" id="Description" value='@GetValue("UserManagement:User.UserAddress.Description.Value")' class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">@Translate("Address", "Address")</label>
+        <div class="col-sm-10">
+            <input type="text" name="Address" id="Address" value='@GetValue("UserManagement:User.UserAddress.Address.Value")' class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">@Translate("Address2", "Address2")</label>
+        <div class="col-sm-10">
+
+            <input type="text" name="Address2" id="Address2" value='@GetValue("UserManagement:User.UserAddress.Address2.Value")' class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">@Translate("Zip_code", "Zip code")</label>
+        <div class="col-sm-10">
+
+            <input type="text" name="Zip" id="Zip" value='@GetValue("UserManagement:User.UserAddress.Zip.Value")' class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">@Translate("City", "City")</label>
+        <div class="col-sm-10">
+
+            <input type="text" name="City" id="City" value='@GetValue("UserManagement:User.UserAddress.City.Value")' class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">@Translate("State", "State")</label>
+        <div class="col-sm-10">
+            <input type="text" name="State" id="State" value='@GetValue("UserManagement:User.UserAddress.State.Value")' class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">@Translate("Country", "Country")</label>
+        <div class="col-sm-10">
+            <input type="text" name="Country" id="Country" value='@GetValue("UserManagement:User.UserAddress.Country.Value")' class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">@Translate("Default", "Default")</label>
+        <div class="col-sm-10">
+            @if (!string.IsNullOrWhiteSpace(GetString("UserManagement:User.ManageAddresses.UpdateAddress")))
+            {
+                if (GetString("UserManagement:User.UserAddress.Default.Value")=="True")
+                {
+          
+                    <td>
+                        <input type="checkbox" id="Default" name="Default" checked="checked" />
+                    </td>
+                }
+                else
+                {
+                    <td><input type="checkbox" id="Default" name="Default" /></td>
+                }
+            }
+            else
+            {
+                <td>
+                    <input type="checkbox" id="Default" name="Default" />
+                </td>
+            }
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            @if (!string.IsNullOrWhiteSpace(GetString("UserManagement:User.ManageAddresses.DetailUrl")))
+            {
+                <a href="@GetValue("UserManagement:User.ManageAddresses.DetailUrl")" class="btn btn-default">@Translate("Back_to_addresses", "Back to addresses")</a>
+            }
+            @if (!string.IsNullOrWhiteSpace(GetString("UserManagement:User.ManageAddresses.AddAddress")))
+            {
+                <button class="btn btn-primary" type="submit">@Translate("Add_address", "Add address")</button>
+            }
+            else if (!string.IsNullOrWhiteSpace(GetString("UserManagement:User.ManageAddresses.UpdateAddress")))
+            {
+                <button class="btn btn-primary" type="submit">@Translate("Update_address", "Update address")</button>
+            }
+        </div>
+    </div>
+</div>
+@GetValue("UserManagement:User.ManageAddresses.FormEnd")

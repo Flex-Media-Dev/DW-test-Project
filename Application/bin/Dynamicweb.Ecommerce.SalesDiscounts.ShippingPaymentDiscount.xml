@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Ecommerce.SalesDiscounts.ShippingPaymentDiscount</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Ecommerce.SalesDiscounts.ShippingPaymentDiscount.ShippingPaymentDiscount">
+            <summary>
+            Reresents shipping and payment method discount
+            The shipping and payment method discount lets you apply a discount to orders where the customer has chosen a certain shipping and/or payment method
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.SalesDiscounts.ShippingPaymentDiscount.ShippingPaymentDiscount.ProcessOrder(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Processes order by adding discount line to order lines
+            </summary>
+            <param name="order">Order instance</param>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.SalesDiscounts.ShippingPaymentDiscount.ShippingPaymentDiscount.GetOptions(System.String)">
+            <summary>
+            Retrieves options as shippings and payment method
+            </summary>
+            <param name="optionName">ShippingMethod or PaymentMethod</param>
+            <returns>HashTable with ID and Name of shipping method or payment ID and name</returns>
+        </member>
+    </members>
+</doc>

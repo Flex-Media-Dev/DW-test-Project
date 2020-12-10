@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Ecommerce.ShippingProviders.GLS</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLS">
+            <summary>
+            GLS shipping provider
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLS.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLS.RenderFrontend(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Renders order data for frontend
+            </summary>
+            <param name="order">Order instance</param>
+            <returns>String representation of template with order data</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLS.RenderBackend(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Renders order data for backend
+            </summary>
+            <param name="order">Order instance</param>
+            <returns>String representation of order data</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLS.ProcessOrder(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Addes to order fields data from parcel shop
+            </summary>
+            <param name="order">Orer instance</param>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLS.CreateShippingDocument(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Creates shipping document with coma separated values of order data
+            </summary>
+            <param name="order">Order instance</param>
+            <returns>True if the csv file was created successfully</returns>
+        </member>
+        <member name="T:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLS.CsvHelper">
+            <summary>
+            Provides methods for working with csv formated data
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLS.CsvHelper.GetLine(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Builds coma separated string from data of list of objects
+            </summary>
+            <param name="values">List of objects</param>
+            <returns>String of coma separated values</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLS.CsvHelper.Escape(System.Object)">
+            <summary>
+            Removes double quote and new line symbols from string parameter;
+            Returns integer value when casting of value is successfull;
+            Returns formated double value with 2 digits after the dot delimeter when casting to double is possible;
+            </summary>
+            <param name="value">object to be converted to string, double or integer</param>
+            <returns>String representation of object value</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLS.GetOptions(System.String)">
+            <summary>
+            Retrieves options
+            </summary>
+            <param name="optionName">Parcel type or Shipment type</param>
+            <returns>List of key-value pairs with code of option and translated title</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLS.GetParcelShops(System.String,System.String,System.Int32)">
+            <summary>
+            Gets parcel shops list using street, zipcode as criteria and limit
+            </summary>
+            <param name="street">Street</param>
+            <param name="zipcode">Zipcode</param>
+            <param name="limit">limit of search results</param>
+            <returns>ParcelShopSearchResult instance</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLS.GetParcelShop(System.String)">
+            <summary>
+            Gets shop by it number
+            </summary>
+            <param name="number">Shop number</param>
+            <returns>PakkeshopData instance</returns>
+        </member>
+        <member name="T:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.PakkeshopData">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.PakkeshopData.Number">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.PakkeshopData.CompanyName">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.PakkeshopData.Streetname">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.PakkeshopData.Streetname2">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.PakkeshopData.ZipCode">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.PakkeshopData.CityName">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.PakkeshopData.CountryCode">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.PakkeshopData.CountryCodeISO3166A2">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.PakkeshopData.Telephone">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.PakkeshopData.Longitude">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.PakkeshopData.Latitude">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.PakkeshopData.OpeningHours">
+            <remarks/>
+        </member>
+        <member name="T:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Weekday">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Weekday.day">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Weekday.openAt">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Weekday.breaks">
+            <remarks/>
+        </member>
+        <member name="T:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Day">
+            <remarks/>
+        </member>
+        <member name="F:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Day.Monday">
+            <remarks/>
+        </member>
+        <member name="F:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Day.Tuesday">
+            <remarks/>
+        </member>
+        <member name="F:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Day.Wednesday">
+            <remarks/>
+        </member>
+        <member name="F:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Day.Thursday">
+            <remarks/>
+        </member>
+        <member name="F:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Day.Friday">
+            <remarks/>
+        </member>
+        <member name="F:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Day.Saturday">
+            <remarks/>
+        </member>
+        <member name="F:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Day.Sunday">
+            <remarks/>
+        </member>
+        <member name="T:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Hour">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Hour.From">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Hour.To">
+            <remarks/>
+        </member>
+        <member name="T:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.ParcelShopSearchResult">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.ParcelShopSearchResult.accuracylevel">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.ParcelShopSearchResult.parcelshops">
+            <remarks/>
+        </member>
+        <member name="T:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.AccuracyLevel">
+            <remarks/>
+        </member>
+        <member name="F:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.AccuracyLevel.EXACT">
+            <remarks/>
+        </member>
+        <member name="F:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.AccuracyLevel.STREET">
+            <remarks/>
+        </member>
+        <member name="F:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.AccuracyLevel.ZIP">
+            <remarks/>
+        </member>
+        <member name="F:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.AccuracyLevel.UNKNOWN">
+            <remarks/>
+        </member>
+        <member name="T:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Break">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Break.Start">
+            <remarks/>
+        </member>
+        <member name="P:Dynamicweb.Ecommerce.ShippingProviders.GLS.GLSwsPakkeshop.Break.End">
+            <remarks/>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,100 @@
+﻿.custom-select-wrapper {
+    position: relative;
+}
+.custom-select {
+    position: relative;
+}
+.custom-select__trigger {
+    height: 32px;
+    padding: 4px 6px;
+    vertical-align: top;
+    resize: none;
+    font-size: 13px;
+    line-height: 22px;
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid #bdbdbd;
+    position: relative;
+    cursor: pointer;
+}
+.custom-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+    border: 1px solid #bdbdbd;
+    padding: 4px 6px;
+    background-color: #fff;
+    height:0px;
+    overflow: scroll;
+    min-width: 500px;
+    border-collapse: collapse;
+}
+.custom-select.open .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    display: table;
+    height: 300px;
+}
+.custom-option span, .custom-options .header span {
+    display: table-cell;
+    padding: 6px 0px 6px 4px;
+    vertical-align: middle;
+}
+.custom-options .header {
+    border-bottom: 1px solid #dddddd;
+    font-weight: bold;
+    display: table-row;
+}
+.custom-option {
+    position: relative;
+    display: table-row;
+    cursor: pointer;
+}
+.custom-option:hover {
+    cursor: pointer;
+    background: #0085CA;
+    color: #ffffff;
+}
+.custom-option.selected {
+    cursor: not-allowed;
+    color: #dedede;
+    background-color: #fff;
+}
+/*.custom-option.selected, */.custom-option:hover {
+    background: #0085CA;
+    color: #ffffff;
+}
+.custom-select-wrapper .ss-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 1 auto;
+}
+.custom-select-wrapper .ss-arrow span.arrow-down {
+    transform: rotate(45deg);
+    margin: -23px 0 0;
+}
+.custom-select-wrapper .ss-arrow span {
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 2.5px;
+    transition: transform .2s,margin .2s;
+}
+.custom-select-wrapper .placeholder {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1 1 100%;
+    text-align: left;
+    width: calc(100% - 30px);
+    padding: 0px 6px;
+}

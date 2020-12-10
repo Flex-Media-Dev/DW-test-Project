@@ -1,0 +1,26 @@
+﻿#textTest
+{
+    width:200px;
+}
+
+#testResultslbl
+{
+    width:200px;
+    text-align:left;
+}
+
+#divTestResult
+{
+    margin-top:10px;    
+}
+
+#TestResult
+{
+    width:460px;
+    height:200px;
+    font-size:12px;
+    border-style:dotted;
+    border-width:1px;
+    overflow-y:auto;
+    overflow-x:hidden;
+}

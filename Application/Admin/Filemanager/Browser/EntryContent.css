@@ -1,0 +1,235 @@
+﻿.fm_content {
+    margin: 0 0 0 2px;
+}
+
+.fm_column {
+    text-align: left;
+    cursor: pointer;
+    display: inline;
+}
+
+.fm_column_metatag {
+    word-wrap: break-word;
+    width: 100px;
+}
+
+.fm_column_name {
+    white-space: nowrap;
+}
+
+.fm_column_modified,
+.fm_column_dimensions,
+.fm_column_size,
+.fm_column_colors {
+    text-align: left;
+    white-space: nowrap;
+}
+
+.fm_column_smallicon,
+.fm_column_delete {
+    text-align: center;
+}
+
+.Thumbnails .fm_column_thumbnail_filters {
+    float: right;
+}
+
+.Thumbnails .container .listRow td {
+    padding: 0 !important;
+    background-color: #f7f7f7;
+    padding-bottom: 20px !important;
+}
+
+.fm_column_thumbnail_filters_sort {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-left: 1px solid #bdbdbd;
+}
+
+    .fm_column_thumbnail_filters_sort:first-child {
+        border-left: none;
+        padding-left: 4px;
+    }
+
+    .fm_column_thumbnail_filters_sort a {
+        padding-left: 10px;
+    }
+
+
+.fm_column_thumbnail {
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 3px;
+    width: 225px;
+    height: 253px;
+    float: left;
+    cursor: default;
+    background-color: #fff;
+    transition: all 200ms;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.fm_column_thumbnail_chk {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 100;
+}
+
+.fm_column_thumbnail_img {
+	vertical-align: top;
+	position: relative;
+	line-height: 1;
+	height: 126.6px;
+	border-bottom: 1px #e0e0e0 solid;
+	overflow: hidden;
+	background-color: rgba(247, 247, 247, 0.72);
+}
+
+    .fm_column_thumbnail_img.getimage img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-height: 100% !important;
+        max-width: 100%;
+    }
+
+    .fm_column_thumbnail_img.icon i {
+        position: absolute;
+        margin: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+.fm_column_thumbnail_text {
+    padding: 16px;
+    font-size: 14px;
+	
+    line-height: 1.3;
+    max-height: 23.4px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.fm_column_thumbnail_text_wrapper {
+    overflow: hidden;
+}
+
+.fm_column_thumbnail_text, .fm_column_thumbnail_info {
+    display: block;
+    overflow: hidden;
+    margin: 5px;
+}
+
+    .fm_column_thumbnail_info .fa, .fm_column_thumbnail_info .md {
+        font-size: 14px;
+    }
+
+.fm_column_thumbnail_info {
+    color: #9E9E9E;
+    line-height: 1.4;
+    padding: 16px;
+    padding-top: 0;
+}
+
+.fm_column_thumbnail_info_1 {
+    float: left;
+}
+
+.fm_column_thumbnail_info_2 {
+    float: right;
+}
+
+.fm_column_thumbnail_info_3 {
+    float: left;
+}
+
+.fm_column_thumbnail:hover {
+    box-shadow: 0 3px 3px 1px rgba(0,0,0,0.2);
+}
+
+.fm_column_thumbnail.selected {
+    background-color: #0085CA;
+    color: #fff;
+}
+
+.fm_column_thumbnail:hover.selected {
+    background-color: #0085CA;
+    color: #fff;
+}
+
+.fm_column_smallicon_thumbnail {
+	border: 1px solid #bdbdbd;
+	background-color: rgba(247, 247, 247, 0.72);
+	height: 20px;
+	width: 30px;
+	position: relative;
+}
+
+	.fm_column_smallicon_thumbnail img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 100%!important;
+		max-height: 100%!important;
+	}
+
+.fm_column_smallicon {
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.fm_column_contentview {
+    background-color: inherit;
+    border: solid 1px #ffffff;
+    height: 40px;
+    float: left;
+    margin: 2px;
+    cursor: default;
+    vertical-align: middle;
+    width: 50px;
+}
+
+	.fm_column_contentview:hover {
+		background-color: #ffffff;
+		border: solid 1px #D8F0FA;
+		background-color: #eff8fc;
+		background-position: bottom left;
+		background-repeat: repeat-x;
+	}
+
+    .fm_column_contentview.selected {
+        background-color: #FFF8DC;
+        border: solid 1px #D8F0FA;
+        height: 40px;
+        float: left;
+        margin: 2px;
+        cursor: default;
+        width: 50px;
+    }
+
+    .fm_column_contentview:hover.selected {
+        background-color: #FFF8DC;
+        background-image: none;
+    }
+
+.image-popup {
+    position: absolute;
+    z-index: 10000;
+    border: 1px solid #ccc;
+    background: #333;
+    padding: 5px;
+    display: none;
+    color: #fff;
+    overflow: hidden;
+}
+
+    .image-popup img {
+        height: 100%;
+        width: 100%;
+    }

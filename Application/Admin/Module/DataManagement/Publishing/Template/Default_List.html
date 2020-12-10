@@ -1,0 +1,81 @@
+﻿<!--@DM.Pub.CssFile-->
+<!--@DM.Pub.AddNewRow-->
+<table class="<!--@DM.Pub.CssClass-->">
+<tr>
+    <!--@LoopStart(DM.Pub.Columns)-->
+    <th>
+        <!--@If Defined(Col.SortUrl)-->
+        <a href="<!--@Col.SortUrl-->"><!--@Col.Caption--></a>
+        <!--@EndIf(Col.SortUrl)-->          
+        
+        <!--@If Not Defined(Col.SortUrl)-->
+        <!--@Col.Caption-->
+        <!--@EndIf(Col.SortUrl)-->      
+    </th>
+    <!--@LoopEnd(DM.Pub.Columns)-->
+</tr>
+
+<!--@DM.Pub.Rows.LoopStart-->
+<tr>
+    <!--@DM.Pub.Row.LoopStart-->
+    <td>
+        <!--@If Defined(Row.DetailUrl)-->
+        <a href="<!--@Row.DetailUrl-->"><!--@Row.Value--></a>
+        <!--@EndIf(Row.DetailUrl)-->          
+    
+        <!--@If Not Defined(Row.DetailUrl)-->
+        <!--@Row.Value-->
+        <!--@EndIf(Row.DetailUrl)-->          
+    </td>
+    <!--@DM.Pub.Row.LoopEnd-->
+</tr>
+<!--@DM.Pub.Rows.LoopEnd-->
+</table>
+
+<div class="paging">
+
+<!--@DM.If.Defined.DwPaging.PreviousPageLink-->
+    <!--@DM.If.Defined.DwPaging.PreviousButtonImage-->
+    <a class="previouslinkimage" href="<!--@DwPaging.PreviousPageLink-->">
+        <img src="/files<!--@DwPaging.PreviousButtonImage-->" alt="Previous page" border="0" />
+        <!--@DM.If.Defined.DwPaging.PreviousButtonText-->
+            <span><!--@DwPaging.PreviousButtonText--></span>
+        <!--@DM.EndIf.DwPaging.PreviousButtonText-->
+    </a>
+    <!--@DM.EndIf.DwPaging.PreviousButtonImage-->
+    <!--@DM.If.Not.Defined.DwPaging.PreviousButtonImage-->
+    <a class="previouslink" href="<!--@DwPaging.PreviousPageLink-->">
+        <!--@DwPaging.PreviousButtonText-->
+    </a>
+    <!--@DM.EndIf.DwPaging.PreviousButtonImage-->
+<!--@DM.EndIf.DwPaging.PreviousPageLink-->
+
+<!--@LoopStart(DwPaging.LoopPageGroup)-->
+    <!--@HeaderStart-->
+        <ul>
+    <!--@HeaderEnd-->
+        <li class="activepage_<!--@PageGroup.ActivePage-->">
+            <a href="<!--@PageGroup.PageLink-->">
+                <!--@PageGroup.PageNumber-->
+            </a>
+        </li>
+    <!--@FooterStart-->
+        </ul>
+    <!--@FooterEnd-->
+<!--@LoopEnd(DwPaging.LoopPageGroup)-->
+<!--@DM.If.Defined.DwPaging.NextPageLink-->
+    <!--@DM.If.Defined.DwPaging.NextButtonImage-->
+    <a class="nextlinkimage" href="<!--@DwPaging.NextPageLink-->">
+        <!--@DM.If.Defined.DwPaging.NextButtonText-->
+            <span><!--@DwPaging.NextButtonText--></span>
+        <!--@DM.EndIf.DwPaging.NextButtonText-->
+        <img src="/files<!--@DwPaging.NextButtonImage-->" alt="Next page" border="0" />
+    </a>
+    <!--@DM.EndIf.DwPaging.NextButtonImage-->
+    <!--@DM.If.Not.Defined.DwPaging.NextButtonImage-->
+    <a class="nextlink" href="<!--@DwPaging.NextPageLink-->">
+        <!--@DwPaging.NextButtonText-->
+    </a>
+    <!--@DM.EndIf.DwPaging.NextButtonImage-->
+<!--@DM.EndIf.DwPaging.NextPageLink-->
+</div>

@@ -1,0 +1,23 @@
+﻿.date-editor .date-selector {
+  width: 100% !important;
+  /*.date-selector-label {
+            padding-left: 5px !important;
+        }*/
+}
+.date-editor .date-selector .date-selector-calendar {
+  z-index: 20 !important;
+}
+.number-editor .number-selector {
+  width: 100% !important;
+}
+.products-and-groups-editor .dw-products-groups-selector {
+  background-color: #fff;
+  width: 100%;
+}
+.products-and-groups-editor .main-cnt {
+  width: 100% !important;
+}
+.products-and-groups-editor .some-cnt-body {
+  margin-left: 0 !important;
+  width: 100%;
+}

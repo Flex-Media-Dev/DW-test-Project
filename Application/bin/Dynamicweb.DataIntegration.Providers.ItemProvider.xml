@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.DataIntegration.Providers.ItemProvider</name>
+    </assembly>
+    <members>
+        <member name="P:Dynamicweb.DataIntegration.Providers.ItemDestinationWriter.AreaService">
+            <summary>
+            Gets an instance of the IAreaService interface
+            </summary>
+        </member>
+    </members>
+</doc>

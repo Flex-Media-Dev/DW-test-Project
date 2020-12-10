@@ -1,0 +1,442 @@
+﻿.clearfix:after 
+{
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+html, body
+{
+    border-right: none !important;
+}
+
+html[xmlns] .clearfix 
+{
+	display: block;
+}
+ 
+* html .clearfix
+{
+	height: 1%;
+}
+
+.content
+{
+    margin: 10px;
+}
+
+.content fieldset,
+.popup-dialog-content fieldset
+{
+    margin-left: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.separator-10
+{
+    height: 10px;
+}
+
+.disabled
+{
+    color: #9a9a9a !important;
+}
+
+.radio-field,
+.checkbox-field,
+.radio-field label,
+.checkbox-field label
+{
+    height: 16px;
+    line-height: 16px;
+}
+
+.radio-field input,
+.radio-field label,
+.checkbox-field input,
+.checkbox-field label,
+.radio-field .radio-field-separator,
+.checkbox-field .radio-field-separator
+{
+    float: left;
+}
+
+.radio-field input,
+.checkbox-field input
+{
+    width: 16px;
+    height: 16px;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    margin-right: 1px;
+}
+
+.radio-field .radio-field-separator,
+.checkbox-field .radio-field-separator
+{
+    width: 14px;
+}
+
+span[class*='item-field-']{
+    display: block;
+}
+
+.item-field-name-column {
+    width: 170px;
+}
+
+.item-field-name {
+}
+
+.item-field-description {
+    color: #929292;
+    margin-top: 4px;
+	font-size:11px;
+    max-width: 220px;
+}
+
+.item-editor-box {
+    width: 100%;
+}
+
+.offset-left {
+    padding-left: 10px;
+}
+
+.offset-right {
+    padding-right: 10px;
+}
+
+.offset-top {
+    padding-top: 10px;
+}
+
+.offset-bottom {
+    padding-bottom: 10px;
+}
+
+.offset {
+    padding: 10px;
+}
+
+div.list-editor-box .push-top {
+    vertical-align: top;
+}
+
+div.list-editor-box .push-bottom {
+    vertical-align: bottom;
+}
+
+.item-option-label {
+    display: block;
+}
+
+.hide-item-option {
+    display: none;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+}
+
+.item-option-icon {
+    margin-top: 5px;
+    margin-bottom: 5px;
+	margin-right:5px;
+    transition: all 0.2s;
+}
+
+.item-option-icon:hover {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.item-option-icon label {
+    display: block;
+    padding: 5px;
+    height: 100%;
+}
+
+/*
+.item-option-icon img {
+    pointer-events: none; IE 11 fix
+}
+*/
+.item-option-icon img{
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+    display: block;
+}
+
+.item-option-image-fix img {
+    width: auto;
+    height: auto;
+    padding-top: 6px;
+}
+
+input.item-option-input:checked + div.item-option-icon {
+    background-color:#0085CA;
+}
+
+div.item-option-icon label:hover {
+ background-color:#0085CA;
+}
+
+div.item-option-icon label {
+	cursor:pointer;
+}
+
+/* Item list editor */
+div.item-list-editor-list div.stretchedContainer
+{
+    overflow-x: auto !important;
+}
+
+div.item-list-editor-list div.contextmenu
+{
+    display: none;
+}
+
+div.item-list-editor-list .header td.columnCell:not(:last-child)
+{
+    min-width: 60px;
+}
+
+div.item-list-editor-list-cell {
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+div.item-list-editor-list-cell.img {
+    border: none;
+    margin: 2px 0px 2px 0px;
+    padding: 0;
+    height: 32px;
+    width: 32px;
+}
+
+div.item-list-editor-list-cell img {
+    border: none;
+    margin: 2px 0px 2px 0px;
+    padding: 0;
+    height: 32px;
+    width: 32px;
+}
+
+div.item-list-editor-list-cell img.icon {
+    vertical-align:middle;
+    height: 16px;
+    width: 16px;
+}
+
+div.item-list-editor-list-cell.img img {
+    height: initial;
+    width: initial;
+}
+
+button.item-list-editor-addButton {
+    width: auto;
+    margin: 5px 5px 10px 0;
+}
+.item-list-editor-add {
+    margin: 5px;
+}
+.item-list-editor-add-button {
+    vertical-align: middle;
+    padding: 0px 1px;
+}
+
+.centered-wrapper {
+  text-align: center;
+  margin: 20px;
+}
+ 
+.centered-wrapper :before {
+  content: '';
+  display: inline-block;
+  height: 100%; 
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+ }
+ 
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 300px;
+  padding: 10px 15px;
+ }
+
+.file-editor-item-cnt {
+    padding-bottom: 4px;
+}
+
+div.item-type-container .error{
+    color: red;
+}
+
+#ItemTypeSelect_selectitems, #ItemTypePageSelect_selectitems, #ItemTypeUserDefaultSelect_selectitems {
+    position: fixed;
+}
+
+.list-rows-with-icons > figure {
+    margin:0;
+    padding:0;
+    float:left;
+    display: block;
+}
+
+.list-rows-with-icons > figure.push-left, .list-rows-with-icons > figure.push-right  {
+    display:table;
+}
+
+.list-rows-with-icons > figure.push-left > .item-option-label, .list-rows-with-icons > figure.push-right > .item-option-label  {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.list-rows-with-icons > figure.push-left > .item-option-icon, .list-rows-with-icons > figure.push-right > .item-option-icon  {
+    display:inline-block;
+}
+
+.list-rows-with-icons.max-cols-1 > figure:nth-child(n+1),
+.list-rows-with-icons.max-cols-2 > figure:nth-child(2n+1),
+.list-rows-with-icons.max-cols-3 > figure:nth-child(3n+1),
+.list-rows-with-icons.max-cols-4 > figure:nth-child(4n+1),
+.list-rows-with-icons.max-cols-5 > figure:nth-child(5n+1),
+.list-rows-with-icons.max-cols-6 > figure:nth-child(6n+1),
+.list-rows-with-icons.max-cols-7 > figure:nth-child(7n+1),
+.list-rows-with-icons.max-cols-8 > figure:nth-child(8n+1),
+.list-rows-with-icons.max-cols-9 > figure:nth-child(9n+1),
+.list-rows-with-icons.max-cols-10 > figure:nth-child(10n+1) {
+    clear:left;
+}
+
+@media (max-width: 1160px) {
+    .list-rows-with-icons > figure {
+        clear:initial !important;
+    }
+}
+
+/* Presets */
+    .configurable-presets,
+    .configurable-presets::before {
+        background-color: #f5f5f5;
+    }
+
+    .presets {
+        margin: 0;
+        display: inline-block;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .presets .preset-template {
+        display: none;
+    }
+
+    .presets .preset {
+        width: 125px;
+        text-align: center;
+        display: inline-block;
+        margin: 10px;
+        padding: 5px;
+        cursor: pointer;
+        vertical-align: top;
+        transition: all 200ms;
+        position: relative;
+        color: #bdbdbd;
+        background-color: #f5f5f5;
+    }
+
+    .presets .preset:hover {
+        background-color: #0085CA;
+    }
+
+    .presets .preset.current {
+        background-color: #0085CA;
+    }
+
+    .presets .preset-body {
+        border: 1px solid;
+        background-color: #fff;
+    }
+
+    .presets .preset.new {
+        display: none;
+    }
+
+    .presets li:first-child:nth-last-child(2) ~ .new {
+        display: inline-block;
+    }
+
+    .presets .preset.new .preset-body {
+        border: 2px dashed;
+    }
+
+    .presets .preset.new .preset-image {
+        height: 77px;
+        font-size: 36px;
+        margin-top: 18px;
+    }
+    .presets .preset.new .preset-image i {
+        line-height: 1;
+    }
+
+    .presets .preset .preset-state {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -21px;
+        margin-top: -32px;
+    }
+    .presets .preset .preset-state i {
+        font-size: 42px;
+        line-height: 1;
+    }
+    .presets .preset.current.modified .preset-state {
+        display: inline-block;
+    }
+
+    .preset-body > .header {
+        height: 28px
+    }
+    .presets .preset .contextTrigger {
+        padding: 3px 12px;
+        background-color: #fff;
+        width: 10px;
+    }
+
+    .presets .preset .preset-image {
+        width: 100%;
+        height: 60px;
+        display: table;
+    }
+
+    .presets .preset .preset-image img {
+        width: 100%;
+        height: 77px;
+    }
+
+    .presets .preset .preset-title {
+        padding-top: 2px;
+        word-break: break-word;
+        width: 100%;
+    }
+
+    .presets .preset.current .preset-title {
+        color: #fff;
+    }
+
+    .presets .preset:hover .preset-title {
+        color: #fff;
+    }

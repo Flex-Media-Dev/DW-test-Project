@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Ecommerce.CheckoutHandlers.Dibs</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Ecommerce.CheckoutHandlers.DIBS.Dibs">
+            <summary>
+            DIBS Checkout Handler
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.DIBS.Dibs.StartCheckout(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Starts order checkout procedure
+            </summary>
+            <param name="order">Order to be checked out</param>
+            <returns>String representation of template output</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.DIBS.Dibs.Redirect(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Redirects user to payment step or canceled order step
+            </summary>
+            <param name="order">Order for processing</param>
+            <returns>String representation of template output</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.DIBS.Dibs.GetOptions(System.String)">
+            <summary>
+            Gets options according to behavior mode
+            </summary>
+            <param name="behaviorMode"></param>
+            <returns>Key-value pairs of settings</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.DIBS.Dibs.Capture(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Send capture request to transaction service
+            </summary>
+            <param name="order">Order to be captured</param>
+            <returns>Response from transaction service</returns>
+            <remarks>http://tech.dibspayment.com/capturecgi</remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Dynamicweb.Ecommerce.CheckoutHandlers.DIBS.Dibs.Capture(Dynamicweb.Ecommerce.Orders.Order,System.Int64,System.Boolean)" -->
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.DIBS.Dibs.CaptureSupported(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Shows if capture supported
+            </summary>
+            <param name="order">This object is not used in current implementation</param>
+            <returns>This method always return 'true' value</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.DIBS.Dibs.SplitCaptureSupported(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Shows if partial capture of the order supported
+            </summary>
+            <param name="order">instance of order</param>
+            <returns>True, if partial capture of the order is supported</returns>
+        </member>
+    </members>
+</doc>

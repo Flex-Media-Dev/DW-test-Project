@@ -1,0 +1,2382 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.DataIntegration</name>
+    </assembly>
+    <members>
+        <!-- Badly formed XML comment ignored for member "T:Dynamicweb.DataIntegration.BaseProvider" -->
+        <member name="P:Dynamicweb.DataIntegration.BaseProvider.JobIsGoingToRun">
+            <summary>
+            Gets and sets "job is going to run" status
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.BaseProvider.GetOriginalDestinationSchema">
+            <summary>
+            Gets the schema from the Destination Source
+            </summary>        
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.BaseProvider.WorkingDirectory">
+            <summary>
+            Gets and sets working directory path
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.BaseProvider.FilesFolderName">
+            <summary>
+            The Name of the files folder in the current installation of Dynamicweb. Empty if used for test.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.BaseProvider.ValidateDestinationSettings">
+            <summary>
+            Validates the destination settings. Used to validate properties when created by the AddinSelector.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.BaseProvider.SchemaIsEditable">
+            <summary>
+            Schema is editable
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.BaseProvider.CheckCondition(Dynamicweb.DataIntegration.Integration.MappingConditional,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Checks mapping conditionals
+            </summary>
+            <param name="mappingConditional">MappingConditionals</param>
+            <param name="row"></param>
+            <returns>Result of check</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.BaseProvider.CheckConditionStatic(Dynamicweb.DataIntegration.Integration.MappingConditional,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Checks mapping conditionals
+            </summary>
+            <param name="mappingConditional">MappingConditional instance</param>
+            <param name="row"></param>
+            <returns>Result of check</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.BaseProvider.ProcessInputRow(Dynamicweb.DataIntegration.Integration.Mapping,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Processes the source row using the provider from table mapping script class
+            </summary>
+            <param name="mapping">mapping</param>
+            <param name="row">source row</param>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.BaseProvider.Parameters">
+            <summary>
+            Parameters
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.BatchIntegrationScheduledTaskAddin.GetActivitiesList">
+            <summary>
+            Gets the list of activities activities from the relevant folder
+            </summary>
+            <returns>list with names of all activities set up in Dynamicweb</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.BatchIntegrationScheduledTaskAddin.SendMail(System.String)">
+            <summary>
+            Send mail according to configuration 
+            </summary>
+            <param name="message">error/success message</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.BatchIntegrationScheduledTaskAddin.SendMail(System.String,Dynamicweb.Content.Files.Information.MessageType)">
+            <summary>
+            Send mail according to configuration 
+            </summary>
+            <param name="message">error/success message</param>        
+            <param name="msgtype">message type</param>        
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.BatchIntegrationScheduledTaskAddin.SendMail(System.String,Dynamicweb.Content.Files.Information.MessageType,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Send mail according to configuration 
+            </summary>
+            <param name="message">error/success message</param>
+            <param name="messageType">message type</param>
+            <param name="tagValues">Dictionary with tag name as a key and its value</param>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.EndpointManagement.Endpoint">
+            <summary>
+            Represents Endpoint
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.EndpointManagement.Endpoint.Id">
+            <summary>
+            Endpoint Id
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.EndpointManagement.Endpoint.Name">
+            <summary>
+            Endpoint Name
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.EndpointManagement.Endpoint.Description">
+            <summary>
+            Endpoint Description
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.EndpointManagement.Endpoint.Url">
+            <summary>
+            Endpoint Url
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.EndpointManagement.Endpoint.AuthenticationId">
+            <summary>
+            Endpoint Authentication Id
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.EndpointManagement.Endpoint.RequestType">
+            <summary>
+            Endpoint request type
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.EndpointManagement.Endpoint.Body">
+            <summary>
+            Request body
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.EndpointManagement.Endpoint.Headers">
+            <summary>
+            Request Headers collection
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.EndpointManagement.Endpoint.UseInLiveIntegration">
+            <summary>
+            Enable for the Live integration use
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthentication">
+            <summary>
+            Represents Endpoint Authentication
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthentication.Id">
+            <summary>
+            Endpoint Authentication Id
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthentication.Name">
+            <summary>
+            Endpoint Authentication Name
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthentication.Type">
+            <summary>
+            Endpoint Authentication Type
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthentication.Parameters">
+            <summary>
+            Endpoint Authentication Parameters
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthentication.GetNetworkCredential">
+            <summary>
+            Gets the authentication Network credential
+            </summary>
+            <returns>NetworkCredential object</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthentication.GetAuthType">
+            <summary>
+            Gets authentication type scheme
+            </summary>
+            <returns>Authentication scheme</returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationRepository">
+            <summary>
+            Repository for endpoint authentications.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationRepository.GetById(System.Int32)">
+            <summary>
+            Gets an Endpoint authentication by id.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>An instance of <see cref="T:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthentication"/>, if found, otherwise null.</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationRepository.GetAll">
+            <summary>
+            Gets all endpoint authentications.
+            </summary>
+            <returns>A collection of endpoint authentications.</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationRepository.Save(Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthentication)">
+            <summary>
+            Saves the specified Endpoint Authentication.
+            </summary>
+            <param name="endpointAuthentication">The endpoint Authentication.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationRepository.Delete(System.Int32)">
+            <summary>
+            Deletes the endpoint Authentication with the specified id.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationRepository.Read(System.Data.IDataRecord)">
+            <summary>
+            Reads the specified record.
+            </summary>
+            <param name="record">The record.</param>
+            <returns>An instance of <see cref="T:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthentication"/></returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationService">
+            <summary>
+            Service for endpoint authentication.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationService"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationService.#ctor(Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationService"/> class.
+            </summary>
+            <param name="repository">The repository.</param>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationService.Repository">
+            <summary>
+            Gets or sets the repository.
+            </summary>
+            <value>
+            The repository.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationService.GetEndpointAuthentications">
+            <summary>
+            Gets the endpoint Authentications.
+            </summary>
+            <returns>A collection of endpoint Authentications.</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationService.GetEndpointAuthenticationById(System.Int32)">
+            <summary>
+            Gets an Endpoint Authentication by id.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>An instance of <see cref="T:Dynamicweb.DataIntegration.EndpointManagement.Endpoint"/>, if found, otherwise null.</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationService.SaveEndpointAuthentication(Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthentication)">
+            <summary>
+            Saves the Endpoint Authentication.
+            </summary>
+            <param name="endpointAuthentication">The Endpoint Authentication.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationService.DeleteEndpointAuthentication(System.Int32)">
+            <summary>
+            Deletes the Endpoint Authentication.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationType">
+            <summary>
+            Represents Endpoint Authentication Type
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationType.None">
+            <summary>
+            None
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationType.Basic">
+            <summary>
+            Basic
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationType.WebServiceAccessKey">
+            <summary>
+            Web Service Access Key
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.EndpointManagement.EndpointAuthenticationType.Ntlm">
+            <summary>
+            NTLM
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.EndpointManagement.EndpointRepository">
+            <summary>
+            Repository for endpoints.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointRepository.GetById(System.Int32)">
+            <summary>
+            Gets an Endpoint by id.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>An instance of <see cref="T:Dynamicweb.DataIntegration.EndpointManagement.Endpoint"/>, if found, otherwise null.</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointRepository.GetEndpointsByIDs(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Gets the endpoints by ids.
+            </summary>        
+            <param name="ids">The ids.</param>
+            <returns>A collection of endpoints.</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointRepository.GetEndpointsByPage(System.Int32,System.Int32,System.String)">
+            <summary>
+            Gets the endpoints by page.
+            </summary>
+            <param name="pageNumber">The page number.</param>
+            <param name="pageSize">Size of the page.</param>
+            <param name="orderBy">The order by.</param>
+            <returns>A collection of endpoints.</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointRepository.GetEndpointsCount">
+            <summary>
+            Gets the found endpoints count.
+            </summary>        
+            <returns>The number of endpoints.</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointRepository.GetAll">
+            <summary>
+            Gets all endpoints.
+            </summary>
+            <returns>A collection of endpoints.</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointRepository.Save(Dynamicweb.DataIntegration.EndpointManagement.Endpoint)">
+            <summary>
+            Saves the specified Endpoint.
+            </summary>
+            <param name="endpoint">The Endpoint.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointRepository.Save(System.Collections.Generic.IList{Dynamicweb.DataIntegration.EndpointManagement.Endpoint})">
+            <summary>
+            Saves the specified Endpoints.
+            </summary>
+            <param name="endpoints">The Endpoints.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointRepository.Delete(System.Int32)">
+            <summary>
+            Deletes the Endpoint with the specified id.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointRepository.Read(System.Data.IDataRecord)">
+            <summary>
+            Reads the specified record.
+            </summary>
+            <param name="record">The record.</param>
+            <returns>An instance of <see cref="T:Dynamicweb.DataIntegration.EndpointManagement.Endpoint"/></returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.EndpointManagement.EndpointRequestType">
+            <summary>
+            Endpoint Request Type
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.EndpointManagement.EndpointRequestType.GET">
+            <summary>
+            GET
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.EndpointManagement.EndpointRequestType.POST">
+            <summary>
+            POST
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.EndpointManagement.EndpointService">
+            <summary>
+            Service for endpoints.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.EndpointManagement.EndpointService"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.#ctor(Dynamicweb.DataIntegration.EndpointManagement.EndpointRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.EndpointManagement.EndpointService"/> class.
+            </summary>
+            <param name="repository">The repository.</param>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.Repository">
+            <summary>
+            Gets or sets the repository.
+            </summary>
+            <value>
+            The repository.
+            </value>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.DynamicwebSoapServiceNamespace">
+            <summary>
+            Dynamicweb Soap Service Namespace
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.DynamicwebSoapServiceMethodName">
+            <summary>
+            Dynamicweb Soap Service Method Name
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.DynamicwebServiceSoapAction">
+            <summary>
+            DynamicwebServiceSoapAction
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.GetEndpoints">
+            <summary>
+            Gets the endpoints.
+            </summary>
+            <returns>A collection of endpoints.</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.GetEndpointById(System.Int32)">
+            <summary>
+            Gets an Endpoint by id.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>An instance of <see cref="T:Dynamicweb.DataIntegration.EndpointManagement.Endpoint"/>, if found, otherwise null.</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.GetEndpointsByIDs(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Gets Endpoints by ids.
+            </summary>
+            <param name="ids">The identifiers.</param>
+            <returns>An enumeration of <see cref="T:Dynamicweb.DataIntegration.EndpointManagement.Endpoint"/>.</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.GetEndpointsByPage(System.Int32,System.Int32,System.String)">
+            <summary>
+            Gets the endpoints by page.
+            </summary>
+            <param name="pageNumber">The page number.</param>
+            <param name="pageSize">Size of the page.</param>
+            <param name="orderBy">The order by.</param>
+            <returns>A collection of endpoints.</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.GetEndpointsCount">
+            <summary>
+            Gets the found endpoints count.
+            </summary>        
+            <returns>The number of endpoints.</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.SaveEndpoint(Dynamicweb.DataIntegration.EndpointManagement.Endpoint)">
+            <summary>
+            Saves the Endpoint.
+            </summary>
+            <param name="endpoint">The Endpoint.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.SaveEndpoints(System.Collections.Generic.IList{Dynamicweb.DataIntegration.EndpointManagement.Endpoint})">
+            <summary>
+            Saves the Endpoints.
+            </summary>
+            <param name="endpoints">The Endpoints.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.DeleteEndpoint(System.Int32)">
+            <summary>
+            Deletes the Endpoint.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.IsDynamicwebServiceEndpoint(Dynamicweb.DataIntegration.EndpointManagement.Endpoint)">
+            <summary>
+            Checks if endpoint is Dynamicweb webservice
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <returns>True if endpoint is Dynamicweb webservice, otherwise false</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.RemoveDynamicwebServiceSoapHeader(Dynamicweb.DataIntegration.EndpointManagement.Endpoint)">
+            <summary>
+            Removes SoapAction header
+            </summary>
+            <param name="endpoint"></param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.AddDynamicwebServiceSoapHeader(Dynamicweb.DataIntegration.EndpointManagement.Endpoint)">
+            <summary>
+            Adds SoapAction header with DynamicwebServiceSoapAction
+            </summary>
+            <param name="endpoint">Endpoint</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.GetDynamicwebServiceRequest(System.String)">
+            <summary>
+            Returns request like GetEcomData from Soap body
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.GetDynamicwebServiceSoapBody(System.String)">
+            <summary>
+            Returns request in Soap format
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.AddContentTypeHeader(Dynamicweb.DataIntegration.EndpointManagement.Endpoint,System.String)">
+            <summary>
+            Adds Content-Type header value
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="contentType">ContentType</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.Execute(System.Int32)">
+            <summary>
+            Executes request from Endpoint
+            </summary>
+            <param name="endpointId">Endpoint id</param>
+            <returns>Response string</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.Execute(System.Int32,System.String)">
+            <summary>
+            Executes request from Endpoint
+            </summary>
+            <param name="endpointId">Endpoint id</param>
+            /// <param name="requestBody">Request body</param>
+            <returns>Response string</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.IsEmptyRequestDynamicwebServiceEndpoint(Dynamicweb.DataIntegration.EndpointManagement.Endpoint)">
+            <summary>
+            Checks if the endpoint is for the Live integration.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.EndpointManagement.EndpointService.ForceCanonicalPathAndQuery(System.Uri)">
+            <summary>
+            https://stackoverflow.com/questions/781205/getting-a-url-with-an-url-encoded-slash
+            </summary>
+            <param name="uri"></param>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.BaseDestinationWriter">
+            <summary>
+            Base destination writer
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.BaseDestinationWriter.Write(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Writes value to destination
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.BaseDestinationWriter.Close">
+            <summary>
+            Closes writer
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.BaseDestinationWriter.Initialize">
+            <summary>
+            Initializes instance
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.BaseDestinationWriter.DeleteRowsMissingFromSource">
+            <summary>
+            Deletes rows messing
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.BaseDestinationWriter.Mapping">
+            <summary>
+            Mapping
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.BaseDestinationWriter.GetRowValueNotFoundMessage(System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            Gets message text
+            </summary>
+            <param name="row">Row</param>
+            <param name="sourceTableName">Table name</param>
+            <param name="sourceColumnName">Column name</param>
+            <returns>Message text string</returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.ConditionalOperator">
+            <summary>
+            The operator to use when comparing input to existing rows.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.ConditionalOperator.EqualTo">
+            <summary>
+            Are the conditional value and the incomming keys equal?
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.ConditionalOperator.LessThan">
+            <summary>
+            Is the incomming key less than the conditional value? 
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.ConditionalOperator.GreaterThan">
+            <summary>
+            Is the incomming key greater than the conditional value?
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.ConditionalOperator.DifferentFrom">
+            <summary>
+            Is the incomming key different from the conditional value?
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.ConditionalOperator.Contains">
+            <summary>
+            Is the incomming key value contains the conditional value?
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.ConditionalOperator.In">
+            <summary>
+            Is the incomming key value in the specified conditional range?
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.JobQueue">
+            <summary>
+            Represents job queue
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.JobQueue.Instance">
+            <summary>
+            Initializes singleton object instance
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.JobQueue.AddToQueue(Dynamicweb.DataIntegration.Integration.JobTask)">
+            <summary>
+            Adds JobTask to queue
+            </summary>
+            <param name="jobTask">JobTask instance</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.JobQueue.IsJobTaskFinished(Dynamicweb.DataIntegration.Integration.JobTask,System.Boolean@)">
+            <summary>
+            Shows if job task is finished
+            </summary>
+            <param name="jobTask">JobTask instance</param>
+            <param name="taskResult">Result of operation</param>
+            <returns>False if job is running, Otherwise true.</returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.JobResult">
+            <summary>
+            JobResult values
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.JobTask">
+            <summary>
+            Represents job task
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.JobTask.#ctor(System.Int64,System.String,System.String,System.String,System.Boolean,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Constructs JobTask object instance
+            </summary>
+            <param name="timeStamp">TimeStamp</param>
+            <param name="jobs">Jobs</param>
+            <param name="logFileName">log file name</param>
+            <param name="logFileFullPath">log file full path</param>
+            <param name="stopOnFailedJob">Defines stop on failed job behaviour</param>
+            <param name="destinationParameters">Destination parameters</param>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.Notifications.Integration">
+            <summary>
+            Provides notifications names as well as notification argument types related to data integration activities. This class cannot be inherited.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.Notifications.Integration.JobFinished">
+            <summary>
+            Occurs when the data integration job is being finished.
+            </summary>
+            <remarks>The passed NotificationArgs is <see cref="T:Dynamicweb.DataIntegration.Integration.Notifications.Integration.JobFinishedIntegrationArgs"></see></remarks>
+            <example>
+            <code description="Notification observer example" source="..\Dynamicweb\05 - Modules\Dynamicweb.DataIntegration\Head\Dynamicweb.DataIntegration.Examples\Notifications\JobFinishedObserver.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.Notifications.Integration.JobFinishedIntegrationArgs">
+            <summary>
+            Provides the information about the data integration job after it was finished.
+            Arguments passed to <see cref="F:Dynamicweb.DataIntegration.Integration.Notifications.Integration.JobFinished"></see> notification
+            </summary>
+            <remarks></remarks>        
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Notifications.Integration.JobFinishedIntegrationArgs.JobFailed">
+            <summary>
+            Gets or sets the value indicating whether the job execution failed or not.
+            </summary>            
+            <value>
+              <c>true</c> if the job execution failed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Notifications.Integration.JobFinishedIntegrationArgs.LogFile">
+            <summary>
+            Gets or sets job log file path.
+            </summary>                        
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Notifications.Integration.JobFinishedIntegrationArgs.DestinationTables">
+            <summary>
+            Gets or sets the job destination tables list
+            </summary>                        
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.Notifications.Integration.JobFinishedIntegrationArgs.Job">
+            <summary>
+            Gets or sets the data integration job
+            </summary>                        
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Notifications.Integration.JobFinishedIntegrationArgs.#ctor(System.Boolean,System.String,Dynamicweb.DataIntegration.Integration.Job)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="jobFailed">Value indicating whether the job execution failed or not.</param>
+            <param name="logFile">Job log file path.</param>
+            <param name="job">Data integration job.</param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.ProviderType">
+            <summary>
+            Represents type of provider
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.SchemaCompareErrorType">
+            <summary>
+            Type of SchemaCompareError
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.SchemaComparerResult">
+            <summary>
+            Stores information about error in Schemas/Mapping
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.SchemaComparerResult.ProviderType">
+            <summary>
+            Provider type (Source, Destination)
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.SchemaComparerResult.ErrorType">
+            <summary>
+            Error type (NewTables, NewColumns, RemovedTables, 
+            RemovedColumns, ChangedColumnType, MissingTablesInMapping, 
+            MissingColumnsInMapping, InvalidColumnType, NotUniqueMapping, NoOnePrimaryKey)
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.SchemaComparerResult.ErrorItem">
+            <summary>
+            Error item
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.SchemaComparerResult.#ctor(Dynamicweb.DataIntegration.Integration.ProviderType,Dynamicweb.DataIntegration.Integration.SchemaCompareErrorType,System.String)">
+            <summary>
+            Constructs new object
+            </summary>
+            <param name="providerType">Provider type</param>
+            <param name="errorType">Erro type</param>
+            <param name="errorItem">Error item</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.SchemaComparerResult.AppendErrorItem(System.String)">
+            <summary>
+            Appends error item data to result
+            </summary>
+            <param name="item">String value</param>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.SchemaComparerResults">
+            <summary>
+            Stores errors found in Schemas/Mapping
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.SchemaComparerResults.ErrorsFound">
+            <summary>
+            Shows if any error was found
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.SchemaComparerResults.ErrorsInMappingFound">
+            <summary>
+            Shows if any mapping error was found
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.SchemaComparerResults.ErrorsOnlyInMappingFound">
+            <summary>
+            Shows if any kind of error was found
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.SchemaComparerResults.Errors">
+            <summary>
+            List of errors
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.SchemaComparerResults.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.SchemaComparerResults.Add(Dynamicweb.DataIntegration.Integration.SchemaComparerResult)">
+            <summary>
+            Adds schema compare result
+            </summary>
+            <param name="comparerResult">SchemaComparerResult object instance</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.SchemaComparerResults.Add(System.Collections.Generic.List{Dynamicweb.DataIntegration.Integration.SchemaComparerResult})">
+            <summary>
+            Adds list of schema compare results
+            </summary>
+            <param name="results">List of SchemaComparerResult</param>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.ScriptType">
+            <summary>
+            Enum used to indicate which type of scripting is active in the Column mapping. 
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.ScriptType.Append">
+            <summary>
+            Append will add the scriptValue to the end of the input string.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.ScriptType.Prepend">
+            <summary>
+            Prepend will add the scriptValue to the beginning of the input string.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.ScriptType.Constant">
+            <summary>
+            Constant will use the scriptValue instead of the input string.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.ScriptType.None">
+            <summary>
+            Leaves the input string unchanged.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.TableScript">
+            <summary>
+            Base class for the table scripting functionality
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.TableScript.ScriptingName">
+            <summary>
+            Returns a string with the name to show in the gui
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.TableScript.ProcessInputRow(Dynamicweb.DataIntegration.Integration.Mapping,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Processes the input row before going to the destination
+            </summary>
+            <param name="mapping">table mapping</param>
+            <param name="row">input row</param>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.Column">
+            <summary>
+            Represents table column
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Column.Table">
+            <summary>
+            Gets the table this column belongs to.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Column.Name">
+            <summary>
+            Gets or sets the name of the column.
+            </summary>
+            <value>
+            The name of the column.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Column.IsNew">
+            <summary>
+            Gets a value indicating whether this instance has been added to the schema during the mapping.
+            </summary>
+            <value>
+              <c>true</c> if this instance is new; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Column.IsPrimaryKey">
+            <summary>
+            Gets or sets a value indicating whether this instance is a primary key. 
+            Must be true for at least one colunn in the table, can be true for several.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is primary key; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Column.Type">
+            <summary>
+            Gets the type of the column.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Column.#ctor(System.String,System.Type,Dynamicweb.DataIntegration.Integration.Table)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.Column"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="type">The type.</param>
+            <param name="table">The table.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Column.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Column.#ctor(System.String,System.Type,Dynamicweb.DataIntegration.Integration.Table,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.Column"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="type">The type.</param>
+            <param name="table">The table.</param>
+            <param name="isPrimaryKey">if set to <c>true</c>, the column is primary key.</param>
+            <param name="isNew">if set to <c>true</c>, indicates that the column is to be added to the schema when the activity is run..</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Column.#ctor(System.Xml.XmlNode,Dynamicweb.DataIntegration.Integration.Table)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.Column"/> class.
+            Is used when reading the schema from an XML file, as part of a provider.
+            must match the output created by SaveAsXML().
+            </summary>
+            <param name="xmlNode">The XML node.</param>
+            <param name="table">The table.</param>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Column.NameWithWhitespaceStripped">
+            <summary>
+            Gets or sets the name with whitespace stripped.
+            </summary>
+            <value>
+            The name with whitespace stripped.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Column.SaveAsXml(System.Xml.XmlTextWriter)">
+            <summary>
+            Saves as XML. Used when saving the schema to XML file. Must match the constructor that take an XmlNode as an argument.
+            </summary>
+            <param name="xmlTextWriter">The XML text writer.</param>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.ColumnCollection">
+            <summary>
+            Collection of Columns
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ColumnCollection.#ctor(System.Xml.XmlNode,Dynamicweb.DataIntegration.Integration.Table)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.ColumnCollection"/> class.
+            Used when reading a schema from an XML file.
+            Must parse the XML generated  by SaveAsXML().
+            </summary>
+            <param name="xmlNode">The XML node.</param>
+            <param name="table">The table.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ColumnCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.ColumnCollection"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ColumnCollection.SaveAsXml(System.Xml.XmlTextWriter)">
+            <summary>
+            Saves as XML.
+            Output must match the implementation of the constructor that takes an XmlNode as an argument.
+            </summary>
+            <param name="xmlTextWriter">The XML text writer.</param>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.ColumnMapping">
+            <summary>
+            Mapping shows which column from the source goes to which column in the destination.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.ColumnMapping.ScriptType">
+            <summary>
+            Defines if scripting for this mapping is static, append, prepend, or none.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.ColumnMapping.ScriptValue">
+            <summary>
+            defines the value to be added if ScriptType is anything other than "none".
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.ColumnMapping.ScriptValueForInsert">
+            <summary>
+            defines whether to use Script value only on insert new rows and skip on update
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.ColumnMapping.Active">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Dynamicweb.DataIntegration.Integration.ColumnMapping"/> is active.
+            </summary>
+            <value>
+              <c>true</c> if active; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.ColumnMapping.SourceColumn">
+            <summary>
+            Gets or sets the source column.
+            </summary>
+            <value>
+            The source column.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ColumnMapping.GetId">
+            <summary>
+            Gets the id of the mapping.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.ColumnMapping.IsKey">
+            <summary>
+            Gets or sets a value indicating whether this column mapping is a primary key.
+            </summary>
+            <value>
+              <c>true</c> if this column mapping is key; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.ColumnMapping.DestinationColumn">
+            <summary>
+            Gets or sets the destination column.
+            </summary>
+            <value>
+            The destination column.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ColumnMapping.#ctor(Dynamicweb.DataIntegration.Integration.Column,Dynamicweb.DataIntegration.Integration.Column,System.Int32,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.ColumnMapping"/> class.
+            </summary>
+            <param name="sourceColumn">The source column.</param>
+            <param name="destinationColumn">The destination column.</param>
+            <param name="id">The id.</param>
+            <param name="iskey">if set to <c>true</c> [iskey].</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ColumnMapping.#ctor(System.Xml.XmlNode,Dynamicweb.DataIntegration.Integration.Interfaces.ISource,Dynamicweb.DataIntegration.Integration.Interfaces.IDestination,Dynamicweb.DataIntegration.Integration.Table,Dynamicweb.DataIntegration.Integration.Table,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.ColumnMapping"/> class from an XML node. 
+            This constructor parses the output created by the method saveAsXML()
+            </summary>
+            <param name="xmlNode">The XML node.</param>
+            <param name="source">The source.</param>
+            <param name="destination">The destination.</param>
+            <param name="sourceTable">The source table.</param>
+            <param name="destinationTable">The destination table.</param>
+            <param name="id">The id.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ColumnMapping.ConvertInputToOutputFormat(System.Object)">
+            <summary>
+            Takes an object from the sourceColumn corrosponding to the current mapping, and returns an object of the destinationColumn type, if possible.
+            </summary>
+            <param name="inputObject">Object that is of the type of the sourceColumn of the columnMapping</param>
+            <exception cref="T:System.InvalidCastException"></exception>
+            <returns>Object that is of the type of the destinationColumn of the columnMapping</returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.ColumnMappingCollection">
+            <summary>
+            A collection of ColumnMappings. Provides method for save collection state xml format.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.ERPIntegration.ADServiceCaller">
+            <summary>
+            Provides methods for getting data from AD services
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ADServiceCaller.GetAllData(System.String,System.String,System.String)">
+            <summary>
+            Gets data from endpoint
+            </summary>
+            <param name="endpoint">endpoint address</param>
+            <param name="secret">secret phrase</param>
+            <param name="importGroupID">Import group ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ADServiceCaller.AuthenticateUser(System.String,System.String,System.String,System.String)">
+            <summary>
+            Authenticates user
+            </summary>
+            <param name="endpoint">endpoint address</param>
+            <param name="secret">secret phrase</param>
+            <param name="userName">User name</param>
+            <param name="password">User password</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ADServiceCaller.GetBinding(System.String)">
+            <summary>
+            Creates instance of BasicHttpBinding object
+            </summary>
+            <returns>BasicHttpBinding object instance</returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.ERPIntegration.Crypto">
+            <summary>
+            Provides encrypt/decrypt methods
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.Crypto.EncryptStringAES(System.String,System.String)">
+            <summary>
+            Encrypt the given string using AES.  The string can be decrypted using 
+            DecryptStringAES().  The sharedSecret parameters must match.
+            </summary>
+            <param name="plainText">The text to encrypt.</param>
+            <param name="sharedSecret">A password used to generate a key for encryption.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.Crypto.DecryptStringAES(System.String,System.String)">
+            <summary>
+            Decrypt the given string.  Assumes the string was encrypted using 
+            EncryptStringAES(), using an identical sharedSecret.
+            </summary>
+            <param name="cipherText">The text to decrypt.</param>
+            <param name="sharedSecret">A password used to generate a key for decryption.</param>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller">
+            <summary>
+            Provides methods for getting data from ERP service
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.#ctor(System.String,Dynamicweb.Logging.ILogger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller"/> class for using a persistent WCF client connection.
+            </summary>
+            <param name="endpoint">The endpoint.</param>
+            <param name="logger">The logger.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.Dispose">
+            <summary>
+            Disposes of the persistent ERPClient connection
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetAllData(System.String,System.String,Dynamicweb.Logging.ILogger)">
+            <summary>
+            Gets all data using the persistent connection.
+            </summary>
+            <param name="secret">The secret.</param>
+            <param name="settings">The settings.</param>
+            <param name="logger">The logger.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetAllData(System.String,System.String,System.String)">
+            <summary>
+            Gets all data using a one-shot connection
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="settings">Settings</param>
+            <returns>String with data</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetAllData(System.String,System.String,System.String,Dynamicweb.Logging.ILogger)">
+            <summary>
+            Gets all data using a one-shot connection
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="settings">Settings</param>
+            <param name="logger">The logger.</param>
+            <returns>String with data</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetAllData(System.String,System.String,System.String,System.TimeSpan)">
+            <summary>
+            Gets all data using a one-shot connection
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="settings">Settings</param>
+            <param name="timeout">Timeout</param>
+            <returns>String with data</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetAllData(System.String,System.String,System.String,System.TimeSpan,Dynamicweb.Logging.ILogger)">
+            <summary>
+            Gets all data using a one-shot connection
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="settings">Settings</param>
+            <param name="timeout">Timeout</param>
+            <param name="logger">The logger.</param>
+            <returns>String with data</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetDataFromRequestString(System.String,System.String,System.String)">
+            <summary>
+            Gets the data from a request string.
+            </summary>
+            <param name="endpoint">The endpoint.</param>
+            <param name="secret">The secret.</param>
+            <param name="requestXml">The request XML.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetDataFromRequestString(System.String,System.String,System.String,Dynamicweb.Logging.ILogger)">
+            <summary>
+            Gets the data from a request string.
+            </summary>
+            <param name="endpoint">The endpoint.</param>
+            <param name="secret">The secret.</param>
+            <param name="requestXml">The request XML.</param>
+            <param name="logger">The logger.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetDataFromRequestString(System.String,System.String,System.String,System.TimeSpan)">
+            <summary>
+            Gets the data from a request string.
+            </summary>
+            <param name="endpoint">The endpoint.</param>
+            <param name="secret">The secret.</param>
+            <param name="requestXml">The request XML.</param>
+            <param name="timeout">The timeout.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetDataFromRequestString(System.String,System.String,System.String,System.TimeSpan,Dynamicweb.Logging.ILogger)">
+            <summary>
+            Gets the data from a request string.
+            </summary>
+            <param name="endpoint">The endpoint.</param>
+            <param name="secret">The secret.</param>
+            <param name="requestXml">The request XML.</param>
+            <param name="timeout">The timeout.</param>
+            <param name="logger">The logger.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetAllDataRequest(System.String)">
+            <summary>
+            Create xml request string for getting all data
+            </summary>
+            <param name="settings">Settings string</param>
+            <returns>Xml formatted string with settings values</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetUsers(System.String,System.String,System.String)">
+            <summary>
+            Requests users from ERP service
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="settings">Settings</param>
+            <returns>String result</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetUsers(System.String,System.String,System.String,Dynamicweb.Logging.ILogger)">
+            <summary>
+            Requests users from ERP service
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="settings">Settings</param>
+            <param name="logger">The logger.</param>
+            <returns>String result</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetUsers(System.String,System.String,System.String,System.TimeSpan)">
+            <summary>
+            Requests users from ERP service
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="settings">Settings</param>
+            <param name="timeout">Timeout</param>
+            <returns>String result</returns>        
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetUsers(System.String,System.String,System.String,System.TimeSpan,Dynamicweb.Logging.ILogger)">
+            <summary>
+            Requests users from ERP service
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="settings">Settings</param>
+            <param name="timeout">Timeout</param>
+            <param name="logger">The logger.</param>
+            <returns>String result</returns>        
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetUsersRequest(System.String)">
+            <summary>
+            Creates xml string request for getting users
+            </summary>
+            <param name="settings">Settings</param>
+            <returns>String result</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.PutUsers(System.String,System.String,System.String,System.String)">
+            <summary>
+            Performs PutUsers request
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="users">Users</param>
+            <param name="settings">Settings</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.PutUsers(System.String,System.String,System.String,System.String,Dynamicweb.Logging.ILogger)">
+            <summary>
+            Performs PutUsers request
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="users">Users</param>
+            <param name="settings">Settings</param>
+            <param name="logger">The logger.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.PutUsers(System.String,System.String,System.String,System.String,System.TimeSpan)">
+            <summary>
+            Performs PutUsers request
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="users">Users</param>
+            <param name="settings">Settings</param>
+            <param name="timeout">Timeout</param>
+            <returns></returns>        
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.PutUsers(System.String,System.String,System.String,System.String,System.TimeSpan,Dynamicweb.Logging.ILogger)">
+            <summary>
+            Performs PutUsers request
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="users">Users</param>
+            <param name="settings">Settings</param>
+            <param name="timeout">Timeout</param>
+            <param name="logger">The logger.</param>
+            <returns></returns>        
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.PutUsers(System.String,System.String,System.String)">
+            <summary>
+            Performs PutUsers request
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="request">Request</param>
+            <returns>String result</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.PutUsers(System.String,System.String,System.String,Dynamicweb.Logging.ILogger)">
+            <summary>
+            Performs PutUsers request
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="request">Request</param>
+            <param name="logger">The logger.</param>
+            <returns>String result</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.PutUsers(System.String,System.String,System.String,System.TimeSpan)">
+            <summary>
+            Performs PutUsers request
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="request">Request</param>
+            <param name="timeout">Timeout</param>
+            <returns>String result</returns>        
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.PutUsers(System.String,System.String,System.String,System.TimeSpan,Dynamicweb.Logging.ILogger)">
+            <summary>
+            Performs PutUsers request
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="request">Request</param>
+            <param name="timeout">Timeout</param>
+            <param name="logger">The logger.</param>
+            <returns>String result</returns>        
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetPutUsersRequest(System.String,System.String)">
+            <summary>
+            Creates GetPutUsers request text
+            </summary>
+            <param name="users">Users</param>
+            <param name="settings">Settings</param>
+            <returns>String result</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.PutOrders(System.String,System.String,System.String,System.String)">
+            <summary>
+            Performs put orders request
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="orders">Orders</param>
+            <param name="settings">Settings</param>
+            <returns>String result</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.PutOrders(System.String,System.String,System.String,System.String,Dynamicweb.Logging.ILogger)">
+            <summary>
+            Performs put orders request
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="orders">Orders</param>
+            <param name="settings">Settings</param>
+            <param name="logger">The logger.</param>
+            <returns>String result</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.PutOrders(System.String,System.String,System.String,System.String,System.TimeSpan)">
+            <summary>
+            Performs put orders request
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="orders">Orders</param>
+            <param name="settings">Settings</param>
+            <param name="timeout">Timeout</param>
+            <returns>String result</returns>        
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.PutOrders(System.String,System.String,System.String,System.String,System.TimeSpan,Dynamicweb.Logging.ILogger)">
+            <summary>
+            Performs put orders request
+            </summary>
+            <param name="endpoint">Endpoint</param>
+            <param name="secret">Secret</param>
+            <param name="orders">Orders</param>
+            <param name="settings">Settings</param>
+            <param name="timeout">Timeout</param>
+            <param name="logger">The logger.</param>
+            <returns>String result</returns>        
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.PutOrders(System.String,System.String,System.String)">
+            <summary>
+            Performs put orders request
+            </summary>
+            <param name="endpoint">The endpoint.</param>
+            <param name="secret">The secret.</param>
+            <param name="request">The request.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.PutOrders(System.String,System.String,System.String,Dynamicweb.Logging.ILogger)">
+            <summary>
+            Performs put orders request
+            </summary>
+            <param name="endpoint">The endpoint.</param>
+            <param name="secret">The secret.</param>
+            <param name="request">The request.</param>
+            <param name="logger">The logger.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.PutOrders(System.String,System.String,System.String,System.TimeSpan)">
+            <summary>
+            Performs put orders request
+            </summary>
+            <param name="endpoint">The endpoint.</param>
+            <param name="secret">The secret.</param>
+            <param name="request">The request.</param>
+            <param name="timeout">The timeout.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.PutOrders(System.String,System.String,System.String,System.TimeSpan,Dynamicweb.Logging.ILogger)">
+            <summary>
+            Performs put orders request
+            </summary>
+            <param name="endpoint">The endpoint.</param>
+            <param name="secret">The secret.</param>
+            <param name="request">The request.</param>
+            <param name="timeout">The timeout.</param>
+            <param name="logger">The logger.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.ERPIntegration.ErpServiceCaller.GetPutOrdersRequest(System.String,System.String)">
+            <summary>
+            Creates xml string request for put order operation
+            </summary>
+            <param name="orders">Orders</param>
+            <param name="settings">Settings</param>
+            <returns>String</returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.Index">
+            <summary>
+            Represents a datatable index
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Index.Name">
+            <summary>
+            Index name
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Index.IsUnique">
+            <summary>
+            Is undex unique
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Index.KeyColumns">
+            <summary>
+            Key columns
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Index.IncludedColumns">
+            <summary>
+            Included columns list
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Index.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.Interfaces.IDestinationWriter">
+            <summary>
+            Add this interface if you are inheriting from a provider that is a destination writer
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Interfaces.IDestinationWriter.Mapping">
+            <summary>
+            Gets the mapping.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.IDestinationWriter.Write(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Writes the specified row.
+            </summary>
+            <param name="Row">The row to be written.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.IDestinationWriter.Close">
+            <summary>
+            Closes this instance.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.Interfaces.IDestination">
+            <summary>
+            Add this interface if you are inheriting from a provider that is a destination
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.IDestination.GetSchema">
+            <summary>
+            Get Destination Tables Schema.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.IDestination.GetOriginalDestinationSchema">
+            <summary>
+            Get recent Destination Tables Schema from the Destination source.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.IDestination.OverwriteDestinationSchemaToOriginal">
+            <summary>
+            Update current tables schema with most recent schema.
+            Needed for updation of possible old schema loaded from the xml job settings.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.IDestination.Serialize">
+            <summary>
+            Serializes this instance for use in AddinSelectors.
+            Output must be of the format <xxx>yyy</xxx>, 
+            where xxx is the name of AddinParamter, as defined in the decoration, 
+            and yyy is the value assigned to the paramter
+            </summary>
+            <returns>Serialized XML output describing addin paramters</returns>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Interfaces.IDestination.WorkingDirectory">
+            <summary>
+            Gets or sets the working directory. When used for testing, all paths for standard providers are relative to this path.
+            </summary>
+            <value>
+            The working directory.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Interfaces.IDestination.FilesFolderName">
+            <summary>
+             The Name of the files folder in the current installation of Dynamicweb. Empty if used for test.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.IDestination.ValidateDestinationSettings">
+            <summary>
+            Validates the destination settings. Used to validate properties when created by the AddinSelector.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Interfaces.IDestination.SchemaIsEditable">
+            <summary>
+            Gets or sets a value indicating whether the schema is editable.
+            </summary>
+            <value>
+              <c>true</c> if schema is editable; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.IDestination.SaveAsXml(System.Xml.XmlTextWriter)">
+            <summary>
+            Saves as XML. 
+            </summary>
+            <param name="textWriter">The XMLTextWriter.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.IDestination.RunJob(Dynamicweb.DataIntegration.Integration.Job)">
+            <summary>
+            Runs the job. This is where the majority of the work is done.
+            </summary>
+            <param name="job">The job to be run.</param>        
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.IDestination.UpdateDestinationSettings(Dynamicweb.DataIntegration.Integration.Interfaces.IDestination)">
+            <summary>
+            Updates the destination settings of the current instance to match the settings of the "destination" paramter.
+            </summary>
+            <param name="destination">The destination.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.IDestination.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>        
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Interfaces.IDestination.Logger">
+            <summary>
+            Logger
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.Interfaces.IERPIntegration">
+            <summary>
+            This interface is used in ScheduledTask's pages for add-in selector control to show-up the add-ins for ERP Batch Integration
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.Interfaces.INotDestination">
+            <summary>
+            Add this interface if you are inheriting from a provider that is a destination, but you do not wish for this provider to show up in the destination dropdown.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.Interfaces.INotSource">
+            <summary>
+            Add this interface if you are inheriting from a provider that is a source, but you do not wish for this provider to show up in the source dropdown.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.Interfaces.IParameterizedDestination">
+            <summary>
+            IParameterizedDestination interface for conditions filtering parameters coming from query string
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Interfaces.IParameterizedDestination.Parameters">
+            <summary>
+            Conditions filtering parameters with values
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.Interfaces.ISource">
+            <summary>
+            Add this interface if you are inheriting from a provider that is a source
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.ISource.GetSchema">
+            <summary>
+            Gets the schema.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.ISource.GetOriginalSourceSchema">
+            <summary>
+            Get recent Source Tables Schema from source.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.ISource.OverwriteSourceSchemaToOriginal">
+            <summary>
+            Update current tables schema with most recent schema.
+            Needed for updation of possible old schema loaded from the xml job settings.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.ISource.GetReader(Dynamicweb.DataIntegration.Integration.Mapping)">
+            <summary>
+            Gets the reader.
+            </summary>
+            <param name="mapping">The mapping.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.ISource.Close">
+            <summary>
+            Closes this instance.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.ISource.Serialize">
+            <summary>
+            Serializes this instance for use in AddinSelectors.
+            Output must be of the format <xxx>yyy</xxx>, 
+            where xxx is the name of AddinParamter, as defined in the decoration, 
+            and yyy is the value assigned to the paramter
+            </summary>
+            <returns>Serialized XML output describing addin paramters</returns>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Interfaces.ISource.WorkingDirectory">
+            <summary>
+            Gets or sets the working directory. When used for testing, all paths for standard providers are relative to this path.
+            </summary>
+            <value>
+            The working directory.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Interfaces.ISource.FilesFolderName">
+            <summary>
+             The Name of the files folder in the current installation of Dynamicweb. Empty if used for test.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.ISource.ValidateSourceSettings">
+            <summary>
+            Validates the source settings. Used to validate properties when created by the AddinSelector.
+            </summary>
+            <returns>Tuple of message text and message type</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.ISource.SaveAsXml(System.Xml.XmlTextWriter)">
+            <summary>
+            Saves as XML.
+            </summary>
+            <param name="textWriter">The XmlTextWriter.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.ISource.UpdateSourceSettings(Dynamicweb.DataIntegration.Integration.Interfaces.ISource)">
+            <summary>
+            Updates the source settings of the current instance to match the settings of the "destination" paramter.
+            </summary>
+            <param name="source">The source.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.ISource.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>        
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.ISource.LoadSettings(Dynamicweb.DataIntegration.Integration.Job)">
+            <summary>
+            Loads from the input when the job is run.
+            
+            This method is run when a job is run, before the actual data transfer takes place.
+            The purpose is to allow settings for source and destination providers to be changed at runtime.
+            </summary>
+            <param name="job">The job.</param>        
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.ISource.CheckCondition(Dynamicweb.DataIntegration.Integration.MappingConditional,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Checks the condition.
+            </summary>
+            <param name="mc">The mapping Conditional Collection</param>
+            <param name="row">The row.</param>
+            <returns> True if the condition is met, false otherwise</returns>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Interfaces.ISource.Logger">
+            <summary>
+            Logger
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.Interfaces.ISourceReader">
+            <summary>
+            Defines methods for objects aimed to read data from data source
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.ISourceReader.IsDone">
+            <summary>
+            Determines whether this instance is done reading from the source.
+            </summary>
+            <returns>
+              <c>true</c> if this instance is done; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Interfaces.ISourceReader.GetNext">
+            <summary>
+            Gets the next line.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.Job">
+            <summary>
+            This class describes one data transfer job. 
+            It can be saved to disk, reloaded and run again, assuming the schema of the source and the destination hasn't changed.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.Job.AsTransaction">
+            <summary>
+            Indicates if, if possible, the job should be run as a transaction. 
+            Mostly relevant when the destination is an SQL server. Can only be changed by editing the saved XML job.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.Job.CreateMappingAtRuntime">
+            <summary>
+            Indicates if column mappings should be created automatically at runtime, for the mappings added to the job.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.Job.Name">
+            <summary>
+            Name of the job. The name of the XML file the job is saved to/loaded from.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Job.Mappings">
+            <summary>
+            Gets or sets the mapping collection.
+            </summary>
+            <value>
+            The mapping collection.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Job.MappingErrors">
+            <summary>
+            List of mapping errors
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Job.NotificationSettings">
+            <summary>
+            Notification settings
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Job.Source">
+            <summary>
+            Gets the source.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Job.Destination">
+            <summary>
+            Gets or sets the destination of the job.
+            </summary>
+            <value>
+            The destination.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Job.Logger">
+            <summary>
+            Logger
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Job.#ctor(Dynamicweb.DataIntegration.Integration.Interfaces.ISource,Dynamicweb.DataIntegration.Integration.Interfaces.IDestination)">
+            <summary>
+            Initializes an empty job
+            </summary>
+            <param name="source">data source</param>
+            <param name="destination">data destination</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Job.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.Job"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Job.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a job from an XML Document
+            </summary>
+            <param name="path">uri to the XML document.</param>
+            <param name="logFile">path of logfile</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Job.SaveAsXml(System.String)">
+            <summary>
+            Saves the job in an XML document
+            </summary>
+            <param name="savePath">uri to save the document to</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Job.AddMapping">
+            <summary>
+            Adds a table mapping to the job. The new table mapping is returned.
+            The mapping is empty, so sourceTable and destinationTable should be set.
+            </summary>
+            <returns>Mapping object instance</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Job.Run">
+            <summary>
+            Runs this job.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Job.CreateMappings">
+            <summary>
+            Runs through the mappings in the job, 
+            and creates column mappings where the names of source columns match the name of a column in the destination column.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Job.UpdateSourceSetting(System.String,System.String)">
+            <summary>
+            Uses reflection to update a property on the source in this job.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Job.UpdateDestinationSetting(System.String,System.String)">
+            <summary>
+            Uses reflection to update a property on the source in this job.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Job.GetJobInformation(System.String,System.String)">
+            <summary>
+            Gets the job name and description from job XML Document
+            </summary>
+            <param name="path">uri to the XML document.</param>
+            <param name="logFile">path of logfile</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Job.GetAdapters">
+            <summary>
+            Gets job adapters
+            </summary>        
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.Mapping">
+            <summary>
+            Contains the table mapping part of a schema. 
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Mapping.Source">
+            <summary>
+            Gets the source provider this mapping references.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Mapping.Active">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Dynamicweb.DataIntegration.Integration.Mapping"/> is active.
+            </summary>
+            <value>
+              <c>true</c> if active; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Mapping.Destination">
+            <summary>
+            Gets the destination provider this mapping references.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Mapping.DeleteRowsMissingFromSource">
+            <summary>
+            Gets or sets a value indicating whether the destination table should be cleaned out after the job is finished, 
+            by removing any row that was not part of the input data for the job.
+            </summary>
+            <value>
+            	<c>true</c> if missing rows should be deleted; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Mapping.Conditionals">
+            <summary>
+            Gets the conditionals for the mapping. 
+            Conditionals describe which conditions must be met for a row to be imported.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.Mapping.MappingDestinationInitialized">
+            <summary>
+            Used to indicate if mapping-specific initialization in the destination has been completed
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Mapping.GetId">
+            <summary>
+            Gets the id.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Mapping.SourceTable">
+            <summary>
+            Gets or sets the source table.
+            </summary>
+            <value>
+            The source table.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Mapping.DestinationTable">
+            <summary>
+            Gets or sets the destination table.
+            </summary>
+            <value>
+            The destination table.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Mapping.ScriptClass">
+            <summary>
+            Table script class for the input row processing
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Mapping.Options">
+            <summary>
+            Table specific Options
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Mapping.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.Mapping"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Mapping.#ctor(Dynamicweb.DataIntegration.Integration.Interfaces.ISource,Dynamicweb.DataIntegration.Integration.Interfaces.IDestination,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.Mapping"/> class.
+            Generally, when adding a mapping to a job, one should use Job.AddMapping(). 
+            </summary>
+            <param name="source">The source.</param>
+            <param name="destination">The destination.</param>
+            <param name="id">The id.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Mapping.AddMapping(Dynamicweb.DataIntegration.Integration.Column,Dynamicweb.DataIntegration.Integration.Column)">
+            <summary>
+            Adds a columnMapping to the mapping.
+            </summary>
+            <param name="sourceColumn">The source column.</param>
+            <param name="destinationColumn">The destination column.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Mapping.AddMapping(Dynamicweb.DataIntegration.Integration.Column,Dynamicweb.DataIntegration.Integration.Column,System.Boolean)">
+            <summary>
+            adds a columnMapping to the mapping. isKey indicated if this column should be used to compare incomming rows to existing rows.
+            </summary>
+            <param name="sourceColumn"></param>
+            <param name="destinationColumn"></param>
+            <param name="isKey"></param>
+            <returns>true if the mapping can be added, that is, source and destination tables match existing columns. False if the mapping cannot be added</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Mapping.RemoveMapping(Dynamicweb.DataIntegration.Integration.ColumnMapping)">
+            <summary>
+            Removes the ColumnMapping.
+            </summary>
+            <param name="cm">The cm.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Mapping.AddConditional(Dynamicweb.DataIntegration.Integration.Column,Dynamicweb.DataIntegration.Integration.ConditionalOperator,System.String)">
+            <summary>
+            Adds a conditional to the mapping.
+            </summary>
+            <param name="sourceColumn">The source column.</param>
+            <param name="conditionalOperator">The conditional operator.</param>
+            <param name="condition">The condition.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Mapping.GetColumnMappings(System.Boolean)">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Mapping.GetConditionColumns(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets the columns from mapping conditions.
+            </summary>
+            <param name="columnsToSkip">The columns to skip.</param>
+            <returns>IEnumerable&lt;Column&gt;.</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Mapping.GetSourceColumns(System.Boolean,System.Boolean)">
+            <summary>
+            Gets the source columns.
+            </summary>
+            <param name="includeOnlyActiveColumns">if set to <c>true</c> includes only active mapping columns. Otherwise includes all mapping columns.</param>
+            <param name="includeConditionColumns">if set to <c>true</c> included condition columns.</param>
+            <returns>IEnumerable&lt;Column&gt;.</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Mapping.ClearColumnMappings">
+            <summary>
+            Removes all ColumnMappings from the mapping.
+            Removes all ColumnMappings from the mapping.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Mapping.AddMapping(System.String,System.String,System.Boolean)">
+            <remarks>simple addMapping, used for testing;</remarks>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Mapping.GetOptionValue(System.String)">
+            <summary>
+            Gets mapping option value
+            </summary>        
+            <param name="option">Option</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.MappingCollection">
+            <summary>
+            Collection of mappings that make up a Job
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.MappingCollection.SaveAsXML(System.Xml.XmlTextWriter)">
+            <summary>
+            writes the contents of the mappingCollection to the xmlTextWriter
+            </summary>
+            <param name="xmlTextWriter"></param>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.MappingConditional">
+            <summary>
+            Used to describe the conditions that must be met for a row to be included in a job.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.MappingConditional.SourceColumn">
+            <summary>
+            Gets or sets the source column.
+            </summary>
+            <value>
+            The source column.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.MappingConditional.ConditionalOperator">
+            <summary>
+            Gets or sets the conditional operator.
+            The options are: 
+            * LessThan
+            * GreateThan
+            * Equals 
+            * Contains
+            </summary>
+            <value>
+            The conditional operator.
+            </value>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.MappingConditional.Source">
+            <summary>
+            The Source this conditional is to be applied to.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.MappingConditional.GetId">
+            <summary>
+            Gets the id.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.MappingConditional.Condition">
+            <summary>
+            Gets or sets the string which is used in the comparison.
+            </summary>
+            <value>
+            The condition.
+            </value>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.MappingConditional.NullStringFilteringConditionValue">
+            <summary>
+            Condition value for filtering on NULL strings. It is used in *Equals condition operator for SQL provider
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.DataIntegration.Integration.MappingConditional.NullOrEmptyStringFilteringConditionValue">
+            <summary>
+            Condition value for filtering on NULL OR Empty strings. It is used in *Equals condition operator for SQL provider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.MappingConditional.IsNullStringCondition">
+            <summary>
+            Returns true if null string filtering
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.MappingConditional.IsNullOrEmptyStringCondition">
+            <summary>
+            Returns true if null or empty string filtering
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.MappingConditional.Mapping">
+            <summary>
+            Table Mapping
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.MappingConditional.#ctor(Dynamicweb.DataIntegration.Integration.Interfaces.ISource,Dynamicweb.DataIntegration.Integration.Column,Dynamicweb.DataIntegration.Integration.ConditionalOperator,System.String,System.Int32,Dynamicweb.DataIntegration.Integration.Mapping)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.MappingConditional" /> class.
+            </summary>
+            <param name="source">The Isource the conditional is to be applied to</param>
+            <param name="sourceColumn">The source column.</param>
+            <param name="conditionalOperator">The conditional operator.</param>
+            <param name="condition">The condition.</param>
+            <param name="id">The id.</param>
+            <param name="mapping">The mapping.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.MappingConditional.#ctor(System.Xml.XmlNode,Dynamicweb.DataIntegration.Integration.Mapping,System.Int32,Dynamicweb.DataIntegration.Integration.Interfaces.ISource)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.MappingConditional"/> class from XML input. This is used when an activity is saved
+            </summary>
+            <param name="xmlNode">The XML node.</param>
+            <param name="mapping">The mapping.</param>
+            <param name="id">The id.</param>
+            <param name="source">The source.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.MappingConditional.ConditionalOperatorSqlValue(Dynamicweb.DataIntegration.Integration.ConditionalOperator)">
+            <summary>
+            Gets the string equivalent for the conditional, for use in SQL query strings.
+            </summary>
+            <param name="conditionalOperator">The op.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.MappingConditional.TryParse(System.String,Dynamicweb.DataIntegration.Integration.ConditionalOperator@)">
+            <summary>
+            Tries to parse conditional string to the ConditionalOperator equivalent
+            </summary>
+            <param name="stringOperator">The conditional string operator.</param>
+            <param name="conditionalOperator">Parsed conditionalOperator</param>        
+            <returns>True if condition was parsed. Otherwise false.</returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.MappingConditionalCollection">
+            <summary>
+            A collection of MappingConditionals
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.MappingConditionalCollection.CheckConditionals(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Checks conditionals
+            </summary>
+            <param name="row">set of kv pairs</param>
+            <returns>Result of conditions check</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.MappingConditionalCollection.GetConditionalsSql(System.Collections.Generic.List{System.Data.SqlClient.SqlParameter}@)">
+            <summary>
+            Gets conditionals sql command text
+            </summary>
+            <param name="parameters">sql commad parameters</param>
+            <returns>String value</returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.NotificationSettings">
+            <summary>
+            Contains E-mails notification setings
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.NotificationSettings.SaveAsXML(System.Xml.XmlTextWriter)">
+            <summary>
+            Writes the contents of the mappingCollection to the xmlTextWriter
+            </summary>
+            <param name="xmlTextWriter"></param>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.SchemaComparer">
+            <summary>
+            Helper class for comparing schemas and finding errors in old schemas and most recent and mapping
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.SchemaComparer.CompareSchemas(Dynamicweb.DataIntegration.Integration.Interfaces.ISource,Dynamicweb.DataIntegration.Integration.Interfaces.IDestination,Dynamicweb.DataIntegration.Integration.MappingCollection)">
+            <summary>
+            Compares schemas and check errors in them and mapping
+            </summary>
+            <param name="source">Source Provider</param>
+            <param name="destination">Destination Provider</param>
+            <param name="mappings">Job Mappings</param>
+            <returns>Returns Errors Found</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.SchemaComparer.UpdateMappings(Dynamicweb.DataIntegration.Integration.Interfaces.ISource,Dynamicweb.DataIntegration.Integration.Interfaces.IDestination,Dynamicweb.DataIntegration.Integration.MappingCollection)">
+            <summary>
+            Updates tables in Mapping
+            </summary>        
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.SchemaComparer.GetType(System.String,System.Collections.Generic.IEnumerable{System.Type})">
+            <summary>
+            Gets the type from string type name.
+            Used to search corresponded new types for old jobs from 8.x version
+            </summary>
+            <param name="typeName">type name to search</param>
+            <param name="typesToSearch">collection of types to search by corresponded full name</param>
+            <returns>Type</returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.TableCollection">
+            <summary>
+            A collection of tables.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.Schema">
+            <summary>
+            Describes a schema for a datasource/Destination. 
+            Additionally, describes any additions needed to the schema, such as new Tables or 
+            columns that should be added when a job is run.
+            
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Schema.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Initializes a schema from XML.
+            </summary>
+            <param name="node">xmlNode containing the schema.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Schema.#ctor">
+            <summary>
+            Initializes a new empty instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.Schema"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Schema.SaveAsXml(System.Xml.XmlTextWriter)">
+            <summary>
+            Writesthe schema as XML to the xmlTextWriter.
+            </summary>
+            <param name="xmlTextWriter">The XML text writer.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Schema.AddTable(System.String)">
+            <summary>
+            add a table to the schema that already exists in the source/destination
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Schema.AddTable(System.String,System.String)">
+            <summary>
+            add a table to the schema that already exists in the source/destination
+            </summary>
+            <param name="tableName"></param>
+            <param name="sqlSchema"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Schema.AddNewTable(System.String,System.String)">
+            <summary>
+            add a table to the schema that should be created in the destination when the import/export job is run
+            </summary>
+            <param name="tableName"></param>
+            <param name="sqlSchema"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Schema.GetTables">
+            <summary>
+            Gets the tables.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Schema.RemoveTable(Dynamicweb.DataIntegration.Integration.Table)">
+            <summary>
+            Removes the table from the schema.
+            </summary>
+            <param name="table">The table.</param>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.BaseSourceReader">
+            <summary>
+            Base source reader
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.BaseSourceReader.IsDone">
+            <summary>
+            Shows if read is done
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.BaseSourceReader.GetNext">
+            <summary>
+            Gets next enumerator item
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.BaseSourceReader.Close">
+            <summary>
+            Closes reader
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.BaseSourceReader.Dispose">
+            <summary>
+            Frees all used resoures
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Integration.Table">
+            <summary>
+            Used to describe a table in a schema.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Table.Columns">
+            <summary>
+            Gets the columns.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Table.Schema">
+            <summary>
+            Gets or sets the schema that this column belongs to.
+            </summary>
+            <value>
+            The schema.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Table.Name">
+            <summary>
+            Gets the name.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Table.SqlSchema">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Integration.Table.IsNew">
+            <summary>
+            Gets a value indicating whether this instance is new, and is to be added to the destination when the job is run.
+            </summary>
+            <value>
+              <c>true</c> if this instance is new; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Table.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.Table"/> class from XML input.
+            </summary>
+            <param name="xmlNode">The XML node.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Table.#ctor(System.String,Dynamicweb.DataIntegration.Integration.Schema,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.Table"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="schema">The schema.</param>
+            <param name="sqlSchema">The SQL schema.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Table.#ctor">
+            <summary>
+            Empty constructor, needed for testing. Should not be used.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Table.#ctor(System.String,Dynamicweb.DataIntegration.Integration.Schema,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.DataIntegration.Integration.Table"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="schema">The schema.</param>
+            <param name="sqlSchema">The SQL schema.</param>
+            <param name="isNew">if set to <c>true</c> , this table is to be added to the destination when the job is run.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Table.AddColumn(Dynamicweb.DataIntegration.Integration.Column)">
+            <summary>
+            Adds the column to the table.
+            </summary>
+            <param name="column">The column.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Table.AddColumn(System.String,System.Type)">
+            <summary>
+            Adds the column to the table.
+            </summary>
+            <param name="columnName">The name of the column.</param>
+            <param name="columnType">The type of the column.</param>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Integration.Table.AddNewColumn(System.String,System.Type,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Adds the new column to the table. This column will bed added to the table, when  the job is run.
+            </summary>
+            <param name="columnName">Name of the column.</param>
+            <param name="type">The type.</param>
+            <param name="limit">The limit.</param>
+            <param name="isIdentity">if set to <c>true</c> [is identity].</param>
+            <param name="isPrimaryKey">if set to <c>true</c> [is primary key].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.ProviderHelpers.DuplicateRowsHandler.GetTableKeyColumns(System.String)">
+            <summary>
+            Gets the specified table primary key columns list
+            </summary>
+            <param name="tableName">The table name</param>
+            <returns>Table columns if found, otherwise empty list</returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.ProviderHelpers.SQLTable.GetDecimalColumnsType(System.Data.SqlClient.SqlCommand,System.Collections.Generic.List{Dynamicweb.DataIntegration.ProviderHelpers.SqlColumn})">
+            <summary>
+            Gets the full decimal columns type with precision and scale like decimal(p,s)
+            </summary>        
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.ProviderHelpers.ValueFormatter.GetFormattedValue(System.Object,System.Globalization.CultureInfo,Dynamicweb.DataIntegration.Integration.ScriptType,System.String)">
+            <summary>
+            Gets the formatted to specific culture numeric value
+            </summary>
+            <param name="value">value to be formatted</param>
+            <param name="ci">Culture Info</param>
+            <param name="scriptType">Script type</param>
+            <param name="scriptValue">Script value</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

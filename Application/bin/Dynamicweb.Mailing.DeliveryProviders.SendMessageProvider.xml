@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Mailing.DeliveryProviders.SendMessageProvider</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Mailing.DeliveryProviders.SendMessageProvider.SendMessageProvider">
+            <summary>
+            Dynamicweb Send Provider class
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Mailing.DeliveryProviders.SendMessageProvider.SendMessageProvider.Deliver(System.Net.Mail.MailMessage)">
+            <summary>
+            Delivers MailMessage using SmtpClient
+            </summary>
+            <param name="mailMessage">email message</param>
+            <returns>True if message delivery was successfull</returns>
+        </member>
+    </members>
+</doc>

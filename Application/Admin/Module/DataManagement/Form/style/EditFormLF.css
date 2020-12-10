@@ -1,0 +1,61 @@
+﻿body {
+    border-left: 0px;
+    border-right: 0px;
+}
+
+div#content {
+    overflow: auto;
+    position: relative;
+    min-height: 100px;
+}
+
+.formFieldInput {
+    border-collapse: collapse;
+}
+
+.formHiddenArea {
+    visibility: hidden;
+}
+
+.formListFields {
+    border: 1px solid #bfdbff;
+    width: 100%;
+    margin-bottom: 4px;
+    background-color: #FFFFFF;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.formFieldSettings {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 248px;
+}
+
+.formSettingsDiv {
+    float: left;
+    width: 100%;
+}
+
+.formSettingsTable {
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+    .formSettingsTable td {
+        vertical-align: middle;
+        padding: 5px 8px;
+    }
+
+    .formSettingsTable tr td:first-child {
+        width: 170px;
+    }
+
+#mytabs {
+    width: 100% !important;
+}
+
+#optionSource {
+    background-color: #ffffff;
+}

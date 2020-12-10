@@ -1,0 +1,62 @@
+﻿.card-body {
+    padding: 30px !important;
+    padding-bottom: 25px !important;
+}
+
+    .card-body .row {
+        margin-bottom: 0;
+    }
+
+    .card-body h2 {
+        display: inline-block;
+        color: #51534A !important;
+        font-weight: 500 !important;
+        font-size: 38px !important;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+/*make the "Remember me" checkbox focusable using Tab key*/
+#usecookiea {
+    display: block;
+    position: absolute;
+    opacity: 0;
+}
+#usecookiea:focus + label::before {
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.34);
+    transition: all 200ms;
+}
+
+.signin-button {
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.checkbox {
+    width: 17px !important;
+    margin-right: 0 !important;
+}
+
+.partner-box {
+    font-size: 12px;
+    margin-top: 77px;
+}
+
+    .partner-box h5 {
+        color: #838383;
+    }
+
+.groupbox {
+    margin-bottom: 0px !important;
+}
+
+#warning {
+    margin-bottom: 15px;
+}
+
+#cookieswarning {
+	display: none;
+}

@@ -1,0 +1,37 @@
+TABLE, TD {
+	padding: 0px;
+	font-family:verdana, arial;
+	font-size: 11px;
+}
+
+.clean TABLE, TD {
+	padding: 0px;
+	font-family:verdana, arial;
+	font-size: 11px;
+}
+
+img {
+	border:0px;
+}
+
+.H {
+	cursor: pointer;
+}
+
+strong {
+	font-weight:bold;
+}
+
+.preview a {
+	font-family:verdana, arial;
+	font-size: 11px;
+	text-decoration:none;
+	color:#000000;
+}
+
+.preview a:hover {
+	font-family:verdana, arial;
+	font-size: 11px;
+	text-decoration:Underline;
+	color:#000000;
+}

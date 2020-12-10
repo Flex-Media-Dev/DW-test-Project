@@ -1,0 +1,72 @@
+﻿<div class="popup-dialog" id="dlgSearch" style="width: 450px;" onmousedown="dialog.floatTop('dlgSearch');">
+    <table class="popup-dialog-border" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td class="popup-dialog-tl"></td>
+            <td id="H_dlgSearch" class="popup-dialog-title">
+                <h2><span id="T_dlgSearch">Build</span></h2>
+                <a class="popup-dialog-close" href="javascript:void(0);" onclick="dialog.hide('dlgSearch');"></a>
+            </td>
+            <td class="popup-dialog-tr"></td>
+        </tr>
+        <tr>
+            <td class="popup-dialog-ml"></td>
+            <td class="popup-dialog-content">
+
+                <!-- CONTENT START -->
+
+                <fieldset style='margin:5px;'>
+                    <legend class='gbTitle'>Parameters&nbsp;</legend>
+                    <table border="0">
+                        <tr ng-repeat="parameter in query.Parameters">
+                            <td class="left-label">
+                                <label>
+                                    {{parameter.Name}}
+                                </label>
+                            </td>
+                            <td>
+                                <input name="dlgSearchName" ng-model="search[parameter.Name]" type="text" class="std name" value="{{parameter.DefaultValue}}" style="width: 200px" onkeyup="" />
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                                
+                <fieldset style="margin:5px;">
+                    <legend class='gbTitle'>Result&nbsp;</legend>
+                    <table border="0">
+                        <tr>
+                            <td>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset style='margin:5px;'>
+                    <legend class='gbTitle'>Debug&nbsp;</legend>
+                    {{search | json}}
+                </fieldset>
+
+                <!-- CONTENT END -->
+                <!-- BUTTOMS START -->
+
+                <div class="separator-10">&nbsp;</div>
+                <div class="popup-dialog-buttons">
+                    <div class="popup-operation-indicator" style="display: none">
+                        <img border="0" alt="" title="" />
+                        <span></span>
+                    </div>
+                    <button type="button" class="dialog-button-ok" ng-click="executeQuery();">OK</button>
+                    <button type="button" class="dialog-button-cancel" onclick="dialog.hide('dlgSearch');return false;">Close</button>
+                </div>
+
+                <!-- BUTTOMS END -->
+
+            </td>
+            <td class="popup-dialog-mr"></td>
+        </tr>
+        <tr>
+            <td class="popup-dialog-bl"></td>
+            <td class="popup-dialog-bm"></td>
+            <td class="popup-dialog-br"></td>
+        </tr>
+    </table>
+</div>

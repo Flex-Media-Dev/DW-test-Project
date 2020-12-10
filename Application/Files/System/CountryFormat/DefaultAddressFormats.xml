@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AddressFormats>
+  <FallbackFormat>    
+    <FormatLine>{firstName} {lastName}</FormatLine>
+    <FormatLine>{company}</FormatLine>
+    <FormatLine>{address1}</FormatLine>
+    <FormatLine>{address2}</FormatLine>
+    <FormatLine>{city} {region} {zip}</FormatLine>
+    <FormatLine>{country}</FormatLine>
+    <FormatLine>{phone}</FormatLine>
+  </FallbackFormat>
+  <Format countryCode="CN">
+    <FormatLine>{country}</FormatLine>
+    <FormatLine>{region} {city}</FormatLine>
+    <FormatLine>{address1}</FormatLine>
+    <FormatLine>{lastName} {firstName}</FormatLine>
+  </Format>
+  <Format countryCode="DK">
+    <FormatLine>{firstName} {lastName}</FormatLine>
+    <FormatLine>{company}</FormatLine>
+    <FormatLine>{address1}</FormatLine>
+    <FormatLine>{address2}</FormatLine>
+    <FormatLine>{zip}  {city}</FormatLine>
+    <FormatLine>{country}</FormatLine>
+  </Format>
+  <Format countryCode="MY">
+    <FormatLine>{firstName} {lastName}</FormatLine>
+    <FormatLine>{company}</FormatLine>
+    <FormatLine>{address1}</FormatLine>
+    <FormatLine>{address2}</FormatLine>
+    <FormatLine>{zip} {city}</FormatLine>
+    <FormatLine>{region} {country}</FormatLine>
+  </Format>
+  <Format countryCode="NL">
+    <FormatLine>{firstName} {lastName}</FormatLine>
+    <FormatLine>{company}</FormatLine>
+    <FormatLine>{address1}</FormatLine>
+    <FormatLine>{address2}</FormatLine>
+    <FormatLine>{zip}  {city}</FormatLine>
+    <FormatLine>{country}</FormatLine>
+  </Format>
+  <Format countryCode="NO">
+    <FormatLine>{company}</FormatLine>
+    <FormatLine>{address1}</FormatLine>
+    <FormatLine>{firstName} {lastName}</FormatLine>
+    <FormatLine>{address2}</FormatLine>
+    <FormatLine>{zip} {city}</FormatLine>
+    <FormatLine>{country}</FormatLine>
+  </Format>
+  <Format countryCode="RO">
+    <FormatLine>{firstName} {lastName}</FormatLine>
+    <FormatLine>{company}</FormatLine>
+    <FormatLine>{address1}</FormatLine>
+    <FormatLine>{address2}</FormatLine>
+    <FormatLine>{zip} {city}</FormatLine>
+    <FormatLine>{region}</FormatLine>
+    <FormatLine>{country}</FormatLine>
+  </Format>
+  <Format countryCode="SE">
+    <FormatLine>{company}</FormatLine>
+    <FormatLine>{firstName} {lastName}</FormatLine>
+    <FormatLine>{address1}</FormatLine>
+    <FormatLine>{address2}</FormatLine>
+    <FormatLine>{zip}  {city}</FormatLine>
+    <FormatLine>{country}</FormatLine>
+  </Format>
+  <Format countryCode="US">
+    <FormatLine>{firstName} {lastName}</FormatLine>
+    <FormatLine>{company}</FormatLine>
+    <FormatLine>{address1}</FormatLine>
+    <FormatLine>{address2}</FormatLine>
+    <FormatLine>{city}, {region} {zip}</FormatLine>
+    <FormatLine>{country}</FormatLine>
+  </Format>
+</AddressFormats>

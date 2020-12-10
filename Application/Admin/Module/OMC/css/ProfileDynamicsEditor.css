@@ -1,0 +1,291 @@
+﻿.omc-dynamics-edit
+{
+    margin: 5px;
+    padding: 0px;
+}
+
+.omc-dynamics-edit-clear
+{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    
+    clear: both;
+    content: ".";
+    height: 0px;
+    display: block;
+    visibility: hidden;
+}
+
+.omc-dynamics-edit-list-item
+{
+    margin-left: 2px;
+    white-space: nowrap;
+    font-size: 11px;
+}
+
+.omc-dynamics-edit p
+{
+    padding-left: 5px;
+}
+
+.omc-dynamics-edit-disabled,
+.omc-dynamics-edit-disabled label
+{
+    color: #9a9a9a !important;
+}
+
+.omc-dynamics-edit fieldset.omc-dynamics-edit-choice-section
+{
+    margin: 0px;
+    padding: 0px;
+    margin-right: 10px;
+}
+
+.omc-dynamics-edit-choice-content
+{
+    margin: 0px;
+    padding: 5px;
+}
+
+.omc-dynamics-edit fieldset.omc-dynamics-edit-choice-section legend span
+{
+    display: block;
+}
+
+.omc-dynamics-edit fieldset.omc-dynamics-edit-choice-section legend span input,
+.omc-dynamics-edit fieldset.omc-dynamics-edit-choice-section legend span label
+{
+    float: left;
+}
+
+.omc-dynamics-edit fieldset.omc-dynamics-edit-choice-section legend span label
+{
+    margin-top: 3px;
+    margin-right: 5px;
+}
+
+.omc-dynamics-edit fieldset.omc-dynamics-edit-choice-section legend span span
+{
+    display: block;
+    visibility: hidden;
+    height: 0px;
+    clear: both;
+}
+
+.omc-dynamics-edit fieldset.omc-dynamics-edit-choice-section legend input,
+.omc-dynamics-edit fieldset.omc-dynamics-edit-choice-section legend input:active,
+.omc-dynamics-edit fieldset.omc-dynamics-edit-choice-section legend input:hover,
+.omc-dynamics-edit fieldset.omc-dynamics-edit-choice-section legend input:focus
+{
+    outline: none;
+    width: 14px;
+    height: 14px;     
+}
+
+.omc-dynamics-edit-constraint
+{
+    margin: 0px;
+    padding: 0px;
+    padding-top: 4px;
+    padding-left: 7px;
+    padding-bottom: 8px;
+}
+
+.omc-dynamics-edit-constraint p
+{
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.omc-dynamics-edit-constraint a,
+.omc-dynamics-edit-constraint a:hover
+{
+    color: #0c4f88 !important;    
+    text-decoration: none !important;
+}
+
+.omc-dynamics-edit-constraint a:active,
+.omc-dynamics-edit-constraint a:focus
+{
+    outline: none !important;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-content .omc-dynamics-edit-profiles-container
+{
+    margin: 0px;
+    padding: 0px;
+    
+    width: 250px;
+    
+    overflow: hidden;
+    border: 1px solid #9faec2;
+    background-color: #ffffff;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-content ul.omc-dynamics-edit-profiles-header,
+.omc-dynamics-edit .omc-dynamics-edit-choice-content ul.omc-dynamics-edit-profiles-header li
+{
+    float: left;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-content ul.omc-dynamics-edit-profiles-header
+{
+    border-bottom: 1px solid #bdcce0;
+    
+    background-image: url('/Admin/Images/Ribbon/UI/List/Pipe.gif');
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    
+    cursor: default;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-content ul.omc-dynamics-edit-profiles-header li span.omc-dynamics-edit-profiles-cell-value
+{
+    display: block;
+    margin-top: 3px;
+    margin-right: 1px;
+    
+    background-image: url('/Admin/Module/OMC/img/pipe.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-content ul.omc-dynamics-edit-profiles-header li
+{
+    height: 20px;
+    padding-left: 3px;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-content ul.omc-dynamics-edit-profiles-header li.omc-dynamics-edit-profiles-cell-profile
+{
+    width: 125px;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-content ul.omc-dynamics-edit-profiles-header li.omc-dynamics-edit-profiles-cell-growth
+{
+    width: 119px;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-content .omc-dynamics-edit-profiles
+{
+    margin: 0px;
+    padding: 0px;
+    
+    height: 230px;
+    
+    overflow: auto;
+    overflow-x: hidden;
+    
+    background-color: #ffffff;
+    border: none;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-content .omc-dynamics-edit-profiles ul,
+.omc-dynamics-edit .omc-dynamics-edit-choice-content .omc-dynamics-edit-profiles ul li
+{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-content .omc-dynamics-edit-profiles ul li
+{
+    height: 20px;
+    line-height: 20px;
+    
+    background-color: #FFFFFF;
+    background-image: none;
+    border-bottom: 1px solid #BDCCE0;
+    cursor: default;
+    
+    width: 5000px;
+    overflow: hidden;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-content .omc-dynamics-edit-profiles ul li.omc-dynamics-edit-profile-last
+{
+    border-bottom: none !important;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-content .omc-dynamics-edit-profiles ul li:hover
+{
+    background-color: #EBF7FD !important;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-content .omc-dynamics-edit-profiles ul li.omc-dynamics-edit-profile-selected
+{
+    background-color: #fff8dc;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-content .omc-dynamics-edit-profiles ul li div.omc-dynamics-edit-profile-points,
+.omc-dynamics-edit .omc-dynamics-edit-choice-content .omc-dynamics-edit-profiles ul li span.omc-dynamics-edit-profile-name
+{
+    float: left;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-content .omc-dynamics-edit-profiles ul li span.omc-dynamics-edit-profile-name
+{
+    width: 125px;
+    
+    margin-left: 3px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-content .omc-dynamics-edit-profiles ul li div.omc-dynamics-edit-profile-points
+{
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-create .omc-dynamics-edit-choice-content .omc-dynamics-edit-constraint
+{
+    height: 250px;
+    overflow: hidden;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-create .omc-dynamics-edit-choice-content .omc-dynamics-edit-constraint p
+{
+    padding-top: 75px !important;
+    margin-top: 100px;
+    
+    width: 365px;
+    display: block;
+    margin: 0px auto !important;
+    text-align: center;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-choice-create .omc-dynamics-edit-choice-content .omc-dynamics-edit-constraint p span
+{
+    display: block;
+}
+
+.omc-dynamics-edit table.omc-dynamics-edit-form
+{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+.omc-dynamics-edit table.omc-dynamics-edit-form tr.omc-dynamics-edit-form-field td.omc-dynamics-edit-form-field-name
+{
+    width: 170px;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-newpreset
+{
+    border-radius: 0px !important; 
+    -moz-border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+}
+
+.omc-dynamics-edit .omc-dynamics-edit-newpreset:active,
+.omc-dynamics-edit .omc-dynamics-edit-newpreset:focus
+{
+    outline: none !important;
+}
+

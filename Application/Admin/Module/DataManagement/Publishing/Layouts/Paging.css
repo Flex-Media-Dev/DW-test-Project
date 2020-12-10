@@ -1,0 +1,54 @@
+div.paging {
+	float: left;
+	margin-top: 5px;
+}
+
+div.paging a {
+	display: block;
+	padding: 0px 5px;
+	border: 1px solid #ccc;
+	margin-right: 5px;
+	float: left;
+	color: #000;
+	line-height: 18px;
+}
+
+div.paging a.nextlinkimage, div.paging a.previouslinkimage {
+	border: none;
+}
+
+div.paging a.nextlinkimage img, div.paging a.previouslinkimage img {
+	margin-top: 3px;
+}
+
+div.paging a.previouslinkimage img {
+	float: left;
+	margin-right: 3px;
+}
+
+div.paging a.nextlinkimage img {
+	float: right;
+	margin-left: 3px;
+}
+
+div.paging a.nextlinkimage:hover, div.paging a.previouslinkimage:hover {
+	background-color: transparent;
+	color: #000;
+}
+
+div.paging a.nextlinkimage span, div.paging a.previouslinkimage span {
+	line-height: 20px;
+}
+
+div.paging ul, div.paging ul li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+}
+
+div.paging a:hover, div.paging ul li.activepage_True a {
+	background-color: #ccc;
+	color: #fff;
+	text-decoration: none;
+}

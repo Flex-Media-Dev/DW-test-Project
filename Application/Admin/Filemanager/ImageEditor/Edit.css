@@ -1,0 +1,166 @@
+﻿html,body
+{
+	overflow:hidden;
+}
+
+html,body,.imageeditor-crop,#rulerWrapper,#rulers,#imagearea,#imagearea img
+{
+	border:none;
+	padding:0px;
+	margin:0px;
+}
+
+.colapsed-header {
+    top: 34px !important;
+}
+
+.imageeditor-crop 
+{
+	position: absolute;
+	z-index: 2;
+	color: blue;
+	background-color: blue;
+	display: none;
+}
+
+/* marker class */
+.imageeditor-onlywhenselected
+{
+}
+
+#Toolbar
+{
+	min-width: 640px;
+}
+
+#rulerWrapper
+{
+	position:fixed; 
+	top:145px;
+	left:0px;
+	bottom:25px; 
+	right:0px; 
+	overflow:auto;
+	border-bottom:solid 1px #919191;
+}
+
+#rulers
+{
+	padding-left:24px;
+	padding-top:25px;
+	background: url('Rulers.png' ) top left no-repeat;
+	float:left;
+	min-width:100%;
+	min-height:100%;
+	background-color:#C5CFDF;
+	box-sizing:border-box;
+}
+
+#imagearea
+{
+	position:relative;
+}
+
+#imagearea img
+{
+	cursor:crosshair;
+}
+
+#statusBar
+{
+	position:fixed; 
+	left:0px;
+	bottom:0px; 
+	right:0px; 
+	height:23px;
+	line-height:23px;
+	border:solid 1px #ffffff;
+	vertical-align:middle;
+	padding-left:5px;
+	background-color:#F1EDED;
+}
+#statusBar img
+{
+	vertical-align:middle;
+}
+
+#statusBar .statusBarItem
+{
+	width:160px;
+	min-width:160px;
+	display:block;
+	float:left;
+}
+#statusBar .seperator{
+	background-color:#D7D7D7;
+	height:25px;
+	width:1px;
+	margin-left:2px;
+	margin-right:5px;
+	float:left;
+}
+
+/* input forms */
+.input-form
+{
+	border: none;
+	margin: 0px  auto;
+	margin-bottom: 10px;
+}
+
+.input-form td
+{
+	white-space:nowrap;
+	border: none;
+	text-align:left;
+	padding: 2px 5px;
+	margin: 0px;
+}
+
+.buttonSubmit {
+	/*font-family:arial,verdana,Microsoft JhengHei;
+	font-size:11px;
+	padding-left:3px;
+	padding-right:3px;*/
+    background-color: #f5f5f5;
+    margin-right: 10px;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+
+/* slider */
+div.slider-bg
+{
+	position: relative;
+	background-image:url(slider-bg.png);
+	background-repeat:no-repeat;
+	width:209px;
+	height:28px;
+}
+
+div.slider-bg div.slider-thumb
+{
+	position:absolute;
+	background-image:url(slider-thumb.png);
+	background-repeat:no-repeat;
+	width:17px;
+	height:21px;
+	cursor:ew-resize;
+}
+
+/* loading indicator */
+#loading {
+	z-index: 100;
+	position: absolute;
+	top: 49%;
+	left: 49%;
+	background-image: url("/Admin/Images/Ribbon/UI/Overlay/wait.gif");
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 32px;
+}

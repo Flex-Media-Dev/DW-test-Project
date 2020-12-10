@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html, body {
+            font-family: Verdana, Helvetica, Arial, sans-serif;
+        }
+
+        td, th {
+            text-align: center;
+            border: 1px solid #d3d3d3;
+        }
+
+        table {
+            border-collapse: collapse;
+            background-color: #eeeeee;
+        }
+
+        img {
+            max-width: 150px;
+        }
+
+        td, div, iframe {
+            width: 150px;
+            height: 150px;
+        }
+
+        iframe {
+            border: 0;
+        }
+
+        .error {
+            background-color: red;
+            line-height: 150px;
+        }
+    </style>    
+</head>
+<body>
+    <h1>GetImage format test sheet...</h1>
+
+    <h2>Source format: Bmp</h2>
+    <table border="0" cellpadding="10">
+        <tr>
+            <th>Original</th>
+            <th>Bmp</th>
+            <th>Gif</th>
+            <th>Jpg</th>
+            <th>Png</th>
+            <th>WebP</th>
+            <th>Pdf</th>
+        </tr>
+        <tr>
+            <td><img src="/Admin/Examples/images/dynamicweb.bmp" style="max-width:150px;" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.bmp&Format=bmp&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.bmp&Format=gif&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.bmp&Format=jpg&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.bmp&Format=png&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.bmp&Format=webp&Width=150&donotcache=true" /></td>
+            <td><iframe src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.bmp&Format=pdf&Width=150&donotcache=true" width="150" height="150"></iframe></td>
+        </tr>
+    </table>
+
+    <h2>Source format: Gif</h2>
+    <table border="0" cellpadding="10">
+        <tr>
+            <th>Original</th>
+            <th>Bmp</th>
+            <th>Gif</th>
+            <th>Jpg</th>
+            <th>Png</th>
+            <th>WebP</th>
+            <th>Pdf</th>
+        </tr>
+        <tr>
+            <td><img src="/Admin/Examples/images/dynamicweb.gif" style="max-width:150px;" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.gif&Format=bmp&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.gif&Format=gif&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.gif&Format=jpg&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.gif&Format=png&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.gif&Format=webp&Width=150&donotcache=true" /></td>
+            <td><iframe src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.gif&Format=pdf&Width=150&donotcache=true" width="150" height="150"></iframe></td>
+        </tr>
+    </table>
+
+    <h2>Source format: Jpg</h2>
+    <table border="0" cellpadding="10">
+        <tr>
+            <th>Original</th>
+            <th>Bmp</th>
+            <th>Gif</th>
+            <th>Jpg</th>
+            <th>Png</th>
+            <th>WebP</th>
+            <th>Pdf</th>
+        </tr>
+        <tr>
+            <td><img src="/Admin/Examples/images/dynamicweb.jpg" style="max-width:150px;" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.jpg&Format=bmp&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.jpg&Format=gif&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.jpg&Format=jpg&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.jpg&Format=png&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.jpg&Format=webp&Width=150&donotcache=true" /></td>
+            <td><iframe src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.jpg&Format=pdf&Width=150&donotcache=true" width="150" height="150"></iframe></td>
+        </tr>
+    </table>
+
+    <h2>Source format: Png</h2>
+    <table border="0" cellpadding="10">
+        <tr>
+            <th>Original</th>
+            <th>Bmp</th>
+            <th>Gif</th>
+            <th>Jpg</th>
+            <th>Png</th>
+            <th>WebP</th>
+            <th>Pdf</th>
+        </tr>
+        <tr>
+            <td><img src="/Admin/Examples/images/dynamicweb.png" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.png&Format=bmp&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.png&Format=gif&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.png&Format=jpg&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.png&Format=png&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.png&Format=webp&Width=150&donotcache=true" /></td>
+            <td><iframe src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.png&Format=pdf&Width=150&donotcache=true"></iframe></td>
+        </tr>
+    </table>
+
+    <h2>Source format: Webp</h2>
+    <table border="0" cellpadding="10">
+        <tr>
+            <th>Original</th>
+            <th>Bmp</th>
+            <th>Gif</th>
+            <th>Jpg</th>
+            <th>Png</th>
+            <th>WebP</th>
+            <th>Pdf</th>
+        </tr>
+        <tr>
+            <td><img src="/Admin/Examples/images/dynamicweb.webp" style="max-width:150px;" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.webp&Format=bmp&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.webp&Format=gif&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.webp&Format=jpg&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.webp&Format=png&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.webp&Format=webp&Width=150&donotcache=true" /></td>
+            <td><iframe src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.webp&Format=pdf&Width=150&donotcache=true"></iframe></td>
+        </tr>
+    </table>
+
+    <h2>Source format: Tiff</h2>
+    <table border="0" cellpadding="10">
+        <tr>
+            <th>Original</th>
+            <th>Bmp</th>
+            <th>Gif</th>
+            <th>Jpg</th>
+            <th>Png</th>
+            <th>WebP</th>
+            <th>Pdf</th>
+        </tr>
+        <tr>
+            <td><div style="width:150px;height:150px;line-height:150px;">N/A</div></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.tif&Format=bmp&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.tif&Format=gif&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.tif&Format=jpg&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.tif&Format=png&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.tif&Format=webp&Width=150&donotcache=true" /></td>
+            <td><iframe src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.tif&Format=pdf&Width=150&donotcache=true"></iframe></td>
+        </tr>
+    </table>
+
+    <h2>Source format: Pdf</h2>
+    <table border="0" cellpadding="10">
+        <tr>
+            <th>Original</th>
+            <th>Bmp</th>
+            <th>Gif</th>
+            <th>Jpg</th>
+            <th>Png</th>
+            <th>WebP</th>
+            <th>Pdf</th>
+        </tr>
+        <tr>
+            <td><iframe src="/Admin/Examples/images/dynamicweb.pdf"></iframe></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.pdf&Format=bmp&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.pdf&Format=gif&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.pdf&Format=jpg&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.pdf&Format=png&Width=150&donotcache=true" /></td>
+            <td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.pdf&Format=webp&Width=150&donotcache=true" /></td>
+            <td><iframe src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/dynamicweb.pdf&Format=pdf&Width=150&donotcache=true"></iframe></td>
+        </tr>
+    </table>
+
+    <script>
+        function imageError(event) {
+            var image = event.target;
+            var parent = image.parentElement;
+            parent.removeChild(image);
+
+            var element = document.createElement('div');
+            element.className = 'error';
+            element.innerText = 'ERROR';
+            parent.appendChild(element);
+        }
+
+        (function () {
+            var images = document.getElementsByTagName('img');
+            for (var i = 0; i < images.length; i++) {
+                var image = images[i];
+                image.onerror = imageError;
+            }
+        })();
+    </script>
+</body>
+</html>

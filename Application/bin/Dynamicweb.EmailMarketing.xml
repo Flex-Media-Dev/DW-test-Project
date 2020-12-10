@@ -1,0 +1,4079 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.EmailMarketing</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.EmailMarketing.Constants">
+            <summary>
+            Represents the constants for EmailMarketing
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailPreheaderClean">
+            <summary>
+            Tag name for email preheader
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailPreHeader">
+            <summary>
+            Tag name for email preheader
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailContentLinkClean">
+            <summary>
+            Tag name for link to email content page
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagUnsubscribeLinkClean">
+            <summary>
+            Tag name for unsubscribe link clean
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagUnsubscribeLink">
+            <summary>
+            Tag name for unsubscribe link
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagUnsubscribeAllLinkClean">
+            <summary>
+            Tag name for unsubscribe all link clean
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagTrackingImage">
+            <summary>
+            The tag for the tracking image
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.UnsubscribeRequestName">
+            <summary>
+            The unsubscribe request name
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.UnsubscribeAllRequestName">
+            <summary>
+            The UnsubscribeAll request name
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.UnsubscribeRecipientIdRequestName">
+            <summary>
+            The unsubscribe recipient id
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.UnsubscribeRecipientSecretRequestName">
+            <summary>
+            The unsubscribe recipient secret
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.UnsubscribeBaseUrl">
+            <summary>
+            The unsubscribe base url
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.EmailUnsubscribeStatisticsObjectName">
+            <summary>
+            The name for statistics object which appears when email has been unsubscribed
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.EmailCartStatisticsObjectName">
+            <summary>
+            The name for statistics object which appears when some product has been put to the cart
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.EmailOrderStatisticsObjectName">
+            <summary>
+            The name for statistics object which appears when some order has been made
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.LogPath">
+            <summary>
+            The log path
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.EmailSystemFolderDraft">
+            <summary>
+            The name for system folder "Drfts"
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.EmailSystemFolderScheduled">
+            <summary>
+            The name for system folder "Scheduled"
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.EmailSystemFolderSplitTest">
+            <summary>
+            The name for system folder "Split Tests"
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.EmailSystemFolderSent">
+            <summary>
+            The name for system folder "Sent"
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.AccessElementTypeFolder">
+            <summary>
+            Folder of access element type
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.EmailSystemFolderTemplate">
+            <summary>
+            The name for system folder "Template".
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.EmailStateFailed">
+            <summary>
+            The name for the "Failed" sending state.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.EmailStateSending">
+            <summary>
+            The name of the "Sending" sending state.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.EmailStateRecurring">
+            <summary>
+            The name of the "Recurring" sending state.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserUserName">
+            <summary>
+            User name
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserName">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserFirstName">
+            <summary>
+            First name
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserLastName">
+            <summary>
+            Last name
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserAddress">
+            <summary>
+            Address
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserAddress2">
+            <summary>
+            Address2
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserZipCode">
+            <summary>
+            Zip code
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserCity">
+            <summary>
+            City
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserCountry">
+            <summary>
+            Country
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserPhone">
+            <summary>
+            Phone
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserPhonePrivate">
+            <summary>
+            Private phone
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserPhoneMobile">
+            <summary>
+            Mobile phone
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserFax">
+            <summary>
+            Fax
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserCustomerNumber">
+            <summary>
+            CustomerNumber
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserCurrency">
+            <summary>
+            Currency
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserImage">
+            <summary>
+            Image
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserCompany">
+            <summary>
+            Company
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserDepartment">
+            <summary>
+            Department
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserJobTitle">
+            <summary>
+            Job title
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserPhoneBusiness">
+            <summary>
+            Business phone
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Constants.TagEmailUserLoginToken">
+            <summary>
+            Login token
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.Editors.EmailEditor">
+            <summary>
+            Represents email parameter editor
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Editors.EmailEditor.Render(Dynamicweb.Extensibility.AddIns.ConfigurableAddIn,System.String,System.Object,System.Collections.Hashtable)">
+            <summary>
+            Renders the editor
+            </summary>
+            <param name="addIn">Referencing add-in</param>
+            <param name="name">Editor name</param>
+            <param name="value">Current editor value</param>
+            <param name="options">Drop down options</param>
+            <returns>Editor content</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Editors.EmailEditor.Render(Dynamicweb.Extensibility.AddIns.ConfigurableAddIn,System.String,System.Object,System.Collections.Hashtable,System.String)">
+            <summary>
+            Renders the editor
+            </summary>
+            <param name="addIn">Referencing add-in</param>
+            <param name="name">Editor name</param>
+            <param name="value">Current editor value</param>
+            <param name="options">Drop down options</param>
+            <param name="label">Editor label</param>
+            <returns>Editor content</returns>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.Email">
+            <summary>
+            Represents email
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.HasSplitTest">
+            <summary>
+            Gets value indicating whether this email has an <see cref="T:Dynamicweb.EmailMarketing.SplitTests.SplitTest"></see> associated with it.
+            If variation email and variation page are set then it's counted that variation is present
+            </summary>
+            <value>
+            <c>true</c> if this instance has an split test; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Email._recipientProviderXml">
+            <summary>
+            Contains the configuration for EmailRecipientProvider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.RecipientProviderConfiguration">
+            <summary>
+            Gets or sets the recipient provider configuration settings.
+            </summary>
+            <value>
+            The recipient provider configuration settings.
+            </value>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Email._recipientProvider">
+            <summary>
+            Contains instance of EmailRecipientProvider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.RecipientProvider">
+            <summary>
+            Gets the recipient provider.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.Template">
+            <summary>
+            Gets or sets the template.
+            </summary>
+            <value>
+            The template.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.SenderName">
+            <summary>
+            Gets or sets the name of the sender.
+            </summary>
+            <value>
+            The name of the sender.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.SenderEmail">
+            <summary>
+            Gets or sets the sender email.
+            </summary>
+            <value>
+            The sender email.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.Subject">
+            <summary>
+            Gets or sets the subject.
+            </summary>
+            <value>
+            The subject.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.FileAttachmentPath">
+            <summary>
+            Gets or sets the path where the file to attach is located.
+            This path must be absolute inside Dynamicweb File Archive, eg. "/Images/MyFolder/MyImage.png".
+            </summary>
+            <value>
+            The attached file path.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.Encoding">
+            <summary>
+            Gets or sets the <see cref="T:System.Text.Encoding" /> used in this <see cref="T:Dynamicweb.EmailMarketing.Email" />.
+            </summary>
+            <value>
+            The encoding.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.UnsubscribePageId">
+            <summary>
+            Gets or sets the Id for the <see cref="P:Dynamicweb.EmailMarketing.Email.Page" /> where Unsubscribe is located.
+            </summary>
+            <value>
+            The unsubscription page id.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.UnsubscribeText">
+            <summary>
+            Gets or sets the description text for the <see cref="P:Dynamicweb.EmailMarketing.Email.Page" /> where Unsubscribe is located.
+            </summary>
+            <value>
+            The unsubscription page text.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.VariationName">
+            <summary>
+            Variation  user name
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.VariationEmail">
+            <summary>
+            Variation Email
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.VariationSubject">
+            <summary>
+            Variation Subject
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.VariationPageId">
+            <summary>
+            Variation Page Id
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.VariationUnsubscribeText">
+            <summary>
+            Gets or sets the variation unsubscribe text.
+            </summary>
+            <value>
+            The variation unsubscribe text.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.MessageId">
+            <summary>
+            Gets or sets the message id.
+            </summary>
+            <value>
+            The message id.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.OriginalMessageId">
+            <summary>
+            Gets or sets the original message id.
+            </summary>
+            <value>
+            The original message id.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.VariationMessageId">
+            <summary>
+            Gets or sets the variation message Id.
+            </summary>
+            <value>
+            The variation message Id.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.SplitTestIsSent">
+            <summary>
+            Gets or sets a value indicating whether the split test associated with this <see cref="T:Dynamicweb.EmailMarketing.Email" /> has been sent.
+            </summary>
+            <value>
+              <c>true</c> if the split test was sent; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Email._variationPage">
+            <summary>
+            Contains variation page id
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.VariationPage">
+             <summary>
+             Gets the variation page.
+             </summary>
+            
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Email._pageId">
+            <summary>
+            Contains page id
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.PageId">
+            <summary>
+            Gets or sets the id <see cref="P:Dynamicweb.EmailMarketing.Email.Page" />.
+            </summary>
+            <value>
+            The page id.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.Page">
+             <summary>
+             Gets the <see cref="P:Dynamicweb.EmailMarketing.Email.Page" /> where the content of the <see cref="T:Dynamicweb.EmailMarketing.Email" /> is located.
+             </summary>
+            
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.HasFileAttachment">
+             <summary>
+             Gets a value indicating whether this <see cref="T:Dynamicweb.EmailMarketing.Email" /> has a file attachment.
+             </summary>
+             <value>
+            
+             <c>true</c> if this instance has file attachment; otherwise, <c>false</c>.
+            
+             </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.FileAttachment">
+             <summary>
+             Gets the file attachment as a <see cref="T:System.IO.FileInfo" /> object.
+             </summary>
+            
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.IncludePlainTextContent">
+            <summary>
+            Gets or sets whether to include the plain text content.
+            If this is set to <c>true</c>, a multi-part email is sent using the value from <see cref="P:Dynamicweb.EmailMarketing.Email.PlainTextContent" /> if it exists, or a stripped version of the HTML content is used.
+            </summary>
+            <value>
+            Whether to include plain text content.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.PlainTextContent">
+            <summary>
+            Gets or sets the content of the plain text.
+            When <see cref="P:Dynamicweb.EmailMarketing.Email.IncludePlainTextContent" /> is <c>true</c>, this property is used as the plain text part of the multi-part email.
+            </summary>
+            <value>
+            The content of the plain text.
+            </value>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Email._trackingProviderConfiguration">
+            <summary>
+             Containce the configuration for the EmailTrackingProvider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.TrackingProviderConfiguration">
+            <summary>
+            Gets or sets the configuration for the <see cref="T:Dynamicweb.EmailMarketing.EmailTrackingProvider" />.
+            </summary>
+            <value>
+            The tracking provider configuration.
+            </value>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Email._trackingProvider">
+            <summary>
+            Containce the instance of Dnamicweb.Modules.EmailMarketing.EmailTrackingProvider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.TrackingProvider">
+             <summary>
+             Gets the <see cref="T:Dynamicweb.EmailMarketing.EmailTrackingProvider" />.
+             </summary>
+            
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Email._splitTest">
+            <summary>
+            Containce the instance of Dnamicweb.Modules.EmailMarketing.SplitTest
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.SplitTest">
+             <summary>
+             Gets or sets the <see cref="P:Dynamicweb.EmailMarketing.Email.SplitTest" />.
+             </summary>
+            
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Email._engagementIndex">
+            <summary>
+            Contains instance of Dynamicweb.Modules.EmailEngagementIndex
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.EngagementIndex">
+             <summary>
+             Gets or sets the <see cref="T:Dynamicweb.EmailMarketing.EmailEngagementIndex" />.
+             </summary>
+            
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.DomainName">
+            <summary>
+            Domain Url
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.FolderId">
+            <summary>
+            Folder Id
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.CreatedDate">
+            <summary>
+            Date when email has been saved
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.EmailState">
+            <summary>
+            Gets the state of the email.
+            </summary>
+            <value>
+            The state of the email.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.TopFolderId">
+            <summary>
+            Gets or sets the top folder ID of the email.
+            </summary>
+            <value>
+            The top folder ID.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.DeliveryProviderId">
+            <summary>
+            Gets or sets the delivery provider id.
+            </summary>
+            <value>
+            The delivery provider id.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.DeliveryProvider">
+            <summary>
+            Gets the delivery provider.
+            </summary>
+            <value>
+            The delivery provider.
+            </value>	
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.IsTemplate">
+            <summary>
+            Gets a value indicating whether this instance is template.
+            </summary>
+            <value>
+            <c>true</c> if this instance is template; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.TemplateName">
+            <summary>
+            Gets or sets the name of the template.
+            </summary>
+            <value>
+            The name of the template.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.TemplateDescription">
+            <summary>
+            Gets or sets the template description.
+            </summary>
+            <value>
+            The template description.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.EmailScheduledActive">
+            <summary>
+            Gets or sets a value indicating whether the email is scheduled.
+            </summary>
+            <value>
+            <c>true</c> if is scheduled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.EmailScheduledSendTime">
+            <summary>
+            Gets or sets the email scheduled send time.
+            </summary>
+            <value>
+            The email scheduled send time.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.EmailScheduledEndTime">
+            <summary>
+            Gets or sets the email scheduled end time.
+            </summary>
+            <value>
+            The email scheduled end time.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.EmailScheduledRepeatInterval">
+            <summary>
+            Gets or sets the email scheduled repeat interval.
+            </summary>
+            <value>
+            The email scheduled repeat interval.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.OriginalPreHeader">
+            <summary>
+            Domain Url
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.VariationPreHeader">
+            <summary>
+            Domain Url
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.RequireUniqueRecipients">
+            <summary>
+            Gets or sets a value indicating whether require unique recipients.
+            This value propergates down to the underlying EmailMessaging API.
+            Default is <c>true</c>.
+            </summary>
+            <value>
+            <c>true</c> if recipients are required to be unique; otherwise, <c>false</c>. Default is <c>true</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.RecipientSpecificContent">
+            <summary>
+            Gets or sets a value indicating whether to render the content per recipient or once per email.
+            Default is <c>false</c>.
+            </summary>
+            <value>
+              <c>true</c> if content is rendered once per recipient; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.QuarantinePeriod">
+            <summary>
+            Gets or sets the quarantine period (in minutes). The period in which the same <see cref="T:Dynamicweb.Mailing.Recipient" /> is quarantined from receiving this <see cref="T:Dynamicweb.EmailMarketing.Email" />.
+            This requires <see cref="P:Dynamicweb.EmailMarketing.Email.RequireUniqueRecipients" /> to be se to <c>false</c> to have effect.
+            Default is 0.
+            </summary>
+            <value>
+            The quarantine period. This cannot be negative. Default is 0, indicating no quarantine period.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.EmailLastExportDate">
+            <summary>
+            Gets or sets the email last export time
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.EmailName">
+            <summary>
+            Gets or sets the email name.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Email.DisableUnsubscribeTag">
+            <summary>
+            Gets or sets the value, indicating whether the Unsubscribe tag is disabled.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.EmailMarketing.Email" /> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.Fill(System.Data.IDataReader)">
+            <summary>
+            Fills the specified data reader.
+            </summary>
+            <param name="reader">The data reader.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.FillWithPartData(System.Data.IDataReader)">
+            <summary>
+            Fills the specified data reader with definite columns in data reader.
+            </summary>
+            <param name="reader">The data reader.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.FillRow(System.Data.DataRow)">
+            <summary>
+            Fills the data row.
+            </summary>
+            <param name="row">The data row.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.Copy">
+            <summary>
+            Copies the instance of email.
+            </summary>
+            <returns>The object of Dynamicweb.Modules.EmailMarketing.Email</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.CopyAsTemplate(System.String,System.String)">
+            <summary>
+            Copies this <see cref="T:Dynamicweb.EmailMarketing.Email" /> as a template. The <see cref="T:Dynamicweb.EmailMarketing.Email" /> template has not been saved.
+            </summary>
+            <param name="templateName">The name of the template.</param>
+            <param name="templateDescription">The description for the template.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.CreateFromTemplate(Dynamicweb.EmailMarketing.Email)">
+            <summary>
+            Creates a new <see cref="T:Dynamicweb.EmailMarketing.Email" /> from an email template object. The <see cref="T:Dynamicweb.EmailMarketing.Email" /> has not been saved.
+            If there are <see cref="T:Dynamicweb.Content.Page" /> objects associated with the template, then these pages are copied without sub pages in the page tree
+            and the new page ids are associated with the new <see cref="T:Dynamicweb.EmailMarketing.Email" />.
+            </summary>
+            <param name="template">The template to base the <see cref="T:Dynamicweb.EmailMarketing.Email" /> on.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">Object 'template' is not marked as a template. Check template.IsTemplate property.</exception>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.CreateFromTemplate(Dynamicweb.EmailMarketing.Email,System.String)">
+            <summary>
+            Creates a new <see cref="T:Dynamicweb.EmailMarketing.Email" /> from an email template object. The <see cref="T:Dynamicweb.EmailMarketing.Email" /> has not been saved.
+            If there are <see cref="T:Dynamicweb.Content.Page" /> objects associated with the template, then these pages are copied without sub pages in the page tree
+            and the new page ids are associated with the new <see cref="T:Dynamicweb.EmailMarketing.Email" />.
+            </summary>
+            <param name="template">The template to base the <see cref="T:Dynamicweb.EmailMarketing.Email" /> on.</param>
+            <param name="newSubject">If the new <see cref="T:Dynamicweb.EmailMarketing.Email" /> should get a new subject, this can be specified here.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">Object 'template' is not marked as a template. Check template.IsTemplate property.</exception>
+            <exception cref="T:System.InvalidOperationException">Object 'template' is created with page cannot be copied. Check template.PageId property.</exception>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.CreateCopy(Dynamicweb.EmailMarketing.Email,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:Dynamicweb.EmailMarketing.Email" /> from an email source object. The <see cref="T:Dynamicweb.EmailMarketing.Email" /> has not been saved.
+            If there are <see cref="T:Dynamicweb.Content.Page" /> objects associated with the template, then these pages are copied without sub pages in the page tree
+            and the new page ids are associated with the new <see cref="T:Dynamicweb.EmailMarketing.Email" />.
+            </summary>
+            <param name="srcEmail">The source to base the <see cref="T:Dynamicweb.EmailMarketing.Email" /> on.</param>
+            <param name="createPagesCopy">Need to copy pages or not</param>
+            <param name="newSubject">If the new <see cref="T:Dynamicweb.EmailMarketing.Email" /> should get a new subject, this can be specified here.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">Object 'template' is not marked as a template. Check template.IsTemplate property.</exception>
+            <exception cref="T:System.InvalidOperationException">Object 'template' is created with page cannot be copied. Check template.PageId property.</exception>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.SetValuesFromTopFolder(Dynamicweb.EmailMarketing.TopFolder)">
+            <summary>
+            Sets the default values from the <see cref="T:Dynamicweb.EmailMarketing.TopFolder" /> on the <see cref="T:Dynamicweb.EmailMarketing.Email" /> including <see cref="!:TopFolder.ID" />.
+            </summary>
+            <param name="topFolder">The <see cref="T:Dynamicweb.EmailMarketing.TopFolder" /> to fill default values from.</param>
+            <exception cref="T:System.ArgumentException">If parameter 'topFolder' is null, this exception is thrown.</exception>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.Save">
+            <summary>
+            Saves current data to the database.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.Delete(System.Int32)">
+            <summary>
+            Deletes the object with specified ID.
+            </summary>
+            <param name="id">Specified ID.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.DeleteBulk(System.String,System.Data.IDbConnection,System.Data.IDbTransaction)">
+            <summary>
+            Deletes the emails with the ids specified. The id list can also be a SQL selector for the given ids.
+            <see cref="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.#ctor" /> and <see cref="T:Dynamicweb.EmailMarketing.EmailEngagementIndex" /> related the the Emails will also be deleted.
+            </summary>
+            <param name="emailIds">The email ids.</param>
+            <param name="conn">The conn.</param>
+            <param name="transaction">The transaction.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.CreateMessageForOriginal">
+            <summary>
+            Creates the message for email original.
+            </summary>
+            <returns>The instance of Dynamicweb.EmailMessaging.Message</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.CreateMessageForVariation">
+            <summary>
+            Creates the message for email variation.
+            </summary>
+            <returns>The instance of Dynamicweb.EmailMessaging.Message</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.IsEmailScheduled">
+            <summary>
+            Determines whether an email has scheduled send.
+            </summary><returns>
+              <c>true</c> if an email has scheduled send; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.IsEmailSent">
+            <summary>
+            Determines whether the email has been sent.
+            </summary><returns>
+              <c>true</c> if email has been sent; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.IsEmailSending">
+            <summary>
+            Determines whether the email is currently being sent.
+            </summary><returns>
+              <c>true</c> if email is being sent; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.IsEmailSendingFailed">
+            <summary>
+            Determines whether the email is incomplete.
+            </summary><returns>
+              <c>true</c> if email is incomplete; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.IsSplitTestPickWinnerScheduled">
+            <summary>
+            Determines whether the sending of winner email is scheduled.
+            </summary><returns>
+              <c>true</c> if the sending of winner email is scheduled; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailSentStartTime">
+            <summary>
+            Gets the <see cref="T:System.DateTime" /> for when this <see cref="T:Dynamicweb.EmailMarketing.Email" /> started sending.
+            </summary>
+            <returns>The date when email started sending.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailSentCompletedTime">
+            <summary>
+            Gets the <see cref="T:System.DateTime" /> for when this <see cref="T:Dynamicweb.EmailMarketing.Email" /> completed sending.
+            </summary>
+            <returns>The date when email completed sending.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailScheduledDate">
+            <summary>
+            Gets the email scheduled date.
+            </summary>
+            <returns>The date when email will be sent</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.CreateEmailScheduledTask(System.DateTime)">
+            <summary>
+            Creates the scheduled task for email sending.
+            </summary>
+            <param name="startDateTime">The start date.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.CreateEmailScheduledTask(System.DateTime,System.DateTime,System.TimeZoneInfo)">
+            <summary>
+            Creates the scheduled task for email sending.
+            </summary>
+            <param name="startDateTime">The start date.</param>
+            <param name="endDateTime">The end date</param>
+            <param name="timeZone">Speficies the <see cref="T:System.TimeZoneInfo">timezone</see> to convert the given <see cref="T:System.DateTime" /> to.
+            If not <see cref="T:System.TimeZoneInfo">timezone</see> is speficied, the local <see cref="T:System.TimeZoneInfo">timezone</see> is used.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.StartWindowsScheduler">
+            <summary>
+            Starts the windows scheduler.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.CancelSchedule">
+            <summary>
+            Cancels the scheduling of this <see cref="T:Dynamicweb.EmailMarketing.Email" />.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetRecipientsForSend">
+            <summary>
+            Gets the recipients for send.
+            </summary>
+            <returns>The collection of Dynamicweb.EmailMessaging.Recipient</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.CreateMessageForEngagementIndex(System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            Creates the message for engagement index.
+            </summary>
+            <param name="isUseVariant">if set to <c>true</c>then use variant.</param>
+            <param name="isEmailSaved">if set to <c>true</c>then email has been saved.</param>
+            <param name="pageId">The page id.</param>
+            <returns>The object of type Dynamicweb.EmailMessaging.Message</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.FillMessageForPreview(System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Fills the message.
+            </summary>
+            <param name="pageId">The page id.</param>
+            <param name="isUseVariant">if set to <c>true</c>then use variant.</param>
+            <param name="isEmailSaved">if set to <c>true</c>then email has been saved.</param>
+            <returns>The object of type Dynamicweb.EmailMessaging.Message</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailTotalSent">
+            <summary>
+            Gets how many mails has been sent.
+            </summary>
+            <returns>The date when email will be sent</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailOpeningRate">
+            <summary>
+            Gets the email opening rate at the given time
+            </summary>
+            <returns>The date when email will be sent</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailsFromSystemFolder(System.Int32,System.String,System.Int32)">
+            <summary>
+            Gets the emails from system folder.
+            </summary>
+            <param name="folderID">The folder id.</param>
+            <param name="search">The searching filter.</param>
+            <param name="topFolderID">The top folder id.</param>
+            <returns>The collection of emails</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailCountByPageId(System.Int32)">
+            <summary>
+            Gets the email count by page id.
+            </summary>
+            <param name="pageId">The page id.</param>
+            <returns>The number of emails where the given page is used as email content - including variations.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailCountBySearchValueAndFolderId(System.String,System.Int32,System.Int32,System.Boolean,Dynamicweb.EmailMarketing.EmailStateFilter)">
+            <summary>
+            Gets the amount of emails by searching filter.
+            </summary>
+            <param name="search">The searching filter.</param>
+            <param name="folderID">The folder id.</param>
+            <param name="topFolderId">The top folder id.</param>
+            <param name="isShowTopFolderEmails">if set to <c>true</c>then show top folder emails.</param>
+            <param name="stateFilter">The state filter</param>
+            <returns>The count of rows</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetAutomationEmailsCount(System.String,Dynamicweb.EmailMarketing.EmailStateFilter)">
+            <summary>
+            Gets the amount of automation(scheduled/recurring) emails by searching filter.
+            </summary>
+            <param name="search">The searching filter.</param>
+            <param name="stateFilter">The state filter</param>
+            <returns>The count of rows</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetPagedAutomationEmailsList(Dynamicweb.EmailMarketing.SortFields,Dynamicweb.Modules.Common.SortDirection,System.String,System.Int32,System.Int32,Dynamicweb.EmailMarketing.EmailStateFilter)">
+            <summary>
+            Gets the paged automation(scheduled/recurring) emails list.
+            </summary>
+            <param name="sort">The sorting type.</param>
+            <param name="direction">The direction of sorting.</param>
+            <param name="search">The searching filter.</param>
+            <param name="startItem">The start item.</param>
+            <param name="endItem">The end item.</param>
+            <param name="stateFilter">The state filter</param>
+            <returns>The collection of emails</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetPagedEmailList(Dynamicweb.EmailMarketing.SortFields,Dynamicweb.Modules.Common.SortDirection,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,Dynamicweb.EmailMarketing.EmailStateFilter)">
+            <summary>
+            Gets the paged email list.
+            </summary>
+            <param name="sort">The sorting type.</param>
+            <param name="direction">The direction of sorting.</param>
+            <param name="search">The searching filter.</param>
+            <param name="startItem">The start item.</param>
+            <param name="endItem">The end item.</param>
+            <param name="folderID">The folder id.</param>
+            <param name="topFolderId">The top folder id.</param>
+            <param name="isShowTopFolderEmails">if set to <c>true</c>then show top folder emails.</param>
+            <param name="stateFilter">The state filter</param>
+            <returns>The collection of emails</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetFilter(System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets the searching filter.
+            </summary>
+            <param name="search">The searching filter.</param>
+            <param name="folderId">The folder id.</param>
+            <param name="topFolderId">The top folder id.</param>
+            <returns>The searching filter</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.PutEmailsToSystemFolders">
+            <summary>
+            Puts the emails to system folders.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailsBySearchValueAndTopFolderId(System.String,System.Int32,System.Boolean,Dynamicweb.EmailMarketing.EmailStateFilter)">
+            <summary>
+            Gets all emails.
+            </summary>
+            <param name="search">The searching filter.</param>
+            <param name="topFolderId">The top folder id.</param>
+            <param name="isShowTopFolderEmails">if set to <c>true</c> [is show top folder emails].</param>
+            <param name="stateFilter">The state filter</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailTemplatesBySearch(System.String)">
+            <summary>
+            Gets all email templates.
+            </summary>
+            <param name="search">The searching filter.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailsByFolderId(System.Int32)">
+            <summary>
+            Gets the emails collection by folder ID.
+            </summary>
+            <param name="folderID">The ID of the emails folder</param><returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailCountByFolderName(System.String,System.Int32)">
+            <summary>
+            Gets the count of emails by folder name.
+            </summary>
+            <param name="folderName">The name of the emails folder</param>
+            <param name="topFolderID">The top folder ID</param>
+            <returns>The count of emails in specified folder</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailCountByTopFolderId(System.Int32)">
+            <summary>
+            Gets the count of emails by top folder id.
+            </summary>
+            <param name="topFolderID">The id of the top folder</param>
+            <returns>The count on emails for specified top folder</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailsByTopFolderId(System.Int32)">
+            <summary>
+            Gets the emails by top folder id.
+            </summary>
+            <param name="topFolderId">The id of the top folder</param>
+            <returns>The collection of emails for specified top folder</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailsByTopFolderId(System.Int32,System.String)">
+            <summary>
+            Gets the emails by top folder id.
+            </summary>
+            <param name="topFolderId">The id of the top folder</param>
+            <param name="search">Search text</param>
+            <returns>The collection of emails for specified top folder filtered by search</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailsByTopFolderIdForSentFolder(System.Int32,System.String)">
+            <summary>
+            Gets the emails by top folder id to be shown in Sent subfolder.
+            </summary>
+            <param name="topFolderId">The id of the top folder</param>
+            <param name="search">Search text</param>
+            <returns>The collection of emails for specified top folder filtered by search</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetStateFilteredEmails(Dynamicweb.EmailMarketing.EmailStateFilter,Dynamicweb.EmailMarketing.EmailCollection)">
+            <summary>
+             Gets fileter by state emails collection.
+            </summary>
+            <param name="stateFilter">The state of email</param>
+            <param name="emails">The unfilterd email collection</param>
+            <returns>The collection of filtered emails by state</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailById(System.Int32)">
+            <summary>
+            Gets the email by id.
+            </summary>
+            <param name="id">The id of email.</param>
+            <returns>The email</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailByMessageId(System.Int32)">
+            <summary>
+            Gets the email by <see cref="P:Dynamicweb.EmailMarketing.Email.Message">message</see> id.
+            </summary>
+            <param name="messageId">The message id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmails">
+            <summary>
+            Gets the emails. The <see cref="T:Dynamicweb.EmailMarketing.EmailCollection" /> does not contain Email Templates. Use GetEmails(true) to include templates.
+            </summary>
+            <returns>The collection of all emails without any filtering</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmails(System.Boolean)">
+            <summary>
+            Gets the emails.
+            </summary>
+            <param name="includeTemplates">if set to <c>true</c>, the collection will contain Email Templates also.</param>
+            <returns>The collection of all emails without any filtering</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailTemplates">
+            <summary>
+            Gets the Email Templates.
+            </summary>
+            <returns>The collection of all Email Templates without any filtering</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetUpdatedEmailsFromLastExport">
+            <summary>
+            Gets the updated emails since last export and not yet exported emails.
+            </summary>
+            <returns>The collection of all Email Templates without any filtering</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetLastSentEmails(System.Int32)">
+            <summary>
+            Gets the updated emails since last export and not yet exported emails.
+            </summary>
+            <returns>The collection of all Email Templates without any filtering</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetMessagesByUser(System.String)">
+            <summary>
+            Gets the messages by user.
+            </summary>
+            <param name="userKey">The user key.</param>
+            <returns>List of messages</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailsBySql(System.String)">
+            <summary>
+            Gets the emails by SQL.
+            </summary>
+            <param name="sql">The SQL query.</param>
+            <returns>The collection of emails.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.GetEmailsBySql(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Gets the emails by SQL.
+            </summary>
+            <param name="sql">The SQL query.</param>
+            <returns>The collection of emails.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.SendEmail(Dynamicweb.EmailMarketing.Email)">
+            <summary>
+            Sends the email.
+            </summary>
+            <param name="email">The email.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.SendRepeatingEmail(Dynamicweb.EmailMarketing.Email)">
+            <summary>
+            Sends the repeating email. This method will not return until sending has completed.
+            </summary>
+            <param name="email">The email.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Email.RetryEmail(Dynamicweb.EmailMarketing.Email)">
+            <summary>
+            Retries the email.
+            </summary>
+            <param name="email">The email.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.EmailCollection">
+            <summary>
+            Collection of emails.
+            </summary>
+            <seealso cref="T:System.Collections.ObjectModel.Collection`1" />
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.EmailCollection.Comparer">
+            <summary>
+            Represents a collection element comparer.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailCollection.Comparer.Comparison">
+            <summary>
+            Gets or sets the comparison.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailCollection.Comparer.#ctor(System.Comparison{Dynamicweb.EmailMarketing.Email})">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="comparison">Comparison.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="comparison">comparison</paramref> is null.</exception>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailCollection.Comparer.Compare(Dynamicweb.EmailMarketing.Email,Dynamicweb.EmailMarketing.Email)">
+            <summary>
+            Compares two objects and returns the comparison result.
+            </summary>
+            <param name="x">First object.</param>
+            <param name="y">Second object.</param>
+            <returns>Comparison result.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailCollection.Data">
+            <summary>
+            Gets the underlying data storage.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailCollection.SortBySubject(System.String)">
+            <summary>
+            Sorts emails by a subject (ascending).
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailCollection.SortByEmailName(System.String)">
+            <summary>
+            Sorts emails by name
+            </summary>
+            <param name="direction">The sort direction</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailCollection.SortByTemplateName(System.String)">
+            <summary>
+            Sorts emails by TemplateName
+            </summary>
+            <param name="direction"></param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailCollection.SortByState(System.String)">
+            <summary>
+            Sorts emails by a state.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailCollection.SortByCreatedDate(System.String)">
+            <summary>
+            Sorts emails by a creation date (ascending).
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailCollection.SortBySendDate(System.String)">
+            <summary>
+            Sorts emails by a send start date.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailCollection.SortBySendEndDate(System.String)">
+            <summary>
+            Sorts emails by a send compleated date.
+            </summary>
+            <param name="direction"></param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailCollection.SortByScheduledDate(System.String)">
+            <summary>
+            Sorts emails by a scheduled date (ascending).
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailCollection.SortBySenderName(System.String)">
+            <summary>
+            Sorts emails by a sender name (ascending).
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailCollection.SortByTotalSend(System.String)">
+            <summary>
+            Sorts emails by a sender name (ascending).
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailCollection.SortByOpeningRate(System.String)">
+            <summary>
+            Sorts emails by a sender name (ascending).
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailCollection.Sort(System.Comparison{Dynamicweb.EmailMarketing.Email})">
+            <summary>
+            Sorts elements according to the given comparison.
+            </summary>
+            <param name="comparison">Comparison.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailCollection.Sort(System.Collections.Generic.IComparer{Dynamicweb.EmailMarketing.Email})">
+            <summary>
+            Sorts elements according to the given comparer.
+            </summary>
+            <param name="comparer">Comparer.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailCollection.GetRange(System.Int32,System.Int32)">
+            <summary>
+            Creates a shallow copy of a range of elements in the source EmailCollection.
+            </summary>
+            <param name="index">index at which the range starts.</param>
+            <param name="count">The number of elements in the range.</param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.EmailContentProvider">
+            <summary>
+            Represents email content provider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailContentProvider.EmailID">
+            <summary>
+            Email identifier
+            </summary>
+            <returns>Integer value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailContentProvider.Email">
+            <summary>
+            Email object with data specified by id
+            </summary>
+            <returns>Email object instance with data</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailContentProvider.GetContent(Dynamicweb.Mailing.Message,Dynamicweb.Mailing.Recipient)">
+            <summary>
+            Gets content rendered using message and recipient data
+            </summary>
+            <param name="message">Message</param>
+            <param name="recipient">Recipient</param>
+            <returns>Rendered data</returns>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.EmailEngagementIndex">
+            <summary>
+            Represents the email engagement indexes
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.EmailID">
+            <summary>
+            Gets or sets the NewsletterID.
+            </summary>
+            <value>
+            The NewsletterID.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.TopFolderID">
+            <summary>
+            Gets or sets the top folder ID.
+            </summary>
+            <value>
+            The top folder ID.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.OpenMailIndex">
+            <summary>
+            Gets or sets the open mail index.
+            </summary>
+            <value>
+            The index.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.OpenMailActive">
+            <summary>
+            Gets or sets a value indicating whether the OpenMail is active.
+            </summary>
+            <value>
+            <c>true</c> if open mail index is active; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.ClickLinkIndex">
+            <summary>
+            Gets or sets the click link index.
+            </summary>
+            <value>
+            The index.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.ClickLinkActive">
+            <summary>
+            Gets or sets a value indicating whether the click link is active.
+            </summary>
+            <value>
+            <c>true</c> if click link index is active; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.AddingProductsIndex">
+            <summary>
+            Gets or sets the adding productsl index.
+            </summary>
+            <value>
+            The index.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.AddingProductsActive">
+            <summary>
+            Gets or sets a value indicating whether the adding products is active.
+            </summary>
+            <value>
+            <c>true</c> if adding products index is active; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.PlacingOrderIndex">
+            <summary>
+            Gets or sets the placing order index.
+            </summary>
+            <value>
+            The index.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.PlacingOrderActive">
+            <summary>
+            Gets or sets a value indicating whether the placing order is active.
+            </summary>
+            <value>
+            <c>true</c> if placing order index is active; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.SigningEmailIndex">
+            <summary>
+            Gets or sets the signing newsletter index.
+            </summary>
+            <value>
+            The index.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.SigningEmailActive">
+            <summary>
+            Gets or sets a value indicating whether the signing newsletter is active.
+            </summary>
+            <value>
+            <c>true</c> if signing newsletter index is active; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.UnsubscribesEmailIndex">
+            <summary>
+            Gets or sets the unsubscribes newsletter index.
+            </summary>
+            <value>
+            The index.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.UnsubscribesEmailActive">
+            <summary>
+            Gets or sets a value indicating whether the unsubscribes newsletter is active.
+            </summary>
+            <value>
+            <c>true</c> if unsubscribes newsletter index is active; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.OriginalLinks">
+            <summary>
+            Gets or sets the Link1 index.
+            </summary>
+            <value>
+            The index.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.VariantLinks">
+            <summary>
+            Gets or sets a value indicating whether the Link1 is active.
+            </summary>
+            <value>
+            <c>true</c> if Link1 index is active; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.LinkCollectionForOriginal">
+            <summary>
+            Gets or sets the EI link original collection.
+            </summary>
+            <value>
+            The EI link original collection.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailEngagementIndex.LinkCollectionForVariation">
+            <summary>
+            Gets or sets the EI link variant collection.
+            </summary>
+            <value>
+            The EI link variant collection.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailEngagementIndex.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.EmailMarketing.EmailEngagementIndex" /> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailEngagementIndex.FillRow(System.Data.DataRow)">
+            <summary>
+            Fills this instance with data from the data row.
+            </summary>
+            <param name="row">The row.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailEngagementIndex.Fill(System.Data.IDataReader)">
+            <summary>
+            Fills this instance with data from the specified datareader.
+            </summary>
+            <param name="datareader">The data reader.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailEngagementIndex.GetEngagementIndexesByTopfolderId(System.Int32)">
+            <summary>
+            Gets the Engagement indexes by top folder ID.
+            </summary>
+            <param name="topFolderID">The top folder ID.</param><returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailEngagementIndex.GetEngagementIndexesByNewsletterID(System.Int32)">
+            <summary>
+            Gets the Engagement indexes by newsletter ID.
+            </summary>
+            <param name="newsletterID">The newsletter ID.</param><returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailEngagementIndex.SerializeIndexesToXML(System.Boolean)">
+            <summary>
+            Gets the parameters to XML.
+            </summary>
+            <param name="isUseVariant">if set to <c>true</c> [include declaration].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailEngagementIndex.DeserializeIndexesFromXML(System.String,System.Boolean)">
+            <summary>
+            Deserializes the indexes from XML.
+            </summary>
+            <param name="xmlContent">The XML par.</param>
+            <param name="isUseVariant">if set to <c>true</c> [is use variant].</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailEngagementIndex.SetDefaultEngagementIndex">
+            <summary>
+            Sets the default index of the engagement.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailEngagementIndex.GetDefaultEngagementIndexes">
+            <summary>
+            Gets the default engagement indexes.
+            </summary><returns></returns>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.EmailFolder">
+            <summary>
+            Represents email folder
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailFolder.ParentId">
+            <summary>
+            Gets or sets the parent folder ID of the email folder.
+            </summary>
+            <value>
+            The parent folder ID.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailFolder.Name">
+            <summary>
+            Gets or sets the name of folder.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailFolder.TopFolderID">
+            <summary>
+            Gets or sets the top folder ID of the email folder.
+            </summary>
+            <value>
+            The top folder ID.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailFolder.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.EmailMarketing.EmailFolder" /> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailFolder.Fill(System.Data.IDataReader)">
+            <summary>
+            Fills the specified data reader.
+            </summary>
+            <param name="datareader">The data reader.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailFolder.FillRow(System.Data.DataRow)">
+            <summary>
+            Fills the data row.
+            </summary>
+            <param name="row">The data row.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailFolder.GetAllCustomFolders(System.Boolean,System.Int32)">
+            <summary>
+            Gets all custom folders.
+            </summary>
+            <param name="onlyParent">if set to <c>true</c> parent only.</param>
+            <param name="topFolderId">The top folder id.</param>
+            <returns>The colection of folders</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailFolder.IsSystemFolder(System.String,System.Int32)">
+            <summary>
+            Determines whether is system folder by specified folder name or folder id.
+            </summary>
+            <param name="folderName">Name of the folder.</param>
+            <param name="folderId">The folder id.</param><returns>
+              <c>true</c> if system folder; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailFolder.GetEmailsFolderIdByFolderName(System.String,System.Int32)">
+            <summary>
+            Gets the name of the emails folder id by folder.
+            </summary>
+            <param name="folderName">Name of the folder.</param>
+            <param name="topFolderID">The top folder id.</param>
+            <returns>The id of folder</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailFolder.GetEmailsFolderById(System.String)">
+            <summary>
+            Gets the emails folder by id.
+            </summary>
+            <param name="folderId">The folder id.</param>
+            <returns>The folder</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailFolder.GetEmailsFolderTopFolderId(System.String)">
+            <summary>
+            Gets the emails folder top folder id.
+            </summary>
+            <param name="folderID">The folder id.</param>
+            <returns>The id of top folder</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailFolder.GetEmailsFoldersByParentId(System.Int32)">
+            <summary>
+            Gets the emails folders by parent id.
+            </summary>
+            <param name="parentID">The parent id.</param>
+            <returns>The colection of folders</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailFolder.GetEmailsCustomFoldersByParentId(System.Int32)">
+            <summary>
+            Gets emails custom folder using parent id value
+            </summary>
+            <param name="parentID">Id of parent folder</param>
+            <returns>List of email folders</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailFolder.GetEmailsCustomFoldersByTopFolderId(System.Int32)">
+            <summary>
+            Gets email custom folders by id of top folder
+            </summary>
+            <param name="topFolderID">Top folder id</param>
+            <returns>List of email folders</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailFolder.GetEmailsFoldersByTopFolderId(System.Int32)">
+            <summary>
+            Gets the emails folders by top folder id.
+            </summary>
+            <param name="topFolderID">The top folder id.</param>
+            <returns>The colection of folders</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailFolder.GetAllEmailsFolders">
+            <summary>
+            Gets all emails folders.
+            </summary>
+            <returns>All folders</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailFolder.GetFoldersBySql(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Gets list of folders using sql
+            </summary>
+            <param name="sql">The SQL query</param><returns></returns>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.EmailMessagingCallbackHandler">
+            <summary>
+            Callback handler for email messaging
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailMessagingCallbackHandler.OnCompleteEventIsActive">
+            <summary>
+            Shows activity state of complete event
+            </summary>
+            <returns>True if is active</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailMessagingCallbackHandler.OnBeforePreprocessing(Dynamicweb.Mailing.CallbackHandlerContext,Dynamicweb.Mailing.Message)">
+            <summary>
+            Notifies about before preprocessing event of message
+            </summary>
+            <param name="context">CallbackHandlerContext</param>
+            <param name="message">Message object instance</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailMessagingCallbackHandler.OnAfterPreprocessing(Dynamicweb.Mailing.CallbackHandlerContext,Dynamicweb.Mailing.Message)">
+            <summary>
+            Builds message content and and saves message
+            </summary>
+            <param name="context">Callback handler context</param>
+            <param name="message">Message</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailMessagingCallbackHandler.OnBeforeMerging(Dynamicweb.Mailing.CallbackHandlerContext,Dynamicweb.Mailing.Message,Dynamicweb.Mailing.Recipient)">
+            <summary>
+            Notifies about before merging event
+            </summary>
+            <param name="context">Callback handler context</param>
+            <param name="message">Message</param>
+            <param name="recipient">Recipient</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailMessagingCallbackHandler.OnComplete(Dynamicweb.Mailing.CallbackHandlerContext,Dynamicweb.Mailing.Message,Dynamicweb.Mailing.RecipientCollection)">
+            <summary>
+            Resumes messaging handling process
+            </summary>
+            <param name="context">Callback handler context</param>
+            <param name="message">Message</param>
+            <param name="recipients">Collection of recipients</param>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.EmailRecipientProvider">
+            <summary>
+            Represent base class for recipient provider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EmailRecipientProvider.Email">
+            <summary>
+            Gets the email that this instance will provide <see cref="T:Dynamicweb.Mailing.RecipientCollection">recipients</see>.
+            </summary>
+            <value>
+            The email.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailRecipientProvider.GetRecipients">
+            <summary>
+            Gets the recipients.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailRecipientProvider.SubscribeRecipient">
+            <summary>
+            Subscribes the recipient.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailRecipientProvider.UnsubscribeRecipient(Dynamicweb.Mailing.Recipient)">
+            <summary>
+            Unsubscribe the recipient.
+            </summary>
+            <param name="recipient">The recipient.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailRecipientProvider.GetRecipientContentContext(Dynamicweb.Mailing.Recipient)">
+            <summary>
+            Gets the recipient content context. This method is used when rendering recipient specific content.
+            </summary>
+            <param name="recipient">The recipient.</param>
+            <returns>The <see cref="T:Dynamicweb.Frontend.PageViewContext" /> to render the associated page with.</returns>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.EmailResendProvider">
+            <summary>
+            Represent base class for recipient provider
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailResendProvider.CreateResendEmail(Dynamicweb.EmailMarketing.Email)">
+            <summary>
+            Returns a new Email object that is the one we redirect the user to
+            </summary>
+            <param name="originalEmail"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.EmailScheduleHandler">
+            <summary>
+            Handles email schedule mechanism work
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailScheduleHandler.Execute(System.String)">
+            <summary>
+            Executes email sending based on email schedule data
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailScheduleHandler.Execute">
+            <summary>
+            Executes email sending based on email schedule data
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailScheduleHandler.ExecuteRepeating(System.String)">
+            <summary>
+            Sends repeating email
+            </summary>
+            <param name="emailID">Id of email</param>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.EmailStateFilter">
+            <summary>
+            Email state filter enumeration
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.EmailTrackingProvider">
+            <summary>
+            Represents base class for traking provider
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EmailTrackingProvider.GetTrackingParameters">
+            <summary>
+            Gets the tracking parameters.
+            </summary><returns></returns>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.EngagementIndexLink">
+            <summary>
+            Represents engagement index link
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EngagementIndexLink.LinkID">
+            <summary>
+            Gets or sets the link ID.
+            </summary>
+            <value>
+            The link ID.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EngagementIndexLink.LinkEngagementIndex">
+            <summary>
+            Gets or sets the engagement index value.
+            </summary>
+            <value>
+            The index value.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EngagementIndexLink.IsActive">
+            <summary>
+            Gets or sets a value indicating whether the engagement index is active.
+            </summary>
+            <value>
+            <c>true</c> if engagement index is active; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.EngagementIndexLink.OriginalUrl">
+            <summary>
+            Gets or sets the original URL of the <see cref="!:Dynamicweb.Analytics.Links.Link" />.
+            </summary>
+            <value>
+            The original URL.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EngagementIndexLink.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.EmailMarketing.SplitTests.SplitTest" /> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.EngagementIndexLink.#ctor(System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.EmailMarketing.SplitTests.SplitTest" /> class.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Flows.Flow.Id">
+            <summary>
+            Gets the Flow ID.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Flows.Flow.FolderId">
+            <summary>
+            Gets or sets the folder ID.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Flows.Flow.Active">
+            <summary>
+            Gets or sets the value determines whether the Rule is active.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Flows.Flow.Name">
+            <summary>
+            Gets or sets the flow name.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Flows.Flow.RecipientsIds">
+            <summary>
+            Gets or sets the flow name.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Flows.FlowFolder.Id">
+            <summary>
+            Gets the folder ID.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Flows.FlowFolder.ParentId">
+            <summary>
+            Gets or sets the parent folder ID.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Flows.FlowFolder.Name">
+            <summary>
+            Gets or sets the folder name.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Flows.FlowStepHistoryService.Repository">
+            <summary>
+            Gets or sets the repository.
+            </summary>
+            <value>
+            The repository.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Flows.FlowRecipientService.Repository">
+            <summary>
+            Gets or sets the repository.
+            </summary>
+            <value>
+            The repository.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Flows.FlowStepService.Repository">
+            <summary>
+            Gets or sets the repository.
+            </summary>
+            <value>
+            The repository.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Flows.FlowStepService.GetById(System.Int32)">
+            <summary>
+            Gets Step by id
+            </summary>
+            <param name="stepId">The step id.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Flows.FlowStepService.GetStepsByFlowId(System.Int32)">
+            <summary>
+            Gets flow steps by flow id
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Flows.FlowStepService.Save(Dynamicweb.EmailMarketing.Flows.FlowStep)">
+            <summary>
+            Save step
+            </summary>
+            <param name="flowStep">The flow step to save</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Flows.FlowStepService.DeleteAllFlowsSteps(System.Int32[])">
+            <summary>
+            Delete all flows steps
+            </summary>
+            <param name="flowsIds"></param>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Flows.FlowFolderService.Repository">
+            <summary>
+            Gets or sets the repository.
+            </summary>
+            <value>
+            The repository.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Flows.FlowFolderService.GetFolder(System.Int32)">
+            <summary>
+            Gets folder
+            </summary>
+            <param name="folderId">The folder id.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Flows.FlowFolderService.GetTopFolders">
+            <summary>
+            Gets top level folders
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Flows.FlowFolderService.GetFolders(System.Int32)">
+            <summary>
+            Gets child folders
+            </summary>
+            <param name="parentFolderId">The parent folder id</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Flows.FlowFolderService.Save(Dynamicweb.EmailMarketing.Flows.FlowFolder)">
+            <summary>
+            Save folder
+            </summary>
+            <param name="flowFolder">folder to save</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Flows.FlowFolderService.Delete(System.Int32)">
+            <summary>
+            Delete folder and all descendants folders and their flows
+            </summary>
+            <param name="flowFolderId"></param>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Flows.FlowService.Repository">
+            <summary>
+            Gets or sets the repository.
+            </summary>
+            <value>
+            The repository.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Flows.FlowService.GetFlow(System.Int32)">
+            <summary>
+            Gets flow
+            </summary>
+            <param name="flowId">The flow id.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Flows.FlowService.GetTopLevelFlows">
+            <summary>
+            Gets folder flows
+            </summary>
+            <param name="folderId">The folder id which is contains flows. If null then it returns top level flows</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Flows.FlowService.GetFlows(System.Int32)">
+            <summary>
+            Gets folder flows
+            </summary>
+            <param name="folderId">The folder id which is contains flows. If null then it returns top level flows</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Flows.FlowService.GetFlows">
+            <summary>
+            Gets all flows
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Flows.FlowService.Save(Dynamicweb.EmailMarketing.Flows.Flow)">
+            <summary>
+            Save flow
+            </summary>
+            <param name="flow">The flow instance to save</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Flows.FlowService.Delete(System.Int32)">
+            <summary>
+            Delete flow
+            </summary>
+            <param name="flowId">The flow id</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Flows.FlowService.DeleteAllFlowsFromFolders(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Delete all flows from folders
+            </summary>
+            <param name="foldersIds">The folders ids</param>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.Notifications">
+            <summary>
+            Represents a set of notifications available for Email Messaging.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Notifications.OnBeforePreProcessing">
+            <summary>
+            Fires when CallBackHanlder.OnBeforePreprocessing called
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Notifications.OnBeforeMerging">
+            <summary>
+            Fires when CallBackHanlder.OnBeforeMerging called
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.Notifications.OnBeforePreProcessingNotificationArgs">
+            <summary>
+            Represents arguments for OnBeforePreProcessing notification
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Notifications.OnBeforePreProcessingNotificationArgs.Message">
+            <summary>
+            Gets or sets message property
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Notifications.OnBeforePreProcessingNotificationArgs.#ctor(Dynamicweb.Mailing.Message)">
+            <summary>
+            Creates a new instance of OnBeforePreProcessing notification args
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.Notifications.OnBeforeMergingNotificationArgs">
+            <summary>
+            Represents arguments for OnBeforeMerging notification
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Notifications.OnBeforeMergingNotificationArgs.Message">
+            <summary>
+            Gets or sets message property
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Notifications.OnBeforeMergingNotificationArgs.Recipient">
+            <summary>
+            Gets or sets recipients property
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Notifications.OnBeforeMergingNotificationArgs.#ctor(Dynamicweb.Mailing.Message,Dynamicweb.Mailing.Recipient)">
+            <summary>
+            Creates a new instance of OnBeforeMerging notification args
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider">
+            <summary>
+            Default Dynamicweb recipient provider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.UnsubscribeEmailAllowed">
+            <summary>
+            Uncheck Email allowed
+            </summary>
+            <returns>Boolean value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.UnsubscribeRemoveGroups">
+            <summary>
+            Remove user from this group
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.UnsubscribeCustomFields">
+            <summary>
+            Unsubscribe custom fields
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.UnsubscribeWithdrawConsentToActivity">
+            <summary>
+            Email allowed consent activity
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.EmailAllowedConsentActivity">
+            <summary>
+            Email allowed consent activity
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.IncludedUsers">
+            <summary>
+            Gets or sets the included users.
+            </summary>
+            <value>
+            The included users.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.ExcludedUsers">
+            <summary>
+            Gets or sets the excluded users.
+            </summary>
+            <value>
+            The excluded users.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.GetIds">
+            <summary>
+            Gets the ids.
+            </summary>
+            <returns>List of ids.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.GetExcludedIds">
+            <summary>
+            Gets the excluded ids.
+            </summary>
+            <returns>List of excluded ids.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.SetIds(System.Collections.Generic.List{System.String})">
+            <summary>
+            Sets the ids.
+            </summary>
+            <param name="recipients">The list of recipients.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.SetExcludedIds(System.Collections.Generic.List{System.String})">
+            <summary>
+            Sets the excluded ids.
+            </summary>
+            <param name="recipients">The list of excluded recipients.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.ExcludeRecipient(System.String)">
+            <summary>
+            Excludes the recipient.
+            </summary>
+            <param name="recipientKey">The recipient key.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.GetRecipients">
+            <summary>
+            Gets the recipients.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.GetRecipients(System.Boolean)">
+            <summary>
+            Gets the recipients.
+            </summary>
+            <param name="excluded">if set to <c>true</c> [excluded].</param><returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.GetRecipientContentContext(Dynamicweb.Mailing.Recipient)">
+            <summary>
+            Gets context of recipient content
+            </summary>
+            <param name="recipient">Recipient object instance</param>
+            <returns>Page view context</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.SetTags(Dynamicweb.Mailing.Recipient,Dynamicweb.Security.UserManagement.User)">
+            <summary>
+            Sets email tags for specific user
+            </summary>
+            <param name="recipient">Recipient object instance</param>
+            <param name="user">User object instance</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.UnsubscribeRecipient(Dynamicweb.Mailing.Recipient)">
+            <summary>
+            Unsubscribes the recipient.
+            </summary>
+            <param name="recipient">The recipient.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.UnsubscribeRecipientByEmailAllowed(Dynamicweb.Mailing.Recipient)">
+            <summary>
+            Unsubscribes recipient from newsletters
+            </summary>
+            <param name="recipient">Recipient to be unsubscribed</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.GetUsersFromSmartSearch(System.Guid,System.Collections.Generic.Dictionary{System.Int32,Dynamicweb.Security.UserManagement.User})">
+            <summary>
+            Gets the users from smart search.
+            </summary>
+            <param name="id">The unique id.</param>
+            <param name="users">The users.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.AccessUserRecipientProvider.GetOptions(System.String)">
+            <summary>
+            Implements <see cref="M:Dynamicweb.Extensibility.Editors.IDropDownOptions.GetOptions(System.String)">IDropDownOptions.GetOptions</see> method,
+            and used for DropDownLists control
+            </summary>
+            <param name="name">Specified current control name</param>
+            <returns>Hashtable with specified control options</returns>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.Renderer">
+            <summary>
+            Represents email renderer
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Renderer.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Dynamicweb.EmailMarketing.Renderer" /> class from being created.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Renderer.BuildPageHtml(System.Int32,System.String)">
+            <summary>
+            Builds the page view.
+            </summary>
+            <param name="intPageID">The int page ID.</param>
+            <param name="template">The template.</param>
+            <returns>The page view </returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Renderer.BuildPageHtml(System.Int32,System.String,Dynamicweb.Frontend.PageViewContext)">
+            <summary>
+            Builds the page view.
+            </summary>
+            <param name="intPageID">The int page ID.</param>
+            <param name="template">The template.</param>
+            <param name="pageviewContext">The PageViewContext</param>
+            <returns>The page view </returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Renderer.RenderPageContent(Dynamicweb.EmailMarketing.Email,System.Boolean)">
+            <summary>
+            Renders the content of the page.
+            </summary>
+            <param name="email">The email.</param>
+            <param name="useVariant">if set to <c>true</c> use variant.</param>
+            <returns>The html content of email</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Renderer.RenderPageContent(Dynamicweb.EmailMarketing.Email,System.Boolean,Dynamicweb.Frontend.PageViewContext)">
+            <summary>
+            Renders the content of the page.
+            </summary>
+            <param name="email">The email.</param>
+            <param name="useVariant">if set to <c>true</c> use variant.</param>
+            <param name="pageviewContext">The PageViewContext</param>
+            <returns>The html content of email</returns>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.EmailPlaceholderRenderObserver">
+            <summary>
+            Renders email placeholder values.
+            </summary>
+            <seealso cref="T:Dynamicweb.Extensibility.Notifications.NotificationSubscriber" />
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.SortFields">
+            <summary>
+            Stores a sort field order.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SortFields.Subject">
+            <summary>
+            Sorted by Name field.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SortFields.CreatedDate">
+            <summary>
+            Sorted by Created Date field.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SortFields.State">
+            <summary>
+            Sorted by State field.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SortFields.SendDate">
+            <summary>
+            Sorted by SendDate field.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SortFields.ScheduledDate">
+            <summary>
+            Sorted by ScheduledDate field.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SortFields.SenderName">
+            <summary>
+            Sorted by SenderName field.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SortFields.TotalSent">
+            <summary>
+            Sorted by TotalSent field.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SortFields.OpeningRate">
+            <summary>
+            Sorted by OpeningRate field.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SortFields.EmailName">
+            <summary>
+            Sorted by Email name field.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SortFields.TemplateName">
+            <summary>
+            Sorted by TemplateName field.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SortFields.SendEndDate">
+            <summary>
+            Sorted by Send end date field.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.SplitTests.Goals">
+            <summary>
+            Test goals constants
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.Goals.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Dynamicweb.EmailMarketing.SplitTests.Goals" /> class from being created.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SplitTests.Goals.BestEI">
+            <summary>
+            Represent 'best engagement index' conversion goal
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SplitTests.Goals.MostOpened">
+            <summary>
+            Represent 'most opened' conversion goal
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SplitTests.Goals.MostClicked">
+            <summary>
+            Represent 'most clicked' conversion goal
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.SplitTests.SplitTest">
+            <summary>
+            Represents a split test of a campaign manager newsletter
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.EmailID">
+            <summary>
+            Gets or sets the ID of the newsletter that this split test is on.
+            </summary>
+            <value>
+            The newsletter ID.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.Name">
+            <summary>
+            Gets or sets the name of split test.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.Includes">
+            <summary>
+            Gets or sets how many percent of visistors to include in split test.
+            </summary>
+            <value>
+            The percentage 0-100.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.IncludesUnits">
+            <summary>
+            Gets or sets the units of amount of newsletter recipients.
+            </summary>
+            <value>
+            The percentage or fixed amount of recipients
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.Active">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Dynamicweb.EmailMarketing.SplitTests.SplitTest" /> is active.
+            </summary>
+            <value>
+              <c>true</c> if active; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.GoalType">
+            <summary>
+            Gets or sets the type of the goal.
+            </summary>
+            <value>
+            The type of the goal.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.StartDate">
+            <summary>
+            Gets the start date of this split test.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.EndDate">
+            <summary>
+            Gets the end date of this split test.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.EndType">
+            <summary>
+            Gets or sets the type of the split test end.
+            </summary>
+            <value>
+            The type of the split test end.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.AmountHoursTillEnd">
+            <summary>
+            Gets or sets the amount of hours till the end of split test.
+            </summary>
+            <value>
+            The amount of hours.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.OpenedEmailsAmount">
+            <summary>
+            Gets or sets the amount of opened newsletters.
+            </summary>
+            <value>
+            The amount of opened newsletters.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.OpenedEmailsAmountUnits">
+            <summary>
+            Gets or sets the units of amount of opened newsletters.
+            </summary>
+            <value>
+            The percentage or fixed amount of opened newsletters.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.AfterEndSendBest">
+            <summary>
+            Gets or sets a value indicating whether send best conversion after end of split test
+            </summary>
+            <value>
+            True if best converting needs to be sent, othwerwise False
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.AfterEndNotify">
+            <summary>
+            Gets or sets a value indicating whether send notification mail after end of split test
+            </summary>
+            <value>
+            True if notification mail needs to be sent, othwerwise False
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.AfterEndActionEmail">
+            <summary>
+            Gets or sets the notification email.
+            </summary>
+            <value>
+            The email address.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.IsStartTestNow">
+            <summary>
+            Gets or sets a value indicating whether the split test will be started now.
+            </summary>
+            <value>
+            <c>true</c> if the split test will be started now; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.EmailMarketing.SplitTests.SplitTest" /> class.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.SplitTestScheduledSendTime">
+            <summary>
+            Gets or sets scheduled send time for split test
+            </summary>
+            <returns>DateTime stamp</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.SplitTestScheduledPickWinnerActive">
+            <summary>
+            Gets or sets scheduled pick winner activity value
+            </summary>
+            <returns>Boolean value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.SplitTestScheduledPickWinnerTime">
+            <summary>
+            Gets or sets scheduled pick winner time value
+            </summary>
+            <returns>DateTime stamp</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.SplitTests.SplitTest.WinnerDate">
+            <summary>
+            Gets or sets winner date
+            </summary>
+            <returns>Datetime stamp</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.FillRow(System.Data.DataRow)">
+            <summary>
+            Fills this instance with data from the data row.
+            </summary>
+            <param name="row">The row.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.Fill(System.Data.IDataReader)">
+            <summary>
+            Fills this instance with data from the specified datareader.
+            </summary>
+            <param name="datareader">The data reader.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.Save">
+            <summary>
+            Saves current data to the database.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.Delete(System.Int32)">
+            <summary>
+            Deletes the object with specified ID.
+            </summary>
+            <param name="id">Specified ID.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.GetSplitTestSampleSize">
+            <summary>
+            Gets the size of the split test sample. This is the sum of the original and variation recipients.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.GetSplitTestSampleSize(Dynamicweb.Mailing.RecipientCollection)">
+            <summary>
+            Gets the size of the split test sample. This is the sum of the original and variation recipients.
+            </summary>
+            <param name="recipients">The recipients.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.SendSplitTest">
+            <summary>
+            Sends the split test.
+            </summary>
+            <returns>True if send split test has been successfull, otherwise False</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.SetRecipientsList(Dynamicweb.Mailing.RecipientCollection,System.Int32,Dynamicweb.Mailing.RecipientCollection@,Dynamicweb.Mailing.RecipientCollection@)">
+            <summary>
+            Gets the recipients list.
+            </summary>
+            <param name="recipients">The collection of recipients.</param>
+            <param name="amount">The amount of recipients to select.</param>
+            <param name="orginalList">The <see cref="T:Dynamicweb.Mailing.RecipientCollection" /> to fill with recipients for the original message.</param>
+            <param name="variationList">The <see cref="T:Dynamicweb.Mailing.RecipientCollection" /> to fill with recipients for the variation message.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.CreateSplitTestScheduledTask">
+            <summary>
+            Creates the split test scheduled task.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.CreateFinishSplitTestScheduledTask(System.DateTime)">
+            <summary>
+            Creates the finish split test scheduled task.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.GetBestPerformingMessageId">
+            <summary>
+            Gets the best performing message id.
+            </summary>
+            <returns>The message id</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.GetSplitTestByEmailID(System.Int32)">
+            <summary>
+            Gets the split test by newsletter ID.
+            </summary>
+            <param name="newsletterID">The newsletter ID.</param><returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.GetSplitTestBySql(System.String)">
+            <summary>
+            Gets the split test by SQL.
+            </summary>
+            <param name="sqlCommandText">The SQL query.</param>
+            <returns>The collection of SplitTest</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.SendScheduledSplitTest(Dynamicweb.EmailMarketing.SplitTests.SplitTest)">
+            <summary>
+            Sends the scheduled split test.
+            </summary>
+            <param name="splitTest">The split test.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.SendBestPerformingWinner(Dynamicweb.EmailMarketing.SplitTests.SplitTest)">
+            <summary>
+            Sends the best performing split test message as winner.
+            </summary>
+            <param name="splitTest">The split test.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.SplitTests.SplitTest.SendSpecificWinner(Dynamicweb.EmailMarketing.SplitTests.SplitTest,System.Int32)">
+            <summary>
+            Sends the specific split test message as winner.
+            </summary>
+            <param name="splitTest">The split test.</param>
+            <param name="winnerMessageId">The winner message id.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.SplitTests.SplitTestEndType">
+            <summary>
+            The type of the split test end
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SplitTests.SplitTestEndType.EndAfterNHours">
+            <summary>
+            Specifies that split test will be finished after defined amount of hours
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SplitTests.SplitTestEndType.AtGivenTime">
+            <summary>
+            Specifies that split test will be finished at the specified time
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SplitTests.SplitTestEndType.AfterNOpenedEmails">
+            <summary>
+            Specifies that split test will be finished after defined amount of newsletter will be opened
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SplitTests.SplitTestEndType.Manually">
+            <summary>
+            Specifies that split test will be finished manually
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.SplitTests.Units">
+            <summary>
+            The units of amount of newsletter recipients
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SplitTests.Units.Percentage">
+            <summary>
+            Specifies that amount will be counted in percentage
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.SplitTests.Units.Fixed">
+            <summary>
+            Specified that amount will be fixed
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.Statistics.EmailMessageType">
+            <summary>
+            Email type for split test
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Statistics.EmailMessageType.Original">
+            <summary>
+            Original
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Statistics.EmailMessageType.Variation">
+            <summary>
+            Variant
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Statistics.EmailMessageType.Both">
+            <summary>
+            Both (Original and Variant)
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.Statistics.EmailStatistics">
+            <summary>
+            Email statistic
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.#ctor(Dynamicweb.EmailMarketing.Email)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.EmailMarketing.Statistics.EmailStatistics" /> class.
+            </summary>
+            <param name="email">The email instance</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.IsEmailScheduled(System.Int32,System.String)">
+            <summary>
+            Determines whether [is email scheduled] [the specified _newsletter ID].
+            </summary>
+            <param name="emailID">The _newsletter ID.</param>
+            <param name="emailName">Name of the _newsletter.</param>
+            <returns><c>true</c> if [is email scheduled] [the specified _newsletter ID]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.CalculateProbability(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Calculates the probability.
+            </summary>
+            <param name="originalConversionCountTotal">The original conversion count total.</param>
+            <param name="variantConversionCountTotal">The variant conversion count total.</param>
+            <param name="originalSendedTotal">The original sent total.</param>
+            <param name="variantSendedTotal">The variant sent total.</param>
+            <returns>System.Double.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.NormalP(System.Double)">
+            <summary>
+            Normals the P.
+            </summary>
+            <param name="x">The x.</param>
+            <returns>System.Double.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetRecipientsStatData(System.Int32,System.String)">
+            <summary>
+            Gets the recipients statistic data.
+            </summary>
+            <param name="maxCount">The max rows count.</param>
+            <param name="defaultSort">The default sorting columns name.</param>
+            <returns>DataTable.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetRecipientStatDataAsList(System.Int32,System.String)">
+            <summary>
+            Gets recipient statistic data
+            </summary>
+            <param name="maxCount">Max count value</param>
+            <param name="defaultSort">Default sort direction</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetEmailSessionsByUser(System.String)">
+            <summary>
+            Gets email sessions by user key
+            </summary>
+            <param name="userKey">User key</param>
+            <returns>DataTable of email sessions of user</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetEmailOpenedBySession(System.String,System.String)">
+            <summary>
+            Gets emails opened count by session
+            </summary>
+            <param name="sessionId">Session id</param>
+            <param name="userKey">User key</param>
+            <returns>Integer value</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetEmailClickedBySession(System.String,System.String)">
+            <summary>
+            Gets email clicked count by session
+            </summary>
+            <param name="sessionid">Session id</param>
+            <param name="userKey">User key</param>
+            <returns>Number of email clicked event times</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetLinksClicked(System.Int32)">
+            <summary>
+            Gets number of times link was clicked by specific recipient
+            </summary>
+            <param name="recipientID">Id of recipient</param>
+            <returns>Number of times link was clicked</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetEmailCartBySession(System.String,System.String)">
+            <summary>
+            Gets email cart by session id
+            </summary>
+            <param name="sessionID">Session identifier</param>
+            <param name="userKey">User key of email recipient who the cart belongs to</param>
+            <returns>Number of email link clicks done by specific user</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetEmailOrderBySession(System.String,System.String)">
+            <summary>
+            Gets email orders count filtered by session and user key
+            </summary>
+            <param name="sessionID">Session id</param>
+            <param name="userKey">User key</param>
+            <returns>Number of orders mady by email</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetEmailUnsubscribeBySession(System.String,System.String)">
+            <summary>
+            Gets unsubscribed from email counter value
+            </summary>
+            <param name="sessionID">SessionID</param>
+            <param name="userKey">User key</param>
+            <returns>Integer value</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetEmailOpenedPerformanceBySession(System.String,System.String)">
+            <summary>
+            Gets opened emails performance value
+            </summary>
+            <param name="sessionID">Session id</param>
+            <param name="userKey">User key</param>
+            <returns>Integer value</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetEmailClickedPerformanceBySession(System.String,System.String)">
+            <summary>
+            Gets clicked emails performance value by session
+            </summary>
+            <param name="sessionID">Session id</param>
+            <param name="userKey">User key</param>
+            <returns>Number of clicked times</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetEmailCartPerformanceBySession(System.String,System.String)">
+            <summary>
+            Gets email cart performance value
+            </summary>
+            <param name="sessionID">Session id</param>
+            <param name="userKey">User key</param>
+            <returns>Integer value</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetEmailBrowserBySession(System.String)">
+            <summary>
+            Gets count of email browser user agent for specific session id
+            </summary>
+            <param name="sessionid">Id of session</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetEmailPlatformBySession(System.String)">
+            <summary>
+            Gets user agent platform count by session
+            </summary>
+            <param name="sessionID">Id of session</param>
+            <returns>String representation of result</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetUsersStatData(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets the users statistic data.
+            </summary>
+            <param name="recipientsKeys">The recipients keys collection.</param>
+            <returns>DataTable.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOpened(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the opened.
+            </summary>
+            <param name="usevariant">The usevariant.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOpened(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.Int32)">
+            <summary>
+            Gets the opened.
+            </summary>
+            <param name="usevariant">The usevariant.</param>
+            <param name="recipientId">The recipient id.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOpened(System.Int32)">
+            <summary>
+            Gets the opened.
+            </summary>
+            <param name="recipientId">The recipient id.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOpened(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.DateTime)">
+            <summary>
+            Gets the opened.
+            </summary>
+            <param name="usevariant">The usevariant.</param>
+            <param name="openDate">The open date.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOpened(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.Int32,System.Nullable{System.DateTime})">
+            <summary>
+            Gets the opened.
+            </summary>
+            <param name="usevariant">The usevariant.</param>
+            <param name="recipientId">The recipient id.</param>
+            <param name="openDate">The open date.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetUniqueOpened(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the unique opened.
+            </summary>
+            <param name="usevariant">The usevariant.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOpenedMobile(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the opened mobile.
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetUniqueOpenedMobile(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the unique opened mobile.
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOpenedTablet(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the opened tablet.
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetUniqueOpenedTablet(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the unique opened tablet.
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOpenedByBrowsers">
+            <summary>
+            Gets the clicked by browsers.
+            </summary>
+            <returns>DataTable.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOpenedByPlatforms">
+            <summary>
+            Gets the clicked by platforms.
+            </summary>
+            <returns>DataTable.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOpenedByEmailClient">
+            <summary>
+            Gets the clicked by Email Client.
+            </summary>
+            <returns>DataTable.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOpenedByUser(System.String)">
+            <summary>
+            Gets the opened by user.
+            </summary>
+            <param name="userKey">The userkey.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOpenedByUser(System.String,System.Int32)">
+            <summary>
+            Gets the opened by user.
+            </summary>
+            <param name="userKey">The userkey.</param>
+            <param name="messageID">The msgid.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetSent(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the number of sent email messages with specific type
+            </summary>
+            <param name="useVariant">Type of email message</param>
+            <returns>Number of sent email messages</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetSentByUser(System.String)">
+            <summary>
+            Gets the sent by user.
+            </summary>
+            <param name="userkey">The userkey.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetClicked(System.Int32)">
+            <summary>
+            Gets the clicked.
+            </summary>
+            <param name="recipientId">The recipient id.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetClicked(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.DateTime)">
+            <summary>
+            Gets the clicked.
+            </summary>
+            <param name="usevariant">The usevariant.</param>
+            <param name="openDate">The open date.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetClicked(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the clicked.
+            </summary>
+            <param name="usevariant">The usevariant.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetClicked(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.Int32,System.Nullable{System.DateTime})">
+            <summary>
+            Gets the clicked.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <param name="recipientID">The recipient id.</param>
+            <param name="openDate">The open date.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetClickedByBrowsers">
+            <summary>
+            Gets the clicked by browsers.
+            </summary>
+            <returns>DataTable.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetClickedByEmailClient">
+            <summary>
+            Gets the clicked by Email Client.
+            </summary>
+            <returns>DataTable.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetClickedByPlatforms">
+            <summary>
+            Gets the clicked by platforms.
+            </summary>
+            <returns>DataTable.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetClickedByUser(System.String)">
+            <summary>
+            Gets the clicked by user.
+            </summary>
+            <param name="userkey">The userkey.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetClickedByUser(System.String,System.Int32)">
+            <summary>
+            Gets the clicked by user.
+            </summary>
+            <param name="userKey">The userkey.</param>
+            <param name="messageID">The msgid.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetClickedMobile">
+            <summary>
+            Gets the clicked mobile.
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetClickedTablet">
+            <summary>
+            Gets the clicked tablet.
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetAddedToCart(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.DateTime)">
+            <summary>
+            Gets the added to cart.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <param name="openDate">The open date.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetAddedToCart(System.Int32)">
+            <summary>
+            Gets the added to cart.
+            </summary>
+            <param name="recipientID">The recipient id.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetAddedToCart(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.Int32)">
+            <summary>
+            Gets the added to cart.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <param name="recipientID">The recipient id.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetAddedToCart(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the added to cart.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetAddedToCart(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.Int32,System.Nullable{System.DateTime})">
+            <summary>
+            Gets the added to cart.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <param name="recipientID">The recipient id.</param>
+            <param name="openDate">The open date.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetAddedToCartByUser(System.String)">
+            <summary>
+            Gets the added to cart by user.
+            </summary>
+            <param name="userkey">The userkey.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetAddedToCartByUser(System.String,System.Int32)">
+            <summary>
+            Gets the added to cart by user.
+            </summary>
+            <param name="userKey">The userkey.</param>
+            <param name="messageID">The msgid.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOrderPlaced(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the order placed.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOrderPlaced(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.Int32)">
+            <summary>
+            Gets the order placed.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <param name="recipientID">The recipient id.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOrderPlaced(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.DateTime)">
+            <summary>
+            Gets the order placed.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <param name="openDate">The open date.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOrderPlaced(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.Int32,System.Nullable{System.DateTime})">
+            <summary>
+            Gets the order placed.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <param name="recipientID">The recipient id.</param>
+            <param name="openDate">The open date.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOrderTotal(System.Int32)">
+            <summary>
+            Gets the order total.
+            </summary>
+            <param name="recipientID">The recipient id.</param>
+            <returns>System.Double.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOrderTotal(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the order total.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <returns>System.Double.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOrderTotal(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.Int32)">
+            <summary>
+            Gets the order total.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <param name="recipientID">The recipient id.</param>
+            <returns>System.Double.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOrderTotal(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.DateTime)">
+            <summary>
+            Gets the order total.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <param name="openDate">The open date.</param>
+            <returns>System.Double.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOrderTotal(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.Int32,System.Nullable{System.DateTime})">
+            <summary>
+            Gets the order total.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <param name="recipientID">The recipient id.</param>
+            <param name="openDate">The open date.</param>
+            <returns>System.Double.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOrderTotalByUser(System.String)">
+            <summary>
+            Gets the order total by user.
+            </summary>
+            <param name="userKey">The userkey.</param>
+            <returns>System.Double.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOrderEmailByUser(System.String)">
+            <summary>
+            Gets the order email by user.
+            </summary>
+            <param name="userKey">The userkey.</param>
+            <returns>System.Double.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOrderEmailByUser(System.String,System.Int32)">
+            <summary>
+            Gets the order email by user.
+            </summary>
+            <param name="userKey">The userkey.</param>
+            <param name="messageID">The msgid.</param>
+            <returns>System.Double.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOrderAverage(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the order average.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <returns>System.Double.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetUnsubscribed(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the unsubscribed.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetUnsubscribed(System.Int32)">
+            <summary>
+            Gets the unsubscribed.
+            </summary>
+            <param name="recipientID">The recipient id.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetUnsubscribed(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.Int32)">
+            <summary>
+            Gets the unsubscribed.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <param name="recipientID">The recipient id.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetUnsubscribed(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.DateTime)">
+            <summary>
+            Gets the unsubscribed.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <param name="openDate">The open date.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetUnsubscribed(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.Int32,System.Nullable{System.DateTime})">
+            <summary>
+            Gets the unsubscribed.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <param name="recipientID">The recipient id.</param>
+            <param name="openDate">The open date.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetUnsubscribedMobile(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the unsubscribed mobile.
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetUnsubscribedTablet(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the unsubscribed tablet.
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetLatestUnsubscribeTimeByUser(System.String)">
+            <summary>
+            Gets the unsubscribed by user.
+            </summary>
+            <param name="userKey">The userkey.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetLatestUnsubscribeTimeByUser(System.String,System.Int32)">
+            <summary>
+            Gets the unsubscribed by user.
+            </summary>
+            <param name="userKey">The userkey.</param>
+            <param name="messageID">The msgid.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetUniqueIdsForRecipientsWhoOpened(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets a list of unique Recipient Ids who opened the email.
+            </summary>
+            <param name="usevariant">The usevariant.</param>
+            <returns>List{System.Int32}.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetRecipientCount(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the recipient count.
+            </summary>
+            <param name="emailType">Type of the email.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetRecipientCountOfWhoClickedALink(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the recipients who clicked.
+            </summary>
+            <param name="usevariant">The usevariant.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetRecipientCountOfWhoClickedALinkWithMobile(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the recipients who clicked mobile.
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetRecipientCountOfWhoClickedALinkWithTablet(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the recipients who clicked tablet.
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetRecipientCountOfWhoAddedToCart(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the recipients who added to cart.
+            </summary>
+            <param name="usevariant">The usevariant.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetRecipientCountOfWhoPlacedOrder(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the recipients who placed order.
+            </summary>
+            <param name="usevariant">The usevariant.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetRecipientsWhoClickedWithGeo">
+            <summary>
+            Gets the recipients who clicked with geo.
+            </summary>
+            <returns>List{RecipientMarker}.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetRecipientsWhoBoughtWithGeo">
+            <summary>
+            Gets the recipients who bought with geo.
+            </summary>
+            <returns>List{RecipientMarker}.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetRecipientsWhoOpenedWithGeo">
+            <summary>
+            Gets the recipients who opened with geo.
+            </summary>
+            <returns>List{RecipientMarker}.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOrdersLinkedWithMessage(System.Int32@)">
+            <summary>
+            Receive orders related to messages
+            </summary>
+            <param name="totalOrders">Total orders</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetRecipientsWhoUnsubscribedWithGeo">
+            <summary>
+            Gets the recipients who unsubscribed with geo.
+            </summary>
+            <returns>List{RecipientMarker}.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.FillRecipientsGeoInfo(System.String)">
+            <summary>
+            Fills the recipients geo info.
+            </summary>
+            <param name="sqlCommandText">The SQL command text</param>
+            <returns>List of RecipientMarker object instances</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetEngagementIndex(Dynamicweb.EmailMarketing.Statistics.EmailMessageType)">
+            <summary>
+            Gets the index of the engagement.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetEngagementIndex(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.DateTime)">
+            <summary>
+            Gets the index of the engagement.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <param name="clickDate">The click date.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetEngagementIndex(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.Int32)">
+            <summary>
+            Gets the index of the engagement.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <param name="recipientID">The recipient id.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetEngagementIndex(System.Int32)">
+            <summary>
+            Gets the index of the engagement.
+            </summary>
+            <param name="recipientID">The recipient id.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetEngagementIndex(Dynamicweb.EmailMarketing.Statistics.EmailMessageType,System.Int32,System.Nullable{System.DateTime})">
+            <summary>
+            Gets the index of the engagement.
+            </summary>
+            <param name="useVariant">The usevariant.</param>
+            <param name="recipientID">The recipient id.</param>
+            <param name="clickDate">The click date.</param>
+            <returns>Engagement index value</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOpenedPerformanceByUser(System.String)">
+            <summary>
+            Gets the opened performance by user.
+            </summary>
+            <param name="userKey">The userkey.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetOpenedPerformanceByUser(System.String,System.Int32)">
+            <summary>
+            Gets the opened performance by user.
+            </summary>
+            <param name="useKey">The userkey.</param>
+            <param name="messageID">The message id.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetLinkClickedPerformanceByUser(System.String)">
+            <summary>
+            Gets the clicked performance by user.
+            </summary>
+            <param name="userkey">The userkey.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetLinkClickedPerformanceByUser(System.String,System.Int32)">
+            <summary>
+            Gets the clicked performance by user.
+            </summary>
+            <param name="userKey">The userkey.</param>
+            <param name="messageID">The message id.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetCartPerformanceByUser(System.String)">
+            <summary>
+            Gets the cart performance by user.
+            </summary>
+            <param name="userkey">The userkey.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetCartPerformanceByUser(System.String,System.Int32)">
+            <summary>
+            Gets the cart performance by user.
+            </summary>
+            <param name="userKey">The userkey.</param>
+            <param name="messageID">The message id.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetUnsubscribePerformanceByUser(System.String)">
+            <summary>
+            Gets usubscribe performance value for specific user
+            </summary>
+            <param name="userKey">User key</param>
+            <returns>Unsubscribe performance value</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.EmailStatistics.GetResponses">
+            <summary>
+            Gets recipient responses
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.Statistics.EmailStatisticsType">
+            <summary>
+            Email statistics type
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Statistics.EmailStatisticsType.NotOpened">
+            <summary>
+            Not opened emails.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.Statistics.EmailStatisticsType.Opened">
+            <summary>
+            Opened emails.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.Statistics.ExportStatisticsHelper">
+            <summary>
+            Helper for exporting statistics
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.ExportStatisticsHelper.#ctor(Dynamicweb.EmailMarketing.Email)">
+            <summary>
+            Contructs new ExportStatisticsHelper
+            </summary>
+            <param name="email">Email object instance</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.ExportStatisticsHelper.GetGeneralStatData">
+            <summary>
+            Gets the general statistic data.
+            </summary>
+            <returns>System.Collections.ArrayList.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.ExportStatisticsHelper.GetRecipientsListData(System.Boolean)">
+            <summary>
+            Gets the recipients list data
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.ExportStatisticsHelper.GetRecipientsListDataSql(System.Boolean)">
+            <summary>
+            Gets the recipients list data in MSSQL environment.
+            </summary>
+            <returns>System.Collections.Generic.List(Of Dynamicweb.Admin.OMC.Emails.Statistics.RecipientsListData).</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.ExportStatisticsHelper.GetEngagementStatData">
+            <summary>
+            Gets the engagement statistic data.
+            </summary>
+            <returns>System.Collections.ArrayList.</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.ExportStatisticsHelper.GetLinksStatData">
+            <summary>
+            Return email links statistic data
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.Statistics.RecipientInfo">
+            <summary>
+            Represents email recipient info
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientInfo.Id">
+            <summary>
+            Gets or sets id
+            </summary>
+            <returns>Integer value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientInfo.Key">
+            <summary>
+            Gets or sets key
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientInfo.Name">
+            <summary>
+            Gets or sets name
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientInfo.EmailAddress">
+            <summary>
+            Gets or sets email address
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientInfo.OpenCount">
+            <summary>
+            Gets or sets open count
+            </summary>
+            <returns>Integer value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientInfo.ClickCount">
+            <summary>
+            Gets or sets click count
+            </summary>
+            <returns>integer value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientInfo.CartCount">
+            <summary>
+            Gets or sets cart count
+            </summary>
+            <returns>Integer value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientInfo.OrderTotal">
+            <summary>
+            Gets or sets order total
+            </summary>
+            <returns>Integer value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientInfo.UnsubscribeCount">
+            <summary>
+            Gets or sets unsubscribe count
+            </summary>
+            <returns>Integer value</returns>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.Statistics.RecipientMarker">
+            <summary>
+            Recipient marker
+            </summary>
+            <remarks>Class to store recipient on map</remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientMarker.UserId">
+            <summary>
+            UserId
+            </summary>
+            <value></value>
+            <returns>String</returns>
+            <remarks>Recipient ID</remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientMarker.Name">
+            <summary>
+            Recipient name
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientMarker.Email">
+            <summary>
+            Recipient email
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientMarker.Country">
+            <summary>
+            Recipient country
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientMarker.Longitude">
+            <summary>
+            Recipient longitude
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientMarker.Latitude">
+            <summary>
+            Recipient latitude
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.Statistics.RecipientsListData">
+            <summary>
+            Class RecipientsListData - UI wrapper for data
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientsListData.ClientClickHandler">
+            <summary>
+            ClientClickHandler
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientsListData.Id">
+            <summary>
+            Id
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientsListData.Recipient">
+            <summary>
+            Recipient
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientsListData.Opened">
+            <summary>
+            Opened
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientsListData.Clicked">
+            <summary>
+            Clicked
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientsListData.Cart">
+            <summary>
+            Cart
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientsListData.Order">
+            <summary>
+            Order
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientsListData.Unsubscribed">
+            <summary>
+            Unsubscribed
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientsListData.EngagementIndex">
+            <summary>
+            Engagement index
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.RecipientsListData.EngagementIndexNumber">
+            <summary>
+            Engagement index number
+            </summary>
+            <returns>Integer value</returns>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.Statistics.ResponseItem">
+            <summary>
+            Represents recipient response
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.ResponseItem.EmailID">
+            <summary>
+            Gets or sets email id
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.ResponseItem.AccessUserExternalID">
+            <summary>
+            Gets or sets external id of access user entity
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.ResponseItem.TimeStamp">
+            <summary>
+            Gets or sets time stamp
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.ResponseItem.ResponseType">
+            <summary>
+            Gets or sets response type
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.ResponseItem.Data">
+            <summary>
+            Gets or sets Data
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.ResponseItem.EmailAddress">
+            <summary>
+            Gets or sets email address
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.ResponseItem.EmailSubject">
+            <summary>
+            Gets or sets email subject
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.Statistics.StaticticsData">
+            <summary>
+            Class StaticticsData - UI wrapper for data
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.StaticticsData.#ctor(System.String,System.String)">
+            <summary>
+            Constructs new StaticticsData object instance
+            </summary>
+            <param name="indexName">Index name</param>
+            <param name="engagementValue">Engagement value</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.StaticticsData.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructs new StaticticsData object instance
+            </summary>
+            <param name="indexName">Index name</param>
+            <param name="engagementValue">Engagement value</param>
+            <param name="EngagementValueDesktop">Engagement value for desktop</param>
+            <param name="EngagementValueTablet">Engagement value for tablet</param>
+            <param name="EngagementValueMobile">Engagement value for mobile</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.StaticticsData.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs new StaticticsData object instance
+            </summary>
+            <param name="indexName">Index name</param>
+            <param name="engagementValue">Engagement value</param>
+            <param name="orderValue">order value</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.Statistics.StaticticsData.#ctor(System.String)">
+            <summary>
+            Constructs new StaticticsData object instance
+            </summary>
+            <param name="country">Country</param>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.StaticticsData.IndexName">
+            <summary>
+            Index name
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.StaticticsData.EngagementValue">
+            <summary>
+            Engagement value
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.StaticticsData.EngagementValueDesktop">
+            <summary>
+            Engagement value for desktop
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.StaticticsData.EngagementValueTablet">
+            <summary>
+            Engagement value for tablet
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.StaticticsData.EngagementValueMobile">
+            <summary>
+            Engagement value for mobile
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.StaticticsData.OrderValue">
+            <summary>
+            Orer value
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.Statistics.StaticticsData.Country">
+            <summary>
+            Country
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.TopFolder">
+            <summary>
+            Represents top folder
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolder.FolderName">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolder.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>
+            The description.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolder.SenderName">
+            <summary>
+            Gets or sets the name of the sender.
+            </summary>
+            <value>
+            The name of the sender.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolder.SenderEmail">
+            <summary>
+            Gets or sets the sender email.
+            </summary>
+            <value>
+            The sender email.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolder.Subject">
+            <summary>
+            Gets or sets the subject.
+            </summary>
+            <value>
+            The subject.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolder.UnsubscribePageId">
+            <summary>
+            Gets or sets the Id for the <see cref="T:Dynamicweb.Content.Page" /> where Unsubscribe is located.
+            </summary>
+            <value>
+            The unsubscription page id.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolder.UnsubscribeText">
+            <summary>
+            Gets or sets the description text for the <see cref="T:Dynamicweb.Content.Page" /> where Unsubscribe is located.
+            </summary>
+            <value>
+            The unsubscription page text.
+            </value>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.TopFolder._trackingProviderConfiguration">
+            <summary>
+            Contains configuration for tracking provider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolder.TrackingProviderConfiguration">
+            <summary>
+            Gets or sets the configuration for the <see cref="T:Dynamicweb.EmailMarketing.EmailTrackingProvider" />.
+            </summary>
+            <value>
+            The tracking provider configuration.
+            </value>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.TopFolder._trackingProvider">
+            <summary>
+            Contains instance for tracking provider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolder.TrackingProvider">
+            <summary>
+            Gets the <see cref="T:Dynamicweb.EmailMarketing.EmailTrackingProvider" />.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.TopFolder._recipientProviderConfiguration">
+            <summary>
+            Contains configuration for recipient provider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolder.RecipientProviderConfiguration">
+            <summary>
+            Gets or sets the configuration for the <see cref="T:Dynamicweb.EmailMarketing.EmailRecipientProvider" />.
+            </summary>
+            <value>
+            The recipient provider configuration.
+            </value>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.TopFolder._recipientProvider">
+            <summary>
+            Contains instance for recipient provider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolder.RecipientProvider">
+            <summary>
+            Gets the <see cref="T:Dynamicweb.EmailMarketing.EmailRecipientProvider" />.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.EmailMarketing.TopFolder._engagementIndex">
+            <summary>
+            Contains the instance of engagement index
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolder.EngagementIndex">
+             <summary>
+             Gets or sets the <see cref="T:Dynamicweb.EmailMarketing.EmailEngagementIndex" />.
+             </summary>
+            
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolder.DomainName">
+            <summary>
+            Domain Url
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolder.DeliveryProviderId">
+            <summary>
+            Gets or sets the delivery provider id.
+            </summary>
+            <value>
+            The delivery provider id.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolder.RecipientSpecificContent">
+            <summary>
+            Gets or sets value indicating whether to render content for each recipient.
+            </summary>
+            <value>
+            <c>true</c> if need to render content for each recipient; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolder.QuarantinePeriod">
+            <summary>
+            Gets or sets the quarantine period (in minutes). The period in which the same <see cref="!:Dynamicweb.EmailMessaging.Recipient" /> is quarantined from receiving the same <see cref="T:Dynamicweb.EmailMarketing.Email" />.
+            </summary>
+            <value>
+            The quarantine period. This cannot be negative. Default is 0, indicating no quarantine period.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.TopFolder.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.EmailMarketing.EmailFolder" /> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.TopFolder.Fill(System.Data.IDataReader)">
+            <summary>
+            Fills the specified reader.
+            </summary>
+            <param name="reader">The reader.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.TopFolder.FillRow(System.Data.DataRow)">
+            <summary>
+            Fills the row.
+            </summary>
+            <param name="row">The row.</param>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.TopFolder.Save">
+            <summary>
+            Saves current data to the database.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.TopFolder.GetDefaultTopFolderID">
+            <summary>
+            Gets the default top folder id.
+            </summary>
+            <returns>The id of top folder</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.TopFolder.GetTopFolderByID(System.Int32)">
+            <summary>
+            Gets the top folder by id.
+            </summary>
+            <param name="folderID">The folder id.</param>
+            <returns>The top folder</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.TopFolder.GetAllTopFolders">
+            <summary>
+            Gets all top folders.
+            </summary>
+            <returns>The collection of top folders</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.TopFolder.GetTopFolderBySql(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Gets the top folder by SQL query.
+            </summary>
+            <param name="sql">The SQL query.</param>
+            <returns>The collection of top folders</returns>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.TopFolderCollection">
+            <summary>
+            Represents the collection of top folders
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.TopFolderCollection.Comparer">
+            <summary>
+            Represents a collection element comparer.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolderCollection.Comparer.Comparison">
+            <summary>
+            Gets or sets the comparison.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.TopFolderCollection.Comparer.#ctor(System.Comparison{Dynamicweb.EmailMarketing.TopFolder})">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="comparison">Comparison.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="comparison">comparison</paramref> is null.</exception>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.TopFolderCollection.Comparer.Compare(Dynamicweb.EmailMarketing.TopFolder,Dynamicweb.EmailMarketing.TopFolder)">
+            <summary>
+            Compares two objects and returns the comparison result.
+            </summary>
+            <param name="x">First object.</param>
+            <param name="y">Second object.</param>
+            <returns>Comparison result.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TopFolderCollection.Data">
+            <summary>
+            Gets the underlying data storage.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.TopFolderCollection.Sort(System.Comparison{Dynamicweb.EmailMarketing.TopFolder})">
+            <summary>
+            Sorts elements according to the given comparison.
+            </summary>
+            <param name="comparison">Comparison.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.TopFolderCollection.Sort(System.Collections.Generic.IComparer{Dynamicweb.EmailMarketing.TopFolder})">
+            <summary>
+            Sorts elements according to the given comparer.
+            </summary>
+            <param name="comparer">Comparer.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.TopFolderCollection.SortByFolderName(System.String)">
+            <summary>
+            Sorts email folders by folder name (ascending).
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.EmailMarketing.TrackingProviders.GoogleAnalyticsTrackingProvider">
+            <summary>
+            Google analytics tracking provider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TrackingProviders.GoogleAnalyticsTrackingProvider.Source">
+            <summary>
+            Gets or sets the campaign source.
+            </summary>
+            <value>
+            The campaign source.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TrackingProviders.GoogleAnalyticsTrackingProvider.Medium">
+            <summary>
+            Gets or sets the campaign medium.
+            </summary>
+            <value>
+            The campaign medium.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TrackingProviders.GoogleAnalyticsTrackingProvider.Name">
+            <summary>
+            Gets or sets the campaign name.
+            </summary>
+            <value>
+            The campaign name.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TrackingProviders.GoogleAnalyticsTrackingProvider.Term">
+            <summary>
+            Gets or sets the campaign term.
+            </summary>
+            <value>
+            The campaign term.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.TrackingProviders.GoogleAnalyticsTrackingProvider.Content">
+            <summary>
+            Gets or sets the campaign content.
+            </summary>
+            <value>
+            The campaign content.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.TrackingProviders.GoogleAnalyticsTrackingProvider.GetTrackingParameters">
+            <summary>
+            Gets the tracking parameters.
+            </summary><returns></returns>
+        </member>
+    </members>
+</doc>

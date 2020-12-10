@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Ecommerce.SalesDiscounts.SimpleVoucherDiscount</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Ecommerce.SalesDiscounts.SimpleVoucherDiscount.SimpleVoucherDiscount">
+            <summary>
+            Represents simple voucher discount
+            If the total sum of the products purchased on an order is equal or bigger that the specified amount a discount will be triggered
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.SalesDiscounts.SimpleVoucherDiscount.SimpleVoucherDiscount.ProcessOrder(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Method is not implemented
+            </summary>
+            <param name="order">Is not used</param>
+        </member>
+    </members>
+</doc>

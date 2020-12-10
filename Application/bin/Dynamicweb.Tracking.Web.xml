@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Tracking.Web</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Tracking.Web.Devices.DeviceHelper">
+            <summary>
+            Detects device type and platform from request
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.Devices.DeviceHelper.ParseFromUserAgentString(System.String)">
+            <summary>
+            Parses device information from user agent string.
+            </summary>
+            <param name="userAgent">The user agent string.</param>
+            <returns>Information about the device.</returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.Devices.DeviceInfo">
+            <summary>
+            Represents information about a client device.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Web.Devices.DeviceInfo.DeviceType">
+            <summary>
+            Gets or sets the type of the device.
+            </summary>
+            <value>
+            The type of the device.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Web.Devices.DeviceInfo.PlatformType">
+            <summary>
+            Gets or sets the type of the platform.
+            </summary>
+            <value>
+            The type of the platform.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.Devices.DeviceInfo.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Web.Devices.DeviceInfo"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.Devices.DeviceInfo.#ctor(Dynamicweb.Tracking.Devices.DeviceType,Dynamicweb.Tracking.Devices.PlatformType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Tracking.Web.Devices.DeviceInfo"/> class.
+            </summary>
+            <param name="deviceType">Type of the device.</param>
+            <param name="platformType">Type of the platform.</param>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Web.Entities.EntityHelper.QueryParameterMappings">
+            <summary>
+            Maps a query string parameters to entity information (type and optional subkey)
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartLineAddedSubscriber">
+            <summary>
+            Cart line Added subscriber.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartLineAddedSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <summary>
+            Track event Cart.Line.Added
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartCheckoutSubscriber">
+            <summary>
+            Cart OrderIsPassedToCheckoutHandler subscriber.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartCheckoutSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <summary>
+            Track event Cart.Checkout
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartCompletedSubscriber">
+            <summary>
+            Cart CheckoutDoneOrderIsComplete subscriber.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartCompletedSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <summary>
+            Track event Cart.Completed
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartCreatedSubscriber">
+            <summary>
+            Cart Created subscriber.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartCreatedSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <summary>
+            Track event Cart.Created
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartDeletedSubscriber">
+            <summary>
+            Cart Deleted subscriber.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartDeletedSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <summary>
+            Track event Cart.Empty
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartLineDecreasedSubscriber">
+            <summary>
+            Cart line Decreased subscriber.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartLineDecreasedSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <summary>
+            Track event Cart.Line.Decreased
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartLineIncreasedSubscriber">
+            <summary>
+            Cart line Increased subscriber.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartLineIncreasedSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <summary>
+            Track event Cart.Line.Increased
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartLineRemovedSubscriber">
+            <summary>
+            Cart line Removed subscriber.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartLineRemovedSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <summary>
+            Track event Cart.Line.Removed
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartViewSubscriber">
+            <summary>
+            Cart BeforeRenderingNewStep subscriber.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.NotificationSubscribers.EcomCartViewSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <summary>
+            Track event Cart.View
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.NotificationSubscribers.FormOnAfterSubmitSaveSubscriber">
+            <summary>
+            Form OnAfterSubmitSave subscriber.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.NotificationSubscribers.FormOnAfterSubmitSaveSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <summary>
+            Track event FormSubmit
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.NotificationSubscribers.FormOnBeforeRenderSubscriber">
+            <summary>
+            Form OnBeforeRender subscriber.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.NotificationSubscribers.FormOnBeforeRenderSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <summary>
+            Track event FormView
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.NotificationSubscribers.IndexingAfterQuerySubscriber">
+            <summary>
+            Notification subscriber listening for events indicating that query has just happened.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.NotificationSubscribers.IndexingAfterQuerySubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.NotificationSubscribers.UserOnExtranetLogOnSubscriber">
+            <summary>
+            User OnExtranetLogOn subscriber.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.NotificationSubscribers.UserOnExtranetLogOnSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <summary>
+            Track event User.Login
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.NotificationSubscribers.UserSavedNotificationSubscriber">
+            <summary>
+            User Saved subscriber.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.NotificationSubscribers.UserSavedNotificationSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <summary>
+            Track event User.Created
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.IProcessor`1.Process(`0)">
+            <summary>
+            Processes the given entry.
+            </summary>
+            <param name="entry"></param>
+            <returns>
+            <c>true</c> if this entry was modified; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.Locations.LocationInfo">
+            <summary>
+            Represents a geographic location
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Web.Locations.LocationInfo.CountryCode">
+            <summary>
+            Gets or sets the country code (ISO 3166-1 Alpha-2 code).
+            </summary>
+            <value>
+            The country code.
+            </value>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.Locations.LocationHelper">
+            <summary>
+            Provides geographical locations
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.Locations.LocationHelper.GetLocationByIpAddress(System.String)">
+            <summary>
+            Lookup location by ip address.
+            </summary>
+            <param name="address">The ip address.</param>
+            <returns>A geographic location</returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.Locations.LocationHelper.GetLocationByIpAddress(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Lookup location by ip address.
+            </summary>
+            <param name="address">The ip address.</param>
+            <param name="headers">The headers.</param>
+            <returns>A geographic location</returns>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Web.Reporting.GraphReportBase.ShowType">
+            <summary>
+            Gets or sets report presentation type
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.Reporting.GraphReportBase.AddMetadataInformation(Dynamicweb.Tracking.Reporting.DataSeries)">
+            <summary>
+            Add metadata information for each of our graph points
+            </summary>
+            <param name="dataSeries">The data series</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.Reporting.OrderReport.AddParameterName(System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.String)">
+            <summary>
+            Takes value from the selected option and converts it back to the displayed value using the getoptions to do a reverse mapping.
+            </summary>
+            <param name="properties"></param>
+            <param name="parameterName"></param>
+            <param name="parameterValue"></param>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Web.Reporting.VisitorReportBase.MetadataColumnName">
+            <summary>
+            The name of column in DataCollection.Columns which is used for metadata information
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.Reporting.VisitorReportBase.GetComparisonData">
+            <summary>
+            Gets the сomparison data which will transformed to additional series.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.Reporting.VisitorReportBase.GetComparisonSeries">
+            <summary>
+            Gets the сomparison dataseries in a format that is ready for consumption by chart tools which require: Legends, Labels and Series (double[][])
+            </summary>
+            <returns>dataSeries</returns>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.Reporting.VisitorReportBase.AdjustTimeRangeToComparison(System.DateTime@,System.DateTime@)">
+            <summary>
+            The method return date range fro comparison series
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.Reporting.VisitorReportBase.SetMetadataInformation(Dynamicweb.Tracking.Reporting.DataSeries)">
+            <summary>
+            Sets the metadata information.
+            </summary>
+            <param name="dataSeries">The data series</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.Reporting.VisitorReportBase.AddMetadataInformation(Dynamicweb.Tracking.Reporting.DataSeries)">
+            <summary>
+            Add some new metadata information to data series.
+            </summary>
+            <param name="dataSeries">The data series</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.Reporting.SessionReport.AddParameterName(System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.String)">
+            <summary>
+            Takes value from the selected option and converts it back to the displayed value using the getoptions to do a reverse mapping.
+            </summary>
+            <param name="properties"></param>
+            <param name="parameterName"></param>
+            <param name="parameterValue"></param>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.ResourceHelper">
+            <summary>
+            Helper for handling embedded resources
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.ResourceHelper.WriteResourceFiles(System.String)">
+            <summary>
+            Writes any matching resource files to the given folder path.
+            </summary>
+            <param name="relativeFolderPath">The relative folder path.</param>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.TrackingSettings.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Dynamicweb.Tracking.SystemTrackingConfiguration"/> class from being created.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Web.TrackingSettings.TrackingEnabled">
+            <summary>
+            Gets or sets a value indicating whether tracking is enabled.
+            </summary>
+            <value>
+              <c>true</c> if tracking is enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Web.TrackingSettings.LoggingEnabled">
+            <summary>
+            Gets or sets a value indicating whether logging is enabled.
+            </summary>
+            <value>
+              <c>true</c> if logging is enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Tracking.Web.TrackingSettings.DoNotTrackPersonalInformation">
+            <summary>
+            Gets or sets a value indicating whether tracking of personal information is enabled such as IP.
+            </summary>
+            <value>
+              <c>true</c> if tracking is enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.TrackingSettings.IpToNumber(System.String)">
+            <summary>
+            Converts an ipv4 to a long
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.TrackingSettings.TrackingLevel">
+            <summary>
+            Defines the tracking level indicating what types of visits is wanted to be recorded in the database.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Web.TrackingSettings.TrackingLevel.All">
+            <summary>
+            Track all visits
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Web.TrackingSettings.TrackingLevel.DoNotTrackDevicesAndUnknownBots">
+            <summary>
+            Will leave out visits where no known bot or device could be detected (Devicetype=0 and bottype &lt; 2)
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Web.TrackingSettings.TrackingLevel.DoNotTrackUndetectedDevices">
+            <summary>
+            Will leave out visits where no device could be detected (Devicetype=0)
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Tracking.Web.TrackingSettings.IpRange">
+            <summary>
+            Defines an iprange
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Web.TrackingSettings.IpRange.from">
+            <summary>
+            The lower bound ip in long
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Tracking.Web.TrackingSettings.IpRange.to">
+            <summary>
+            The upper bound ip in long
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Tracking.Web.TrackingSettings.GetSettingName(System.String)">
+            <summary>
+            Gets the name of the setting.
+            </summary>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

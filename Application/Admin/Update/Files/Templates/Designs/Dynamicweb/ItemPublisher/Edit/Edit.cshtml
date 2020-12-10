@@ -1,0 +1,34 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+<div class="items">
+    <div class="item-edit-form">
+        <form method="post" role="form">
+            <input type="hidden" name="Continue" value="/Default.aspx?ID=@GetValue("ItemPublisher:Global.PageId")&amp;PID=@GetValue("ItemPublisher:Global.ParagraphId")" />
+
+            @{
+                var errors = GetLoop("ValidationErrors");
+                if (errors.Count > 0)
+                {
+                    <div class="alert alert-danger validation-errors">
+                        <p><strong>@Translate("Error_saving_item", "Error saving item")</strong></p>
+                        <ul>
+                            @foreach (var error in errors)
+                            {
+                                <li>@error.GetValue("ItemPublisher:Edit.Validation.FieldName"): @error.GetValue("ItemPublisher:Edit.Validation.Error")</li>
+                            }
+                        </ul>
+                    </div>
+                }
+            }
+
+            <div class="item-edit-fields-outer">
+                @GetValue("ItemPublisher:Edit.Form")
+            </div>
+
+            <div class="item-edit-submission">
+                <a class="btn btn-link" href='Default.aspx?Id=@Pageview.Page.ID'>@Translate("Cancel", "Cancel")</a>
+                <button type="submit" class="btn btn-primary">@Translate("Save_changes", "Save changes")</button>
+            </div>
+        </form>
+    </div>
+</div>

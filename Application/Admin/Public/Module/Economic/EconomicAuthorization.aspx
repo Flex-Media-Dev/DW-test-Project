@@ -1,0 +1,17 @@
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="EconomicAuthorization.aspx.vb" Inherits="Dynamicweb.Admin.EconomicAuthorization" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:Literal runat="server" ID="SetterBlock"></asp:Literal>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+    </div>
+    </form>
+</body>
+</html>

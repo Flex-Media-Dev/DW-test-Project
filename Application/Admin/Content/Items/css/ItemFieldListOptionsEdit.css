@@ -1,0 +1,38 @@
+﻿html, body
+{
+    border-right: none !important;
+    overflow: auto;
+}
+
+.form-outer
+{
+    margin: 10px;
+}
+
+.grid-container
+{
+    position: relative;
+}
+
+.grid-container > div
+{
+    height: 275px;
+    overflow: auto;
+}
+
+/* EditableGrid - footer */
+.grid-container td[colspan="3"] 
+{
+    padding-left: 3px;
+}
+
+/* EditableGrid - "Nothing found" */
+.grid-container tr.empty td[colspan="3"]
+{
+    padding-left: 0px;
+}
+
+.grid-container span.std
+{
+    border: 0px
+}

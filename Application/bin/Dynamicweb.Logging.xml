@@ -1,0 +1,1392 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Logging</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Logging.LogCategory">
+            <summary>
+            Indicates the category of a logging entry.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogCategory.GetAllCategories">
+            <summary>
+            Get the collection of all log event categories.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Logging.LogEvents.LogEventManager">
+            <summary>
+            Log manger to ease of use regarding logging information to the eventviewer.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventManager.Current">
+            <summary>
+            Gets the current instance of the LogEventManager
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventManager.Log(System.String,System.String,System.String,Dynamicweb.Logging.LogLevel,System.String)">
+            <summary>
+            Logs informtion to eventview.
+            </summary>
+            <param name="category">The current action performed by the program</param>
+            <param name="shortDescription">Short description of what is happening</param>
+            <param name="action">Subsection of a specific area of actions</param>        
+            <param name="level">Level of the logged event</param>
+            <param name="longDescription">Details of the logged information</param>
+            <returns>logEvent</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventManager.Log(System.String,System.String,Dynamicweb.Logging.LogLevel,System.String)">
+            <summary>
+            Logs informtion to eventview.
+            </summary>
+            <param name="category">The current action performed by the program</param>
+            <param name="action">Subsection of a specific area of actions</param>        
+            <param name="level">Level of the logged event</param>
+            <param name="longDescription">Details of the logged information</param>
+            <returns>logEvent</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventManager.Log(System.String,Dynamicweb.Logging.LogLevel,System.String)">
+            <summary>
+            Logs informtion to eventview.
+            </summary>
+            <param name="category">The current action performed by the program</param>
+            <param name="level">Level of the logged event</param>
+            <param name="longDescription">Details of the logged information</param>
+            <returns>logEvent</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventManager.Log(System.String,System.String,System.String)">
+            <summary>
+            Logs informtion to eventview.
+            </summary>
+            <param name="category">The current action performed by the program</param>
+            <param name="shortDescription">Short description of what is happening</param>
+            <param name="action">Subsection of a specific area of actions</param>        
+            <returns>logEvent</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventManager.Log(System.String,System.String)">
+            <summary>
+            Logs informtion to eventview.
+            </summary>
+            <param name="category">The current action performed by the program</param>
+            <param name="shortDescription">Short description of what is happening</param>
+            <returns>logEvent</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventManager.LogError(System.String,System.String,System.String,System.Exception)">
+            <summary>
+            Logs informtion to eventview.
+            </summary>
+            <param name="category">The current action performed by the program</param>
+            <param name="shortDescription">Short description of what is happening</param>
+            <param name="action">Subsection of a specific area of actions</param>        
+            <param name="ex">Exception to log</param>
+            <returns>logEvent</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventManager.LogErrors(System.String,System.String,System.String,System.Collections.Generic.List{System.String},System.Exception)">
+            <summary>
+            Logs informtion to eventview.
+            </summary>
+            <param name="category">The current action performed by the program</param>
+            <param name="shortDescription">Short description of what is happening</param>
+            <param name="extraLogInfo">Extra information that should be logged to extended storage</param>
+            <param name="action">Subsection of a specific area of actions</param>        
+            <param name="ex">Exception to log</param>
+            <returns>logEvent</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventManager.LogError(System.String,System.String,System.Exception)">
+            <summary>
+            Logs informtion to eventview.
+            </summary>
+            <param name="category">The current action performed by the program</param>
+            <param name="action">Subsection of a specific area of actions</param>        
+            <param name="ex">Exception to log</param>
+            <returns>logEvent</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventManager.LogError(System.String,System.Exception)">
+            <summary>
+            Logs informtion to eventview.
+            </summary>
+            <param name="category">The current action performed by the program</param>
+            <param name="ex">Exception to log</param>
+            <returns>logEvent</returns>
+        </member>
+        <member name="T:Dynamicweb.Logging.LogEvents.LogEventLogger">
+            <summary>
+            Represents LogEvent logger 
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventLogger.SetGlobalLogThreshold(Dynamicweb.Logging.LogLevel)">
+            <summary>
+            Sets the global log threshold. Log events below this threshold are not logged.
+            </summary>
+            <param name="level">Level of threshold</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventLogger.Log(Dynamicweb.Logging.LogLevel,System.String,System.String,System.Exception)">
+            <summary>
+            Logs message with specific log level
+            </summary>
+            <param name="level"><see cref="T:Dynamicweb.Logging.LogLevel"/></param>
+            <param name="message">Message as <see cref="T:System.String"/></param>
+            <param name="systemInfo">SystemInfo as <see cref="T:System.String"/></param>
+            <param name="ex"><see cref="T:System.Exception"/></param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventLogger.Debug(System.String,System.String,System.Exception)">
+            <summary>
+            Logs message with "debug" log level
+            </summary>
+            <param name="message">Message as <see cref="T:System.String"/></param>
+            <param name="ex"><see cref="T:System.Exception"/></param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventLogger.Error(System.String,System.String,System.Exception)">
+            <summary>
+            Logs message with "error" log level
+            </summary>
+            <param name="message">Message as <see cref="T:System.String"/></param>
+            <param name="ex"><see cref="T:System.Exception"/></param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventLogger.Fatal(System.String,System.String,System.Exception)">
+            <summary>
+            Logs message with "fatal" log level
+            </summary>
+            <param name="message">Message as <see cref="T:System.String"/></param>
+            <param name="ex"><see cref="T:System.Exception"/></param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventLogger.Info(System.String,System.String,System.Exception)">
+            <summary>
+            Logs message with "info" log level
+            </summary>
+            <param name="message">Message as <see cref="T:System.String"/></param>
+            <param name="ex"><see cref="T:System.Exception"/></param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventLogger.Trace(System.String,System.String,System.Exception)">
+            <summary>
+            Logs message with "trace" log level
+            </summary>
+            <param name="message">Message as <see cref="T:System.String"/></param>
+            <param name="ex"><see cref="T:System.Exception"/></param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventLogger.Warn(System.String,System.String,System.Exception)">
+            <summary>
+            Logs message with "warning" log level
+            </summary>
+            <param name="message">Message as <see cref="T:System.String"/></param>
+            <param name="ex"><see cref="T:System.Exception"/></param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventNotificationService.ValidateSystemName(System.String)">
+            <summary>
+            Checks if the specified system name is unique and have no invalid characters.
+            </summary>
+            <param name="systemName">The system name.</param>
+            <returns><c>true</c>, if system name is unique and valid, otherwise <c>false</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventNotificationService.SplitEmails(Dynamicweb.Logging.LogEvents.LogEventNotification)">
+            <summary>
+            Splits the emails from string to collection.
+            </summary>
+            <param name="item">The <see cref="T:Dynamicweb.Logging.LogEvents.LogEventNotification"/>.</param>
+            <returns>A collection of separated emails.</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventNotificationService.GetAll">
+            <summary>
+            Gets all <see cref="T:Dynamicweb.Logging.LogEvents.LogEventNotification"/> available in the solution.
+            </summary>
+            <returns>The collection of the <see cref="T:Dynamicweb.Logging.LogEvents.LogEventNotification"/>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventNotificationService.GetBySystemName(System.String)">
+            <summary>
+            Gets the <see cref="T:Dynamicweb.Logging.LogEvents.LogEventNotification"/> by system name.
+            </summary>
+            <param name="systemName">The system name.</param>
+            <returns>The <see cref="T:Dynamicweb.Logging.LogEvents.LogEventNotification"/>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventNotificationService.Save(Dynamicweb.Logging.LogEvents.LogEventNotification)">
+            <summary>
+            Saves the <see cref="T:Dynamicweb.Logging.LogEvents.LogEventNotification"/>.
+            </summary>
+            <param name="item">The <see cref="T:Dynamicweb.Logging.LogEvents.LogEventNotification"/> for save.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventNotificationService.Delete(System.String)">
+            <summary>
+            Deletes the <see cref="T:Dynamicweb.Logging.LogEvents.LogEventNotification"/>.
+            </summary>
+            <param name="systemName">The <see cref="T:Dynamicweb.Logging.LogEvents.LogEventNotification"/> system name.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventNotificationService.Delete(Dynamicweb.Logging.LogEvents.LogEventNotification)">
+            <summary>
+            Deletes the <see cref="T:Dynamicweb.Logging.LogEvents.LogEventNotification"/>.
+            </summary>
+            <param name="item">The <see cref="T:Dynamicweb.Logging.LogEvents.LogEventNotification"/> for delete.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventNotificationService.ClearCache">
+            <summary>
+            Clears the cache.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Logging.LogEvents.LogEventProvider">
+            <summary>
+            Represents LogEventProvider for manipulation with loggers
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventProvider.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventProvider.GetLogger(System.String)">
+            <summary>
+            Gets specific logger instance using its name
+            </summary>
+            <param name="name">Name as string value</param>
+            <returns><see cref="T:Dynamicweb.Logging.LogEvents.LogEventLogger"/> object instance</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventProvider.GetLogger(System.String,System.String)">
+            <summary>
+            Gets specific logger instance using its name and identifier
+            </summary>
+            <param name="name">Name as string value</param>
+            <param name="identifier">Identifier  as string value</param>
+            <returns><see cref="T:Dynamicweb.Logging.LogEvents.LogEventLogger"/> object instance</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventProvider.ResetGlobalLogThreshold">
+            <summary>
+            Resets global log threshold
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventProvider.SetGlobalLogThreshold(Dynamicweb.Logging.LogLevel)">
+            <summary>
+            Sets the global log threshold. Log events below this threshold are not logged.
+            </summary>
+            <param name="level">Level of threshold</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventProvider.EnableTracing">
+            <summary>
+            Enables tracing
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventProvider.DisableTracing">
+            <summary>
+            Disables tracing
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Logging.LogEvents.ILogEventRepository">
+            <summary>
+            Definition of how a repository for saving logevents works.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.ILogEventRepository.SaveEvent(Dynamicweb.Logging.LogEvents.LogEvent)">
+            <summary>
+            Saves the event.
+            </summary>
+            <param name="logEvent">LogEvent to be saved</param>
+            <returns>logEventId</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.ILogEventRepository.ReadEvent(System.Int32)">
+            <summary>
+            Reads the event from repository.
+            </summary>
+            <param name="id">Identifier of logevent</param>
+            <returns>logEvent</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.ILogEventRepository.DeleteEvent(System.Int32)">
+            <summary>
+            Deletes the logevent, if present.
+            </summary>
+            <param name="id">Identifier of logevent</param>
+            <returns>wasDeleted</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.ILogEventRepository.GetEvents(Dynamicweb.Logging.LogEvents.LogEventQuery)">
+            <summary>
+            Gets logevents based upon query.
+            </summary>
+            <param name="query">Query defining which logevents to fetch</param>
+            <returns>logEvents</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.ILogEventRepository.DeleteEvents(Dynamicweb.Logging.LogEvents.LogEventQuery)">
+            <summary>
+            Deletes logevents based upon query.
+            </summary>
+            <param name="query">Query defining which logevents to delete</param>
+            <returns>deletedLogEvents</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.ILogEventRepository.Priority">
+            <summary>
+            Sets the priority among all implementations of the repositories.
+            </summary>
+            <returns>priority</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEvent.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a LogEvent based upon the given exception. Logs the exception details to disk.
+            </summary>
+            <param name="ex">Exception that requires a logevent</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEvent.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates a LogEvent based upon an action and a description.
+            </summary>
+            <param name="category">The current action performed by the program</param>
+            <param name="description">Description of what is happening</param>
+            <param name="action">Subsection of a specific area of actions</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEvent.#ctor">
+            <summary>
+            Creates a new prefilled LogEvent.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEvent.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEvent.Action">
+            <summary>
+            Gets or sets the action type.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEvent.Category">
+            <summary>
+            Gets or sets the category type.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEvent.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEvent.UserName">
+            <summary>
+            Name of user at logtime.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEvent.UserId">
+            <summary>
+            Id of user.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEvent.UtcOffset">
+            <summary>
+            Utc offset.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEvent.CreateDate">
+            <summary>
+            Gets the Create date (local time).
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEvent.MachineName">
+            <summary>
+            Gets the name of the machine that created the logevent.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEvent.ExceptionType">
+            <summary>
+            Gets the type of the exception.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEvent.FileLogPath">
+            <summary>
+            Gets the path to the logfile.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEvent.Level">
+            <summary>
+            Level of the logged event.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEvent.SetFileLogPath(System.String)">
+            <summary>
+            Sets the path to the logfile for this object.
+            </summary>
+            <param name="relativePath">Relative path to logfile</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEvent.GetLogger">
+            <summary>
+            Gets the logger for this object.
+            </summary>
+            <returns>logger</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEvent.GetLogFileContent">
+            <summary>
+            Gets the content of the logfile.
+            </summary>
+            <returns>logFileContent</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEvent.SetCreateDate(System.DateTime)">
+            <summary>
+            Sets the log date and the UTC offset.
+            </summary>
+            <param name="time">UTC time.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEvent.SetCreateDate(System.DateTime,System.Boolean)">
+            <summary>
+            Sets the log create date and the UTC offset.
+            </summary>
+            <param name="date">The create date.</param>
+            <param name="isUtcDate">Determines whether the date is UTC or local.</param>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventQuery.SkipNResults">
+            <summary>
+            Skips the defined number of items from the result.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventQuery.TopNResults">
+            <summary>
+            Skips all results after the defined number of items.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventQuery.StartTime">
+            <summary>
+            Skips all results from before this time.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventQuery.EndTime">
+            <summary>
+            Skips all results from after this time.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventQuery.Action">
+            <summary>
+            Only includes items with this action.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventQuery.UserName">
+            <summary>
+            Only includes items from this user.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventQuery.Ordering">
+            <summary>
+            Name of column to order by.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventQuery.Description">
+            <summary>
+            Only include items matching this description.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventQuery.IncludeSlowSearch">
+            <summary>
+            If enabled, will use like operator to search/scan for matches in the underlying data.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventQuery.Levels">
+            <summary>
+            Only include items matching this loglevel.        
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventQuery.UserId">
+            <summary>
+            Only includes items from this userid.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventQuery.ExceptionType">
+            <summary>
+            Only includes items of this type of exception.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventQuery.MachineName">
+            <summary>
+            Only includes items from machine.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventQuery.Category">
+            <summary>
+            Only includes items from this category.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventQuery.LogId">
+            <summary>
+            Identifier of a given log event.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogEvents.LogEventQuery.FreeText">
+            <summary>
+            Gets or sets search text.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventQuery.IsEmpty">
+            <summary>
+            Specifies if the query has no limiting properties.
+            </summary>
+            <returns>isEmpty</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogEvents.LogEventQuery.HasSearchParameters">
+            <summary>
+            Specifies if this query has any text-based search parameters.
+            </summary>
+            <returns>hasSearchParameters</returns>
+        </member>
+        <member name="T:Dynamicweb.Logging.ILogger">
+            <summary>
+            Defines operations for logging providers, errors and exceptions.
+            Implmented by the <see cref="T:Dynamicweb.Logging.LoggerBase"/> which is the class that should be inherited to create a custom logging engine.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Debug(System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Debug"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Debug(System.String,System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Debug"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Debug(System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Debug"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Debug(System.String,System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Debug"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Error(System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Error"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Error(System.String,System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Error"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Error(System.String,System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Error"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a seperate location</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Error(System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Error"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Fatal(System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Fatal"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Fatal(System.String,System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Fatal"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Fatal(System.String,System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Fatal"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Fatal(System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Fatal"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Info(System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Information"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Info(System.String,System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Information"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a seperate location</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Info(System.String,System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Information"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Info(System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Information"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Log(System.String)">
+            <summary>
+            This is the default log method used to write a message to the log.
+            This method uses <see cref="F:Dynamicweb.Logging.LogLevel.Information"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Log(Dynamicweb.Logging.LogLevel,System.String)">
+            <summary>
+            This is the default log method used to write a message to the log.
+            This method uses the specified <see cref="T:Dynamicweb.Logging.LogLevel"/>.
+            </summary>
+            <param name="level"><see cref="T:Dynamicweb.Logging.LogLevel"/></param>
+            <param name="message">The message to write to the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Log(Dynamicweb.Logging.LogLevel,System.String,System.String)">
+            <summary>
+            This is the default log method used to write a message to the log.
+            This method uses the specified <see cref="T:Dynamicweb.Logging.LogLevel"/>.
+            </summary>
+            <param name="level"><see cref="T:Dynamicweb.Logging.LogLevel"/></param>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Log(Dynamicweb.Logging.LogLevel,System.String,System.Exception)">
+            <summary>
+            This is the default log method used to write a message to the log.
+            This method uses the specified <see cref="T:Dynamicweb.Logging.LogLevel"/>.
+            </summary>
+            <param name="level"><see cref="T:Dynamicweb.Logging.LogLevel"/></param>
+            <param name="message">The message to write to the log.</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Log(Dynamicweb.Logging.LogLevel,System.String,System.String,System.Exception)">
+            <summary>
+            This is the default log method used to write a message to the log.
+            This method uses the specified <see cref="T:Dynamicweb.Logging.LogLevel"/>.
+            </summary>
+            <param name="level"><see cref="T:Dynamicweb.Logging.LogLevel"/></param>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Trace(System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Trace"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Trace(System.String,System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Trace"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Trace(System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Trace"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Trace(System.String,System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Trace"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Warn(System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Warning"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Warn(System.String,System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Warning"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Warn(System.String,System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Warning"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILogger.Warn(System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Warning"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="T:Dynamicweb.Logging.ILoggerProvider">
+            <summary>
+            Defines operations for logger providers and implemented by the <see cref="T:Dynamicweb.Logging.LogManager"/>.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILoggerProvider.GetLogger(System.String)">
+            <summary>
+            Gets an <see cref="T:Dynamicweb.Logging.ILogger"/> instance ready to use.
+            </summary>
+            <param name="name">The name of the <see cref="T:Dynamicweb.Logging.ILogger"/> to get.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILoggerProvider.GetLogger(System.String,System.String)">
+            <summary>
+            Gets an <see cref="T:Dynamicweb.Logging.ILogger"/> instance ready to use.
+            </summary>
+            <param name="name">The name of the <see cref="T:Dynamicweb.Logging.ILogger"/> to get.</param>
+            <param name="identifier">An identifier that is added to the log. Can be used to show association, i.e. Order ID.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILoggerProvider.SetGlobalLogThreshold(Dynamicweb.Logging.LogLevel)">
+            <summary>
+            Sets the global logging threshold. Any <see cref="T:Dynamicweb.Logging.LogLevel"/>s lower than this value are ignored.
+            Default is <see cref="F:Dynamicweb.Logging.LogLevel.Information"/>.
+            </summary>
+            <param name="level">The <see cref="T:Dynamicweb.Logging.LogLevel"/> to set the threshold to.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILoggerProvider.ResetGlobalLogThreshold">
+            <summary>
+            Resets the global logging threshold to the default <see cref="T:Dynamicweb.Logging.LogLevel"/>.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILoggerProvider.EnableTracing">
+            <summary>
+            Turns on system-wide tracing. When tracing is enabled, all <see cref="T:Dynamicweb.Logging.LogLevel"/>s are logged.
+            This is useful when debugging an issue.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.ILoggerProvider.DisableTracing">
+            <summary>
+            Turns off system-wide tracing.
+            This is useful once debugging is finished.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Logging.LogElements">
+            <summary>
+            Indicates the types of system elements to add to the log.
+            Multiple elements can be added by 'element1 OR element2 OR ... OR elementN'
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.LogElements.None">
+            <summary>
+            No system elements are logged.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.LogElements.StackTrace">
+            <summary>
+            Stack Trace is logged.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.LogElements.SessionVariables">
+            <summary>
+            All entries in the session are logged.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.LogElements.Url">
+            <summary>
+            The current URL is logged.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.LogElements.Items">
+            <summary>
+            All entries in the Items collection are logged.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.LogElements.RequestForm">
+            <summary>
+            All entries in the Request.Form collection are logged.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.LogElements.RequestQueryString">
+            <summary>
+            All entries in the Request.QueryString collection are logged.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.LogElements.ServerVariables">
+            <summary>
+            All entries in the Request.ServerVariables collection are logged
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.LogElements.All">
+            <summary>
+            All log element types are logged.
+            </summary>
+            <remarks>The same as <c>LogElements.StackTrace Or LogElements.SessionVariables Or LogElements.URL Or LogElements.Items Or LogElements.RequestForm Or LogElements.RequestQueryString Or LogElements.ServerVariables</c></remarks>
+        </member>
+        <member name="T:Dynamicweb.Logging.LoggerBase">
+            <summary>
+            Provides base operations for logging useful information, errors and exceptions and is the base class for own implementations of a logging provider.
+            Dynamicweb has a build in logging provider using NLog, see <see cref="T:Dynamicweb.Logging.NLog.NLogProvider"/>.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Debug(System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Debug"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Debug(System.String,System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Debug"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Debug(System.String,System.Exception)">
+            <summary>
+            /// Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Debug"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Debug(System.String,System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Debug"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Error(System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Error"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Error(System.String,System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Error"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Error(System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Error"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Error(System.String,System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Error"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">SystemInfo as string</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Fatal(System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Fatal"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Fatal(System.String,System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Fatal"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Fatal(System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Fatal"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Fatal(System.String,System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Fatal"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Info(System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Information"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Info(System.String,System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Information"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a seperate location</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Info(System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Information"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Info(System.String,System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Information"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Log(System.String)">
+            <summary>
+            This is the default log method used to write a message to the log.
+            This method uses <see cref="F:Dynamicweb.Logging.LogLevel.Info"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Log(Dynamicweb.Logging.LogLevel,System.String)">
+            <summary>
+            This is the default log method used to write a message to the log.
+            This method uses the specified <see cref="T:Dynamicweb.Logging.LogLevel"/>.
+            </summary>
+            <param name="level"><see cref="T:Dynamicweb.Logging.LogLevel"/></param>
+            <param name="message">The message to write to the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Log(Dynamicweb.Logging.LogLevel,System.String,System.String)">
+            <summary>
+            This is the default log method used to write a message to the log.
+            This method uses the specified <see cref="T:Dynamicweb.Logging.LogLevel"/>.
+            </summary>
+            <param name="level"><see cref="T:Dynamicweb.Logging.LogLevel"/></param>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Log(Dynamicweb.Logging.LogLevel,System.String,System.Exception)">
+            <summary>
+            This is the default log method used to write a message to the log.
+            This method uses the specified <see cref="T:Dynamicweb.Logging.LogLevel"/>.
+            </summary>
+            <param name="level"><see cref="T:Dynamicweb.Logging.LogLevel"/></param>
+            <param name="message">The message to write to the log.</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Log(Dynamicweb.Logging.LogLevel,System.String,System.String,System.Exception)">
+            <summary>
+            This is the default log method used to write a message to the log.
+            This method uses the specified <see cref="T:Dynamicweb.Logging.LogLevel"/>.
+            </summary>
+            <param name="level"><see cref="T:Dynamicweb.Logging.LogLevel"/></param>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Trace(System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Trace"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Trace(System.String,System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Trace"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Trace(System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Trace"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Trace(System.String,System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Trace"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Warn(System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Warning"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Warn(System.String,System.String)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Warning"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Warn(System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Warning"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Warn(System.String,System.String,System.Exception)">
+            <summary>
+            Writes a log message using <see cref="F:Dynamicweb.Logging.LogLevel.Warning"/>.
+            The log message will include information about the given <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="message">The message to write to the log.</param>
+            <param name="systemInfo">Serialized system information to be save in a separate location</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to include in the log.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.LoggerBase.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="T:Dynamicweb.Logging.NamespaceDoc">
+            <summary>
+            The Dynamicweb.Logging namespace allows developers to store log information to different destinations and implement own loggers.
+            Use <see cref="P:Dynamicweb.Logging.LogManager.Current"/>.GetLogger(string) to get a logging instance.
+            Log files are by default stored in /Files/System/Logs/{LogName} folder.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Logging.NLog.NamespaceDoc">
+            <summary>
+            The Dynamicweb.Logging.NLog namespace contains Dynamicwebs provider implementation of NLog.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Logging.NLog.NLogExtensions">
+            <summary>
+            Represents NLog Extensions for converting log level objects
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.NLog.NLogExtensions.Convert(Dynamicweb.Logging.LogLevel)">
+            <summary>
+            Converts <see cref="T:Dynamicweb.Logging.LogLevel"/> object to <see cref="T:NLog.LogLevel"/> object
+            </summary>
+            <param name="level"><see cref="T:Dynamicweb.Logging.LogLevel"/></param>
+            <returns><see cref="T:NLog.LogLevel"/></returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.NLog.NLogExtensions.Convert(NLog.LogLevel)">
+            <summary>
+            Converts <see cref="T:NLog.LogLevel"/> object to  object <see cref="T:Dynamicweb.Logging.LogLevel"/>
+            </summary>
+            <param name="level"><see cref="T:NLog.LogLevel"/></param>
+            <returns><see cref="T:Dynamicweb.Logging.LogLevel"/></returns>
+        </member>
+        <member name="T:Dynamicweb.Logging.NLog.NLogLogger">
+            <summary>
+            Represents NLog logger 
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.NLog.NLogLogger.Debug(System.String,System.String,System.Exception)">
+            <summary>
+            Logs message with "debug" log level
+            </summary>
+            <param name="message">Message as <see cref="T:System.String"/></param>
+            <param name="systemInfo">SystemInfo as <see cref="T:System.String"/></param>
+            <param name="ex"><see cref="T:System.Exception"/></param>
+        </member>
+        <member name="M:Dynamicweb.Logging.NLog.NLogLogger.Error(System.String,System.String,System.Exception)">
+            <summary>
+            Logs message with "error" log level
+            </summary>
+            <param name="message">Message as <see cref="T:System.String"/></param>
+            <param name="systemInfo">SystemInfo as <see cref="T:System.String"/></param>
+            <param name="ex"><see cref="T:System.Exception"/></param>
+        </member>
+        <member name="M:Dynamicweb.Logging.NLog.NLogLogger.Fatal(System.String,System.String,System.Exception)">
+            <summary>
+            Logs message with "fatal" log level
+            </summary>
+            <param name="message">Message as <see cref="T:System.String"/></param>
+            <param name="systemInfo">SystemInfo as <see cref="T:System.String"/></param>
+            <param name="ex"><see cref="T:System.Exception"/></param>
+        </member>
+        <member name="M:Dynamicweb.Logging.NLog.NLogLogger.Info(System.String,System.String,System.Exception)">
+            <summary>
+            Logs message with "info" log level
+            </summary>
+            <param name="message">Message as <see cref="T:System.String"/></param>
+            <param name="systemInfo">SystemInfo as <see cref="T:System.String"/></param>
+            <param name="ex"><see cref="T:System.Exception"/></param>
+        </member>
+        <member name="M:Dynamicweb.Logging.NLog.NLogLogger.Log(Dynamicweb.Logging.LogLevel,System.String,System.String,System.Exception)">
+            <summary>
+            Logs message with specific log level
+            </summary>
+            <param name="level"><see cref="T:Dynamicweb.Logging.LogLevel"/></param>
+            <param name="message">Message as <see cref="T:System.String"/></param>
+            <param name="systemInfo">SystemInfo as <see cref="T:System.String"/></param>
+            <param name="ex"><see cref="T:System.Exception"/></param>
+        </member>
+        <member name="M:Dynamicweb.Logging.NLog.NLogLogger.Trace(System.String,System.String,System.Exception)">
+            <summary>
+            Logs message with "trace" log level
+            </summary>
+            <param name="message">Message as <see cref="T:System.String"/></param>
+            <param name="systemInfo">SystemInfo as <see cref="T:System.String"/></param>
+            <param name="ex"><see cref="T:System.Exception"/></param>
+        </member>
+        <member name="M:Dynamicweb.Logging.NLog.NLogLogger.Warn(System.String,System.String,System.Exception)">
+            <summary>
+            Logs message with "warning" log level
+            </summary>
+            <param name="message">Message as <see cref="T:System.String"/></param>
+            <param name="systemInfo">SystemInfo as <see cref="T:System.String"/></param>
+            <param name="ex"><see cref="T:System.Exception"/></param>
+        </member>
+        <member name="T:Dynamicweb.Logging.NLog.NLogProvider">
+            <summary>
+            Represents NLogProvider for manipulation with loggers
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.NLog.NLogProvider.#ctor">
+            <summary>
+            Default constructor
+            </summary>        
+        </member>
+        <member name="M:Dynamicweb.Logging.NLog.NLogProvider.GetLogger(System.String)">
+            <summary>
+            Gets specific logger instance using its name
+            </summary>
+            <param name="name">Name as string value</param>
+            <returns><see cref="T:Dynamicweb.Logging.NLog.NLogLogger"/> object instance</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.NLog.NLogProvider.GetLogger(System.String,System.String)">
+            <summary>
+            Gets specific logger instance using its name and identifier
+            </summary>
+            <param name="name">Name as string value</param>
+            <param name="identifier">Identifier as string value</param>
+            <returns><see cref="T:Dynamicweb.Logging.NLog.NLogLogger"/> object instance</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.NLog.NLogProvider.ResetGlobalLogThreshold">
+            <summary>
+            Resets global log threshold
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.NLog.NLogProvider.SetGlobalLogThreshold(Dynamicweb.Logging.LogLevel)">
+            <summary>
+            Sets the global log threshold. Log events below this threshold are not logged.
+            </summary>
+            <param name="level">Level of threshold</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.NLog.NLogProvider.EnableTracing">
+            <summary>
+            Enables tracing
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.NLog.NLogProvider.DisableTracing">
+            <summary>
+            Disables tracing
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Logging.LogLevel">
+            <summary>
+            Indicates the severeness of a logging entry.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.LogLevel.Trace">
+            <summary>
+            A trace logging level
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.LogLevel.Debug">
+            <summary>
+            A debug logging level
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.LogLevel.Information">
+            <summary>
+            An information logging level
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.LogLevel.Warning">
+            <summary>
+            A warning logging level
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.LogLevel.Error">
+            <summary>
+            An error logging level
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.LogLevel.Fatal">
+            <summary>
+            A fatal logging level
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.LogLevel.Off">
+            <summary>
+            A Off logging level
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Logging.LogManager">
+            <summary>
+            The log manager takes care of the logging engine and creates a log manager instance if it is missing.
+            Use <see cref="P:Dynamicweb.Logging.LogManager.Current"/>.GetLogger(string) to get a logging instance.
+            Log files are by default stored in /Files/System/Logs/{LogName} folder.
+            </summary>
+            <example>
+            <code title="Using logging api" source="..\Dynamicweb\08 - Platform Services\Dynamicweb.Logging\Head\Dynamicweb.Logging.Examples\LoggerSample.cs" lang="CS"></code>
+            </example>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogManager.Current">
+            <summary>
+            Gets or sets current LogManager instance for file logging
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.LogManager.System">
+            <summary>
+            Gets a system LogManager instance for event logging
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogManager.#ctor(Dynamicweb.Logging.ILoggerProvider)">
+            <summary>
+            Creates loggerManager instance injecting logProvider object
+            </summary>
+            <param name="logProvider"></param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogManager.GetLogger(System.String)">
+            <summary>
+            Gets logger using its name
+            </summary>
+            <param name="name">Name as string</param>
+            <returns>Object implementing <see cref="T:Dynamicweb.Logging.ILogger"/></returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogManager.GetLogger(System.String,System.String)">
+            <summary>
+            Gets logger instance using its name and identifier
+            </summary>
+            <param name="name">Name as string</param>
+            <param name="identifier">Identifier as string</param>
+            <returns>Object implementing <see cref="T:Dynamicweb.Logging.ILogger"/></returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogManager.SetGlobalLogThreshold(Dynamicweb.Logging.LogLevel)">
+            <summary>
+            Sets global log threshold level
+            </summary>
+            <param name="level"><see cref="T:Dynamicweb.Logging.LogLevel"/></param>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogManager.ResetGlobalLogThreshold">
+            <summary>
+            Resets global log threshold
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogManager.EnableTracing">
+            <summary>
+            Enables tracing
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.LogManager.DisableTracing">
+            <summary>
+            Disables tracing
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Logging.Notifications.LoggingNotification.LogEventSaved">
+            <summary>
+            Notification after key has been set with a value, that is saved in cache.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Logging.Notifications.LoggingNotification.LogEventNotificationArgs">
+            <summary>Provides information about event operations.</summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.Notifications.LoggingNotification.LogEventNotificationArgs.IsNew">
+            <summary>
+            Indicates that the event is new.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Logging.Notifications.LoggingNotification.LogEventNotificationArgs.Event">
+            <summary>
+            The event
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.Notifications.LoggingNotification.LogEventNotificationArgs.#ctor(Dynamicweb.Logging.LogEvents.LogEvent)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="key">key of event.</param>
+        </member>
+        <member name="M:Dynamicweb.Logging.Notifications.LoggingNotification.LogEventNotificationArgs.#ctor(Dynamicweb.Logging.LogEvents.LogEvent,System.Boolean)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="key">key of event.</param>
+            <param name="isNew">Indicates if the event is newly created or an old one that is being updated.</param>
+        </member>
+        <member name="T:Dynamicweb.Logging.ObjectToString">
+            <summary>
+            Provides automatic printing of public properties of objects
+            Usable in easy implementation of ToString method
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Logging.ObjectToString.Output(System.Object)">
+            <summary>
+            Returns a string representation of the given object including properties and IEnumerable child objects down to the 4th level
+            </summary>
+            <param name="value">The object</param>
+            <returns>String representation</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.ObjectToString.Output(System.Object,System.Int32)">
+            <summary>
+            Outputs the specified o.
+            </summary>
+            <param name="o">The object</param>
+            <param name="maxLevel">The maximum level. Zero-based index.</param>
+            <returns>String representation</returns>
+        </member>
+        <member name="M:Dynamicweb.Logging.ObjectToString.Render(System.String,System.Object,System.Int32,System.Collections.Generic.Dictionary{System.Object,System.Int32},System.Object,System.Int32)">
+            <summary>
+            Renders an object with all child objects (IEnumerable) and public properties
+            </summary>
+        </member>
+    </members>
+</doc>

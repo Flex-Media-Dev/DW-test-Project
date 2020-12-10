@@ -1,0 +1,30 @@
+﻿.ac-textbox-wrapper .ac-textbox-data
+{
+    position: absolute;
+    z-index: 2;
+    border: 1px solid #abadb3;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px #dddddd;
+    border-radius: 2px;
+}
+
+.ac-textbox-wrapper .ac-textbox-data ul,
+.ac-textbox-wrapper .ac-textbox-data ul li
+{
+    display: block;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.ac-textbox-wrapper .ac-textbox-data ul li a
+{
+    display: block;
+    height: 16px;
+    line-height: 16px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+

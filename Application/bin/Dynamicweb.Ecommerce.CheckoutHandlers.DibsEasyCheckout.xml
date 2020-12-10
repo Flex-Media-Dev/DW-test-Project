@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Ecommerce.CheckoutHandlers.DibsEasyCheckout</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Ecommerce.CheckoutHandlers.DibsEasyCheckout.DibsEasyCheckout">
+            <summary>
+            DibsCheckout Payment Window Checkout Handler
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.DibsEasyCheckout.DibsEasyCheckout.StartCheckout(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Starts order checkout procedure
+            </summary>
+            <param name="order">Order to be checked out</param>
+            <returns>String representation of template output</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.DibsEasyCheckout.DibsEasyCheckout.Redirect(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Redirects user to to Dibs CheckoutHandler step
+            </summary>
+            <param name="order">Order for processing</param>
+            <returns>String representation of template output</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.DibsEasyCheckout.DibsEasyCheckout.Capture(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Send capture request to transaction service
+            </summary>
+            <param name="order">Order to be captured</param>
+            <returns>Response from transaction service</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.DibsEasyCheckout.DibsEasyCheckout.CaptureSupported(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Shows if capture supported
+            </summary>
+            <param name="order">This object is not used in current implementation</param>
+            <returns>This method always return 'true' value</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.DibsEasyCheckout.DibsEasyCheckout.SplitCaptureSupported(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Shows if partial capture of the order supported
+            </summary>
+            <param name="order">Not used</param>
+            <returns>Always returns true</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.DibsEasyCheckout.DibsEasyCheckout.GetOptions(System.String)">
+            <summary>
+            Gets options according to behavior mode
+            </summary>
+            <param name="behaviorMode"></param>
+            <returns>Key-value pairs of settings</returns>
+        </member>
+    </members>
+</doc>

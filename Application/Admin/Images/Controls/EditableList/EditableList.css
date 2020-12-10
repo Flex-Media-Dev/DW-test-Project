@@ -1,0 +1,318 @@
+﻿.editable-list {
+  border: 1px solid #e0e0e0;
+  box-sizing: content-box;
+}
+.editable-list table.editable-list {
+  width: 100%;
+  border: none;
+  border-spacing: 0;
+  margin: 0;
+}
+.editable-list img {
+  border: none;
+}
+.editable-list .disabled {
+  cursor: auto !important;
+}
+.editable-list .hidden {
+  display: none !important;
+}
+.editable-list .no-paging {
+  overflow-x: auto !important;
+}
+.editable-list .unselectable-text {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.editable-list .editable-list-button,
+.editable-list .editable-list-data {
+  cursor: pointer;
+}
+.editable-list .editable-list-button.disabled {
+  cursor: auto !important;
+  background-color: transparent;
+  opacity: 0.4;
+  color: #9e9e9e;
+}
+.editable-list div.editable-list-dropdown {
+  position: relative;
+  display: block;
+}
+.editable-list div.editable-list-dropdown > a {
+  display: block;
+  height: 100%;
+  width: 14px;
+  border: 1px solid transparent;
+}
+.editable-list div.editable-list-dropdown > a > span {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-top: 14px;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.editable-list div.editable-list-dropdown > ul {
+  position: absolute;
+  list-style: none;
+  display: none;
+  top: 100%;
+  right: 0;
+  height: auto;
+  width: 162px;
+  margin: 2px 0 0;
+  z-index: 10000;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px 0px;
+}
+.editable-list div.editable-list-dropdown > ul.opened {
+  display: block;
+}
+.editable-list div.editable-list-dropdown > ul li {
+  height: 28px;
+  line-height: 28px;
+  text-align: left;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  cursor: pointer;
+}
+.editable-list div.editable-list-dropdown > ul li:hover {
+  color: #fff;
+  background-color: #f5f5f5;
+}
+.editable-list div.editable-list-dropdown > ul li > span {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 4px;
+  float: left;
+}
+.editable-list div.editable-list-dropdown > ul li > span:before {
+  content: "";
+}
+.editable-list div.editable-list-dropdown > ul li > a {
+  display: inline-block;
+  height: 100%;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+  text-decoration: none;
+  background: none !important;
+  text-align: left;
+}
+.editable-list .editable-list-cell {
+  height: 18px;
+  vertical-align: middle;
+  border-bottom: 1px solid #bdbdbd;
+  padding: 5px;
+}
+.editable-list .editable-list-cell img {
+  margin-left: 8px;
+}
+.editable-list .editable-list-cell a {
+  cursor: default;
+  color: #0085CA;
+  padding-right: 10px;
+  text-decoration: none;
+  display: inline-block;
+  width: 20px;
+}
+.editable-list .editable-list-cell a:hover {
+  color: #fff;
+}
+.editable-list .editable-list-header .editable-list-cell {
+  height: auto;
+  cursor: default;
+  font-weight: bold;
+  background-color: #f5f5f5;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e0e0e0;
+  line-height: 30px;
+}
+.editable-list .editable-list-header .editable-list-cell div {
+  height: 100%;
+}
+.editable-list .editable-list-header .editable-list-cell div span {
+  vertical-align: top;
+  color: #353535;
+}
+.editable-list .editable-list-header .editable-list-cell div .sorting {
+  float: right;
+}
+.editable-list .editable-list-header .editable-list-cell div .sorting > ul li.sorting-ascending > span,
+.editable-list .editable-list-header .editable-list-cell div .sorting > ul li.sorting-descending > span {
+  width: 16px;
+  height: 16px;
+  margin-top: 5px;
+}
+.editable-list .editable-list-header .editable-list-cell div .sorting > ul li.sorting-ascending > span:before {
+  font-family: 'FontAwesome';
+  content: "\f160";
+}
+.editable-list .editable-list-header .editable-list-cell div .sorting > ul li.sorting-descending > span:before {
+  font-family: 'FontAwesome';
+  content: "\f161";
+}
+.editable-list .editable-list-header .editable-list-cell.delete-button {
+  width: 60px;
+}
+.editable-list .editable-list-body .editable-list-row:hover {
+  background-color: #f5f5f5;
+}
+.editable-list .editable-list-body .editable-list-button span {
+  margin-right: auto;
+  margin-left: auto;
+  min-height: 16px;
+  min-width: 16px;
+  height: 16px;
+  width: 16px;
+  display: block;
+}
+.editable-list .editable-list-body .editable-list-button span.no-image {
+  width: auto;
+  height: auto;
+}
+.editable-list .editable-list-body .editable-list-button.delete-button span {
+  font-family: 'FontAwesome';
+  content: "\f00d";
+}
+.editable-list .editable-list-body .editable-list-button.add-button {
+  padding: 10px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.editable-list .editable-list-body .editable-list-button.add-button td {
+  border: none;
+  vertical-align: middle;
+  padding: 10px;
+}
+.editable-list .editable-list-body .editable-list-button.add-button span {
+  width: auto;
+  color: #a9a9a9;
+  text-align: center;
+}
+.editable-list .editable-list-body .editable-list-button.add-button:hover {
+  background-color: inherit;
+}
+.editable-list .editable-list-footer {
+  background-color: #f5f5f5;
+  height: 21px;
+  line-height: 20px;
+  border-top: solid 1px #e0e0e0;
+  text-align: right;
+}
+.editable-list .editable-list-footer .editable-list-button {
+  padding: 3px 4px;
+}
+.editable-list .editable-list-footer .footer-label {
+  font-weight: 300;
+  margin: 0 4px;
+}
+.editable-list .editable-list-editor {
+  margin-bottom: 2px;
+  border-spacing: 4px;
+}
+.editable-list .editable-list-editor label {
+  cursor: default;
+}
+.editable-list .editable-list-editor tr {
+  margin: 5px 5px;
+  vertical-align: middle;
+}
+.editable-list .editable-list-editor input,
+.editable-list .editable-list-editor button,
+.editable-list .editable-list-editor select,
+.editable-list .editable-list-editor textarea {
+  width: 250px;
+  border: 1px solid #bdbdbd;
+  resize: none;
+  background-color: #fff;
+  font-size: 13px;
+  line-height: 22px;
+  outline: none;
+  box-sizing: border-box;
+}
+.editable-list .editable-list-editor td {
+  padding-bottom: 10px;
+}
+.editable-list .editable-list-editor button,
+.editable-list .editable-list-editor select {
+  text-transform: none;
+}
+.editable-list .editable-list-editor .editor-field-name {
+  min-width: 90px;
+  margin-right: 5px;
+}
+.editable-list .editable-list-editor .editor-field-value input,
+.editable-list .editable-list-editor .editor-field-value select {
+  width: 100%;
+}
+.editable-list .editable-list-editor .editor-field-value input:disabled,
+.editable-list .editable-list-editor .editor-field-value select:disabled {
+  color: #c3c3c3;
+  border-color: #c3c3c3;
+}
+.editable-list .editable-list-editor .editor-field-value input[type=checkbox],
+.editable-list .editable-list-editor .editor-field-value input[type=radio] {
+  width: auto;
+  min-width: inherit;
+  background-color: transparent;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+.editable-list .editable-list-editor .editor-field-value .input-group input {
+  width: calc(100% - 62px);
+}
+.editable-list .editable-list-editor .editor-field-value .input-group .input-group-addon {
+  font-size: 14px;
+}
+.editable-list .editable-list-filters > table {
+  width: 100%;
+  border-spacing: 0px;
+}
+.editable-list .editable-list-filters > table td {
+  padding: 0px;
+}
+.editable-list .editable-list-filters .filters-list {
+  padding: 5px 20px;
+  border-spacing: 4px;
+  background-color: #f5f5f5 !important;
+}
+.editable-list .editable-list-filters .filters-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.editable-list .editable-list-filters .filters-list .filter {
+  height: 28px;
+}
+.editable-list .editable-list-filters .filters-list .filter .editor-field-value {
+  display: inline-block;
+  width: 220px;
+}
+.editable-list .editable-list-filters .filter-commands {
+  text-align: center;
+  padding: 5px;
+}
+.editable-list .editable-list-filters .filter-commands button {
+  margin: 0 4px;
+  width: 80px;
+}

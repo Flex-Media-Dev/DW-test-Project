@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Ecommerce.CheckoutHandlers.AltaPay</name>
+    </assembly>
+    <members>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.AltaPay.AltaPayCheckoutHandler.AmountRefundResult(Dynamicweb.Ecommerce.Orders.Order,Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            amount refund with a boolean result
+            </summary>
+            <param name="order"></param>
+            <param name="originalOrder"></param>
+            <returns><c>true</c> if return operation succeeded</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.AltaPay.Helpers.GetSri(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary> 
+            Gets a SalesReconciliationIdentifier based on the order shopname and id
+            </summary>
+            <param name="order">The current Order</param>
+            <returns>SalesReconciliationIdentifier</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.AltaPay.Helpers.GetCallbackUrl(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            GetCallbackUrl with parameters required by the checkouthandler
+            </summary>
+            <param name="orderId">The id of the order</param>
+            <returns>URL with additional parameters</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.AltaPay.Helpers.GetAltaPayOrderLines(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Converts DW orderlines to AltaPay orderlines
+            </summary>
+            <param name="orderLines">AltaPay orderlines</param>
+            <param name="order">Dynamicweb Order object</param>
+            <returns>AltaPay orderlines</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.AltaPay.Helpers.GetAltaPayRefundOrderLines(Dynamicweb.Ecommerce.Orders.Order,Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Converts DW orderlines to AltaPay orderlines
+            </summary>
+            <param name="orderLines">AltaPay orderlines</param>
+            <param name="order">Dynamicweb Order object</param>
+            <returns>AltaPay orderlines</returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.AltaPay.Helpers.GetXmlResponse(Dynamicweb.Ecommerce.Orders.Order)">
+            <summary>
+            Get AltaPay's xml response
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.AltaPay.Helpers.SetXmlResponse(Dynamicweb.Ecommerce.Orders.Order,System.String)">
+            <summary>
+            Set AltaPay's XML response string as a custom order field. Creates a new orderfield if needed.
+            </summary>
+            <param name="order"></param>
+            <param name="xmlString"></param>
+        </member>
+        <member name="M:Dynamicweb.Ecommerce.CheckoutHandlers.AltaPay.Helpers.GetCookies(System.Web.HttpCookieCollection)">
+            <summary>
+            Get a combined string of all the cookies in a CookieCollection
+            </summary>
+            <param name="cookies"></param>
+        </member>
+    </members>
+</doc>

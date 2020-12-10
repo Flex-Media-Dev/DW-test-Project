@@ -1,0 +1,121 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+@using Dynamicweb.Content
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamicweb</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+    @if (string.IsNullOrWhiteSpace(GetString("Item.Area.CustomCssURL")))
+    {
+        <link rel="stylesheet" href="assets/Stylesheets/Styles.css" />
+    }
+    else
+    {
+        @("<" + "link")@: rel="stylesheet" href='@GetString("Item.Area.CustomCssURL")' @("/>")
+    }
+    @RenderSnippet("StyleSheet")
+    @RenderSnippet("JavaScript")
+</head>
+<body>
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">@Translate("Toggle_navigation", "Toggle navigation")</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href='Default.aspx?ID=@Dynamicweb.Extensibility.ServiceLocator.Current.GetPageService().GetFirstActivePageForArea(Pageview.Area.ID)'>@Pageview.Area.Name</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="dwnavigation nav navbar-nav" id="navbar" data-settings="template:navbar.xslt;endlevel:2;expandmode:all"></ul>
+                <div class="pull-right">
+
+
+                    @if (Pageview.User != null)
+                    {
+                        <p class="navbar-text">
+                            @Translate("Signed_in_as", "Signed in as")
+                            @if (Pageview.Area.Item != null && Pageview.Area.Item.ContainsKey("UserManagementPageId"))
+                            {
+                                <a href='Default.aspx?Id=@Pageview.Area.Item["UserManagementPageId"]' class="navbar-link username">@Pageview.User.UserName</a>
+                            }
+                            else
+                            {
+                                <span class="username">@Pageview.User.UserName</span>
+                            }
+                        </p>
+                        <a href='/Admin/Public/ExtranetLogoff.aspx?redirect=@System.Web.HttpUtility.UrlEncode("/Default.aspx?Id="+Pageview.Page.ID)' class="btn btn-default navbar-btn">@Translate("Sign_out", "Sign out")</a>
+                    }
+                    else
+                    {
+                        if (Pageview.Area.Item != null && Pageview.Area.Item.ContainsKey("SignInPageId"))
+                        {
+                            <a href='Default.aspx?Id=@Pageview.Area.Item["SignInPageId"]&amp;redirect=@System.Web.HttpUtility.UrlEncode("/Default.aspx?Id="+Pageview.Page.ID)' class="btn btn-default navbar-btn">@Translate("Sign_in", "Sign in")</a>
+                        }
+                    }
+
+                    @{
+                        var languages = GetLoop("WebsiteLanguages");
+
+                        if (languages.Count > 1)
+                        {
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    @Translate("Language", "Language") <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    @foreach (var language in GetLoop("WebsiteLanguages"))
+                                    {
+                                        <li>
+                                            <a href='Default.aspx?ID=@language.GetValue("FirstPageID")'>@language.GetValue("Name")</a>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    @ContentPlaceholder()
+
+    @{
+        var footerItems = GetLoop("Item.Area.FooterContent");
+        if (footerItems.Count > 0)
+        {
+            var numberOfColumns = 4;
+            switch (footerItems.Count)
+            {
+                case 1: numberOfColumns = 12; break;
+                case 2: numberOfColumns = 6; break;
+                case 3: numberOfColumns = 4; break;
+                case 4: numberOfColumns = 3; break;
+                case 5: numberOfColumns = 2; break;
+                case 6: numberOfColumns = 2; break;
+                case 7: numberOfColumns = 2; break;
+
+            }
+            <footer class="container">
+                <div class="row">
+                    @foreach (var item in GetLoop("Item.Area.FooterContent"))
+                    {
+                        <div class="col-md-@numberOfColumns">
+                            <div class="footerName">@item.GetValue("Item.Area.FooterContent.Name")</div>
+                            <div class="footerContent">@item.GetValue("Item.Area.FooterContent.Content")</div>
+                        </div>
+                    }
+                </div>
+            </footer>
+        }
+    }
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    @RenderSnippet("JavaScriptBottom")
+</body>
+</html>

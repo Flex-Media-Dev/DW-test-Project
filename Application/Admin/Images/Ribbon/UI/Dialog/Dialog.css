@@ -1,0 +1,84 @@
+﻿.sidebox
+{
+	display:none;
+}
+
+.sidebox fieldset 
+{
+	margin-bottom:0;
+}
+.boxhead
+{
+	margin: 0;
+	padding: 0;
+	vertical-align:middle;
+}
+
+.boxhead h2
+{
+	
+	font-family: Arial, Microsoft JhengHei;
+	margin: 0;
+	padding-left:10px;
+	height:28px;
+	line-height:28px;
+	font-size:11px;
+	color: #000000;
+	cursor:default;
+	vertical-align:middle;
+	text-align:left;
+}
+.sidebox table
+{
+	width:100%;
+	padding:0;
+}
+
+.sidebox .close
+{
+	text-align:right;
+}
+.sidebox .close img
+{
+	cursor:pointer;
+}
+
+.sidebox .cmd-pane button
+{
+	min-width:50px;
+	margin-right:3px;
+}
+
+.boxbody {
+    margin: 16px 6px 10px 6px;
+    padding: 0;
+}
+
+.boxbody.no-padding
+{
+	margin: 0;
+	padding: 0;
+}
+
+div.dialog-modal-overlay
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 899;
+	background-color: #333;
+	opacity: 0.4;
+	-moz-opacity: 0.4;
+	filter: alpha(opacity = 40);
+}
+
+.overlay-container.content-loader {
+    background-color: initial;
+}
+
+    .overlay-container.content-loader i {
+        color: #333 !important;
+    }
+

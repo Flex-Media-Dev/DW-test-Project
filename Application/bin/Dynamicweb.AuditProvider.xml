@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.AuditProvider</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.AuditProvider.GroupUpdatedAuditSubscriber">
+            <summary>
+            Handles group notifications for audit events.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Dynamicweb.AuditProvider.GroupUpdatedAuditSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)" -->
+        <!-- Badly formed XML comment ignored for member "M:Dynamicweb.AuditProvider.ProductUpdatedAuditSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)" -->
+        <member name="T:Dynamicweb.AuditProvider.ShopUpdatedAuditSubscriber">
+            <summary>
+            Handles shop notifications for audit events.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Dynamicweb.AuditProvider.ShopUpdatedAuditSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)" -->
+    </members>
+</doc>

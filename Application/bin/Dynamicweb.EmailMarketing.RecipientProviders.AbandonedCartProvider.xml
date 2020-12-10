@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.EmailMarketing.RecipientProviders.AbandonedCartProvider</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.EmailMarketing.RecipientProviders.AbandonedCartProvider.AbandonedCartRecipientProvider">
+            <summary>
+            Abandoned cart recipients provider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.RecipientProviders.AbandonedCartProvider.AbandonedCartRecipientProvider.MarkAbandonedAfter">
+            <summary>
+            Gets or sets 'mark abandoned after' value
+            </summary>
+            <returns>Integer value of hours</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.RecipientProviders.AbandonedCartProvider.AbandonedCartRecipientProvider.IgnoreAbandonedCartsOlderThan">
+            <summary>
+            Gets or sets 'ignore carts older than' value
+            </summary>
+            <returns>Integer value of hours</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.RecipientProviders.AbandonedCartProvider.AbandonedCartRecipientProvider.AbandonedCartsShop">
+            <summary>
+            Gets or sets 'only abandoned carts from this shop' value
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.RecipientProviders.AbandonedCartProvider.AbandonedCartRecipientProvider.AbandonedCartsLanguage">
+            <summary>
+            Gets or sets 'only abandoned carts in this language' value
+            </summary>
+            <returns>String value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.RecipientProviders.AbandonedCartProvider.AbandonedCartRecipientProvider.RequireCustomerLoggedIn">
+            <summary>
+            Gets or sets 'require customer was logged in' value
+            </summary>
+            <returns>True in case when customer was logged in</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.RecipientProviders.AbandonedCartProvider.AbandonedCartRecipientProvider.RequireCustomerAcceptedSalesTerms">
+            <summary>
+            Gets or sets 'require customer accepted sales terms' value
+            </summary>
+            <returns>Boolean value</returns>
+        </member>
+        <member name="P:Dynamicweb.EmailMarketing.RecipientProviders.AbandonedCartProvider.AbandonedCartRecipientProvider.RequireEitherCustomerLoggedInOrAcceptedTerms">
+            <summary>
+            Gets or sets 'require logged in or accepted sales terms' value
+            </summary>
+            <returns>Boolean value</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.AbandonedCartProvider.AbandonedCartRecipientProvider.GetRecipients">
+            <summary>
+            Get order recipients
+            </summary>
+            <returns>Recipient collection</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.AbandonedCartProvider.AbandonedCartRecipientProvider.GetRecipientContentContext(Dynamicweb.Mailing.Recipient)">
+            <summary>
+            Gets context of recipient content
+            </summary>
+            <param name="recipient">Recipient object instance</param>
+            <returns>Page ciew context with order data</returns>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.RecipientProviders.AbandonedCartProvider.AbandonedCartRecipientProvider.GetOptions(System.String)">
+            <summary>
+            Implements <see cref="M:Dynamicweb.Extensibility.Editors.IDropDownOptions.GetOptions">IDropDownOptions.GetOptions</see> method,
+            and used for DropDownLists control
+            </summary>
+            <param name="name">Specified current control name</param>
+            <returns>Hashtable with specified control options</returns>
+        </member>
+    </members>
+</doc>

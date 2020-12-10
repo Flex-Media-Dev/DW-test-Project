@@ -1,0 +1,29 @@
+﻿<fieldset style="width:80%;margin:10px;" id="items">
+    <legend class='gbTitle'>Builds&nbsp;</legend>
+
+    <div style="border: 1px solid rgba(188, 203, 223, 1)">
+
+        <ul>
+            <li class="header">
+                <span class="pipe"></span><span class="C0">#</span>
+                <span class="pipe"></span><span class="C1">Name</span>
+                <span class="pipe"></span><span class="C2">Value</span>
+                <span class="pipe"></span><span class="C3">Summery</span>
+            </li>
+        </ul>
+
+        <ul id="items" style="position: relative; min-height: 5px;">
+            <li class="item-field" style="position: relative;" ng-repeat="build in builds">
+                <span class="C0"><a ng-click="openBuildDialog(build.Name);" href="javascript:void(0);"><img alt="" src="/Admin/Images/Ribbon/Icons/Small/document.png"></a></span>
+                <span class="C1"><a ng-click="openBuildDialog(build.Name);" href="javascript:void(0);"><span class="inner field-name">{{build.Name}}</span></a></span>
+                <span class="C2"><a ng-click="openBuildDialog(build.Name);" href="javascript:void(0);"><span class="inner field-name">{{build.Type}}</span></a></span>
+                <span class="C4" style="float:right"><a href="javascript:void()" ng-click="schema.Fields.pop(field)"><img src="/Admin/Images/Icons/Delete_vsmall.gif"></a></span>
+            </li>
+            <li class="item-field" style="border: none;">
+                <span class="C1"><a href="javascript:void(0);">Click to add</a></span>
+            </li>
+        </ul>
+
+
+        </div>
+</fieldset>

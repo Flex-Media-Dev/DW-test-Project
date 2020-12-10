@@ -1,0 +1,62 @@
+.ObjectSelector_div 
+{
+	BORDER-RIGHT: #777 1px solid; 
+	BORDER-TOP: #777 1px solid; 
+	OVERFLOW: scroll; 
+	BORDER-LEFT: #777 1px solid; 
+	/*WIDTH: 136px; */
+	CURSOR: pointer; 
+	BORDER-BOTTOM: #777 1px solid; 
+	HEIGHT: 200px;
+}
+.ositem 
+{
+	MARGIN-TOP: 2px; 
+	COLOR: windowtext; 
+	BACKGROUND-COLOR: window;
+    cursor: default;
+}
+
+.osselecteditem 
+{
+	MARGIN-TOP: 2px; 
+	COLOR: highlighttext; 
+	BACKGROUND-COLOR: highlight;
+    cursor: default;
+}
+.ositemimg 
+{
+	MARGIN: 2px 3px -2px 
+}
+.ObjectSelectorSingle_div 
+{
+	BORDER-RIGHT: #777 1px solid; 
+	BORDER-TOP: #777 1px solid; 
+	OVERFLOW: scroll; 
+	BORDER-LEFT: #777 1px solid; 
+	WIDTH: 250px; 
+	CURSOR: hand; 
+	BORDER-BOTTOM: #777 1px solid; 
+	HEIGHT: 28px 
+}
+
+ul.os-info,
+ul.os-info li {
+}
+
+ul.os-info {
+    width: 450px;
+    margin: 5px;
+    margin-top: 10px;
+    padding: 0;
+    color: #919191;
+}
+
+ul.os-info li {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.dw-list-line.selected {
+    background-color: lightblue;
+}

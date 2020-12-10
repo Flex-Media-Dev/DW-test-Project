@@ -1,0 +1,4899 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Dynamicweb.News
+</name>
+</assembly>
+<members>
+<member name="T:Dynamicweb.News.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Dynamicweb.News.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Dynamicweb.News.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:Dynamicweb.News.Common.CommonMethods">
+ <summary>
+ Class contains common shared-methods used for frontend handling.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.ChkUrl(Dynamicweb.Frontend.PageView,System.Int32,System.Int32)">
+ <summary>
+ Returns the url link.
+ </summary>
+ <param name="pageView"><i>PageView</i> object.</param>
+ <param name="act">The current action.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.ChkUrl(Dynamicweb.Frontend.PageView,System.Int32,System.Int32,System.String)">
+ <summary>
+ Returns the URl link.
+ </summary>
+ <param name="pageView">Dynamicweb.Frontend.PageView object.</param>
+ <param name="act">the current action.</param>
+ <param name="partUrl">Additional parameter(s).</param>
+ <remarks>The default QueryString parameters are "ID", "M" and "Action". You can overwrite any default parameter if there is an empty value associated with it.</remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.ChkUrl(Dynamicweb.Frontend.PageView,System.Int32,System.Int32,System.String,System.Boolean)">
+ <summary>
+ CHKs the URL.
+ </summary>
+ <param name="pageView">The pageview.</param>
+ <param name="paragraphID">The paragraph identifier.</param>
+ <param name="act">The act.</param>
+ <param name="partUrl">The part URL.</param>
+ <param name="escapeEntities">if set to <c>true</c> [escape entities].</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.ReloadRecordsFrame(System.Web.UI.Page,System.String,System.String)">
+ <summary>
+ Reloads the records frame.
+ </summary>
+ <param name="page">The page.</param>
+ <param name="url">The URL.</param>
+ <param name="frameID">The identifier of frame.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.ReloadFrameFromList(System.Web.UI.Page,System.String)">
+ <summary>
+ Returns the javascript for parent window reloading pointing to certain url.
+ </summary>
+ <param name="page">System.Web.UI.Page object from where reload is called.</param>
+ <param name="url">Certain Url.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.GetLoopAsTemplate(Dynamicweb.Rendering.Template,System.String)">
+ <summary>
+ Gets the loop as template.
+ </summary>
+ <param name="tempalte">The tempalte.</param>
+ <param name="loopName">Name of the loop.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.ReloadFrame(System.Web.UI.Page,System.String,System.String)">
+ <summary>
+ Reloads the frame.
+ </summary>
+ <param name="page">The page.</param>
+ <param name="url">The URL.</param>
+ <param name="target">The target.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.UpdateGoBack">
+ <summary>
+ Updates the go back.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.UpdateGoBack(System.String)">
+ <summary>
+ Updates the go back.
+ </summary>
+ <param name="sender">The sender.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.CommonMethods.GoBackSender">
+ <summary>
+ Gets the go back sender.
+ </summary>
+ <value>
+ The go back sender.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Common.CommonMethods.GoBackUrl">
+ <summary>
+ Gets the go back URL.
+ </summary>
+ <value>
+ The go back URL.
+ </value>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.ValidateLogin(Dynamicweb.News.Common.Frontend.FrontendControl,System.Object@)">
+ <summary>
+ Validates the login.
+ </summary>
+ <param name="frontendControl">The control.</param>
+ <param name="validation">The validation.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.ValidateEmail(Dynamicweb.News.Common.Frontend.FrontendControl,System.Object@)">
+ <summary>
+ Validates the email.
+ </summary>
+ <param name="frontendControl">The control.</param>
+ <param name="arg">The argument.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.BuildDictionary(System.String,System.String)">
+ <summary>
+ Builds Dictionary(Of String, String) object to fill list controls its keys and values.
+ </summary>
+ <param name="sqlCommandText">Sql statement.</param>
+ <param name="dbName">Data base name.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.GetHashedKey(System.String)">
+ <summary>
+ Gets the hashed key.
+ </summary>
+ <param name="param">The parameter.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.GetHashedKey(System.String,System.String)">
+ <summary>
+ Gets the hashed key.
+ </summary>
+ <param name="firstParameter">The first parameter.</param>
+ <param name="secondParameter">The second parameter.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.IdsToString(System.Collections.Generic.List{System.Int32})">
+ <summary>
+ Idses to string.
+ </summary>
+ <param name="idsSource">The ids source.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.IntToString(System.Int32)">
+ <summary>
+ Ints to string.
+ </summary>
+ <param name="item">The item.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.GetTemplateClass(System.Int32)">
+ <summary>
+ Gets the template class.
+ </summary>
+ <param name="templateID">The template identifier.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.GetTemplateHTML(Dynamicweb.Rendering.Template)">
+ <summary>
+ Returns HTML from specified template. Loop based templates can be processed also.
+ </summary>
+ <param name="template">Template to process.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.IsTemplateExists(System.String)">
+ <summary>
+ Determines whether [is template exists] [the specified template identifier].
+ </summary>
+ <param name="templateID">The template identifier.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CommonMethods.IsTemplateExists(System.Int32)">
+ <summary>
+ Determines whether [is template exists] [the specified template identifier].
+ </summary>
+ <param name="templateID">The template identifier.</param>
+ <returns></returns>
+</member>
+<member name="T:Dynamicweb.News.Common.Constants">
+ <summary>
+ Class contains constant fields.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Constants.#ctor">
+ <summary>
+ Constructor.
+ </summary>
+</member>
+<member name="P:Dynamicweb.News.Common.Constants.CustomFilemanagerRootFolder">
+ <summary>
+ Gets custom file manager root folder path
+ </summary>
+ <returns>Path of folder</returns>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.SortDirections">
+ <summary>
+ Stores the sort directions string reprasentation.
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.Common.Constants.MailFormat">
+ <summary>
+ Stores an e-mail formats.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.MailFormat.HTML">
+ <summary>
+ HTML e-mail format = 1
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.MailFormat.Text">
+ <summary>
+ Text e-mail format = 2
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.MailFormat.Both">
+ <summary>
+ Both e-mail formats = 3
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.Common.Constants.ListSortingType">
+ <summary>
+ Stores types of list sorting.
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.ListSortingType.Up">
+ <summary>
+ Ascendant sort type.
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.ListSortingType.Down">
+ <summary>
+ Descendant sort type.
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.ListSortingType.None">
+ <summary>
+ There is no any sort type.
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.Common.Constants.DBTypes">
+ <summary>
+ Stores value types.
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.DBTypes.VarChar255">
+ <summary>
+ Varchar255 type = 1
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.DBTypes.VarChar100">
+ <summary>
+ Varchar100 type = 2
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.DBTypes.VarChar50">
+ <summary>
+ Varchar50 type = 3
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.DBTypes.VarChar20">
+ <summary>
+ Varchar20 type = 4
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.DBTypes.VarChar5">
+ <summary>
+ Varchar5 type = 5
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.DBTypes.Memo">
+ <summary>
+ MEMO type = 6
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.DBTypes.Bit">
+ <summary>
+ Bit type =7
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.DBTypes.Date">
+ <summary>
+ Date type = 8
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.DBTypes.DateTime">
+ <summary>
+ DateTime = 9
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.DBTypes.Double">
+ <summary>
+ Double type = 10
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.DBTypes.Link">
+ <summary>
+ Link type = 11
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.DBTypes.FileManager">
+ <summary>
+ FileManager type = 12
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.DBTypes.Long">
+ <summary>
+ Long type = 13
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.Common.Constants.FieldType">
+ <summary>
+ Stores a types of the fields.
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.TextBegin">
+ <summary>
+ TextBegin type = 1
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.TextEnd">
+ <summary>
+ TextEnd type = 5
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.Memo">
+ <summary>
+ Memo type = 6
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.Boolean">
+ <summary>
+ Boolean type = 7
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.Date">
+ <summary>
+ Date type = 8
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.DateTime">
+ <summary>
+ DateTime type = 9
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.Double">
+ <summary>
+ Double type = 10
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.PageLink">
+ <summary>
+ PageLink type = 11
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.FileLink">
+ <summary>
+ FileLink type = 12
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.Integer">
+ <summary>
+ Integer type = 13
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.RichEditor">
+ <summary>
+ Rich editor type = 14
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.DropDown">
+ <summary>
+ DropDown type = -1
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.Password">
+ <summary>
+ Password type = -2
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.Email">
+ <summary>
+ Email type = -3
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.Text5">
+ <summary>
+ Text5 type = 5
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.Text20">
+ <summary>
+ Text20 type = 4
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.Text50">
+ <summary>
+ Text50 type = 3
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.Text100">
+ <summary>
+ Text100 type = 2
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.Text255">
+ <summary>
+ Text255 type = 1
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.RadioButtonList">
+ <summary>
+ Radio button list
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.RegExpText">
+ <summary>
+ Text control with regular expression validation
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.Text10">
+ <summary>
+ Text10 type = 17
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.Text30">
+ <summary>
+ Text30 type = 18
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.SpamProtectControl">
+ <summary>
+ SpamProtect type = 19
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FieldType.Date100">
+ <summary>
+ Date with years field for the last century
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Common.Constants.RadioButtonListType">
+ <summary>
+ Type of radio button list
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.RadioButtonListType.Horizontal">
+ <summary>
+ Vertical radio button list
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.RadioButtonListType.Vertical">
+ <summary>
+ Horizontal radio button list
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.Common.Constants.UserType">
+ <summary>
+ Stores a types of users.
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.UserType.UserGroup">
+ <summary>
+ User Group type = 2
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.UserType.DwUser">
+ <summary>
+ DW User type = 5
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.UserType.ExtranetGroup">
+ <summary>
+ Extranet Group type = 11
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.UserType.User">
+ <summary>
+ User Group type = 15
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.EmailValidationExpression">
+ <summary>
+ Stores statement to validate emails.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FilemanagerRootFolder">
+ <summary>
+ Stores a path to the file manager root folder.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Common.Constants.FrontendControlValidatorPrefix">
+ <summary>
+ Class contains prefixes for frontend control validator.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FrontendControlValidatorPrefix.Correct">
+ <summary>
+ Correct prefix.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FrontendControlValidatorPrefix.Unique">
+ <summary>
+ Unique prefix.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FrontendControlValidatorPrefix.Required">
+ <summary>
+ Required prefix.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FrontendControlValidatorPrefix.ShortPassword">
+ <summary>
+ ShortPassword prefix.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FrontendControlValidatorPrefix.MediumSecurityPassword">
+ <summary>
+ MediumSecurityPassword prefix.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FrontendControlValidatorPrefix.HighSecurityPassword">
+ <summary>
+ HighSecurityPassword prefix.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Common.Constants.ValidatorMessage">
+ <summary>
+ Class contains validator message.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Constants.ValidatorMessage.#ctor">
+ <summary>
+ Constructor.
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.ValidatorMessage.Numeric">
+ <summary>
+ Stores a string for numeric field validator.
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.ValidatorMessage.Dt">
+ <summary>
+ Stores a string for date field validator.
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.ValidatorMessage.Int">
+ <summary>
+ Stores a string for integer field validator.
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.ValidatorMessage.Required">
+ <summary>
+ Stores a string for integer field validator.
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.Common.Constants.FrontendControlPrefix">
+ <summary>
+ Class stores prefixes for frontend controls.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FrontendControlPrefix.EndWith">
+ <summary>
+ Stores the end prefix.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FrontendControlPrefix.EndWithValidator">
+ <summary>
+ Stores the end with validator prefix.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FrontendControlPrefix.EndWithTextValue">
+ <summary>
+ Stores the end with text value prefix.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FrontendControlPrefix.DuoEndWith">
+ <summary>
+ Stores duo end prefix.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FrontendControlPrefix.DuoEndWithValidator">
+ <summary>
+ Stores duo end prefix validator.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.FrontendControlPrefix.EndWithID">
+ <summary>
+ Stores the end  with ID prefix.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.EmailMessageTimeOut">
+ <summary>
+ Stores a value for email message time out.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Common.Constants.SortDirection">
+ <summary>
+ Stores a sort directions.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.SortDirection.ASC">
+ <summary>
+ Sort by ascendant = 0
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Constants.SortDirection.DESC">
+ <summary>
+ Sort by descendant = 1 
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Constants.GetDirectionStr(Dynamicweb.News.Common.Constants.SortDirection)">
+ <summary>
+ Returns a sort direction string.
+ </summary>
+ <param name="direction"></param>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomField.Value">
+ <summary>
+ Gets or sets the value.
+ </summary>
+ <value>
+ The value.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomField.ItemID">
+ <summary>
+ Gets or sets the item identifier.
+ </summary>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomField.Name">
+ <summary>
+ Stores and retrieves the current field name.
+ </summary>
+ <returns>The name of the field.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomField.SystemName">
+ <summary>
+ Stores and retrieves the current field system name.
+ </summary>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomField.TypeID">
+ <summary>
+ Stores and retrieves the current field type.
+ </summary>
+ <returns>The current field type.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomField.Required">
+ <summary>
+ Determines whether it is required to fill current field. <see cref="T:Dynamicweb.News.Common.Frontend.IFControlInfo"/>
+ </summary>
+ <value>Boolean statement.</value>
+ <returns><c>True</c> or <c>False</c>.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomField.IsDropDown">
+ <summary>
+ Determines whether the current field is DropDown.
+ </summary>
+ <value>Boolean statement.</value>
+ <returns><c>True</c> or <c>False</c>.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomField.DropDownList">
+ <summary>
+ Stores and retrieves a list of DropDownList items.
+ </summary>
+ <value>A list of DropDown items.</value>
+ <returns>The DropDown items list.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomField.DropDownDefaultValue">
+ <summary>
+ Stores and retrieves a DropDownList default value.
+ </summary>
+ <value>A DropDownList default value.</value>
+ <returns>The DropDownList default value.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomField.Sort">
+ <summary>
+ Stores and retrieves the current field sort position.
+ </summary>
+ <value>Sort position.</value>
+ <returns>The current field type.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomField.Context">
+ <summary>
+ Gets or sets the context.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.#ctor">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomField"/> class.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.#ctor(System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomField"/> class.
+ </summary>
+ <param name="context">The context.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.#ctor(System.Data.IDataReader)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomField"/> class.
+ </summary>
+ <param name="reader">The reader.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.#ctor(System.Int32)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomField"/> class.
+ </summary>
+ <param name="fieldId">The field identifier.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.#ctor(System.Int32,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomField"/> class.
+ </summary>
+ <param name="fieldId">The field identifier.</param>
+ <param name="context">The context.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.#ctor(System.String,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomField"/> class.
+ </summary>
+ <param name="systemName">Name of the system.</param>
+ <param name="context">The context.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.Fill(System.Data.IDataReader)">
+ <summary>
+ Fills the specified reader.
+ </summary>
+ <param name="reader">The reader.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.FillObject(System.Data.IDataReader,System.Boolean)">
+ <summary>
+ Fills the object.
+ </summary>
+ <param name="reader">The reader.</param>
+ <param name="loadDropDown">if set to <c>true</c> [load drop down].</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.FillRow(System.Data.DataRow)">
+ <summary>
+ Fills the row.
+ </summary>
+ <param name="row">The row.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.Save">
+ <summary>
+ Saves this instance.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.SaveSorting">
+ <summary>
+ Saves the sorting.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.SaveFieldInfo">
+ <summary>
+ Saves the field information <see cref="T:Dynamicweb.Data.CommandBuilder"/>.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.SaveDropDowns(System.Int32)">
+ <summary>
+ Saves the drop downs.
+ </summary>
+ <param name="fieldId">The field identifier.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.DeleteDropDowns(System.Int32)">
+ <summary>
+ Deletes the drop downs.
+ </summary>
+ <param name="fieldId">The field identifier.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.ShadowCopy">
+ <summary>
+ Shadows the copy.
+ </summary>
+ <returns>Creates a shallow copy of customfield</returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.GetList(System.String)">
+ <summary>
+ Gets the list.
+ </summary>
+ <param name="context">The context.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.GetList(System.String[])">
+ <summary>
+ Gets the list.
+ </summary>
+ <param name="contexts">The contexts.</param>
+ <returns>executes the query and returns the collection of <see cref="T:Dynamicweb.Data.DbObject"/></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.GetListByIdsWithValues(System.String,System.Int32,System.String)">
+ <summary>
+ Gets the list by ids with values.
+ </summary>
+ <param name="context">The context.</param>
+ <param name="itemID">The item identifier.</param>
+ <param name="fieldIds">The field ids.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.GetListWithValues(System.String,System.Int32)">
+ <summary>
+ Gets the list with values.
+ </summary>
+ <param name="context">The context.</param>
+ <param name="itemID">The item identifier.</param>
+ <returns>customFieldCollection</returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.GetListWithValues(System.String,System.String)">
+ <summary>
+ Gets the list with values.
+ </summary>
+ <param name="context">The context.</param>
+ <param name="itemIds">The item ids.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.MoveCustomField(Dynamicweb.News.Common.MoveDirection)">
+ <summary>
+ Moves the custom field.
+ </summary>
+ <param name="moveDirection">The directory.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.SaveValue(System.Int32)">
+ <summary>
+ Saves the value.
+ </summary>
+ <param name="itemID">The item identifier.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.SearchItemIds(System.String,System.String)">
+ <summary>
+ Searches the item ids.
+ </summary>
+ <param name="context">The context in the sql</param>
+ <param name="search">search is used to search through the sql</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.GetSelectBuilder(System.String,System.String)">
+ <summary>
+ Gets the select SQL.
+ </summary>
+ <param name="context">The context in the sql</param>
+ <param name="search">search is used to search through the sql</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.DeleteValues(System.String,System.Int32)">
+ <summary>
+ Deletes the values.
+ </summary>
+ <param name="context">The context in the sql</param>
+ <param name="itemID">The item identifier.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.CreateInstance(System.Int32,System.Int32,System.String)">
+ <summary>
+ Creates the instance.
+ </summary>
+ <param name="fieldID">The field identifier.</param>
+ <param name="groupId">The group identifier.</param>
+ <param name="context">The context in the sql</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomField.Delete(System.Int32)">
+ <summary>
+ Deletes the specified identifier.
+ </summary>
+ <param name="id">The identifier.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomField.ValidationContext">
+ <summary>
+ Gets the validation context.
+ </summary>
+ <value>
+ The validation context.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomField.EnableClientValidation">
+ <summary>
+ Gets or sets a value indicating whether [enable client validation].
+ </summary>
+ <value>
+ <c>true</c> if [enable client validation]; otherwise, <c>false</c>.
+ </value>
+</member>
+<member name="T:Dynamicweb.News.Common.CustomFieldCollection">
+ <summary>
+ Represents collection of CustomFields
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFieldCollection.#ctor">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomFieldCollection"/> class.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFieldCollection.GetFieldsByItemID(System.Int32)">
+ <summary>
+ Gets the fields by item identifier.
+ </summary>
+ <param name="itemID">The item identifier.</param>
+ <returns></returns>
+</member>
+<member name="T:Dynamicweb.News.Common.CustomFieldDropDown">
+ <summary>
+ Class contains function for custom field DropDown list handling.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomFieldDropDown.FieldID">
+ <summary>
+ Stores and retrieves the current field ID value.
+ </summary>
+ <value>Field ID.</value>
+ <returns>The current field ID.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomFieldDropDown.Key">
+ <summary>
+ Stores and retrieves the current table key.
+ </summary>
+ <value>Table key.</value>
+ <returns>The current table key.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomFieldDropDown.Value">
+ <summary>
+ Stores and retrieves the current field value.
+ </summary>
+ <value>Field value.</value>
+ <returns>The current field value.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomFieldDropDown.Sort">
+ <summary>
+ Stores and retrieves the current field sort position.
+ </summary>
+ <value>Field sort position.</value>
+ <returns>The current field sort position.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomFieldDropDown.Active">
+ <summary>
+ Stores and retrieves active flag of the current field.
+ </summary>
+ <value>Field active flag.</value>
+ <returns>The current field active flag.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomFieldDropDown.DropdownDefault">
+ <summary>
+ Stores and retrieves default flag of the current field.
+ </summary>
+ <value>Field default flag.</value>
+ <returns>The current field default flag.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFieldDropDown.#ctor">
+ <summary>
+ Constructor for <see cref="T:Dynamicweb.News.Common.CustomFieldDropDown">CustomFieldDropDown</see> class.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFieldDropDown.#ctor(System.Data.IDataReader)">
+ <summary>
+ Constructor for <see cref="T:Dynamicweb.News.Common.CustomFieldDropDown">CustomFieldDropDown</see> class.
+ </summary>
+ <param name="reader">Data source.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFieldDropDown.#ctor(System.Int32)">
+ <summary>
+ Constructor for <see cref="T:Dynamicweb.News.Common.CustomFieldDropDown">CustomFieldDropDown</see> class.
+ </summary>
+ <param name="itemId">Item ID.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFieldDropDown.Fill(System.Data.IDataReader)">
+ <summary>
+ Fills object with data from System.Data.IDataReader object. 
+ </summary>
+ <param name="reader"></param>
+ <remarks>Used when to create new object.</remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFieldDropDown.FillRow(System.Data.DataRow)">
+ <summary>
+ Fills System.Data.DataRow object with data of the current object.
+ </summary>
+ <param name="row"></param>
+ <remarks>Used when to save data to the data base.</remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFieldDropDown.GetDropDownList(System.Int32)">
+ <summary>
+ Gets CustomFieldDropDown list for the current custom field.
+ </summary>
+ <param name="fieldId">Custom field ID.</param>
+ <returns>The current list.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFieldDropDown.GetDropDownList(System.String,System.String)">
+ <summary>
+ Gets CustomFieldDropDown list for the current custom field.
+ </summary>
+ <param name="systemName">The current field system name.</param>
+ <param name="context">The current module name.</param>
+ <returns>The current list.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFieldDropDown.GetDropDownListActive(System.String,System.String)">
+ <summary>
+ Gets the drop down list active.
+ </summary>
+ <param name="systemName">Name of the system.</param>
+ <param name="context">The context.</param>
+ <returns><see cref="T:System.Collections.Generic.List`1"/></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFieldDropDown.MoveCustomField(Dynamicweb.News.Common.MoveDirection)">
+ <summary>
+ Moves the custom field.
+ </summary>
+ <param name="moveDirection">The dir.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFieldDropDown.SaveSorting">
+ <summary>
+ Saves the sorting.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFieldDropDown.Save">
+ <summary>
+ Saves this instance.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFieldDropDown.SetDefault">
+ <summary>
+ Sets the default.
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.Common.CustomFields.CustomFieldGenerallib">
+ <summary>
+ Represents a general custom field.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFields.CustomFieldGenerallib.#ctor(System.Int32)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomFields.CustomFieldGenerallib" /> class.
+ </summary>
+ <param name="fieldID">The custom field id.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFields.CustomFieldGenerallib.#ctor(System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomFields.CustomFieldGenerallib" /> class.
+ </summary>
+ <param name="context">The custom field context.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFields.CustomFieldGenerallib.#ctor(System.Data.IDataReader)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomFields.CustomFieldGenerallib" /> class.
+ </summary>
+ <param name="reader">DataReader object instance</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFields.CustomFieldGenerallib.#ctor(System.Int32,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomFields.CustomFieldGenerallib" /> class.
+ </summary>
+ <param name="fieldID">The custom field id.</param>
+ <param name="context">The custom field context.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomFields.CustomFieldGenerallib.ValidationContext">
+ <summary>
+ Gets the validation context.
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.Common.CustomFields.CustomFieldSpecific">
+ <summary>
+ Represents a specific custom field
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFields.CustomFieldSpecific.#ctor(System.Int32,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomFields.CustomFieldSpecific" /> class.
+ </summary>
+ <param name="groupId">The group id.</param>
+ <param name="context">The custom field context.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFields.CustomFieldSpecific.#ctor(System.Data.IDataReader,System.Int32)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomFields.CustomFieldSpecific" /> class.
+ </summary>
+ <param name="reader">The reader.</param>
+ <param name="groupId">The group id.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFields.CustomFieldSpecific.#ctor(System.Int32,System.Int32,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomFields.CustomFieldSpecific" /> class.
+ </summary>
+ <param name="id">The id.</param>
+ <param name="groupId">The group id.</param>
+ <param name="context">The custom field context.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFields.CustomFieldSpecific.Save">
+ <summary>
+ Saves this instance to DB.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFields.CustomFieldSpecific.GetList(System.Collections.Generic.List{Dynamicweb.News.Common.CustomGroup})">
+ <summary>
+ Gets the custom fields list by specified groups.
+ </summary>
+ <param name="groups">The group ids list.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFields.CustomFieldSpecific.GetList(System.Int32)">
+ <summary>
+ Gets the custom fields list by specified group id.
+ </summary>
+ <param name="groupId">The group id.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFields.CustomFieldSpecific.GetListWithValues(System.Int32,System.Int32)">
+ <summary>
+ Gets the custom fields list by specified item ids group ids.
+ </summary>
+ <param name="itemID">The item id.</param>
+ <param name="groupId">The group id.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFields.CustomFieldSpecific.GetListWithValues(System.String,System.String)">
+ <summary>
+ Gets the custom fields list by specified items and groups.
+ </summary>
+ <param name="itemIDs">String of item ID elements</param>
+ <param name="groupIDs">String of group ID elements</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomFields.CustomFieldSpecific.GetListByIdsWithValues(System.Int32,System.Int32,System.String)">
+ <summary>
+ Gets the custom fields list by specified item id, group id and field ids.
+ </summary>
+ <param name="itemID">The item id.</param>
+ <param name="groupId">The group id.</param>
+ <param name="fieldIds">The field ids list.</param>
+ <returns></returns>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomGroup.Name">
+ <summary>
+ Gets or sets the name.
+ </summary>
+ <value>
+ The name.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomGroup.Context">
+ <summary>
+ Gets or sets the context.
+ </summary>
+ <value>
+ The context.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Common.CustomGroup.FieldsCount">
+ <summary>
+ Gets the fields count.
+ </summary>
+ <value>
+ The fields count.
+ </value>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomGroup.#ctor">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomGroup"/> class.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomGroup.#ctor(System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomGroup"/> class.
+ </summary>
+ <param name="context">The context.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomGroup.#ctor(System.Data.IDataReader)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomGroup"/> class.
+ </summary>
+ <param name="reader">The reader.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomGroup.#ctor(System.Int32,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.CustomGroup"/> class.
+ </summary>
+ <param name="id">The identifier.</param>
+ <param name="context">The context.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomGroup.Fill(System.Data.IDataReader)">
+ <summary>
+ Fills the specified reader.
+ </summary>
+ <param name="reader">The reader as <see cref="T:System.Data.IDataReader"/></param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomGroup.FillRow(System.Data.DataRow)">
+ <summary>
+ Fills the row.
+ </summary>
+ <param name="row">The row as <see cref="T:System.Data.DataRow"/>.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomGroup.Delete(System.Int32)">
+ <summary>
+ Deletes the specified identifier.
+ </summary>
+ <param name="id">The identifier.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomGroup.GetList(System.String)">
+ <summary>
+ Gets the list.
+ </summary>
+ <param name="context">The context of the sql</param>
+ <returns>returns a list of DBObjects </returns>
+</member>
+<member name="M:Dynamicweb.News.Common.CustomGroup.GetListByIds(System.String)">
+ <summary>
+ Gets the list by ids.
+ </summary>
+ <param name="ids">The ids.</param>
+ <returns></returns>
+</member>
+<member name="T:Dynamicweb.News.Common.DbString">
+ <summary>
+ Class handles a new data type.
+ </summary>
+ <remarks>Used to exclude exceptions while writing data in to string data base field.</remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.DbString.Value">
+ <summary>
+ Stores and retrieves the current type value.
+ </summary>
+ <value>String.</value>
+ <returns>The limited string, according to a maximum length of the current type.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.DbString.#ctor">
+ <summary>
+ Constructor.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.DbString.#ctor(System.Int32)">
+ <summary>
+ Constructor.
+ </summary>
+ <param name="maxLength"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.DbString.op_Implicit(Dynamicweb.News.Common.DbString)~System.String">
+ <summary>
+ Converts new DBstring type in to string type.
+ </summary>
+ <param name="databaseString"><see cref="T:Dynamicweb.News.Common.DbString">DbString</see> object.</param>
+ <returns>String representation of the value.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.DbString.op_Implicit(System.String)~Dynamicweb.News.Common.DbString">
+ <summary>
+ Converts String type value in to <see cref="T:Dynamicweb.News.Common.DbString">DbString</see> type.
+ </summary>
+ <param name="value">String type value.</param>
+ <returns>DbString representation of the input string value.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.DbString.ToString">
+ <summary>
+ Converts the current <see cref="T:Dynamicweb.News.Common.DbString">DbString</see> type in to string.
+ </summary>
+ <returns>String representation of the <see cref="T:Dynamicweb.News.Common.DbString">DbString</see> type value.</returns>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Common.Email">
+ <summary>
+ Represents an e-mail message object.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Email.#ctor">
+ <summary>
+ Constructor.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Email.FromName">
+ <summary>
+ Gets the sender name. 
+ </summary>
+ <value>Name of the sender.</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Email.FromAddress">
+ <summary>
+ Stores and retrieves a sender e-mail address. 
+ </summary>
+ <value>Sender e-mail address</value>
+ <returns>E-mail address.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Email.ToAddress">
+ <summary>
+ Stores and retrieves E-mail of the recipient.
+ </summary>
+ <value>E-mail of the recipient.</value>
+ <returns>E-mail of the recipient.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Email.ToName">
+ <summary>
+ Stores and retrieves the recipient name.
+ </summary>
+ <value>Recipient name.</value>
+ <returns>Current recipient name.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Email.SMTP">
+ <summary>
+ Stores and retrieves SMTP server name or IP address, which will send a newsletter.
+ </summary>
+ <value>Server name.</value>
+ <returns>Server name.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Email.MailFormat">
+ <summary>
+ Stores and retrieves the current newsletter format.
+ </summary>
+ <value>E-mail format.</value>
+ <returns>E-mail format.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Email.Subject">
+ <summary>
+ Stores and retrieves the message subject.
+ </summary>
+ <value>Message subject</value>
+ <returns>Message subject</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Email.Body">
+ <summary>
+ Stores and retrieves the current newsletter body text.
+ </summary>
+ <value>Newsletter body text</value>
+ <returns>Newsletter body text</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Email.CreationTime">
+ <summary>
+ Stores and retrieves the current newsletter date of creation.
+ </summary>
+ <value>Date of creation.</value>
+ <returns>Date of creation.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Email.Attachment">
+ <summary>
+ Returns the message's collection of attachments. 
+ </summary>
+ <value>Collection of attachments</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Email.Encoding">
+ <summary>
+ Stores and retrieves the current newsletter encoding.
+ </summary>
+ <value>Newsletter encoding.</value>
+ <returns>Newsletter encoding.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Email.MailEncoding">
+ <summary>
+ Stores and retrieves the current newsletter encoding.
+ </summary>
+ <value>Newsletter encoding.</value>
+ <returns>Newsletter encoding.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Email.ReplyTo">
+ <summary>
+ Stores and retrieves the e-mail of the recipient, which will be received the copy of this message.
+ </summary>
+ <value>E-mail of the recipient.</value>
+ <returns>E-mail of the recipient.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Email.AddAttachment(System.String)">
+ <summary>
+ Adds the specified attachment to the collection. 
+ </summary>
+ <param name="fileName">Name of the file to add.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Email.RemoveFileFromAttachment(System.String)">
+ <summary>
+ Finds and removes the specified attached file from the collection. 
+ </summary>
+ <param name="fileName">Name of the file to remove.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Email.GetByteArray">
+ <summary>
+ Returns an array of bytes represents a message.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Email.Send">
+ <summary>
+ Sends the current e-mail message.
+ </summary>
+ <returns>Boolean statement.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Email.SendToPickUpDirectory(System.String)">
+ <summary>
+ Saves the current message in the <i>DropFolder</i> of SMTP server.
+ </summary>
+ <param name="dropFolderDirectoryPath">Path to the Drop Folder.</param>
+ <returns>Boolean statement.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Email.SendMail(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ Creates and sends the e-mail message.
+ </summary>
+ <returns>Boolean statement.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Email.SendMail(System.String,System.String,System.String,System.String,System.String,System.String,System.Text.Encoding)">
+ <summary>
+ Creates and sends the e-mail message.
+ </summary>
+ <returns>Boolean statement.</returns>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Common.Email.AttachmentHelper">
+ <summary>
+ A helper class to solve bug(.NET 4) http://support.microsoft.com/kb/2402064
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.CheckboxControl">
+ <summary>
+ Class contains functions for checkbox control handling.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.CheckboxControl.#ctor(System.String,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.CheckboxControl"/> class.
+ </summary>
+ <param name="name">The name as a string</param>
+ <param name="value">The value as a string </param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.CheckboxControl.ControlOutput">
+ <summary>
+ Gets the control output.
+ </summary>
+ <return>
+ returns an html checkbox with 3 attributes (name, GetNameWithPid, checked)
+ </return>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.CheckboxControl.Value">
+ <summary>
+ Gets the value.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.CheckboxControl.Validate">
+ <summary>
+ Validates this instance
+ </summary>
+ <returns>
+   <c>true</c> if XXXX, <c>false</c> otherwise.
+ </returns>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.CheckboxControl.ClientValidator">
+ <summary>
+ Validates content
+ </summary>
+ <value>The client validator</value>
+ <remarks>
+ line 316 Hiding server-side validator for this control
+ Not all validator functions check the control is nothing.
+ 'Next code causes exception in these functions, it requires using Try Catch.
+ </remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.CheckboxControl.ErrorOutput">
+ <summary>
+ Gets error output message
+ </summary>
+ <returns>String result</returns>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.DateTimeControl">
+ <summary>
+ Class contains functions for DateTime control handling.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DateTimeControl.#ctor(System.String,System.String,System.Boolean,System.DateTime,System.DateTime)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.DateTimeControl"/> class.
+ </summary>
+ <param name="name">The name.</param>
+ <param name="value">The value.</param>
+ <param name="useTime">if set to <c>true</c> [use time].</param>
+ <param name="startDate">The start date.</param>
+ <param name="endDate">The end date.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DateTimeControl.#ctor(System.String,System.String,System.Boolean,System.Int32,System.Int32)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.DateTimeControl"/> class.
+ </summary>
+ <param name="name">The name.</param>
+ <param name="value">The value.</param>
+ <param name="useTime">if set to <c>true</c> [use time].</param>
+ <param name="startYear">The start year.</param>
+ <param name="endYear">The end year.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DateTimeControl.#ctor(System.String,System.String,System.Boolean,System.DateTime)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.DateTimeControl"/> class.
+ </summary>
+ <param name="name">The name.</param>
+ <param name="value">The value.</param>
+ <param name="useTime">if set to <c>true</c> [use time].</param>
+ <param name="startDate">The start date.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DateTimeControl.#ctor(System.String,System.String,System.Boolean,System.Int32)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.DateTimeControl"/> class.
+ </summary>
+ <param name="name">The name.</param>
+ <param name="value">The value.</param>
+ <param name="useTime">if set to <c>true</c> [use time].</param>
+ <param name="startYear">The start year.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DateTimeControl.#ctor(System.String,System.String,System.Boolean)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.DateTimeControl"/> class.
+ </summary>
+ <param name="name">The name.</param>
+ <param name="value">The value.</param>
+ <param name="useTime">if set to <c>true</c> [use time].</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.DateTimeControl.ControlOutput">
+ <summary>
+ Gets the control output.
+ </summary>
+ <value>
+ The control output.
+ </value>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DateTimeControl.Validate">
+ <summary>
+ Validates this instance.
+ </summary>
+ <returns>
+   <c>true</c> if XXXX, <c>false</c> otherwise.
+ </returns>
+ <exception cref="T:System.Exception"></exception>
+ throws an Exception if the date can't be validated
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.DateTimeControl.Value">
+ <summary>
+ Gets the value of date time
+ </summary>
+ <return>
+ return the dateTime object
+ </return>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DateTimeControl.TextValue">
+ <summary>
+ Handles formatting of dates.
+ </summary>
+ <returns>
+ Returns the formatted dates
+ </returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DateTimeControl.ErrorOutput">
+ <summary>
+ Errors the output.
+ </summary>
+ <returns>
+ The errorLog
+ </returns>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.DateTimeControlInfo">
+ <summary>
+ Class contains functions for date time control info handling.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DateTimeControlInfo.#ctor(System.String,System.DateTime)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.DateTimeControlInfo"/> class.
+ </summary>
+ <param name="systemName">Name of the system.</param>
+ <param name="startDate">The start date.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DateTimeControlInfo.#ctor(System.String,System.DateTime,Dynamicweb.News.Common.Frontend.FrontendControl.Validator)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.DateTimeControlInfo"/> class.
+ </summary>
+ <param name="systemName">Name of the system.</param>
+ <param name="startDate">The start date.</param>
+ <param name="validator">The validator.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DateTimeControlInfo.#ctor(System.String,System.DateTime,System.DateTime)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.DateTimeControlInfo"/> class.
+ </summary>
+ <param name="systemName">Name of the system.</param>
+ <param name="startDate">The start date.</param>
+ <param name="endDate">The end date.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DateTimeControlInfo.#ctor(System.String,System.DateTime,System.DateTime,Dynamicweb.News.Common.Frontend.FrontendControl.Validator)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.DateTimeControlInfo"/> class.
+ </summary>
+ <param name="systemName">Name of the system.</param>
+ <param name="startDate">The start date.</param>
+ <param name="endDate">The end date.</param>
+ <param name="validator">The validator.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.DateTimeControlInfo.StartDate">
+ <summary>
+ Gets the start date.
+ </summary>
+ <value>
+ The start date.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.DateTimeControlInfo.EndDate">
+ <summary>
+ Gets the end date.
+ </summary>
+ <value>
+ The end date.
+ </value>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.DecimalControl">
+ <summary>
+ Class contains functions for decimal control handling.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DecimalControl.#ctor(System.String,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.DecimalControl" /> class.
+ </summary>
+ <param name="fieldName">Name of the field.</param>
+ <param name="value">The value.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.DecimalControl.ClientValidator">
+ <summary>
+ Gets the client validator.
+ </summary>
+ <value>The client validator.</value>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DecimalControl.Validate">
+ <summary>
+ Validates this instance.
+ </summary>
+ <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DecimalControl.ErrorOutput">
+ <summary>
+ Shows error output
+ </summary>
+ <returns>String value</returns>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.DecimalControl.Value">
+ <summary>
+ Gets the value of the object and replace string with a double.
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.DropDownControl">
+ <summary>
+ Class contains function for drop down control handling.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DropDownControl.#ctor(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.DropDownControl" /> class.
+ </summary>
+ <param name="name">The name.</param>
+ <param name="value">The value.</param>
+ <param name="dds">The string value of the dictionary object.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.DropDownControl.ControlOutput">
+ <summary>
+ Gets the control output.
+ </summary>
+ <value>The control output.</value>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DropDownControl.TextValue">
+ <summary>
+ Texts the value.
+ </summary>
+ <returns>System.String.</returns>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.DropDownControl.Value">
+ <summary>
+ Gets the value.
+ </summary>
+ <value>The value.</value>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.DropDownControlInfo">
+ <summary>
+ Class contains function for drop down control info handling.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DropDownControlInfo.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.DropDownControlInfo" /> class.
+ </summary>
+ <param name="systemName">Name of the system.</param>
+ <param name="data">The data.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.DropDownControlInfo.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String},Dynamicweb.News.Common.Frontend.FrontendControl.Validator)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.DropDownControlInfo" /> class.
+ </summary>
+ <param name="systemName">Name of the system.</param>
+ <param name="data">Gets the data keys.</param>
+ <param name="validator">The validator <see cref="T:Dynamicweb.News.Common.Frontend.FrontendControl.Validator" />.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.DropDownControlInfo.Data">
+ <summary>
+ Gets the data keys <see cref="T:System.Collections.Generic.Dictionary`2" />
+ </summary>
+ <value>The data.</value>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.EmailControl">
+ <summary>
+ Class contains function for email control handling.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.EmailControl.#ctor(System.String,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.EmailControl" /> class.
+ </summary>
+ <param name="fieldName">Name of the field.</param>
+ <param name="value">The value.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.EmailControl.ClientValidator">
+ <summary>
+ Gets the client validator. <see cref="T:Dynamicweb.News.Common.Constants.FrontendControlValidatorPrefix" />
+ </summary>
+ <value>The client validator.</value>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.EmailControl.Validate">
+ <summary>
+ Validates this instance.
+ </summary>
+ <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.EmailControl.ErrorOutput">
+ <summary>
+ Errors the output if validation fails.
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.FControlInfo">
+ <summary>
+ Class contains function for information control handling.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FControlInfo.#ctor(System.String,System.Int32,System.Boolean)">
+ <summary>
+ Constructor for <see cref="T:CustomModule.NewsletterV3.FControlInfo">FControlInfo</see> class.
+ </summary>
+ <param name="systemName">Control system name.</param>
+ <param name="typeID">ID of the control type.</param>
+ <param name="required">Whether the current field is required to fill.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FControlInfo.#ctor(System.String,System.Int32,System.Boolean,System.Boolean)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.FControlInfo"/> class.
+ </summary>
+ <param name="systemName">Name of the system.</param>
+ <param name="typeID">The type identifier.</param>
+ <param name="required">if set to <c>true</c> [required].</param>
+ <param name="enableClientValidation">if set to <c>true</c> [enable client validation].</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FControlInfo.#ctor(System.String,System.Int32,System.Boolean,Dynamicweb.News.Common.Frontend.FrontendControl.Validator)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.FControlInfo"/> class.
+ </summary>
+ <param name="systemName">Name of the system.</param>
+ <param name="typeID">The type identifier.</param>
+ <param name="required">if set to <c>true</c> [required].</param>
+ <param name="validator">The validator.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FControlInfo.AdditionalValidator">
+ <summary>
+ Gets or sets the additional validator.
+ </summary>
+ <value>
+ The additional validator.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FControlInfo.SystemName">
+ <summary>
+ Stores and retrieves full system name of control.
+ </summary>
+ <value>Full system name of control</value>
+ <returns>Full system name of control</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FControlInfo.TypeID">
+ <summary>
+ Stores and retrieves the current control type.
+ </summary>
+ <value>Type of control.</value>
+ <returns>the current control type.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FControlInfo.Required">
+ <summary>
+ Determines whether the current control is required to fill.
+ </summary>
+ <value>Boolean statement.</value>
+ <returns><c>True</c> or <c>False</c></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FControlInfo.IsDropDown">
+ <summary>
+ Determines whether the current control is DropDown.
+ </summary>
+ <value>Boolean statement.</value>
+ <returns><c>True</c> or <c>False</c></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FControlInfo.EnableClientValidation">
+ <summary>
+ Determines whether the current must be client validated.
+ </summary>
+ <value>Boolean statement.</value>
+ <returns><c>True</c> or <c>False</c></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.FileControl">
+ <summary>
+ Class contains function for file control handling.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FileControl.#ctor(System.String,System.String,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.FileControl"/> class.
+ </summary>
+ <param name="name">The name.</param>
+ <param name="folder">The folder.</param>
+ <param name="value">The value.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FileControl.FixFilePath(System.String)">
+ <summary>
+ Fixes the file path.
+ </summary>
+ <param name="path">The path.</param>
+ <returns>customFilemanagerRootFolder</returns>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FileControl.ControlOutput">
+ <summary>
+ Gets the control output.
+ </summary>
+ <value>The control output.</value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FileControl.ClientValidator">
+ <summary>
+ Validates content
+ </summary>
+ <value>The client validator.</value>
+ <remarks>line 316 Hiding server-side validator for this control
+ Not all validator functions check the control is nothing.
+ Next code causes exception in these functions, it requires using Try Catch.</remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FileControl.CheckNeedFileDelete">
+ <summary>
+ Checks the need file delete.
+ </summary>
+ <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FileControl.DeleteFile">
+ <summary>
+ Deletes the file.
+ </summary>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FileControl.FileSizeKB">
+ <summary>
+ Gets the file size kb.
+ </summary>
+ <value>The file size kb.</value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FileControl.Value">
+ <summary>
+ Gets the value.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FileControl.SetValue(System.String)">
+ <summary>
+ Sets the value.
+ </summary>
+ <param name="value">The value.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FileControl.Validate">
+ <summary>
+ Validates this instance.
+ </summary>
+ <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FileControl.ErrorOutput">
+ <summary>
+ Errors the output.
+ </summary>
+ <returns>an error message if can't be validated</returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FileControl.DoUpload(System.Int32,System.String)">
+ <summary>
+ Does the upload.
+ </summary>
+ <param name="userid">The userid.</param>
+ <param name="curValue">The current value.</param>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.FrontendControl">
+ <summary>
+ Class contains functions for handling control at frontend.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControl.#ctor(System.Int32,System.String)">
+ <summary>
+ Constructor.
+ </summary>
+ <param name="rowid">The rowid.</param>
+ <param name="name">The name.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControl.#ctor(System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.FrontendControl" /> class.
+ </summary>
+ <param name="name">The name.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControl.#ctor(System.Int32,System.String,Dynamicweb.News.Common.Frontend.FrontendControl.Validator)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.FrontendControl" /> class.
+ </summary>
+ <param name="rowid">The rowid.</param>
+ <param name="name">The name.</param>
+ <param name="validator">The validator.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControl.#ctor(System.Int32,System.Int32,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.FrontendControl" /> class.
+ </summary>
+ <param name="pid">The pid.</param>
+ <param name="rowid">The rowid.</param>
+ <param name="name">The name.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControl.#ctor(System.Int32,System.Int32,System.String,Dynamicweb.News.Common.Frontend.FrontendControl.Validator)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.FrontendControl" /> class.
+ </summary>
+ <param name="pid">The pid.</param>
+ <param name="rowid">The rowid.</param>
+ <param name="name">The name.</param>
+ <param name="validator">The validator.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControl.RowID">
+ <summary>
+ Gets or sets the row identifier.
+ </summary>
+ <value>The row identifier.</value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControl.IsCustom">
+ <summary>
+ Gets or sets a value indicating whether this instance is custom.
+ </summary>
+ <value>
+   <c>true</c> if this instance is custom; otherwise, <c>false</c>.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControl.WasChanged">
+ <summary>
+ Gets or sets a value indicating whether [was changed].
+ </summary>
+ <value>
+   <c>true</c> if [was changed]; otherwise, <c>false</c>.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControl.EnableClientValidation">
+ <summary>
+ Gets or sets a value indicating whether [enable client validation].
+ </summary>
+ <value>
+ <c>true</c> if [enable client validation]; otherwise, <c>false</c>.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControl.Pid">
+ <summary>
+ Gets or sets the pid.
+ </summary>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControl.Required">
+<summary>
+ Determines whether the current control field is required.
+ </summary>
+ <value>Boolean statement.</value>
+ <returns><c>True</c> or <c>False</c></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControl.IsUnique">
+ <summary>
+ Determines whether the current control field is unique.
+ </summary>
+ <value>Boolean statement.</value>
+ <returns><c>True</c> or <c>False</c>.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControl.Label">
+ <summary>
+ Stores and retrieves the current control label string.
+ </summary>
+ <value>Control label.</value>
+ <returns>The current control label string.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControl.Name">
+ <summary>
+ Stores and retrieves the current control name.
+ </summary>
+ <value>Control name.</value>
+ <returns>The current control name.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControl.InitialValue">
+ <summary>
+ Stores and retrieves the initial value for this control.
+ </summary>
+ <value>Initial value for this control.</value>
+ <returns>The current initial value for this control.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControl.AdditionalValidator">
+ <summary>
+ Gets or sets the additional validator.
+ </summary>
+ <value>
+ The additional validator.
+ </value>
+ <returns>The current Validater value for this control.</returns>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControl.MessagesTemplate">
+ <summary>
+ Gets or sets the messages template.
+ </summary>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControl.ValidationMessages">
+ <summary>
+ Gets or sets the validation messages.
+ </summary>
+ <value>The validation messages.</value>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControl.Message(Dynamicweb.News.Common.Frontend.ValidatorType,System.String,System.Boolean)">
+ <summary>
+ Returns a validator message.
+ </summary>
+ <param name="type">The type.</param>
+ <param name="id">The identifier.</param>
+ <param name="bHide">if set to <c>true</c> [b hide].</param>
+ <returns>Returns the message as string</returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControl.GetValidationTypeAsString(Dynamicweb.News.Common.Frontend.ValidatorType)">
+ <summary>
+ Gets the validation type as string.
+ </summary>
+ <param name="type">The type.</param>
+ <returns>The validation type</returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControl.Validate">
+ <summary>
+ Validates this instance.
+ </summary>
+ <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControl.ControlOutput">
+ <summary>
+ Gets the control output.
+ </summary>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControl.Value">
+ <summary>
+ Gets the value.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControl.ErrorOutput">
+ <summary>
+ Errors the output.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControl.TextValue">
+ <summary>
+ Texts the value.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControl.GetNameWithPid">
+ <summary>
+ Gets the name with pid.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControl.ChangeClass(System.String)">
+ <summary>
+ Changes control "class" atribute.
+ </summary>
+ <param name="control"></param>
+ <returns>Changed control.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControl.ClientValidator">
+ <summary>
+ Validates content
+ </summary>
+ <value>The client validator.</value>
+ <remarks>line 316 Hiding server-side validator for this control
+ Not all validator functions check the control is nothing.
+ 'Next code causes exception in these functions, it requires using Try Catch.</remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControl.FindCustomField(System.Collections.Generic.List{Dynamicweb.News.Common.CustomField})">
+ <summary>
+ Finds the custom field.
+ </summary>
+ <param name="list">The list.</param>
+ <returns>CustomField.</returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControl.MatchCustomField(Dynamicweb.News.Common.CustomField)">
+ <summary>
+ Matches the custom field.
+ </summary>
+ <param name="customField">The cf.</param>
+ <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.FrontendControlFactory">
+ <summary>
+ Class contains functions for control factory handling.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControlFactory.#ctor(System.Int32,System.String,Dynamicweb.Frontend.PageView,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.FrontendControlFactory"/> class.
+ </summary>
+ <param name="rowid">The rowid.</param>
+ <param name="fileManagerHomeDir">The file manager home dir.</param>
+ <param name="pageview">The pageview.</param>
+ <param name="context">The context.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControlFactory.Pid">
+ <summary>
+ Gets or sets the pid.
+ </summary>
+ <value>
+ The pid.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControlFactory.Context">
+ <summary>
+ Gets or sets the context.
+ </summary>
+ <value>
+ The context.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControlFactory.Validate">
+ <summary>
+ Gets or sets a value indicating whether this <see cref="T:Dynamicweb.News.Common.Frontend.FrontendControlFactory"/> is validate.
+ </summary>
+ <value>
+   <c>true</c> if validate; otherwise, <c>false</c>.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControlFactory.IsPostBack">
+ <summary>
+ Gets or sets a value indicating whether this instance is post back.
+ </summary>
+ <value>
+ <c>true</c> if this instance is post back; otherwise, <c>false</c>.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControlFactory.ValidationMessages">
+ <summary>
+ Gets or sets the validation messages.
+ </summary>
+ <value>
+ The validation messages.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.FrontendControlFactory.MessagesTemplate">
+ <summary>
+ Gets or sets the messages template.
+ </summary>
+ <value>
+ The messages template.
+ </value>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControlFactory.CreateControl(Dynamicweb.News.Common.CustomField)">
+ <summary>
+ Creates the control.
+ </summary>
+ <param name="costumField">The costum field.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControlFactory.CreateControl``1(System.String,System.String,System.String,``0,Dynamicweb.News.Common.Frontend.IFControlInfo)">
+ <summary>
+ Creates the control.
+ </summary>
+ <typeparam name="T"></typeparam>
+ <param name="propertyName">Name of the property.</param>
+ <param name="name">The name.</param>
+ <param name="label">The label.</param>
+ <param name="source">The source.</param>
+ <param name="info">The information.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControlFactory.CreateControl``1(System.String,System.String,System.String,``0,Dynamicweb.News.Common.Frontend.IFControlInfo,System.Boolean)">
+ <summary>
+ Creates the control.
+ </summary>
+ <typeparam name="T"></typeparam>
+ <param name="propertyName">Name of the property.</param>
+ <param name="name">The name.</param>
+ <param name="label">The label.</param>
+ <param name="source">The source.</param>
+ <param name="info">The information.</param>
+ <param name="escapeSQLInjection">if set to <c>true</c> [escape SQL injection].</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControlFactory.CreateControlFirst``1(System.String,System.String,System.String,``0,Dynamicweb.News.Common.Frontend.IFControlInfo)">
+ <summary>
+ Creates the control first.
+ </summary>
+ <typeparam name="T"></typeparam>
+ <param name="propertyName">Name of the property.</param>
+ <param name="name">The name.</param>
+ <param name="label">The label.</param>
+ <param name="source">The source.</param>
+ <param name="info">The information.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControlFactory.CreateControlPostBack(System.String,System.String,Dynamicweb.News.Common.Frontend.IFControlInfo,System.String,System.Boolean)">
+ <summary>
+ Creates the control post back.
+ </summary>
+ <param name="fieldname">The fieldname.</param>
+ <param name="label">The label.</param>
+ <param name="info">The information.</param>
+ <param name="oldValue">The old value.</param>
+ <param name="escapeSQLInjection">if set to <c>true</c> [escape SQL injection].</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControlFactory.BuildControl(System.String,System.String,Dynamicweb.News.Common.Frontend.IFControlInfo,System.String,System.Boolean)">
+ <summary>
+ Builds the control.
+ </summary>
+ <param name="name">The name.</param>
+ <param name="label">The label.</param>
+ <param name="info">The information.</param>
+ <param name="value">The value.</param>
+ <param name="wasChanged">if set to <c>true</c> [was changed].</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControlFactory.BuildControl(System.String,System.String,Dynamicweb.News.Common.Frontend.IFControlInfo,System.String,System.String,System.Boolean)">
+ <summary>
+ Builds the control.
+ </summary>
+ <param name="name">The name.</param>
+ <param name="label">The label.</param>
+ <param name="info">The information.</param>
+ <param name="firstValue">The first value.</param>
+ <param name="secondValue">The second value.</param>
+ <param name="wasChanged">if set to <c>true</c> [was changed].</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControlFactory.GetCustomFieldDropdownData(System.String,System.String)">
+ <summary>
+ Gets the custom field dropdown data.
+ </summary>
+ <param name="name">The name.</param>
+ <param name="context">The context.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControlFactory.CreateCustomControls``1(System.String,``0)">
+ <summary>
+ Creates the custom controls.
+ </summary>
+ <typeparam name="T"></typeparam>
+ <param name="context">The context.</param>
+ <param name="source">The source.</param>
+ <returns>List(Of FrontendControl).</returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControlFactory.FillControlTags(Dynamicweb.Rendering.Template,Dynamicweb.News.Common.Frontend.FrontendControl)">
+ <summary>
+ Fills the control tags.
+ </summary>
+ <param name="template">The template.</param>
+ <param name="fillControl">The fill control.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControlFactory.GetFrontendControlNameWithPid(Dynamicweb.News.Common.Frontend.FrontendControl)">
+ <summary>
+ Gets the frontend control name with pid.
+ </summary>
+ <param name="frontendControlPid">The frontend control pid.</param>
+ <returns>a stored frontend control pid's name</returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControlFactory.GetFieldValue``1(System.String,``0)">
+ <summary>
+ Gets the field value.
+ </summary>
+ <typeparam name="T"></typeparam>
+ <param name="propertyName">Name of the property.</param>
+ <param name="source">The source.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControlFactory.CheckWasFieldChanged``1(System.String,``0)">
+ <summary>
+ Checks the was field changed.
+ </summary>
+ <typeparam name="T"></typeparam>
+ <param name="propertyName">Name of the property.</param>
+ <param name="source">The source.</param>
+ <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.FrontendControlFactory.GetValue``1(System.String,``0)">
+ <summary>
+ Gets the value.
+ </summary>
+ <typeparam name="T"></typeparam>
+ <param name="propertyName">Name of the property.</param>
+ <param name="source">The source.</param>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.IDuoControl">
+ <summary>
+ Defines methods for DuoControls
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.IFControlInfo">
+ <summary>
+ Handles controls at frontend.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.IntegerControl">
+ <summary>
+ Class contains functions for integer control handling.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.IntegerControl.#ctor(System.String,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.IntegerControl" /> class.
+ </summary>
+ <param name="fieldName">Name of the field.</param>
+ <param name="value">The value.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.IntegerControl.ClientValidator">
+ <summary>
+ Gets the client validator.
+ </summary>
+ <value>The client validator.</value>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.IntegerControl.Validate">
+ <summary>
+ Validates this instance.
+ </summary>
+ <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.IntegerControl.ErrorOutput">
+ <summary>
+ Errors the output.
+ </summary>
+ <returns>System.String.</returns>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.IntegerControl.Value">
+ <summary>
+ Gets the value.
+ </summary>
+ <value>The value.</value>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.LinkControl">
+ <summary>
+ Class contains functions for link control handling.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.LinkControl.#ctor(System.String,System.String,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.LinkControl"/> class.
+ </summary>
+ <param name="name">The name.</param>
+ <param name="target">The target.</param>
+ <param name="value">The value.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.LinkControl.ControlOutput">
+ <summary>
+ Gets the control output.
+ </summary>
+ <value>
+ The control output.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.LinkControl.Value">
+ <summary>
+ Gets the value.
+ </summary>
+ <value>The value.</value>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.LinkControl.Validate">
+ <summary>
+ Validates this instance.
+ </summary>
+ <returns>true if mandatory field is not empty</returns>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.LinkControl.ClientValidator">
+ <summary>
+ Validates content
+ </summary>
+ <value>The client validator.</value>
+ <remarks>line 316 Hiding server-side validator for this control
+ Not all validator functions check the control is nothing.
+ 'Next code causes exception in these functions, it requires using Try Catch.</remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.LinkControl.ErrorOutput">
+ <summary>
+ Errors the output.
+ </summary>
+ <returns>System.String.</returns>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.LongTextControl">
+ <summary>
+ Class LongTextControl.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.LongTextControl.#ctor(System.String,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.LongTextControl"/> class.
+ </summary>
+ <param name="fieldName">Name of the field.</param>
+ <param name="value">The value.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.LongTextControl.ControlOutput">
+ <summary>
+ Gets the control output.
+ </summary>
+ <value>The control output.</value>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.PagerButtonType">
+ <summary>
+ Represents types of PagerButtons
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.PasswordControl">
+ <summary>
+ Class contains functions for password control handling.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.PasswordControl.#ctor(System.String,System.String,System.String)">
+ <summary>
+ Constructor.
+ </summary>
+ <param name="fieldName"></param>
+ <param name="value"></param>
+ <param name="value2"></param>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.PasswordControl.ControlOutput">
+ <summary>
+ Gets the control output.
+ </summary>
+ <value>The control output.</value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.PasswordControl.ClientValidator">
+ <summary>
+ Gets the client validator.
+ </summary>
+ <value>The client validator.</value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.PasswordControl.ErrorOutput2">
+ <summary>
+ Gets the error output2.
+ </summary>
+ <value>The error output2.</value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.PasswordControl.Output2">
+ <summary>
+ Gets the output2.
+ </summary>
+ <value>The output2.</value>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.PasswordControl.Validate">
+ <summary>
+ Validates passwords
+ </summary>
+ <returns>true both user input values of password are equal</returns>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.RadioButtonListControl">
+ <summary>
+ Class RadioButtonListControl.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.RadioButtonListControl.#ctor(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},Dynamicweb.News.Common.Constants.RadioButtonListType)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.RadioButtonListControl"/> class.
+ </summary>
+ <param name="name">The name.</param>
+ <param name="value">The value.</param>
+ <param name="dds">The DDS.</param>
+ <param name="type">The type.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.RadioButtonListControl.ControlOutput">
+ <summary>
+ Gets the control output.
+ </summary>
+ <value>The control output.</value>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.RadioButtonListControl.TextValue">
+ <summary>
+ Texts the value.
+ </summary>
+ <returns>System.String.</returns>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.RadioButtonListControl.Value">
+ <summary>
+ Gets the value.
+ </summary>
+ <value>The value.</value>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.RadioButtonListControlInfo">
+ <summary>
+ Class contains functions for radio button list control info handling.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.RadioButtonListControlInfo.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String},Dynamicweb.News.Common.Constants.RadioButtonListType)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.RadioButtonListControlInfo"/> class.
+ </summary>
+ <param name="systemName">Name of the system.</param>
+ <param name="data">The data.</param>
+ <param name="type">The type.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.RadioButtonListControlInfo.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.RadioButtonListControlInfo"/> class.
+ </summary>
+ <param name="systemName">Name of the system.</param>
+ <param name="data">The data.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.RadioButtonListControlInfo.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String},Dynamicweb.News.Common.Frontend.FrontendControl.Validator,Dynamicweb.News.Common.Constants.RadioButtonListType)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.RadioButtonListControlInfo"/> class.
+ </summary>
+ <param name="systemName">Name of the system.</param>
+ <param name="data">The data.</param>
+ <param name="validator">The validator.</param>
+ <param name="type">The type.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.RadioButtonListControlInfo.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String},Dynamicweb.News.Common.Frontend.FrontendControl.Validator)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.RadioButtonListControlInfo"/> class.
+ </summary>
+ <param name="systemName">Name of the system.</param>
+ <param name="data">The data.</param>
+ <param name="validator">The validator.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.RadioButtonListControlInfo.Data">
+ <summary>
+ Gets the data.
+ </summary>
+ <value>The data.</value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.RadioButtonListControlInfo.Type">
+ <summary>
+ Gets the type.
+ </summary>
+ <value>The type.</value>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.RegExpControl">
+ <summary>
+ Class contains function for regex control handling.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.RegExpControl.#ctor(System.String,System.String,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.RegExpControl"/> class.
+ </summary>
+ <param name="fieldName">Name of the field.</param>
+ <param name="value">The value.</param>
+ <param name="regexp">The regexp.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.RegExpControl.ClientValidator">
+ <summary>
+ Gets the client validator.
+ </summary>
+ <value>The client validator.</value>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.RegExpControl.Validate">
+ <summary>
+ Validates this instance.
+ </summary>
+ <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.RegExpControl.ErrorOutput">
+ <summary>
+ Errors the output.
+ </summary>
+ <returns>System.String.</returns>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.RegExpControlInfo">
+ <summary>
+ Class contains function for regex information control handling.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.RegExpControlInfo.#ctor(System.String,System.Boolean,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.RegExpControlInfo"/> class.
+ </summary>
+ <param name="systemName">Name of the system.</param>
+ <param name="requiredValue">if set to <c>true</c> [required value].</param>
+ <param name="regexp">The regexp.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.RegExpControlInfo.#ctor(System.String,System.Boolean,System.String,Dynamicweb.News.Common.Frontend.FrontendControl.Validator)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.RegExpControlInfo"/> class.
+ </summary>
+ <param name="systemName">Name of the system.</param>
+ <param name="requiredValue">if set to <c>true</c> [required value].</param>
+ <param name="regexp">The regexp.</param>
+ <param name="validator">The validator.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.RegExpControlInfo.RegExp">
+ <summary>
+ Gets the reg exp.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.RichEditorControl.#ctor(System.String,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.RichEditorControl"/> class.
+ </summary>
+ <param name="fieldName">Name of the field.</param>
+ <param name="value">The value.</param>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.RichEditorControl.ControlOutput">
+ <summary>
+ Gets the control output.
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.TextControl">
+ <summary>
+ Class contains functions for text control handling.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.TextControl.#ctor(System.String,System.String)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.TextControl"/> class.
+ </summary>
+ <param name="fieldName">Name of the field.</param>
+ <param name="value">The value.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.TextControl.#ctor(System.String,System.String,System.Int32)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Common.Frontend.TextControl"/> class.
+ </summary>
+ <param name="fieldName">Name of the field.</param>
+ <param name="value">The value.</param>
+ <param name="typeID">The type identifier.</param>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.TextControl.Validate">
+ <summary>
+ Validates this instance.
+ </summary>
+ <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.TextControl.ClientValidator">
+ <summary>
+ Validates content
+ </summary>
+ <value>The client validator.</value>
+ <remarks>line 316 Hiding server-side validator for this control
+ Not all validator functions check the control is nothing.
+ 'Next code causes exception in these functions, it requires using Try Catch.</remarks>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.TextControl.ControlOutput">
+ <summary>
+ Gets the control output.
+ </summary>
+ <value>The control output.</value>
+</member>
+<member name="M:Dynamicweb.News.Common.Frontend.TextControl.ErrorOutput">
+ <summary>
+ Errors the output.
+ </summary>
+ <returns>System.String.</returns>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.TextControl.Value">
+ <summary>
+ Gets the value.
+ </summary>
+ <value>The value.</value>
+</member>
+<member name="P:Dynamicweb.News.Common.Frontend.TextControl.EncodedValue">
+ <summary>
+ Gets the encoded value.
+ </summary>
+ <value>The encoded value.</value>
+</member>
+<member name="T:Dynamicweb.News.Common.Frontend.ValidatorType">
+ <summary>
+ Stores types of validator.
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Frontend.ValidatorType.Required">
+ <summary>
+ Required type = 1
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Frontend.ValidatorType.Unique">
+ <summary>
+ Unique type = 2
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Frontend.ValidatorType.Correct">
+ <summary>
+ Correct type = 3
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Frontend.ValidatorType.ShortPassword">
+ <summary>
+ Short password type = 4
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Frontend.ValidatorType.MediumSecurityPassword">
+ <summary>
+ Medium security password type = 5
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.Frontend.ValidatorType.HighSecurityPassword">
+ <summary>
+ High security password type = 6
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.Common.IFrontendEditable">
+ <summary>
+ Defines methods for object classes needs to be editable on frontend
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.Common.MoveDirection">
+ <summary>
+ Stores move direction.
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.MoveDirection.Up">
+ <summary>
+ Move up.
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Common.MoveDirection.Down">
+ <summary>
+ Move down.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Backend.Filters.#ctor(System.String,System.Int32,System.Int32,Dynamicweb.News.NewsStatus,System.String,System.Int32)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Backend.Filters"/> class.
+ </summary>
+ <param name="search">The s.</param>
+ <param name="pageSize">The psize.</param>
+ <param name="pageNumber">The pnum.</param>
+ <param name="status">The st.</param>
+ <param name="sortColumn">The sort col.</param>
+ <param name="sortDirection">The dir.</param>
+</member>
+<member name="M:Dynamicweb.News.Backend.ConvertFiltersToString(Dynamicweb.News.Backend.Filters)">
+ <summary>
+ Converts the filters to string.
+ </summary>
+ <param name="filter">The filter.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Backend.GetFiltersFromRequest">
+ <summary>
+ Gets the filters from request.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:Dynamicweb.News.NewsMostPopularComparator">
+ <summary>
+ Represents a news item comparer.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.NewsMostPopularComparator.Compare(Dynamicweb.News.NewsItem,Dynamicweb.News.NewsItem)">
+ <summary>
+ Compares two specified news items.
+ </summary>
+ <param name="x">The x.</param>
+ <param name="y">The y.</param>
+ <returns></returns>
+</member>
+<member name="T:Dynamicweb.News.NewsStatus">
+ <summary>
+ Represents a news status.
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.RecordClass">
+ <summary> 
+ <para> This is a 'base' class for type strong SQL table record objects. RecordClass 
+ is a MustInherit class, only classes derived from RecordClass can access member 
+ of this class.
+ </para>
+ <para> RecordClass has tree constructors. New(), New(DataRow) and New(IDataReader). Derived 
+ classes MUST call one of these constructors, typically using a MyBase.New(?) call.
+ </para>
+ </summary>
+ <example> A short example that illustrates the context the class is used in.
+ <code>
+ Public Class TemplateClass
+     Inherits RecordClass
+ 
+     Private _TemplateID As System.Int32
+ 	
+     Property TemplateID() As System.Int32
+         Get
+            Return _TemplateID
+         End Get
+         Set(ByVal Value As System.Int32)
+            _TemplateID = Value
+         End Set
+     End Property
+ 	
+     ' implementation details ...
+ 
+ End Class
+ </code>
+ </example>
+ <remarks>
+ </remarks>
+</member>
+<member name="P:Dynamicweb.News.RecordClass.Row">
+ <summary>
+ This property handles the DataRow that the parrentclass assign when using the
+ New(DataRow) constructor
+ </summary>
+ <value>A DataRow representation of the type strong object</value>
+ <todo>
+ 
+ </todo>
+</member>
+<member name="M:Dynamicweb.News.RecordClass.#ctor">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.RecordClass" /> class.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.RecordClass.#ctor(System.Data.DataRow)">
+ <summary>
+ Constructor that takes a DataRow as a input parameter. Assignment itself is done 
+ in the Sub AssignAllRow. The property Row contains the datarepresentation at the 
+ time of construction. Assignment of the derived classes properties in general use 
+ beyound the constructor is NOT reflected in the DataRow property Row.
+ </summary>
+ <param name="rwRow">DataRow that contains data to assign to the type strong object</param>
+ <example>
+ <code>
+ Public Class TestAssignment
+     inherits TemplateClass
+ 
+     Public Sub Test(ByVal rwRow as DataRow)
+       	Dim Template as TemplateClass
+ 
+         Template = New TemplateClass(rwRow)
+         Template.TemplateID = 7     ' This does not assign the TemplateID of the Row property.
+     End Sub
+ End Class
+ </code>
+ </example>	
+ <history>
+ 	[cpk]	17-01-2006	Created
+ </history>
+</member>
+<member name="M:Dynamicweb.News.RecordClass.#ctor(System.Data.IDataReader)">
+ <summary>
+ Constructor that takes a Datareader as a input parameter. Assignment itself is done 
+ in the Sub AssignAllReader. The DataRow property Row is not assigned any values sinces 
+ the IDataReader does not represent its data as a DataRow object.
+ </summary>
+ <param name="drReader">IDataReader that contains data to assign to the type strong object</param>
+ <history>
+ 	[cpk]	17-01-2006	Created
+ </history>
+</member>
+<member name="M:Dynamicweb.News.RecordClass.AssignAllRow(System.Data.DataRow)">
+ <summary>
+ AssignAllRow is defined Overridable and is supposed to be overriden in the subclass
+ </summary>
+ <param name="rwRow">DataRow that contains data to assign to the type strong object</param>
+ <example>
+ <code>
+     Overrides Sub AssignAllRow(ByVal rwParagraph As DataRow)
+         If FieldExists(rwParagraph, "ParagraphID") Then _
+            ParagraphID = CType(rwParagraph("ParagraphID"), System.Int32)
+     End Sub
+ </code>
+ </example>	
+ <remarks>
+ </remarks>
+ <history>
+ 	[cpk]	17-01-2006	Created
+ </history>
+</member>
+<member name="M:Dynamicweb.News.RecordClass.AssignAllReader(System.Data.IDataReader)">
+ <summary>
+ AssignAllReader is defined Overridable and is supposed to be overriden in the subclass
+ </summary>
+ <param name="drReader">IDataReader that contains data to assign to the type strong object</param>
+ <example>
+ <code>
+     Public Class TemplateClass
+         Inherits RecordClass
+ 	
+         Private _TemplateID As System.Int32
+ 	
+         Property TemplateID() As System.Int32
+             Get
+                Return _TemplateID
+             End Get
+             Set(ByVal Value As System.Int32)
+                _TemplateID = Value
+             End Set
+         End Property
+ 	
+         Overrides Sub AssignAllReader(ByVal drTemplate As IDataReader)
+             If FieldExists(drTemplate, "TemplateID") Then _
+       	       TemplateID = CType(drTemplate("TemplateID"), System.Int32)
+         End sub
+ 	
+     End Class	
+ </code>
+ </example>	
+ <remarks>
+ </remarks>
+ <history>
+ 	[cpk]	17-01-2006	Created
+ </history>
+</member>
+<member name="M:Dynamicweb.News.RecordClass.FieldExists(System.Data.DataRow,System.String)">
+ <summary>
+ Examines the DataRow (rwDataRow) passed in for the existance of strName. If the field
+ exists and the field is 'something' as opposed to 'not Nothing' the function returns true.	
+ <see>AssignAllRow</see> for an example.	
+ </summary>
+ <param name="rwDatarow">Datarow containing values</param>
+ <param name="strName">Name of field to check for existance for</param>
+ <returns>True if strName is a valid field in the DataRow otherwise false</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[cpk]	17-01-2006	Created
+ </history>
+</member>
+<member name="M:Dynamicweb.News.RecordClass.FieldExists(System.Data.IDataReader,System.String)">
+ <summary>
+ Examines the IDataReader (drDataReader) passed in for the existance of strName. If the field
+ exists and the field is 'something' as opposed to 'not Nothing' the function returns true.	
+ <see>AssignAllReader</see> for an example.	
+ </summary>
+ <param name="drDataReader">IDataReader containing values</param>
+ <param name="strName">Name of field to check for existance for</param>
+ <returns>True if strName is a valid field in the IDataReader otherwise false</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[cpk]	17-01-2006	Created
+ </history>
+</member>
+<member name="T:Dynamicweb.News.SortFields">
+ <summary>
+ Represents a sorting fields.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Standard">
+ <summary>
+ This class contains modules common function.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Standard.RadioButton(System.String,System.String,System.String,System.String)">
+ <summary>
+ Renders a radio button.
+ </summary>
+ <param name="SelectedFieldValue">The selected field value.</param>
+ <param name="FieldName">Name of the field.</param>
+ <param name="FieldValue">The field value.</param>
+ <param name="jsScript">The js script.</param>
+ <returns>
+ String with current source.
+ </returns>
+</member>
+<member name="P:Dynamicweb.News.Standard.IsAdmin">
+ <summary>
+ Gets a value indicating whether the current user account is identified as an Admin.
+ </summary>
+ <value>
+   <c>true</c> if this instance is admin; otherwise, <c>false</c>.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Standard.IsExtranetInstalled">
+ <summary>
+ Gets a value indicating whether Extranet module is installed
+ </summary>
+ <value>
+ <c>true</c> if this instance is extranet installed; otherwise, <c>false</c>.
+ </value>
+</member>
+<member name="M:Dynamicweb.News.Standard.GetNewsV2DefaultTemplate">
+ <summary>
+ Gets a default template for NewsV2
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:Dynamicweb.News.Consts">
+ <summary>
+ This class contains module's constants.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Consts.DBName">
+ <summary>
+ Assigns a name of data base.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Consts.CurrentPage">
+ <summary>
+ Stores default page number.
+ </summary>
+ 
+</member>
+<member name="F:Dynamicweb.News.Consts.StepPages">
+ <summary>
+ Is not used
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Consts.NewsV2Context">
+ <summary>
+ Stores AccessCustomCategoryContext field value.
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Consts.GeneralCustomFieldContext">
+ <summary>
+ Stores AccessCustomFieldContext field value.
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Consts.SpecificCustomFieldContext">
+ <summary>
+ Stores AccessCustomFieldContext field value.
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Consts.DwColoumnWidth">
+ <summary>
+ Stores default column width
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Consts.DwColoumnSpace">
+ <summary>
+ Stores default column space
+ </summary>
+</member>
+<member name="F:Dynamicweb.News.Consts.CategorySelectionSessionName">
+ <summary>
+ Stores CategorySelection session name.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Consts.NewsOrderBy">
+ <summary>
+ Determines news order.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Consts.FirstXChars">
+ <summary>
+ Determines where to get first <i>X</i> characters.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Extensibility.FrontendDataNotificationArgs">
+ <summary>
+ Provides information about the data which is being processed by the News V2 module.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Extensibility.FrontendDataNotificationArgs.Data">
+ <summary>
+ Gets or sets the data object which is being processed.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Extensibility.FrontendDataNotificationArgs.#ctor(Dynamicweb.News.Frontend.Output,System.Object)">
+ <summary>
+ Initializes a new instance of an object.
+ </summary>
+ <param name="moduleInstance">An instance of the News V2 module.</param>
+ <param name="data">Data object which is being processed.</param>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Extensibility.FrontendNotificationArgs">
+ <summary>
+ Provides basic information about an event occured on the frontend.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Extensibility.FrontendNotificationArgs.ModuleInstance">
+ <summary>
+ Gets an instance of the News V2 module.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Extensibility.FrontendNotificationArgs.#ctor(Dynamicweb.News.Frontend.Output)">
+ <summary>
+ Initializes a new instance of an object.
+ </summary>
+ <param name="moduleInstance">An instance of the News V2 module.</param>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Extensibility.ModuleOutputTemplateExtender">
+ <summary>
+ Provides an ability to track the rendering process of the News V2 module.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Extensibility.ModuleOutputTemplateExtender.State">
+ <summary>
+ Gets or sets the rendering state.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Extensibility.ModuleRenderingState">
+ <summary>
+ Represents a rendering state of the News V2 module.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Extensibility.ModuleRenderingState.Before">
+ <summary>
+ Not content has been rendered yet.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Extensibility.ModuleRenderingState.During">
+ <summary>
+ Content is being rendered.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Extensibility.ModuleRenderingState.After">
+ <summary>
+ Content has been rendered.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Extensibility.NewsItemCategoryNotificationArgs">
+ <summary>
+ Provides notification data about single news item category.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Extensibility.NewsItemCategoryNotificationArgs.Category">
+ <summary>
+ Gets or sets a reference to news item category.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Extensibility.NewsItemCategoryNotificationArgs.#ctor(Dynamicweb.News.NewsCategory)">
+ <summary>
+ Initializes a new instance of an object.
+ </summary>
+ <param name="category">A reference to news item category.</param>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Extensibility.NewsItemDetailsTemplateExtender">
+ <summary>
+ Provides an ability to extend news item template.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Extensibility.NewsItemDetailsTemplateExtender.Item">
+ <summary>
+ Gets or sets the news item being rendered.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Extensibility.NewsItemEditTemplateExtender">
+ <summary>
+ Provides an ability to extend news item edit form template.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Extensibility.NewsItemEditTemplateExtender.Item">
+ <summary>
+ Gets or sets the news item being edited.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Extensibility.NewsItemNotificationArgs">
+ <summary>
+ Provides notification data about single news item.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Extensibility.NewsItemNotificationArgs.Item">
+ <summary>
+ Gets or sets a reference to news item.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Extensibility.NewsItemNotificationArgs.#ctor(Dynamicweb.News.NewsItem)">
+ <summary>
+ Initializes a new instance of an object.
+ </summary>
+ <param name="item">A reference to news item.</param>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Extensibility.NewsListItemTemplateExtender">
+ <summary>
+ Provides an ability to extend news list item template.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Extensibility.NewsListItemTemplateExtender.Item">
+ <summary>
+ Gets or sets the news item being rendered.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Extensibility.NewsListTemplateExtender">
+ <summary>
+ Provides an ability to extend news list template.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Extensibility.NewsListTemplateExtender.Items">
+ <summary>
+ Gets or sets the collection of news items being rendered.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Extensibility.TemplateExtender">
+ <summary>
+ Provides basic functionality for extending NewsV2 templates.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Extensibility.TemplateExtender.Renderer">
+ <summary>
+ Gets or sets an instance of renderer used to generate module output.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Extensibility.TemplateExtender.ExtendTemplate(Dynamicweb.Rendering.Template)">
+ <summary>
+ Extends specified template.
+ </summary>
+ <param name="template">Template to extend.</param>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Frontend.BaseAction">
+ <summary>
+ Represents a base class that needs to be implemented to render NewsDetail, NewsEdit, NewsList and RSSRenderer objects.
+ </summary>
+</member>
+<member name="E:Dynamicweb.News.Frontend.BaseAction.BeforeSelectData">
+ <summary>
+ Occurs before the data which will be processed by the module has been selected.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:Dynamicweb.News.Frontend.BaseAction.AfterSelectData">
+ <summary>
+ Occurs after the data which will be processed by the module has been selected.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Frontend.BaseAction.Pageview">
+ <summary>
+ Gets or sets the Pageview object.
+ </summary>
+ <value>The Pageview object.</value>
+</member>
+<member name="P:Dynamicweb.News.Frontend.BaseAction.Properties">
+ <summary>
+ Gets or sets the properties of News V2 module.
+ </summary>
+ <value>The properties.</value>
+</member>
+<member name="P:Dynamicweb.News.Frontend.BaseAction.IsPostBack">
+ <summary>
+ Gets a value indicating whether this instance is post back.
+ </summary>
+ <value>
+ <c>true</c> if this instance is post back; otherwise, <c>false</c>.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.Frontend.BaseAction.IsSubmit">
+ <summary>
+ Gets a value indicating whether this instance is submit.
+ </summary>
+ <value>
+   <c>true</c> if this instance is submit; otherwise, <c>false</c>.
+ </value>
+</member>
+<member name="M:Dynamicweb.News.Frontend.BaseAction.#ctor(Dynamicweb.News.Frontend.Renderer,Dynamicweb.News.Frontend.Common.Action)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Frontend.BaseAction"/> class.
+ </summary>
+ <param name="renderer">The renderer.</param>
+ <param name="action">The action.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.BaseAction.DoRedirect(System.String)">
+ <summary>
+ Does the redirect.
+ </summary>
+ <param name="url">The URL.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.BaseAction.Output">
+ <summary>
+ Outputs this instance.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Frontend.BaseAction.Error404">
+ <summary>
+ Error404s this instance.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Frontend.BaseAction.Error500">
+ <summary>
+ Error500s this instance.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Frontend.BaseAction.OnBeforeSelectData(Dynamicweb.News.Frontend.BaseActionDataEventArgs)">
+ <summary>
+ Raises "BeforeSelectData" event.
+ </summary>
+ <param name="eventArgs">Event arguments.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.BaseAction.OnAfterSelectData(Dynamicweb.News.Frontend.BaseActionDataEventArgs)">
+ <summary>
+ Raises "AfterSelectData" event.
+ </summary>
+ <param name="eventArgs">Event arguments.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.BaseAction.RaiseDataSelectionEvent``1(Dynamicweb.News.Frontend.BaseAction.DataEvent,``0)">
+ <summary>
+ Raises an event specified by the wrapper function and returns the modified data source.
+ </summary>
+ <typeparam name="T">Type of the data.</typeparam>
+ <param name="_event">Wrapper function that raises an event.</param>
+ <param name="data">Data to pass to the event handlers.</param>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Frontend.BaseActionDataEventArgs">
+ <summary>
+ Provides information about the data being processed by the module.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Frontend.BaseActionDataEventArgs.Data">
+ <summary>
+ Gets or sets the data being processed.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.BaseActionDataEventArgs.#ctor(System.Object)">
+ <summary>
+ Initializes a new instance of an object.
+ </summary>
+ <param name="data">Data being processed.</param>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Frontend.Common">
+ <summary>
+ Class contains common shared-methods used for frontend handling.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Frontend.Common.Action">
+ <summary>
+ Stores a list of avaliable frontend actions.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Frontend.Common.Authorized">
+ <summary>
+ Determines whether the current user is authorized.
+ </summary>
+ <value>Boolran statement.</value>
+ <returns>True - is authorized, False - an opposite.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Frontend.Common.UserID">
+ <summary>
+ Returns the current user ID.
+ </summary>
+ <value>Integer ID of the user.</value>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Common.GetParagraphID(System.String)">
+ <summary>
+ Retrieves paragraph ID from the page URL.
+ </summary>
+ <returns>The paragraph ID. If paragraph ID can't be retrieved returns 0.</returns>
+ <param name="sourceLink">The given URL.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Common.GetPageID(System.String)">
+ <summary>
+ Retrieves page ID from the given URL.
+ </summary>
+ <param name="sourceLink">URL to parse.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Common.GetPageWithoutParagraphID(System.String)">
+ <summary>
+ Retrieves page URL without paragraph ID (if presents).
+ </summary>
+ <returns>The page URL.</returns>
+ <param name="sourceLink">The given URL.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Common.DoRedirect(System.String)">
+ <summary>
+ Does the redirect to specified URL.
+ </summary>
+ <param name="url">The specified URL.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Common.GetPathFromRoot(System.String,System.String)">
+ <summary>
+ Retrieves an absolute path to the resource.
+ </summary>
+ <returns>An absolute path to the resource.</returns>
+ <param name="path">Path to resolve.</param>
+ <param name="baseFolder">Path to the base folder (in case of "../" references).</param>
+</member>
+<member name="T:Dynamicweb.News.Frontend.NewsDetail">
+ <summary>
+ Represents a news detail view.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Frontend.NewsDetail.Item">
+ <summary>
+ Gets the <see cref="T:Dynamicweb.News.NewsItem">NewsItem</see> object that will be displayed under the current view.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Frontend.NewsDetail.NewsID">
+ <summary>
+ Gets an ID of the news item that will be displayed under the current view.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.NewsDetail.#ctor(Dynamicweb.News.Frontend.Renderer,Dynamicweb.News.Frontend.Common.Action)">
+ <summary>
+ Initializes new instance of an object.
+ </summary>
+ <param name="renderer">Object to use for rendering.</param>
+ <param name="action">Current frontend action.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.NewsDetail.#ctor(Dynamicweb.News.Frontend.Renderer,Dynamicweb.News.Frontend.Common.Action,System.Boolean)">
+ <summary>
+ Initializes new instance of an object.
+ </summary>
+ <param name="renderer">Object to use for rendering.</param>
+ <param name="action">Current frontend action.</param>
+ <param name="autoInitializeNewsItem">Value indicating whether to automatically initialize news item object.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.NewsDetail.InitializeNewsItem">
+ <summary>
+ Initializes the news item using the ID passed with the current request.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.NewsDetail.InitializeNewsItem(System.Int32)">
+ <summary>
+ Initializes the news item using the specified ID.
+ </summary>
+ <param name="itemID">News item ID to use.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.NewsDetail.Output">
+ <summary>
+ Renders the content of this view into the single string.
+ </summary>
+ <returns>HTML-content of this view.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.NewsDetail.FixShortcut(System.String)">
+ <summary>
+ Fixes the shortcut.
+ </summary>
+ <param name="shotcut">The shotcut.</param>
+ <returns></returns>
+</member>
+<member name="T:Dynamicweb.News.Frontend.NewsEdit">
+ <summary>
+ Represents a news edit view.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Frontend.NewsEdit.#ctor(Dynamicweb.News.Frontend.Renderer,Dynamicweb.News.Frontend.Common.Action)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Frontend.NewsEdit" /> class.
+ </summary>
+ <param name="renderer">The renderer.</param>
+ <param name="action">The action.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.NewsEdit.Output">
+ <summary>
+ Renders the content of this view into the single string.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Frontend.NewsEdit.Approve">
+ <summary>
+ Approves the news and redirect to specified receipt page.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Frontend.NewsEdit.Delete">
+ <summary>
+ Deletes the news.
+ </summary>
+</member>
+<member name="T:Dynamicweb.News.Frontend.NewsList">
+ <summary>
+ Represents a news list view.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.Frontend.NewsList.#ctor(Dynamicweb.News.Frontend.Renderer,Dynamicweb.News.Frontend.Common.Action)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Frontend.NewsList" /> class.
+ </summary>
+ <param name="renderer">The renderer.</param>
+ <param name="action">The frontend action.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.NewsList.Output">
+ <summary>
+ Renders the content of this view into the single string.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Frontend.NewsList.ReorderAccordingToProfile(Dynamicweb.News.NewsItemCollection)">
+ <summary>
+ Reorders news item by moving the marked news on top for the current visitor profile.
+ </summary>
+ <param name="news">News to process.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.NewsList.SetupVars(System.DateTime@,System.DateTime@,System.Boolean@,System.Collections.ArrayList@,Dynamicweb.News.SortFields@,Dynamicweb.Modules.Common.SortDirection@,Dynamicweb.News.NewsStatus@)">
+ <summary>
+ Gets setup variable.
+ </summary>
+ <param name="dateFrom">The beginning of publication period.</param>
+ <param name="dateTo">The end of publication period.</param>
+ <param name="useDateNow">if set to <c>true</c> [use publication period].</param>
+ <param name="extranetGroups">The extranet groups list.</param>
+ <param name="sort">The sort field.</param>
+ <param name="direction">The sort direction.</param>
+ <param name="status">The news status.</param>
+</member>
+<member name="T:Dynamicweb.News.Frontend.Output">
+ <summary>
+ Class that handles output.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Frontend.Output.Renderer">
+ <summary>
+ Gets an instance of the renderer which processes module output.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.Frontend.Output.Action">
+ <summary>
+ Gets the current action.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Output.GetContent">
+ <summary>
+ Returns certain content according to the current action.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Output.AttachEventHandlers(Dynamicweb.News.Frontend.BaseAction)">
+ <summary>
+ Attaches to "BeforeSelectData" and "AfterSelectData" events of the specified action.
+ </summary>
+ <param name="action">Action to attach to.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Output.DetachEventHandlers(Dynamicweb.News.Frontend.BaseAction)">
+ <summary>
+ Detaches from "BeforeSelectData" and "AfterSelectData" events of the specified action.
+ </summary>
+ <param name="action">Action to detach from.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Output.Action_BeforeSelectData(System.Object,Dynamicweb.News.Frontend.BaseActionDataEventArgs)">
+ <summary>
+ Handles action's "BeforeSelectData" event.
+ </summary>
+ <param name="sender">Event sender.</param>
+ <param name="e">Event arguments.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Output.Action_AfterSelectData(System.Object,Dynamicweb.News.Frontend.BaseActionDataEventArgs)">
+ <summary>
+ Handles action's "AfterSelectData" event.
+ </summary>
+ <param name="sender">Event sender.</param>
+ <param name="e">Event arguments.</param>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Frontend.Pager">
+ <summary>
+ Represents a news paging list.
+ </summary>
+</member>
+<member name="P:Dynamicweb.News.Frontend.Pager.StartRecordIndex">
+ <summary>
+ Gets the start index of the record.
+ </summary>
+ <value>The start index of the record.</value>
+</member>
+<member name="P:Dynamicweb.News.Frontend.Pager.EndRecordIndex">
+ <summary>
+ Gets the end index of the record.
+ </summary>
+ <value>The end index of the record.</value>
+</member>
+<member name="P:Dynamicweb.News.Frontend.Pager.PagesCount">
+ <summary>
+ Gets the pages count.
+ </summary>
+ <value>The pages count.</value>
+</member>
+<member name="P:Dynamicweb.News.Frontend.Pager.RecordsCount">
+ <summary>
+ Gets or sets the records count.
+ </summary>
+ <value>The records count.</value>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Pager.#ctor(System.Int32,System.Int32,System.Int32,System.String,System.Int32)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Frontend.Pager" /> class.
+ </summary>
+ <param name="recordsCount">The records count.</param>
+ <param name="recordsPerPage">The records per page.</param>
+ <param name="currentPage">The current page.</param>
+ <param name="pagingType">Type of the paging.</param>
+ <param name="startIndex">The start index.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Pager.Render(Dynamicweb.Rendering.Template@,Dynamicweb.News.Frontend.Renderer)">
+ <summary>
+ Renders the specified template according to renderer properties.
+ </summary>
+ <param name="template">The template.</param>
+ <param name="renderer">The renderer.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Pager.Separate(Dynamicweb.News.NewsItemCollection)">
+ <summary>
+ Separates the news list according to page parameters.
+ </summary>
+ <param name="list">The news list.</param>
+ <returns></returns>
+</member>
+<member name="T:Dynamicweb.News.Frontend.Renderer">
+ <summary>
+ Renders a representation of the NewsV2
+ </summary>
+</member>
+<member name="P:Dynamicweb.News.Frontend.Renderer.PageView">
+ <summary>
+ Gets or sets the frontend page view.
+ </summary>
+ <value>The frontend page view.</value>
+</member>
+<member name="P:Dynamicweb.News.Frontend.Renderer.Properties">
+ <summary>
+ Gets or sets the properties of News V2 module.
+ </summary>
+ <value>The properties.</value>
+</member>
+<member name="P:Dynamicweb.News.Frontend.Renderer.PID">
+ <summary>
+ Gets the paragraph id.
+ </summary>
+ <value>The paragraph id.</value>
+</member>
+<member name="P:Dynamicweb.News.Frontend.Renderer.RenderDefaultView">
+ <summary>
+ Gets a value indicating whether this instance is rendered.
+ </summary>
+ <value><c>true</c> if this instance is rendered; otherwise, <c>false</c>.</value>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.#ctor(Dynamicweb.Frontend.PageView,Dynamicweb.Modules.Properties,System.Int32)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.Frontend.Renderer" /> class.
+ </summary>
+ <param name="pageview">The frontend page view.</param>
+ <param name="properties">The module properties.</param>
+ <param name="paragraphId">The paragraph ID.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.ChkUrl(Dynamicweb.News.Frontend.Common.Action,System.Int32)">
+ <summary>
+ Returns the URL link.
+ </summary>
+ <param name="action">The action.</param>
+ <param name="newsId">The news id.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.ChkUrl(Dynamicweb.News.Frontend.Common.Action,System.Int32,System.String)">
+ <summary>
+ Returns the URL link.
+ </summary>
+ <param name="action">The action.</param>
+ <param name="newsId">The news id.</param>
+ <param name="newsLink">Custom news link. </param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.ChkUrl(System.Int32)">
+ <summary>
+ Returns the URL link.
+ </summary>
+ <param name="currentPage">The current page id.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.ChkUrl(Dynamicweb.News.Frontend.Common.Action)">
+ <summary>
+ Returns the URL link.
+ </summary>
+ <param name="action">The frontend action.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.ChkUrl(Dynamicweb.News.Frontend.Common.Action,System.Boolean,System.String)">
+ <summary>
+ Returns the URL link.
+ </summary>
+ <param name="action">The frontend action.</param>
+ <param name="generateQuery">if set to <c>true</c> generates query.</param>
+ <param name="partUrl">The part of URL.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.ChkUrl(Dynamicweb.News.Frontend.Common.Action,System.Boolean,System.String,System.String)">
+ <summary>
+ Returns the URL link.
+ </summary>
+ <param name="action">The frontend action.</param>
+ <param name="generateQuery">if set to <c>true</c> generates query.</param>
+ <param name="partUrl">The part of URL.</param>
+ <param name="newsLink">Custom news link.</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.RssLink">
+ <summary>
+ Returns the RSS link.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.RenderNews(Dynamicweb.News.NewsItem,Dynamicweb.News.NewsCategory,Dynamicweb.News.Common.CustomFieldCollection,Dynamicweb.News.Common.CustomFieldCollection,Dynamicweb.News.TemplateClass,Dynamicweb.Rendering.Template)">
+ <summary>
+ Renders the news.
+ </summary>
+ <param name="item">The news item.</param>
+ <param name="category">The news category.</param>
+ <param name="generalList">The general custom fields list.</param>
+ <param name="specificList">The specific custom fields list.</param>
+ <param name="templateClass">The template data.</param>
+ <param name="template">The template.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.RenderNotify(Dynamicweb.News.NewsItem,Dynamicweb.News.TemplateClass,Dynamicweb.Rendering.Template)">
+ <summary>
+ Renders the news notify.
+ </summary>
+ <param name="item">The news item.</param>
+ <param name="templateClass">The teplate data.</param>
+ <param name="template">The template.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.RenderCustomList(Dynamicweb.Rendering.Template,System.Collections.IList)">
+ <summary>
+ Renders the news custom fields list.
+ </summary>
+ <param name="template">The template.</param>
+ <param name="list">The news custom fields list.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.RenderItemCustomFields(Dynamicweb.Rendering.Template,Dynamicweb.News.NewsItem,Dynamicweb.News.Common.CustomFieldCollection,Dynamicweb.News.Common.CustomFieldCollection)">
+ <summary>
+ Renders the general and specific custom fields.
+ </summary>
+ <param name="element">The template.</param>
+ <param name="item">The news item.</param>
+ <param name="generalList">The general custom fields list.</param>
+ <param name="specificList">The specific custom fields list.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.RenderNewsList(Dynamicweb.News.NewsItemCollection,Dynamicweb.Rendering.Template)">
+ <summary>
+ Renders the news list.
+ </summary>
+ <param name="list">The news items collection.</param>
+ <param name="template">The template.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.RenderSearchPrevious(Dynamicweb.Rendering.Template@)">
+ <summary>
+ Renders the previous list of news.
+ </summary>
+ <param name="template">The template.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.RenderDate(Dynamicweb.Rendering.Template,System.String,System.DateTime)">
+ <summary>
+ Renders the date according to area format and news culture.
+ </summary>
+ <param name="template">The template.</param>
+ <param name="tagName">Name of the tag.</param>
+ <param name="value">The date.</param>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.ExtendNewsListTemplate(Dynamicweb.Rendering.Template,Dynamicweb.News.NewsItemCollection)">
+ <summary>
+ Extends news list template.
+ </summary>
+ <param name="template">Template to extend.</param>
+ <param name="items">News items being rendered.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.ExtendNewsListItemTemplate(Dynamicweb.Rendering.Template,Dynamicweb.News.NewsItem)">
+ <summary>
+ Extends news list item template.
+ </summary>
+ <param name="template">Template to extend.</param>
+ <param name="item">News item being rendered.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.ExtendNewsItemDetailsTemplate(Dynamicweb.Rendering.Template,Dynamicweb.News.NewsItem)">
+ <summary>
+ Extends news item details template.
+ </summary>
+ <param name="template">Template to extend.</param>
+ <param name="item">News item being rendered.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.ExtendNewsItemEditTemplate(Dynamicweb.Rendering.Template,Dynamicweb.News.NewsItem)">
+ <summary>
+ Extends news item details template.
+ </summary>
+ <param name="template">Template to extend.</param>
+ <param name="item">News item being rendered.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.Frontend.Renderer.ExtendModuleOutputTemplate(Dynamicweb.Rendering.Template,Dynamicweb.News.Extensibility.ModuleRenderingState)">
+ <summary>
+ Extends module output template.
+ </summary>
+ <param name="template">Template to extend.</param>
+ <param name="state">Rendering state.</param>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.ModuleSettings">
+ <summary>
+ Represents NewsV2 module settings.
+ </summary>
+</member>
+<member name="P:Dynamicweb.News.ModuleSettings.RssCacheTime">
+ <summary>
+ Gets or sets the RSS cache time.
+ </summary>
+ <value>The RSS cache time.</value>
+</member>
+<member name="T:Dynamicweb.News.NewsCategory">
+ <summary>
+ This class contains functions to handle with news category.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.NewsCategory.SortFields">
+ <summary>
+ Stores a sort field order.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.NewsCategory.SortFields.Name">
+ <summary>
+ Sorted by Name field.
+ </summary>
+</member>
+<member name="P:Dynamicweb.News.NewsCategory.NewsCategoryName">
+ <summary>
+ Stores and retrieves name of news category.
+ </summary>
+ <value>String</value>
+ <returns>Current news category name.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsCategory.Description">
+ <summary>
+ Gets or sets the description of news category.
+ </summary>
+ <value>The description.</value>
+</member>
+<member name="P:Dynamicweb.News.NewsCategory.NewsCategoryApprovalType">
+ <summary>
+ Stores and retrieves news category approval type.
+ </summary>
+ <value>Integer</value>
+ <returns>Current approval type.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsCategory.Sort">
+ <summary>
+ Sort.
+ </summary>
+ <value>Integer</value>
+ <returns>Current position.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsCategory.NewsCategoryAccess">
+ <summary>
+ Stores and retrieves access value for news category.
+ </summary>
+ <value>String</value>
+ <returns>String representation of access value.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsCategory.Groups">
+ <summary>
+ Gets or sets the custom groups list.
+ </summary>
+ <value>The groups list.</value>
+</member>
+<member name="P:Dynamicweb.News.NewsCategory.NewsCategoryTemplateID">
+ <summary>
+ Stores and retrieves ID of the news template.
+ </summary>
+ <value>The current ID.</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsCategory.IsTemplateEnforcedForThisCategory">
+ <summary>
+ Stores and retrieves is template enforced for this category.
+ </summary>
+ <value>Is template enforced for this category.</value>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.#ctor(System.Int32)">
+ <summary>
+ Constructor for <see cref="T:Dynamicweb.Modules.News.NewsCategory">NewsCategory</see> class.
+ </summary>
+ <param name="newsCatID"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.#ctor">
+ <summary>
+ Constructor for <see cref="T:Dynamicweb.Modules.News.NewsCategory">NewsCategory</see> class.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.#ctor(System.Data.IDataReader)">
+ <summary>
+ Constructor for <see cref="T:Dynamicweb.Modules.News.NewsCategory">NewsCategory</see> class.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.LoadGroups">
+ <summary>
+ Loads the custom groups.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.GetArchiveNewsCount">
+ <summary>
+ Gets the amount of archive news.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.GetNewsCount">
+ <summary>
+ Gets the amount of news.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.GetArchiveNewsCount(System.Int32)">
+ <summary>
+ Gets the amount of archive news.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.GetNewsCount(System.Int32)">
+ <summary>
+ Gets the amount of news.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.RemoveCache(System.Int32)">
+ <summary>
+ Removes the cache.
+ </summary>
+ <param name="categoryId">The category identifier.</param>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.Delete(System.Int32)">
+ <summary>
+ Deletes the custom category with specified id.
+ </summary>
+ <param name="id">Custom category id.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.DeleteCustomFieldsValues(System.String,System.Int32)">
+ <summary>
+ Deletes the custom field values by context and id.
+ </summary>
+ <param name="context">The context.</param>
+ <param name="id">The id.</param>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.Save">
+ <summary>
+ Saves current news category to the data base.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.GetRowCount(System.String)">
+ <summary>
+ Gets the amount of news categories by searching filter.
+ </summary>
+ <param name="search">The searching filter.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.GetNewsIdsInCategory(System.Int32)">
+ <summary>
+ Gets the list of news ids by specified category id.
+ </summary>
+ <param name="categoryID">The category id.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.GetCategoryList(Dynamicweb.News.NewsCategory.SortFields,Dynamicweb.Modules.Common.SortDirection,System.String,System.Int32,System.Int32)">
+ <summary>
+ Gets the news category list.
+ </summary>
+ <param name="sort">The sorting field.</param>
+ <param name="direction">The sorting direction.</param>
+ <param name="search">The searching filter.</param>
+ <param name="startItem">The start item.</param>
+ <param name="endItem">The end item.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.GetAllCategoryList">
+ <summary>
+ Gets all news category list.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.GetAllowedCategoriesForUser">
+ <summary>
+ Gets all news category list.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.GetCategoryList(System.String)">
+ <summary>
+ Gets the news category list by ids.
+ </summary>
+ <param name="ids">The list of category ids.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.Fill(System.Data.IDataReader)">
+ <summary>
+ Reads news category from data base.
+ </summary>
+ <param name="reader">The reader.</param>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.FillRow(System.Data.DataRow)">
+ <summary>
+ Fills the row.
+ </summary>
+ <param name="row">The row.</param>
+</member>
+<member name="M:Dynamicweb.News.NewsCategory.CheckChainIdsString(System.String)">
+ <summary>
+ Checks if the input string is compared with the <i>Template</i>.
+ </summary>
+ <param name="strCategories"></param>
+ <returns>If the stirng is compared with <i>Template</i> then returns current string. If not - returns <i>empty</i> string.</returns>
+ <remarks><i>Template</i> - sequence of IDs separated by comma.</remarks>
+</member>
+<member name="T:Dynamicweb.News.NewsCategoryCollection">
+ <summary>
+ Represents a collection of News categories.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.NewsCategoryCollection.#ctor">
+ <summary>
+ Initializes a new instance of the <see cref="T:Dynamicweb.News.NewsCategoryCollection" /> class.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.NewsCategoryCollection.Contains(System.Int32)">
+ <summary>
+ Determ is Category with specified id contains in collection
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.NewsCategoryCollection.LoadGroups">
+ <summary>
+ Loads the custom groups from data base.
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.NewsCategoryCollection.GetByID(System.Int32)">
+ <summary>
+ Gets the news category by id.
+ </summary>
+ <param name="id">The id.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsCategoryCollection.GetIDs">
+ <summary>
+ Gets the news category ids list.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:Dynamicweb.News.NewsItem">
+ <summary>
+ This class contains functions to handle with items of news.
+ </summary>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.Clicks">
+ <summary>
+ Gets or sets the amount of clicks.
+ </summary>
+ <value>The clicks.</value>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.CustomFields">
+ <summary>
+ Stores and retrieves a list of <see cref="T:Dynamicweb.Modules.Common.CustomFields">CustomFields</see> objects.
+ </summary>
+ <value>List(Of CustomField)</value>
+ <returns>List(Of CustomField)</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsCategoryID">
+ <summary>
+ Gets or sets the news category identifier.
+ </summary>
+ <value>
+ The news category identifier.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsActiveFrom">
+ <summary>
+ Stores and retrieves the date the news are active from.
+ </summary>
+ <value>Date.</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsActiveTo">
+ <summary>
+ Stores and retrieves the date the news are active to.
+ </summary>
+ <value>Date.</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsActive">
+ <summary>
+ Gets or sets the news active.
+ </summary>
+ <value>
+ The news active.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsArchive">
+ <summary>
+ Gets or sets the news archive.
+ </summary>
+ <value>
+ The news archive.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsHeading">
+ <summary>
+ Stores and retrieves news heading.
+ </summary>
+ <value>Value of news heading.</value>
+ <returns>String representation of news heading.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsManchet">
+ <summary>
+ Stores and retrieves news teaser.
+ </summary>
+ <value>Value of news teaser.</value>
+ <returns>String representation of news teaser.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsAuthor">
+ <summary>
+ Gets or sets the news author.
+ </summary>
+ <value>
+ The news author.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsText">
+ <summary>
+ Gets or sets the news text.
+ </summary>
+ <value>
+ The news text.
+ </value>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsImage">
+ <summary>
+ Stores and retrieves news image.
+ </summary>
+ <value>Name and path to the image file.</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsInitials">
+ <summary>
+ Stores and retrieves news initials.
+ </summary>
+ <value>Initials of news.</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsCreatedDate">
+ <summary>
+ Stores and retrieves the date of news creation.
+ </summary>
+ <value>Creation date.</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsUpdatedDate">
+ <summary>
+ Stores and retrieves the date of news update. 
+ </summary>
+ <value>Date of update.</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsDate">
+ <summary>
+ Stores and retrieves the date of the news.
+ </summary>
+ <value>Date.</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsTemplateID">
+ <summary>
+ Stores and retrieves ID of the news template.
+ </summary>
+ <value>The current ID.</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsSmallImage">
+ <summary>
+ Stores and retrieves small news image.
+ </summary>
+ <value>Name and path to the image file.</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsLink">
+ <summary>
+ Stores and retrieves news link.
+ </summary>
+ <value>Link to news.</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsApprovalType">
+ <summary>
+ Stores and retrieves approval type of news.
+ </summary>
+ <value>Approval type of news.</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsApprovalState">
+ <summary>
+ Stores and retrieves approval state of news.
+ </summary>
+ <value>Approval state of news</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsLinkPopup">
+ <summary>
+ Determines whether the news link to popup.
+ </summary>
+ <value>Boolean statement.</value>
+ <returns>True or False.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsUserCreate">
+ <summary>
+ Determines by what user news was created.
+ </summary>
+ <value>User's ID.</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsUserEdit">
+ <summary>
+ Determines by what user news was edited.
+ </summary>
+ <value>User's ID.</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsImageText">
+ <summary>
+ Stores and retrieves text for news image.
+ </summary>
+ <value>Text.</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsShortDate">
+ <summary>
+ Returns short date of the news date.
+ </summary>
+ <value>Short date.</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsUpdatedShortDate">
+ <summary>
+ Returns short date of the news update date.
+ </summary>
+ <value>Short date of update date.</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsHashKey">
+ <summary>
+ Returns hash key of the news.
+ </summary>
+ <value>Hash key.</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.RelatedCategories">
+ <summary>
+ Stores and retrieves new item related categories.
+ </summary>
+ <value>RelatedCategories</value>
+ <remarks></remarks>
+</member>
+<member name="P:Dynamicweb.News.NewsItem.NewsMetaURL">
+ <summary>
+ Stores and retrieves news Meta URL.
+ </summary>
+ <value>Meta URL.</value>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.#ctor">
+ <summary>
+ Constructor for <see cref="T:Dynamicweb.Modules.News.NewsItem"> NewsItem</see> class.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.#ctor(System.Int32)">
+ <summary>
+ Constructor for <see cref="T:Dynamicweb.Modules.News.NewsItem"> NewsItem</see> class.
+ </summary>
+ <param name="id">News ID.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.#ctor(System.Data.IDataReader)">
+ <summary>
+ Constructor for <see cref="T:Dynamicweb.Modules.News.NewsItem"> NewsItem</see> class.
+ </summary>
+ <param name="reader">Data reader of news.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.Fill(System.Data.IDataReader)">
+ <summary>
+ Reads news item from data base.
+ </summary>
+ <param name="reader">The reader.</param>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.Copy(System.Int32)">
+ <summary>
+ Copies the specified copy to category identifier.
+ </summary>
+ <param name="copyToCategoryID">The copy to category identifier.</param>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.Move(System.Int32)">
+ <summary>
+ Moves the specified news to category identifier.
+ </summary>
+ <param name="moveToCategoryID">The move to category identifier.</param>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.Delete(System.Int32)">
+ <summary>
+ Deletes the specified news.
+ </summary>
+ <param name="id">The news id.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.SetArchiveOnNews(System.Int32,System.Int32)">
+ <summary>
+ Update one or more news.
+ </summary>
+ <param name="newsID">ID of the news.</param>
+ <param name="newsCategoryID">News category ID.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.GetNewsListFromCategory(System.String,Dynamicweb.News.NewsStatus,Dynamicweb.News.SortFields,Dynamicweb.Modules.Common.SortDirection,System.String,System.Int32,System.Int32,System.Boolean)">
+ <summary>
+ Gets the list of news by specified parameters.
+ </summary>
+ <param name="categoryIds">The list of news category ids.</param>
+ <param name="status">The status of news.</param>
+ <param name="sort">The sorting field.</param>
+ <param name="direction">The sorting direction.</param>
+ <param name="search">The searching filter.</param>
+ <param name="startItem">The start item.</param>
+ <param name="endItem">The end item.</param>
+ <param name="bAdmin">if set to <c>true</c> gets all news, otherwise gets only active news.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.GetNewsListFromCategory(System.String,System.DateTime,System.DateTime,System.Boolean,Dynamicweb.News.NewsStatus,System.Collections.ArrayList,Dynamicweb.News.SortFields,Dynamicweb.Modules.Common.SortDirection,System.String,System.Int32,System.Int32)">
+ <summary>
+ Gets the list of news by specified parameters.
+ </summary>
+ <param name="categoryIDs">The list of news category ids.</param>
+ <param name="dateFrom">The start date.</param>
+ <param name="dateTo">The end date.</param>
+ <param name="useNowDate">if set to <c>true</c> use start and end dates in the request.</param>
+ <param name="status">The status of news.</param>
+ <param name="extranetGroups">The extranet groups list.</param>
+ <param name="sort">The sorting field.</param>
+ <param name="direction">The sorting direction.</param>
+ <param name="search">The searching filter.</param>
+ <param name="startItem">The start item.</param>
+ <param name="endItem">The end item.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.MostPopularNews(System.String,Dynamicweb.News.NewsStatus,System.Collections.ArrayList,System.Int32)">
+ <summary>
+ Gets the most popular news list.
+ </summary>
+ <param name="categoryIDs">The list of news category ids.</param>
+ <param name="status">The status of news.</param>
+ <param name="extranetGroups">The extranet groups list.</param>
+ <param name="lastDays">The amount last days.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.GetSortStr(Dynamicweb.News.SortFields,System.String[])">
+ <summary>
+ Returns the current sort field and adds collation clause if it's neccessary
+ </summary>
+ <param name="sort">Sort direction.</param>
+ <param name="fields">Sort string collection.</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.CollateSortStr(System.String)">
+ <summary>
+ Adds the COLLATE clause according to regional settings of the current context Proccess
+ </summary>
+ <param name="sortField"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.ContainValidItem(System.String,System.String[])">
+ <summary>
+ Checks if splited string contains item from string of values.
+ </summary>
+ <param name="source">The splited string.</param>
+ <param name="values">The string of values.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.GetNewsListFromCategoryForIntegration(System.String,System.String,System.DateTime,System.DateTime)">
+ <summary>
+ Gets the news list from category for integration.
+ </summary>
+ <param name="categoryIds">The list of category ids.</param>
+ <param name="excludeNewsItemsIds">The list of exclude news items ids.</param>
+ <param name="dateFrom">The start date.</param>
+ <param name="dateTo">The end date.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.GetNewsList(System.Int32[])">
+ <summary>
+ Gets the collection of news by ids list.
+ </summary>
+ <param name="itemsIDs">The list of news ids.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.GetNewsList">
+ <summary>
+ Gets the collection of news by string of ids.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.GetNewsList(System.String)">
+ <summary>
+ Gets the collection of news by string of ids.
+ </summary>
+ <param name="itemsIDs">The string of ids.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.GetAllNewsValidAndActiveAndNotArchive">
+ <summary>
+ Gets collection of valid, active and not archive news.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.GetRowCount(System.String,System.String,Dynamicweb.News.NewsStatus,System.Boolean)">
+ <summary>
+ Gets amount of news by specified parameters.
+ </summary>
+ <param name="categoryIds">The list of category ids.</param>
+ <param name="search">The searching filter.</param>
+ <param name="status">The status of news.</param>
+ <param name="bAdmin">if set to <c>true</c> gets all news, otherwise gets only active news.</param>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.GetRowCount(System.String,System.DateTime,System.DateTime,System.Boolean,System.String,Dynamicweb.News.NewsStatus,System.Collections.ArrayList)">
+ <summary>
+ Gets amount of news by specified parameters.
+ </summary>
+ <param name="categoryIds">The list of category ids.</param>
+ <param name="dateFrom">The start date.</param>
+ <param name="dateTo">The end date.</param>
+ <param name="useNowDate">if set to <c>true</c> use start and end dates in the request.</param>
+ <param name="search">The searching filter.</param>
+ <param name="status">The status of news.</param>
+ <param name="extranetGroups">The list of extranet groups.</param>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.GetMinMaxNewsDate">
+ <summary>
+ Retrieves minimum and maximum date.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.GetMinMaxNewsDate(System.String)">
+ <summary>
+ Retrieves minimum and maximum date from the specified news items range.
+ </summary>
+ <param name="categoryIDs">Comma-separated list of IDs of news categories that represents news items range.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.GetNewsDates(System.String)">
+ <summary>
+ Retrieves creation dates from the specified news items range.
+ </summary>
+ <param name="categoryIDs">Comma-separated list of IDs of news categories that represents news items range.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.FillCustomFields(System.String)">
+ <summary>
+ Fills a list of custom fields according input IDs.
+ </summary>
+ <param name="ids">Lists of IDs.</param>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.FillCustomFields">
+ <summary>
+ Fills a list of custom fields.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.FillRelatedCategories">
+ <summary>
+ Fills a list of related categories.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.FillClicks">
+ <summary>
+ Fills count of clicks with data getting from statistic.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.Save">
+ <summary>
+ Saves news to the data base.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.Save(System.Boolean)">
+ <summary>
+ Saves news to the data base.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Dynamicweb.News.NewsItem.GetPagedDataReader(System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+ <summary>
+ Returns the current data reader of limited strings amount.
+ </summary>
+ <param name="tablename">The current table name.</param>
+ <param name="keyfield">Key field.</param>
+ <param name="frecord">First record ID.</param>
+ <param name="lrecord">Last record ID.</param>
+ <param name="sort"></param>
+ <param name="direction">Sort direction.</param>
+ <param name="filter">Optional.</param>
+ <param name="dbname">Optional.</param>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.NewsItemCollection">
+ <summary>
+ Represents collection of NewsItems
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.NewsItemCollection.#ctor">
+ <summary>
+ Defauklt constructor
+ </summary>
+</member>
+<member name="M:Dynamicweb.News.NewsItemCollection.Fill(System.Collections.Generic.List{Dynamicweb.News.NewsItem})">
+ <summary>
+ Fills inner collection with data
+ </summary>
+ <param name="items">List of NewsItems</param>
+</member>
+<member name="M:Dynamicweb.News.NewsItemCollection.GetIds">
+ <summary>
+ Gets the IDs
+ </summary>
+ <returns>String of comma separated values of inner collection items</returns>
+</member>
+<member name="T:Dynamicweb.News.Notifications">
+ <example>How to subscribe to Events<code title="C#" description="" lang="CS">[Dynamicweb.Extensibility.Subscribe(Dynamicweb.Notifications.NewsV2.Frontend.BeforeLoad)]
+ public class NewsV2BeforeLoadNotification : Dynamicweb.Extensibility.NotificationSubscriber
+ {
+    public override void OnNotify(string notification, object[] args)
+    {
+        Dynamicweb.NewsV2.Extensibility.NewsItemNotificationArgs arg = (Dynamicweb.NewsV2.Extensibility.NewsItemNotificationArgs)args[0];
+ 
+        //Todo: insert your code here
+    }
+ }</code></example>
+ <summary>Provides notification names for "NewsV2" module.</summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.Notifications.Frontend">
+ <example>How to subscribe to Events<code title="C#" description="" lang="CS">[Dynamicweb.Extensibility.Subscribe(Dynamicweb.Notifications.NewsV2.Frontend.BeforeLoad)]
+ public class NewsV2BeforeLoadNotification : Dynamicweb.Extensibility.NotificationSubscriber
+ {
+    public override void OnNotify(string notification, object[] args)
+    {
+        Dynamicweb.NewsV2.Extensibility.FrontendNotificationArgs arg = (Dynamicweb.NewsV2.Extensibility.FrontendNotificationArgs)args[0];
+ 
+        //Todo: insert your code here
+    }
+ }</code></example>
+ <summary>Provides notification names for the frontend part.</summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Notifications.Frontend.BeforeLoad">
+ <example>
+  <code title="Example" description="" lang="CS">[Dynamicweb.Extensibility.Subscribe(Dynamicweb.Notifications.NewsV2.Frontend.BeforeLoad)]
+    public class NewsV2BeforeLoadObserver : Dynamicweb.Extensibility.NotificationSubscriber
+    {
+        public override void OnNotify(string notification, Dynamicweb.Extensibility.NotificationArgs args)
+        {
+            if (args == null || !(args is Dynamicweb.NewsV2.Extensibility.FrontendNotificationArgs))
+                return;
+ 
+            Dynamicweb.NewsV2.Extensibility.FrontendNotificationArgs item = (Dynamicweb.NewsV2.Extensibility.FrontendNotificationArgs)args;
+ 
+            item.ModuleInstance.Pageview.Meta.Add("newsv2-meta-tag","hello");
+        }
+    }</code>
+ </example>
+ <summary>Occurs when the module is about to process the request.</summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Notifications.Frontend.AfterLoad">
+ <example>
+  <code title="Example" description="" lang="CS">[Dynamicweb.Extensibility.Subscribe(Dynamicweb.Notifications.NewsV2.Frontend.AfterLoad)]
+    public class NewsV2AfterLoadObserver : Dynamicweb.Extensibility.NotificationSubscriber
+    {
+        public override void OnNotify(string notification, Dynamicweb.Extensibility.NotificationArgs args)
+        {
+            if (args == null || !(args is Dynamicweb.NewsV2.Extensibility.FrontendNotificationArgs))
+                return;
+ 
+            Dynamicweb.NewsV2.Extensibility.FrontendNotificationArgs item = (Dynamicweb.NewsV2.Extensibility.FrontendNotificationArgs)args;
+ 
+            //Todo: insert code here
+        }
+    }</code>
+ </example>
+ <summary>Occurs after the module has processed the request.</summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Notifications.Frontend.BeforeSelectData">
+ <example>
+  <code title="Example" description="" lang="CS">[Dynamicweb.Extensibility.Subscribe(Dynamicweb.Notifications.NewsV2.Frontend.BeforeSelectData)]
+    public class NewsV2BeforeSelectDataObserver : Dynamicweb.Extensibility.NotificationSubscriber
+    {
+        public override void OnNotify(string notification, Dynamicweb.Extensibility.NotificationArgs args)
+        {
+            if (args == null || !(args is Dynamicweb.NewsV2.Extensibility.FrontendDataNotificationArgs))
+                return;
+ 
+            Dynamicweb.NewsV2.Extensibility.FrontendDataNotificationArgs item = (Dynamicweb.NewsV2.Extensibility.FrontendDataNotificationArgs)args;
+ 
+            //Todo: insert code here
+        }
+    }</code>
+ </example>
+ <summary>Occurs before the data which will be presented to the user is selected.</summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Notifications.Frontend.AfterSelectData">
+ <example>
+  <code title="Example" description="" lang="CS">[Dynamicweb.Extensibility.Subscribe(Dynamicweb.Notifications.NewsV2.Frontend.AfterSelectData)]
+    public class NewsV2AfterSelectDataObserver : Dynamicweb.Extensibility.NotificationSubscriber
+    {
+        public override void OnNotify(string notification, Dynamicweb.Extensibility.NotificationArgs args)
+        {
+            if (args == null || !(args is Dynamicweb.NewsV2.Extensibility.FrontendDataNotificationArgs))
+                return;
+ 
+            Dynamicweb.NewsV2.Extensibility.FrontendDataNotificationArgs item = (Dynamicweb.NewsV2.Extensibility.FrontendDataNotificationArgs)args;
+ 
+            if (item.Data == null || !(item.Data is Dynamicweb.NewsV2.NewsItemCollection))
+                return;
+ 
+            Dynamicweb.NewsV2.NewsItemCollection list = (Dynamicweb.NewsV2.NewsItemCollection)item.Data;
+ 
+            if (list.Count &gt; 0)
+                list.RemoveAt(0); // remove first news
+        }
+    }</code>
+ </example>
+ <summary>Occurs after the data which will be presented to the user is selected.</summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Notifications.ItemSaving">
+ <example>
+  <code title="Example" description="" lang="CS">[Dynamicweb.Extensibility.Subscribe(Dynamicweb.Notifications.NewsV2.ItemSaving)]
+    public class NewsV2ItemSavingObserver : Dynamicweb.Extensibility.NotificationSubscriber
+    {
+        public override void OnNotify(string notification, Dynamicweb.Extensibility.NotificationArgs args)
+        {
+            if (args == null)
+                return;
+ 
+            if (!(args is Dynamicweb.NewsV2.Extensibility.NewsItemNotificationArgs))
+                return;
+ 
+            Dynamicweb.NewsV2.Extensibility.NewsItemNotificationArgs news = (Dynamicweb.NewsV2.Extensibility.NewsItemNotificationArgs)args;
+ 
+            news.Item.NewsAuthor = "me";
+        }
+    }</code>
+ </example>
+ <summary>Occurs before the news item has been saved.</summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Notifications.ItemSaved">
+ <example>
+  <code title="Example" description="" lang="CS">[Dynamicweb.Extensibility.Subscribe(Dynamicweb.Notifications.NewsV2.ItemSaved)]
+    public class NewsV2ItemSavedObserver : Dynamicweb.Extensibility.NotificationSubscriber
+    {
+        public override void OnNotify(string notification, Dynamicweb.Extensibility.NotificationArgs args)
+        {
+            if (args == null)
+                return;
+ 
+            if (!(args is Dynamicweb.NewsV2.Extensibility.NewsItemNotificationArgs))
+                return;
+ 
+            Dynamicweb.NewsV2.Extensibility.NewsItemNotificationArgs news = (Dynamicweb.NewsV2.Extensibility.NewsItemNotificationArgs)args;
+ 
+            news.Item.NewsAuthor = "me";
+            news.Item.Save();
+        }
+    }</code>
+ </example>
+ <summary>Occurs after the news item has been saved.</summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Notifications.ItemDeleted">
+ <example>
+  <code title="Example" description="" lang="CS">[Dynamicweb.Extensibility.Subscribe(Dynamicweb.Notifications.NewsV2.ItemDeleted)]
+    public class NewsV2ItemDeletedObserver : Dynamicweb.Extensibility.NotificationSubscriber
+    {
+        public override void OnNotify(string notification, Dynamicweb.Extensibility.NotificationArgs args)
+        {
+            if (args == null)
+                return;
+ 
+            if (!(args is Dynamicweb.NewsV2.Extensibility.NewsItemNotificationArgs))
+                return;
+ 
+            Dynamicweb.NewsV2.Extensibility.NewsItemNotificationArgs news = (Dynamicweb.NewsV2.Extensibility.NewsItemNotificationArgs)args;
+ 
+            //send e-mail
+            string emailBody = string.Format("The news (ID:{0}) has been deleted.", news.Item.ID);
+            Dynamicweb.Modules.Common.Email.SendMail("user name", "username@somedomain.dk", "NewsV2ItemDeletedObserver",
+                "admin", "noreply@dynamicweb.dk", emailBody, "UTF-8");
+        }
+    }</code>
+ </example>
+ <summary>Occurs after the news item has been deleted.</summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Notifications.CategorySaved">
+ <example>
+  <code title="Example" description="" lang="CS">[Dynamicweb.Extensibility.Subscribe(Dynamicweb.Notifications.NewsV2.CategorySaved)]
+   public class NewsV2CategorySavedObserver : Dynamicweb.Extensibility.NotificationSubscriber
+   {
+       public override void OnNotify(string notification, Dynamicweb.Extensibility.NotificationArgs args)
+       {
+           if (args == null || !(args is Dynamicweb.NewsV2.Extensibility.NewsItemCategoryNotificationArgs))
+               return;
+ 
+           Dynamicweb.NewsV2.Extensibility.NewsItemCategoryNotificationArgs item = (Dynamicweb.NewsV2.Extensibility.NewsItemCategoryNotificationArgs)args;
+ 
+          item.Category.Description = "NewsV2CategorySavedObserver";
+          item.Category.Save();
+       }
+   }</code>
+ </example>
+ <summary>Occurs after the news category has been saved.</summary>
+ <remarks></remarks>
+</member>
+<member name="F:Dynamicweb.News.Notifications.CategoryDeleted">
+ <example>
+  <code title="Example" description="" lang="CS">[Dynamicweb.Extensibility.Subscribe(Dynamicweb.Notifications.NewsV2.CategoryDeleted)]
+    public class NewsV2CategoryDeletedObserver : Dynamicweb.Extensibility.NotificationSubscriber
+    {
+        public override void OnNotify(string notification, Dynamicweb.Extensibility.NotificationArgs args)
+        {
+            if (args == null || !(args is Dynamicweb.NewsV2.Extensibility.NewsItemCategoryNotificationArgs))
+                return;
+ 
+            Dynamicweb.NewsV2.Extensibility.NewsItemCategoryNotificationArgs item = (Dynamicweb.NewsV2.Extensibility.NewsItemCategoryNotificationArgs)args;
+ 
+            //send e-mail
+            string emailBody = string.Format("The news category (ID:{0}) has been deleted.", item.Category.ID);
+            Dynamicweb.Modules.Common.Email.SendMail("user name", "username@somedomain.dk", "NewsV2CategoryDeletedObserver",
+                "admin", "noreply@dynamicweb.dk", emailBody, "UTF-8");
+        }
+    }</code>
+ </example>
+ <summary>Occurs after the news category has been deleted.</summary>
+ <remarks></remarks>
+</member>
+<member name="T:Dynamicweb.News.TemplateClass">
+ <summary>
+ Autogenerated by DynTableWizard
+ </summary>
+ <remarks>
+ </remarks>
+</member>
+<member name="T:Dynamicweb.News.TemplateCollectionClass">
+ <summary>
+ Class TemplateCollectionClass.
+ </summary>
+ <seealso cref="T:System.Collections.CollectionBase" />
+</member>
+</members>
+</doc>

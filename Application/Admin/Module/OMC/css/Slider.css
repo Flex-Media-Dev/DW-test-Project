@@ -1,0 +1,116 @@
+﻿.dw-slider,
+.dw-slider .dw-slider-axis,
+.dw-slider .dw-slider-axis .dw-slider-axis-left
+{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    
+    height: 16px;
+}
+
+.dw-slider .dw-slider-axis
+{
+    position: relative;
+    cursor: pointer;
+}
+
+.dw-slider-disabled .dw-slider-axis
+{
+    cursor: default !important;
+}
+
+.dw-slider .dw-slider-axis .dw-slider-axis-right
+{
+    margin-left: 5px;
+    background-image: url('/Admin/Module/OMC/img/slider-axis-right.png');
+    background-repeat: no-repeat;
+    background-position: right 4px;
+}
+
+.dw-slider .dw-slider-axis .dw-slider-axis-right .dw-slider-axis-left
+{
+    margin-left: -5px;
+    background-image: url('/Admin/Module/OMC/img/slider-axis-left.png');
+    background-repeat: no-repeat;
+    background-position: left 4px;
+}
+
+.dw-slider .dw-slider-handle
+{
+    display: block;
+    width: 8px;
+    height: 14px;
+    
+    position: absolute;
+    z-index: 2;
+    
+    top: 1px;
+    
+    background-image: url('/Admin/Module/OMC/img/slider-handle.png');
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+
+.dw-slider .dw-slider-fill
+{
+    left: 0px;
+    top: 4px;
+    position: absolute;
+    z-index: 1;
+    width: 0px;
+    height: 8px;
+    
+    background: url('/Admin/Module/OMC/img/slider-axis-fill.png') top left no-repeat;
+}
+
+.dw-slider .dw-slider-handle:hover
+{
+    background-image: url('/Admin/Module/OMC/img/slider-handle-hover.png');
+}
+
+.dw-slider .dw-slider-handle:focus,
+.dw-slider .dw-slider-handle:active
+{
+    outline: none !important;
+}
+
+.dw-slider-disabled .dw-slider-handle,
+.dw-slider-disabled .dw-slider-handle:hover
+{
+    cursor: default;
+    background-image: url('/Admin/Module/OMC/img/slider-handle.png') !important;
+}
+
+.dw-slider-highlight-value
+{
+    width: 18px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 11px;
+    
+    white-space: nowrap;
+    overflow: hidden;
+    
+    margin: 0px;
+    margin-top: 1px;
+    margin-left: 4px;
+    margin-right: 4px;
+    
+    cursor: default;
+    
+    padding: 2px;
+    padding-top: 1px;
+    padding-bottom: 3px;
+    
+    text-align: center;
+    
+    border: 1px solid #bdbdbd;
+    background-color: #f4f8fc;
+}
+
+.dw-slider-highlight-value-float
+{
+    position: absolute;
+    z-index: 3;
+}

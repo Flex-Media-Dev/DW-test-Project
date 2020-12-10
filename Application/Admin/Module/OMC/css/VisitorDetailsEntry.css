@@ -1,0 +1,116 @@
+﻿html, body
+{
+    border-right: none !important;
+    margin: 0px;
+    padding: 0px;
+    background-color: #fafafa;
+}
+
+.omc-padding
+{
+    padding: 5px;
+}
+
+.omc-separator
+{
+    height: 5px;
+    width: 1px;
+}
+
+.visitor-details-content
+{
+    padding: 5px;
+}
+
+.omc-help
+{
+    cursor: help;
+}
+
+.omc-clear
+{
+    clear: both;
+    visibility: hidden;
+    height: 1px;
+    font-size: 1px;
+}
+
+.omc-nowrap
+{
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.visitor-details-border
+{
+    border: 1px solid #bdbdbd;
+}
+
+.visitor-details-location #mapContainer
+{
+    height: 200px;
+    width: 750px;
+    border: 1px solid #bdbdbd;
+    background-color: #e0e0e0;
+}
+
+.visitor-details-location #mapContainer .visitor-details-location-map-centered
+{
+    margin: 0px auto;
+    text-align: center;
+    padding-top: 85px;
+}
+
+.visitor-details-basic .visitor-details-basic-field-country img,
+.visitor-details-basic .visitor-details-basic-field-country span,
+.visitor-details-location .visitor-details-location-field-country img,
+.visitor-details-location .visitor-details-location-field-country span,
+.visitor-details-location .visitor-details-location-field-company img,
+.visitor-details-location .visitor-details-location-field-company span
+{
+    float: left;
+}
+
+.visitor-details-basic .visitor-details-basic-field-country img,
+.visitor-details-location .visitor-details-location-field-country img
+{
+    margin-right: 2px;
+    border: none;
+    outline: none;
+    
+    width: 16px;
+    height: 16px;
+}
+
+.visitor-details-location .visitor-details-location-field-company img
+{
+    margin-left: 4px;
+    border: none;
+    outline: none;
+    
+    width: 16px;
+    height: 16px;
+}
+
+.visitor-details-basic .visitor-details-basic-field-country span,
+.visitor-details-location .visitor-details-location-field-country span,
+.visitor-details-location .visitor-details-location-field-company span
+{
+    height: 16px;
+    line-height: 16px;
+}
+
+.visitor-details-referrer .list-container
+{
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 1px solid #9E9E9E;
+    
+    cursor: default;
+}
+
+.visitor-details-empty
+{
+    font-style: italic;
+    color: #e0e0e0;
+}

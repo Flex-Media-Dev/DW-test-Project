@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Content.Social.Adapters.ExternalAuthentication</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.ADLoginProvider">
+            <summary>
+            Active Directory login provider
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.ADLoginProvider.Login">
+            <summary>
+            Logs in user into AD services using username and password
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.ADLoginProvider.GetLoginResult">
+            <summary>
+            Gets login result object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.AzureADLoginProvider">
+            <summary>
+            AzureAD login provider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.AzureADLoginProvider.ApplicationId">
+            <summary>
+            Gets or sets the application id.
+            </summary>        
+        </member>
+        <member name="P:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.AzureADLoginProvider.Authority">
+            <summary>
+            Gets or sets the authority.
+            </summary>        
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.AzureADLoginProvider.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.AzureADLoginProvider.RegisterProvider(Owin.IAppBuilder)">
+            <summary>
+            Registers the external login provider into owin app.
+            </summary>        
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.AzureADLoginProvider.Login">
+            <summary>
+            Logs in user into AzureAD
+            </summary>
+            <remarks>Change AzureAD Authentication Options to use AppID and Secret from Provider Settings</remarks>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.AzureADLoginProvider.OnAuthenticationFailed(Microsoft.Owin.Security.Notifications.AuthenticationFailedNotification{Microsoft.IdentityModel.Protocols.OpenIdConnectMessage,Microsoft.Owin.Security.OpenIdConnect.OpenIdConnectAuthenticationOptions})">
+            <summary>
+            Handle failed authentication requests by redirecting the user to the home page with an error in the query string
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.AzureADLoginProvider.SignOut">
+            <summary>
+            Signs out from the azure AD
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.AzureADLoginProvider.GetLoginResult">
+            <summary>
+            Gets login result based on owin context.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.FacebookLoginProvider">
+            <summary>
+            Facebook login provider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.FacebookLoginProvider.AppID">
+            <summary>
+            Gets or sets the app key.
+            </summary>        
+        </member>
+        <member name="P:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.FacebookLoginProvider.AppSecret">
+            <summary>
+            Gets or sets the app secret.
+            </summary>        
+        </member>
+        <member name="F:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.FacebookLoginProvider.facebookAuthenticationOptions">
+            <remarks>
+            It is needed to assign some values to the AppId and AppSecret properties
+            for the successful initialization of Facebook provider at OwinStartup Configuration
+            Example: AppId - "689541271064314" and AppSecret - "27a5b797b6ca46c6b4ae0058dbd51861"            
+            </remarks>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.FacebookLoginProvider.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.FacebookLoginProvider.RegisterProvider(Owin.IAppBuilder)">
+            <summary>
+            Registers the external login provider into owin app.
+            </summary>        
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.FacebookLoginProvider.Login">
+            <summary>
+            Logs in user into Facebook
+            </summary>
+            <remarks>Change Facebook Authentication Options to use AppID and Secret from Provider Settings</remarks>
+        </member>
+        <member name="T:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.GoogleLoginProvider">
+            <summary>
+            Google login provider
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.GoogleLoginProvider.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.GoogleLoginProvider.RegisterProvider(Owin.IAppBuilder)">
+            <summary>
+            Registers the external login provider into owin app.
+            </summary>        
+        </member>
+        <member name="T:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.GoogleOAuth2LoginProvider">
+            <summary>
+            Google OAuth 2.0 login provider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.GoogleOAuth2LoginProvider.ClientID">
+            <summary>
+            Gets or sets the client id.
+            </summary>        
+        </member>
+        <member name="P:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.GoogleOAuth2LoginProvider.ClientSecret">
+            <summary>
+            Gets or sets the client secret.
+            </summary>        
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.GoogleOAuth2LoginProvider.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.GoogleOAuth2LoginProvider.RegisterProvider(Owin.IAppBuilder)">
+            <summary>
+            Registers the external login provider into owin app.
+            </summary>        
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.GoogleOAuth2LoginProvider.Login">
+            <summary>
+            Authenticates client using GoogleOAuth
+            </summary>
+            <remarks>Change Authentication Options to use ClientID and Secret from Provider Settings</remarks>
+        </member>
+        <member name="T:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.ISignOut">
+            <summary>
+            The interface used for sign out from the external authentication provider
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.ISignOut.SignOut">
+            <summary>
+            Method called for sign out from the external authentication provider
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.LoginProvider">
+            <summary>
+            Represents a base class for implmenting external login providers
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.LoginProvider.RegisterProvider(Owin.IAppBuilder)">
+            <summary>
+            Registers provider in the Owin automatic startup.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.LoginProvider.Login">
+            <summary>
+            Makes the login request to the social media platform.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.LoginProvider.GetLoginResult">
+            <summary>
+            Returns the login result from the external login platform.        
+            </summary>
+            <returns>ExternalLoginResult object instance</returns>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.LoginProvider.IsBackendLoginRequest">
+            <summary>
+            Gets value indicating whether current request is backend login request
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.LoginProvider.IsBackendLogoutRequest">
+            <summary>
+            Gets value indicating whether current request is backend logout request
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.LogOffSubscriber">
+            <summary>The Class LogOffSubscriber represents subscriber for before user logoff notification</summary>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.LogOffSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <summary>This method called when user auto login event fires</summary>
+        </member>
+        <member name="T:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.OwinStartup">
+            <summary>
+            This class is used for Owin context automatic startup.
+            It is called at Application Startup.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.TwitterLoginProvider">
+            <summary>
+            Twitter login provider
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.TwitterLoginProvider.ConsumerKey">
+            <summary>
+            Gets or sets the consumer key.
+            </summary>        
+        </member>
+        <member name="P:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.TwitterLoginProvider.ConsumerSecret">
+            <summary>
+            Gets or sets the consumer secret.
+            </summary>        
+        </member>
+        <member name="F:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.TwitterLoginProvider.twitterAuthenticationOptions">
+            <remarks>
+            It is needed to assign some values to the ConsumerKey and ConsumerSecret properties
+            for the successful initialization of Twitter provider at OwinStartup Configuration
+            </remarks>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.TwitterLoginProvider.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.TwitterLoginProvider.RegisterProvider(Owin.IAppBuilder)">
+            <summary>
+            Registers the external login provider into owin app.
+            </summary>        
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.TwitterLoginProvider.Login">
+            <remarks>
+            Change Twitter Authentication Options to use ConsumerKey and ConsumerSecret from Provider Settings
+            </remarks>
+        </member>
+    </members>
+</doc>

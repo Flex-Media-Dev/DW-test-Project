@@ -1,0 +1,97 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+<div class="items">
+    @if (!GetBoolean("ItemPublisher:Items.Any"))
+    {
+        <div class="alert alert-info">@Translate("No_items_found", "No items found")</div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-hover ">
+                <thead>
+                    <tr>
+                        @foreach (var field in GetLoop("ItemPublisher:ItemType.Fields"))
+                        {
+                            <th>@field.GetValue("ItemPublisher:ItemType.Field.Name")</th>
+                        }
+                        <th>@Translate("View", "View")</th>
+
+                        @if (GetBoolean("ItemPublisher:Items.CanEdit"))
+                        {
+                            <th>@Translate("Edit", "Edit")</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in GetLoop("ItemPublisher:Items.List"))
+                    {
+                        <tr onclick='location.href = "@item.GetValue("ItemPublisher:Item.Url")";'>
+                            @foreach (var field in item.GetLoop("ItemPublisher:Item.Fields"))
+                            {
+                                <td>
+                                    @field.GetValue("ItemPublisher:Item.Field.Value")
+                                </td>
+                            }
+                            <td>
+                                <a href='@item.GetValue("ItemPublisher:Item.DetailsUrl")'>@Translate("View", "View")</a>
+                            </td>
+                            @if (GetBoolean("ItemPublisher:Items.CanEdit"))
+                            {
+                                <td>
+                                    <a href='@item.GetValue("ItemPublisher:Item.EditUrl")'>@Translate("Edit", "Edit")</a>
+                                </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        if (GetInteger("ItemPublisher:Items.Paging.TotalPages") > 1)
+        {
+            var hasPrevPage = GetInteger("ItemPublisher:Items.Paging.CurrentPage") > 1;
+            var hasNextPage = GetInteger("ItemPublisher:Items.Paging.CurrentPage") < GetInteger("ItemPublisher:Items.Paging.TotalPages");
+
+            <ul class="pagination">
+                <li class='@(hasPrevPage ? "" : "disabled")'>
+                    @if (hasPrevPage)
+                    {
+                        <a href='@System.Web.HttpUtility.HtmlEncode(GetValue("ItemPublisher:Items.Paging.PrevPage"))'>@Translate("Previous_page", "&laquo;")</a>
+                    }
+                    else
+                    {
+                        <span>@Translate("Previous_page", "&laquo;")</span>
+                    }
+                </li>
+
+                @foreach (var p in GetLoop("ItemPublisher:Items.Paging.Pages"))
+                {
+                    var isCurrent = p.GetBoolean("ItemPublisher:Items.Paging.Pages.Page.IsCurrent");
+                    <li class='@(isCurrent ? "active" : "")'>
+                        @if (isCurrent)
+                        {
+                            <span>@p.GetValue("ItemPublisher:Items.Paging.Pages.Page.Number")</span>
+                        }
+                        else
+                        {
+                            <a href='@System.Web.HttpUtility.HtmlEncode(p.GetValue("ItemPublisher:Items.Paging.Pages.Page.Url"))'>@p.GetValue("ItemPublisher:Items.Paging.Pages.Page.Number")</a>
+                        }
+                    </li>
+                }
+
+                <li class='@(hasNextPage ? "" : "disabled")'>
+                    @if (hasNextPage)
+                    {
+                        <a href='@System.Web.HttpUtility.HtmlEncode(GetValue("ItemPublisher:Items.Paging.NextPage"))'>@Translate("Next_page", "&raquo;")</a>
+                    }
+                    else
+                    {
+                        <span>@Translate("Next_page", "&raquo;")</span>
+                    }
+                </li>
+            </ul>
+        }
+
+    }
+</div>

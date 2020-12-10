@@ -1,0 +1,2221 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Forum</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Forum.Backend">
+            <summary>
+            Represents Dynamicweb Forum module backend
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forum.Backend.Filters">
+            <summary>
+            Represents table columns filter
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forum.Backend.ConvertFiltersToString(Dynamicweb.Forum.Backend.Filters)">
+            <summary>
+            Converts filters to json format string
+            </summary>
+            <param name="filters">Set of filters</param>
+            <returns>Json string with filters data</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Backend.GetFiltersFromRequest">
+            <summary>
+            Gets filters data from request
+            </summary>
+            <returns>Json deserialized filters data</returns>
+        </member>
+        <member name="T:Dynamicweb.Forum.Category">
+            <summary>
+            Represents a forum category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Category.AreaID">
+            <summary>
+            Gets or sets an ID of the area that this category belongs to.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Category.LastReply">
+            <summary>
+            Gets a reference to a last reply in this category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Category.LastThread">
+            <summary>
+            Gets a reference to the last thread in this category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Category.Moderators">
+            <summary>
+            Gets the list of category moderators.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Category.LastThreadID">
+            <summary>
+            Gets an ID of the last thread in this category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Category.LastActiveThread">
+            <summary>
+            Gets a reference to the last active thread in this category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Category.LastActiveThreadID">
+            <summary>
+            Gets an ID of the last active thread in this category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Category.Name">
+            <summary>
+            Gets or sets category name.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Dynamicweb.Forum.Category.Description">
+            <summary>
+            Gets or sets category description.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Dynamicweb.Forum.Category.IsActive">
+            <summary>
+            Gets or sets value indicating whether category is active.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Dynamicweb.Forum.Category.ReplyCount">
+            <summary>
+            Gets the number of replies belonging to this category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Category.ThreadCount">
+            <summary>
+            Gets the number of threads belonging to this category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.ThreadsWithNoReplies">
+            <summary>
+            Get the thread without replies
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.ThreadsUnsolved">
+            <summary>
+            Get the unsolved thread
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Category.Threads">
+            <summary>
+            Gets the list of threads belonging to this category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Category.CachedCategories">
+            <summary>
+            Gets the list of all categories mapped to their IDs. Categories are cached for the current request.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Category.CreatedDate">
+            <summary>
+            Gets or sets date and time when this category was created
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.#ctor">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.FillRow(System.Data.DataRow)">
+            <summary>
+            Fills specified data row with property values of the current object.
+            </summary>
+            <param name="row">Data row to fill.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.Fill(System.String)">
+            <summary>
+            Fills object properties with the data retrieved according to the given SQL statement.
+            </summary>
+            <param name="sqlCommandText">SQL statement to process.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.Save">
+            <summary>
+            Saves the category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.Delete(System.Int32)">
+            <summary>
+            Deletes specified category.
+            </summary>
+            <param name="id">An ID of the category.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.Fill(System.Data.IDataReader)">
+            <summary>
+            Fills object properties with data provided by specified data reader.
+            </summary>
+            <param name="dataReader">An instance of the data reader to read data from.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.GetCategoryByID(System.Int32)">
+            <summary>
+            Retrieves category by its ID.
+            </summary>
+            <param name="id">An ID of the category.</param>
+            <returns>Category.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.GetCategoriesByIDs(System.String)">
+            <summary>
+            Retrieves a list of categories by a comma-separated list of their IDs.
+            </summary>
+            <param name="ids">A comma-separated list of category IDs.</param>
+            <returns>A list of categories.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.GetCategoriesByIDs(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Retrieves a list of categories by their IDs.
+            </summary>
+            <param name="ids">A list of category IDs.</param>
+            <returns>A list of categories.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.GetCategories">
+            <summary>
+            Retrieves a list of all categories.
+            </summary>
+            <returns>A list of all categories.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.GetActiveCategories">
+            <summary>
+            Retrieves a list of active categories.
+            </summary>
+            <returns>A list of active categories.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.GetPagedCategoryList(Dynamicweb.Forum.SortFields,Dynamicweb.Modules.Common.SortDirection,System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets the forum category list.
+            </summary>
+            <param name="sort">The sorting field.</param>
+            <param name="direction">The sorting direction.</param>
+            <param name="search">The searching filter.</param>
+            <param name="startItem">The start item.</param>
+            <param name="endItem">The end item.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.GetRowCount(System.String)">
+            <summary>
+            Gets the amount of news categories by searching filter.
+            </summary>
+            <param name="search">The searching filter.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.CountSQL">
+            <summary>
+            Retrieves "COUNT" SQL statement.
+            </summary>
+            <returns>"COUNT" SQL statement.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Category.InvalidateCache">
+            <summary>
+            Clears the cache.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.CategoryCollection">
+            <summary>
+            Represents a collection of forum categories.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryCollection.#ctor">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryCollection.#ctor(System.Collections.Generic.IEnumerable{Dynamicweb.Forum.Category})">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="data">Collection data.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryCollection.SortByName">
+            <summary>
+            Sorts categories by name.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryCollection.SortByReplyCount(System.String)">
+            <summary>
+            Sorts categories by the number of replies (descending by default).
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryCollection.SortByThreadCount(System.String)">
+            <summary>
+            Sorts categories by number of threads (descending by default).
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryCollection.SortByCreatedDate">
+            <summary>
+            Sorts categories by a creation date (ascending).
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryCollection.SortByActiveCategory(System.String)">
+            <summary>
+            Sorts categories by a creation date (ascending).
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.CategoryModeratorMapping">
+            <summary>
+            Represents a category moderator mapping.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.CategoryModeratorMapping.RelationID">
+            <summary>
+            Gets or sets an ID of the associated user relation.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.CategoryModeratorMapping.UserID">
+            <summary>
+            Gets or sets an ID of the user.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.CategoryModeratorMapping.UserAccount">
+            <summary>
+            Gets the corresponding user account information.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.CategoryModeratorMapping.CategoryID">
+            <summary>
+            Gets or sets an ID of the category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.CategoryModeratorMapping.CachedMappings">
+            <summary>
+            Gets the list of all mappings distributed across their category IDs. Mappings are cached for the current request.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryModeratorMapping.#ctor">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryModeratorMapping.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="userID">An ID of the user.</param>
+            <param name="categoryID">An ID of the category.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryModeratorMapping.#ctor(Dynamicweb.Forum.UserRelation)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="relation">Associated user relation.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryModeratorMapping.Save">
+            <summary>
+            Saves the mapping.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryModeratorMapping.Delete">
+            <summary>
+            Deletes the mapping.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryModeratorMapping.AddMapping(System.Int32,System.Int32)">
+            <summary>
+            Adds new moderator mapping.
+            </summary>
+            <param name="userID">An ID of the user.</param>
+            <param name="categoryID">An ID of the category.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryModeratorMapping.GetMappingsByCategory(System.Int32)">
+            <summary>
+            Gets the list of mappings for the specified category.
+            </summary>
+            <param name="categoryID">An ID of the category.</param>
+            <returns>A list of mappings for the specified category.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryModeratorMapping.GetMappingsByUser(System.Int32)">
+            <summary>
+            Gets the list of mappings for the specified user.
+            </summary>
+            <param name="userID">An ID of the user.</param>
+            <returns>A list of mappings for the specified user.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryModeratorMapping.IsModerator(System.Int32,System.Int32)">
+            <summary>
+            Determines whether specified user is moderator of the specified category.
+            </summary>
+            <param name="userID">An ID of the user.</param>
+            <param name="categoryID">An ID of the category.</param>
+            <returns>Value whether specified user is moderator of the specified category.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.CategoryModeratorMapping.InvalidateCache">
+            <summary>
+            Clears the cache.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.EnvironmentInfo">
+            <summary>
+            Provides information about the current environment.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.EnvironmentInfo.PageID">
+            <summary>
+            Gets an ID of the current page.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.EnvironmentInfo.ParagraphID">
+            <summary>
+            Gets an ID of the current paragraph.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.EnvironmentInfo.PageView">
+            <summary>
+            Gets the reference to the PageView object for the current request.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.EnvironmentInfo.Uri">
+            <summary>
+            Gets the URI information of the current resource.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.EnvironmentInfo.#ctor">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.EnvironmentInfo.GetInfo">
+            <summary>
+            Retrieves environment info.
+            </summary>
+            <returns>Environment info.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.ForumUrlProvider">
+            <summary>
+            Represents a URL provider for Forum module.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.ForumUrlProvider.GetMappings">
+            <summary>
+            Retrieves a list of URL mappings.
+            </summary>
+            <returns>A list of URL mappings.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Frontend">
+            <summary>
+            Represents a frontend of the BasicForum module.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.Frontend.Renderer">
+            <summary>
+            Gets the renderer object.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.GetContent">
+            <summary>
+            Retrieves module content.
+            </summary>
+            <returns>Module content.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.OnBeforeContent(Dynamicweb.Forum.Notifications.Frontend.BeforeContentArgs)">
+            <summary>
+            Sends "BeforeContent" notification.
+            </summary>
+            <param name="args">Notification arguments.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.OnAfterContent(Dynamicweb.Forum.Notifications.Frontend.AfterContentArgs)">
+            <summary>
+            Sends "AfterContent" notification.
+            </summary>
+            <param name="args">Notification arguments.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.ToggleStickyState(System.Int32,System.Int32)">
+            <summary>
+            Toggles "sticky" state of the specified thread.
+            </summary>
+            <param name="threadID">An ID of the thread.</param>
+            <param name="categoryID">An ID of the category</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.ToggleActiveState(System.Int32,System.Int32)">
+            <summary>
+            Toggles "active" state of the specified thread.
+            </summary>
+            <param name="threadID">An ID of the thread.</param>
+            <param name="categoryID">An ID of the category</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.ChangeSubscription(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            Subscribes (or unsubscribes) specified user to notifications made within the specified category/thread.
+            </summary>
+            <param name="email">E-mail address of the user.</param>
+            <param name="threadID">An ID of the target thread. The value can be empty ID if categoryID is specified.</param>
+            <param name="categoryID">An ID of the target category. The value can be empty ID if threadID is specified.</param>
+            <param name="subscribed">Indicates whether user either subscribing or unsubscribing.</param>
+            <param name="autoRedirect">Indicates that the auto-redirection should be performed if the redirectTo parameter is left blank.</param>
+            <param name="redirectToList">Indicates that redirection to category list should be performed if value is 'categories' and redirect to thread list if value is 'threads', default value is empty.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.CreatePost(System.Int32)">
+            <summary>
+            Executes "Create" action.
+            </summary>
+            <param name="categoryID">An ID of the category in which the new thread should be created.</param>
+            <returns>An output of the action.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.CreatePost(System.Int32,System.Int32)">
+            <summary>
+            Performs "Create" action.
+            </summary>
+            <param name="categoryID">And ID of the category.</param>
+            <param name="threadID">An ID of the thread. Can be left blank if creating new thread instead of replying to existing one.</param>
+            <returns>Output of the action.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.CreatePost(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Performs "Create" action.
+            </summary>
+            <param name="categoryID">And ID of the category.</param>
+            <param name="threadID">An ID of the thread. Can be left blank if creating new thread instead of replying to existing one.</param>
+            <param name="replyID">An ID of the post that the user is replying to. Can be left blank if new post must be created.</param>
+            <param name="isInline">Value indicating whether form is placed among the other posts.</param>
+            <returns>Output of the action.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.EditPost(System.Int32)">
+            <summary>
+            Executes "Edit thread" or "Edit post" action.
+            </summary>
+            <param name="postID">An ID of either a thread or post to be edited.</param>
+            <returns>Output of the action.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.EditPost(System.Int32,System.Boolean)">
+            <summary>
+            Executes "Edit thread" or "Edit post" action.
+            </summary>
+            <param name="postID">An ID of either a thread or post to be edited.</param>
+            <param name="isInline">Demonstrates that post is inline.</param>
+            <returns>Output of the action.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.DeletePost(System.Int32)">
+            <summary>
+            Deletes specified post.
+            </summary>
+            <param name="postID">An ID of the post.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.SavePostFromRequest(System.Boolean)">
+            <summary>
+            Saves the post according to data came from the request.
+            </summary>
+            <param name="isNew">Indicates whether to treat the post either as new one or as existing one.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.MarkPost(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Changes the "Is answer" flag of the specified post.
+            </summary>
+            <param name="postID">An ID of the post.</param>
+            <param name="threadID">An ID of the corresponding thread.</param>
+            <param name="isAnswer">Indicating whether post is an answer.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.ListCategories">
+            <summary>
+            Executes "List categories" action.
+            </summary>
+            <returns>An output of the action.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.ListThreads(Dynamicweb.Forum.CategoryCollection)">
+            <summary>
+            Executes "List threads" action.
+            </summary>
+            <param name="categories">Categories whose threads to include into the output.</param>
+            <returns>An output of the action.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.ShowUnsolved(System.Int32)">
+            <summary>
+            Show Only Unsolved Threads
+            </summary>
+            <param name="categoryID"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.ShowUnanswered(System.Int32)">
+            <summary>
+            Show only Unanswered threads
+            </summary>
+            <param name="categoryID"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.ListThreads(System.Int32)">
+            <summary>
+            Executes "List threads" action.
+            </summary>
+            <param name="categoryID">An ID of the category.</param>
+            <returns>An output of the action.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.ListThreads(Dynamicweb.Forum.Category)">
+            <summary>
+            Executes "List threads" action.
+            </summary>
+            <param name="category">Thread category.</param>
+            <returns>An output of the action.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.ListThreads(Dynamicweb.Forum.Category,System.Boolean,System.Boolean)">
+            <summary>
+            Executes "List threads" action.
+            </summary>
+            <param name="category">Thread category.</param>
+            <param name="onlyUnsolved">Render only Unsolved</param>
+            <param name="onlyUnanswered">Render only Unanswered</param>
+            <returns>An output of the action.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.ShowThread(System.Int32)">
+            <summary>
+            Executes "Show thread" action.
+            </summary>
+            <param name="threadID">An ID of the thread.</param>
+            <returns>An output of the action.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.ShowThread(Dynamicweb.Forum.Message)">
+            <summary>
+            Executes "Show thread" action.
+            </summary>
+            <param name="thread">Thread to show.</param>
+            <returns>An output of the action.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.IsThreadCreator(System.Int32,Dynamicweb.Forum.Message)">
+            <summary>
+            Determines whether specified user is a creator of the specified thread.
+            </summary>
+            <param name="userID">User ID to check.</param>
+            <param name="thread">Thread to check.</param>
+            <returns>Value indicating whether specified user is a creator of the specified thread.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.IsTopicCreator(System.Int32,Dynamicweb.Forum.Message)">
+            <summary>
+            Determines whether specified user is a creator of the specified topic.
+            </summary>
+            <param name="userID">User ID to check.</param>
+            <param name="topic">Topic to check.</param>
+            <returns>Value indicating whether specified user is a creator of the specified topic.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.IsLoggedIn(System.Int32)">
+            <summary>
+            Determines whether specified user is currently logged in.
+            </summary>
+            <param name="userID">User ID to check.</param>
+            <returns>Value indicating whether specified user is currently logged in.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.CanEdit(Dynamicweb.Forum.Message)">
+            <summary>
+            Determines whether current user is allowed to edit specified post (thread).
+            </summary>
+            <param name="post">A reference to the post (thread).</param>
+            <returns>Value indicating whether current user is allowed to edit specified post (thread).</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.CanEdit(System.Int32)">
+            <summary>
+            Determines whether current user is allowed to edit specified post (thread).
+            </summary>
+            <param name="postID">An ID of the post (thread).</param>
+            <returns>Value indicating whether current user is allowed to edit specified post (thread).</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.CanDelete(Dynamicweb.Forum.Message)">
+            <summary>
+            Determines whether current user is allowed to delete specified post (thread).
+            </summary>
+            <param name="post">A reference to the post (thread).</param>
+            <returns>Value indicating whether current user is allowed to delete specified post (thread).</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.CanDelete(System.Int32)">
+            <summary>
+            Determines whether current user is allowed to delete specified post (thread).
+            </summary>
+            <param name="postID">An ID of the post (thread).</param>
+            <returns>Value indicating whether current user is allowed to delete specified post (thread).</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Frontend.RedirectToMain">
+            <summary>
+            Redirects user to the main page of the module.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Message">
+            <summary>
+            Represents a single forum message (either a thread or a post).
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.Files">
+            <summary>
+            Gets the list of regular files associated with this message.
+            </summary>
+            <remarks>A list of virtual paths is returned.</remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.Images">
+            <summary>
+            Gets the list of image files associated with this message.
+            </summary>
+            <remarks>A list of virtual paths is returned.</remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.Replies">
+            <summary>
+            Gets or sets the list of replies to this thread.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.LastReply">
+            <summary>
+            Gets the reference to the last reply.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.ReplyCount">
+            <summary>
+            Gets the number of replies.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.IsThread">
+            <summary>
+            Gets value indicating whether message is thread.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.ThreadID">
+            <summary>
+            Gets an ID of the message thread.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.Category">
+            <summary>
+            Gets the reference to the message category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.ParentID">
+            <summary>
+            Gets the the ID of the parent message.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.CategoryID">
+            <summary>
+            Gets the ID of the message category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.Title">
+            <summary>
+            Gets or sets the message title.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.Body">
+            <summary>
+            Gets or sets the message body.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.BodyResume">
+            <summary>
+            Gets the short description of the message.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.BodyResumeExtraShort">
+            <summary>
+            Gets the short description of the message.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.Created">
+            <summary>
+            Gets or sets the date of message creation.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.Author">
+            <summary>
+            Gets or sets the name of the message author.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.AuthorEmail">
+            <summary>
+            Gets or sets an e-mail address of the message author.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.AuthorID">
+            <summary>
+            Gets or sets an ID of the message author (in case of registered users).
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.IsAnswer">
+            <summary>
+            Gets or sets value indicating whether message is marked as an answer.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.AnswerVotes">
+            <summary>
+            Gets or sets value indicating how many users set this message as answer.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.IsSticky">
+            <summary>
+            Gets or sets value indicating whether message should always appear on top of the list.
+            </summary>
+            <remarks>This property only applies for threads.</remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.IsActive">
+            <summary>
+            Gets or sets value indicating whether message is active.
+            </summary>
+            <remarks>This property only applies for threads.</remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Message.UserAccount">
+            <summary>
+            Gets the reference to the corresponding registered user.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.#ctor">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.FillRow(System.Data.DataRow)">
+            <summary>
+            Fills specified data row with property values of the current object.
+            </summary>
+            <param name="row">Data row to fill.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.Fill(System.String)">
+            <summary>
+            Fills object properties with the data retrieved according to the given SQL statement.
+            </summary>
+            <param name="sqlCommandText">SQL statement to process.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.Fill(System.Data.IDataReader)">
+            <summary>
+            Fills object properties with data provided by specified data reader.
+            </summary>
+            <param name="dataReader">An instance of the data reader to read data from.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.Delete(System.Int32)">
+            <summary>
+            Deletes message with the specified ID.
+            </summary>
+            <param name="id">An ID of the message.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetResume(System.String)">
+            <summary>
+            Retrieves the resume for a given text.
+            </summary>
+            <param name="text">Text to retrieve resume for.</param>
+            <returns>Text resume.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.LoadThreads(Dynamicweb.Forum.CategoryCollection)">
+            <summary>
+            Loads threads for a given list of categories.
+            </summary>
+            <param name="categories">Categories whose threads to load.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.DeleteMessagesByParentID(System.Int32)">
+            <summary>
+            Deletes all messages attached to a given parent.
+            </summary>
+            <param name="parentID">An ID of the parent message.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.DeleteMessagesByCategoryID(System.Int32)">
+            <summary>
+            Deletes all messages attached to a given category.
+            </summary>
+            <param name="categoryID">An ID of the category.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.DeleteRemovedFiles(System.String@)">
+            <summary>
+            Deletes already uploaded files removed from the forum post's files list.
+            </summary>
+            <param name="folderName">Folder to look files for.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.SaveFiles(Dynamicweb.Forum.Message)">
+            <summary>
+            Saves the files submitted with the current POST request under the given forum post.
+            </summary>
+            <param name="message">Forum post to associated uploaded files with.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.DeleteFiles(System.String)">
+            <summary>
+            Deletes all files from the given folder as well as the folder itself.
+            </summary>
+            <param name="path">Folder path.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.DeleteFiles(System.String,System.Boolean)">
+            <summary>
+            Deletes all files from the given folder as well as the folder itself.
+            </summary>
+            <param name="path">Folder path.</param>
+            <param name="isPhysical">Indicates whether physical path is provided.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.LoadReplies(Dynamicweb.Forum.MessageCollection)">
+            <summary>
+            Loads replies for a given list of threads.
+            </summary>
+            <param name="threads">A list of threads to load replies for.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetThreadsByCategory(Dynamicweb.Forum.Category)">
+            <summary>
+            Returns a list of threads from the given category.
+            </summary>
+            <param name="category">Target category.</param>
+            <returns>A list of threads from the given category.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetThreadsByCategory(Dynamicweb.Forum.Category,System.Boolean)">
+            <summary>
+            Returns a list of threads from the given category.
+            </summary>
+            <param name="category">Target category.</param>
+            <param name="orderByLastAnswer">Indicates sort order by last answer dates, otherwise sorted by last created</param>
+            <returns>A list of threads from the given category.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetThreadsByCategory(Dynamicweb.Forum.Category,Dynamicweb.Forum.ThreadsOrderByFields)">
+            <summary>
+            Returns a list of threads from the given category.
+            </summary>
+            <param name="category">Target category.</param>
+            <param name="orderBy">Thread sorting rule.</param>
+            <returns>A list of threads from the given category.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetThreadsByCategory(Dynamicweb.Forum.Category,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            Returns a list of threads from the given category.
+            </summary>
+            <param name="category">Target category.</param>
+            <param name="orderByLastAnswer">Indicates sort order by last answer dates, otherwise sorted by last created</param>
+            <param name="start">Zero-based index of of the first thread in a resulting sequence.</param>
+            <param name="take">Number of threads to retrieve.</param>
+            <returns>A list of threads from the given category.</returns>
+            <remarks>This overload is not supported on solutions running on MS Access.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetThreadsByCategory(Dynamicweb.Forum.Category,Dynamicweb.Forum.ThreadsOrderByFields,System.Int32,System.Int32)">
+            <summary>
+            Returns a list of threads from the given category.
+            </summary>
+            <param name="category">Target category.</param>
+            <param name="orderBy">Thread sorting rule.</param>
+            <param name="start">Zero-based index of of the first thread in a resulting sequence.</param>
+            <param name="take">Number of threads to retrieve.</param>
+            <returns>A list of threads from the given category.</returns>
+            <remarks>This overload is not supported on solutions running on MS Access.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetThreadsByCategories(Dynamicweb.Forum.CategoryCollection)">
+            <summary>
+            Returns a list of threads from the given categories.
+            </summary>
+            <param name="categories">Target categories.</param>
+            <returns>A list of threads from the given categories.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetThreadsByCategories(Dynamicweb.Forum.CategoryCollection,System.Boolean)">
+            <summary>
+            Returns a list of threads from the given categories.
+            </summary>
+            <param name="categories">Target categories.</param>
+            <param name="orderByLastAnswer">Indicates sort order by last answer dates, otherwise sorted by last created</param>
+            <returns>A list of threads from the given categories.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetThreadsByCategories(Dynamicweb.Forum.CategoryCollection,Dynamicweb.Forum.ThreadsOrderByFields)">
+            <summary>
+            Returns a list of threads from the given categories.
+            </summary>
+            <param name="categories">Target categories.</param>
+            <param name="orderBy">Thread sorting rule.</param>
+            <returns>A list of threads from the given categories.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetThreadsByCategories(Dynamicweb.Forum.CategoryCollection,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            Returns a list of threads from the given categories.
+            </summary>
+            <param name="categories">Target categories.</param>
+            <param name="orderByLastAnswer">Indicates sort order by last answer dates, otherwise sorted by last created</param>
+            <param name="start">Zero-based index of of the first thread in a resulting sequence.</param>
+            <param name="take">Number of threads to retrieve.</param>
+            <returns>A list of threads from the given categories.</returns>
+            <remarks>This overload is not supported on solutions running on MS Access.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetThreadsByCategories(Dynamicweb.Forum.CategoryCollection,Dynamicweb.Forum.ThreadsOrderByFields,System.Int32,System.Int32)">
+            <summary>
+            Returns a list of threads from the given categories.
+            </summary>
+            <param name="categories">Target categories.</param>
+            <param name="orderBy">Thread sorting rule.</param>
+            <param name="start">Zero-based index of of the first thread in a resulting sequence.</param>
+            <param name="take">Number of threads to retrieve.</param>
+            <returns>A list of threads from the given categories.</returns>
+            <remarks>This overload is not supported on solutions running on MS Access.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetRepliesByThreads(Dynamicweb.Forum.MessageCollection)">
+            <summary>
+            Returns a list of replies from the given threads.
+            </summary>
+            <param name="threads">Target threads.</param>
+            <returns>A list of replies from the given threads.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetRepliesByThreads(Dynamicweb.Forum.MessageCollection,System.Int32,System.Int32)">
+            <summary>
+            Returns a list of replies from the given threads.
+            </summary>
+            <param name="threads">Target threads.</param>
+            <returns>A list of replies from the given threads.</returns>
+            <param name="start">Zero-based index of of the first thread in a resulting sequence.</param>
+            <param name="take">Number of threads to retrieve.</param>
+            <remarks>This overload is not supported on solutions running on MS Access.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetRepliesByThread(Dynamicweb.Forum.Message)">
+            <summary>
+            Returns a list of replies from the given thread.
+            </summary>
+            <param name="thread">Target thread.</param>
+            <returns>A list of replies from the given thread.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetRepliesByThread(Dynamicweb.Forum.Message,System.Int32,System.Int32)">
+            <summary>
+            Returns a list of replies from the given thread.
+            </summary>
+            <param name="thread">Target thread.</param>
+            <param name="start">Zero-based index of of the first thread in a resulting sequence.</param>
+            <param name="take">Number of threads to retrieve.</param>
+            <returns>A list of replies from the given thread.</returns>
+            <remarks>This overload is not supported on solutions running on MS Access.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetMessages">
+            <summary>
+            Retrieves a list of all forum messages.
+            </summary>
+            <returns>A list of all forum messages.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetThreads(System.Boolean)">
+            <summary>
+            Retrieves a collection of all forum threads.
+            </summary>
+            <param name="loadReplies">Indicates whether to automatically load replies for each thread.</param>
+            <returns>A list of all forum threads.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetThreadsByIDs(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Retrieves a list of threads by their IDs.
+            </summary>
+            <param name="ids">A list of thread IDs.</param>
+            <returns>A list of threads by the given list of thread IDs.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.CountSQL(System.String)">
+            <summary>
+            Retrieves "Message count" SQL statement.
+            </summary>
+            <param name="expression">Original SQL expression.</param>
+            <returns>"Message count" SQL statement.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.JoinSQL">
+            <summary>
+            Retrieves "JOIN" SQL statement for user information.
+            </summary>
+            <returns>"JOIN" SQL statement for user information.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetMessagesBySql(System.String,System.Boolean)">
+            <summary>
+            Retrieves a collection of messages by a given SQL statement.
+            </summary>
+            <param name="sqlCommandText">SQL statement.</param>
+            <param name="isThread">Value indicating whether to load message replies.</param>
+            <returns>A collection of messages.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetMessageByID(System.Int32)">
+            <summary>
+            Retrieves a message by its ID.
+            </summary>
+            <param name="id">An ID of the message.</param>
+            <returns>Message.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.GetThreadMessageByID(System.Int32)">
+            <summary>
+            Retrieves a thread message (ParentID=0) by a message ID.
+            </summary>
+            <param name="id">An ID of the message.</param>
+            <returns>If the passed message ID is an answer to a thread, the parent message, the thread it self, is returned. If the passed message ID is a thread, the message is returned.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Message.ClearAnswers(System.Int32)">
+            <summary>
+            Clears all answers for the given thread.
+            </summary>
+            <param name="parentID">Thread ID.</param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.MessageCollection">
+            <summary>
+            Represents a collection of forum messages.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.MessageCollection.DateSorter">
+            <summary>
+            Allows comparing two messages by the last reply date.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.MessageCollection.DateSorter.Compare(Dynamicweb.Forum.Message,Dynamicweb.Forum.Message)">
+            <summary>
+            Compares two messages by the last reply date.
+            </summary>
+            <param name="x">First message.</param>
+            <param name="y">Second message.</param>
+            <returns>Comparison result.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.MessageCollection.DateSorterWithPriority">
+            <summary>
+            Allows comparing two messages by the last reply date.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.MessageCollection.DateSorterWithPriority.Compare(Dynamicweb.Forum.Message,Dynamicweb.Forum.Message)">
+            <summary>
+            Compares two messages by the last reply date.
+            </summary>
+            <param name="x">First message.</param>
+            <param name="y">Second message.</param>
+            <returns>Comparison result.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.MessageCollection.#ctor">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.MessageCollection.#ctor(System.Collections.Generic.IEnumerable{Dynamicweb.Forum.Message})">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="data">Collection data.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.MessageCollection.SortByThreadRepliedWithPriority(System.Boolean)">
+            <summary>
+            Sorts messages by the last reply date (descending) with sticked threads first.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Notifications">
+            <summary>
+            Provides notification names as well as their corresponding argument types.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Notifications.NotificationArgsBase">
+            <summary>
+            Provides methods and properties that are common for all notification argument types.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Notifications.NotificationArgsBase.Environment">
+            <summary>
+            Gets an environment information.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Notifications.NotificationArgsBase.#ctor">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Notifications.Frontend">
+            <summary>
+            Provides frontend-specific notification names as well as their corresponding argument types.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Forum.Notifications.Frontend.BeforeContent">
+            <summary>
+            Raises before any processing has been performed by the module.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Forum.Notifications.Frontend.AfterContent">
+            <summary>
+            Raises after all processing has been performed by the module.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Notifications.Frontend.BeforeContentArgs">
+            <summary>
+            Provides information for the "BeforeContent" notification.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Notifications.Frontend.BeforeContentArgs.ContentModule">
+            <summary>
+            Gets an instance of the actual content module.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Notifications.Frontend.BeforeContentArgs.StopExecution">
+            <summary>
+            Gets or sets value indicating whether to stop further execution of the module.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Notifications.Frontend.BeforeContentArgs.Output">
+            <summary>
+            Gets or sets the module output.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Notifications.Frontend.BeforeContentArgs.#ctor(Dynamicweb.Forum.Frontend)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="contentModule">An instance of the content module.</param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Notifications.Frontend.AfterContentArgs">
+            <summary>
+            Provides information for the "AfterContent" notification.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Notifications.Frontend.AfterContentArgs.ContentModule">
+            <summary>
+            Gets an instance of the actual content module.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Notifications.Frontend.AfterContentArgs.Output">
+            <summary>
+            Gets or sets the module output.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Notifications.Frontend.AfterContentArgs.#ctor(Dynamicweb.Forum.Frontend)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="contentModule">An instance of the content module.</param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Notifications.MessageList">
+            <summary>
+            Provides notification related to processing of forum message lists. This class cannot be inherited.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Forum.Notifications.MessageList.BeforeRender">
+            <summary>
+            Raises before the category list has been rendered.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Forum.Notifications.MessageList.AfterRender">
+            <summary>
+            Raises after the category list has been rendered.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Notifications.MessageList.RenderArgs">
+            <summary>
+            Provides information for "BeforeRender" and "AfterRender" notifications.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Notifications.MessageList.RenderArgs.Messages">
+            <summary>
+            Gets the list of target messages.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Notifications.MessageList.RenderArgs.Template">
+            <summary>
+            Gets the template used to render the category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Notifications.MessageList.RenderArgs.#ctor(Dynamicweb.Forum.MessageCollection,Dynamicweb.Rendering.Template)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="messages">The list of target messages.</param>
+            <param name="template">The template used to render the category.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Notifications.MessageList.#ctor">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Notifications.Message">
+            <summary>
+            Provides message-specific notification names as well as their corresponding argument types.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Forum.Notifications.Message.BeforeRender">
+            <summary>
+            Raises before the message has been rendered.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Forum.Notifications.Message.AfterRender">
+            <summary>
+            Raises after the message has been rendered.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Forum.Notifications.Message.Created">
+            <summary>
+            Raises after the new message has been created.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Notifications.Message.RenderArgs">
+            <summary>
+            Provides information for "BeforeRender" and "AfterRender" notifications.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Notifications.Message.RenderArgs.Template">
+            <summary>
+            Gets the template used to render the message.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Notifications.Message.RenderArgs.Message">
+            <summary>
+            Gets an instance of the message.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Notifications.Message.RenderArgs.#ctor(Dynamicweb.Forum.Message,Dynamicweb.Rendering.Template)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="message">Message to be rendered.</param>
+            <param name="template">Template used to render the message.</param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Notifications.Message.CreatedArgs">
+            <summary>
+            Provides information for the "AfterReply" notification.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Notifications.Message.CreatedArgs.Message">
+            <summary>
+            Gets an instance of the message that has been created.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Notifications.Message.CreatedArgs.#ctor(Dynamicweb.Forum.Message)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="message">An instance of the newly created message.</param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Notifications.CategoryList">
+            <summary>
+            Provides notification related to processing of forum category lists. This class cannot be inherited.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Forum.Notifications.CategoryList.BeforeRender">
+            <summary>
+            Raises before the category list has been rendered.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Forum.Notifications.CategoryList.AfterRender">
+            <summary>
+            Raises after the category list has been rendered.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Notifications.CategoryList.RenderArgs">
+            <summary>
+            Provides information for "BeforeRender" and "AfterRender" notifications.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Notifications.CategoryList.RenderArgs.Categories">
+            <summary>
+            Gets the list of target categories.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Notifications.CategoryList.RenderArgs.Template">
+            <summary>
+            Gets the template used to render the category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Notifications.CategoryList.RenderArgs.#ctor(Dynamicweb.Forum.CategoryCollection,Dynamicweb.Rendering.Template)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="categories">The list of target categories.</param>
+            <param name="template">The template used to render the category.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Notifications.CategoryList.#ctor">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Notifications.Category">
+            <summary>
+            Provides category-specific notification names as well as their corresponding argument types.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Forum.Notifications.Category.BeforeRender">
+            <summary>
+            Raises before the category has been rendered.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Forum.Notifications.Category.AfterRender">
+            <summary>
+            Raises after the category has been rendered.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Notifications.Category.RenderArgs">
+            <summary>
+            Provides information for "BeforeRender" and "AfterRender" notifications.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Notifications.Category.RenderArgs.Category">
+            <summary>
+            Gets an instance of the target category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Notifications.Category.RenderArgs.Template">
+            <summary>
+            Gets the template used to render the category.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Notifications.Category.RenderArgs.#ctor(Dynamicweb.Forum.Category,Dynamicweb.Rendering.Template)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="category">An instance of the target category.</param>
+            <param name="template">The template used to render the category.</param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.Renderer">
+            <summary>
+            Provides methods and properties for rendering forum posts and categories.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.Renderer.Properties">
+            <summary>
+            Gets the module properties.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.Renderer.ParagraphID">
+            <summary>
+            Gets an ID of the module paragraph.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.Renderer.PageView">
+            <summary>
+            Gets or sets an instance of the page view object used during the rendering.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.Renderer.ThreadsPager">
+            <summary>
+            Gets an instance of the paging hander for treads that allows the paged views to be rendered.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.Renderer.PostsPager">
+            <summary>
+            Gets an instance of the paging hander for posts that allows the paged views to be rendered.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.Renderer.UserID">
+            <summary>
+            Gets or sets the ID of the current user (if logged in).
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.Renderer.UserName">
+            <summary>
+            Gets or sets the name of the current user.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.Renderer.UserEmail">
+            <summary>
+            Gets or sets the e-mail address of the current user.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.Renderer.OrderThreadsByLastAnswer">
+            <summary>
+            Gets or sets value indicating whether to order threads by last answer.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.Renderer.OrderThreadsBy">
+            <summary>
+            Gets or sets value indicating whether to order threads by last answer.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.Renderer.CurrentCategoryID">
+            <summary>
+            Gets an ID of the category that the user is currently viewing.
+            </summary>
+            <remarks>The value is based on the current request.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.#ctor(Dynamicweb.Modules.Properties,System.Int32)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="properties">Module properties.</param>
+            <param name="paragraphID">Module paragraph ID.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderEditMessage(Dynamicweb.Rendering.Template,Dynamicweb.Forum.Message)">
+            <summary>
+            Renders "Edit post" form.
+            </summary>
+            <param name="template">Template used for rendering.</param>
+            <param name="post">Post which is being edited.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderCreateMessage(Dynamicweb.Rendering.Template,Dynamicweb.Forum.Category)">
+            <summary>
+            Renders "Create thread" form.
+            </summary>
+            <param name="template">Template used for rendering.</param>
+            <param name="category">Thread category.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderCreateMessage(Dynamicweb.Rendering.Template,Dynamicweb.Forum.Message)">
+            <summary>
+            Renders "Create message" form.
+            </summary>
+            <param name="template">Template used for rendering.</param>
+            <param name="thread">Thread to host the new message.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderCreateMessage(Dynamicweb.Rendering.Template,Dynamicweb.Forum.Message,Dynamicweb.Forum.Message)">
+            <summary>
+            Renders "Create message" form.
+            </summary>
+            <param name="template">Template used for rendering.</param>
+            <param name="thread">Thread to host the new message.</param>
+            <param name="post">Post that the user is replying to.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderForm(Dynamicweb.Rendering.Template,Dynamicweb.Forum.Message,Dynamicweb.Forum.Message,Dynamicweb.Forum.Category,System.Boolean)">
+            <summary>
+            Renders reply/thread form.
+            </summary>
+            <param name="template">Template to be used to render the form.</param>
+            <param name="post">A reference to the post that the current user is replying to.</param>
+            <param name="thread">A reference to the thread that the current user is in.</param>
+            <param name="category">A reference to the category that the current user is replying to.</param>
+            <param name="isEdited">Indicates whether specified post is being edited.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderMessage(Dynamicweb.Rendering.Template,Dynamicweb.Forum.Message,System.String)">
+            <summary>
+            Renders a single message.
+            </summary>
+            <param name="template">Template used to render the message.</param>
+            <param name="message">Message whose properties to render.</param>
+            <param name="prefix">Tag prefix.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderMessage(Dynamicweb.Rendering.Template,Dynamicweb.Forum.Message,System.String,System.Boolean)">
+            <summary>
+            Renders a single message.
+            </summary>
+            <param name="template">Template used to render the message.</param>
+            <param name="message">Message whose properties to render.</param>
+            <param name="prefix">Tag prefix.</param>
+            <param name="renderLastReply">Indicates whether to render last reply.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderCategory(Dynamicweb.Rendering.Template,Dynamicweb.Forum.Category)">
+            <summary>
+            Renders the category.
+            </summary>
+            <param name="template">Template used to render the category.</param>
+            <param name="category">Category to render.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.Absolutize(System.String)">
+            <summary>
+            Appends /Files/ to the beginning of the given virtual path (if needed).
+            </summary>
+            <param name="path">Virtual path to process.</param>
+            <returns>Absolute virtual path.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderAuthorGroups(Dynamicweb.Rendering.Template,Dynamicweb.Security.UserManagement.User,System.String)">
+            <summary>
+            Renders author groups.
+            </summary>
+            <param name="template">Template used to render image tags.</param>
+            <param name="user">Reference to message author.</param>
+            <param name="prefix">Tag prefix.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderAuthorImage(Dynamicweb.Rendering.Template,Dynamicweb.Security.UserManagement.User,System.String)">
+            <summary>
+            Renders an image tags.
+            </summary>
+            <param name="template">Template used to render image tags.</param>
+            <param name="user">Reference to message author.</param>
+            <param name="prefix">Tag prefix.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderThread(Dynamicweb.Rendering.Template,Dynamicweb.Forum.Message)">
+            <summary>
+            Renders a thread.
+            </summary>
+            <param name="template">Template used to render a thread.</param>
+            <param name="thread">Thread to render.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderThread(Dynamicweb.Rendering.Template,Dynamicweb.Forum.Message,System.Boolean,System.Func{Dynamicweb.Forum.Message,System.Boolean})">
+            <summary>
+            Renders specified thread.
+            </summary>
+            <param name="template">Template which is used to render the thread.</param>
+            <param name="thread">Thread to render.</param>
+            <param name="canMarkAnswer">Value indicating whether user can mark the individual posts as answers as well as edit the thread itself.</param>
+            <param name="canEdit">Function that determines whether user is allowed to edit individual forum posts.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderThreads(Dynamicweb.Rendering.Template,Dynamicweb.Forum.Category,System.Boolean,System.Boolean)">
+            <summary>
+            Renders all threads from the specified category.
+            </summary>
+            <param name="template">Template used to render threads.</param>
+            <param name="category">Category whose threads to render.</param>
+            <param name="onlyUnanswered">Render only Unanswered</param>
+            <param name="onlyUnsolved">Render only Unsolved</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderThreads(Dynamicweb.Rendering.Template,Dynamicweb.Forum.MessageCollection)">
+            <summary>
+            Renders specified list of threads.
+            </summary>
+            <param name="template">Template used to render threads.</param>
+            <param name="threads">Threads to render.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderCategories(Dynamicweb.Rendering.Template)">
+            <summary>
+            Renders forum categories.
+            </summary>
+            <param name="template">Template used to render forum categories.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderCategories(Dynamicweb.Rendering.Template,Dynamicweb.Forum.CategoryCollection)">
+            <summary>
+            Renders forum categories.
+            </summary>
+            <param name="template">Template used to render forum categories.</param>
+            <param name="categories">Categories to render.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderEditorFeatures(Dynamicweb.Rendering.Template)">
+            <summary>
+            Renders editor features.
+            </summary>
+            <param name="template">Template used to render editor features.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.RenderGlobalTags(Dynamicweb.Rendering.Template)">
+            <summary>
+            Renders module global tags.
+            </summary>
+            <param name="template">Template used to render global tags.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.GetEditorOutput(System.String)">
+            <summary>
+            Renders HTML editor.
+            </summary>
+            <param name="text">Editor value.</param>
+            <returns>Editor HTML.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.InitializePager(Dynamicweb.Forum.MessageCollection,Dynamicweb.Modules.Common.PagingHandler,Dynamicweb.Rendering.Template)">
+            <summary>
+            Returns a frame of the collection that needs to be rendered according to paging settings. Also renders the paging controls if the template is provided.
+            </summary>
+            <param name="posts">Original posts collection.</param>
+            <param name="template">Template used to render pager controls.</param>
+            <returns>A portion of the collection that needs to be rendered.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.InitializeThreadsPager(Dynamicweb.Forum.Category,Dynamicweb.Rendering.Template,System.Boolean,System.Boolean)">
+            <summary>
+            Returns a frame of the collection that needs to be rendered according to paging settings. Also renders the paging controls if the template is provided.
+            </summary>
+            <param name="category">Target forum category.</param>
+            <param name="template">Template used to render pager controls.</param>
+            <param name="onlyUnanswered">Show only Unanswered.</param>
+            <param name="onlyUnsolved">Show only Unsolved.</param>
+            <returns>A portion of the collection that needs to be rendered.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.InitializeRepliesPager(Dynamicweb.Forum.Message,Dynamicweb.Rendering.Template)">
+            <summary>
+            Returns a frame of the collection that needs to be rendered according to paging settings. Also renders the paging controls if the template is provided.
+            </summary>
+            <param name="thread">Target forum thread.</param>
+            <param name="template">Template used to render pager controls.</param>
+            <returns>A portion of the collection that needs to be rendered.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.IsCategorySubscribedByUser(System.Int32,System.Int32)">
+            <summary>
+            Determines whether specified category is subscribed by logged in user.
+            </summary>
+            <param name="userID">User ID to check.</param>
+            <param name="categoryID">An ID of the category.</param>
+            <returns>Value indicating whether specified category is subscribed by logged in user.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.IsThreadSubscribedByUser(System.Int32,System.Int32)">
+            <summary>
+            Determines whether specified thread is subscribed by logged in user.
+            </summary>
+            <param name="userID">User ID to check.</param>
+            <param name="threadID">An ID of the thread.</param>
+            <returns>Value indicating whether specified thread is subscribed by logged in user.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.GetUserEmail">
+            <summary>
+            Gets current logged in user email
+            </summary>
+            <returns>Email of current user</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.Renderer.GetUserName">
+            <summary>
+            Gets current logged in user name
+            </summary>
+            <returns>User name</returns>
+        </member>
+        <member name="T:Dynamicweb.Forum.SortFields">
+            <summary>
+            Stores a sort field order.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Forum.SortFields.Name">
+            <summary>
+            Sorted by Name field.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forum.SortFields.Active">
+            <summary>
+            Sorted by Active field.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forum.SortFields.Threads">
+            <summary>
+            Sorted by Threads field.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forum.SortFields.Replies">
+            <summary>
+            Sorted by Replies field.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forum.SubscriptionHandler">
+            <summary>
+            Send out newsletter about the specific forum update.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.SubscriptionHandler.RecipientInfo">
+            <summary>
+            Represents a recipient info.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.SubscriptionHandler.RecipientInfo.Name">
+            <summary>
+            Gets or sets the name of the recipient.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.SubscriptionHandler.RecipientInfo.Email">
+            <summary>
+            Gets or sets the e-mail address of the recipient.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.SubscriptionHandler.RecipientInfo.UID">
+            <summary>
+            Gets or sets the user ID of the recipient.
+             May containing value -1, which indicates this is not a registred user.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Forum.SubscriptionHandler.RecipientInfo.IsValid">
+            <summary>
+            Gets the value indicating whether recipient information is valid.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.SubscriptionHandler.RecipientInfo.#ctor">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.SubscriptionHandler.RecipientInfo.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="userID">An ID of the associated user account.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.SubscriptionHandler.RecipientInfo.#ctor(Dynamicweb.Forum.UserRelation)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="relation">A corresponding user relation to take the information from.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.SubscriptionHandler.RecipientInfo.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="name">Recipient's name.</param>
+            <param name="email">Recipient's e-mail address.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.SubscriptionHandler.RecipientInfo.Equals(System.Object)">
+            <summary>
+            Determines whether current object instance is equal to another one.
+            </summary>
+            <param name="obj">Another object instance.</param>
+            <returns>Value indicating whether current object instance is equal to another one.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.SubscriptionHandler.RecipientInfo.GetHashCode">
+            <summary>
+            Returns object hash code.
+            </summary>
+            <returns>Object hash code.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.SubscriptionHandler.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <summary>
+            Handles the notification.
+            </summary>
+            <param name="notification">Notification name.</param>
+            <param name="args">Notification arguments.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.SubscriptionHandler.GetRecipients(Dynamicweb.Forum.Message)">
+            <summary>
+            Gets a list of newsletter recipients for the corresponding message.
+            </summary>
+            <param name="message">A message tha has been submitted.</param>
+            <returns>A list of newsletter recipients.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.SubscriptionHandler.SplitRecipients(System.Collections.Generic.IEnumerable{Dynamicweb.Forum.SubscriptionHandler.RecipientInfo},System.Int32)">
+            <summary>
+            Splits the given list of recipients into the groups with the given number of elements in each.
+            </summary>
+            <param name="recipients">A list of recipients to split into groups.</param>
+            <param name="max">Group size.</param>
+            <returns>A list of recipient groups with the given number of elements in each.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.SubscriptionHandler.SendNewsletter(Dynamicweb.Forum.Message,System.Collections.Generic.IEnumerable{Dynamicweb.Forum.SubscriptionHandler.RecipientInfo},Dynamicweb.Forum.EnvironmentInfo)">
+            <summary>
+            Sends newsletter to the given recipients.
+            </summary>
+            <param name="message">Message that has been updated.</param>
+            <param name="recipients">A list of recipients to send a newsletter to.</param>
+            <param name="currentEnvironment">Environment information.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Forum.SubscriptionHandler.ParseSenderAddress(System.String)">
+            <summary>
+            Parses e-mail address information from the given string.
+            </summary>
+            <param name="sender">E-mail address.</param>
+            <returns>E-mail address information.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Forum.ThreadsOrderByFields">
+            <summary>
+            Enumerates thread sorting rules
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forum.UserRelation">
+            <summary>
+            Represents a user relation.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.UserRelation.RelationType">
+            <summary>
+            Gets or sets the type of the relation.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.UserRelation.UserID">
+            <summary>
+            Gets or sets and ID of the user (in case of non-anonymous users).
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.UserRelation.CategoryID">
+            <summary>
+            Gets or sets an ID of the forum category.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.UserRelation.ThreadID">
+            <summary>
+            Gets or sets an ID of the forum thread.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.UserRelation.Email">
+            <summary>
+            Gets or sets an e-mail address of the user (in case of anonymous users).
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.UserRelation.Name">
+            <summary>
+            Gets or sets the name of the user (in case of anonymous users).
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forum.UserRelation.UserAccount">
+            <summary>
+            Gets the corresponding user account information.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.#ctor">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.#ctor(Dynamicweb.Forum.UserRelation)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="copyFrom">User relation to copy data from.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.FillRow(System.Data.DataRow)">
+            <summary>
+            Fills specified data row with property values of the current object.
+            </summary>
+            <param name="row">Data row to fill.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.Fill(System.String)">
+            <summary>
+            Fills object properties with the data retrieved according to the given SQL statement.
+            </summary>
+            <param name="sqlCommandText">SQL statement to process.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.Fill(System.Data.IDataReader)">
+            <summary>
+            Fills object properties with the data provided by the specified data reader.
+            </summary>
+            <param name="dataReader">Data reader to read data from.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.GetUserRelationByID(System.Int32)">
+            <summary>
+            Retrieves user relation by its ID.
+            </summary>
+            <param name="id">An ID of the user relation.</param>
+            <returns>User relation or null if the relation cannot be retrieved.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.ExecuteDbObject``1(System.String)">
+            <summary>
+            Executes the query and returns DbObject from the the first row in the result set returned by the query.
+            All other rows are ignored.
+            </summary>
+            <typeparam name="T"><see cref="T:Dynamicweb.Data.DbObject" /> derived type containing a parameterless constructor.</typeparam>
+            <param name="sql">The query.</param>
+            <returns>If query returns a result an instance of a <see cref="T:Dynamicweb.Data.DbObject" /> derived type; otherwise null (Nothing in Visual Basic).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.GetUserRelations">
+            <summary>
+            Retrieves a list of all user relations.
+            </summary>
+            <returns>A list of all user relations.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.GetUserRelationsByCategoryID(System.Int32)">
+            <summary>
+            Retrieves a collection uf user relations by the given category ID.
+            </summary>
+            <param name="id">An ID of the category.</param>
+            <returns>A collection of matched user relations.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.GetUserRelationsByThreadID(System.Int32)">
+            <summary>
+            Retrieves a collection uf user relations by the given thread ID.
+            </summary>
+            <param name="id">An ID of the thread.</param>
+            <returns>A collection of matched user relations.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.GetUserRelationsByThreadID(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Retrieves a collection uf user relations by the given thread ID optionally omitting those relations that belongs to any of the given categories.
+            </summary>
+            <param name="id">An ID of the thread.</param>
+            <param name="omitCategories">A list of category IDs whose corresponding relations should be excluded from the resulting collection.</param>
+            <returns>A collection of matched user relations.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.GetUserRelationsByType(Dynamicweb.Forum.UserRelationType)">
+            <summary>
+            Retrieves a list of user relations with the given relation type.
+            </summary>
+            <param name="relationType">Target relation type.</param>
+            <returns>A list of all user relations.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.GetUserRelationsByUserID(System.Int32)">
+            <summary>
+            Retrieves a collection of user relations by the given user Id.
+            </summary>
+            <param name="userId">An Id of the user.</param>
+            <returns>A collection of matched user relations.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.LinkToCategory(System.Int32,System.String,System.String)">
+            <summary>
+            Establishes user relation of type "Subscription" for a given category.
+            </summary>
+            <param name="categoryID">An ID of the category.</param>
+            <param name="email">An e-mail address of the user.</param>
+            <param name="name">The name of the user.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.LinkToThread(System.Int32,System.String,System.String)">
+            <summary>
+            Establishes user relation of type "Subscription" for a given thread.
+            </summary>
+            <param name="threadID">An ID of the thread.</param>
+            <param name="email">An e-mail address of the user.</param>
+            <param name="name">The name of the user.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.UnlinkFromThread(System.Int32)">
+            <summary>
+            Deletes all user relations defined for a given thread.
+            </summary>
+            <param name="threadID">An ID of the thread.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.UnlinkFromThread(System.Int32,System.String)">
+            <summary>
+            Deletes specified user relation defined for a given thread.
+            </summary>
+            <param name="threadID">An ID of the thread.</param>
+            <param name="email">User e-mail address.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.UnlinkFromThread(System.Int32,System.Int32)">
+            <summary>
+            Deletes specified user relation defined for a given thread.
+            </summary>
+            <param name="threadID">An ID of the thread.</param>
+            <param name="userID">User ID.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.UnlinkFromCategory(System.Int32)">
+            <summary>
+            Deletes all user relations defined for a given category.
+            </summary>
+            <param name="categoryID">An ID of the category.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.UnlinkFromCategory(System.Int32,System.String)">
+            <summary>
+            Deletes specified user relation defined for a given category.
+            </summary>
+            <param name="categoryID">An ID of the category.</param>
+            <param name="email">User e-mail address.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.UnlinkFromCategory(System.Int32,System.Int32)">
+            <summary>
+            Deletes specified user relation defined for a given category.
+            </summary>
+            <param name="categoryID">An ID of the category.</param>
+            <param name="userID">User ID.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.UnlinkFromAll(System.String)">
+            <summary>
+            Deletes all user subscriptions by email.
+            </summary>
+            <param name="email">User e-mail address.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.Link(System.Int32,System.Int32,System.String,System.String,Dynamicweb.Forum.UserRelationType)">
+            <summary>
+            Establishes user relation of a given type for a given category as well as for a given thread.
+            </summary>
+            <param name="threadID">An ID of the thread.</param>
+            <param name="categoryID">An ID of the category.</param>
+            <param name="email">An e-mail address of the user.</param>
+            <param name="name">The name of the user.</param>
+            <param name="type">User relation type.</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.Unlink(System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            Deletes user relation of a given type for a given category as well as for a given thread.
+            </summary>
+            <param name="threadID">An ID of the thread.</param>
+            <param name="categoryID">An ID of the category.</param>
+            <param name="email">An e-mail address of the user.</param>
+            <param name="userID">A user ID</param>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.GetMatchingUserRelation(System.Int32,System.Int32,System.String)">
+            <summary>
+            Determines whether specified user has already been signed in for given category (thread).
+            </summary>
+            <param name="threadID">An ID of the thread.</param>
+            <param name="categoryID">An ID of the category.</param>
+            <param name="email">An e-mail address of the user.</param>
+            <returns>Value indicating whether specified user has already been signed in for given category (thread).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.GetMatchingUserRelation(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Determines whether specified user has already been signed in for given category (thread).
+            </summary>
+            <param name="threadID">An ID of the thread.</param>
+            <param name="categoryID">An ID of the category.</param>
+            <param name="userID">An ID of the user.</param>
+            <returns>Value indicating whether specified user has already been signed in for given category (thread).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.IsUserSubscribed(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Determines whether specified user has already been signed in for given category (thread).
+            </summary>
+            <param name="threadID">An ID of the thread.</param>
+            <param name="categoryID">An ID of the category.</param>
+            <param name="userID">An ID of the user.</param>
+            <returns>Value indicating whether specified user has already been signed in for given category (thread).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.GetUserRelation(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Retrieves an user relation according to a given condition.
+            </summary>
+            <param name="whereCondition">Where condition for command.</param>
+            <returns>A list of user relations.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forum.UserRelation.GetUserRelations(Dynamicweb.Data.CommandBuilder)">
+            <summary>
+            Retrieves a list of user relations according to a given condition.
+            </summary>
+            <param name="whereCondition">Where condition for command.</param>
+            <returns>A list of user relations.</returns>
+        </member>
+        <member name="T:Dynamicweb.Forum.UserRelationType">
+            <summary>
+            Represents a type of the forum relation.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Forum.UserRelationType.Subscription">
+            <summary>
+            Indicates that specified user will be notified whenever either a category or a thread updates.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Forum.UserRelationType.Moderator">
+            <summary>
+            Indicates that the user is a moderator of the specified category.
+            </summary>
+            <remarks></remarks>
+        </member>
+    </members>
+</doc>

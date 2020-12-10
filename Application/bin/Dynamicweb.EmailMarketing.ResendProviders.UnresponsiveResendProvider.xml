@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.EmailMarketing.ResendProviders.UnresponsiveResendProvider</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.EmailMarketing.ResendProviders.UnresponsiveResendProvider.UnresponsiveRecipientResendProvider">
+            <summary>
+            Default Dynamicweb recipient provider
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.EmailMarketing.ResendProviders.UnresponsiveResendProvider.UnresponsiveRecipientResendProvider.CreateResendEmail(Dynamicweb.EmailMarketing.Email)">
+            <summary>
+            Returns a new Email object that is the one we redirect the user to
+            </summary>
+            <param name="originalEmail"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+    </members>
+</doc>

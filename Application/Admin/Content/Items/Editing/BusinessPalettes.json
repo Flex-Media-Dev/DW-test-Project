@@ -1,0 +1,156 @@
+[
+  {
+    "GroupName": "Consultance",
+    "Palettes": [
+      {
+        "Name": "The sea",
+        "Colors": [ "#160F29", "#246A73", "#368F8B", "#F3DFC1", "#DDBEA8" ]
+      },
+      {
+        "Name": "Navy",
+        "Colors": [ "#1C293F", "#336263", "#628B8A", "#F4CB91", "#EE7F68" ]
+      },
+      {
+        "Name": "Blue mist",
+        "Colors": [ "#26323F", "#283535", "#5F533A", "#767966", "#BEAC97" ]
+      },
+      {
+        "Name": "Blacks",
+        "Colors": [ "#191919", "#191919", "#656565", "#333333", "#F7931E" ]
+      },
+      {
+        "Name": "Deep blue",
+        "Colors": [ "#121F55", "#34DFB4", "#004480", "#006BA1", "#0093B3" ]
+      },
+      {
+        "Name": "Bold deep green",
+        "Colors": [ "#0E2E21", "#F9F871", "#285437", "#4D7D49", "#0093B3" ]
+      }
+    ]
+  },
+  {
+    "GroupName": "Fashion",
+    "Palettes": [
+      {
+        "Name": "Blueberry",
+        "Colors": [ "#565A69", "#6B6976", "#8EB3C6", "#6B7272", "#FAF9FA" ]
+      },
+      {
+        "Name": "Orange",
+        "Colors": [ "#F7931E", "#F7931E", "#191919", "#FB4C12", "#FAF9FA" ]
+      },
+      {
+        "Name": "Blacks",
+        "Colors": [ "#191919", "#191919", "#656565", "#333333", "#F7931E" ]
+      },
+      {
+        "Name": "Purple earth",
+        "Colors": [ "#845EC2", "#4B4453", "#B0A8B9", "#C34A36", "#FF8066" ]
+      },
+      {
+        "Name": "Red n blue",
+        "Colors": [ "#DA1313", "#54B9CA", "#D49081", "#FFE5DA", "#FAF9FA" ]
+      },
+      {
+        "Name": "Dark earth",
+        "Colors": [ "#3A3032", "#9ACEC0", "#594945", "#756657", "#93AB91" ]
+      },
+      {
+        "Name": "Classy aqua",
+        "Colors": [ "#3CD098", "#0091DD", "#384B42", "#00C6FF", "#9BB0A5" ]
+      }
+    ]
+  },
+  {
+    "GroupName": "Food",
+    "Palettes": [
+      {
+        "Name": "Olive n water",
+        "Colors": [ "#48A600", "#41493B", "#A5AE9D", "#00AFEC", "#0079B4" ]
+      },
+      {
+        "Name": "Discount",
+        "Colors": [ "#E9D600", "#191919", "#4B4737", "#B0AB99", "#FAF9FA" ]
+      },
+      {
+        "Name": "Blue candy",
+        "Colors": [ "#0069E9", "#DB144A", "#A9AABC", "#DB144A", "#FF5F7A" ]
+      },
+      {
+        "Name": "Coffee",
+        "Colors": [ "#61320D", "#B5454C", "#D57934", "#FFF6EC", "#DFE0DF" ]
+      },
+      {
+        "Name": "Lime",
+        "Colors": [ "#FAF9FA", "#42BA1E", "#58784A", "#E0F8D4", "#004E72" ]
+      },
+      {
+        "Name": "Shades of blue",
+        "Colors": [ "#0C4997", "#4369BC", "#6C8BE2", "#93AFFF", "#BBD4FF" ]
+      }
+    ]
+  },
+  {
+    "GroupName": "Pharmacy",
+    "Palettes": [
+      {
+        "Name": "Aqua",
+        "Colors": [ "#18BC70", "#005261", "#BEFBFF", "#44808A", "#FAF9FA" ]
+      },
+      {
+        "Name": "Blue n dark red",
+        "Colors": [ "#12427D", "#782438", "#727787", "#B05767", "#A6ABBD" ]
+      },
+      {
+        "Name": "Blue mono",
+        "Colors": [ "#FAF9FA", "#12AAE7", "#0088C2", "#00679E", "#00477C" ]
+      }
+    ]
+  },
+  {
+    "GroupName": "Children",
+    "Palettes": [
+      {
+        "Name": "Carnival",
+        "Colors": [ "#FF6E00", "#415481", "#7F5498", "#C6478C", "#F7445E" ]
+      },
+      {
+        "Name": "Pink candy",
+        "Colors": [ "#FF3D7F", "#3FB8AF", "#FF9E9D", "#7FC7AF", "#DAD8A7" ]
+      },
+      {
+        "Name": "Sunny day",
+        "Colors": [ "#FFEB14", "#00765F", "#00AC40", "#60C529", "#B2DA0E" ]
+      }
+    ]
+  },
+  {
+    "GroupName": "Sport",
+    "Palettes": [
+      {
+        "Name": "Green n blue",
+        "Colors": [ "#35B12F", "#0080C7", "#3F4A3C", "#A2AF9F", "#00B6FF" ]
+      },
+      {
+        "Name": "In the water",
+        "Colors": [ "#0083D8", "#002266", "#003881", "#004F9D", "#0069BA" ]
+      },
+      {
+        "Name": "Orange strength",
+        "Colors": [ "#F7931E", "#005247", "#C3FCF1", "#4B8077", "#00C771" ]
+      },
+      {
+        "Name": "Classy orange",
+        "Colors": [ "#F7931E", "#524439", "#B9A89B", "#00C771", "#008F3F" ]
+      },
+      {
+        "Name": "Green fields",
+        "Colors": [ "#00B827", "#FFD885", "#DFCD51", "#96C42A", "#2A4F27" ]
+      },
+      {
+        "Name": "Shades of green",
+        "Colors": [ "#59C326", "#299C00", "#007700", "#005200", "#003100" ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,455 @@
+﻿.omc-restrict-edit
+{
+    margin: 5px;
+    padding: 0px;
+}
+
+.omc-restrict-edit-clear
+{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    
+    clear: both;
+    content: ".";
+    height: 0px;
+    display: block;
+    visibility: hidden;
+}
+
+.omc-restrict-edit-list-item
+{
+    margin-left: 2px;
+    white-space: nowrap;
+    font-size: 11px;
+}
+
+.omc-restrict-edit p
+{
+    padding-left: 5px;
+}
+
+.omc-restrict-edit-disabled,
+.omc-restrict-edit-disabled label
+{
+    color: #9a9a9a !important;
+}
+
+.omc-restrict-edit fieldset.omc-restrict-edit-choice-section
+{
+    margin: 0px;
+    padding: 0px;
+    margin-right: 10px;
+}
+
+.omc-restrict-edit-choice-content
+{
+    margin: 0px;
+    padding: 5px;
+}
+
+.omc-restrict-edit fieldset.omc-restrict-edit-choice-section legend span
+{
+    display: block;
+}
+
+.omc-restrict-edit fieldset.omc-restrict-edit-not-active
+{
+    border: 1px solid #F0F0F0;
+}
+
+.omc-restrict-edit fieldset.omc-restrict-edit-choice-section legend span input,
+.omc-restrict-edit fieldset.omc-restrict-edit-choice-section legend span label,
+.omc-restrict-edit div.omc-restrict-edit-not-active input,
+.omc-restrict-edit div.omc-restrict-edit-not-active label
+{
+    float: left;
+}
+
+.omc-restrict-edit fieldset.omc-restrict-edit-choice-section legend span label,
+.omc-restrict-edit div.omc-restrict-edit-not-active label
+{
+    margin-top: 3px;
+    margin-right: 5px;
+}
+
+.omc-restrict-edit fieldset.omc-restrict-edit-choice-section legend span span,
+.omc-restrict-edit div.omc-restrict-edit-not-active span
+{
+    display: block;
+    visibility: hidden;
+    height: 0px;
+    clear: both;
+}
+
+.omc-restrict-edit fieldset.omc-restrict-edit-choice-section legend input,
+.omc-restrict-edit fieldset.omc-restrict-edit-choice-section legend input:active,
+.omc-restrict-edit fieldset.omc-restrict-edit-choice-section legend input:hover,
+.omc-restrict-edit fieldset.omc-restrict-edit-choice-section legend input:focus,
+.omc-restrict-edit div.omc-restrict-edit-not-active input,
+.omc-restrict-edit div.omc-restrict-edit-not-active input:active,
+.omc-restrict-edit div.omc-restrict-edit-not-active input:hover,
+.omc-restrict-edit div.omc-restrict-edit-not-active input:focus
+{
+    outline: none;
+    width: 14px;
+    height: 14px;     
+}
+
+.omc-restrict-edit div.omc-restrict-edit-not-active input
+{
+    margin-left: 4px;
+}
+
+.omc-restrict-edit-constraint
+{
+    margin: 0px;
+    padding: 0px;
+    padding-top: 4px;
+    padding-left: 7px;
+    padding-bottom: 8px;
+}
+
+.omc-restrict-edit-constraint p
+{
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.omc-restrict-edit-constraint a,
+.omc-restrict-edit-constraint a:hover
+{
+    color: #0c4f88 !important;    
+    text-decoration: none !important;
+}
+
+.omc-restrict-edit-constraint a:active,
+.omc-restrict-edit-constraint a:focus
+{
+    outline: none !important;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles-container
+{
+    margin: 0px;
+    padding: 0px;
+    
+    width: 250px;
+    
+    overflow: hidden;
+    border: 1px solid #9faec2;
+    background-color: #ffffff;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content ul.omc-restrict-edit-profiles-header,
+.omc-restrict-edit .omc-restrict-edit-choice-content ul.omc-restrict-edit-profiles-header li
+{
+    float: left;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content ul.omc-restrict-edit-profiles-header
+{
+    border-bottom: 1px solid #bdcce0;
+    
+    background-image: url('/Admin/Images/Ribbon/UI/List/Pipe.gif');
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    
+    cursor: default;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content ul.omc-restrict-edit-profiles-header li span.omc-restrict-edit-profiles-cell-value
+{
+    display: block;
+    margin-top: 3px;
+    margin-right: 1px;
+    
+    background-image: url('/Admin/Module/OMC/img/pipe.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content ul.omc-restrict-edit-profiles-header li
+{
+    height: 20px;
+    padding-left: 3px;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content ul.omc-restrict-edit-profiles-header li.omc-restrict-edit-profiles-cell-select
+{
+    width: 25px;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content ul.omc-restrict-edit-profiles-header li.omc-restrict-edit-profiles-cell-select input
+{
+    display: block;
+    
+    width: 14px;
+    height: 14px;
+    margin: 0px;
+    padding: 0px;
+    
+    margin-left: 4px;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content ul.omc-restrict-edit-profiles-header li.omc-restrict-edit-profiles-cell-select input,
+.omc-restrict-edit .omc-restrict-edit-choice-content ul.omc-restrict-edit-profiles-header li.omc-restrict-edit-profiles-cell-select input:hover,
+.omc-restrict-edit .omc-restrict-edit-choice-content ul.omc-restrict-edit-profiles-header li.omc-restrict-edit-profiles-cell-select input:active,
+.omc-restrict-edit .omc-restrict-edit-choice-content ul.omc-restrict-edit-profiles-header li.omc-restrict-edit-profiles-cell-select input:focus
+{
+    outline: none !important;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content ul.omc-restrict-edit-profiles-header li.omc-restrict-edit-profiles-cell-profile
+{
+    width: 127px;
+}
+
+.omc-restrict-edit-visibility-actions-container
+{
+    width: 252px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    vertical-align: middle;
+}
+
+.omc-restrict-edit-visibility-hide-all:hover, .omc-restrict-edit-visibility-show-all:hover
+{
+    text-decoration: underline;
+}
+
+.omc-restrict-edit-visibility-hide-all
+{
+    float:left;
+}
+
+.omc-restrict-edit-visibility-show-all
+{
+    float:right;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content ul.omc-restrict-edit-profiles-header li.omc-restrict-edit-profiles-cell-visibility
+{
+    width: 115px;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content ul.omc-restrict-edit-profiles-header li.omc-restrict-edit-profiles-cell-visibility
+{
+    text-align: center;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content ul.omc-restrict-edit-profiles-header li.omc-restrict-edit-profiles-cell-visibility span
+{
+    padding-right: 18px;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles
+{
+    margin: 0px;
+    padding: 0px;
+    
+    height: 165px;
+    
+    overflow: auto;
+    overflow-x: hidden;
+    
+    background-color: #ffffff;
+    border: none;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul,
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li
+{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li
+{
+    height: 20px;
+    line-height: 20px;
+    
+    background-color: #FFFFFF;
+    background-image: none;
+    border-bottom: 1px solid #BDCCE0;
+    cursor: default;
+    
+    width: 5000px;
+    overflow: hidden;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li.omc-restrict-edit-profile-last
+{
+    border-bottom: none !important;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li:hover
+{
+    background-color: #EBF7FD !important;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li.omc-restrict-edit-profile-selected
+{
+    background-color: #fff8dc;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li span.omc-restrict-edit-profile-name,
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li div.omc-restrict-edit-profile-name
+{
+    float: left;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li span.omc-restrict-edit-profile-name,
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li div.omc-restrict-edit-profile-name
+{
+    width: 125px;
+    
+    margin-left: 3px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li div.omc-restrict-edit-profile-visibility
+{
+    margin-left: 135px;
+    margin-top: 2px;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li div.omc-restrict-edit-profile-visibility select
+{
+    font: 11px arial, verdana, Microsoft JhengHei;
+    height: 16px; 
+    width: 100px
+}
+
+.omc-restrict-type-restrict .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li div.omc-restrict-edit-profile-visibility input
+{
+    margin-left: 40px;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li input
+{
+    width: 14px;
+    height: 14px;
+    padding: 0px;
+    
+    margin-left: 7px;
+    margin-top: 3px;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li input,
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li input:hover,
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li input:active,
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li input:focus
+{
+    outline: none !important;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-content .omc-restrict-edit-profiles ul li span
+{
+    margin-left: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.omc-restrict-edit ul.omc-restrict-unorderedlist,
+.omc-restrict-edit ul.omc-restrict-unorderedlist li
+{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;    
+}
+
+.omc-restrict-edit ul.omc-restrict-unorderedlist
+{
+    margin-bottom: 10px;
+}
+
+.omc-restrict-edit ul.omc-restrict-unorderedlist li
+{
+    height: 20px;
+    line-height: 20px;
+}
+
+.omc-restrict-edit ul.omc-restrict-unorderedlist li input,
+.omc-restrict-edit ul.omc-restrict-unorderedlist li label
+{
+    float: left;
+}
+
+.omc-restrict-edit ul.omc-restrict-unorderedlist li input
+{
+    height: 14px;
+    width: 14px;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 5px;
+}
+
+.omc-restrict-edit ul.omc-restrict-unorderedlist li label
+{
+    height: 14px;
+    line-height: 14px;
+    margin-top: 0px;
+}
+
+.omc-restrict-edit ul.omc-restrict-unorderedlist li input:active,
+.omc-restrict-edit ul.omc-restrict-unorderedlist li label:active,
+.omc-restrict-edit ul.omc-restrict-unorderedlist li input:focus,
+.omc-restrict-edit ul.omc-restrict-unorderedlist li label:focus
+{
+    outline: none !important;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-create .omc-restrict-edit-choice-content .omc-restrict-edit-constraint
+{
+    height: 250px;
+    overflow: hidden;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-create .omc-restrict-edit-choice-content .omc-restrict-edit-constraint p
+{
+    padding-top: 75px !important;
+    margin-top: 100px;
+    
+    width: 365px;
+    display: block;
+    margin: 0px auto !important;
+    text-align: center;
+}
+
+.omc-restrict-edit .omc-restrict-edit-choice-create .omc-restrict-edit-choice-content .omc-restrict-edit-constraint p span
+{
+    display: block;
+}
+
+.omc-restrict-edit table.omc-restrict-edit-form
+{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+.omc-restrict-edit table.omc-restrict-edit-form tr.omc-restrict-edit-form-field td.omc-restrict-edit-form-field-name
+{
+    width: 170px;
+}
+
+.omc-restrict-edit .omc-restrict-edit-newpreset
+{
+    border-radius: 0px !important; 
+    -moz-border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+}
+
+.omc-restrict-edit .omc-restrict-edit-newpreset:active,
+.omc-restrict-edit .omc-restrict-edit-newpreset:focus
+{
+    outline: none !important;
+}
+

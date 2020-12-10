@@ -1,0 +1,190 @@
+﻿div.balloon-overlay-wrapper
+{
+    display: none;
+}
+
+div.balloon-overlay
+{
+    margin: 0px;
+    padding: 0px;
+    
+    position: absolute;
+    z-index: 9;
+    
+    cursor: default;
+}
+
+div.balloon-overlay div.balloon-overlay-clear
+{
+    height: 0px;
+    width: 0px;
+    display: block;
+    visibility: hidden;
+    clear: both;
+    content: ".";
+}
+
+div.balloon-overlay table.balloon-overlay-grid
+{
+    table-layout: fixed;
+}
+
+div.balloon-overlay table.balloon-overlay-grid,
+div.balloon-overlay table.balloon-overlay-grid tr td
+{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-tl,
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-tr,
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-bl,
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-br
+{
+    width: 19px;
+    background-repeat: no-repeat;
+    background-image: url('/Admin/Module/OMC/img/balloon-corners.png');
+}
+
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-tl,
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-tr
+{
+    height: 19px;    
+}
+
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-bl,
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-br
+{
+    height: 15px;    
+}
+
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-tl
+{
+    background-position: 0px 0px;    
+}
+
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-tr
+{
+    background-position: 0px -1000px;    
+}
+
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-bl
+{
+    background-position: 0px -66px;    
+}
+
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-br
+{
+    background-position: 0px -81px;    
+}
+
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-tm,
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-bm
+{
+    background-repeat: repeat-x;
+}
+
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-ml,
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-mr
+{
+    background-repeat: repeat-y;
+}
+
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-tm
+{
+    height: 19px;
+    background-image: url('/Admin/Module/OMC/img/balloon-border-t.png');
+    background-position: 0px -10px;
+}
+
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-bm
+{
+    height: 15px;
+    background-image: url('/Admin/Module/OMC/img/balloon-border-b.png');
+}
+
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-ml
+{
+    width: 19px;
+    background-image: url('/Admin/Module/OMC/img/balloon-border-l.png');
+}
+
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-mr
+{
+    width: 19px;
+    background-image: url('/Admin/Module/OMC/img/balloon-border-r.png');
+}
+
+div.balloon-overlay table.balloon-overlay-grid tr td.balloon-overlay-grid-mm
+{
+    background-color: #ffffff;
+}
+
+div.balloon-overlay div.balloon-overlay-title-container
+{
+    left: 0px;
+    right: -1px;
+    top: -15px;
+    
+    position: absolute;
+    background-color: transparent;
+}
+
+div.balloon-overlay div.balloon-overlay-title-container table.balloon-overlay-title
+{
+    table-layout: fixed;
+    float: right;
+}
+
+div.balloon-overlay div.balloon-overlay-title-container table.balloon-overlay-title,
+div.balloon-overlay div.balloon-overlay-title-container table.balloon-overlay-title tr td
+{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+div.balloon-overlay div.balloon-overlay-title-container table.balloon-overlay-title tr td.balloon-overlay-title-tl,
+div.balloon-overlay div.balloon-overlay-title-container table.balloon-overlay-title tr td.balloon-overlay-title-tr
+{
+    width: 19px;
+    height: 34px;
+    
+    background-repeat: no-repeat;
+    background-image: url('/Admin/Module/OMC/img/balloon-title.png');
+}
+
+div.balloon-overlay div.balloon-overlay-title-container table.balloon-overlay-title tr td.balloon-overlay-title-tl
+{
+    background-position: 0px 0px;
+}
+
+div.balloon-overlay div.balloon-overlay-title-container table.balloon-overlay-title tr td.balloon-overlay-title-tr
+{
+    background-position: -20px 0px;
+}
+
+div.balloon-overlay div.balloon-overlay-title-container table.balloon-overlay-title tr td.balloon-overlay-title-tm
+{
+    height: 34px;
+    background-repeat: repeat-x;
+    background-image: url('/Admin/Module/OMC/img/balloon-border-t.png');
+    background-position: 0px -10px;
+    
+    padding-top: 10px;
+}    
+
+div.balloon-overlay div.balloon-overlay-title-container table.balloon-overlay-title tr td.balloon-overlay-title-tm span
+{
+    background-color: #ffffff;
+    display: block;
+    
+    color: #0e639f;
+    
+    margin: 0px;
+    padding: 0px;
+    padding-top: 2px;
+    
+    height: 18px;
+}

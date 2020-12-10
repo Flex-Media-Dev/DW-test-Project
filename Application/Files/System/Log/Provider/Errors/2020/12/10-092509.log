@@ -1,0 +1,5 @@
+2020-12-10 09:25:09.6370|ERROR|Provider|GetProvider|Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Dynamicweb.Data.DatabaseConnectionProvider.CreateConnection()
+   at Dynamicweb.Data.Database.CreateDataReader(CommandBuilder commandBuilder, IDbConnection connection, IDbTransaction transaction, Int32 commandTimeout)
+   at Dynamicweb.Security.UserManagement.ExternalAuthentication.Provider.GetProviders(CommandBuilder commandBuilder)

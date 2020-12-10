@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.SmartSearch.Providers.User</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.SmartSearch.Providers.User.UserProviderSmartSearch">
+            <summary>A smart search data provider.
+            Inherit from ConfigurableAddIn class</summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.SmartSearch.Providers.User.UserProviderSmartSearch.ExpandValues(Dynamicweb.SmartSearch.SmartSearchRules.SmartSearchRule)">
+            <summary>
+            Expand dynamic values (starting with @) in rule.
+            </summary>
+            <param name="rule"></param>
+            <returns>A rule with expanded values</returns>
+            <remarks>If not dynamicweb values exist in rule, then the rule is returned. Otherwise, a clone is returned</remarks>
+        </member>
+        <member name="M:Dynamicweb.SmartSearch.Providers.User.UserProviderSmartSearch.GetUserSmartSearches(System.Int32)">
+            <summary>
+            Find all smartsearches which returns specified user
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.SmartSearch.Providers.User.UserProviderSmartSearch.GetUserSmartSearches(System.Int32,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Find smartsearches which returns specified user 
+            </summary>
+            <param name="userId">The user id.</param>
+            <param name="smartSearches">Limit smarsearches to specified ones.</param>
+            <returns>A collection of smartsearch id</returns>
+        </member>
+        <member name="M:Dynamicweb.SmartSearch.Providers.User.UserProviderSmartSearch.ClearUserSmartSearchesCache">
+            <summary>
+            Clear user provider smart searches cache.
+            </summary>
+        </member>
+    </members>
+</doc>

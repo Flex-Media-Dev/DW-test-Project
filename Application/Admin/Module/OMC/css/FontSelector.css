@@ -1,0 +1,33 @@
+﻿.font-selector-dd-item
+{
+    display: block;
+    margin-left: 2px;
+    white-space: nowrap;
+}
+
+.font-selector table td.font-selector-label-cell
+{
+    margin-right: 5px;
+}
+
+.font-selector table.font-selector-tabular td.font-selector-label-cell
+{
+    width: 170px;
+    margin-right: 0px !important;
+}
+
+.font-selector td.font-selector-list-cell
+{
+    padding-right: 10px;
+}
+
+.font-selector table.font-selector-tabular td.font-selector-list-cell
+{
+    padding-right: 0px !important;
+}
+
+.font-selector input.font-selector-size
+{
+    width: 50px;
+}
+

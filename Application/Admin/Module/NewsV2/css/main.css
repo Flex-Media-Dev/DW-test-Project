@@ -1,0 +1,8 @@
+﻿.list .title {
+    height: 20px;
+    vertical-align: middle;
+    background-color: white;
+    font-size: 12px;
+    color: #bdbdbd;
+    padding: 5px 16px;
+}

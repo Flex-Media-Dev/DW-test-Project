@@ -1,0 +1,174 @@
+﻿.omc-control-panel
+{
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.omc-account
+{
+    float: left;
+    width: 400px;
+    height: 20px;
+}
+
+.omc-account input.newUIbutton,
+.omc-reports-field input.newUIbutton
+{
+    margin: 0px;
+    padding: 0px;
+    height: 22px;
+}
+
+.omc-account input.newUIbutton
+{
+    width: 85px;
+}
+
+.omc-account select
+{
+    width: 252px;
+}
+        
+.omc-clear
+{
+    clear: both;
+    visibility: hidden;
+    height: 1px;
+    font-size: 1px;
+}
+
+.omc-cpl-hint
+{
+    color: #707070; 
+    padding-top: 10px; 
+    padding-bottom: 10px;
+}
+
+.omc-cpl-numrange .omc-cpl-numrange-selector,
+.omc-cpl-numrange .omc-cpl-numrange-separator
+{
+    float: left;
+}
+
+.omc-cpl-numrange .omc-cpl-numrange-separator
+{
+    margin-top: 2px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+div.omc-control-panel-grid-container
+{
+    margin: 5px;
+    margin-left: 0px;
+    border: 1px solid #bdbdbd;
+    width: 850px;
+}
+
+div.omc-control-panel-grid-container div.omc-control-panel-serverform-container table.dwGrid
+{
+    position: static !important;
+}
+
+div.omc-control-panel-grid-container select
+{
+    width: 150px !important;
+}
+
+div.omc-control-panel-grid-container span.omc-control-panel-grid-delete-offset
+{
+    margin-left: 12px;
+}
+
+div.omc-control-panel-grid-container span.omc-control-panel-grid-delete-offset a:hover,
+div.omc-control-panel-grid-container span.omc-control-panel-grid-delete-offset a:active,
+div.omc-control-panel-grid-container span.omc-control-panel-grid-delete-offset a:focus,
+div.omc-control-panel-grid-container span.omc-control-panel-grid-delete-offset a:visited
+{
+    outline: none !important;
+}
+
+.omc-cpl-heading
+{
+    margin-top: 10px;
+    font-size: 12px;
+    color: #707070; 
+    margin-bottom: 0px;
+}
+
+.omc-cpl-engagement input.std
+{
+    width: 100px;
+}
+
+.omc-cpl-engagement textarea
+{
+    width: 250px;
+    height: 100px;
+}
+
+input[type="checkbox"]
+{
+    margin: 0px;
+    padding: 0px;
+    
+    width: 14px;
+    height: 14px;
+}
+
+input[type="checkbox"],
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active
+{
+    outline: none;
+}
+
+ul.omc-cpl-list,
+ul.omc-cpl-list li
+{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+ul.omc-cpl-list li
+{
+    height: 20px;
+    line-height: 20px;
+}
+
+ul.omc-cpl-list li.omc-cpl-list-field input,
+ul.omc-cpl-list li.omc-cpl-list-field label
+{
+    float: left;
+}
+
+ul.omc-cpl-list li.omc-cpl-list-field input
+{
+    height: 14px;
+    width: 14px;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 5px;
+}
+
+ul.omc-cpl-list li.omc-cpl-list-field label
+{
+    height: 14px;
+    line-height: 14px;
+    margin-top: 1px;
+}
+
+ul.omc-cpl-list li.omc-cpl-list-field input:active,
+ul.omc-cpl-list li.omc-cpl-list-field label:active,
+ul.omc-cpl-list li.omc-cpl-list-field input:focus,
+ul.omc-cpl-list li.omc-cpl-list-field label:focus
+{
+    outline: none !important;
+}
+
+.report-selector
+{
+    border-bottom: 1px solid #c3c3c3;
+}

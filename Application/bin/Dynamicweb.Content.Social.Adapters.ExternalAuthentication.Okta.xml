@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Content.Social.Adapters.ExternalAuthentication.Okta</name>
+    </assembly>
+    <members>
+        <member name="P:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.Okta.LoginProvider.AuthorizationServer">
+            <summary>
+            Gets or sets the authorization server URL.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.Okta.LoginProvider.ClientId">
+            <summary>
+            Gets or sets the client ID.
+            </summary>        
+        </member>
+        <member name="P:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.Okta.LoginProvider.ClientSecret">
+            <summary>
+            Gets or sets the client secret.
+            </summary>        
+        </member>
+        <member name="P:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.Okta.LoginProvider.Debug">
+            <summary>
+            Gets or sets the Log setting
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.Okta.LoginProvider.GroupCreationOption">
+            <summary>
+            Gets or sets the groups creation mode.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.Okta.LoginProvider.GroupClaimNames">
+            <summary>
+            Gets or sets the names of the group claims.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.Okta.LoginProvider.CreateLocalAccountWithoutPage">
+            <summary>
+            Hides the "Create account with/without page" check box - its value determined by the GroupClaimNames value.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Content.Social.Adapters.ExternalAuthentication.Okta.LoginProvider.GetOptions(System.String)">
+            <summary>
+            Gets the dropdown options.
+            </summary>
+            <param name="dropdownName">The dropdown name.</param>
+        </member>
+    </members>
+</doc>

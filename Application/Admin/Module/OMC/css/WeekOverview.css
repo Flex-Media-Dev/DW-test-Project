@@ -1,0 +1,239 @@
+﻿div.week-overview,
+div.week-overview div.week-overview-days,
+div.week-overview a.week-overview-navigate,
+div.week-overview div.week-overview-days ul.week-overview-days-list,
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container
+
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+div.week-overview .week-overview-clear
+{
+    visibility: hidden;
+    height: 1px;
+    clear: both;
+}
+
+div.week-overview-disabled
+{
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    -webkit-opacity: 0.5;
+    filter: alpha(opacity = 50);
+}
+
+div.week-overview-disabled a.week-overview-navigate-back,
+div.week-overview-disabled a.week-overview-navigate-back:hover,
+div.week-overview-disabled a.week-overview-navigate-forward,
+div.week-overview-disabled a.week-overview-navigate-forward:hover,
+div.week-overview a.week-overview-navigate-back-notallowed,
+div.week-overview a.week-overview-navigate-notallowed:hover,
+div.week-overview a.week-overview-navigate-forward-notallowed,
+div.week-overview a.week-overview-navigate-forward-notallowed:hover,
+div.week-overview-disabled div.week-overview-days ul.week-overview-days-list li.week-overview-day-container a.week-overview-day-link,
+div.week-overview-disabled div.week-overview-days ul.week-overview-days-list li.week-overview-day-container a.week-overview-day-link:hover,
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container:hover a.week-overview-day-notallowed,
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container:hover a.week-overview-day-notallowed:hover
+{
+    cursor: default !important;
+}
+
+
+div.week-overview div.week-overview-days
+{
+    background-color: #ffffff;
+    border: 1px solid #c3c3c3;
+    
+    height: 64px;
+}
+
+div.week-overview div.week-overview-days ul.week-overview-days-list
+{
+    list-style: none;
+}
+
+div.week-overview div.week-overview-days,
+div.week-overview a.week-overview-navigate,
+div.week-overview div.week-overview-days ul.week-overview-days-list,
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container,
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container a.week-overview-day-link,
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container a.week-overview-day-link span.week-overview-day-text
+{
+    float: left;
+}
+
+div.week-overview a.week-overview-navigate
+{
+    width: 14px;
+    height: 66px;
+}
+
+div.week-overview a.week-overview-navigate-back
+{
+    background: url('/Admin/Module/OMC/img/weekday-navigation-left.png') top left no-repeat;
+}
+
+div.week-overview a.week-overview-navigate-back:hover
+{
+    background: url('/Admin/Module/OMC/img/weekday-navigation-left-over.png') top left no-repeat;
+}
+
+div.week-overview a.week-overview-navigate-forward
+{
+    background: url('/Admin/Module/OMC/img/weekday-navigation-right.png') top left no-repeat;
+}
+
+div.week-overview a.week-overview-navigate-forward:hover
+{
+       background: url('/Admin/Module/OMC/img/weekday-navigation-right-over.png') top left no-repeat;
+}
+
+div.week-overview-disabled a.week-overview-navigate-back:hover,
+div.week-overview a.week-overview-navigate-back-notallowed:hover
+{
+    background: url('/Admin/Module/OMC/img/weekday-navigation-left.png') top left no-repeat !important;
+}
+
+div.week-overview-disabled a.week-overview-navigate-forward:hover,
+div.week-overview a.week-overview-navigate-forward-notallowed:hover
+{
+    background: url('/Admin/Module/OMC/img/weekday-navigation-right.png') top left no-repeat !important;
+}
+
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container
+{
+    height: 64px;
+    line-height: 64px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container a.week-overview-day-link
+{
+    margin-top: 4px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    
+    padding-right: 10px;
+}
+
+div.week-overview div.week-overview-days-fixed ul.week-overview-days-list li.week-overview-day-container a.week-overview-day-link
+{
+    width: 48px;
+}
+
+div.week-overview a.week-overview-navigate:focus,
+div.week-overview a.week-overview-navigate:active,
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container a.week-overview-day-link:focus,
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container a.week-overview-day-link:active
+{
+    outline: none !important;
+}
+
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container a.week-overview-day-link span.week-overview-day-text
+{
+    padding-left: 10px;
+    padding-top: 14px;
+    
+    color: #557cbd;
+    font-size: 15px;
+    
+    height: 56px;
+    line-height: 16px;
+}
+
+div.week-overview div.week-overview-days-fixed ul.week-overview-days-list li.week-overview-day-container a.week-overview-day-link span.week-overview-day-text
+{
+    width: 38px;
+}
+
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container a.week-overview-day-notallowed span.week-overview-day-text
+{
+    color: #c3c3c3 !important;
+}
+
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container a.week-overview-day-link span.week-overview-day-details
+{
+    display: block;
+    font-size: 10px;
+
+    color: #8f8f8f;
+    white-space: nowrap;
+    
+    text-align: center;
+}
+
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container a.week-overview-day-notallowed span.week-overview-day-details
+{
+    color: #cbcbcb !important;
+}
+
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container:hover a.week-overview-day-link
+{
+    background: url('/Admin/Module/OMC/img/weekday-over-right.png') top right no-repeat;
+}
+
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container:hover a.week-overview-day-notallowed,
+div.week-overview-disabled div.week-overview-days ul.week-overview-days-list li.week-overview-day-container:hover a.week-overview-day-link
+{
+    background: none !important;
+}
+
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container:hover a.week-overview-day-notallowed
+{
+    color: #c3c3c3 !important;
+}
+
+div.week-overview-disabled div.week-overview-days ul.week-overview-days-list li.week-overview-day-container:hover a.week-overview-day-link
+{
+    color: #557cbd !important;
+}
+
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container:hover a.week-overview-day-link span.week-overview-day-text
+{
+    background: url('/Admin/Module/OMC/img/weekday-over-left.png') top left no-repeat;
+}
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container:hover a.week-overview-day-notallowed span.week-overview-day-text,
+div.week-overview-disabled div.week-overview-days ul.week-overview-days-list li.week-overview-day-container:hover a.week-overview-day-link span.week-overview-day-text
+{
+    background: none !important;
+}
+
+div.week-overview-disabled div.week-overview-days ul.week-overview-days-list li.week-overview-day-container:hover a.week-overview-day-link span.week-overview-day-text
+{
+    color: #557cbd !important;
+}
+
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-selected a.week-overview-day-link span.week-overview-day-text,
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container:hover a.week-overview-day-link span.week-overview-day-text
+{
+    color: #15428b;
+}
+
+div.week-overview-disabled div.week-overview-days ul.week-overview-days-list li.week-overview-selected a.week-overview-day-link span.week-overview-day-text,
+div.week-overview-disabled div.week-overview-days ul.week-overview-days-list li.week-overview-day-container:hover a.week-overview-day-link span.week-overview-day-text
+{
+    color: #557cbd !important;
+}
+
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-day-container:hover a.week-overview-day-notallowed span.week-overview-day-text
+{
+    color: #c3c3c3 !important;
+}
+
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-selected a.week-overview-day-link,
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-selected:hover a.week-overview-day-link
+{
+    background: url('/Admin/Module/OMC/img/weekday-selected-right.png') top right no-repeat !important;
+}
+
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-selected a.week-overview-day-link span.week-overview-day-text,
+div.week-overview div.week-overview-days ul.week-overview-days-list li.week-overview-selected:hover a.week-overview-day-link span.week-overview-day-text
+{
+    background: url('/Admin/Module/OMC/img/weekday-selected-left.png') top left no-repeat !important;
+}
+
+

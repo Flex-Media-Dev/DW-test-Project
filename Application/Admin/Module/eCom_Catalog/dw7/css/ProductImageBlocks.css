@@ -1,0 +1,255 @@
+﻿
+.images-container,
+.related-products-container {
+    width: 100%;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+    .images-container .field-container-with-border {
+        min-height: 89px;
+    }
+
+.field-container-with-border {
+    max-height: 267px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.image-cnt {
+    display: inline-block;
+    /*max-width: 100px;
+    max-height: 66px;*/
+    text-align: center;
+    padding: 4px;
+    margin: 2px;
+    border: 1px solid #f5f5f5;
+    position: relative;
+    float: left;
+    width: 75px;
+    height: 75px;
+}
+
+.manage-image-button {
+    border-style: dashed;
+    font-size: 40px;
+    color: #a31545;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+    .manage-image-button:hover {
+        background: #f5f5f5;
+    }
+
+    .manage-image-button > i {
+        padding-top: 4px;
+        vertical-align: middle;
+    }
+
+.detail-thumbnail-icon {
+    font-size: 40px;
+}
+
+    .detail-thumbnail-icon > i {
+        padding-top: 4px;
+        vertical-align: middle;
+    }
+
+
+.image-add-button {
+    width: 50%;
+    height: 100%;
+    border: 0;
+    background: transparent;
+    opacity: 0;
+    transition: all 0.25s ease;
+    font-size: 20px;
+}
+
+    .image-add-button:hover {
+        background: #f5f5f5;
+    }
+
+.image-buttons-container {
+    border-style: dashed;
+}
+
+    .image-buttons-container:after {
+        font-family: "FontAwesome";
+        content: '\f067';
+        font-size: 40px;
+        color: #a31545;
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        margin-left: -16px;
+        margin-top: -20px;
+    }
+
+    .image-buttons-container:hover:after {
+        content: "";
+    }
+
+    .image-buttons-container:hover .image-add-button {
+        opacity: 1;
+    }
+
+.image-upload-container,
+.image-browse-container {
+    width: 75px;
+    float: left;
+}
+
+.image-cnt img {
+    max-height: inherit;
+}
+
+/*.primary-image-container:after {
+        z-index: 2;
+        font-family: "FontAwesome";
+        content: '\f005';
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+.pattern-image-container:after {
+    z-index: 2;
+    font-family: "FontAwesome";
+    content: '\f1a5';
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}*/
+
+.primary-image-container-default {
+    display: none;
+}
+
+.image-cnt > .image-block + i {
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+
+    .image-cnt > .image-block + i.color-default {
+        color: #fff;
+    }
+
+.image-cnt .image-badge {
+    z-index: 1;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -15px;
+    left: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid #a31545;
+    transform: rotate(225deg);
+}
+
+.image-cnt .asset-title {
+    position: absolute;
+    bottom: 4px;
+    background-color: #a31545;
+    height: 16px;
+    width: 75px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: white;
+}
+
+
+
+.details-image-container.inherited .image-badge {
+    opacity: 0.5;
+}
+
+.inherited .image-block {
+    opacity: 0.5;
+}
+
+.inherited.detail-thumbnail-icon > i{
+    opacity: 0.5;
+}
+
+.variant-icon {
+    margin-top: 16px;
+}
+
+.image-popup {
+    position: absolute;
+    z-index: 10000;
+    border: 1px solid #ccc;
+    background: #333;
+    padding: 5px;
+    display: none;
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+    .image-popup img {
+        height: 92%;
+        width: 100%;
+    }
+
+.image-popup-title {
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.image-menu {
+    z-index: 2;
+    width: 30%;
+    background-color: #eee;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    opacity: 0.85;
+}
+
+    .image-menu:hover {
+        display: block;
+    }
+
+
+.image-menu-button-container {
+    cursor: pointer;
+}
+
+.image-menu-delete-button {
+}
+
+.image-menu-button-container[disabled],
+.inherited .image-menu-button-container:not(.image-menu-expand-button) {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.image-cnt > .image-block[data-playable=true],
+.image-cnt > .image-block[data-extension=pdf] {
+    cursor: pointer;
+}

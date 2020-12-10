@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ServerRoles Name="System roles" KnownIcon="People" Version="1.0.0">
+  <Role SystemName="Anonymous" KnownIcon="Settings">
+    <Name>Anonymous users (frontend)</Name>
+    <DefaultPermissionLevel>Read</DefaultPermissionLevel>
+  </Role>
+  <Role SystemName="AuthenticatedBackend" KnownIcon="Settings">
+    <Name>Authenticated users (backend)</Name>
+    <DefaultPermissionLevel></DefaultPermissionLevel>    
+  </Role>
+  <Role SystemName="AuthenticatedFrontend" KnownIcon="Settings">
+    <Name>Authenticated users (frontend)</Name>
+    <DefaultPermissionLevel>Read</DefaultPermissionLevel>  
+  </Role>  
+  <Role SystemName="Administrator" KnownIcon="Settings">
+    <Name>Administrators</Name>
+    <DefaultPermissionLevel>All</DefaultPermissionLevel>    
+  </Role>  
+</ServerRoles>

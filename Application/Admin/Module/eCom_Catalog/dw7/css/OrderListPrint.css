@@ -1,0 +1,21 @@
+﻿#ctl00_ContentHolder_ContentPanel, #cellTree, #slider, #PrintRibbon
+{
+	display: none;
+}
+
+#cellContent, #ecomtab, body
+{
+	border: none;
+}
+
+fieldset
+{
+	margin: none;
+}
+
+div#PrintContent
+{
+	display: block;
+	overflow: visible !important;
+	float: none;
+}

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		html, body {
+			font-family: Verdana, Helvetica, Arial, sans-serif;
+		}
+
+		td, th {
+			text-align: center;
+			border: 1px solid #d3d3d3;
+		}
+
+		table {
+			border-collapse: collapse;
+			background-color: #eeeeee;
+		}
+	</style>
+</head>
+<body>
+	<h1>GetImage test sheet...</h1>
+	<table border="0" cellpadding="10">
+		<tr>
+			<th>Original</th>
+			<th>Width=250</th>
+			<th>Height=200</th>
+			<th>W&H=250x200</th>
+			<th>W&H + fillcanvas</th>
+			<th>&nbsp;</th>
+			<th>Width=200</th>
+			<th>Height=250</th>
+			<th>W&H=200x250</th>
+			<th>W&H + fillcanvas</th>
+		</tr>
+		<tr>
+			<td colspan="10" align="center">Crop=5 (Keep aspect ratio)</td>
+		</tr>
+		<tr>
+			<td><img src="/Admin/Examples/images/292697_3537.jpg" style="max-width:150px;" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&crop=5" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=200&crop=5" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=5" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=5&fillcanvas=true" /></td>
+			<td>&nbsp;</td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&crop=5" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=250&crop=5" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&crop=5" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&crop=5&fillcanvas=true" /></td>
+		</tr>
+		<tr>
+			<td><img src="/Admin/Examples/images/861226-nice-wallpaper.jpg" style="max-width:150px;" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&crop=5" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=200&crop=5" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=5" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=5&fillcanvas=true" /></td>
+			<td>&nbsp;</td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&crop=5" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=250&crop=5" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&crop=5" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&crop=5&fillcanvas=true" /></td>
+		</tr>
+		<tr>
+			<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&crop=5" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&crop=5" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=5" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=5&fillcanvas=true" /></td>
+			<td>&nbsp;</td>
+			<td colspan="4" rowspan="2">
+				<br />
+				<b>Canvas color test</b>
+				<br />
+				<img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=5&fillcanvas=true&background=pink" />
+				<img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=5&fillcanvas=true&background=cccccc" />
+				<img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=5&fillcanvas=true&background=pink" />
+				<img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=5&fillcanvas=true&background=cccccc" />
+			</td>
+		</tr>
+		<tr>
+			<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" />donotupscale=false</td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&crop=5&donotupscale=false" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&crop=5&donotupscale=false" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=5&donotupscale=false" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=5&donotupscale=false&fillcanvas=true" /></td>
+		</tr>
+
+		<tr>
+			<td colspan="10" align="center">&nbsp;</td>
+		</tr>
+
+	</table>
+	<h1>Crop="" (No crop is specified)</h1>
+	<table border="0" cellpadding="10">
+		<tr>
+			<th>Original</th>
+			<th>Width=250</th>
+			<th>Height=200</th>
+			<th>W&H=250x200</th>
+			<th>W&H + fillcanvas</th>
+			<th>&nbsp;</th>
+			<th>Width=200</th>
+			<th>Height=250</th>
+			<th>W&H=200x250</th>
+			<th>W&H + fillcanvas</th>
+		</tr>
+		<tr>
+			<td colspan="10" align="center">Crop="" (No crop is specified)</td>
+		</tr>
+		<tr>
+			<td><img src="/Admin/Examples/images/292697_3537.jpg" style="max-width:150px;" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=200" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&fillcanvas=true" /></td>
+			<td>&nbsp;</td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=250" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&fillcanvas=true" /></td>
+		</tr>
+		<tr>
+			<td><img src="/Admin/Examples/images/861226-nice-wallpaper.jpg" style="max-width:150px;" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=200" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&fillcanvas=true" /></td>
+			<td>&nbsp;</td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=250" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&fillcanvas=true" /></td>
+		</tr>
+		<tr>
+			<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&fillcanvas=true" /></td>
+			<td>&nbsp;</td>
+			<td colspan="4" rowspan="2">
+				<br />
+				<b>Canvas color test</b>
+				<br />
+				<img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&fillcanvas=true&background=pink" />
+				<img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&fillcanvas=true&background=cccccc" />
+				<img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&fillcanvas=true&background=pink" />
+				<img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&fillcanvas=true&background=cccccc" />
+			</td>
+		</tr>
+		<tr>
+			<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" />donotupscale=false</td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&donotupscale=false" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&donotupscale=false" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&donotupscale=false" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&donotupscale=false&fillcanvas=true" /></td>
+		</tr>
+
+		<tr>
+			<td colspan="10" align="center">&nbsp;</td>
+		</tr>
+
+	</table>
+	<h1>Crop=0 (center)</h1>
+	<table border="0" cellpadding="10">
+
+		<tr>
+			<th>Original</th>
+			<th>Width=250</th>
+			<th>Height=200</th>
+			<th>W&H=250x200</th>
+			<th>W&H + fillcanvas</th>
+			<th>&nbsp;</th>
+			<th>Width=200</th>
+			<th>Height=250</th>
+			<th>W&H=200x250</th>
+			<th>W&H + fillcanvas</th>
+		</tr>
+		<tr>
+			<td colspan="10" align="center">Crop=0 (center)</td>
+		</tr>
+		<tr>
+			<td><img src="/Admin/Examples/images/292697_3537.jpg" style="max-width:150px;" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&crop=0" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=200&crop=0" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=0" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=0&fillcanvas=true" /></td>
+			<td>&nbsp;</td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&crop=0" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=250&crop=0" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&crop=0" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&crop=0&fillcanvas=true" /></td>
+		</tr>
+		<tr>
+			<td><img src="/Admin/Examples/images/861226-nice-wallpaper.jpg" style="max-width:150px;" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&crop=0" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=200&crop=0" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=0" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=0&fillcanvas=true" /></td>
+			<td>&nbsp;</td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&crop=0" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=250&crop=0" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&crop=0" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&crop=0&fillcanvas=true" /></td>
+		</tr>
+		<tr>
+			<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&crop=0" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&crop=0" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=0" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=0&fillcanvas=true" /></td>
+		</tr>
+		<tr>
+			<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" />donotupscale=false</td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&crop=0&donotupscale=false" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&crop=0&donotupscale=false" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=0&donotupscale=false" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=0&donotupscale=false&fillcanvas=true" /></td>
+		</tr>
+
+
+	</table>
+	<h1>Crop=7 (centerorfocal) NO FOCAL POINTS</h1>
+	<table border="0" cellpadding="10">
+		<tr>
+			<th>Original</th>
+			<th>Width=250</th>
+			<th>Height=200</th>
+			<th>W&H=250x200</th>
+			<th>W&H + fillcanvas</th>
+			<th>&nbsp;</th>
+			<th>Width=200</th>
+			<th>Height=250</th>
+			<th>W&H=200x250</th>
+			<th>W&H + fillcanvas</th>
+		</tr>
+		<tr>
+			<td colspan="10" align="center">Crop=7 (centerorfocal) NO FOCAL POINTS
+			<a href="GetImageFocalTest.html">Focal test page</a>
+			</td>
+		</tr>
+		<tr>
+			<td><img src="/Admin/Examples/images/292697_3537.jpg" style="max-width:150px;" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&crop=7" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=200&crop=7" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=7" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=7&fillcanvas=true" /></td>
+			<td>&nbsp;</td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&crop=7" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=250&crop=7" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&crop=7" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&crop=7&fillcanvas=true" /></td>
+		</tr>
+		<tr>
+			<td><img src="/Admin/Examples/images/861226-nice-wallpaper.jpg" style="max-width:150px;" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&crop=7" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=200&crop=7" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=7" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=7&fillcanvas=true" /></td>
+			<td>&nbsp;</td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&crop=7" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=250&crop=7" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&crop=7" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&crop=7&fillcanvas=true" /></td>
+		</tr>
+		<tr>
+			<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&crop=7" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&crop=7" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=7" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=7&fillcanvas=true" /></td>
+		</tr>
+		<tr>
+			<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" />donotupscale=false</td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&crop=7&donotupscale=false" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&crop=7&donotupscale=false" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=7&donotupscale=false" /></td>
+			<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=7&donotupscale=false&fillcanvas=true" /></td>
+		</tr>
+		<tr>
+			<td colspan="10" align="center"><hr /></td>
+		</tr>
+
+	</table>
+
+
+		<h1>Crop 1-4</h1>
+		<table border="0" cellpadding="10">
+			<tr>
+				<td colspan="10" align="center">&nbsp;</td>
+			</tr>
+			<tr>
+				<th>Original</th>
+				<th>Width=250</th>
+				<th>Height=200</th>
+				<th>W&H=250x200</th>
+				<th>W&H + fillcanvas</th>
+				<th>&nbsp;</th>
+				<th>Width=200</th>
+				<th>Height=250</th>
+				<th>W&H=200x250</th>
+				<th>W&H + fillcanvas</th>
+			</tr>
+			<tr>
+				<td colspan="10" align="center">Crop=1 (Lower left)</td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/292697_3537.jpg" style="max-width:150px;" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&crop=1" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=200&crop=1" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=1" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=1&fillcanvas=true" /></td>
+				<td>&nbsp;</td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&crop=1" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=250&crop=1" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&crop=1" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&crop=1&fillcanvas=true" /></td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/861226-nice-wallpaper.jpg" style="max-width:150px;" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&crop=1" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=200&crop=1" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=1" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=1&fillcanvas=true" /></td>
+				<td>&nbsp;</td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&crop=1" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=250&crop=1" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&crop=1" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&crop=1&fillcanvas=true" /></td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&crop=1" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&crop=1" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=1" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=1&fillcanvas=true" /></td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" />donotupscale=false</td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&crop=1&donotupscale=false" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&crop=1&donotupscale=false" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=1&donotupscale=false" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=1&donotupscale=false&fillcanvas=true" /></td>
+			</tr>
+
+			<tr>
+				<td colspan="10" align="center">&nbsp;</td>
+			</tr>
+			<tr>
+				<th>Original</th>
+				<th>Width=250</th>
+				<th>Height=200</th>
+				<th>W&H=250x200</th>
+				<th>W&H + fillcanvas</th>
+				<th>&nbsp;</th>
+				<th>Width=200</th>
+				<th>Height=250</th>
+				<th>W&H=200x250</th>
+				<th>W&H + fillcanvas</th>
+			</tr>
+			<tr>
+				<td colspan="10" align="center">Crop=2 (Upper left)</td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/292697_3537.jpg" style="max-width:150px;" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&crop=2" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=200&crop=2" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=2" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=2&fillcanvas=true" /></td>
+				<td>&nbsp;</td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&crop=2" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=250&crop=2" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&crop=2" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&crop=2&fillcanvas=true" /></td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/861226-nice-wallpaper.jpg" style="max-width:150px;" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&crop=2" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=200&crop=2" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=2" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=2&fillcanvas=true" /></td>
+				<td>&nbsp;</td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&crop=2" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=250&crop=2" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&crop=2" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&crop=2&fillcanvas=true" /></td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&crop=2" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&crop=2" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=2" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=2&fillcanvas=true" /></td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" />donotupscale=false</td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&crop=2&donotupscale=false" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&crop=2&donotupscale=false" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=2&donotupscale=false" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=2&donotupscale=false&fillcanvas=true" /></td>
+			</tr>
+
+			<tr>
+				<td colspan="10" align="center">&nbsp;</td>
+			</tr>
+			<tr>
+				<th>Original</th>
+				<th>Width=250</th>
+				<th>Height=200</th>
+				<th>W&H=250x200</th>
+				<th>W&H + fillcanvas</th>
+				<th>&nbsp;</th>
+				<th>Width=200</th>
+				<th>Height=250</th>
+				<th>W&H=200x250</th>
+				<th>W&H + fillcanvas</th>
+			</tr>
+			<tr>
+				<td colspan="10" align="center">Crop=3 (Upper right)</td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/292697_3537.jpg" style="max-width:150px;" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&crop=3" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=200&crop=3" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=3" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=3&fillcanvas=true" /></td>
+				<td>&nbsp;</td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&crop=3" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=250&crop=3" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&crop=3" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&crop=3&fillcanvas=true" /></td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/861226-nice-wallpaper.jpg" style="max-width:150px;" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&crop=3" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=200&crop=3" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=3" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=3&fillcanvas=true" /></td>
+				<td>&nbsp;</td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&crop=3" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=250&crop=3" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&crop=3" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&crop=3&fillcanvas=true" /></td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&crop=3" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&crop=3" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=3" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=3&fillcanvas=true" /></td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" />donotupscale=false</td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&crop=3&donotupscale=false" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&crop=3&donotupscale=false" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=3&donotupscale=false" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=3&donotupscale=false&fillcanvas=true" /></td>
+			</tr>
+
+
+			<tr>
+				<td colspan="10" align="center">&nbsp;</td>
+			</tr>
+			<tr>
+				<th>Original</th>
+				<th>Width=250</th>
+				<th>Height=200</th>
+				<th>W&H=250x200</th>
+				<th>W&H + fillcanvas</th>
+				<th>&nbsp;</th>
+				<th>Width=200</th>
+				<th>Height=250</th>
+				<th>W&H=200x250</th>
+				<th>W&H + fillcanvas</th>
+			</tr>
+			<tr>
+				<td colspan="10" align="center">Crop=4 (Lower right)</td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/292697_3537.jpg" style="max-width:150px;" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&crop=4" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=200&crop=4" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=4" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=4&fillcanvas=true" /></td>
+				<td>&nbsp;</td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&crop=4" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=250&crop=4" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&crop=4" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&crop=4&fillcanvas=true" /></td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/861226-nice-wallpaper.jpg" style="max-width:150px;" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&crop=4" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=200&crop=4" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=4" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=4&fillcanvas=true" /></td>
+				<td>&nbsp;</td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&crop=4" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=250&crop=4" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&crop=4" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&crop=4&fillcanvas=true" /></td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&crop=4" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&crop=4" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=4" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=4&fillcanvas=true" /></td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" />donotupscale=false</td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&crop=4&donotupscale=false" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&crop=4&donotupscale=false" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=4&donotupscale=false" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=4&donotupscale=false&fillcanvas=true" /></td>
+			</tr>
+
+			<tr>
+				<td colspan="10" align="center">&nbsp;</td>
+			</tr>
+			<tr>
+				<th>Original</th>
+				<th>Width=250</th>
+				<th>Height=200</th>
+				<th>W&H=250x200</th>
+				<th>W&H + fillcanvas</th>
+				<th>&nbsp;</th>
+				<th>Width=200</th>
+				<th>Height=250</th>
+				<th>W&H=200x250</th>
+				<th>W&H + fillcanvas</th>
+			</tr>
+			<tr>
+				<td colspan="10" align="center">Crop=6 (Fit)</td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/292697_3537.jpg" style="max-width:150px;" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&crop=6" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=200&crop=6" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=6" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=250&height=200&crop=6&fillcanvas=true" /></td>
+				<td>&nbsp;</td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&crop=6" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&height=250&crop=6" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&crop=6" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/292697_3537.jpg&Format=jpg&Width=200&height=250&crop=6&fillcanvas=true" /></td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/861226-nice-wallpaper.jpg" style="max-width:150px;" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&crop=6" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=200&crop=6" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=6" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=250&height=200&crop=6&fillcanvas=true" /></td>
+				<td>&nbsp;</td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&crop=6" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&height=250&crop=6" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&crop=6" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/861226-nice-wallpaper.jpg&Format=jpg&Width=200&height=250&crop=6&fillcanvas=true" /></td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&crop=6" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&crop=6" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=6" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=6&fillcanvas=true" /></td>
+			</tr>
+			<tr>
+				<td><img src="/Admin/Examples/images/723599_95415300_tiny.jpg" style="max-width:150px;" />donotupscale=false</td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&crop=6&donotupscale=false" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&height=200&crop=6&donotupscale=false" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=6&donotupscale=false" /></td>
+				<td><img src="/Admin/Public/GetImage.ashx?Image=/Admin/Examples/images/723599_95415300_tiny.jpg&Format=jpg&Width=250&height=200&crop=6&donotupscale=false&fillcanvas=true" /></td>
+			</tr>
+			<tr>
+				<td colspan="10" align="center">Problem cases</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="/Admin/Examples/images/redbikes2.jpg" style="max-width:150px;" />
+					2500x300
+				</td>
+				<td colspan="9" align="center">
+					<img src="/Admin/Public/GetImage.ashx?width=2500&height=1100&crop=1&Compression=90&image=/Admin/Examples/images/redbikes2.jpg" /><br />/Admin/Public/GetImage.ashx?width=2500&height=1100&crop=1&Compression=90&image=/Admin/Examples/images/redbikes2.jpg<br />
+					correct:<br />
+					<img src="/Admin/Examples/images/redbikes2.jpg" style="max-width:2500px;max-height:1100px;" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="/Admin/Examples/images/katalog.jpg" style="max-width:150px;" />
+					600x600
+				</td>
+				<td colspan="9" align="center">
+					<img src="/Admin/Public/GetImage.ashx?width=722&height=405&DoNotUpscale=true&Compression=75&image=/Admin/Examples/images/katalog.jpg" /><br />Admin/Public/GetImage.ashx?width=722&height=405&DoNotUpscale=true&Compression=75&image=/Admin/Examples/images/katalog.jpg<br />
+					correct:<br />
+					<img src="/Admin/Examples/images/katalog.jpg" style="max-height:405px;max-width:722px;" />
+				</td>
+			</tr>
+		</table>
+</body>
+</html>

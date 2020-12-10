@@ -1,0 +1,172 @@
+﻿.omc-filter
+{
+    background-color: #ffffff;
+}
+
+.omc-filter a.omc-filter-trigger
+{
+    float: left;
+    
+    display: block;
+    height: 16px;
+    line-height: 16px;
+    
+    padding: 0px;
+    margin: 0px;
+    padding-left: 16px;
+    
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.omc-filter .omc-filter-clear
+{
+    clear: both;
+    visibility: hidden;
+    height: 1px;
+    font-size: 1px;
+}
+
+.omc-filter a.omc-filter-trigger-collapsed
+{
+    background-image: url('/Admin/Module/OMC/img/filter_inactive.png');
+    color: #6b6b6b !important;
+}
+
+.omc-filter a.omc-filter-trigger-expanded
+{
+    background-image: url('/Admin/Module/OMC/img/filter_active.png');
+}
+
+.omc-filter a.omc-filter-trigger:focus,
+.omc-filter a.omc-filter-trigger:active,
+.omc-filter a.omc-filter-trigger:hover
+{
+    outline: none;
+}
+
+.omc-filter .omc-filter-empty, .omc-filter .omc-filter-loading
+{
+    border: 1px solid #ffffff;
+}
+
+.omc-filter .omc-filter-empty
+{
+    text-align: center;
+    font-style: italic;
+    margin-left: 18px;
+}
+
+.omc-filter .omc-filter-empty-left
+{
+    text-align: left !important;
+    color: #c3c3c3;
+}
+
+.omc-filter .omc-filter-loading
+{
+    margin: 0px auto;
+    text-align: center;
+}
+
+.omc-filter .omc-filter-loading img
+{
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0px auto;
+}
+
+.omc-filter .omc-filter-loading-img
+{
+    margin-left: 5px;
+    width: 16px;
+    height: 16px;
+    
+    float: left;
+}
+
+.omc-filter .omc-filter-options
+{
+    margin: 0px;
+    padding: 0px;
+    
+    border: 1px solid #dddddd;
+    
+    overflow: auto;
+    margin-left: 15px;
+}
+
+.omc-filter .omc-filter-options ul,
+.omc-filter .omc-filter-options ul li
+{
+    list-style-type: none;
+    list-style-image: none;
+    
+    padding: 0px;
+    margin: 0px;
+}
+
+.omc-filter .omc-filter-options ul
+{
+    padding: 4px;
+}
+
+.omc-filter .omc-filter-options ul li input
+{
+    width: 14px;
+    height: 14px;
+    
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    margin-right: 5px;
+    
+    float: left;
+}
+
+.omc-filter .omc-filter-options ul li
+{
+    height: 16px;
+    color: #525252;
+}
+
+.omc-filter .omc-filter-options ul li label
+{
+    float: left;
+}
+
+.omc-range
+{
+    height: 20px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+}
+
+.omc-dropdown,
+.omc-filter-freetext
+{
+    margin-top: 2px;
+}
+
+.omc-dropdown
+{
+    width: 175px !important;
+}
+
+.omc-filter-label
+{
+    margin-top: 2px;
+    color: #828282;
+}
+
+.omc-filter-freetext
+{
+    width: 170px !important;
+}
+
+.omc-range input
+{
+    width: 77px !important;
+}

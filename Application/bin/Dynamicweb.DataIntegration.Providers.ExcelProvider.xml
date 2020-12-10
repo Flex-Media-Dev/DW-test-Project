@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.DataIntegration.Providers.ExcelProvider</name>
+    </assembly>
+    <members>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.BaseExportExcelProvider.ShowField(Dynamicweb.Ecommerce.Products.Product,System.String)">
+            <summary>
+            Gets whether the field can be shown
+            </summary>                
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.BaseExportExcelProvider.GetNumericFields(Dynamicweb.Ecommerce.Products.Product,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets the numeric fiels from the exported fields
+            </summary>                
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.BaseExportExcelProvider.GetNumericFields(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets the numeric fiels from the exported fields
+            </summary>                
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.BaseExportExcelProvider.SetProtection(OfficeOpenXml.ExcelWorksheet)">
+            <summary>
+            Makes excel worksheet protected
+            </summary>        
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.BaseExportExcelProvider.GetLineCount(System.String,System.Int32)">
+            <summary>
+            Gets lines count for the specified text and column width
+            </summary>        
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ExcelExtensions.GetColumnName(OfficeOpenXml.ExcelWorksheet,System.Int32)">
+            <summary>
+            Convert a column number into an excel column
+            </summary>
+            <param name="sheet">excel sheet</param>
+            <param name="columnNumber">column number</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ExportMultipleProductsExcelProvider.AddProductVariantsRows(OfficeOpenXml.ExcelWorksheet,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.Dictionary{System.String,Dynamicweb.Ecommerce.Products.Product}},Dynamicweb.Ecommerce.Products.Product,System.Int32@,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.Dictionary{System.String,System.Type})">
+            <summary>
+            Exports variants to excel
+            </summary>        
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ExportOneProductExcelProvider.ExportProduct(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.String@)">
+            <summary>
+            Exports product to excel
+            </summary>
+            <param name="fullFileName">excel file</param>
+            <param name="productId">product id</param>
+            <param name="productVariantId">variant id</param>
+            <param name="languages">exported languages ids</param>
+            <param name="fields">fields to export</param>
+            <param name="statusMessage">export status</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ExportOneProductExcelProvider.AddProductVariantsRows(OfficeOpenXml.ExcelWorksheet,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.Dictionary{System.String,Dynamicweb.Ecommerce.Products.Product}},Dynamicweb.Ecommerce.Products.Product,System.Int32,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.Dictionary{System.String,System.Type})">
+            <summary>
+            Exports variants to excel
+            </summary>        
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.IImportExcelProvider">
+            <summary>
+            Import product from excel provider
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.IImportExcelProvider.GetProductId">
+            <summary>
+            Gets product id from excel file
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.IImportExcelProvider.GetLanguages">
+            <summary>
+            Gets product languages ids from excel file
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.IImportExcelProvider.GetFields">
+            <summary>
+            Gets product fields from excel file
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.IImportExcelProvider.GetInvalidFields(System.String)">
+            <summary>
+            Gets product not valid fields
+            </summary>
+            <param name="languageId">language id to get not valid fields from</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.IImportExcelProvider.GetSimpleVariants(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets product simple variants that need to be extended for successful import
+            </summary>
+            <param name="languages">language id to get not valid variants from</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.IImportExcelProvider.Import(System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String@)">
+            <summary>
+            Import product from excel
+            </summary>
+            <param name="languages">languages to import product to</param>
+            <param name="autoCreateExtendedVariants">create extended variants automatically</param>
+            <param name="status">import status message</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.IImportExcelProvider.LoadExcel(System.Byte[])">
+            <summary>
+            Load excel file data
+            </summary>
+            <param name="excelData">excel file content</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportExcelProvider">
+            <summary>
+            Import from Excel provider
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportExcelProvider.GetFields">
+            <summary>
+            Gets product fields from excel file
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportExcelProvider.GetLanguages">
+            <summary>
+            Gets product languages ids from excel file
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportExcelProvider.GetProductId">
+            <summary>
+            Gets product ids from excel file
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportExcelProvider.GetInvalidSimpleVariants(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets product simple variants that need to be extended for successful import
+            </summary>
+            <param name="languages">language id to get not valid variants from</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportExcelProvider.GetSimpleVariants(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets product simple variants that need to be extended for successful import
+            </summary>
+            <param name="languages">language id to get not valid variants from</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportExcelProvider.Import(System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String@)">
+            <summary>
+            Import product from excel
+            </summary>
+            <param name="languages">languages to import product to</param>
+            <param name="autoCreateExtendedVariants">create extended variants automatically</param>
+            <param name="status">import status message</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportExcelProvider.LoadExcel(System.Byte[])">
+            <summary>
+            Load excel file data
+            </summary>
+            <param name="excelData">excel file content</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportExcelProvider.GetInvalidFields(System.String)">
+            <summary>
+            Gets product not valid fields
+            </summary>
+            <param name="languageId">language id to get not valid fields from</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.IExportExcelProvider">
+            <summary>
+            Export to excel provider
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.IExportExcelProvider.ExportProduct(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.String@)">
+            <summary>
+            Export product to excel
+            </summary>
+            <param name="file">excel file</param>
+            <param name="productId">product id</param>
+            <param name="productVariantId">variant id</param>
+            <param name="languages">exported languages ids</param>
+            <param name="fields">fields to export</param>
+            <param name="status">export status</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ExportExcelProvider">
+            <summary>
+            Export to Excel provider
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ExportExcelProvider.ExportProduct(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.String@)">
+            <summary>
+            Exports product to excel
+            </summary>
+            <param name="fullFileName">excel file</param>
+            <param name="productId">product id</param>
+            <param name="productVariantId">variant id</param>
+            <param name="languages">exported languages ids</param>
+            <param name="fields">fields to export</param>
+            <param name="statusMessage">export status</param>
+            <returns></returns>
+        </member>
+        <member name="P:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ExportExcelProvider.ExportVariants">
+            <summary>
+            Specifies value indicating whether to include extended variants to product export
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportMultipleProductsExcelProvider.GetFields">
+            <summary>
+            Gets product fields from excel file
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportMultipleProductsExcelProvider.GetLanguages">
+            <summary>
+            Gets product languages ids from excel file
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportMultipleProductsExcelProvider.GetProductId">
+            <summary>
+            Gets product ids from excel file
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportMultipleProductsExcelProvider.GetSimpleVariants(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets product simple variants that need to be extended for successful import
+            </summary>
+            <param name="languages">language id to get not valid variants from</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportMultipleProductsExcelProvider.Import(System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String@)">
+            <summary>
+            Import product from excel
+            </summary>
+            <param name="languages">languages to import product to</param>
+            <param name="autoCreateExtendedVariants">create extended variants automatically</param>
+            <param name="status">import status message</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportMultipleProductsExcelProvider.LoadExcel(System.Byte[])">
+            <summary>
+            Load excel file data
+            </summary>
+            <param name="excelData">excel file content</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportMultipleProductsExcelProvider.GetInvalidFields(System.String)">
+            <summary>
+            Gets product not valid fields
+            </summary>
+            <param name="languageId">language id to get not valid fields from</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportOneProductExcelProvider.GetFields">
+            <summary>
+            Gets product fields from excel file
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportOneProductExcelProvider.GetLanguages">
+            <summary>
+            Gets product languages ids from excel file
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportOneProductExcelProvider.GetProductId">
+            <summary>
+            Gets product id from excel file
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportOneProductExcelProvider.GetSimpleVariants(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets product simple variants that need to be extended for successful import
+            </summary>
+            <param name="languages">language id to get not valid variants from</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportOneProductExcelProvider.Import(System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String@)">
+            <summary>
+            Import product from excel
+            </summary>
+            <param name="languages">languages to import product to</param>
+            <param name="autoCreateExtendedVariants">create extended variants automatically</param>
+            <param name="status">import status message</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ImportOneProductExcelProvider.GetInvalidFields(System.String)">
+            <summary>
+            Gets product not valid fields
+            </summary>
+            <param name="languageId">language id to get not valid fields from</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ListFieldsHelper.GetCustomListBoxFields(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets the custom listbox fields
+            </summary>                
+        </member>
+        <member name="M:Dynamicweb.DataIntegration.Providers.ExcelProvider.PIM.ListFieldsHelper.GetCategoryListBoxFields(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets the category listbox fields
+            </summary>                
+        </member>
+    </members>
+</doc>

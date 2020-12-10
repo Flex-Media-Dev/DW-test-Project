@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="VB" CodeBehind="UnifaunServicePoint.ashx.vb" Class="Dynamicweb.Admin.UnifaunServicePoint" %>

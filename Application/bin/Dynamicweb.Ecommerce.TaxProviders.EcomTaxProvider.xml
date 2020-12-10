@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Ecommerce.TaxProviders.EcomTaxProvider</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Ecommerce.TaxProviders.EcomTaxProvider.EcomTaxProvider">
+            <summary>
+            Flat rate tax provider
+            </summary>
+        </member>
+    </members>
+</doc>

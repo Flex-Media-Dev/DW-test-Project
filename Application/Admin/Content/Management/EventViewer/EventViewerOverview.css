@@ -1,0 +1,13 @@
+﻿#PageListContent {
+    margin-bottom: 60px;
+    overflow-x: auto;
+}
+
+.listRow .icon {
+    padding-left: 18px;
+    padding-right: 11px;
+    width: 14px;
+}
+.listRow{
+    cursor: pointer;
+}

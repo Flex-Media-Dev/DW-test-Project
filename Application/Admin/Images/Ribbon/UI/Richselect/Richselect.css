@@ -1,0 +1,155 @@
+﻿.richselect .richselectbox
+{
+	border:solid 1px #bdbdbd;
+	text-decoration:none;
+	display:block;
+	overflow:hidden;
+	background-color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.richselect .selectboxcontent
+{
+	overflow:hidden;
+	float:left;
+	padding: 4px 0 4px 3px;
+	overflow:hidden;
+	background-color: #fff;
+}
+
+.richselectitems li.richselectitem
+{
+	min-height:30px;
+	vertical-align:middle;
+	overflow:hidden;
+	border-bottom:solid 1px #bdbdbd;
+    margin: 0;
+}
+
+.richselect div.item-icons,
+.richselectitems div.item-icons
+{
+	zoom: 1;
+	overflow: hidden;
+}
+
+.richselect div.item-icons:after,
+.richselectitems  div.item-icons:after
+{
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.richselect div.item-icons div.item-icons-image,
+.richselect div.item-icons div.item-icons-description,
+.richselectitems div.item-icons div.item-icons-image,
+.richselectitems div.item-icons div.item-icons-description
+{
+	float: left;
+}
+
+.richselect.custom-size .richselectbox {
+    display:inline-flex;
+}
+
+.richselect.custom-size .richselectbox span.selectboxcontent {
+    min-height: 30px;
+    min-width: 200px;
+}
+
+.richselectitems div.item-icons.item-label-align-top,
+.richselectitems div.item-icons.item-label-align-bottom
+{
+    margin-right: 15px;
+}
+
+.richselect div.item-icons.item-label-align-left,
+.richselect div.item-icons.item-label-align-left-no-selfalign,
+.richselect div.item-icons.item-label-align-right,
+.richselectitems div.item-icons.item-label-align-left,
+.richselectitems div.item-icons.item-label-align-left-no-selfalign,
+.richselectitems div.item-icons.item-label-align-right
+{
+    display: inline-flex;
+    margin-right: 18px;
+}
+
+.richselect div.item-icons.item-label-align-left-no-selfalign div.item-icons-image,
+.richselectitems div.item-icons.item-label-align-left-no-selfalign div.item-icons-image
+{
+     float:right;
+}
+
+.richselect div.item-icons.item-label-align-left-no-selfalign div.item-icons-description
+{
+    width: 191px;
+}
+
+.richselectitems div.item-icons.item-label-align-left-no-selfalign div.item-icons-description
+{
+    width: 200px;
+}
+
+.richselect div.item-icons.item-label-align-left div.item-icons-description,
+.richselect div.item-icons.item-label-align-right div.item-icons-description 
+{    
+    align-self: center;
+    width: 191px;
+}
+
+.richselectitems div.item-icons.item-label-align-left div.item-icons-description,
+.richselectitems div.item-icons.item-label-align-right div.item-icons-description
+{
+    align-self: center;
+    width: 200px;
+}
+
+.richselect div.item-icons.item-label-align-top div.item-icons-description,
+.richselect div.item-icons.item-label-align-bottom div.item-icons-description 
+{
+    width: 195px;
+}
+
+.richselect div.item-icons.item-label-align-top div.item-icons-image, 
+.richselect div.item-icons.item-label-align-bottom div.item-icons-image,
+.richselect div.item-icons.item-label-align-top div.item-icons-description,
+.richselect div.item-icons.item-label-align-bottom div.item-icons-description,
+.richselectitems div.item-icons.item-label-align-top div.item-icons-image, 
+.richselectitems div.item-icons.item-label-align-bottom div.item-icons-image,
+.richselectitems div.item-icons.item-label-align-top div.item-icons-description,
+.richselectitems div.item-icons.item-label-align-bottom div.item-icons-description
+{
+	float: none;
+}
+
+.richselect div.item-icons-image img,
+.richselectitems div.item-icons-image img
+{
+	margin: 3px;
+	border: none;
+}
+
+div.template-float-left
+{
+	float: left;
+}
+div.template-float-right
+{
+	float: right;
+}
+div.wide-field
+{
+	height:14px;
+    overflow:hidden;
+}
+
+div.layout-template-image img
+{
+    max-height: 55px;
+	margin: 3px;
+	border: none;
+}

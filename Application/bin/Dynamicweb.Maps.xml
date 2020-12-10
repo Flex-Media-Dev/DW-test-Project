@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Maps</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Maps.ClusterIconStyle">
+            <summary>
+            Class represents ClusterIcon image properties
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Maps.ClusterIconStyle.RenderJSON(System.Text.StringBuilder)">
+            <summary>
+            Represents ClusterIcon settings in JSON format
+            </summary>
+            <param name="stringBuilder">Json string with key-value pairs of ClusterIcon image url, width, height, text color and size</param>
+        </member>
+        <member name="P:Dynamicweb.Maps.ClusterIconStyle.ImageWidth">
+            <summary>
+            Gets the width of the image
+            </summary>
+            <value>The width of the image as integer value</value>
+        </member>
+        <member name="P:Dynamicweb.Maps.ClusterIconStyle.ImageHeight">
+            <summary>
+            Gets the height of the image
+            </summary>
+            <value>The height of the image as integer value</value>
+        </member>
+        <member name="T:Dynamicweb.Maps.JavaScript">
+            <summary>
+            Class JavaScript. Helps to represent value of object state in string form.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Maps.JavaScript.Literal(System.Object)">
+            <summary>
+            Literals the specified object data.
+            </summary>
+            <param name="objectInstance">The object instance</param>
+            <returns>String representation of object value</returns>
+        </member>
+        <member name="M:Dynamicweb.Maps.JavaScript.Literal(System.Boolean)">
+            <summary>
+            Literals the specified boolean value.
+            </summary>
+            <param name="value"> The boolean value</param>
+            <returns>String representation of boolean value</returns>
+        </member>
+        <member name="M:Dynamicweb.Maps.JavaScript.Literal(System.Int32)">
+            <summary>
+            Literals the specified integer value.
+            </summary>
+            <param name="value">The integer value</param>
+            <returns>String representation of integer value</returns>
+        </member>
+        <member name="M:Dynamicweb.Maps.JavaScript.Literal(System.Double)">
+            <summary>
+            Literals the specified double value.
+            </summary>
+            <param name="value">The double value</param>
+            <returns>String representation of double value (with 6 digits after the decimal point)</returns>
+        </member>
+        <member name="T:Dynamicweb.Maps.Location">
+            <summary>
+            Class represents geographical location on Google Maps.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Maps.Location.Create(Dynamicweb.Security.UserManagement.User,System.Boolean)">
+            <summary>
+            Creates the specified user.
+            </summary>
+            <param name="user">The user.</param>
+            <param name="force">Needs to force operation?</param>
+            <returns>Location.</returns>
+        </member>
+        <member name="M:Dynamicweb.Maps.Location.Create(Dynamicweb.Security.UserManagement.User,Dynamicweb.Security.UserManagement.Group,System.Boolean)">
+            <summary>
+            Creates the specified user.
+            </summary>
+            <param name="user">The user.</param>
+            <param name="group">The group.</param>
+            <param name="force">Needs to force operation?</param>
+            <returns>Location.</returns>
+        </member>
+        <member name="M:Dynamicweb.Maps.Location.Create(Dynamicweb.Security.UserManagement.Group,System.Boolean)">
+            <summary>
+            Creates the specified group.
+            </summary>
+            <param name="group">The group.</param>
+            <param name="force">Needs to force operation?</param>
+            <returns>Location.</returns>
+        </member>
+        <member name="P:Dynamicweb.Maps.Location.ID">
+            <summary>
+            Gets location identifier.
+            </summary>
+            <value>Location identifier.</value>
+        </member>
+        <member name="P:Dynamicweb.Maps.Location.IsUser">
+            <summary>
+            Gets a value indicating whether this instance is user.
+            </summary>
+            <value>
+              <c>true</c> if this instance is user; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Dynamicweb.Maps.Location.IsGroup">
+            <summary>
+            Gets a value indicating whether this instance is group.
+            </summary>
+            <value><c>true</c> if this instance is group; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Dynamicweb.Maps.Location.Name">
+            <summary>
+            Gets location name
+            </summary>
+            <value>Location name</value>
+        </member>
+        <member name="P:Dynamicweb.Maps.Location.Address">
+            <summary>
+            Gets location address
+            </summary>
+            <value>Location address</value>
+        </member>
+        <member name="P:Dynamicweb.Maps.Location.Address2">
+            <summary>
+            Gets additional address information
+            </summary>
+            <value>Additional address information</value>
+        </member>
+        <member name="P:Dynamicweb.Maps.Location.ZipCode">
+            <summary>
+            Gets location zip code
+            </summary>
+            <value>The location code</value>
+        </member>
+        <member name="P:Dynamicweb.Maps.Location.City">
+            <summary>
+            Gets the city
+            </summary>
+            <value>The city</value>
+        </member>
+        <member name="P:Dynamicweb.Maps.Location.Country">
+            <summary>
+            Gets the country
+            </summary>
+            <value>The country</value>
+        </member>
+        <member name="P:Dynamicweb.Maps.Location.Image">
+            <summary>
+            Gets the image
+            </summary>
+            <value>The image</value>
+        </member>
+        <member name="P:Dynamicweb.Maps.Location.Latitude">
+            <summary>
+            Gets location latitude value
+            </summary>
+            <value>Location latitude value</value>
+        </member>
+        <member name="P:Dynamicweb.Maps.Location.Longitude">
+            <summary>
+            Gets location longitude value
+            </summary>
+            <value>Location longitude value</value>
+        </member>
+        <member name="M:Dynamicweb.Maps.Location.Equals(System.Object)">
+            <summary>
+            Determines whether the specified Location is equal to this current Location value
+            </summary>
+            <param name="obj">The location to compare with the current location</param>
+            <returns><c>true</c> if the specified location is equal to this location instance; otherwise, <c>false</c></returns>
+        </member>
+        <member name="M:Dynamicweb.Maps.Location.CompareTo(System.Object)">
+            <summary>
+            Compares to locations.
+            </summary>
+            <param name="obj">The location instance for comparison</param>
+            <returns>Returns zero if locations are equal</returns>
+        </member>
+        <member name="M:Dynamicweb.Maps.Location.GetHashCode">
+            <summary>
+             Serves as the default hash function.
+            </summary>
+            <returns>A hash code for the current object</returns>
+        </member>
+        <member name="T:Dynamicweb.Maps.Maps">
+            <summary>
+            Represents Maps class that helps to work with Google Maps.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Maps.Maps.GetContent">
+            <summary>
+            Gets the content as Google Maps widget html.
+            </summary>
+            <returns>String representation of Google Maps widget html</returns>
+        </member>
+        <member name="M:Dynamicweb.Maps.Maps.Wrap(System.Double,System.Double,System.Double)">
+            <summary>
+            Wrap a number to fit inside a specified range
+            </summary>
+            <param name="value">the value</param>
+            <param name="min">minimum allowed value (inclusive)</param>
+            <param name="max">maximum allowed value (inclusive)</param>
+            <returns>the wrapped value</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Maps.Maps.Clamp(System.Double,System.Double,System.Double)">
+            <summary>
+            Clamp a number to be inside a specified range
+            </summary>
+            <param name="value">the value</param>
+            <param name="min">minimum allowed value (inclusive)</param>
+            <param name="max">maximum allowed value (inclusive)</param>
+            <returns>the clamped value</returns>
+            <remarks></remarks>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1830 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Forms</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Forms.AfterAreaDeletedSubscriber">
+            <summary>
+            Cleans the FormTemplate table after the Area was removed.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.AfterAreaDeletedSubscriber.OnNotify(System.String,Dynamicweb.Extensibility.Notifications.NotificationArgs)">
+            <summary>
+            Call to invoke observer.
+            </summary>
+            <param name="notification">The notification.</param>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="T:Dynamicweb.Forms.Field">
+            <summary>
+            Class Field.
+            </summary>
+            <seealso cref="T:Dynamicweb.Data.DbObject" />
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.UniqueId">
+            <summary>
+            Gets or sets the field unique identifier.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Options">
+            <summary>
+            Gets the options.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Form">
+            <summary>
+            Gets the form.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.FormID">
+            <summary>
+            Gets or sets the form identifier.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Fieldtype">
+            <summary>
+            Gets the field type.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.InputType">
+            <summary>
+            Gets the type of the input.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.DefaultValue">
+            <summary>
+            Gets or sets the default value.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.MaxLength">
+            <summary>
+            Gets or sets the maximum length.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Size">
+            <summary>
+            Gets or sets the size.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Required">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Dynamicweb.Forms.Field"/> is required.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.TextareaHeight">
+            <summary>
+            Gets or sets the height of the text area.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Sort">
+            <summary>
+            Gets or sets the sort.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Active">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Dynamicweb.Forms.Field"/> is active.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Image">
+            <summary>
+            Gets or sets the image.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Color">
+            <summary>
+            Gets or sets the color.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.AutoValue">
+            <summary>
+            Gets or sets the automatic value.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.SystemName">
+            <summary>
+            Gets or sets the name of the system.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.HtmlId">
+            <summary>
+            Gets the HTML identifier.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.CreatedDate">
+            <summary>
+            Gets or sets the created date.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.UpdatedDate">
+            <summary>
+            Gets or sets the updated date.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.GroupID">
+            <summary>
+            Gets or sets the group identifier.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.CssClass">
+            <summary>
+            Gets or sets the CSS class.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Placeholder">
+            <summary>
+            Gets or sets the placeholder.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Prepend">
+            <summary>
+            Gets or sets the prepend.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Append">
+            <summary>
+            Gets or sets the append.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.InputPattern">
+            <summary>
+            Gets or sets the input pattern.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.Title">
+            <summary>
+            Gets or sets the title attribute value.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.CreatedBy">
+            <summary>
+            Gets the created by.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.UpdatedBy">
+            <summary>
+            Gets the updated by.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.IsList">
+            <summary>
+            Gets a value indicating whether this instance is list and can have options.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.IsOther">
+            <summary>
+            Gets a value indicating whether this instance is other.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.IsTextarea">
+            <summary>
+            Gets a value indicating whether this instance is text area.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.IsValidationInput">
+            <summary>
+            Gets a value indicating whether this instance is validation input.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.IsUserInput">
+            <summary>
+            Gets a value indicating whether this instance is user input.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.IsInput">
+            <summary>
+            Gets a value indicating whether this instance is input.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.IsButton">
+            <summary>
+            Gets a value indicating whether this instance is button.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Field.HasPatternSupport">
+            <summary>
+            Gets a value indicating that this instance supports pattern attribute
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Forms.Field"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.Fill(System.Data.IDataReader)">
+            <summary>
+            Fills the specified dr.
+            </summary>
+            <param name="datareader">The dr.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.GetValue">
+            <summary>
+            Gets the predefined value of the field returned form either the auto value field or default value field.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.SortDown">
+            <summary>
+            Sorts down.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.SortUp">
+            <summary>
+            Sorts up.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.SortOptionsByText(System.Boolean)">
+            <summary>
+            Sorts the options by text.
+            </summary>
+            <param name="descending">if set to <c>true</c> [descending].</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.SortOptionsByValue(System.Boolean)">
+            <summary>
+            Sorts the options by value.
+            </summary>
+            <param name="descending">if set to <c>true</c> [descending].</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.Delete">
+            <summary>
+            Deletes the current instance of this object based on its ID.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.DeleteOptions">
+            <summary>
+            Deletes the options.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.AddOptions(System.String)">
+            <summary>
+            Adds the options.
+            </summary>
+            <param name="optionInput">The option input.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.Copy(System.Int32,System.Boolean)">
+            <summary>
+            Copies the specified to form identifier.
+            </summary>
+            <param name="toFormId">To form identifier.</param>
+            <param name="KeepName">if set to <c>true</c> [keep name].</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.Copy">
+            <summary>
+            Copies this instance.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.GetFieldById(System.Int32)">
+            <summary>
+            Gets the field by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>Field.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.GetFields">
+            <summary>
+            Gets the fields.
+            </summary>
+            <returns>List(Of Field).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.MoveFieldsUp(System.Int32,System.Int32)">
+            <summary>
+            Moves the fields up.
+            </summary>
+            <param name="formId">The form identifier.</param>
+            <param name="fromSort">From sort.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.ToggleActive(System.Int32)">
+            <summary>
+            Toggles the active.
+            </summary>
+            <param name="FieldID">The field identifier.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.ToggleRequired(System.Int32)">
+            <summary>
+            Toggles the required.
+            </summary>
+            <param name="FieldID">The field identifier.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.ToggleEmailfield(System.Int32)">
+            <summary>
+            Toggles the email field.
+            </summary>
+            <param name="FieldID">The field identifier.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.GetFieldsByForm(Dynamicweb.Forms.Form)">
+            <summary>
+            Gets the fields by form.
+            </summary>
+            <param name="f">The f.</param>
+            <returns>List(Of Field).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.GetFieldsBySql(System.String)">
+            <summary>
+            Gets the fields by SQL.
+            </summary>
+            <param name="sql">The SQL.</param>
+            <returns>List(Of Field).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.GetFieldHtml">
+            <summary>
+            Gets the field HTML.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.GetSize">
+            <summary>
+            Gets the size.
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.GetFieldHtml(System.String,System.Boolean)">
+            <summary>
+            Gets the field HTML.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="preview">if set to <c>true</c> [preview].</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Field.AutoValueResolve">
+            <summary>
+            Automatics the value resolve.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:Dynamicweb.Forms.FieldType">
+            <summary>
+            Denotes the types of fields
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Textarea">
+            <summary>
+            The text area.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.File">
+            <summary>
+            The file.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Text">
+            <summary>
+            The text.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Hidden">
+            <summary>
+            The hidden.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Submit">
+            <summary>
+            The submit.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Reset">
+            <summary>
+            The reset.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Radio">
+            <summary>
+            The radio.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Checkbox">
+            <summary>
+            The checkbox.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Select">
+            <summary>
+            The select.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Checkboxlist">
+            <summary>
+            The checkbox list.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Divider">
+            <summary>
+            The divider.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Image">
+            <summary>
+            The image.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Password">
+            <summary>
+            The password.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Textstring">
+            <summary>
+            The text string.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Button">
+            <summary>
+            The button.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Search">
+            <summary>
+            The search.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Email">
+            <summary>
+            The email.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Url">
+            <summary>
+            The URL.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Tel">
+            <summary>
+            The telephone.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Number">
+            <summary>
+            The number.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Range">
+            <summary>
+            The range.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Date">
+            <summary>
+            The date.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Month">
+            <summary>
+            The month.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Week">
+            <summary>
+            The week.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Time">
+            <summary>
+            The time.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Datetime">
+            <summary>
+            The DateTime.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.DatetimeLocal">
+            <summary>
+            The DateTime local.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Color">
+            <summary>
+            The color.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.Unknown">
+            <summary>
+            The unknown.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.FieldType.PageShift">
+            <summary>
+            The page shift.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.Form">
+            <summary>
+            Represents a form instance with fields, field options etc.
+            </summary>
+            <seealso cref="T:Dynamicweb.Data.DbObject" />
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.FieldSize">
+            <summary>
+            Gets or sets the size of the field.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.MaxSubmits">
+            <summary>
+            Gets or sets the maximum submits.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.CssClass">
+            <summary>
+            Gets or sets the CSS class.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.DefaultTemplate">
+            <summary>
+            Gets or sets the default template.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.UniqueId">
+            <summary>
+            Gets or sets the form unique identifier.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.Fields">
+            <summary>
+            Gets the fields for this form.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.LastSubmitDate">
+            <summary>
+            Gets the last date this form was submitted.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.Name">
+            <summary>
+            Gets or sets the name of the form.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.EmailFieldID">
+            <summary>
+            Gets or sets the email field identifier.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.ColumnShiftFormFieldID">
+            <summary>
+            Gets or sets the ID of the field that will shift to column 2 when rendering.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.LabelOverField">
+            <summary>
+            Gets or sets a value indicating whether label should be rendered over field.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.LabelBold">
+            <summary>
+            Gets or sets a value indicating whether label should be bold.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.LabelRequired">
+            <summary>
+            Gets or sets the label required.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.CreatedDate">
+            <summary>
+            Gets or sets the created date.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.UpdatedDate">
+            <summary>
+            Gets or sets the updated date.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.HtmlId">
+            <summary>
+            Gets the HTML identifier.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.CreatedBy">
+            <summary>
+            Gets the created by.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.UpdatedBy">
+            <summary>
+            Gets the updated by.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Form.DisplayCount">
+            <summary>
+            Gets the form's shows amount.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Form.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Forms.Form"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Form.Fill(System.Data.IDataReader)">
+            <summary>
+            Fills the form with data from the specified datareader.
+            </summary>
+            <param name="datareader">The datareader.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Form.GetSubmitCount">
+            <summary>
+            Gets the number of submits by this form.
+            </summary>
+            <returns>Submits count.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Form.GetSubmitCount(System.Int32)">
+            <summary>
+            Gets the number of submits by this form.
+            </summary>
+            <param name="pageId">The page identifier.</param>
+            <returns>Submits count.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Form.GetSubmits">
+            <summary>
+            Gets the submits of this form.
+            </summary>
+            <returns>List(Of Submit).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Form.GetSubmits(System.Int32)">
+            <summary>
+            Gets the submits.
+            </summary>
+            <param name="pageId">The page identifier.</param>
+            <returns>List(Of Submit).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Form.Delete">
+            <summary>
+            Deletes the current instance of this object based on its ID.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Form.Copy">
+            <summary>
+            Copies this instance.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Form.IncreaseFormShowCount">
+            <summary>
+            Increases the form show count.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Form.GetFormById(System.Int32)">
+            <summary>
+            Gets the form by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>Form.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Form.GetForms">
+            <summary>
+            Gets the forms.
+            </summary>
+            <returns>List(Of Form).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Form.GetFormsBySql(System.String)">
+            <summary>
+            Gets the forms by SQL.
+            </summary>
+            <param name="sql">The SQL.</param>
+            <returns>List(Of Form).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Form.SubmitCount">
+            <summary>
+            Gets the number of submits by this form.
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Form.SubmitCount(System.Int32)">
+            <summary>
+            Gets the number of submits by this form.
+            </summary>
+            <param name="pageId">The page identifier.</param>
+            <returns>Submits count.</returns>
+        </member>
+        <member name="T:Dynamicweb.Forms.FormTemplateService">
+            <summary>
+            Represents the functionality for the <see cref="T:Dynamicweb.Forms.FormTemplate"/>.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.FormTemplateService.GetTemplates">
+            <summary>
+            Gets all templates.
+            </summary>
+            <returns>A collection of <see cref="T:Dynamicweb.Forms.FormTemplate"/>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.FormTemplateService.GetByAreaIdAndType(System.Int32,Dynamicweb.Forms.TemplateType)">
+            <summary>
+            Gets template by type and area ID.
+            </summary>
+            <param name="areaId">The <see cref="T:Dynamicweb.Content.Area"/> ID.</param>
+            <param name="type">The <see cref="T:Dynamicweb.Forms.TemplateType"/>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.FormTemplateService.GetByAreaId(System.Int32)">
+            <summary>
+            Gets templates by area ID.
+            </summary>
+            <param name="areaId">The <see cref="T:Dynamicweb.Content.Area"/> ID.</param>
+            <returns>A collection of <see cref="T:Dynamicweb.Forms.FormTemplate"/>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.FormTemplateService.Save(Dynamicweb.Forms.FormTemplate)">
+            <summary>
+            Saves the template.
+            </summary>
+            <param name="template">The <see cref="T:Dynamicweb.Forms.FormTemplate"/> for save.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.FormTemplateService.DeleteTemplate(Dynamicweb.Forms.FormTemplate)">
+            <summary>
+            Removes the template.
+            </summary>
+            <param name="template">The <see cref="T:Dynamicweb.Forms.FormTemplate"/> for delete.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.FormTemplateService.DeleteByAreaId(System.Int32)">
+            <summary>
+            Removes the templates by Area ID.
+            </summary>
+            <param name="areaId">The <see cref="T:Dynamicweb.Content.Area"/> ID.</param>
+        </member>
+        <member name="T:Dynamicweb.Forms.Frontend">
+            <summary>
+            Class Frontend.
+            </summary>
+            <seealso cref="T:Dynamicweb.Modules.ContentModule" />
+        </member>
+        <member name="M:Dynamicweb.Forms.Frontend.GetContent">
+            <summary>
+            Override this method and return the HTML output for the module.
+            </summary>
+            <returns>Must return the markup that renders the module.</returns>
+            <example>
+              <code description="How to inherit ContentModule and override GetContent" source="..\Dynamicweb\06 - Dynamicweb Host\Dynamicweb\Head\Dynamicweb.Examples\ContentModuleSample.cs" lang="CS"></code>
+            </example>
+            <remarks>The markup returned is what is inserted into the template tag <c>ParagraphModule</c> in the paragraph template.</remarks>
+        </member>
+        <member name="M:Dynamicweb.Forms.Frontend.RenderForm">
+            <summary>
+            Renders the form.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Frontend.RenderReceipt">
+            <summary>
+            Renders the receipt.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Frontend.RenderReceiptTemplate(Dynamicweb.Rendering.Template,Dynamicweb.Forms.Submit)">
+            <summary>
+            Renders the receipt template.
+            </summary>
+            <param name="template">The template.</param>
+            <param name="submit">The submit.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Frontend.RenderMailTemplate(Dynamicweb.Rendering.Template,Dynamicweb.Forms.Submit)">
+            <summary>
+            Renders the receipt template.
+            </summary>
+            <param name="template">The template.</param>
+            <param name="submit">The submit.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Frontend.MaxSubmitsReached(Dynamicweb.Forms.Form)">
+            <summary>
+            Checks the submit count.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Frontend.GetSubmitCount">
+            <summary>
+            Gets the submit count.
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Frontend.GetMaxSubmit">
+            <summary>
+            Gets the maximum submit.
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Frontend.SaveForm">
+            <summary>
+            Saves the form.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Frontend.SendMail(Dynamicweb.Forms.Submit)">
+            <summary>
+            Sends the mail.
+            </summary>
+            <param name="submit">The s.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Frontend.SendReceiptMail(Dynamicweb.Forms.Submit)">
+            <summary>
+            Sends the receipt mail.
+            </summary>
+            <param name="submit">The s.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Frontend.CreateMailMessage(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates the mail message.
+            </summary>
+            <param name="subject">The subject.</param>
+            <param name="body">The body.</param>
+            <param name="fromName">From na</param>
+            <param name="fromEmail">From email.</param>
+            <param name="to">To.</param>
+            <param name="cc">The cc.</param>
+            <param name="bcc">The BCC.</param>
+            <returns>System.Net.Mail.MailMessage.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Frontend.RenderMail(Dynamicweb.Forms.Submit)">
+            <summary>
+            Renders the form mail (website owner) to the Forms/Mail/*.cshtml|HTML template.
+            </summary>
+            <param name="submit">The submitted data to render to the mail template.</param>
+            <returns>A string of email body in HTML.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Frontend.RenderReceiptMail(Dynamicweb.Forms.Submit)">
+            <summary>
+            Renders the receipt mail to the Forms/Mail/*.cshtml|HTML template.
+            </summary>
+            <param name="submit">The submitted data to render to the mail template.</param>
+            <returns>A string of email body in HTML.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Frontend.SaveFormFiles(Dynamicweb.Forms.Field)">
+            <summary>
+            Saves the files submitted with a form.
+            </summary>
+            <param name="currentField">The file upload field.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:Dynamicweb.Forms.Notifications">
+            <summary>
+            Class Notifications.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.Notifications.Frontend">
+            <summary>
+            Class Frontend.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.Notifications.Frontend.OnSendReceipt">
+            <summary>
+            The on send receipt.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.Notifications.Frontend.OnSendReceiptArgs">
+            <summary>
+            Class OnSendReceiptArgs.
+            </summary>
+            <seealso cref="T:Dynamicweb.Extensibility.Notifications.NotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnSendReceiptArgs.EmailMessage">
+            <summary>
+            Gets or sets the email message.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnSendReceiptArgs.Form">
+            <summary>
+            Gets or sets the form.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnSendReceiptArgs.Submit">
+            <summary>
+            Gets or sets the submit.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.Notifications.Frontend.OnBeforeSendReceipt">
+            <summary>
+            The on before send receipt.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.Notifications.Frontend.OnBeforeSendReceiptArgs">
+            <summary>
+            Class OnBeforeSendReceiptArgs.
+            </summary>
+            <seealso cref="T:Dynamicweb.Extensibility.Notifications.NotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnBeforeSendReceiptArgs.Template">
+            <summary>
+            Gets or sets the template.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnBeforeSendReceiptArgs.Form">
+            <summary>
+            Gets or sets the form.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnBeforeSendReceiptArgs.Submit">
+            <summary>
+            Gets or sets the submit.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.Notifications.Frontend.OnSendMail">
+            <summary>
+            The on send mail.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.Notifications.Frontend.OnSendMailArgs">
+            <summary>
+            Class OnSendMailArgs.
+            </summary>
+            <seealso cref="T:Dynamicweb.Extensibility.Notifications.NotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnSendMailArgs.EmailMessage">
+            <summary>
+            Gets or sets the email message.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnSendMailArgs.Form">
+            <summary>
+            Gets or sets the form.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnSendMailArgs.Submit">
+            <summary>
+            Gets or sets the submit.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.Notifications.Frontend.OnBeforeSendMail">
+            <summary>
+            The on before send mail.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.Notifications.Frontend.OnBeforeSendMailArgs">
+            <summary>
+            Class OnBeforeSendMailArgs.
+            </summary>
+            <seealso cref="T:Dynamicweb.Extensibility.Notifications.NotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnBeforeSendMailArgs.Template">
+            <summary>
+            Gets or sets the template.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnBeforeSendMailArgs.Form">
+            <summary>
+            Gets or sets the form.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnBeforeSendMailArgs.Submit">
+            <summary>
+            Gets or sets the submit.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.Notifications.Frontend.OnAfterSubmitSave">
+            <summary>
+            The on after submit save.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.Notifications.Frontend.OnAfterSubmitSaveArgs">
+            <summary>
+            Class OnAfterSubmitSaveArgs.
+            </summary>
+            <seealso cref="T:Dynamicweb.Extensibility.Notifications.NotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnAfterSubmitSaveArgs.Form">
+            <summary>
+            Gets or sets the form.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnAfterSubmitSaveArgs.Submit">
+            <summary>
+            Gets or sets the submit.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.Notifications.Frontend.OnBeforeContent">
+            <summary>
+            The on before content.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.Notifications.Frontend.OnBeforeContentArgs">
+            <summary>
+            Class OnBeforeContentArgs.
+            </summary>
+            <seealso cref="T:Dynamicweb.Extensibility.Notifications.NotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnBeforeContentArgs.StopExecution">
+            <summary>
+            Gets or sets a value indicating whether [stop execution].
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnBeforeContentArgs.ContentModule">
+            <summary>
+            Gets the content module.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Frontend.OnBeforeContentArgs.Output">
+            <summary>
+            Gets or sets the output.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.Notifications.Form">
+            <summary>
+            Class Form.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.Notifications.Form.OnBeforeRender">
+            <summary>
+            The on before render.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.Notifications.Form.OnBeforeRenderArgs">
+            <summary>
+            Class OnBeforeRenderArgs.
+            </summary>
+            <seealso cref="T:Dynamicweb.Extensibility.Notifications.NotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Form.OnBeforeRenderArgs.Template">
+            <summary>
+            Gets the template.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Form.OnBeforeRenderArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.Notifications.Fields">
+            <summary>
+            Class Fields.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.Notifications.Fields.OnBeforeRender">
+            <summary>
+            The on before render.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.Notifications.Fields.OnBeforeRenderArgs">
+            <summary>
+            Class OnBeforeRenderArgs.
+            </summary>
+            <seealso cref="T:Dynamicweb.Extensibility.Notifications.NotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Fields.OnBeforeRenderArgs.Template">
+            <summary>
+            Gets the template.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Fields.OnBeforeRenderArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.Notifications.Options">
+            <summary>
+            Class Options.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.Notifications.Options.OnBeforeRender">
+            <summary>
+            The on before render.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.Notifications.Options.OnBeforeRenderArgs">
+            <summary>
+            Class OnBeforeRenderArgs.
+            </summary>
+            <seealso cref="T:Dynamicweb.Extensibility.Notifications.NotificationArgs" />
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Options.OnBeforeRenderArgs.Template">
+            <summary>
+            Gets the template.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Notifications.Options.OnBeforeRenderArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.Option">
+            <summary>
+            Class Option.
+            </summary>
+            <seealso cref="T:Dynamicweb.Data.DbObject" />
+        </member>
+        <member name="P:Dynamicweb.Forms.Option.UniqueId">
+            <summary>
+            Gets or sets the option unique identifier.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Option.FieldID">
+            <summary>
+            Gets or sets the field identifier.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Option.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Option.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Option.DefaultSelected">
+            <summary>
+            Gets or sets a value indicating whether [default selected].
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Option.Sort">
+            <summary>
+            Gets or sets the sort.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Option.Active">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Dynamicweb.Forms.Option"/> is active.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Option.Field">
+            <summary>
+            Gets the field.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Option.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Forms.Option"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Option.Fill(System.Data.IDataReader)">
+            <summary>
+            Fills the specified dr.
+            </summary>
+            <param name="datareader">The dr.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Option.SortDown">
+            <summary>
+            Sorts down.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Option.SortUp">
+            <summary>
+            Sorts up.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Option.GetFormOptionById(System.Int32)">
+            <summary>
+            Gets the form option by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>Option.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Option.GetFormOptionsByField(Dynamicweb.Forms.Field)">
+            <summary>
+            Gets the form options by field.
+            </summary>
+            <param name="field">The field.</param>
+            <returns>List(Of Option).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Option.GetFormOptions">
+            <summary>
+            Gets the form options.
+            </summary>
+            <returns>List(Of Option).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Option.ToggleDefaultOption(System.Int32)">
+            <summary>
+            Toggles the default option.
+            </summary>
+            <param name="newDefaultOptionID">The new default option identifier.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Option.ToggleActive(System.Int32)">
+            <summary>
+            Toggles the active.
+            </summary>
+            <param name="optionID">The option identifier.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Option.GetFormOptionssBySql(System.String)">
+            <summary>
+            Gets the form options by SQL.
+            </summary>
+            <param name="sql">The SQL.</param>
+            <returns>List(Of Option).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Option.ParseOptionInput(System.String)">
+            <summary>
+            Parses the option input.
+            </summary>
+            <param name="optionInput">The option input.</param>
+            <returns>List(Of Option).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Option.ParseOptionInput(System.String,System.Int32)">
+            <summary>
+            Parses the option input.
+            </summary>
+            <param name="optionInput">The option input.</param>
+            <param name="fieldId">The field identifier.</param>
+            <returns>List(Of Option).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Option.Copy(System.Int32)">
+            <summary>
+            Copies the specified to field identifier.
+            </summary>
+            <param name="toFieldId">To field identifier.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Option.DeleteOptionsByFieldId(System.Int32)">
+            <summary>
+            Deletes the options by field identifier.
+            </summary>
+            <param name="fieldId">The field identifier.</param>
+        </member>
+        <member name="T:Dynamicweb.Forms.Renderer">
+            <summary>
+            Class Renderer. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Renderer.RenderForm(Dynamicweb.Rendering.Template,Dynamicweb.Forms.Form,System.String)">
+            <summary>
+            Renders the form.
+            </summary>
+            <param name="template">The template.</param>
+            <param name="form">The form.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Renderer.RenderField(Dynamicweb.Rendering.Template,Dynamicweb.Forms.Field,System.String)">
+            <summary>
+            Renders the field.
+            </summary>
+            <param name="template">The template.</param>
+            <param name="field">The field.</param>
+            <param name="Prefix">The prefix.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Renderer.RenderOption(Dynamicweb.Rendering.Template,Dynamicweb.Forms.Option)">
+            <summary>
+            Renders the option.
+            </summary>
+            <param name="template">The template.</param>
+            <param name="option">The option.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Renderer.RenderSubmit(Dynamicweb.Rendering.Template,Dynamicweb.Forms.Submit,System.Boolean)">
+            <summary>
+            Renders the submit.
+            </summary>
+            <param name="template">The template.</param>
+            <param name="submit">The submit.</param>
+            <param name="renderFormTags">if set to <c>true</c> [render form tags].</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Renderer.RenderReceiptSubmit(Dynamicweb.Rendering.Template,Dynamicweb.Forms.Submit,System.Boolean)">
+            <summary>
+            Renders the receipt submit.
+            </summary>
+            <param name="template">The template.</param>
+            <param name="submit">The submit.</param>
+            <param name="renderFormTags">if set to <c>true</c> [render form tags].</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Renderer.RenderSubmit(Dynamicweb.Rendering.Template,Dynamicweb.Forms.Submit,System.Boolean,System.Boolean)">
+            <summary>
+            Renders the submit.
+            </summary>
+            <param name="template">The template.</param>
+            <param name="submit">The submit.</param>
+            <param name="renderFormTags">if set to <c>true</c> [render form tags].</param>
+            <param name="renderHideInReceiptFields">if set to <c>true</c> render hide in receipt fields].</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Renderer.RenderSubmitData(Dynamicweb.Rendering.Template,Dynamicweb.Forms.SubmitData)">
+            <summary>
+            Renders the submit data.
+            </summary>
+            <param name="template">The template.</param>
+            <param name="currentSubmitData">The submit data.</param>
+        </member>
+        <member name="T:Dynamicweb.Forms.Rules.ConditionType">
+            <summary>
+            The types of rule conditions.
+            </summary>
+            <remarks>https://www.w3schools.com/html/html_form_attributes.asp</remarks>
+        </member>
+        <member name="F:Dynamicweb.Forms.Rules.ConditionType.Autocomplete">
+            <summary>
+            Specifies whether an input field should have autocomplete on or off.
+            </summary>
+            <remarks>Compatible field types: text, search, url, tel, email, password, date pickers, range, and color.</remarks>
+        </member>
+        <member name="F:Dynamicweb.Forms.Rules.ConditionType.Autofocus">
+            <summary>
+            Specifies that the input field should automatically get focus when the page loads.
+            </summary>
+            <remarks>Compatible field types: all.</remarks>
+        </member>
+        <member name="F:Dynamicweb.Forms.Rules.ConditionType.Min">
+            <summary>
+            Specifies the minimum value for an input field.
+            </summary>
+            <remarks>Compatible field types: number, range, date, datetime-local, month, time and week.</remarks>
+        </member>
+        <member name="F:Dynamicweb.Forms.Rules.ConditionType.Max">
+            <summary>
+            Specifies the maximum value for an input field.
+            </summary>
+            <remarks>Compatible field types: number, range, date, datetime-local, month, time and week.</remarks>
+        </member>
+        <member name="F:Dynamicweb.Forms.Rules.ConditionType.Pattern">
+            <summary>
+            Specifies a regular expression.
+            </summary>
+            <remarks>Compatible field types: text, search, url, tel, email, and password.</remarks>
+        </member>
+        <member name="F:Dynamicweb.Forms.Rules.ConditionType.Required">
+            <summary>
+            Specifies that an input field must be filled out before submitting the form.
+            </summary>
+            <remarks>Compatible field types: text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file.</remarks>
+        </member>
+        <member name="F:Dynamicweb.Forms.Rules.ConditionType.Step">
+            <summary>
+            Specifies the legal number intervals for an input field.
+            </summary>
+            <remarks>Compatible field types: number, range, date, datetime-local, month, time and week.</remarks>
+        </member>
+        <member name="F:Dynamicweb.Forms.Rules.ConditionType.Disabled">
+            <summary>
+            Specifies that the input field is disabled.
+            </summary>
+            <remarks>Compatible field types: all.</remarks>
+        </member>
+        <member name="F:Dynamicweb.Forms.Rules.ConditionType.ReadOnly">
+            <summary>
+            Specifies that an input field is read-only.
+            </summary>
+            <remarks>Compatible field types: text area, text, password, search, email, tel, url, date, datetime-local, month, time and week.</remarks>
+        </member>
+        <member name="F:Dynamicweb.Forms.Rules.ConditionType.MaxLength">
+            <summary>
+            Specifies the maximum allowed length for the input field.
+            </summary>
+            <remarks>Compatible field types: text area, text, password, search, email, tel, url.</remarks>
+        </member>
+        <member name="F:Dynamicweb.Forms.Rules.ConditionType.Cols">
+            <summary>
+            Specifies the visible width of a text area.
+            </summary>
+            <remarks>Compatible field types: text area.</remarks>
+        </member>
+        <member name="F:Dynamicweb.Forms.Rules.ConditionType.Rows">
+            <summary>
+            Specifies the visible number of lines in the text area.
+            </summary>
+            <remarks>Compatible field types: text area.</remarks>
+        </member>
+        <member name="T:Dynamicweb.Forms.Rules.Rule">
+            <summary>
+            Represents the rule for the form field.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Rules.Rule.Id">
+            <summary>
+            Gets the ID.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Rules.Rule.IsActive">
+            <summary>
+            Gets or sets the value determines whether the Rule is active.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Rules.Rule.FieldId">
+            <summary>
+            Gets or sets the <see cref="T:Dynamicweb.Forms.Field"/> ID where the rule is applied.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Rules.Rule.TargetFieldId">
+            <summary>
+            Gets or sets the <see cref="T:Dynamicweb.Forms.Field"/> ID used for rule check.
+            If all target field rules are valid, this rule is also valid.
+            Uses only for field visibility rules!
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Rules.Rule.ConditionType">
+            <summary>
+            Gets or sets the condition type for the rule.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Rules.Rule.ConditionValue">
+            <summary>
+            Gets or sets the condition value.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.Rules.RuleService">
+            <summary>
+            Represents the functionality for the <see cref="T:Dynamicweb.Forms.Rules.Rule"/>.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Rules.RuleService.GetRule(System.Int32)">
+            <summary>
+            Gets the Rule by ID.
+            </summary>
+            <param name="id">The Rule ID.</param>
+            <returns>The rule, or <c>null</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Rules.RuleService.GetRules">
+            <summary>
+            Gets all rules.
+            </summary>
+            <returns>A collection of rules.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Rules.RuleService.GetRulesByFieldId(System.Int32)">
+            <summary>
+            Gets all rules by field ID.
+            </summary>
+            <param name="fieldId">The Field ID.</param>
+            <returns>A collection of rules.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Rules.RuleService.GetRulesByTargetFieldId(System.Int32)">
+            <summary>
+            Gets all rules by target field ID.
+            </summary>
+            <param name="targetFieldId">The target Field ID.</param>
+            <returns>A collection of rules.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Rules.RuleService.FindRule(System.Int32,Dynamicweb.Forms.Rules.ConditionType)">
+            <summary>
+            Finds the Rule with the specified condition type in field rules.
+            </summary>
+            <param name="fieldId">The ID of Field to search.</param>
+            <param name="conditionType">The condition type to search.</param>
+            <returns>The found Rule, or <c>null</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Rules.RuleService.FindRule(Dynamicweb.Forms.Field,Dynamicweb.Forms.Rules.ConditionType)">
+            <summary>
+            Finds the Rule with the specified condition type in field rules.
+            </summary>
+            <param name="field">The Field to search.</param>
+            <param name="conditionType">The condition type to search.</param>
+            <returns>The found Rule, or <c>null</c>.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Rules.RuleService.Save(Dynamicweb.Forms.Rules.Rule)">
+            <summary>
+            Saves the rule.
+            </summary>
+            <param name="rule">The rule for save.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Rules.RuleService.DeleteRule(Dynamicweb.Forms.Rules.Rule)">
+            <summary>
+            Removes the rule.
+            </summary>
+            <param name="rule">The rule for delete.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Rules.RuleService.DeleteRules(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Removes rules by IDs.
+            </summary>
+            <param name="ruleIds">The collection of rule IDs.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Rules.RuleService.DeleteRules(Dynamicweb.Forms.Field)">
+            <summary>
+            Removes all rules from field.
+            </summary>
+            <param name="field">The field where rules should be removed.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Rules.RuleService.ClearCache">
+            <summary>
+            Clears the rules cache.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Rules.RuleService.GetRuleByFieldIdAndConditionType(System.Int32,Dynamicweb.Forms.Rules.ConditionType)">
+            <summary>
+            Gets rule value by field ID and condition type.
+            </summary>
+            <param name="fieldId">The Field ID.</param>
+            <param name="conditionType">The condition type.</param>
+            <returns>A collection of rules.</returns>
+        </member>
+        <member name="T:Dynamicweb.Forms.Rules.FieldValidationService">
+            <summary>
+            Contains the helper methods for work with rules and conditions.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Rules.FieldValidationService.GetSuitableConditionTypes(Dynamicweb.Forms.Field)">
+            <summary>
+            Returns the suitable condition types for the field.
+            </summary>
+            <param name="field">The field.</param>
+            <returns>A collection of condition types.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Rules.FieldValidationService.GetConditionDataType(Dynamicweb.Forms.Rules.ConditionType,System.Boolean)">
+            <summary>
+            Returns the data type related to the condition type.
+            </summary>
+            <param name="conditionType">The condition type.</param>
+            <param name="isDateField">Defines is the field type is date.</param>
+            <returns>The type of the data.</returns>
+        </member>
+        <member name="T:Dynamicweb.Forms.Submit">
+            <summary>
+            Class Submit.
+            </summary>
+            <seealso cref="T:Dynamicweb.Data.DbObject" />
+        </member>
+        <member name="P:Dynamicweb.Forms.Submit.SubmitToken">
+            <summary>
+            Gets the submit token used for displaying the receipt. It is an encrypted and base64 version of the submit id.
+            A submit can be displayed  by accessing a page with the forms module by adding s={SubmitToken} to the query string.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Submit.Form">
+            <summary>
+            Gets the form for which this submit originates.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Submit.FieldValues">
+            <summary>
+            Gets the values of all the fields submitted.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Submit.FormID">
+            <summary>
+            Gets or sets the form identifier.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Submit.PageId">
+            <summary>
+            Gets or sets the id of page from where this submit was made.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Submit.Date">
+            <summary>
+            Gets or sets the date for when this submit was made.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Submit.Ip">
+            <summary>
+            Gets or sets the ip of the client making this submit.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Submit.Referrer">
+            <summary>
+            Gets or sets the referrer of the page visited before the page was visited.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Submit.Referer">
+            <summary>
+            Gets or sets the referrer of the page visited before the page was visited.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Submit.SessionId">
+            <summary>
+            Gets or sets the session identifier.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Submit.UserID">
+            <summary>
+            ID of logged in frontend user who submits "Forms for editors" form.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.Submit.ValueString">
+            <summary>
+            Gets the value string.
+            </summary>
+            <value>The value string.</value>
+        </member>
+        <member name="M:Dynamicweb.Forms.Submit.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Forms.Submit"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Submit.Fill(System.Data.IDataReader)">
+            <summary>
+            Fills the specified dr.
+            </summary>
+            <param name="datareader">The dr.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Submit.Delete">
+            <summary>
+            Deletes the current instance of this object based on its ID.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.Submit.DeleteByFormId(System.Int32)">
+            <summary>
+            Deletes all submits and submit data by form ID.
+            </summary>
+            <param name="formId">The form ID.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.Submit.ToCsv(System.Int32,System.Boolean)">
+            <summary>
+            To the CSV.
+            </summary>
+            <param name="formid">The form id.</param>
+            <param name="exportHeaders">If set to <c>true</c> [export headers].</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Submit.ToCsv(System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            To the CSV.
+            </summary>
+            <param name="formid">The form id.</param>
+            <param name="exportHeaders">if set to <c>true</c> [export headers].</param>
+            <param name="pageid">The page id.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Submit.ToExcel(System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            To the Excel.
+            </summary>
+            <param name="formid">The form id.</param>
+            <param name="exportHeaders">if set to <c>true</c> [export headers].</param>
+            <param name="pageid">The page id.</param>
+            <returns>System.Array.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Submit.GetSubmitById(System.Int32)">
+            <summary>
+            Gets the submit by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>Submit.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Submit.GetSubmits">
+            <summary>
+            Gets the submits.
+            </summary>
+            <returns>List(Of Submit).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Submit.GetSubmitsByForm(Dynamicweb.Forms.Form)">
+            <summary>
+            Gets the submits by form.
+            </summary>
+            <param name="form">The form.</param>
+            <returns>List(Of Submit).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Submit.GetSubmitsByFormAndPageId(Dynamicweb.Forms.Form,System.Int32)">
+            <summary>
+            Gets the submits by form and page identifier.
+            </summary>
+            <param name="form">The form.</param>
+            <param name="pageId">The page identifier.</param>
+            <returns>List(Of Submit).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Submit.GetSubmitCountByForm(Dynamicweb.Forms.Form)">
+            <summary>
+            Gets the submit count by form.
+            </summary>
+            <param name="form">The form.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Submit.GetSubmitCountByFormAndPageID(Dynamicweb.Forms.Form,System.Int32)">
+            <summary>
+            Gets the submit count by form and page identifier.
+            </summary>
+            <param name="form">The form.</param>
+            <param name="pageId">The page identifier.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Submit.GetLastSubmitDate(Dynamicweb.Forms.Form)">
+            <summary>
+            Gets the last submit date.
+            </summary>
+            <param name="form">The form.</param>
+            <returns>DateTime.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.Submit.GetSubmitsBySql(System.String)">
+            <summary>
+            Gets the submits by SQL.
+            </summary>
+            <param name="sql">The SQL.</param>
+            <returns>List(Of Submit).</returns>
+        </member>
+        <member name="T:Dynamicweb.Forms.SubmitData">
+            <summary>
+            Class SubmitData.
+            </summary>
+            <seealso cref="T:Dynamicweb.Data.DbObject" />
+        </member>
+        <member name="P:Dynamicweb.Forms.SubmitData.Field">
+            <summary>
+            Gets the field.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.SubmitData.SubmitID">
+            <summary>
+            Gets or sets the submit identifier.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.SubmitData.FieldID">
+            <summary>
+            Gets or sets the field identifier.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.SubmitData.Fieldname">
+            <summary>
+            Gets or sets the field name.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.SubmitData.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.SubmitData.ValueOptionText">
+            <summary>
+            Gets the value option text.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.SubmitData.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Forms.SubmitData"/> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.SubmitData.Fill(System.Data.IDataReader)">
+            <summary>
+            Fills the specified dr.
+            </summary>
+            <param name="datareader">The dr.</param>
+        </member>
+        <member name="M:Dynamicweb.Forms.SubmitData.GetSubmitDataById(System.Int32)">
+            <summary>
+            Gets the submit data by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>SubmitData.</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.SubmitData.GetSubmitDatasBySubmitId(System.Int32)">
+            <summary>
+            Gets the submit data by submit identifier.
+            </summary>
+            <param name="submitId">The submit identifier.</param>
+            <returns>List(Of SubmitData).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.SubmitData.GetSubmitDatas">
+            <summary>
+            Gets the submit data.
+            </summary>
+            <returns>List(Of SubmitData).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.SubmitData.GetSubmitDatasBySql(System.String)">
+            <summary>
+            Gets the submit data by SQL.
+            </summary>
+            <param name="sql">The SQL.</param>
+            <returns>List(Of SubmitData).</returns>
+        </member>
+        <member name="M:Dynamicweb.Forms.SubmitData.DeleteByFormId(System.Int32)">
+            <summary>
+            Deletes all submit data by form ID.
+            </summary>
+            <param name="formId">The form ID.</param>
+        </member>
+        <member name="T:Dynamicweb.Forms.FormTemplate">
+            <summary>
+            Represents the settings for form auto-template.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.FormTemplate.Id">
+            <summary>
+            Gets the ID.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.FormTemplate.AreaId">
+            <summary>
+            Gets or sets the Area ID.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.FormTemplate.TemplateType">
+            <summary>
+            Gets or sets the <see cref="T:Dynamicweb.Forms.TemplateType"/>.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Forms.FormTemplate.TemplatePath">
+            <summary>
+            Gets or sets the template file path.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.FormTemplate.#ctor">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Forms.FormTemplate.#ctor(System.Int32,Dynamicweb.Forms.TemplateType,System.String)">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Forms.TemplateType">
+            <summary>
+            The type of the template.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.TemplateType.Form">
+            <summary>
+            The <see cref="F:Dynamicweb.Forms.TemplateType.Form"/> template.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.TemplateType.Email">
+            <summary>
+            The email template.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Forms.TemplateType.Receipt">
+            <summary>
+            The receipt template.
+            </summary>
+        </member>
+    </members>
+</doc>

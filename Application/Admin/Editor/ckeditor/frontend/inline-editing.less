@@ -1,0 +1,60 @@
+﻿@import "../../../Resources/less/inc/bootstrap-master/variables";
+@import "../../../Resources/less/inc/variables";
+@import "../../../Resources/less/inc/mixin";
+@import "../../../Resources/less/inc/bootstrap-master/mixins/opacity";
+@import "../../../Resources/less/inc/bootstrap-master/mixins/vendor-prefixes";
+@import "../../../Resources/less/inc/bootstrap-master/mixins/buttons";
+a.color-note input[type=text], div.color-selector .color-box {
+	width: 30px;
+	height: 28px;
+	border: solid 1px @m-gray-400;
+	color: transparent;
+	font-size: 0;
+	cursor: pointer;
+}
+
+div.color-selector .color-box {
+	border-left: 0;
+}
+
+.color-selector {
+	margin-right: 15px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.color-selector input {
+	float: left;
+}
+
+.color-selector form-group-input {
+	width: 100px;
+}
+
+.color-selector .color {
+	position: relative;
+	width: 60px;
+}
+
+.color-note {
+	padding: 0;
+
+    input {
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+}
+@import "../../../Resources/less/inc/dw8stylefix/misc";
+@import "../../../Resources/less/inc/button";
+@import "../../../Resources/less/inc/dw8stylefix/dialog";
+
+
+
+.dw-frontend-editable:hover {
+  outline: solid 1px #aaa;
+}
+
+.sidebox .close {
+    text-align: right;
+}
+

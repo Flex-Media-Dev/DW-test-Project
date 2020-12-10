@@ -1,0 +1,183 @@
+﻿/* File Created: januar 2, 2012 */
+.sourceTablePicker {
+    width: 280px;
+}
+
+fieldset div {
+    text-transform: uppercase;
+}
+
+#AdaptersList_body, #OptionsProviderTitle div {
+    text-transform: none !important;
+}
+
+.destinationTablePicker {
+    width: 310px;
+}
+
+.tablePickerDiv * {
+    vertical-align: top;
+}
+
+.selectedDestinationColumn {
+    width: 310px;
+}
+
+.selectedDestinationColumnDiv {
+    float: left;
+    margin-right: 5px;
+}
+
+.selectedSourceColumnDiv {
+    margin-right: 5px;
+    float: left;
+}
+
+.selectedSourceColumn {
+    width: 280px;
+}
+
+.SourceTableSelectorDiv {
+    float: left;
+    margin-right: 5px;
+    margin-left: 22px;
+}
+
+.DestinationTableSelectorDiv {
+    float: left;
+    margin-right: 5px;
+}
+
+.jobContainerDiv {
+    margin-left: 5px;
+    margin-top: 5px;
+    overflow: scroll;
+}
+
+.input-group-addon.border-left {
+    border-left: 1px #bdbdbd solid;
+}
+
+.input-group-addon.border-left.disabled {
+    border-left: 1px #f5f5f5 solid;
+}
+
+.ColumnMappingSelectedCheckbox + label {
+    float: left;
+    margin-top: 5px;
+}
+
+.SourceHeadingTable {
+    float: left;
+    width: 310px;
+    font-size: 12px;
+    padding-left: 127px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.SourceHeading {
+    float: left;
+    width: 310px;
+    font-size: 12px;
+    padding-left: 89px;
+    font-weight: bold;
+}
+
+.DestinationHeadingTable {
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    width: auto;
+}
+
+.DestinationHeading {
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.checkAllDiv {
+    float: left;
+    margin-left: 10px;
+}
+
+.Collapse {
+    float: left;
+}
+
+.jobname {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tablePickerDiv {
+    width: 100%;
+    padding: 5px 0;    
+    margin-left: 5px;
+    margin-top: 0px;
+    padding-left: 5px;
+}
+
+.columnMappingDiv * {
+    vertical-align: top;
+}
+
+.columnMappingDiv input[type="checkbox"] {
+    margin-top: 10px;
+}
+
+.columnMappingDiv {
+    width: 100%;
+    padding: 5px 0;
+    margin-left: 5px;
+}
+
+.info {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #2F7F2C;
+}
+
+.checkAllCheckbox {
+    float: left;
+}
+
+#scriptValue {
+    height: 32px;
+    width: 400px;
+}
+
+#scriptType {
+    height: 32px;
+    width: 90px;
+}
+
+.sidebox .bodywrapper .boxbody .condition-column {
+    width: 40%;
+    float: left;
+    margin-right: 3px;
+}
+
+.sidebox .bodywrapper .boxbody .condition-operator {
+    width: 15%;
+    float: left;
+    margin-right: 3px;
+}
+
+.sidebox .bodywrapper .boxbody .condition-text {
+    width: 40%;
+    float: left;
+}
+
+.data-column-mapings-container {
+    width: 640px;
+}
+
+.data-column-mapings-commands {
+    text-align: center;
+}

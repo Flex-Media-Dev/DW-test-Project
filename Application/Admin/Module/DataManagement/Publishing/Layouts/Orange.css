@@ -1,0 +1,35 @@
+@import url('Paging.css');
+table.DatamanagementPublishingLayoutTable 
+{
+	text-align: center;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif ;
+	font-weight: normal;
+	font-size: 11px;
+	color: #fff;
+	width: 280px;
+	background-color: #F79646;
+	border: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+table.DatamanagementPublishingLayoutTable td 
+{
+	background-color: #FDE4D0;
+	color: #000;
+	padding: 4px;
+	text-align: left;
+	border: 1px #F79646 solid;
+}
+
+table.DatamanagementPublishingLayoutTable th
+{
+	background-color: #F79646;
+	color: #fff;
+	padding: 4px;
+	text-align: left;
+	border-bottom: 1px #F79646 solid;
+	font-size: 12px;
+	font-weight: bold;
+}
+ 

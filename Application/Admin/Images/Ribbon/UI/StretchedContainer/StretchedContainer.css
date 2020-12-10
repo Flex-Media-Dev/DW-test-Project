@@ -1,0 +1,27 @@
+﻿.stretchedContainer
+{
+	/* Nothing goes here (marker class) */
+}
+
+/* Stretch mode: "Stretch horizontally" */
+.stretchedContainer_h
+{
+	/* Nothing goes here */
+}
+
+/* Stretch mode: "Stretch vertically" */
+.stretchedContainer_v
+{
+	float: left;
+}
+
+.stretchedContainer_v + *
+{
+	clear: left;
+}
+
+/* Stretch mode: "Fill" */
+.stretchedContainer_f
+{
+	width: 100%;
+}

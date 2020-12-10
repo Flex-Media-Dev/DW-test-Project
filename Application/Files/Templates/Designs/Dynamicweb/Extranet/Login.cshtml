@@ -1,0 +1,39 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+@{
+    var request = System.Web.HttpContext.Current.Request;
+}
+
+<form method="post" role="form" class="form-horizontal">
+    <div style="display: none">
+        <input type="hidden" name="redirect" value='@request["redirect"]' />
+    </div>
+
+    <div class="form-group">
+        <label for="username" class="col-sm-2 control-label">@Translate("Username", "Username")</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="username" name="username" placeholder='@Translate("Username", "Username")' />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password" class="col-sm-2 control-label">@Translate("Password", "Password")</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="password" name="password" placeholder='@Translate("Password", "Password")' />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">@Translate("Sign_in", "Sign in")</button>
+        </div>
+    </div>
+
+    @if (request.RequestType == "POST" && Pageview.User == null)
+    {
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="alert alert-danger">@Translate("Invalid_username_or_password", "Invalid username or password")</div>
+            </div>
+        </div>
+    }
+</form>

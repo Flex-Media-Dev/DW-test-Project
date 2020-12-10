@@ -1,0 +1,430 @@
+﻿html, body 
+{
+    margin: 0px;
+    padding: 0px;
+    border-right: none !important;
+    /*background-color: #f4f8fc !important;*/
+    height: auto !important;
+}
+
+input, textarea
+{
+    resize: none;
+}
+
+.content-main
+{
+    padding: 5px;
+}
+
+.split-test-report-split
+{
+    float: left;
+}
+
+.split-test-report-split .split-test-report-left
+{
+    float: left;
+    width: 495px;
+}
+
+.split-test-report-split .split-test-report-middle
+{
+    float: left;
+    width: 495px;
+}
+
+.split-test-report-split .split-test-report-left table.dw-rc
+{
+    width: 495px !important;
+}
+
+.split-test-report-split .split-test-report-middle table.dw-rc
+{
+    width: 495px !important;
+    /*height: 420px !important;*/
+}
+
+.split-test-report-split .split-test-report-right
+{
+    float: left;
+}
+
+.split-test-report-clear, .omc-clear
+{
+    clear: both;
+}
+
+.split-test-report-no-data
+{
+    text-align: center; 
+    padding-top: 92px; 
+    color: #9b9b9b;
+    height: 108px;
+}
+
+.split-test-report-separator
+{
+    height: 25px;
+}
+
+.split-test-report-separator-middle
+{
+    height: 5px;
+}
+
+.split-test-report-most-visits tr th,
+.split-test-report-most-visits tr td
+{
+     text-align: left;
+}
+
+.split-test-report-most-visits tr th
+{
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #f8f8f8;
+}
+
+.split-test-report-most-visits tr td
+{
+    background-color: #ffffff;
+}
+
+.split-test-report-most-visits tr.split-test-report-row-alternative td
+{
+    background-color: #f8f8f8;
+}
+
+.split-test-report-most-visits tr th.split-test-report-page-name
+{
+    width: 350px;
+}
+
+.split-test-report-most-visits tr th.split-test-report-page-visits,
+.split-test-report-most-visits tr th.split-test-report-page-percentage
+{
+    width: 175px;
+}
+
+.split-test-report-info
+{
+    height: 50px;
+}
+
+.split-test-report-info h3
+{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #6b6b6b;
+}
+
+.split-test-report-info ul.split-test-report-legend,
+.split-test-report-info ul.split-test-report-legend li
+{
+    list-style: none;
+    padding-left: 3px;
+    margin-left: 15px;
+    list-style-position: outside;
+    list-style-type: none;
+}
+
+.split-test-report-info ul.split-test-report-legend li
+{
+    height: 12px;
+    line-height: 12px;
+    font-size: 12px;
+    float: left;
+    margin-right: 5px;
+}
+
+.split-test-report-info ul.split-test-report-legend li .split-test-report-legend-item
+{
+    width: 8px;
+    height: 8px;
+    border: 1px solid #c3c3c3;
+    float: left;
+}
+
+.split-test-report-stats-row
+{
+    font-size: 12px;
+    color: #6b6b6b;
+    margin-left: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.split-test-report-stats-row .split-test-report-number
+{
+    font-weight: bold;
+    font-size: 18px;
+    color: #4f76b5;
+}
+
+
+table.tabTable, fieldset
+{
+    display: block;
+    width: 650px;
+}
+
+#EmailTrackingDialog table.tabTable, #EmailTrackingDialog fieldset
+{
+    display: block;
+    width: 350px;
+}
+
+div.section-separator
+{
+    padding: 0px;
+    margin: 0px;
+    height: 32px;
+    line-height: 32px;
+}
+
+div.content-info
+{
+    color: #666666;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+/*
+h2.omc-report-heading, p.omc-report-description
+{
+    margin-left: 5px;
+}
+
+h2.omc-report-heading
+{
+    padding-left: 2px;
+    
+    margin-top: 15px;
+    padding-top: 0px;
+ 
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+ 
+    color: #4d4d4d;
+    
+    font-size: 22px;
+    height: 32px;
+    line-height: 32px;
+}
+
+p.omc-report-description
+{
+    padding-left: 4px;
+    
+    font-size: 11px;
+    width: 550px;
+    
+    color: #6d6d6d;
+    
+    margin-top: -10px;
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+}
+
+.omc-filters-container
+{
+    margin-bottom: 10px;
+}
+
+.omc-report-tasks
+{
+    padding: 5px;
+}
+
+.omc-report-tasks ul,
+.omc-report-tasks ul li
+{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.omc-report-tasks ul li
+{
+    height: 22px;
+    line-height: 22px;
+}
+
+.omc-report-tasks ul li a
+{
+    display: block;
+    float: left;
+    padding-left: 20px;
+    
+    background-repeat: no-repeat;
+    background-position: 0px 2px;
+}
+
+.omc-report-tasks ul li a span,
+.omc-report-tasks ul li a img
+{
+    float: left;
+}
+
+.omc-report-tasks ul li a img
+{
+    margin: 0px;
+    padding: 0px;
+    margin-left: 8px;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+}
+
+.omc-report-tasks ul li a,
+.omc-report-tasks ul li a:focus,
+.omc-report-tasks ul li a:active
+{
+    outline: none;
+}
+
+.omc-report-tasks ul li a.omc-report-task-edit
+{
+    background-image: url('/Admin/Module/OMC/img/report_edit_small.png');
+}
+
+.omc-report-tasks ul li a.omc-report-task-export-csv
+{
+    background-image: url('/Admin/Module/OMC/img/report_export_green_small.png');
+}
+
+.omc-report-tasks ul li a.omc-report-task-export-pdf
+{
+    background-image: url('/Admin/Module/OMC/img/report_export_red_small.png');
+}
+
+.omc-report-tasks ul li a.omc-report-task-delete
+{
+    background-image: url('/Admin/Module/OMC/img/report_delete_small.png');
+}
+
+.omc-report-filters-disabled
+{
+    position: absolute;
+    z-index: 1;
+    
+    background-color: #ffffff;
+    
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    filter: alpha(opacity = 50);
+}
+
+div.omc-report-filter-row, div.omc-apply-row
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+div.omc-apply-row input
+{
+    float: right;
+    width: 85px;
+}
+
+a.omc-manage-settings
+{
+    display: block;
+    padding-left: 20px;
+    height: 16px;
+    line-height: 16px;
+    background: url('/Admin/Images/Ribbon/Icons/Small/EditDocument.png') top left no-repeat;
+}
+
+a.omc-manage-settings,
+a.omc-manage-settings:visited,
+a.omc-manage-settings:active
+{
+    /*color: #1d4683;*/
+}
+/*
+a.omc-link-noselect:hover,
+a.omc-link-noselect:active,
+a.omc-link-noselect:focus,
+a.omc-link-noselect:visited
+{
+    outline: none;
+}
+
+div.omc-chart-settings
+{
+    width: 500px;
+    height: 250px;
+    overflow: scroll;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    border-bottom: 1px solid #c3c3c3;
+}
+
+span.omc-chart-settings-field-offset
+{
+    margin-left: 12px;
+}
+
+div.popup-dialog button
+{
+    margin: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.dwGrid tr.footer td
+{
+    padding-left: 3px;
+}
+
+.report-data-truncated,
+.report-install-chromeframe
+{
+    padding-top: 5px;
+}
+
+.report-data-truncated .Infobar,
+.report-data-truncated .infobar,
+.report-install-chromeframe .Infobar,
+.report-install-chromeframe .infobar
+{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.report-install-chromeframe .Infobar,
+.report-install-chromeframe .infobar
+{
+    cursor: pointer;
+}
+
+.omc-notification-link
+{
+    color: #225288;
+}
+
+.omc-dropdown-short
+{
+    width: 150px !important;
+}
+
+.omc-table-field
+{
+    display: block;
+}
+
+.omc-report-pdf
+{
+    display: none;
+}
+
+.omc-report-data
+{
+    margin-top: 10px;
+}
+*/

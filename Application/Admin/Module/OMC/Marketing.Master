@@ -1,0 +1,31 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Marketing.master.vb" Inherits="Dynamicweb.Admin.Marketing" %>
+
+<%@ Register TagPrefix="dw" Namespace="Dynamicweb.Controls" Assembly="Dynamicweb.Controls" %>
+<%@ Import Namespace="Dynamicweb.SystemTools" %>
+
+<!DOCTYPE html>
+<html>
+    <head runat="server">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+        <title></title>
+        <dw:ControlResources ID="ctrlResources" runat="server">
+            <Items>
+                <dw:GenericResource Url="/Admin/Resources/js/layout/dwglobal.js" />
+                <dw:GenericResource Url="/Admin/Resources/js/layout/Actions.js" />
+                <dw:GenericResource Url="/Admin/Resources/css/dw8omcstylefix.min.css" />
+            </Items>
+        </dw:ControlResources>
+        <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+    </head>
+
+    <body class="area-teal screen-container">
+        <div class="dw8-container">
+            <asp:ContentPlaceHolder ID="HeaderContext" runat="server"></asp:ContentPlaceHolder>
+            <form id="MainForm" runat="server">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </form>
+        </div>
+        <asp:ContentPlaceHolder ID="FooterContext" runat="server"></asp:ContentPlaceHolder>
+        <%Translate.GetEditOnlineScript()%>
+    </body>
+</html>

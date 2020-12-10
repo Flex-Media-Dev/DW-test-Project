@@ -1,0 +1,59 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+@GetValue("UserManagement:User.ManageAddresses.MakeDefault.Javascript")
+@GetValue("UserManagement:User.ManageAddresses.DeleteAddress.Javascript")
+@GetValue("UserManagement:User.ManageAddresses.AddAddress.Javascript")
+@GetValue("UserManagement:User.ManageAddresses.UpdateAddress.Javascript")
+
+<h2>@Translate("Manage_addresses", "Manage Addresses")</h2>
+
+@GetValue("UserManagement:User.ManageAddresses.FormStart")
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Translate("Description", "Description")</th>
+            <th>@Translate("Address", "Address")</th>
+            <th>@Translate("Address2", "Address2")</th>
+            <th>@Translate("Zip_code", "Zip code")</th>
+            <th>@Translate("City", "City")</th>
+            <th>@Translate("State", "State")</th>
+            <th>@Translate("Country", "Country")</th>
+            <th>@Translate("Default", "Default")</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var address in GetLoop("UserManagement:User.UserAddresses"))
+        {
+            <tr>
+                <td>@address.GetValue("UserManagement:User.UserAddress.Description")&nbsp;</td>
+                <td>@address.GetValue("UserManagement:User.UserAddress.Address")&nbsp;</td>
+                <td>@address.GetValue("UserManagement:User.UserAddress.Address2")&nbsp;</td>
+                <td>@address.GetValue("UserManagement:User.UserAddress.Zip")&nbsp;</td>
+                <td>@address.GetValue("UserManagement:User.UserAddress.City")&nbsp;</td>
+                <td>@address.GetValue("UserManagement:User.UserAddress.State")&nbsp;</td>
+                <td>@address.GetValue("UserManagement:User.UserAddress.Country")&nbsp;</td>
+                <td>
+                    @if (!string.IsNullOrWhiteSpace(address.GetString("UserManagement:User.UserAddress.Default")))
+                    {
+                        <span class="glyphicon glyphicon-ok" />
+                    }
+                </td>
+                <td>
+                    <button type="button" class="btn btn-default btn-xs" onclick="makeDefaultAddress('@address.GetValue("UserManagement:User.UserAddress.ID")');" title='@Translate("Set_default", "Set default")'><span class="glyphicon glyphicon-check"></span></button>
+                    <button type="button" class="btn btn-default btn-xs" onclick="updateAddress('@address.GetValue("UserManagement:User.UserAddress.ID")');" title='@Translate("Edit_address", "Edit address")'><span class="glyphicon glyphicon-edit"></span></button>
+                    <button type="button" class="btn btn-default btn-xs" onclick="deleteAddress('@address.GetValue("UserManagement:User.UserAddress.ID")');" title='@Translate("Delete_address", "Delete address")'><span class="glyphicon glyphicon-trash"></span></button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    @if (!string.IsNullOrWhiteSpace(GetString("UserManagement:User.DetailUrl")))
+    {
+        <a href="@GetValue("UserManagement:User.DetailUrl")" class="btn btn-default">@Translate("Back_to_profile", "Back to profile")</a>
+    }
+    <button type="submit" onclick="addAddress();" class="btn btn-primary">@Translate("Add_address", "Add address")</button>
+</div>
+@GetValue("UserManagement:User.ManageAddresses.FormEnd")

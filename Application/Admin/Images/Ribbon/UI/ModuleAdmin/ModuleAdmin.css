@@ -1,0 +1,38 @@
+﻿html,body
+{
+	margin: 0px;
+	padding: 0px;
+	height:100%;
+	background: #bfdbff;
+	overflow:hidden;
+}
+.LayoutTable
+{
+	height:100%;
+	width:100%;
+	border-collapse: collapse;
+}
+.LayoutTable td
+{
+	vertical-align:top;
+	padding:0px;
+}
+.LayoutTable .TreeContainer
+{
+	width:350px;
+	max-width:350px;
+	height:100%;
+}
+
+.LayoutTable .ContentFrameContainer
+{
+	height:100%;
+	
+}
+
+iframe
+{
+	width:100%;
+	height:100%;
+	overflow:visible;
+}

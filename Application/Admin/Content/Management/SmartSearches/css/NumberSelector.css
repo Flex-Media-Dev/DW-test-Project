@@ -1,0 +1,113 @@
+﻿div.number-selector
+{
+    height: 18px;
+    max-height: 18px;
+    
+    width: 100px;
+}
+
+div.number-selector,
+div.number-selector-arrows,
+div.number-selector div.number-selector-clear,
+div.number-selector div.number-selector-arrows a
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+div.number-selector div.number-selector-clear
+{
+    visibility: hidden;
+    display: block;
+    height: 0px;
+    clear: both;
+}
+
+div.number-selector input,
+div.number-selector div.number-selector-arrows
+{
+    float: left;
+}
+
+div.number-selector input
+{
+    margin: 0px;
+    padding: 0px;
+    
+    margin-right: 0px;
+    border-right: 0px solid black !important;
+    
+    border-radius: 2px 0px 0px 2px !important;
+    -moz-border-radius: 2px 0px 0px 2px !important;
+    
+    width: 82px !important;
+    height: 16px;
+    line-height: 16px;
+    
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+div.number-selector div.number-selector-arrows
+{
+    height: 16px;
+    border: 1px solid #abadb3;
+    
+    width: 13px;
+    
+    border-radius: 0px 2px 2px 0px !important;
+    -moz-border-radius: 0px 2px 2px 0px !important;
+}
+
+div.number-selector div.number-selector-arrows a
+{
+    display: block;
+    
+    width: 13px;
+    height: 7px;
+    
+    cursor: pointer;
+    
+    background-repeat: no-repeat;
+    background-image: url('/Admin/Module/OMC/img/number-selector-arrows.png');
+}
+
+div.number-selector div.number-selector-arrows a,
+div.number-selector div.number-selector-arrows a:hover,
+div.number-selector div.number-selector-arrows a:active,
+div.number-selector div.number-selector-arrows a:visited
+{
+    text-decoration: none;
+}
+
+div.number-selector div.number-selector-arrows a:focus
+{
+    outline: none;
+}
+
+div.number-selector div.number-selector-arrows a:hover
+{
+    background-color: #e8f4ff;
+}
+
+div.number-selector div.number-selector-arrows a.number-selector-arrow-up
+{
+    background-position: 3px 1px;
+    border-bottom: 1px solid #ffffff;
+}
+
+div.number-selector div.number-selector-arrows a.number-selector-arrow-down
+{
+    background-position: 3px -8px;
+    border-top: 1px solid #ffffff;
+}
+
+div.number-selector div.number-selector-arrows a.number-selector-arrow-up:hover
+{
+    border-bottom: 1px solid #d9edff;
+}
+
+div.number-selector div.number-selector-arrows a.number-selector-arrow-down:hover
+{
+    border-top: 1px solid #d9edff;
+}

@@ -1,0 +1,312 @@
+﻿div.optimize-phrase-list
+{
+	background-color: #ffffff;
+	padding-top: 0px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+div.optimize-messages
+{
+	display: none;
+}
+
+div.optimize-phrase-list table
+{
+	width: 100%;
+	margin: 0px auto;
+	text-align: left;
+	table-layout: fixed;
+}
+
+div.optimize-phrase-list table td,
+div.optimize-phrase-list table td a
+{
+	overflow: hidden;
+}
+
+div.optimize-phrase-list table td
+{
+	border: 1px solid #FFFFFF;
+	padding: 0px;
+	white-space: nowrap;
+}
+
+div.optimize-phrase-list table td.optimize-no-phrases div
+{
+	margin: 0px auto;
+	text-align: center;
+	padding-top: 75px;
+	
+	color: #797979;
+	font-size: 14px;
+	font-style: italic;
+}
+
+div.optimize-phrase-list table td:hover
+{
+	border: solid 1px #B9D7FC;
+	background-color:#0085CA;
+	color: #fff;
+}
+
+div.optimize-phrase-list table td a:hover
+{
+	color: #fff;
+}
+
+div.optimize-phrase-list table td.optimize-no-phrases:hover
+{
+	border: 1px solid #FFFFFF !important;
+	background: none !important;
+}
+
+div.optimize-phrase-list table td:hover a span.optimize-fade
+{
+	display: none;
+}
+
+div.optimize-phrase-list table td a
+{
+	display: block;
+	position: relative;
+	font-size: 14px;
+	padding-left: 20px;
+	height: 32px;
+	line-height: 32px;
+	background-position: 1px 2px;
+	background-repeat: no-repeat;
+}
+
+div.optimize-phrase-custom
+{
+	position: fixed;
+	padding-top: 15px;
+	bottom: 10px;
+	height: 32px;
+	right: 6px;
+	left: 6px;
+	border-top: 1px solid #c3c3c3;
+	background: #ffffff;
+	margin: 0px auto;
+	text-align: center;
+}
+
+div.optimize-phrase-custom span
+{
+	/* IE7 */
+	*display: inline-block;
+	*vertical-align: middle;
+	*height: 100%;
+	
+	color: #7c7c7c;
+	padding-top: 3px;
+	padding-right: 5px;
+	font-size: 12px;
+}
+
+div.optimize-phrase-custom input[type="text"]
+{
+	height: 24px;
+    line-height: 24px;
+    width: 200px;
+    border: 1px solid #ABADB3;
+    background-color: #ffffff;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+div.optimize-phrase-custom input[type="image"]
+{
+	margin-top: 0px;
+    height: 26px;
+    vertical-align: top;
+    border: 1px solid #ABADB3;
+    border-left: 0px solid black;
+}
+
+div.optimize-results div.optimize-results-fields
+{
+    float:left;
+	z-index: 1;
+	
+	background-color: #ffffff;
+}
+
+div.optimize-results div.optimize-results-fields fieldset
+{
+	margin: 0px !important;
+	overflow: hidden;
+}
+
+div.optimize-results div.optimize-results-fields fieldset legend
+{
+	font-size: 120%;
+	font-weight: bold;
+}
+
+div.optimize-results div.optimize-results-fields div.optimize-navigation
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+div.optimize-results div.optimize-results-fields div.optimize-edit-box
+{
+	position: relative;
+    width: 400px;
+}
+
+div.optimize-results div.optimize-results-fields fieldset
+{
+    border-bottom:none;
+}
+
+div.optimize-results div.optimize-results-fields div.groupbox fieldset
+{    
+    height:175px;
+}
+
+div.optimize-results div.optimize-results-fields fieldset
+{    
+    height:295px;
+}
+
+
+div.optimize-results div.optimize-results-fields div.optimize-edit-box div.optimize-optimized
+{
+	margin-top: 60px;
+	margin-left: 4px;
+	font-size: 12px;
+    min-width:400px;
+}
+
+div.optimize-results div.optimize-results-fields div.optimize-edit-box ol
+{
+	margin: 0px;
+	padding: 0px;
+	margin-top: 60px;
+	margin-left: 30px;
+	margin-right: 5px;
+}
+
+div.optimize-results div.optimize-results-fields div.optimize-edit-box ol li
+{
+	margin-bottom: 15px;
+	font-size: 12px;
+}
+
+div.optimize-results div.optimize-results-fields div.optimize-field-container
+{
+	white-space: nowrap;
+}
+
+div.optimize-results div.optimize-results-fields div.optimize-field-container div.optimize-input-container
+{
+	left: 20px;
+	right: 280px;
+	top: 70px;
+	height: 24px;
+}
+
+div.optimize-results div.optimize-results-fields div.optimize-field-container div.optimize-image-container
+{
+	top: 70px;
+	right: 245px;
+	height: 24px;
+}
+
+div.optimize-results div.optimize-results-fields div.optimize-field-container div
+{
+	font-weight: bold;
+	color: #004080;
+	font-size: 16px;
+	padding-bottom: 4px;
+}
+
+div.optimize-results div.optimize-results-summary
+{
+	width: 225px;	
+    float:right;
+	z-index: 2;
+}
+
+div.optimize-results-summary td.optimize-summary-fieldrow
+{
+	border-top: 0px solid black;
+	border-left: 1px solid #c3c3c3;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #c3c3c3;
+	cursor: pointer;
+	
+	background-color: #f9f9f9;
+	
+	padding: 4px;
+}
+
+div.optimize-results-summary td.optimize-summary-fieldrow:hover
+{
+	background-color: #f4f4f4;
+}
+
+div.optimize-results-summary td.optimize-summary-fieldrow.optimize-summary-active
+{
+	border-left: 1px solid #ffffff;
+	background-color: #ffffff;
+}
+
+div.optimize-results-summary td.optimize-summary-fieldrow div.optimize-summary-fieldtitle
+{
+	padding-top: 2px;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+div.optimize-results-summary td.optimize-summary-fieldrow div.optimize-summary-fieldvalue
+{
+	padding-top: 4px;
+	font-size: 11px;
+	color: #989898;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 190px;
+}
+
+div.optimize-progress
+{
+	border-left: 1px solid #c3c3c3;
+	font-size: 14px;
+	text-align: center;
+	height: auto;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+div.optimize-progress div
+{
+	padding: 5px;
+}
+
+div.optimize-progress div span
+{
+	font-weight: bold;
+	font-size: 150%;
+	padding: 3px;
+}
+
+#iconWarning_4, #iconOk_4, #iconErr_4, #iconWarning_3, #iconOk_3, #iconErr_3
+{
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+    /*       
+        value_3 & _4 refer to <div id="value_3" class="optimize-summary-fieldvalue"> in optimize.aspx      
+        value_3 - Keywords
+        value_4 - Description
+        */ 
+#value_3, #value_4
+{
+	height: 47px;
+}
