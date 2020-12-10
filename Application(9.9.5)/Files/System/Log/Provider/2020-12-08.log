@@ -1,5 +1,0 @@
-2020-12-08 17:23:37.6758|Provider|ERROR|GetProvider|Object reference not set to an instance of an object.
-2020-12-08 17:27:56.4482|Provider|ERROR|GetProvider|Cannot open database "DW-test-Project" requested by the login. The login failed.
-Login failed for user 'admin'.
-2020-12-08 17:52:06.2631|Provider|ERROR|GetProvider|Cannot open database "DW-test-Project" requested by the login. The login failed.
-Login failed for user 'admin'.

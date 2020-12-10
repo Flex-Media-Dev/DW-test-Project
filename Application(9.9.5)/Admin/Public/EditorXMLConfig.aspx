@@ -1,1 +1,0 @@
-<%@ Page Language="vb" AutoEventWireup="false" Codebehind="EditorXMLConfig.aspx.vb" Inherits="Dynamicweb.Admin.EditorXMLConfig" contentType="xml" %>

@@ -1,1 +1,0 @@
-<%@ Page Language="vb" AutoEventWireup="false" codebehind="ControlPanel_Save.aspx.vb" Inherits="Dynamicweb.Admin.ControlPanel_Save" ValidateRequest="false"%>

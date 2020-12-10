@@ -1,1 +1,0 @@
-﻿You need to update web.config with the content of dynamicweb.web.config 

@@ -1,1 +1,0 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Store.aspx.vb" Inherits="Dynamicweb.Admin.Store" %>
