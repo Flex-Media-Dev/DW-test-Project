@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<doc>
-    <assembly>
-        <name>Dynamicweb.DataIntegration.Providers.OrderProvider</name>
-    </assembly>
-    <members>
-        <!-- Badly formed XML comment ignored for member "P:Dynamicweb.DataIntegration.Providers.OrderProvider.OrderProvider.ExistingUsers" -->
-    </members>
-</doc>
