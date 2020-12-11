@@ -1,0 +1,2712 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dynamicweb.Imaging</name>
+    </assembly>
+    <members>
+        <member name="T:Dynamicweb.Imaging.Colors.Color">
+            <summary>
+            Class Color. Use the constructor or one of the <see cref="M:Dynamicweb.Imaging.Colors.Color.FromRgb(System.Int32,System.Int32,System.Int32)">fromRgb</see>, <see cref="M:Dynamicweb.Imaging.Colors.Color.FromHex(System.String)">fromHex</see> or <see cref="M:Dynamicweb.Imaging.Colors.Color.FromHsv(System.Double,System.Double,System.Double)">fromHsv</see> to create a new instance.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.Colors.Color._cleanColor">
+            <summary>
+            The _clean color
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.Colors.Color._hsv">
+            <summary>
+            The _HSV
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.Colors.Color._hsl">
+            <summary>
+            The _HSL
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.Colors.Color.BaseColor">
+            <summary>
+            Gets the base color - defined when object was initialized.
+            </summary>
+            <value>The original color</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.Colors.Color.CleanColor">
+            <summary>
+            Gets the clean color based on original color. Hue not changed, saturation and value set to 100.
+            </summary>
+            <value>The color of the clean.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.Colors.Color.Hsv">
+            <summary>
+            Gets a HSV instance of this color.
+            </summary>
+            <value>The HSV.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.Colors.Color.Hsl">
+            <summary>
+            Gets a HSL instance of this color.
+            </summary>
+            <value>The HSL.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.Colors.Color.Brightness">
+            <summary>
+            Gets the brightness from 1-255, where 255 is white and 1 is black.
+            </summary>
+            <value>The brightness.</value>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.#ctor(System.Drawing.Color)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Imaging.Colors.Color" /> class.
+            </summary>
+            <param name="color">The color.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.ToHex">
+            <summary>
+            Returns the hex value of the specified color.
+            </summary>
+            <returns>A hex value.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.GetAccentColor(System.Int32)">
+            <summary>
+            Gets the color of the accent.
+            </summary>
+            <param name="degrees">The color of the accent</param>
+            <returns>The color</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.GenerateClearColors(System.Int32)">
+            <summary>
+            Generates clear colors based on the base color.
+            </summary>
+            <param name="count">The count.</param>
+            <returns>ColorCollection.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.GenerateShadeColors(System.Int32)">
+            <summary>
+            Generates shade colors (Dark).
+            </summary>
+            <param name="count">The count.</param>
+            <returns>ColorCollection.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.GenerateToneColors(System.Int32)">
+            <summary>
+            Generates tone colors (Medium).
+            </summary>
+            <param name="count">The count.</param>
+            <returns>ColorCollection.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.GenerateTintColors(System.Int32)">
+            <summary>
+            Generates tint colors (Light).
+            </summary>
+            <param name="count">The count.</param>
+            <returns>ColorCollection.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.GeneratePastelColors(System.Int32)">
+            <summary>
+            Generates pastel colors.
+            </summary>
+            <param name="count">The count.</param>
+            <returns>ColorCollection.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.GenerateLightGreyColors(System.Int32)">
+            <summary>
+            Generates light grey colors.
+            </summary>
+            <param name="count">The count.</param>
+            <returns>ColorCollection.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.GenerateGreyColors(System.Int32)">
+            <summary>
+            Generates grey colors.
+            </summary>
+            <param name="count">The count.</param>
+            <returns>ColorCollection.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.GenerateDarkGreyColors(System.Int32)">
+            <summary>
+            Generates dark grey colors.
+            </summary>
+            <param name="count">The count.</param>
+            <returns>ColorCollection.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.GenerateSimilarColors(System.Int32)">
+            <summary>
+            Generates similar colors.
+            </summary>
+            <param name="count">The count.</param>
+            <returns>ColorCollection.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.GetSeed(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets a normalized seed from a range based on a count and index.
+            </summary>
+            <param name="min">The minimum.</param>
+            <param name="max">The maximum.</param>
+            <param name="count">The count.</param>
+            <param name="index">The index.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.Lighten(System.Int32)">
+            <summary>
+            Lightens the color with the specified percent (1-100).
+            </summary>
+            <param name="percent">The percent (1-100).</param>
+            <returns>Color.</returns>
+            <exception cref="T:System.IndexOutOfRangeException">Percent must be between 1-100</exception>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.Darken(System.Int32)">
+            <summary>
+            Darkens the color with the specified percent (1-100).
+            </summary>
+            <param name="percent">The percent (1-100).</param>
+            <returns>Color.</returns>
+            <exception cref="T:System.IndexOutOfRangeException">Percent must be between 1-100</exception>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.Darken(System.String,System.Int32)">
+            <summary>
+            Darkens the specified color.
+            </summary>
+            <param name="hex">The color hex. '#FFFFFF' or 'FFFFFF'</param>
+            <param name="percent">The percent (1-100).</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.Lighten(System.String,System.Int32)">
+            <summary>
+            Lightens the specified color.
+            </summary>
+            <param name="hex">The color hex. '#FFFFFF' or 'FFFFFF'</param>
+            <param name="percent">The percent (1-100).</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.ToString">
+            <summary>
+            Returns current hex
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.FromRgb(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new instance of the <see cref="T:Dynamicweb.Imaging.Colors.Color" /> class from RGB values.
+            </summary>
+            <param name="red">The red component value. Valid values are 0 through 255</param>
+            <param name="green">The green component value. Valid values are 0 through 255</param>
+            <param name="blue">The blue component value. Valid values are 0 through 255</param>
+            <returns>Color.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.FromHex(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:Dynamicweb.Imaging.Colors.Color" /> class from hex value - with or withouth the #.
+            </summary>
+            <param name="hex">The color hex. '#FFFFFF' or 'FFFFFF'</param>
+            <returns>Color.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.FromHsv(System.Double,System.Double,System.Double)">
+            <summary>
+            Creates a new instance of the <see cref="T:Dynamicweb.Imaging.Colors.Color" /> class from HSV values.
+            </summary>
+            <param name="hue">The hue. (0-360)</param>
+            <param name="saturation">The saturation. (0-1)</param>
+            <param name="value">The value. (0-1)</param>
+            <returns>Color.</returns>
+            <exception cref="T:System.IndexOutOfRangeException">Hue must be between 0-360, Saturation must be between 0-1, Value must be between 0-1</exception>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Color.FromHsl(System.Double,System.Double,System.Double)">
+            <summary>
+            Creates a new instance of the <see cref="T:Dynamicweb.Imaging.Colors.Color" /> class from HSL values.
+            </summary>
+            <param name="hue">The hue. (0-360)</param>
+            <param name="saturation">The saturation. (0-1)</param>
+            <param name="lightness">The lightness. (0-1)</param>
+            <returns>Color.</returns>
+            <exception cref="T:System.IndexOutOfRangeException">Hue must be between 0-360, Saturation must be between 0-1, Value must be between 0-1</exception>
+        </member>
+        <member name="T:Dynamicweb.Imaging.Colors.ColorCollection">
+            <summary>
+            A collection of <see cref="T:Dynamicweb.Imaging.Colors.Color">Color</see>
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.ColorCollection.DoSort(Dynamicweb.Imaging.Colors.ColorCollection.SortBy)">
+            <summary>
+            Sorts the collection with the specified sort type.
+            </summary>
+            <param name="sortType">Type of the sort.</param>
+        </member>
+        <member name="T:Dynamicweb.Imaging.Colors.ColorCollection.SortBy">
+            <summary>
+            Defines how color collections should be sorted
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.Colors.ColorCollection.SortBy.Brightness">
+            <summary>
+            Sort by Brightness
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.Colors.Hsl">
+            <summary>
+            Representation of HSL color space
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.Colors.Hsl.Hue">
+            <summary>
+            Gets the hue in degrees of the hsl color representation. 0-360
+            </summary>
+            <value>The hue. 0-360</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.Colors.Hsl.Saturation">
+            <summary>
+            Gets the saturation index of the hsl color representation. 0-1
+            </summary>
+            <value>The saturation. 0-1</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.Colors.Hsl.Lightness">
+            <summary>
+            Gets the value index of the hsl color representation. 0-1
+            </summary>
+            <value>The value. 0-1</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.Colors.Hsl.Color">
+            <summary>
+            Gets the color.
+            </summary>
+            <value>The color.</value>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsl.#ctor(System.Drawing.Color)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Imaging.Colors.Hsl" /> class.
+            </summary>
+            <param name="color">The color.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsl.#ctor(System.Single,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Imaging.Colors.Hsl" /> class.
+            </summary>
+            <param name="hue">The hue.</param>
+            <param name="saturation">The saturation.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsl.GetVariationByHue(System.Single)">
+            <summary>
+            Gets a variation over the current color with the specified hue.
+            </summary>
+            <param name="hue">The hue.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsl.GetVariationBySaturation(System.Double)">
+            <summary>
+            Gets a variation over the current color with the specified saturation.
+            </summary>
+            <param name="saturation">The saturation.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsl.GetVariationByValue(System.Double)">
+            <summary>
+            Gets a variation over the current color with the specified lightness.
+            </summary>
+            <param name="lightness">The lightness.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsl.GetVariation(System.Double,System.Double)">
+            <summary>
+            Gets a variation over the current color with the specified saturation and value.
+            </summary>
+            <param name="saturation">The saturation.</param>
+            <param name="lightness">The lightness.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsl.ColorToHsl(System.Drawing.Color)">
+            <summary>
+            Converts a color to HSL.
+            </summary>
+            <param name="color">The color.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsl.ColorFromHsl(System.Double,System.Double,System.Double)">
+            <summary>
+            Colors from HSL.
+            </summary>
+            <param name="h">The hue, 0-360.</param>
+            <param name="s">The saturation, 0-1.</param>
+            <param name="l">The lightness, 0-1.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Imaging.Colors.Hsv">
+            <summary>
+            Representation of HSV color space
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.Colors.Hsv.Hue">
+            <summary>
+            Gets the newHue in degrees of the hsv color representation. 0-360
+            </summary>
+            <value>The newHue. 0-360</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.Colors.Hsv.Saturation">
+            <summary>
+            Gets the newSaturation index of the hsv color representation. 0-100
+            </summary>
+            <value>The newSaturation. 0-1</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.Colors.Hsv.Value">
+            <summary>
+            Gets the value index of the hsv color representation. 0-100
+            </summary>
+            <value>The value. 0-1</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.Colors.Hsv.Color">
+            <summary>
+            Gets the color.
+            </summary>
+            <value>The color.</value>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsv.#ctor(System.Drawing.Color)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Imaging.Colors.Hsv" /> class.
+            </summary>
+            <param name="color">The color.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsv.#ctor(System.Single,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Imaging.Colors.Hsv" /> class.
+            </summary>
+            <param name="hue">The newHue.</param>
+            <param name="saturation">The newSaturation.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsv.GetVariationByHue(System.Single)">
+            <summary>
+            Gets a variation over the current color with the specified newHue.
+            </summary>
+            <param name="newHue">The newHue.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsv.GetVariationBySaturation(System.Double)">
+            <summary>
+            Gets a variation over the current color with the specified newSaturation.
+            </summary>
+            <param name="newSaturation">The newSaturation.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsv.GetVariationByValue(System.Double)">
+            <summary>
+            Gets a variation over the current color with the specified value.
+            </summary>
+            <param name="newValue">The new value component of the hsv color.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsv.GetVariation(System.Double,System.Double)">
+            <summary>
+            Gets a variation over the current color with the specified newSaturation and value.
+            </summary>
+            <param name="newSaturation">The new saturation.</param>
+            <param name="newValue">The new value component of the hsv color</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsv.ColorToHsv(System.Drawing.Color)">
+            <summary>
+            Converts a color to HSV.
+            </summary>
+            <param name="baseColor">The color.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsv.Clamp(System.Int32)">
+            <summary>
+            Clamp a value to 0-255
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Colors.Hsv.ColorFromHsvNouse(System.Double,System.Double,System.Double)">
+            <summary>
+            Creates a color from HSV value.
+            </summary>
+            <param name="hue">The newHue.</param>
+            <param name="saturation">The newSaturation.</param>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageAttributes">
+            <summary>
+            Represents image attributes
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageAttributes.Size">
+            <summary>
+            Gets or sets the image size.
+            </summary>
+            <value>The size.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageAttributes.ColorType">
+            <summary>
+            Gets or sets the color type
+            </summary>
+            <returns>Color type</returns>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageAttributes.ColorDepth">
+            <summary>
+            Gets or sets the color depth.
+            </summary>
+            <value>The color depth.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageAttributes.HorizontalResolution">
+            <summary>
+            Gets or sets the horizontal resolution.
+            </summary>
+            <value>The horizontal resolution.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageAttributes.VerticalResolution">
+            <summary>
+            Gets or sets the vertical resolution.
+            </summary>
+            <value>The vertical resolution.</value>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageEditor">
+            <summary>
+            Utility which is used to apply color changes and transformations to images.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageEditor.ImageType">
+            <summary>
+            Type of image
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageEditor.ImageBitDepth">
+            <summary>
+            Bit depth
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageEditor.ImageColors">
+            <summary>
+            Number of colors
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageEditor.ImageQuality">
+            <summary>
+            Quality (0-100)
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageEditor.ImagePreview">
+            <summary>
+            Preview
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageEditor.CopyImageFile(System.String,System.String)">
+            <summary>
+            Copies an image file from soure path to detination path
+            </summary>
+            <param name="sourceFilePath">Source file path</param>
+            <param name="destinationFilePath">Destination file path</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageEditor.GetImageTypeFromFile(System.String)">
+            <summary>
+            Get image type by file name
+            </summary>
+            <param name="filePath">The image file path</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageEditor.ActionSave(System.String,System.String)">
+            <summary>
+            Saves an image.
+            </summary>
+            <param name="sourceFilePath">Absolute path to source file. </param>
+            <param name="destinationFilePath">Absolute path to destination file.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageEditor.ActionReset(System.String)">
+            <summary>
+            Cancel any changes and revert to the original image.
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageEditor.ActionRotate90CounterClockwise(System.String)">
+            <summary>
+            Rotate the image 90 degrees counterclockwise.
+            </summary>
+            <param name="filePath">Absolute file path</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageEditor.ActionRotate90(System.String)">
+            <summary>
+            Rotate the image 90 degrees.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageEditor.ActionRotate180(System.String)">
+            <summary>
+            Rotate the image 90 degrees.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageEditor.ActionFlipVertical(System.String)">
+            <summary>
+            Flip the image vertically (y-axis).
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageEditor.ActionEffectGrayscale(System.String)">
+            <summary>
+            Change image colors to grayscale.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageEditor.ActionEffectBlackAndWhite(System.String)">
+            <summary>
+            Change image colors to back and white.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageEditor.ActionEffectSepia(System.String)">
+            <summary>
+            Change image colors to sepia.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageEditor.ActionEffectColorCorrection(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Change image colors based on contrast, brightness and saturation.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+            <param name="contrast">Color contrast.</param>
+            <param name="brightness">Color brightness.</param>
+            <param name="saturation">Color saturation.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageEditor.ActionEffectNegative(System.String)">
+            <summary>
+            Change image colors to negative.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageEditor.ActionCrop(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Applies cropping to an image.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+            <param name="left">Position of cropping from the left.</param>
+            <param name="top">Position of cropping from the top.</param>
+            <param name="right">Position of cropping from the right.</param>
+            <param name="bottom">Position of cropping from the bottom.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageEditor.ActionResize(System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Resizes an image.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+            <param name="width">Maximum image width.</param>
+            <param name="height">Maximum image height.</param>
+            <param name="maintainAspectRatio">Whether the rezising should maintain the aspect ratio of the original image.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageEditor.ActionFlipHorizontal(System.String)">
+            <summary>
+            Flip the image horizontally (x-axis).
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageEditorSettings">
+            <summary>
+            Settings used when saving images in the image editor
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageEditorSettings.ImageType">
+            <summary>
+            Type of image
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageEditorSettings.ImageBitDepth">
+            <summary>
+            Bit depth
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageEditorSettings.ImageColors">
+            <summary>
+            Number of colors
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageEditorSettings.ImageQuality">
+            <summary>
+            Quality (0-100)
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageEditorSettings.ImagePreview">
+            <summary>
+            Preview mode
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageHandling.CropDimension">
+            <summary>
+            Dimension which should be cropped.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.CropDimension.NoCrop">
+            <summary>
+            Apply no cropping on the image.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.CropDimension.Width">
+            <summary>
+            Apply cropping on the width of the image.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.CropDimension.Height">
+            <summary>
+            Apply cropping on the height of the image.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageHandling.ImageConverter">
+            <summary>
+            Applies transformations to images based on parameters
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ImageConverter.Parameters">
+            <summary>
+            Gets or sets the ConvertParameters object for this instance.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ImageConverter.#ctor">
+            <summary>
+            Creates new instance of this class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ImageConverter.#ctor(System.String)">
+            <summary>
+            Creates new instance of this class.
+            </summary>
+            <param name="sourceFile">The virtual path to the image to be converted.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ImageConverter.ConvertToFile(System.String)">
+            <summary>
+            Converts the source image according to conversion parameters.
+            </summary>
+            <param name="filePath">The virtual path to the destination file.</param>
+            <exception cref="T:Dynamicweb.Imaging.ImageHandling.ConvertException">Thrown when file already exists</exception>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ImageConverter.Resize(System.String,System.Int32)">
+            <summary>
+            Resizes the image.
+            </summary>
+            <param name="fromFile">The virtual path to the source file.</param>
+            <param name="width">The width of the image.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ImageConverter.Resize(System.String,System.Int32,System.Int32)">
+            <summary>
+            Resize the image.
+            </summary>
+            <param name="fromFile">The virtual path to the source file.</param>
+            <param name="width">The width of the image.</param>
+            <param name="height">The height of the image.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ImageConverter.Resize(System.String,System.Int32,System.Int32,Dynamicweb.Imaging.ImageHandling.OutputFormat)">
+            <summary>
+            Resize the image.
+            </summary>
+            <param name="fromFile">The virtual path to the source file.</param>
+            <param name="width">The width of the image.</param>
+            <param name="height">The height of the image.</param>
+            <param name="format">The format of the image.</param>
+            <exception cref="T:Dynamicweb.Imaging.ImageHandling.ConvertException">Thrown when file cannot be found</exception>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ImageConverter.Convert(System.String,System.String,System.Int32)">
+            <summary>
+            Converts the image.
+            </summary>
+            <param name="fromFile">The virtual path to the source file.</param>
+            <param name="toFile">The virtual path to the destination file.</param>
+            <param name="width">The width of the image.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ImageConverter.Convert(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Converts the image.
+            </summary>
+            <param name="fromFile">The virtual path to the source file.</param>
+            <param name="toFile">The virtual path to the destination file.</param>
+            <param name="width">The width of the image.</param>
+            <param name="height">The height of the image.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ImageConverter.Convert(System.String,System.String,System.Int32,System.Int32,Dynamicweb.Imaging.ImageHandling.OutputFormat)">
+            <summary>
+            Converts the image.
+            </summary>
+            <param name="fromFile">The virtual path to the source file.</param>
+            <param name="toFile">The virtual path to the destination file.</param>
+            <param name="width">The width of the image.</param>
+            <param name="height">The height of the image.</param>
+            <param name="format">The format of the image.</param>
+            <exception cref="T:Dynamicweb.Imaging.ImageHandling.ConvertException">Thrown when toFile already exists or any of files destinations are not specified</exception>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ImageConverter.Convert(Dynamicweb.Imaging.ImageHandling.ConvertParameters)">
+            <summary>
+            Converts the image and returns the contents of the converted image.
+            </summary>
+            <param name="convertParameters">The conversion parameters.</param>
+            <returns>The contents of the converted image.</returns>
+            <exception cref="T:Dynamicweb.Imaging.ImageHandling.ConvertException">
+            Thrown when unable to process the image file using the given parameters.
+            </exception>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ImageConverter.ColorModeFromString(System.String)">
+            <summary>
+            Colors the mode from string.
+            </summary>
+            <param name="mode">The color mode as string.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ImageConverter.StringFromColorMode(Dynamicweb.Imaging.ImageHandling.ColorMode)">
+            <summary>
+            Strings from color mode.
+            </summary>
+            <param name="mode">The mode.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ImageConverter.OutputFormatFromString(System.String)">
+            <summary>
+            Outputs the format from string.
+            </summary>
+            <param name="format">The output format.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ImageConverter.StringFromOutputFormat(Dynamicweb.Imaging.ImageHandling.OutputFormat)">
+            <summary>
+            Strings from output format.
+            </summary>
+            <param name="currentFormat">The format.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ImageConverter.GetOutputFileName(Dynamicweb.Imaging.ImageHandling.ConvertParameters)">
+            <summary>
+            Gets the name of the output file.
+            </summary>
+            <param name="convertParameters">The convertParameters.</param>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageHandling.ResizeParameters">
+            <summary>
+            Represents the calculated values which are used for image resizing and cropping.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ResizeParameters.OriginalWidth">
+            <summary>
+            Gets or sets original width
+            </summary>
+            <returns>The width</returns>
+            <remarks>Setting negative width will result into width = 1</remarks>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ResizeParameters.OriginalHeight">
+            <summary>
+            Gets or sets original height
+            </summary>
+            <returns>The height</returns>
+            <remarks>Setting negative height will result into height = 1</remarks>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ResizeParameters.Width">
+            <summary>
+            Gets or sets width
+            </summary>
+            <returns>The width</returns>
+            <remarks>Setting negative width will result into width = 1</remarks>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ResizeParameters.Height">
+            <summary>
+            Gets or sets height
+            </summary>
+            <returns>The height</returns>
+            <remarks>Setting negative height will result into height = 1</remarks>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ResizeParameters.FocalPointX">
+            <summary>
+            Gets or sets focal point on the x-axis
+            </summary>
+            <returns>The x-axis focal point</returns>
+            <remarks>Setting negative x will result into x = 0.</remarks>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ResizeParameters.FocalPointY">
+            <summary>
+            Gets or sets focal point on the y-axis
+            </summary>
+            <returns>The y-axis focal point</returns>
+            <remarks>Setting negative y will result into x = 0.</remarks>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ResizeParameters.ResizedWidth">
+            <summary>
+            Gets or sets resized width
+            </summary>
+            <returns>The width</returns>
+            <remarks>Setting negative width will result into width = 1</remarks>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ResizeParameters.ResizedHeight">
+            <summary>
+            Gets or sets resized height
+            </summary>
+            <returns>The height</returns>
+            <remarks>Setting negative height will result into height = 1</remarks>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ResizeParameters.CropDimension">
+            <summary>
+            Gets the crop dimension.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ResizeParameters.CropSize">
+            <summary>
+            Returns the difference between the height or width of the image resized keeping aspect compared to the box needed.
+            That is how much we need to cut off in the height or width of the image.
+            </summary>
+            <returns>Width or height based on <see cref="P:Dynamicweb.Imaging.ImageHandling.ResizeParameters.CropDimension"/></returns>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ResizeParameters.CropMode">
+            <summary>
+            Gets the crop mode.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ResizeParameters.CropPointX">
+            <summary>
+            Gets the crop position on the x-axis.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ResizeParameters.CropPointY">
+            <summary>
+            Gets the crop position on the y-axis.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ResizeParameters.GetResizeParameters(Dynamicweb.Imaging.ImageHandling.ConvertParameters,System.Int32,System.Int32)">
+            <summary>
+            Gets the values used for resizing and cropping.
+            </summary>
+            <param name="convertParameters">Convert parameters.</param>
+            <param name="originalWidth">Width of the original image.</param>
+            <param name="originalHeight">Height of the original image.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageHandling.NamespaceDoc">
+            <summary>
+            The Dynamicweb.Imaging.ImageHandling namespace contains types used when resizing images and creating thumgnails of i.e. PDFs.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageHandling.ConvertCache">
+            <summary>
+            Provides methods and properties for caching processed images and retrieving them from the cache.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertCache.Parameters">
+            <summary>
+            Gets the convert parameters.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertCache.CacheFileVirtualPath">
+            <summary>
+            Gets the virtual path of the cached image file.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertCache.CacheFolderPhysicalPath">
+            <summary>
+            Gets the physical path to the cache folder.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertCache.SourceFileChanged">
+            <summary>
+            Gets value indicating whether source file has been changed.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertCache.CacheFileName">
+            <summary>
+            Gets the file name part of the cached image.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertCache.SourceFileInfo">
+            <summary>
+            Gets the <see cref="T:System.IO.FileInfo">file info</see> for the source file.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ConvertCache.GetCacheFileFullPath">
+            <summary>
+            Gets the full path to the cached image.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ConvertCache.#ctor(Dynamicweb.Imaging.ImageHandling.ConvertParameters)">
+            <summary>
+            Initializes a new instance of an object.
+            </summary>
+            <param name="parameters"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ConvertCache.Get">
+            <summary>
+            Retrieves the image data from the cache.
+            </summary>
+            <returns>Image data of the cached image.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ConvertCache.Insert(System.Byte[])">
+            <summary>
+            Inserts image data into the cache.
+            </summary>
+            <param name="data">Image data.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ConvertCache.Clear">
+            <summary>
+            Obsolete. This method has no code.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageHandling.ConvertDefaultParameters">
+            <summary>
+            Represents default conversion parameters.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ConvertDefaultParameters.GrayScaleDepth">
+            <summary>
+            The default depth value when using a gray scale palette.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ConvertDefaultParameters.OutputFormat">
+            <summary>
+            The default value for output format.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ConvertDefaultParameters.CropMode">
+            <summary>
+            The default value for cropping mode.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ConvertDefaultParameters.ColorMode">
+            <summary>
+            The default value for color mode.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ConvertDefaultParameters.Resolution">
+            <summary>
+            The default value for resolution.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ConvertDefaultParameters.ResolutionMin">
+            <summary>
+            The minimum value of resolution.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ConvertDefaultParameters.ResolutionMax">
+            <summary>
+            The maximum value of resolution.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ConvertDefaultParameters.Quality">
+            <summary>
+            The default JPEG-quality.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ConvertDefaultParameters.QualityMin">
+            <summary>
+            The minimum value of JPEG-quality.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ConvertDefaultParameters.QualityMax">
+            <summary>
+            The maximum value of JPEG-quality.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ConvertDefaultParameters.ColorDepth">
+            <summary>
+            The default value for GIF color depth.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ConvertDefaultParameters.ColorDepthMin">
+            <summary>
+            The minimum value of GIF color depth.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ConvertDefaultParameters.ColorDepthMax">
+            <summary>
+            The maximum value of GIF color depth.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ConvertDefaultParameters.DoNotResize">
+            <summary>
+            Indicates whether to resize image or not in case if height or width exceed original image size.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageHandling.CropMode">
+            <summary>
+            Defines how images are cropped when resized
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.CropMode.Center">
+            <summary>
+            Centers the cropping around the center of the image
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.CropMode.LowerLeft">
+            <summary>
+            Crops the image including as much as posssible from lower left corner of the image
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.CropMode.UpperLeft">
+            <summary>
+            Crops the image including as much as posssible from upper left corner of the image
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.CropMode.UpperRight">
+            <summary>
+            Crops the image including as much as posssible from upper right corner of the image
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.CropMode.LowerRight">
+            <summary>
+            Crops the image including as much as posssible from lower right corner of the image
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.CropMode.KeepAspectRatio">
+            <summary>
+            The image is not cropped but resized to fit inside the box specified with the width and height paramteres respecting the original image aspect ratio
+            </summary>
+            <remarks>
+            If only width or height is specified, the image is resized to that height or width keeping aspect ratio of the original image.
+            </remarks>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.CropMode.Fit">
+            <summary>
+            The image is not cropped but resized to fit inside the box specified with the width and height paramteres stretching the original image to fit
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.CropMode.CenterOrFocal">
+            <summary>
+            Centers the cropping around the center of the image or the specified focal point specified in FocalPointX and FocalPointY
+            </summary>
+            <remarks>
+            Focal points are relative indexes from the center of the image - the center being 0,0.
+            Negative numbers are left and down. 
+            Negative FocalPointY is down from the center, positive is up from the center.
+            Negative FocalPointX is left of the center, positive is right of the center.
+            Maximum value is 100, minimum value is -100
+            </remarks>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageHandling.ColorMode">
+            <summary>
+            Stores color modes definitions
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ColorMode.Rgb">
+            <summary>
+            RGB
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ColorMode.Cmyk">
+            <summary>
+            CMYK
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ColorMode.GrayScale">
+            <summary>
+            Gray scale
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageHandling.ConvertException">
+            <summary>
+            The Class ConvertException represents conversion exception.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ConvertException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Imaging.ImageHandling.ConvertException" /> class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ConvertException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Imaging.ImageHandling.ConvertException" /> class.
+            </summary>
+            <param name="message">Error message for this instance.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ConvertException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dynamicweb.Imaging.ImageHandling.ConvertException" /> class.
+            </summary>
+            <param name="message">Error message for this instance.</param>
+            <param name="innerException">The inner exception for this instance</param>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageHandling.ConvertParameters">
+            <summary>
+            The Class ConvertParameters represents conversion parameters.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.UseCache">
+            <summary>
+            Defines if the cache is going to be used.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.CacheFolder">
+            <summary>
+            Gets the path to the cache folder.
+            </summary>
+            <returns>Virtual path to the cache folder.</returns>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.FileData">
+            <summary>
+            Gets or sets the contents of a file to be processed.
+            </summary>
+            <returns>The contents of a file to be processed.</returns>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.SourceFile">
+            <summary>
+            Gets or sets the virtual path of the source file.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.TargetFile">
+            <summary>
+            Gets or sets the name of the conversion result.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.Format">
+            <summary>
+            Gets or sets the format of the file to be converted.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.Width">
+            <summary>
+            Gets or sets the width of the file to be converted.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.Height">
+            <summary>
+            Gets or sets the height of the file to be converted.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.FocalPointX">
+            <summary>
+            Gets or sets the x-axis of the focal point. Used to find what part of the image should be in center.
+            Focal points are relative indexes from the center of the image - the center being 0,0.
+            Negative numbers are left and down. Negative FocalPointX is left of the center, positive is right of the center.
+            Maximum value is 100, minimum value is -100
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.FocalPointY">
+            <summary>
+            Gets or sets the y-axis of the focal point. Used to find what part of the image should be in center.
+            Focal points are relative indexes from the center of the image - the center being 0,0.
+            Negative numbers are left and down. Negative FocalPointY is down from the center, positive is up from the center.
+            Maximum value is 100, minimum value is -100
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.Resolution">
+            <summary>
+            Gets or sets the resolution of the file to be converted.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.Quality">
+            <summary>
+            Gets or sets the quality of the file to be converted.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.ColorDepth">
+            <summary>
+            Gets or sets the color depth of the file to be converted.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.ColorMode">
+            <summary>
+            Gets or sets the color mode of the file to be converted.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.DoNotResize">
+            <summary>
+            Gets or sets the value which indicates whether to resize image or not in case if height or width exceed original image size.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.EmbedColorProfile">
+            <summary>
+            Gets or sets the value which indicates whether to embed color profile from the original image.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.ColorProfile">
+            <summary>
+            Gets or sets color profile.
+            The value can be set: "auto", "standard", "device", or a physical path to a color profile file on the web server.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.ColorProfileFolder">
+            <summary>
+            Gets or sets the folder for locating the ICC profile.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.CropMode">
+            <summary>
+            Gets or sets the cropping mode of the file to be converted.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.BackgroundColor">
+            <summary>
+            Gets or sets the background color
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageHandling.ConvertParameters.FillCanvas">
+            <summary>
+            Defines if canvas should be filled for matching cropmodes (fx. cropmode 5).
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ConvertParameters.#ctor">
+            <summary>
+            Creates new instance of this class.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ConvertParameters.#ctor(System.String)">
+            <summary>
+            Creates new instance of this class.
+            </summary>
+            <param name="sourceFile">The virtual path to the image to be converted.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ConvertParameters.GetHash">
+            <summary>
+            Retrieves the hash string representing the state of this object.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ConvertParameters.GetResizeParameters(System.Int32,System.Int32)">
+            <summary>
+            Gets the values used for resizing and cropping.
+            </summary>
+            <param name="originalWidth">Width of the original image.</param>
+            <param name="originalHeight">Height of the original image.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ConvertParameters.GetOutputFileName">
+            <summary>
+            Gets the name of the output file.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageHandling.ConvertParameters.GetHash(System.Boolean)">
+            <summary>
+            Retrieves the hash string representing the state of this object.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageHandling.OutputFormat">
+            <summary>
+            Output formats definitions enumeration
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.OutputFormat.Jpg">
+            <summary>
+            Jpg
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.OutputFormat.Gif">
+            <summary>
+            Gif
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.OutputFormat.Png">
+            <summary>
+            Png
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.OutputFormat.Tiff">
+            <summary>
+            Tiff
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.OutputFormat.Bmp">
+            <summary>
+            Bmp
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.OutputFormat.Psd">
+            <summary>
+            Psd
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.OutputFormat.Pdf">
+            <summary>
+            Pdf
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.OutputFormat.Eps">
+            <summary>
+            Eps
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.OutputFormat.Ai">
+            <summary>
+            Ai
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.OutputFormat.WebP">
+            <summary>
+            WebP
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageHandling.ResizeSettingsMode">
+            <summary>
+            Resize settings mode definitions enumeration
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ResizeSettingsMode.Inactive">
+            <summary>
+            The resize for the location is not enabled
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ResizeSettingsMode.Active">
+            <summary>
+            The resize for the location is enabled
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageHandling.ResizeSettingsMode.Inherited">
+            <summary>
+            The resize for the location is ineherited by the parent folder
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageMetadata">
+            <summary>
+            Contains a collection of metadata values extracted from an image.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageMetadata.AddTagValue(Dynamicweb.Imaging.ImageMetadataTagValue)">
+            <summary>
+            Add a metadata value
+            </summary>
+            <param name="value">Metadata value</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageMetadata.GetTagValues">
+            <summary>
+            Gets all metadata values.
+            </summary>
+            <returns>Collection of metadata values</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageMetadata.GetTagValuesByGroup(System.String)">
+            <summary>
+            Gets all metadata values for a given metadata group.
+            </summary>
+            <param name="groupName">Metadata group name</param>
+            <returns>Collection of metadata values</returns>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageMetadataTag">
+            <summary>
+            Definition of a metadata tag.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageMetadataTag.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of <see cref="T:Dynamicweb.Imaging.ImageMetadataTag"/>
+            </summary>
+            <param name="name">Name</param>
+            <param name="label">Display name</param>
+            <param name="groupName">Group name</param>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageMetadataTag.Name">
+            <summary>
+            Gets the name
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageMetadataTag.Label">
+            <summary>
+            Gets the display name
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageMetadataTag.GroupName">
+            <summary>
+            Gets the group name
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageMetadataTagGroup">
+            <summary>
+            Definition of a metadata tag group.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageMetadataTagGroup.#ctor(System.String)">
+            <summary>
+            Creates an instance of <see cref="T:Dynamicweb.Imaging.ImageMetadataTagGroup"/>
+            </summary>
+            <param name="name">Group name</param>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageMetadataTagGroup.Name">
+            <summary>
+            Gets the name
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageMetadataTagValue">
+            <summary>
+            Represents a value of a given metadata tag
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageMetadataTagValue.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates an instance of <see cref="T:Dynamicweb.Imaging.ImageMetadataTagValue"/>
+            </summary>
+            <param name="name">System name of the metadata tag</param>
+            <param name="value">The value</param>
+            <param name="groupName">Name of the metadata tag group</param>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageMetadataTagValue.GroupName">
+            <summary>
+            Gets the group name
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageMetadataTagValue.Name">
+            <summary>
+            Gets the name
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageMetadataTagValue.Value">
+            <summary>
+            Gets the value
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageSettings">
+            <summary>
+            Class with settings used for displaying image information and used when resizing images.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageSettings.#ctor">
+            <summary>
+            Initializes a new instance of image settings.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageSettings.SettingsFileName">
+            <summary>
+            The name of the settings file, "ImageSettings.xml"
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageSettings.Active">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Dynamicweb.Imaging.ImageSettings"/> is active.
+            </summary>
+            <value><c>true</c> if active; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageSettings.Width">
+            <summary>
+            Gets or sets the width.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageSettings.Height">
+            <summary>
+            Gets or sets the height.
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageSettings.CropOffset">
+            <summary>
+            Gets or sets the crop offset.
+            </summary>
+            <value>The crop offset.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageSettings.Quality">
+            <summary>
+            Gets or sets the quality.
+            </summary>
+            <value>The quality.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageSettings.OverwriteOriginal">
+            <summary>
+            Gets or sets a value indicating whether [overwrite original].
+            </summary>
+            <value><c>true</c> if [overwrite original]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageSettings.ImagePostfix">
+            <summary>
+            Gets or sets the image postfix.
+            </summary>
+            <value>The image postfix.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageSettings.EnforceOutputFormat">
+            <summary>
+            Gets or sets a value indicating whether [enforce output format].
+            </summary>
+            <value><c>true</c> if [enforce output format]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageSettings.ImageOutputFormat">
+            <summary>
+            Gets or sets the image output format.
+            </summary>
+            <value>The image output format.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageSettings.LimitToTheseExtensions">
+            <summary>
+            Gets or sets a value indicating whether [limit to these extensions].
+            </summary>
+            <value><c>true</c> if [limit to these extensions]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageSettings.ProcessedExtensions">
+            <summary>
+            Gets or sets the processed extensions.
+            </summary>
+            <value>The processed extensions.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageSettings.LastApply">
+            <summary>
+            Gets or sets the last apply.
+            </summary>
+            <value>The last apply.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageSettings.ThumbSettings">
+            <summary>
+            Gets or sets the thumb settings.
+            </summary>
+            <value>The thumb settings.</value>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ImageSettings.ApplySettingsToSubfolders">
+            <summary>
+            Gets or sets a value indicating whether [apply settings to subfolders].
+            </summary>
+            <value><c>true</c> if [apply settings to subfolders]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageSettings.Save(System.String,Dynamicweb.Imaging.ImageSettings)">
+            <summary>
+            Saves the specified path.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageSettings.Load(System.String)">
+            <summary>
+            Loads the specified path.
+            </summary>
+            <param name="path">The path.</param>
+            <returns>ImageSettings.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageSettings.Load(System.String,System.Boolean)">
+            <summary>
+            Loads the specified path.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="getFromParentIfEmptyOrDisabled">if set to <c>true</c> [get from parent if empty or disabled].</param>
+            <returns>ImageSettings.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageSettings.Exists(System.String)">
+            <summary>
+            Existses the specified path.
+            </summary>
+            <param name="path">The path.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageSettings.GetResizeSettingsMode(System.String)">
+            <summary>
+            Gets the resize settings mode.
+            </summary>
+            <param name="path">The path.</param>
+            <returns>ResizeSettingsMode.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageSettings.ProcessImage(Dynamicweb.Imaging.ImageHandling.ConvertParameters,System.String)">
+            <summary>
+            Processes an image.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageSettings.CreateImage(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,Dynamicweb.Imaging.ImageHandling.CropMode)">
+            <summary>
+            </summary>
+            <param name="sourceFile"></param>
+            <param name="destinationFile"></param>
+            <param name="extension"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="quality"></param>
+            <param name="cropeMode"></param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageSettings.MakeImage(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,Dynamicweb.Imaging.ImageHandling.CropMode)">
+            <summary>
+            Creates the image.
+            </summary>
+            <param name="sourceFile">The source file.</param>
+            <param name="destinationFile">The destination file.</param>
+            <param name="extension">The extension.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="quality">The quality.</param>
+            <param name="cropMode">The crope mode.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ImageSettings.IsThumbnailFolder(System.String)">
+            <summary>
+            Determines whether [is thumbnail folder] [the specified folder name].
+            </summary>
+            <param name="folderName">Name of the folder.</param>
+            <returns><c>true</c> if [is thumbnail folder] [the specified folder name]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:Dynamicweb.Imaging.PdfImageConverter">
+            <summary>
+            Converts pdf document into images
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfImageConverter.ConvertToImages(System.String)">
+            <summary>
+            Converts a pdf document into images.
+            </summary>
+            <param name="filePath">Absolute path to the PDF document.</param>
+            <returns>Images as byte sequences.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfImageConverter.ConvertToImages(System.Byte[])">
+            <summary>
+            Converts a pdf document into images.
+            </summary>
+            <param name="data">PDF document as byte sequence.</param>
+            <returns>Images as byte sequences.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfImageConverter.ConvertToImage(System.String)">
+            <summary>
+            Converts a pdf document into an image (first page).
+            </summary>
+            <param name="filePath">Absolute path to the PDF document.</param>
+            <returns>Image as byte sequence.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfImageConverter.ConvertToImage(System.Byte[])">
+            <summary>
+            Converts a pdf document into an image (first page).
+            </summary>
+            <param name="data">PDF document as byte sequence.</param>
+            <returns>Image as byte sequence.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfImageConverter.ConvertToPdf(System.String)">
+            <summary>
+            Converts an image into a pdf document (single page).
+            </summary>
+            <param name="filePath">Absolute path to the image.</param>
+            <returns>Pdf document as byte sequence.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfImageConverter.ConvertToPdf(System.Byte[])">
+            <summary>
+            Converts an image into a pdf document (single page).
+            </summary>
+            <param name="data">Image as byte sequence.</param>
+            <returns>Pdf document as byte sequence.</returns>
+        </member>
+        <member name="T:Dynamicweb.Imaging.PdfContent">
+            <summary>
+            Represents the html content used for generating a pdf document.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfContent.#ctor(System.String)">
+            <summary>
+            Creates a new instance of <see cref="T:Dynamicweb.Imaging.PdfContent"/>
+            </summary>
+            <param name="contentHtml"></param>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfContent.ContentHtml">
+            <summary>
+            Main content HTML.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfContent.HeaderHtml">
+            <summary>
+            Header content HTML.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfContent.FooterHtml">
+            <summary>
+            Footer content HTML.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfContent.HeaderHeight">
+            <summary>
+            Header height in milimeters.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfContent.FooterHeight">
+            <summary>
+            Footer height in milimeters.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfContent.FirstPageHtml">
+            <summary>
+            First page content HTML.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfContent.LastPageHtml">
+            <summary>
+            Last page content HTML.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.PdfPaperOrientation">
+            <summary>
+            PDF paper orientation.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperOrientation.Portrait">
+            <summary>
+            Render in portrait mode.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperOrientation.Landscape">
+            <summary>
+            Render in landscape mode.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.PdfRenderer">
+            <summary>
+            Renders pdf documents from html or url.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRenderer.Settings">
+            <summary>
+            Settings used for rendering pdf documents.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfRenderer.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:Dynamicweb.Imaging.PdfRenderer"/>.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfRenderer.#ctor(Dynamicweb.Imaging.PdfRendererSettings)">
+            <summary>
+            Creates a new instance of <see cref="T:Dynamicweb.Imaging.PdfRenderer"/>.
+            </summary>
+            <param name="settings">Settings used for rendering pdf documents.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfRenderer.RenderFromHtml(System.String)">
+            <summary>
+            Renders pdf document from html.
+            </summary>
+            <param name="html">Html content</param>
+            <returns>Pdf document as byte sequence.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfRenderer.RenderFromContent(Dynamicweb.Imaging.PdfContent)">
+            <summary>
+            Renders pdf document from specified content.
+            </summary>
+            <param name="content">Content settings.</param>
+            <returns>Pdf document as byte sequence.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfRenderer.RenderFromUrl(System.Uri)">
+            <summary>
+            Renders pdf document from specified url address.
+            </summary>
+            <param name="url">Content url address.</param>
+            <returns>Pdf document as byte sequence.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfRenderer.RenderFromRequest(Dynamicweb.Imaging.PdfRequest)">
+            <summary>
+            Renders pdf document from specified request.
+            </summary>
+            <param name="request">Content request.</param>
+            <returns>Pdf document as byte sequence.</returns>
+        </member>
+        <member name="T:Dynamicweb.Imaging.Providers.PdfImageConverterProvider">
+            <summary>
+            Provides functionality to convert pdf documents into images.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.PdfImageConverterProvider.ConvertToImages(System.String)">
+            <summary>
+            Converts pdf document into images.
+            </summary>
+            <param name="filePath">Absolute path to the pdf document.</param>
+            <returns>Images as byte sequences.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.PdfImageConverterProvider.ConvertToImages(System.Byte[])">
+            <summary>
+            Converts a pdf document into images.
+            </summary>
+            <param name="data">PDF document as byte sequence.</param>
+            <returns>Images as byte sequences.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.PdfImageConverterProvider.ConvertToImage(System.String)">
+            <summary>
+            Converts a pdf document into an image (first page).
+            </summary>
+            <param name="filePath">Absolute path to the PDF document.</param>
+            <returns>Image as byte sequence.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.PdfImageConverterProvider.ConvertToImage(System.Byte[])">
+            <summary>
+            Converts a pdf document into an image (first page).
+            </summary>
+            <param name="data">PDF document as byte sequence.</param>
+            <returns>Image as byte sequence.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.PdfImageConverterProvider.ConvertToPdf(System.String)">
+            <summary>
+            Converts an image into a pdf document (single page).
+            </summary>
+            <param name="filePath">Absolute path to the image.</param>
+            <returns>Pdf document as byte sequence.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.PdfImageConverterProvider.ConvertToPdf(System.Byte[])">
+            <summary>
+            Converts an image into a pdf document (single page).
+            </summary>
+            <param name="data">Image as byte sequence.</param>
+            <returns>Pdf document as byte sequence.</returns>
+        </member>
+        <member name="T:Dynamicweb.Imaging.Providers.PdfRendererProvider">
+            <summary>
+            Provides functionality to render pdf documents from specified content.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.PdfRendererProvider.RenderFromContent(Dynamicweb.Imaging.PdfContent,Dynamicweb.Imaging.PdfRendererSettings)">
+            <summary>
+            Renders a pdf document from specified content.
+            </summary>
+            <param name="content">Content settings.</param>
+            <param name="settings">Pdf renderer settings.</param>
+            <returns>Pdf document as byte sequence.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.PdfRendererProvider.RenderFromRequest(Dynamicweb.Imaging.PdfRequest,Dynamicweb.Imaging.PdfRendererSettings)">
+            <summary>
+            Renders a pdf document from a request.
+            </summary>
+            <param name="request">Content request settings.</param>
+            <param name="settings">Pdf renderer settings.</param>
+            <returns>Pdf document as byte sequence.</returns>
+        </member>
+        <member name="T:Dynamicweb.Imaging.Providers.ImageAttributesProvider">
+            <summary>
+            Provides basic image information like size, color and resolution.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageAttributesProvider.GetAttributesFromFile(System.String)">
+            <summary>
+            Gets image attributes from image file
+            </summary>
+            <param name="filePath">Absolute file path</param>
+            <returns>Image attributes</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageAttributesProvider.GetAttributesFromStream(System.IO.Stream,System.String)">
+            <summary>
+            Gets image attributes from file stream
+            </summary>
+            <param name="stream">File stream</param>
+            <param name="extension">File extension</param>
+            <returns>Image attributes</returns>
+        </member>
+        <member name="T:Dynamicweb.Imaging.Providers.ImageConverterProvider">
+            <summary>
+            Provides image conversion functionality (format, resize, crop).
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageConverterProvider.Convert(Dynamicweb.Imaging.ImageHandling.ConvertParameters)">
+            <summary>
+            Converts the image and returns the contents of the converted image.
+            </summary>
+            <param name="convertParameters">The conversion parameters.</param>
+            <returns>The contents of the converted image.</returns>
+        </member>
+        <member name="T:Dynamicweb.Imaging.Providers.ImageEditorProvider">
+            <summary>
+            Provides functionality for applying color changes and transformations to images.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.Providers.ImageEditorProvider.Settings">
+            <summary>
+            Common settings used for image transformations
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageEditorProvider.ColorChangeToBlackAndWhite(System.String)">
+            <summary>
+            Change image colors to back and white.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageEditorProvider.ColorChangeToGrayscale(System.String)">
+            <summary>
+            Change image colors to grayscale.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageEditorProvider.ColorChangeToNegative(System.String)">
+            <summary>
+            Change image colors to negative.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageEditorProvider.ColorChangeToSepia(System.String)">
+            <summary>
+            Change image colors to sepia.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageEditorProvider.ColorCorrection(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Change image colors based on contrast, brightness and saturation.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+            <param name="contrast">Color contrast.</param>
+            <param name="brightness">Color brightness.</param>
+            <param name="saturation">Color saturation.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageEditorProvider.Copy(System.String,System.String)">
+            <summary>
+            Copies an image file from soure path to detination path
+            </summary>
+            <param name="sourceFilePath">Source file path</param>
+            <param name="destinationFilePath">Destination file path</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageEditorProvider.Crop(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Applies cropping to an image.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+            <param name="left">Position of cropping from the left.</param>
+            <param name="top">Position of cropping from the top.</param>
+            <param name="right">Position of cropping from the right.</param>
+            <param name="bottom">Position of cropping from the bottom.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageEditorProvider.FlipHorizontal(System.String)">
+            <summary>
+            Flip the image horizontally (x-axis).
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageEditorProvider.FlipVertical(System.String)">
+            <summary>
+            Flip the image vertically (y-axis).
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageEditorProvider.Reset(System.String)">
+            <summary>
+            Cancel any changes and revert to the original image.
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageEditorProvider.Resize(System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Resizes an image.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+            <param name="width">Maximum image width.</param>
+            <param name="height">Maximum image height.</param>
+            <param name="maintainAspectRatio">Whether the rezising should maintain the aspect ratio of the original image.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageEditorProvider.Rotate180(System.String)">
+            <summary>
+            Rotate the image 90 degrees.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageEditorProvider.Rotate90(System.String)">
+            <summary>
+            Rotate the image 90 degrees.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageEditorProvider.Rotate90Counterclockwise(System.String)">
+            <summary>
+            Rotate the image 90 degrees counterclockwise.
+            </summary>
+            <param name="filePath">Absolute file path</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageEditorProvider.Save(System.String,System.String)">
+            <summary>
+            Saves an image.
+            </summary>
+            <param name="sourceFilePath">Absolute path to source file. </param>
+            <param name="destinationFilePath">Absolute path to destination file.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageEditorProvider.GetImageTypeFromFile(System.String)">
+            <summary>
+            Get image type by file name
+            </summary>
+            <param name="filePath">The image file path</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Imaging.Providers.ImageMetadataProvider">
+            <summary>
+            Provides metadata for images
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageMetadataProvider.GetMetadataFromFile(System.String)">
+            <summary>
+            Gets image metadata from a file.
+            </summary>
+            <param name="filePath">Image file path.</param>
+            <returns>Metadata for the image.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageMetadataProvider.GetMetadataFromStream(System.IO.Stream,System.String)">
+            <summary>
+            Gets image metadata from a file stream.
+            </summary>
+            <param name="stream">Image file stream.</param>
+            <param name="extension">Image file extension</param>
+            <returns>Metadata for the image.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageMetadataProvider.GetTagGroups">
+            <summary>
+            Gets a collection of available metadata tag groups.
+            </summary>
+            <returns>Collection of metadata tag groups</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageMetadataProvider.GetTagsByGroup(System.String)">
+            <summary>
+            Gets a collection of available metadata tags for a given metadata tag group.
+            </summary>
+            <param name="groupName">Metadata tag group name</param>
+            <returns>Collection of metadata tags</returns>
+        </member>
+        <member name="T:Dynamicweb.Imaging.Providers.ImageSizeProvider">
+            <summary>
+            Provides image dimensions (width and height) for image files.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageSizeProvider.GetSizeFromFile(System.String)">
+            <summary>
+            Gets the image dimensions from the image specified in the path.
+            </summary>
+            <param name="filePath">The file path.</param>
+            <returns>Dimensions for image from the path if exists, otherwise <see cref="F:System.Drawing.Size.Empty"/></returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Providers.ImageSizeProvider.GetSizeFromStream(System.IO.Stream,System.String)">
+            <summary>
+            Gets the image dimensions from the image data stream and image file extension.
+            </summary>
+            <param name="stream">Image file stream</param>
+            <param name="extension">Image file extension</param>
+            <returns>Dimensions for image from the stream if possible, otherwise <see cref="F:System.Drawing.Size.Empty"/></returns>
+        </member>
+        <member name="T:Dynamicweb.Imaging.PdfRequest">
+            <summary>
+            Represents a url request used for generating a pdf document.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfRequest.#ctor(System.Uri)">
+            <summary>
+            Creates a new instance of <see cref="T:Dynamicweb.Imaging.PdfRequest"/>
+            </summary>
+            <param name="url">URL address of the content.</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfRequest.#ctor(System.String)">
+            <summary>
+            Creates a new instance of <see cref="T:Dynamicweb.Imaging.PdfRequest"/>
+            </summary>
+            <param name="url">URL address of the content.</param>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRequest.Url">
+            <summary>
+            URL address of the content.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRequest.Cookies">
+            <summary>
+            Cookie values used in the request
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRequest.Headers">
+            <summary>
+            Header values used in the request
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRequest.PostValues">
+            <summary>
+            Post values used in the request
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.PdfRendererSettings">
+            <summary>
+            Settings used for generating PDF documents.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRendererSettings.PaperOrientation">
+            <summary>
+            Gets or sets the paper orientation. Default is <see cref="F:Dynamicweb.Imaging.PdfPaperOrientation.Portrait"/>.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRendererSettings.PaperSize">
+            <summary>
+            Gets or sets the paper size. Default is <see cref="F:Dynamicweb.Imaging.PdfPaperSize.A4"/>.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRendererSettings.PaperSizeCustomWidth">
+            <summary>
+            Gets or sets the paper size custom width in millimeters. Use this if none of the options for <see cref="P:Dynamicweb.Imaging.PdfRendererSettings.PaperSize"/> fits your needs.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRendererSettings.PaperSizeCustomHeight">
+            <summary>
+            Gets or sets the paper size custom height in millimeters. Use this if none of the options for <see cref="P:Dynamicweb.Imaging.PdfRendererSettings.PaperSize"/> fits your needs.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRendererSettings.MarginBottom">
+            <summary>
+            Gets or sets the bottom margin in millimeters.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRendererSettings.MarginLeft">
+            <summary>
+            Gets or sets the left margin in millimeters.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRendererSettings.MarginRight">
+            <summary>
+            Gets or sets the right margin in millimeters.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRendererSettings.MarginTop">
+            <summary>
+            Gets or sets the top margin in millimeters.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRendererSettings.FitToPaperWidth">
+            <summary>
+            Gets or sets if content should be scaled to fit the page width. Default is true.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRendererSettings.Zoom">
+            <summary>
+            Gets or sets zoom level in percent (%). Scales the rendering size of the html content. Default is 100.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRendererSettings.Dpi">
+            <summary>
+            Gets or sets the DPI used for rendering images and text. Default is 300.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRendererSettings.ImageQuality">
+            <summary>
+            Gets or sets the quality of any image that must be re-sampled (0-100). Default is 90.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfRendererSettings.RenderDelay">
+            <summary>
+            Gets or sets the rendering delay in milliseconds. Rendering delay should be avoided, but it can be useful if part of the content is loaded asynchronously (ajax). Default is 0 (no delay).
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ImageType">
+            <summary>
+            Type of image.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageType.Auto">
+            <summary>
+            Image type will be decided automatically based on file extension or other parameter.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageType.Bmp">
+            <summary>
+            Bitmap image format.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageType.Jpg">
+            <summary>
+            JPEG image format.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageType.Gif">
+            <summary>
+            GIF image format.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageType.Png">
+            <summary>
+            PNG image format.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.ImageType.WebP">
+            <summary>
+            WebP image format.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.NamespaceDoc">
+            <summary>
+            The Dynamicweb.Imaging namespace contains types for working with images and PDF documents.
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.PdfCreator">
+            <summary>
+            Used for creating PDF documents with header/foother and first/last page.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfCreator.ContentHtml">
+            <summary>
+            Main content HTML.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfCreator.HeaderHtml">
+            <summary>
+            Header content HTML.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfCreator.FooterHtml">
+            <summary>
+            Footer content HTML.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfCreator.HeaderHeight">
+            <summary>
+            Header height in milimeters.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfCreator.FooterHeight">
+            <summary>
+            Footer height in milimeters.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfCreator.FirstPageHtml">
+            <summary>
+            First page content HTML.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfCreator.LastPageHtml">
+            <summary>
+            Last page content HTML.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfCreator.PaperSize">
+            <summary>
+            Document paper size. A4 paper size will be used by default.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.PdfCreator.Landscape">
+            <summary>
+            Enable landscape mode (wide). Portrait mode will be used by default. 
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfCreator.#ctor">
+            <summary>
+            Instantiates a new instance of <see cref="T:Dynamicweb.Imaging.PdfCreator"/>.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfCreator.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Instantiates a new instance of <see cref="T:Dynamicweb.Imaging.PdfCreator"/>.
+            </summary>
+            <param name="contentHtml">Main content HTML</param>
+            <param name="headerHtml">Header content HTML</param>
+            <param name="footerHtml">Footer content HTML</param>
+            <param name="headerHeight">Header content HTML</param>
+            <param name="footerHeight">Footer content HTML</param>
+            <param name="firstPageHtml">First page content HTML</param>
+            <param name="lastPageHtml">Last page content HTML</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.PdfCreator.Save(System.String)">
+            <summary>
+            Saves the document to a given file path.
+            </summary>
+            <param name="filePath">Absolute file path.</param>
+        </member>
+        <member name="T:Dynamicweb.Imaging.ThumbnailSettings">
+            <summary>
+            Represents settings used for image thumbnail generation.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ThumbnailSettings.Selected">
+            <summary>
+            Gets or sets flag indicates whether settings are selected
+            </summary>
+            <returns>True if selected otherwise false</returns>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ThumbnailSettings.Width">
+            <summary>
+            Gets or sets width
+            </summary>
+            <returns>The width</returns>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ThumbnailSettings.Height">
+            <summary>
+            Gets or sets height
+            </summary>
+            <returns>The height</returns>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ThumbnailSettings.CropOffset">
+            <summary>
+            Gets or sets crop mode
+            </summary>
+            <returns>The crop mode</returns>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ThumbnailSettings.Quality">
+            <summary>
+            Gets or sets quality
+            </summary>
+            <returns>The quality</returns>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ThumbnailSettings.PostfixName">
+            <summary>
+            Gets or sets postfix name
+            </summary>
+            <returns>The postfix name</returns>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ThumbnailSettings.SubfolderName">
+            <summary>
+            Gets or sets sub folder name
+            </summary>
+            <returns>The sub folder name</returns>
+        </member>
+        <member name="P:Dynamicweb.Imaging.ThumbnailSettings.LastApply">
+            <summary>
+            Gets or sets last apply time stamp
+            </summary>
+            <returns>The last apply time stamp</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.ThumbnailSettings.GetThumbnailName(System.String,System.String,System.Boolean)">
+            <summary>
+            Gets thumbnail file path
+            </summary>
+            <param name="imageFolder">Images folder path</param>
+            <param name="imageName">Image name</param>
+            <param name="encode">Boolean value indicates whether to encode image name</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dynamicweb.Imaging.Image">
+            <summary>
+            This class contains function to handle images and other media like swf and mov files.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Image.#ctor">
+            <summary>
+            <see cref="T:Dynamicweb.Imaging.Image">Image class</see> constructor.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Image.WriteImage(System.String,System.String,System.String,System.Int32,System.Boolean)">
+            <summary>
+            Writes the current image to output.
+            </summary>
+            <param name="file">Virtual path to file</param>
+            <param name="altText">Image alternative text</param>
+            <param name="settings">Additional image HTML element attributes</param>
+            <param name="forceImageWidth">Image final width</param>
+            <param name="isHtml5">Flag indicates if target is HTML5</param>
+            <return>Image HTML ready element if no exceptions, otherwise error message</return>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Image.WriteImage(System.String,System.String,System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Writes the current image to output.
+            </summary>
+            <param name="file">Virtual path to file</param>
+            <param name="altText">Image alternative text</param>
+            <param name="settings">Additional image HTML element attributes</param>
+            <param name="forceImageWidth">Image final width</param>
+            <param name="forceImageHeight">Image final height</param>
+            <param name="isHtml5">Flag indicates if target is HTML5</param>
+            <return>Image HTML ready element if no exceptions, otherwise error message</return>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Image.GetDimensions(System.String)">
+            <summary>
+            Gets the image dimensions from the image specified in the path.
+            </summary>
+            <param name="filePath">The file path.</param>
+            <returns>Dimensions for image from the path if exists, otherwise <see cref="F:System.Drawing.Point.Empty"/></returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Image.GetDimensionsFromStream(System.IO.Stream,System.String)">
+            <summary>
+            Gets the image dimensions from the image data stream and image file extension.
+            </summary>
+            <param name="stream">Image file stream</param>
+            <param name="extension">Image file extension</param>
+            <returns>Dimensions for image</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Image.GetSizeFromFile(System.String)">
+            <summary>
+            Gets the image dimensions from the image specified in the path.
+            </summary>
+            <param name="filePath">The file path.</param>
+            <returns>Dimensions for image from the path if exists, otherwise <see cref="F:System.Drawing.Size.Empty"/></returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Image.GetSizeFromStream(System.IO.Stream,System.String)">
+            <summary>
+            Gets the image dimensions from the image data stream and image file extension.
+            </summary>
+            <param name="stream">Image file stream</param>
+            <param name="extension">Image file extension</param>
+            <returns>Dimensions for image</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Image.GetImageAttributes(System.String)">
+            <summary>
+            Gets image attributes from image file
+            </summary>
+            <param name="filePath">Absolute file path</param>
+            <returns>Image attributes</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Image.GetAttributesFromFile(System.String)">
+            <summary>
+            Gets image attributes from image file
+            </summary>
+            <param name="filePath">Absolute file path</param>
+            <returns>Image attributes</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Image.GetAttributesFromStream(System.IO.Stream,System.String)">
+            <summary>
+            Gets image attributes from file stream
+            </summary>
+            <param name="stream">File stream</param>
+            <param name="extension">File extension</param>
+            <returns>Image attributes</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Image.LoadImageMetadata(System.String,System.Collections.Generic.Dictionary{System.String,System.String}@,System.Collections.Generic.Dictionary{System.String,System.String}@,System.Collections.Generic.Dictionary{System.String,System.String}@)">
+            <summary>
+            Loads image IPTC, Exif, XMP metadata.
+            </summary>
+            <param name="filePath">Image file path.</param>
+            <param name="iptc">Dictionary to write the loaded IPTC.</param>
+            <param name="exif">Dictionary to write the loaded Exif.</param>
+            <param name="xmp">Dictionary to write the loaded XMP.</param>
+            <returns>True if any metada data is loaded. Otherwise false.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Image.GetMetadataFromFile(System.String)">
+            <summary>
+            Gets image metadata from a file.
+            </summary>
+            <param name="filePath">Image file path.</param>
+            <returns>Metadata for the image.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Image.GetMetadataFromStream(System.IO.Stream,System.String)">
+            <summary>
+            Gets image metadata.
+            </summary>
+            <param name="stream">Image file stream.</param>
+            <param name="extension">Image file extension</param>
+            <returns>Metadata for the image.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Image.GetIptcTags">
+            <summary>
+            Gets IPTC metadata tags.
+            </summary>
+            <returns>Dictionary of metadata tags with tag as key and tag name as value.</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Image.GetTagGroups">
+            <summary>
+            Gets a collection of available metadata tag groups.
+            </summary>
+            <returns>Collection of metadata tag groups</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Image.GetTagsByGroup(System.String)">
+            <summary>
+            Gets a collection of available metadata tags for a given metadata tag group.
+            </summary>
+            <param name="group">Metadata tag group</param>
+            <returns>Collection of metadata tags</returns>
+        </member>
+        <member name="T:Dynamicweb.Imaging.Pdf">
+            <summary>
+            This class contains functions for PDF handling.
+            </summary>
+        </member>
+        <member name="P:Dynamicweb.Imaging.Pdf.PdfData">
+            <summary>
+            Raw data for the PDF document.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Pdf.#ctor">
+            <summary>
+            Initializes new instance of the pdf document by a call to Initialize().
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Pdf.#ctor(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.Int32,Dynamicweb.Imaging.PdfPaperSize)">
+            <summary>
+            Renders a URL to a PDF document.
+            </summary>
+            <param name="url">Contains a valid URL to render to PDF. if PDF=true is present in the URL it is removed. This prevents circular calls when addressing dynamicweb solutions</param>
+            <param name="landscape">Set to true to render the markup in landscape in stead of portrait</param>
+            <param name="isUsLetterFormat">Indicates whether to use US letter format(long side = 279.4 mm, short side = 215.9 mm)</param>
+            <param name="leftRightMargin">Left and right document margin</param>
+            <param name="topBottomMargin">Top and bottom document margin</param>
+            <param name="pageSize">Result document format</param>
+            <param name="extranetUserName">Extranet user name</param>
+            <param name="extranetPassword">Extranet password</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Pdf.InstallAbcpdfLicense">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Pdf.InstallPdfLicense">
+            <summary>
+            Install license
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Pdf.SaveToFile(System.String)">
+            <summary>
+            Saves the PDF document to a file
+            </summary>
+            <param name="fileName">Absolute path to the file</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Pdf.SaveToStream(System.IO.Stream)">
+            <summary>
+            Saves the PDF document to a stream
+            </summary>
+            <param name="outputStream">Output stream</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Pdf.ConvertHtml(System.String)">
+            <summary>
+            Saves the given HTML string as PDF and returns output stream.
+            </summary>
+            <param name="html">HTML string to convert.</param>
+            <history>
+            	[pvo]	23-10-2008	Created
+            </history>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Pdf.ConvertHtml(System.String,System.Int32)">
+            <summary>
+            Saves the given HTML string as PDF and returns output stream.
+            </summary>
+            <param name="html">HTML string to convert.</param>
+            <param name="width">The width of the content to be taken.</param>
+            <history>
+            	[pvo]	23-10-2008	Created
+            </history>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Pdf.ConvertHtml(System.String,System.Int32,System.Int32)">
+            <summary>
+            Saves the given HTML string as PDF and returns output stream.
+            </summary>
+            <param name="html">HTML string to convert.</param>
+            <param name="width">The width of the content to be taken.</param>
+            <param name="height">The height of the content to be taken.</param>
+            <history>
+            	[pvo]	23-10-2008	Created
+            </history>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Pdf.Output">
+            <summary>
+            Retrieves the currently stored PDF output stream.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Pdf.Finalize">
+            <summary>
+            GC calls this Finalize if the programmer forgot to call Dispose on the PdfCreator object.
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Pdf.Dispose">
+            <summary>
+            Implements the dispose method to actively clean up unmanaged code. The programmer
+            calls dispose on the PdfCreator to clean up unmanaged code, instead of relying on GC
+            to call Finalize which intern calls Dispose.
+            GC.SuppressFinalize is called to prevent GC to call Dispose again (through finalize).
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Pdf.Dispose(System.Boolean)">
+            <summary>
+            The real destructor. Calls can be induced from GC or by the programmer. In tDynamicweb.he first
+            case (GC Induced) managed objects are not supposed to be garbage collected since the GC is already
+            aware of them, only unmanaged objects are 'collected'. In the last case (Programmer Induced) managed code
+            and unmanaged code is cleaned up immediately.
+            </summary>
+            <param name="doDisposeManagedObjects">If true managed objects than this object (Me) might own are disposed too otherwise only disposing unmanaged code objects</param>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Pdf.GetPaperSizeName(Dynamicweb.Imaging.PdfPaperSize)">
+            <summary>
+            Get paper size as string, e.g. "A4"
+            </summary>
+            <param name="size">Enum paper size</param>
+            <returns>Paper size as string</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Pdf.GetPaperSizeValue(System.String)">
+            <summary>
+            Get paper size as enum <see cref="T:Dynamicweb.Imaging.PdfPaperSize"/>
+            </summary>
+            <param name="size">String paper size</param>
+            <returns>Paper size as enum</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.Pdf.CreateImagesFromPdf(System.String,System.String)">
+            <summary>
+            Reads a PDF from file and writes an image for each page at the specified images folder path.
+            </summary>
+            <param name="pdfFilePath">The full path of the PDF file.</param>
+            <param name="imagesFolderPath">The full path of the folder where images should be stored.</param>
+        </member>
+        <member name="T:Dynamicweb.Imaging.PdfPaperSize">
+            <summary>
+            Pdf paper size enumeration. Defines the size of the pages in the generated PDF files.
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperSize.None">
+            <summary>
+            Default value (without size)
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperSize.A3">
+            <summary>
+            Render in A3 paper size
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperSize.A4">
+            <summary>
+            Render in A4 paper size
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperSize.A5">
+            <summary>
+            Render in A5 paper size
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperSize.B4">
+            <summary>
+            Render in B4 paper size
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperSize.B5">
+            <summary>
+            Render in B5 paper size
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperSize.Letter">
+            <summary>
+            Render in letter paper size
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperSize.Legal">
+            <summary>
+            Render in legal paper size
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperSize.Tabloid">
+            <summary>
+            Render in tabloid paper size
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperSize.Ledger">
+            <summary>
+            Render in ledger paper size
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperSize.Statement">
+            <summary>
+            Render in statement paper size
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperSize.Executive">
+            <summary>
+            Render in executive paper size
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperSize.Folio">
+            <summary>
+            Render in folio paper size
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperSize.Quarto">
+            <summary>
+            Render in quarto paper size
+            </summary>
+        </member>
+        <member name="F:Dynamicweb.Imaging.PdfPaperSize.Size10X14">
+            <summary>
+            Render in size10x14 paper size
+            </summary>
+        </member>
+        <member name="T:Dynamicweb.Imaging.WebP.WebPImage">
+            <summary>
+            This class contains function to handle WebP images
+            </summary>
+        </member>
+        <member name="M:Dynamicweb.Imaging.WebP.WebPImage.Decode(System.Byte[])">
+            <summary>Decode a WebP image</summary>
+            <param name="data">The data to uncompress</param>
+            <returns>Bitmap with the WebP image</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.WebP.WebPImage.Encode(System.Drawing.Bitmap)">
+            <summary>
+            Encodes the given RGB(A) bitmap to the WebP
+            </summary>
+            <param name="bmp">Bitmap with the image</param>
+            <returns>Encoded data</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.WebP.WebPImage.Encode(System.Drawing.Bitmap,System.Int32)">
+            <summary>
+            Encodes the given RGB(A) bitmap to the WebP
+            </summary>
+            <param name="bmp">Bitmap with the image</param>
+            <param name="quality">Specify quality = -1 for lossless, otherwise specify a value between 0 and 100.</param>
+            <returns>Encoded data</returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.WebP.WebPImage.GetDimensions(System.String)">
+            <summary>
+            Gets the image dimensions from the image specified in the path.
+            </summary>
+            <param name="filePath">The file path.</param>
+            <returns>Dimensions for image from the path if exists, otherwise <see cref="F:System.Drawing.Size.Empty"/></returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.WebP.WebPImage.GetDimensions(System.Byte[])">
+            <summary>
+            Gets the image dimensions from the image data.
+            </summary>
+            <param name="data">The data of WebP</param>
+            <returns>Dimensions for image data, otherwise <see cref="F:System.Drawing.Size.Empty"/></returns>
+        </member>
+        <member name="M:Dynamicweb.Imaging.WebP.WebPImage.GetDimensions(System.IO.Stream)">
+            <summary>
+            Gets the image dimensions from the image data.
+            </summary>
+            <param name="stream">Image file stream</param>
+            <returns>Dimensions for image data, otherwise <see cref="F:System.Drawing.Size.Empty"/></returns>
+        </member>
+    </members>
+</doc>
