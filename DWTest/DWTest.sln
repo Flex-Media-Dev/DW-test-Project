@@ -8,6 +8,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Files", "Files\", "{A46246BE-B94D-4F71-8720-3C1FE94B73A4}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{88e46204-730d-473a-b220-148cee796e8c}|DWTest.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_53247"
 		Debug.AspNetCompiler.PhysicalPath = "Files\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53247\"
